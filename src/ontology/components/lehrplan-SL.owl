@@ -633,9 +633,9 @@ ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https:/
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000266> <https://w3id.org/lehrplan/ontology/LP_2000009>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000266> <https://w3id.org/lehrplan/ontology/LP_2000010>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000267> (Gemeinschaftschulniveau (SL))
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000267> (Gemeinschaftsschulniveau (SL))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000267> "Gemeinschaftschulniveau (SL)"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000267> "Gemeinschaftsschulniveau (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000267> "gilt für die Jahrgangsstufen 5-6")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000267>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000832> <https://w3id.org/lehrplan/ontology/LP_0000267>)
