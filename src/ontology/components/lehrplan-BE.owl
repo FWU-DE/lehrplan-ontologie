@@ -408,6 +408,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000106> <https://w3id.org
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000137> (Mittlerer Schulabschluss (BE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000137> "Mittlerer Schulabschluss (BE)"@de)
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000105> <https://w3id.org/lehrplan/ontology/LP_0000137>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000583> (BOA A)
 

@@ -40,6 +40,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030185>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030186>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030198>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030200>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030318>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030330>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000296>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000297>))
@@ -252,9 +253,17 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030200> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030200> "Englisch Sekundarschule unter dem Kompetenzbereich “Funktional-kommunikative Kompetenzen” (und im Gymnasium unter dem Kompetenzbereich “Text- und Medienkompetenz” aufgeteilt in “Textsorten nur rezeptiv” und “Textsorten produktiv (rezeptive Beherrschung ist eingeschlossen)” als zwei von mehreren Unterbereichen.)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030200> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030318> (Schlüsselkompetenz (ST))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030318> "Schlüsselkompetenz (ST)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030318> "in Grundsatzband Gymnasium enthalten")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030318> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030330> (Fachübergreifendes Thema (ST))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030330> "Fachübergreifendes Thema (ST)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030330> "Fächerübergreifender Themenkomplex (ST)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030330> "in Grundsatzband Grundschule enthalten")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030330> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
 
 

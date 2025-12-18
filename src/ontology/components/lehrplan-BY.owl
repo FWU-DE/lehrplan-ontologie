@@ -226,9 +226,9 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030307> "für jede Schulart, jede JS ein Profil (alle Kompetenzen aufgelistet)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030307> <https://w3id.org/lehrplan/ontology/LP_0002044>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030308> (Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030308> (Bayerische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030308> "Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030308> "Bayerische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030308> "Leitlinien (BY)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030308> "nur für Grundschule und Förderschule")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030308> <https://w3id.org/lehrplan/ontology/LP_0030304>)

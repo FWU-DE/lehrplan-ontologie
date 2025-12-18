@@ -108,10 +108,6 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000495> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000580> (ist Niveaustufe von)
-
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000580> <http://purl.obolibrary.org/obo/IAO_0000136>)
-
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für Schulart)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000812> <http://purl.obolibrary.org/obo/IAO_0000136>)
@@ -166,7 +162,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000001> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000006> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000007> (Learning Process)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000007> (learning process)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
@@ -190,11 +186,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000012> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000013> <http://purl.obolibrary.org/obo/BFO_0000016>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000019> (Schulabschluss)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000019> (educational qualification)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000019> <http://purl.obolibrary.org/obo/BFO_0000035>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000020> (Schulstufe)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000020> (educational level)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000020> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
@@ -206,11 +202,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000037> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000040> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000043> (Oberstufenphase)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000043> (secondary phase)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000043> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000111> (Schulart)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000111> (type of school)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000111> "school type"@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000111> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000058> <https://w3id.org/lehrplan/ontology/LP_0000475>)))
@@ -219,11 +215,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000111> ObjectIntersectionOf(
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000261> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000346> (Titel)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000346> (title)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000346> <http://purl.obolibrary.org/obo/IAO_0000300>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000347> (Identifikationsnummer)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000347> (ID number)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000347> <http://purl.obolibrary.org/obo/IAO_0000028>)
 
@@ -237,7 +233,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> <http://purl.obolibra
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> <https://w3id.org/lehrplan/ontology/LP_0000111>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000079> <https://w3id.org/lehrplan/ontology/LP_0000809>))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (Funktionsspezifikation)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (function sepcification)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000478> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
@@ -245,7 +241,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000478> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000540> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (Bildungsstandard (KMK))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (educational standard (KMK))
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000571> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
@@ -257,7 +253,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000808> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000816> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030003> (Beschreibung)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030003> (description)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030003> <http://purl.obolibrary.org/obo/IAO_0000300>)
 
