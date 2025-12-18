@@ -383,13 +383,13 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030232> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030233> "Verweis auf Inhaltsbezogene Kompetenzbereiche (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030233> "Mathematik Oberschule, Hauptschule, Realschule, Gymnasium, Oberstufe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030233> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030233> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000043>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030234> (Verweis auf Prozessbezogene Kompetenzbereiche (NI))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030234> "Verweis auf Prozessbezogene Kompetenzbereiche (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030234> "Mathematik Oberschule, Hauptschule, Realschule")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030234> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030234> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000043>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 
 ############################

@@ -225,7 +225,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002243> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030015> "Verweis auf Basiskonzept (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030015> "Nawis")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030015> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030015> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030142>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030016> (Verweis auf thematische Querverbindungen im Lehrplan (SL))
 

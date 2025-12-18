@@ -145,7 +145,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030006> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030009> (Verweis auf Basiskonzept (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030009> "Verweis auf Basiskonzept (NW)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030009> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030009> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030077>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030041> (Bildungsgangniveau (NW))
 
@@ -181,7 +181,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030077> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030187> "Verweis auf Kompetenzerwartung (NW)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030187> "in Mathematik und den Naturwissenschaften. Diese treten in Form von Kürzeln in Klammern am Ende einer Kompetenzerwartung auf und verweisen auf (Prozessbezogene/Übergeordnete) Kompetenzerwartungen.")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030187> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030187> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000044>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 
 ############################

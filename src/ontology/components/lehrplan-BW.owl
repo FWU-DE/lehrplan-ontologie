@@ -154,22 +154,24 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030174> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030175> (Verweis auf die prozessbezogenen Kompetenzen (BW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030175> "Verweis auf die prozessbezogenen Kompetenzen (BW)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030175> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030175> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030176> (Verweis auf andere Standards für inhaltsbezogene Kompetenzen desselben Fachs (BW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030176> "Verweis auf andere Standards für inhaltsbezogene Kompetenzen desselben Fachs (BW)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030176> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030176> "Verweis auf inhaltsbezogene Kompetenzen (BW)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030176> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030177> (Verweis auf Leitperspektiven (BW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030177> "Verweis auf Leitperspektiven (BW)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030177> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030177> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030178> (Verweis auf andere Fächer (BW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030178> "Verweis auf andere Fächer (BW)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030178> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030178> "Verweis auf inhaltsbezogene Kompetenzen in anderen Fächern (BW)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030178> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002051> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030179> (Umsetzungshilfen (BW))
 

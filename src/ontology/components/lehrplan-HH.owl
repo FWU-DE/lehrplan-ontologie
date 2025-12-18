@@ -196,13 +196,13 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030166> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030167> "Verweis auf Leitperspektiven (HH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030167> "Unter \"Übergreifend\"")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030167> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030167> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030327>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030168> (Verweis auf Kompetenzen (HH))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030168> "Verweis auf Kompetenzen (HH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030168> "Unter \"Fachbezogen\"")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030168> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030168> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000045>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030169> (Redemittel und grammatische Grundlagen (HH))
 
@@ -238,7 +238,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030173> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030193> "Verweis auf Aufgabengebiete (HH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030193> "Unter \"Übergreifend\"")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030193> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030193> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000426> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030336>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030194> (Verweis auf Sprachbildung (HH))
 

@@ -255,7 +255,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030273> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030274> "Verweis auf Basiskonzept (SH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030274> "NaWi")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030274> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030274> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030270>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030275> (Aspekt (SH))
 

@@ -201,7 +201,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030087> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030088> (Verweis auf Bezüge zu fächerübergreifenden Themen (ST))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030088> "Verweis auf Bezüge zu fächerübergreifenden Themen (ST)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030088> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030088> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000053>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030089> (Verbindliches Schülerexperiment (ST))
 
@@ -245,7 +245,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030186> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030198> "Verweis auf allgemeine mathematische Kompetenzen (ST)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030198> "Kommt nur im Fach Mathematik vor")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030198> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030198> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000053>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030200> (Textsorte (ST))
 

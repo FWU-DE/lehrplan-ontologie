@@ -164,7 +164,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002149> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002149> "Verweis auf Verknüpfung (MV)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002149> "Verweis auf methodische Hinweise und Verknüpfungshinweise (MV)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002149> "verweist auf andere Arbeitsbereiche und Querschnittsthemen")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002149> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002149> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> <https://w3id.org/lehrplan/ontology/LP_0030325>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002151> (Konkretisierung (MV))
 
@@ -213,7 +213,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030054> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030199> (Verweis auf Kompetenzbereich (MV))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030199> "Verweis auf Kompetenzbereich (MV)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030199> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030199> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030328> (Querschnittsthema (MV))
 

@@ -130,22 +130,22 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030050> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030188> (Verweis auf Lernbereich des gleichen Faches der gleichen Klassenstufe (SN))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030188> "Verweis auf Lernbereich des gleichen Faches der gleichen Klassenstufe (SN)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030188> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030188> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030189> (Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030189> "Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030189> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030189> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030190> (Verweis auf Klassenstufe, Lernbereich eines anderen Faches (SN))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030190> "Verweis auf Klassenstufe, Lernbereich eines anderen Faches (SN)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030190> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030190> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030191> (Verweis auf ein überfachliches Bildungs- und Erziehungsziel (SN))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030191> "Verweis auf ein überfachliches Bildungs- und Erziehungsziel (SN)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030191> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030191> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030329> (Bildungs- und Erziehungsziel (SN))
 

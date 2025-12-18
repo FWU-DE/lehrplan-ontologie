@@ -287,7 +287,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030008> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030042> "Verweis auf Bezüge zu den Basiskonzepten (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030042> "Verweis auf Basiskonzepte (BB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030042> "NaWis")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030042> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030042> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030047> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030043> (Beispiel zu einem Basiskonzept (BB))
 
@@ -363,7 +363,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030255> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030257> "Verweis auf vernetzte Kompetenzen (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030257> "Verlinkung zu Kompetenzen anderer Fächer (meist zu \"Medienbildung\")")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030257> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030257> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030259> (Verweis auf standardillustrierende Aufgaben (BB))
 

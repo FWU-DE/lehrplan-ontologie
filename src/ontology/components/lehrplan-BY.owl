@@ -146,7 +146,7 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030053> ObjectIntersec
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis auf DaZ (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis zum Lehrplan Deutsch als Zweitsprache -> also auf Lernbereiche eines anderen Lehrplans")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030180> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030180> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030181> (Verweis auf übergreifende Ziele (BY))
 
@@ -160,7 +160,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030181> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf Querverweise (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf die Fachlehrpläne anderer Fächer -> also auf Lernbereiche eines anderen Lehrplans")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030182> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030182> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030183> (Verweis auf Servicematerialien (BY))
 
