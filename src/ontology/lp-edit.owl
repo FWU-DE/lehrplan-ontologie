@@ -41,6 +41,7 @@ Annotation(<http://purl.org/dc/terms/description> "This ontology is a formal rep
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(<http://purl.org/dc/terms/title> "Curriculum Ontology"@en)
 Annotation(<http://purl.org/dc/terms/title> "Lehrplan Ontologie"@de)
+Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/FWU-DE/lehrplan-ontologie>)
 
 Declaration(Class(:LP_0000056))
 Declaration(Class(:LP_0000057))
@@ -49,6 +50,7 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 
 
 
