@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/lehrplan/ontology/> .
+@prefix : <https://w3id.org/lehrplan/lp.ttl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gnd: <https://d-nb.info/standards/elementset/gnd#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -14,25 +14,23 @@
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix ontology: <https://w3id.org/lehrplan/ontology/> .
-@base <https://w3id.org/lehrplan/ontology/> .
+@base <https://w3id.org/lehrplan/lp.ttl> .
 
-<https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0-9> ;
-                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-9, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-01-06" ;
-                                       terms:creator <https://orcid.org/0000-0001-6378-2618> ,
-                                                     <https://orcid.org/0000-0001-7192-7143> ,
-                                                     "Almut Steinlein"@de ,
-                                                     "Cindy Bloes"@de ,
-                                                     "Johann Bergh"@de ,
-                                                     "Laura Junghanns"@de ;
-                                       terms:description "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de ,
-                                                         "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en ;
-                                       terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-                                       terms:title "Curriculum Ontology"@en ,
-                                                   "Lehrplan Ontologie"@de ;
-                                       doap:repository <https://github.com/FWU-DE/lehrplan-ontologie> ;
-                                       owl:versionInfo "1.0.0-9" .
+<https://w3id.org/lehrplan/lp.ttl> rdf:type owl:Ontology ;
+                                    owl:versionIRI <https://w3id.org/lehrplan/ontology/releases/2026-01-06/lp.ttl> ;
+                                    terms:creator <https://orcid.org/0000-0001-6378-2618> ,
+                                                  <https://orcid.org/0000-0001-7192-7143> ,
+                                                  "Almut Steinlein"@de ,
+                                                  "Cindy Bloes"@de ,
+                                                  "Johann Bergh"@de ,
+                                                  "Laura Junghanns"@de ;
+                                    terms:description "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de ,
+                                                      "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en ;
+                                    terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                    terms:title "Curriculum Ontology"@en ,
+                                                "Lehrplan Ontologie"@de ;
+                                    doap:repository <https://github.com/FWU-DE/lehrplan-ontologie> ;
+                                    owl:versionInfo "2026-01-06" .
 
 #################################################################
 #    Annotation properties
@@ -128,10 +126,6 @@ dc:source rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/bibliographicCitation
-terms:bibliographicCitation rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
@@ -2055,14 +2049,14 @@ obo:IAO_0000027 rdf:type owl:Class ;
                 obo:IAO_0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en ,
                                 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en ,
                                 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en ,
+                                "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ,
                                 """JAR: datum     -- well, this will be very tricky to define, but maybe some 
 information-like stuff that might be put into a computer and that is 
 meant, by someone, to denote and/or to be interpreted by some 
 process... I would include lists, tables, sentences... I think I might 
 defer to Barry, or to Brian Cantwell Smith
 
-JAR: A data item is an approximately justified approximately true approximate belief"""@en ,
-                                "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ;
+JAR: A data item is an approximately justified approximately true approximate belief"""@en ;
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
                                 "PERSON: Chris Stoeckert"@en ,
                                 "PERSON: Jonathan Rees"@en ;
@@ -4017,8 +4011,8 @@ ontology:LP_0000445 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                    rdfs:label "learning content (BB)"@en ,
-                               "Inhalt (BB)" ;
+                    rdfs:label "Inhalt (BB)" ,
+                               "learning content (BB)"@en ;
                     skos:altLabel "Lerninhalt (BB)"@de ;
                     skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
                                     "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
@@ -5383,8 +5377,8 @@ ontology:LP_0001445 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                    rdfs:label "learning content (BE)"@en ,
-                               "Inhalt (BE)" ;
+                    rdfs:label "Inhalt (BE)" ,
+                               "learning content (BE)"@en ;
                     skos:altLabel "Lerninhalt (BE)"@de ;
                     skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
                                     "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
@@ -6368,8 +6362,8 @@ ontology:LP_0002153 rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                     rdfs:label "Standard (MV)" ;
-                    skos:altLabel "KMK-Bildungsstandard (MV)"@de ,
-                                  "Abschlussbezogener Standard (MV)" ;
+                    skos:altLabel "Abschlussbezogener Standard (MV)" ,
+                                  "KMK-Bildungsstandard (MV)"@de ;
                     skos:editorialNote "\"KMK-Bildungsstandard\" bisher nur in Fach Deutsch, Schulstufe Sek II gefunden. Ist gleichzusetzen mit Kompetenzen." ,
                                        "Aus dem Lehrplan Deutsch Gesamtschule (2024) zu \"Kompetenzen\": “Im Zentrum des Fachunterrichts steht der Kompetenzerwerb. Die Kompetenzen werden in der Auseinandersetzung mit den verbindlichen Themen entwickelt. In Abschnitt 2.2 werden die zu erreichenden Kompetenzen benannt. “" .
 
@@ -7143,8 +7137,8 @@ ontology:LP_0002233 rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                     rdfs:label "Hinweis zur Umsetzung (SL)" ;
-                    skos:altLabel "Zur Umsetzung (SL)"@de ,
-                                  "Hinweis und Umsetzungsbeispiel (SL)" .
+                    skos:altLabel "Hinweis und Umsetzungsbeispiel (SL)" ,
+                                  "Zur Umsetzung (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002234

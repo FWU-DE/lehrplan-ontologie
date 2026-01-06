@@ -6,6 +6,7 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(doap:=<http://usefulinc.com/ns/doap#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(terms:=<http://purl.org/dc/terms/>)
@@ -14,9 +15,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/>
-<https://w3id.org/lehrplan/ontology/1.0.0-8>
-Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-8, https://w3id.org/lehrplan/ontology")
-Annotation(terms:created "2025-12-08")
+<https://w3id.org/lehrplan/ontology/1.0.0-9>
+Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-9, https://w3id.org/lehrplan/ontology")
+Annotation(terms:created "2026-01-06")
 Annotation(terms:creator <https://orcid.org/0000-0001-6378-2618>)
 Annotation(terms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(terms:creator "Almut Steinlein"@de)
@@ -29,7 +30,8 @@ Annotation(terms:license <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(terms:subject "Lehrplan Thüringen")
 Annotation(terms:title "Curriculum Ontology"@en)
 Annotation(terms:title "Lehrplan Ontologie"@de)
-Annotation(owl:versionInfo "1.0.0-8")
+Annotation(doap:repository <https://github.com/FWU-DE/lehrplan-ontologie>)
+Annotation(owl:versionInfo "1.0.0-9")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -235,7 +237,6 @@ Declaration(ObjectProperty(obo:RO_0000079))
 Declaration(ObjectProperty(obo:RO_0000085))
 Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasDerivedFrom>))
 Declaration(ObjectProperty(ontology:LP_0000008))
-Declaration(ObjectProperty(ontology:LP_0000015))
 Declaration(ObjectProperty(ontology:LP_0000017))
 Declaration(ObjectProperty(ontology:LP_0000021))
 Declaration(ObjectProperty(ontology:LP_0000024))
@@ -255,7 +256,6 @@ Declaration(ObjectProperty(ontology:LP_0000483))
 Declaration(ObjectProperty(ontology:LP_0000495))
 Declaration(ObjectProperty(ontology:LP_0000537))
 Declaration(ObjectProperty(ontology:LP_0000578))
-Declaration(ObjectProperty(ontology:LP_0000580))
 Declaration(ObjectProperty(ontology:LP_0000812))
 Declaration(ObjectProperty(ontology:LP_0000833))
 Declaration(ObjectProperty(ontology:LP_0000840))
@@ -460,6 +460,7 @@ Declaration(AnnotationProperty(terms:identifier))
 Declaration(AnnotationProperty(terms:license))
 Declaration(AnnotationProperty(terms:subject))
 Declaration(AnnotationProperty(terms:title))
+Declaration(AnnotationProperty(doap:repository))
 Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:isDefinedBy))
 Declaration(AnnotationProperty(rdfs:label))
@@ -832,18 +833,15 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#wasDerivedFrom> "was d
 
 # Object Property: ontology:LP_0000008 (hat Teil)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000008 "has part"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000008 "hat Teil"@de)
 SubObjectPropertyOf(ontology:LP_0000008 obo:BFO_0000051)
 InverseObjectProperties(ontology:LP_0000008 ontology:LP_0020001)
 TransitiveObjectProperty(ontology:LP_0000008)
 
-# Object Property: ontology:LP_0000015 (hat Prozessteil)
-
-AnnotationAssertion(rdfs:label ontology:LP_0000015 "hat Prozessteil"@de)
-SubObjectPropertyOf(ontology:LP_0000015 obo:BFO_0000117)
-
 # Object Property: ontology:LP_0000017 (konkretisiert Lehrplan)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000017 "concretizes curriculum"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "konkretisiert Lehrplan"@de)
 SubObjectPropertyOf(ontology:LP_0000017 obo:RO_0000059)
 ObjectPropertyRange(ontology:LP_0000017 ontology:LP_0000438)
@@ -852,6 +850,7 @@ ObjectPropertyRange(ontology:LP_0000017 ontology:LP_0000438)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000021 "endet mit Abschluss"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000021 "ermöglicht Abschluss"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000021 "leads to qualification"@en)
 AnnotationAssertion(skos:example ontology:LP_0000021 "Ein Bildungsgang (occurent) endet mit Abschluss.")
 SubObjectPropertyOf(ontology:LP_0000021 obo:BFO_0000117)
 ObjectPropertyRange(ontology:LP_0000021 ontology:LP_0000019)
@@ -860,14 +859,16 @@ ObjectPropertyRange(ontology:LP_0000021 ontology:LP_0000019)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000024 "described by"@en)
 
-# Object Property: ontology:LP_0000026 (hat Jahrgangsstufe)
+# Object Property: ontology:LP_0000026 (has class level)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000026 "has class level"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000026 "hat Jahrgangsstufe"@de)
 SubObjectPropertyOf(ontology:LP_0000026 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000026 ontology:LP_0000009)
 
-# Object Property: ontology:LP_0000029 (von Bundesland)
+# Object Property: ontology:LP_0000029 (of federal state)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000029 "of federal state"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "von Bundesland"@de)
 SubObjectPropertyOf(ontology:LP_0000029 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000029 ontology:LP_0000040)
@@ -881,28 +882,32 @@ SubObjectPropertyOf(ontology:LP_0000041 ontology:LP_0000008)
 
 # Object Property: ontology:LP_0000047 (hat Schulstufe)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000047 "has educational level"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000047 "hat Schulstufe"@de)
 SubObjectPropertyOf(ontology:LP_0000047 ontology:LP_0000024)
+ObjectPropertyRange(ontology:LP_0000047 ontology:LP_0000020)
 
-# Object Property: ontology:LP_0000048 (hat Input)
+# Object Property: ontology:LP_0000048 (has input)
 
-AnnotationAssertion(rdfs:comment ontology:LP_0000048 "has input")
+AnnotationAssertion(rdfs:label ontology:LP_0000048 "has input"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000048 "hat Input"@de)
 SubObjectPropertyOf(ontology:LP_0000048 obo:RO_0000057)
 
 # Object Property: ontology:LP_0000049 (hat Output)
 
-AnnotationAssertion(rdfs:comment ontology:LP_0000049 "has output"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000049 "has output"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000049 "hat Output"@de)
 SubObjectPropertyOf(ontology:LP_0000049 obo:RO_0000057)
 
-# Object Property: ontology:LP_0000071 (benötigt Niveau)
+# Object Property: ontology:LP_0000071 (requires level)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000071 "benötigt Niveau"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000071 "requires level"@en)
 SubObjectPropertyOf(ontology:LP_0000071 ontology:LP_0000024)
 
-# Object Property: ontology:LP_0000072 (inkludiert)
+# Object Property: ontology:LP_0000072 (includes)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000072 "includes"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000072 "inkludiert"@de)
 SubObjectPropertyOf(ontology:LP_0000072 ontology:LP_0000008)
 TransitiveObjectProperty(ontology:LP_0000072)
@@ -911,44 +916,52 @@ ObjectPropertyRange(ontology:LP_0000072 ontology:LP_0000028)
 
 # Object Property: ontology:LP_0000086 (ist Niveau von)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000086 "is niveau of"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000086 "ist Niveau von"@de)
 SubObjectPropertyOf(ontology:LP_0000086 obo:IAO_0000136)
 InverseObjectProperties(ontology:LP_0000086 ontology:LP_0000840)
 
 # Object Property: ontology:LP_0000343 (hat Schulartfunktion)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000343 "has school type function"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000343 "hat Schulartfunktion"@de)
 SubObjectPropertyOf(ontology:LP_0000343 obo:RO_0000085)
+ObjectPropertyRange(ontology:LP_0000343 ontology:LP_0000475)
 
 # Object Property: ontology:LP_0000440 (für Bildungsgangabschnitt)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000440 "for educational track"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000440 "für Bildungsgangabschnitt"@de)
 SubObjectPropertyOf(ontology:LP_0000440 obo:RO_0000056)
 ObjectPropertyDomain(ontology:LP_0000440 ontology:LP_0000438)
 
-# Object Property: ontology:LP_0000477 (konkretisiert Schulart)
+# Object Property: ontology:LP_0000477 (concretizes type of school)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000477 "concretizes type of school"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000477 "konkretisiert Schulart"@de)
 SubObjectPropertyOf(ontology:LP_0000477 obo:RO_0000059)
 ObjectPropertyDomain(ontology:LP_0000477 ontology:LP_0000475)
 ObjectPropertyRange(ontology:LP_0000477 ontology:LP_0000111)
 
-# Object Property: ontology:LP_0000483 (hat Funktion)
+# Object Property: ontology:LP_0000483 (has function specification)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000483 "has function specification"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000483 "hat Funktion"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0000483 "hat Funktionsspezifikation"@de)
 SubObjectPropertyOf(ontology:LP_0000483 ontology:LP_0000024)
 InverseObjectProperties(ontology:LP_0000483 ontology:LP_0000495)
 ObjectPropertyRange(ontology:LP_0000483 ontology:LP_0000478)
 
-# Object Property: ontology:LP_0000495 (ist Funktion von)
+# Object Property: ontology:LP_0000495 (is function specification of)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000495 "is function specification of"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000495 "ist Funktion von"@de)
 SubObjectPropertyOf(ontology:LP_0000495 obo:IAO_0000136)
 
 # Object Property: ontology:LP_0000537 (hat Schulfach)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000537 "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000537 "has school subject"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000537 "hat Schulfach"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000537 "wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen")
 AnnotationAssertion(skos:example ontology:LP_0000537 "Gegeben sind:
@@ -972,19 +985,16 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 SubObjectPropertyOf(ontology:LP_0000537 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000537 ObjectUnionOf(ontology:LP_0000001 ontology:LP_0000540))
 
-# Object Property: ontology:LP_0000580 (ist Niveaustufe von)
-
-AnnotationAssertion(rdfs:label ontology:LP_0000580 "ist Niveaustufe von"@de)
-SubObjectPropertyOf(ontology:LP_0000580 obo:IAO_0000136)
-
 # Object Property: ontology:LP_0000812 (für Schulart)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000812 "for type of school"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000812 "für Schulart"@de)
 SubObjectPropertyOf(ontology:LP_0000812 obo:IAO_0000136)
 ObjectPropertyRange(ontology:LP_0000812 ontology:LP_0000111)
 
 # Object Property: ontology:LP_0000833 (hat Bildungsgangniveau)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000833 "has educational track level"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000833 "hat Bildungsgangniveau"@de)
 SubObjectPropertyOf(ontology:LP_0000833 ontology:LP_0000024)
 ObjectPropertyDomain(ontology:LP_0000833 ontology:LP_0000816)
@@ -992,6 +1002,7 @@ ObjectPropertyRange(ontology:LP_0000833 ontology:LP_0000028)
 
 # Object Property: ontology:LP_0000840 (hat Niveau)
 
+AnnotationAssertion(rdfs:label ontology:LP_0000840 "has niveau"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000840 "hat Niveau"@de)
 SubObjectPropertyOf(ontology:LP_0000840 ontology:LP_0000024)
 ObjectPropertyDomain(ontology:LP_0000840 ObjectUnionOf(ontology:LP_0000111 ontology:LP_0000261 ontology:LP_0000443))
@@ -999,38 +1010,44 @@ ObjectPropertyRange(ontology:LP_0000840 ontology:LP_0000037)
 
 # Object Property: ontology:LP_0020001 (ist Teil von)
 
+AnnotationAssertion(rdfs:label ontology:LP_0020001 "is part of"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0020001 "ist Teil von"@de)
 SubObjectPropertyOf(ontology:LP_0020001 obo:BFO_0000050)
 
 # Object Property: ontology:LP_0030051 (hat Beschreibung)
 
+AnnotationAssertion(rdfs:label ontology:LP_0030051 "has description"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0030051 "hat Beschreibung"@de)
 SubObjectPropertyOf(ontology:LP_0030051 obo:IAO_0000136)
 ObjectPropertyDomain(ontology:LP_0030051 ontology:LP_0000261)
 ObjectPropertyRange(ontology:LP_0030051 ontology:LP_0030003)
 
-# Object Property: ontology:LP_0030056 (hat Titel)
+# Object Property: ontology:LP_0030056 (has title)
 
+AnnotationAssertion(rdfs:label ontology:LP_0030056 "has title"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0030056 "hat Titel"@de)
 SubObjectPropertyOf(ontology:LP_0030056 obo:IAO_0000136)
 ObjectPropertyDomain(ontology:LP_0030056 ObjectUnionOf(ontology:LP_0000261 ontology:LP_0000438))
 ObjectPropertyRange(ontology:LP_0030056 ontology:LP_0000346)
 
-# Object Property: ontology:LP_0030057 (hat Nummer)
+# Object Property: ontology:LP_0030057 (has number)
 
+AnnotationAssertion(rdfs:label ontology:LP_0030057 "has number"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0030057 "hat Nummer"@de)
 SubObjectPropertyOf(ontology:LP_0030057 obo:IAO_0000136)
 ObjectPropertyDomain(ontology:LP_0030057 ontology:LP_0000261)
 ObjectPropertyRange(ontology:LP_0030057 ontology:LP_0000347)
 
-# Object Property: ontology:LP_0030071 (hat Verweis)
+# Object Property: ontology:LP_0030071 (has reference)
 
+AnnotationAssertion(rdfs:label ontology:LP_0030071 "has reference"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0030071 "hat Verweis"@de)
 SubObjectPropertyOf(ontology:LP_0030071 obo:IAO_0000136)
 ObjectPropertyRange(ontology:LP_0030071 ontology:LP_0030065)
 
 # Object Property: ontology:LP_0030072 (verweist auf)
 
+AnnotationAssertion(rdfs:label ontology:LP_0030072 "refers to"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0030072 "verweist auf"@de)
 SubObjectPropertyOf(ontology:LP_0030072 obo:IAO_0000136)
 ObjectPropertyDomain(ontology:LP_0030072 ontology:LP_0030065)
@@ -1692,7 +1709,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000007 "Lernprozess"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000007 "learning process"@en)
 SubClassOf(ontology:LP_0000007 obo:BFO_0000015)
 
-# Class: ontology:LP_0000009 (class level)
+# Class: ontology:LP_0000009 (Jahrgangsstufe)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000009 "A \"Jahrgangsstufe\" is an \"Information Content Entity\".
 It encompasses all classes and courses in which learners progress together through a specific stage of their educational journey.
@@ -1799,6 +1816,7 @@ In the ontology, a distinction is made between \"Hauptschulniveau\", \"Realschul
 These correspond to the basic, intermediate, and advanced requirements used in some lower secondary curricula to categorize competences.
 While the \"Fachniveau Sek II\" describes the specific requirements in a single subject within the upper secondary level of the Gymnasium track, the \"Bildungsgangniveau\" refers to the level of an entire educational track aimed at a specific qualification."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000028 "Bildungsgangniveau"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000028 "educational track level"@en)
 SubClassOf(ontology:LP_0000028 ontology:LP_0000037)
 
 # Class: ontology:LP_0000037 (Niveau)
@@ -1838,9 +1856,11 @@ SubClassOf(ontology:LP_0000040 obo:IAO_0000030)
 
 # Class: ontology:LP_0000043 (secondary phase)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000043 "Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation.")
 AnnotationAssertion(rdfs:label ontology:LP_0000043 "Oberstufenphase"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000043 "secondary phase"@en)
-SubClassOf(ontology:LP_0000043 obo:IAO_0000030)
+EquivalentClasses(ontology:LP_0000043 ObjectOneOf(ontology:LP_0000046))
+SubClassOf(ontology:LP_0000043 ontology:LP_0000020)
 
 # Class: ontology:LP_0000053 (Berlin-Brandenburg)
 
@@ -2012,10 +2032,10 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000261 "Curriculares Element"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000261 "curricular element"@en)
-AnnotationAssertion(skos:editorialNote ontology:LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bildungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 SubClassOf(ontology:LP_0000261 obo:IAO_0000030)
 
-# Class: ontology:LP_0000263 (CE-Kompetenzspezifikation)
+# Class: ontology:LP_0000263 (competency specification)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000263 "A “CE-Kompetenzspezifikation” is a “Curriculares Element” that describes a competence.
 It usually contains an operator and begins with “The students [...]” or “The learners [...]” for example.
@@ -2033,6 +2053,7 @@ Beispiel:
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000263 "CE-Kompetenzspezifikation"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000263 "competency specification"@en)
 EquivalentClasses(ontology:LP_0000263 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ontology:LP_0000349) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000479)))
 SubClassOf(ontology:LP_0000263 ontology:LP_0000261)
 SubClassOf(ontology:LP_0000263 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ontology:LP_0000349))
@@ -2070,6 +2091,7 @@ Beispiel:
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000332 "CE-Lerninhalt"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000332 "learning content"@en)
 EquivalentClasses(ontology:LP_0000332 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480)))
 SubClassOf(ontology:LP_0000332 ontology:LP_0000261)
 SubClassOf(ontology:LP_0000332 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)))
@@ -2100,7 +2122,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000347 "ID number"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000347 "Identifikationsnummer"@de)
 SubClassOf(ontology:LP_0000347 obo:IAO_0000028)
 
-# Class: ontology:LP_0000349 (CE-Bereich)
+# Class: ontology:LP_0000349 (area)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000349 "A “CE-Bereich” is a “Curriculares Element”.
 A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
@@ -2109,6 +2131,7 @@ AnnotationAssertion(rdfs:comment ontology:LP_0000349 "Ein “CE-Bereich” ist e
 Ein “CE-Bereich” kann anderen “CE-Bereichen” über- oder untergeordnet sein.
 Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es “CE-Kompetenzspezifikationen” und/oder “CE-Lerninhalte” unter einem gemeinsamen inhaltlichen Fokus zusammenfasst, der durch den “CE-Bereich” definiert wird."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000349 "CE-Bereich"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000349 "area"@en)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000349 "Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -2122,12 +2145,12 @@ SubClassOf(ontology:LP_0000349 ontology:LP_0000261)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000438 "A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
 
-A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They can serve as the basis for the development of specific curricula in the federal states.
+A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They serve as the basis for the development of specific curricula in the federal states.
 
 In addition to the binding requirements, the curriculum often also contains information on the didactic and methodological design of lessons as well as cross-references to related and interdisciplinary skills and content from other school subjects. Depending on the federal state, curricula can have different names."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0000438 "Ein Lehrplan ist eine Informationseinheit, die eine systematische Zusammenstellung von curricularen Elementen umfasst. Er definiert verbindlich die Kompetenzen und Inhalte, die Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
 
-Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen können.
+Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen.
 
 Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Querverweise zu verwandten und fachübergreifenden Kompetenzen und Inhalten aus anderen Schulfächern. Je nach Bundesland können Lehrpläne unterschiedliche Bezeichnungen tragen, wie z. B. Bildungsplan, Fachanforderungen, Kerncurriculum, Kernlehrplan, LehrplanPLUS, Rahmenlehrplan oder Rahmenplan."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000438 "Lehrplan"@de)
@@ -2142,10 +2165,10 @@ SubClassOf(ontology:LP_0000475 obo:BFO_0000034)
 SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:RO_0000059 ontology:LP_0000111))
 SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:RO_0000079 ontology:LP_0000809))
 
-# Class: ontology:LP_0000478 (function sepcification)
+# Class: ontology:LP_0000478 (function specification)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000478 "Funktionsspezifikation"@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000478 "function sepcification"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000478 "function specification"@en)
 SubClassOf(ontology:LP_0000478 obo:IAO_0000030)
 
 # Class: ontology:LP_0000482 (Strukturierungsfunktion)
@@ -2208,6 +2231,7 @@ SubClassOf(ontology:LP_0000531 ontology:LP_0000265)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000536 "Lehrplan Element bezogen auf die Vorgaben der KMK Bildungsstandards"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000536 "Element (Bista)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000536 "element (Bista)"@en)
 SubClassOf(ontology:LP_0000536 ontology:LP_0000261)
 
 # Class: ontology:LP_0000540 (Schulfachbezug)
@@ -2231,8 +2255,8 @@ SubClassOf(ontology:LP_0000541 ontology:LP_0000540)
 
 # Class: ontology:LP_0000542 (Zweite Fremdsprache)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000542 "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000542 "Zweite Fremdsprache"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0000542 "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 SubClassOf(ontology:LP_0000542 ontology:LP_0000540)
 
 # Class: ontology:LP_0000543 (Dritte Fremdsprache)
@@ -2290,12 +2314,18 @@ SubClassOf(ontology:LP_0000808 obo:BFO_0000040)
 
 # Class: ontology:LP_0000809 (Schule)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000809 "Eine Schule ist eine Organisation (Bildungseinrichtung), in der Lernende im Rahmen eines geregelten Bildungsauftrags nach verbindlichen Lehrplänen unterrichtet werden."@de)
+AnnotationAssertion(rdfs:comment ontology:LP_0000809 "School is an organization (educational institution) that provides organized and continuous instruction and learning for students, typically within a defined educational framework, curriculum, and governance structure."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000809 "Schule"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000809 "school"@en)
 SubClassOf(ontology:LP_0000809 ObjectIntersectionOf(ontology:LP_0000808 ObjectSomeValuesFrom(ontology:LP_0000343 ontology:LP_0000475)))
 
-# Class: ontology:LP_0000810 (Schulklasse)
+# Class: ontology:LP_0000810 (school class)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000810 "A school class is an organizationally defined group of students, usually belonging to the same grade level, who are taught together over a defined period of time."@en)
+AnnotationAssertion(rdfs:comment ontology:LP_0000810 "Eine Schulklasse ist eine organisatorisch festgelegte Lerngruppe von Schülerinnen und Schülern, die in der Regel derselben Jahrgangsstufe angehören und über einen bestimmten Zeitraum gemeinsam unterrichtet werden."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000810 "Schulklasse"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000810 "school class"@en)
 SubClassOf(ontology:LP_0000810 ontology:LP_0000808)
 
 # Class: ontology:LP_0000813 (Hauptschulbildungsgang)
@@ -2311,12 +2341,12 @@ In addition to core subjects (German, mathematics), learners also acquire techni
 The \"Erste Schulabschluss\" provides access to vocational training programs and, with appropriate performance, may also allow admission to higher educational tracks (e.g., \"Realschulbildungsgang\", \"Gymnasialer Bildungsgang\")."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0000813 "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000813 "Hauptschulbildungsgang"@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000813 "Hauptschule Track"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000813 "Hauptschule track"@en)
 EquivalentClasses(ontology:LP_0000813 ObjectIntersectionOf(ontology:LP_0000816 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000834)))
 SubClassOf(ontology:LP_0000813 ontology:LP_0000816)
 SubClassOf(ontology:LP_0000813 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000834))
 
-# Class: ontology:LP_0000814 (Realschule Track)
+# Class: ontology:LP_0000814 (Realschule track)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000814 "ALT Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
 AnnotationAssertion(rdfs:comment ontology:LP_0000814 "NEU Der “Realschulbildungsgang” ist ein “Bildungsgang”.
@@ -2328,7 +2358,7 @@ This qualification allows access to vocational training and, with sufficient ach
 Instruction is less theoretical than at the Gymnasium but more demanding than in the \"Hauptschulbildungsgang\"."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0000814 "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000814 "Realschulbildungsgang"@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000814 "Realschule Track"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000814 "Realschule track"@en)
 EquivalentClasses(ontology:LP_0000814 ObjectIntersectionOf(ontology:LP_0000816 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000832)))
 SubClassOf(ontology:LP_0000814 ontology:LP_0000816)
 SubClassOf(ontology:LP_0000814 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000832))
@@ -2347,7 +2377,8 @@ The curriculum content for the \"Gymnasiale Bildungsgang\" is more academically 
 The \"Gymnasiale Bildungsgang\" does not necessarily have to be completed at a Gymnasium; it can also be pursued at “Gesamt- oder Gemeinschaftsschulen” offering schooling at the Gymnasium level with the goal of achieving the \"Allgemeine Hochschulreife\"."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0000815 "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000815 "Gymnasialer Bildungsgang"@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000815 "Gymnasium Track"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000815 "Gymnasium track"@en)
+EquivalentClasses(ontology:LP_0000815 ObjectUnionOf(ObjectIntersectionOf(ontology:LP_0000816 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000069)) ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000835)))
 SubClassOf(ontology:LP_0000815 ontology:LP_0000816)
 
 # Class: ontology:LP_0000816 (Bildungsgang)
@@ -2375,7 +2406,7 @@ Der Hauptschulbildungsgang, der zum Ersten Schulabschluss führt;
 der Realschulbildungsgang, der zum Mittleren Schulabschluss führt;
 der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000816 "Bildungsgang"@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000816 "educational pathway"@en)
+AnnotationAssertion(rdfs:label ontology:LP_0000816 "educational track"@en)
 AnnotationAssertion(rdfs:seeAlso ontology:LP_0000816 <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926>)
 AnnotationAssertion(rdfs:seeAlso ontology:LP_0000816 <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf>)
 SubClassOf(ontology:LP_0000816 obo:BFO_0000015)
@@ -2419,6 +2450,7 @@ SubClassOf(ontology:LP_0000835 ontology:LP_0000028)
 # Class: ontology:LP_0000845 (CE-Progressionsstufe)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000845 "CE-Progressionsstufe"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000845 "progression stage"@en)
 AnnotationAssertion(skos:definition ontology:LP_0000845 "Die Progresssion ist Teil einer Kompetenz-Spezifikation oder eines Lerninhalts. Sie beschreibt genau den Teil, der je nach Niveau variabel ist. Jede Progessionssstufe hat eine eigene Beziehung zu einer Niveauspezifikation."@de)
 AnnotationAssertion(skos:example ontology:LP_0000845 "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de)
 SubClassOf(ontology:LP_0000845 ontology:LP_0000261)
@@ -2428,7 +2460,7 @@ SubClassOf(ontology:LP_0000845 ontology:LP_0000261)
 AnnotationAssertion(rdfs:label ontology:LP_0000851 "Niveauspezifikationsfunktion"@de)
 SubClassOf(ontology:LP_0000851 ontology:LP_0000478)
 
-# Class: ontology:LP_0000852 (CE-Hinweis)
+# Class: ontology:LP_0000852 (note)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000852 "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
 - practical or methodological recommendations
@@ -2441,15 +2473,17 @@ AnnotationAssertion(rdfs:comment ontology:LP_0000852 "Ein “CE-Hinweis” ist e
 - Vertiefungsvorschläge
 - Differenzierungsvorschläge"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000852 "CE-Hinweis"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000852 "note"@en)
 EquivalentClasses(ontology:LP_0000852 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0001014)))
 SubClassOf(ontology:LP_0000852 ontology:LP_0000261)
 SubClassOf(ontology:LP_0000852 ObjectSomeValuesFrom(ObjectInverseOf(ontology:LP_0000008) ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)))
 
-# Class: ontology:LP_0001015 (CE-Fragment)
+# Class: ontology:LP_0001015 (fragment)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0001015 "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0001015 "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
 AnnotationAssertion(rdfs:label ontology:LP_0001015 "CE-Fragment"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0001015 "fragment"@en)
 AnnotationAssertion(skos:editorialNote ontology:LP_0001015 "Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -2547,11 +2581,12 @@ Englisch Sek I und Sek II")
 SubClassOf(ontology:LP_0030032 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030032 ObjectIntersectionOf(ontology:LP_0002097 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0030065 (CE-Verweis)
+# Class: ontology:LP_0030065 (reference)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0030065 "A \"CE-Verweis\" is a \"Curriculares Element\" that establishes a connection from one “Curriculares Element” to another element within the same curriculum, a different curriculum, or external resources. The \"CE-Verweis\" is not the linked object itself but rather a reference to it."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0030065 "Ein “CE-Verweis” ist ein “Curriculares Element”, das einen Bezug von einem Curricularen Element zu einem anderen Element desselben Lehrplans, eines anderen Lehrplans oder externen Ressourcen herstellt. Dabei ist der “CE-Verweis” nicht selbst das verlinkte Objekt, sondern stellt eine Referenz darauf dar."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0030065 "CE-Verweis"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0030065 "reference"@en)
 EquivalentClasses(ontology:LP_0030065 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000483 ontology:LP_0002158)))
 SubClassOf(ontology:LP_0030065 ontology:LP_0000261)
 
@@ -2719,9 +2754,20 @@ AnnotationAssertion(skos:editorialNote ontology:LP_0030298 "Physik Sek II")
 SubClassOf(ontology:LP_0030298 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030298 ObjectIntersectionOf(ontology:LP_0002097 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0030325 (CE-Leitperspektive)
+# Class: ontology:LP_0030325 (guiding perspective)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0030325 "A guiding perspective is a curricular element that describes overarching educational principles connecting all subjects and types of schools, addressing socially relevant topics such as politics, culture, environment, and economy.
+These educational principles promote key competencies, value orientation, and personal development for an autonomous and responsible life.
+Serving as a unifying thread, they are embedded across subjects in both teaching and school life.
+The specific content and topics grouped under the term guiding perspectives, as well as the labels used for these concepts, vary by federal state.
+Examples of alternative terms include: cross-subject theme, cross-subject objective, educational and developmental objective, or cross-cutting theme."@en)
+AnnotationAssertion(rdfs:comment ontology:LP_0030325 "Eine “CE-Leitperspektive” ist ein “Curriculares Element”, das übergreifende Bildungsprinzipien beschreibt, die alle Fächer und Schulformen verbinden und gesellschaftlich relevante Themen wie Politik, Kultur, Umwelt und Wirtschaft aufgreifen.
+Die Bildungsprinzipien fördern Schlüsselkompetenzen, Werteorientierung und Persönlichkeitsentwicklung für ein selbstbestimmtes, verantwortungsbewusstes Leben.
+Als roter Faden sind sie fächerübergreifend in Unterricht und Schulleben verankert.
+Die konkreten Inhalte und Themen, die unter dem Begriff „Leitperspektiven“ zusammengefasst werden, sowie die Bezeichnungen dieser Konzepte unterscheiden sich je nach Bundesland. 
+Beispiele für alternative Begriffe sind: (fach-)übergreifendes Thema, (fach-)übergreifendes Ziel, Bildungs- und Erziehungsziel oder Querschnittsthema.")
 AnnotationAssertion(rdfs:label ontology:LP_0030325 "CE-Leitperspektive"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0030325 "guiding perspective"@en)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030325 "Oder:
 - (Fach)übergreifendes Thema
 - (Fach)Übergreifendes Ziel
@@ -2739,6 +2785,8 @@ SubClassOf(ontology:LP_0030335 ObjectIntersectionOf(ontology:LP_0000536 ObjectHa
 
 # Class: ontology:LP_0030361 (Grundschulniveau)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0030361 "Das “Grundschulniveau” ist ein “Bildungsgangniveau”, welches das Niveau einer Schülerin oder eines  Schülers im Primarbereich beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen im Primarbereich behandelt werden.")
 AnnotationAssertion(rdfs:label ontology:LP_0030361 "Grundschulniveau"@de)
 SubClassOf(ontology:LP_0030361 ontology:LP_0000028)
 
@@ -3306,16 +3354,19 @@ ClassAssertion(ontology:LP_0000482 ontology:LP_0000627)
 
 # Individual: ontology:LP_0000803 (Anforderungsbereich 1: Reproduktion)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000803 "Der Anforderungsbereich 1 umfasst, dass Lernende grundlegende Inhalte aus einem klar abgegrenzten Themenfeld wiedergeben können. Dabei sollen sie vertraute Arbeitstechniken und Methoden anwenden, die zuvor eingeübt wurden.")
 AnnotationAssertion(rdfs:label ontology:LP_0000803 "Anforderungsbereich 1: Reproduktion"@de)
 ClassAssertion(ontology:LP_0000802 ontology:LP_0000803)
 
 # Individual: ontology:LP_0000804 (Anforderungsbereich 2: Reorganisation und Transfer)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000804 "Der Anforderungsbereich 2 umfasst das selbstständige Strukturieren von Inhalten und in bekannte Zusammenhänge zu übertragen. Lernende sollen das Erlernte sinnvoll anwenden und methodisch angemessen nutzen können.")
 AnnotationAssertion(rdfs:label ontology:LP_0000804 "Anforderungsbereich 2: Reorganisation und Transfer"@de)
 ClassAssertion(ontology:LP_0000802 ontology:LP_0000804)
 
 # Individual: ontology:LP_0000805 (Anforderungsbereich 3: Reflexion und Problemlösung)
 
+AnnotationAssertion(rdfs:comment ontology:LP_0000805 "Der Anforderungsbereich 3 umfasst die Fähigkeit, sich kritisch und reflektiert mit neuen Fragestellungen auseinanderzusetzen. Lernende sollen Methoden selbstständig einsetzen, um begründete Einschätzungen, Interpretationen oder Lösungsansätze zu entwickeln.")
 AnnotationAssertion(rdfs:label ontology:LP_0000805 "Anforderungsbereich 3: Reflexion und Problemlösung"@de)
 ClassAssertion(ontology:LP_0000802 ontology:LP_0000805)
 
@@ -3432,7 +3483,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000004 "class level 4"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000004 "4.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000004)
 
-# Individual: ontology:LP_2000005 (class level 5)
+# Individual: ontology:LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000005 "5"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000005 "Jahrgangsstufe 5"@de)
@@ -3488,7 +3539,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000011 "class level 11"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000011 "11.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000011)
 
-# Individual: ontology:LP_2000012 (class level 12)
+# Individual: ontology:LP_2000012 (Jahrgangsstufe 12)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000012 "12"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000012 "Jahrgangsstufe 12"@de)

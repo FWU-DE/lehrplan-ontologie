@@ -8,6 +8,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
@@ -16,9 +17,9 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-8"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-8, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2025-12-08</terms:created>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-9"/>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-9, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <terms:created>2026-01-06</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -30,7 +31,8 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>1.0.0-8</owl:versionInfo>
+        <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
+        <owl:versionInfo>1.0.0-9</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -242,6 +244,12 @@
         <rdfs:label>title</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
     
 
 
@@ -1219,16 +1227,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:label xml:lang="de">hat Teil</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000015 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000015">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-        <rdfs:label xml:lang="de">hat Prozessteil</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1238,6 +1238,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000017">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
+        <rdfs:label xml:lang="en">concretizes curriculum</rdfs:label>
         <rdfs:label xml:lang="de">konkretisiert Lehrplan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1250,6 +1251,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
         <rdfs:label xml:lang="de">endet mit Abschluss</rdfs:label>
         <rdfs:label xml:lang="de">ermöglicht Abschluss</rdfs:label>
+        <rdfs:label xml:lang="en">leads to qualification</rdfs:label>
         <skos:example>Ein Bildungsgang (occurent) endet mit Abschluss.</skos:example>
     </owl:ObjectProperty>
     
@@ -1268,6 +1270,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
+        <rdfs:label xml:lang="en">has class level</rdfs:label>
         <rdfs:label xml:lang="de">hat Jahrgangsstufe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1278,6 +1281,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000029">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000040"/>
+        <rdfs:label xml:lang="en">of federal state</rdfs:label>
         <rdfs:label xml:lang="de">von Bundesland</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1298,6 +1302,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000047">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
+        <rdfs:label xml:lang="en">has educational level</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulstufe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1307,7 +1313,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000048">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <rdfs:comment>has input</rdfs:comment>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
         <rdfs:label xml:lang="de">hat Input</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1317,7 +1323,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000049">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <rdfs:comment xml:lang="en">has output</rdfs:comment>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
         <rdfs:label xml:lang="de">hat Output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1328,6 +1334,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000071">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:label xml:lang="de">benötigt Niveau</rdfs:label>
+        <rdfs:label xml:lang="en">requires level</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1339,6 +1346,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
         <rdfs:label xml:lang="de">inkludiert</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1349,6 +1357,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000086">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000840"/>
+        <rdfs:label xml:lang="en">is niveau of</rdfs:label>
         <rdfs:label xml:lang="de">ist Niveau von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1358,6 +1367,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000343">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000475"/>
+        <rdfs:label xml:lang="en">has school type function</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulartfunktion</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1368,6 +1379,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
+        <rdfs:label xml:lang="en">for educational track</rdfs:label>
         <rdfs:label xml:lang="de">für Bildungsgangabschnitt</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1379,6 +1391,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000475"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <rdfs:label xml:lang="en">concretizes type of school</rdfs:label>
         <rdfs:label xml:lang="de">konkretisiert Schulart</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1390,6 +1403,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000495"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
+        <rdfs:label xml:lang="en">has function specification</rdfs:label>
         <rdfs:label xml:lang="de">hat Funktion</rdfs:label>
         <skos:altLabel xml:lang="de">hat Funktionsspezifikation</skos:altLabel>
     </owl:ObjectProperty>
@@ -1400,6 +1414,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000495">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is function specification of</rdfs:label>
         <rdfs:label xml:lang="de">ist Funktion von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1422,6 +1437,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000537"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="de">Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem &quot;Bezug&quot; (z.B. Zweite-Fremdsprache) zuzuordnen.</rdfs:comment>
+        <rdfs:label xml:lang="en">has school subject</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulfach</rdfs:label>
         <skos:editorialNote>wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen</skos:editorialNote>
         <skos:example xml:lang="de">Gegeben sind:
@@ -1472,6 +1488,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000812">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <rdfs:label xml:lang="en">for type of school</rdfs:label>
         <rdfs:label xml:lang="de">für Schulart</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1483,6 +1500,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
+        <rdfs:label xml:lang="en">has educational track level</rdfs:label>
         <rdfs:label xml:lang="de">hat Bildungsgangniveau</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1506,6 +1524,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840"/>
         </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">has niveau</rdfs:label>
         <rdfs:label xml:lang="de">hat Niveau</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1515,6 +1534,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0020001">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
         <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1526,6 +1546,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030003"/>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
         <rdfs:label xml:lang="de">hat Beschreibung</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1544,6 +1565,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000346"/>
+        <rdfs:label xml:lang="en">has title</rdfs:label>
         <rdfs:label xml:lang="de">hat Titel</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1555,6 +1577,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000347"/>
+        <rdfs:label xml:lang="en">has number</rdfs:label>
         <rdfs:label xml:lang="de">hat Nummer</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1565,6 +1588,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030071">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:label xml:lang="en">has reference</rdfs:label>
         <rdfs:label xml:lang="de">hat Verweis</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1575,6 +1599,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030072">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
         <rdfs:label xml:lang="de">verweist auf</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2999,6 +3024,7 @@ In the ontology, a distinction is made between &quot;Hauptschulniveau&quot;, &qu
 These correspond to the basic, intermediate, and advanced requirements used in some lower secondary curricula to categorize competences.
 While the &quot;Fachniveau Sek II&quot; describes the specific requirements in a single subject within the upper secondary level of the Gymnasium track, the &quot;Bildungsgangniveau&quot; refers to the level of an entire educational track aimed at a specific qualification.</rdfs:comment>
         <rdfs:label xml:lang="de">Bildungsgangniveau</rdfs:label>
+        <rdfs:label xml:lang="en">educational track level</rdfs:label>
     </owl:Class>
     
 
@@ -3086,7 +3112,15 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
     <!-- https://w3id.org/lehrplan/ontology/LP_0000043 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000043">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000046"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
+        <rdfs:comment>Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation.</rdfs:comment>
         <rdfs:label xml:lang="de">Oberstufenphase</rdfs:label>
         <rdfs:label xml:lang="en">secondary phase</rdfs:label>
     </owl:Class>
@@ -4621,7 +4655,7 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet.</rdfs:comment>
         <rdfs:label xml:lang="de">Curriculares Element</rdfs:label>
         <rdfs:label xml:lang="en">curricular element</rdfs:label>
-        <skos:editorialNote xml:lang="de">Wir haben &apos;Curriculares Element&apos; als Bezeichnung gewählt, weil die vorherige Bezeichnung &apos;Lehrplan Element&apos; zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde &apos;Lehrplan Element&apos; nicht gut passen.</skos:editorialNote>
+        <skos:editorialNote xml:lang="de">Wir haben &apos;Curriculares Element&apos; als Bezeichnung gewählt, weil die vorherige Bezeichnung &apos;Lehrplan Element&apos; zu sehr auf Lehrpläne einschränkt. Es sollen auch Bildungsstandards beschrieben werden, daher würde &apos;Lehrplan Element&apos; nicht gut passen.</skos:editorialNote>
     </owl:Class>
     
 
@@ -4675,6 +4709,7 @@ Beispiel:
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Kompetenzspezifikation</rdfs:label>
+        <rdfs:label xml:lang="en">competency specification</rdfs:label>
     </owl:Class>
     
 
@@ -4787,6 +4822,7 @@ Beispiel:
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Lerninhalt</rdfs:label>
+        <rdfs:label xml:lang="en">learning content</rdfs:label>
     </owl:Class>
     
 
@@ -4906,6 +4942,7 @@ The element serves to structure curricula and educational standards by grouping 
 Ein “CE-Bereich” kann anderen “CE-Bereichen” über- oder untergeordnet sein.
 Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es “CE-Kompetenzspezifikationen” und/oder “CE-Lerninhalte” unter einem gemeinsamen inhaltlichen Fokus zusammenfasst, der durch den “CE-Bereich” definiert wird.</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Bereich</rdfs:label>
+        <rdfs:label xml:lang="en">area</rdfs:label>
         <skos:editorialNote>Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -4972,6 +5009,7 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
         <rdfs:comment>In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.</rdfs:comment>
         <rdfs:label xml:lang="de">Orientierungsstufe</rdfs:label>
+        <skos:editorialNote>Auch in anderen BL gibt es Orientierungsstufen, aber MV ist das einzige BL, das einen Lehrplan nur für die Orientierungsstufe hat.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5015,6 +5053,25 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0001441"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -5228,12 +5285,12 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="en">A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
 
-A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They can serve as the basis for the development of specific curricula in the federal states.
+A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They serve as the basis for the development of specific curricula in the federal states.
 
 In addition to the binding requirements, the curriculum often also contains information on the didactic and methodological design of lessons as well as cross-references to related and interdisciplinary skills and content from other school subjects. Depending on the federal state, curricula can have different names.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein Lehrplan ist eine Informationseinheit, die eine systematische Zusammenstellung von curricularen Elementen umfasst. Er definiert verbindlich die Kompetenzen und Inhalte, die Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
 
-Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen können.
+Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen.
 
 Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Querverweise zu verwandten und fachübergreifenden Kompetenzen und Inhalten aus anderen Schulfächern. Je nach Bundesland können Lehrpläne unterschiedliche Bezeichnungen tragen, wie z. B. Bildungsplan, Fachanforderungen, Kerncurriculum, Kernlehrplan, LehrplanPLUS, Rahmenlehrplan oder Rahmenplan.</rdfs:comment>
         <rdfs:label xml:lang="de">Lehrplan</rdfs:label>
@@ -5479,7 +5536,7 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000478">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="de">Funktionsspezifikation</rdfs:label>
-        <rdfs:label xml:lang="en">function sepcification</rdfs:label>
+        <rdfs:label xml:lang="en">function specification</rdfs:label>
     </owl:Class>
     
 
@@ -5589,6 +5646,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:comment xml:lang="de">Lehrplan Element bezogen auf die Vorgaben der KMK Bildungsstandards</rdfs:comment>
         <rdfs:label xml:lang="de">Element (Bista)</rdfs:label>
+        <rdfs:label xml:lang="en">element (Bista)</rdfs:label>
     </owl:Class>
     
 
@@ -5629,8 +5687,8 @@ Beispiele für “Schulfachbezug” sind “Erste Fremdsprache”, “Pflichtfac
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000542">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000540"/>
+        <rdfs:comment xml:lang="de">Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist.</rdfs:comment>
         <rdfs:label xml:lang="de">Zweite Fremdsprache</rdfs:label>
-        <skos:editorialNote xml:lang="de">Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5926,7 +5984,10 @@ The &quot;Bildungsstandards&quot; of the KMK represent a combination of content 
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Eine Schule ist eine Organisation (Bildungseinrichtung), in der Lernende im Rahmen eines geregelten Bildungsauftrags nach verbindlichen Lehrplänen unterrichtet werden.</rdfs:comment>
+        <rdfs:comment xml:lang="en">School is an organization (educational institution) that provides organized and continuous instruction and learning for students, typically within a defined educational framework, curriculum, and governance structure.</rdfs:comment>
         <rdfs:label xml:lang="de">Schule</rdfs:label>
+        <rdfs:label xml:lang="en">school</rdfs:label>
     </owl:Class>
     
 
@@ -5935,7 +5996,10 @@ The &quot;Bildungsstandards&quot; of the KMK represent a combination of content 
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000810">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000808"/>
+        <rdfs:comment xml:lang="en">A school class is an organizationally defined group of students, usually belonging to the same grade level, who are taught together over a defined period of time.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Schulklasse ist eine organisatorisch festgelegte Lerngruppe von Schülerinnen und Schülern, die in der Regel derselben Jahrgangsstufe angehören und über einen bestimmten Zeitraum gemeinsam unterrichtet werden.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulklasse</rdfs:label>
+        <rdfs:label xml:lang="en">school class</rdfs:label>
     </owl:Class>
     
 
@@ -5972,7 +6036,7 @@ In addition to core subjects (German, mathematics), learners also acquire techni
 The &quot;Erste Schulabschluss&quot; provides access to vocational training programs and, with appropriate performance, may also allow admission to higher educational tracks (e.g., &quot;Realschulbildungsgang&quot;, &quot;Gymnasialer Bildungsgang&quot;).</rdfs:comment>
         <rdfs:comment xml:lang="en">The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance.</rdfs:comment>
         <rdfs:label xml:lang="de">Hauptschulbildungsgang</rdfs:label>
-        <rdfs:label xml:lang="en">Hauptschule Track</rdfs:label>
+        <rdfs:label xml:lang="en">Hauptschule track</rdfs:label>
     </owl:Class>
     
 
@@ -6008,7 +6072,7 @@ This qualification allows access to vocational training and, with sufficient ach
 Instruction is less theoretical than at the Gymnasium but more demanding than in the &quot;Hauptschulbildungsgang&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track.</rdfs:comment>
         <rdfs:label xml:lang="de">Realschulbildungsgang</rdfs:label>
-        <rdfs:label xml:lang="en">Realschule Track</rdfs:label>
+        <rdfs:label xml:lang="en">Realschule track</rdfs:label>
     </owl:Class>
     
 
@@ -6016,6 +6080,25 @@ Instruction is less theoretical than at the Gymnasium but more demanding than in
     <!-- https://w3id.org/lehrplan/ontology/LP_0000815 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000815">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000069"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000835"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
         <rdfs:comment xml:lang="de">ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
 
@@ -6029,7 +6112,7 @@ The curriculum content for the &quot;Gymnasiale Bildungsgang&quot; is more acade
 The &quot;Gymnasiale Bildungsgang&quot; does not necessarily have to be completed at a Gymnasium; it can also be pursued at “Gesamt- oder Gemeinschaftsschulen” offering schooling at the Gymnasium level with the goal of achieving the &quot;Allgemeine Hochschulreife&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types.</rdfs:comment>
         <rdfs:label xml:lang="de">Gymnasialer Bildungsgang</rdfs:label>
-        <rdfs:label xml:lang="en">Gymnasium Track</rdfs:label>
+        <rdfs:label xml:lang="en">Gymnasium track</rdfs:label>
     </owl:Class>
     
 
@@ -6061,7 +6144,7 @@ Der Hauptschulbildungsgang, der zum Ersten Schulabschluss führt;
 der Realschulbildungsgang, der zum Mittleren Schulabschluss führt;
 der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt.</rdfs:comment>
         <rdfs:label xml:lang="de">Bildungsgang</rdfs:label>
-        <rdfs:label xml:lang="en">educational pathway</rdfs:label>
+        <rdfs:label xml:lang="en">educational track</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926"/>
         <rdfs:seeAlso rdf:resource="https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf"/>
     </owl:Class>
@@ -6431,6 +6514,7 @@ It describes the depth and level of demand with which learning content and compe
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000845">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:label xml:lang="de">CE-Progressionsstufe</rdfs:label>
+        <rdfs:label xml:lang="en">progression stage</rdfs:label>
         <skos:definition xml:lang="de">Die Progresssion ist Teil einer Kompetenz-Spezifikation oder eines Lerninhalts. Sie beschreibt genau den Teil, der je nach Niveau variabel ist. Jede Progessionssstufe hat eine eigene Beziehung zu einer Niveauspezifikation.</skos:definition>
         <skos:example xml:lang="de">Wenn die Komptenz &quot;Lesen&quot; ist, könnten Progressionen sein: &quot;Worte einzeln lesen&quot;, &quot;Mit Hilfe (Finger, Stäbchen, Lineal) lesen.&quot;, &quot;Flüssig lesen&quot;</skos:example>
     </owl:Class>
@@ -6506,6 +6590,7 @@ It describes the depth and level of demand with which learning content and compe
 - Vertiefungsvorschläge
 - Differenzierungsvorschläge</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Hinweis</rdfs:label>
+        <rdfs:label xml:lang="en">note</rdfs:label>
     </owl:Class>
     
 
@@ -6725,6 +6810,7 @@ It describes the depth and level of demand with which learning content and compe
         <rdfs:comment xml:lang="en">A &quot;CE-Fragment&quot; is a &quot;Curriculares Element&quot; with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions.</rdfs:comment>
         <rdfs:comment>Ein “CE-Fragment” ist ein “Curriculares Element&quot; mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Fragment</rdfs:label>
+        <rdfs:label xml:lang="en">fragment</rdfs:label>
         <skos:editorialNote>Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -8394,6 +8480,25 @@ Physik Sek II</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002080"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -9856,11 +9961,15 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030009 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030009">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002085"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030077"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -9895,11 +10004,25 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030011 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030011">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002118"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030239"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -9915,11 +10038,25 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030012 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030012">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002118"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -9940,6 +10077,25 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -9975,11 +10131,15 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030015 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030015">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002102"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002102"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030142"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -10528,11 +10688,25 @@ Englisch Sek I und Sek II</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030042 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030042">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000441"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000441"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030047"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -10592,11 +10766,25 @@ Englisch Sek I und Sek II</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030045 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030045">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001441"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0001441"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030123"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -10949,6 +11137,7 @@ Englisch Sek I und Sek II</skos:editorialNote>
         <rdfs:comment xml:lang="en">A &quot;CE-Verweis&quot; is a &quot;Curriculares Element&quot; that establishes a connection from one “Curriculares Element” to another element within the same curriculum, a different curriculum, or external resources. The &quot;CE-Verweis&quot; is not the linked object itself but rather a reference to it.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein “CE-Verweis” ist ein “Curriculares Element”, das einen Bezug von einem Curricularen Element zu einem anderen Element desselben Lehrplans, eines anderen Lehrplans oder externen Ressourcen herstellt. Dabei ist der “CE-Verweis” nicht selbst das verlinkte Objekt, sondern stellt eine Referenz darauf dar.</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Verweis</rdfs:label>
+        <rdfs:label xml:lang="en">reference</rdfs:label>
     </owl:Class>
     
 
@@ -11382,11 +11571,25 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
     <!-- https://w3id.org/lehrplan/ontology/LP_0030088 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030088">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002093"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002093"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -12680,6 +12883,26 @@ Kommt in Sachunterricht Primar vor.</skos:editorialNote>
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030153 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030153">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002118"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030326"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Orientierungsrahmen (HB)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0030154 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030154">
@@ -12952,11 +13175,15 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030167 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030167">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000426"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000426"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030327"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -12978,6 +13205,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000426"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13128,6 +13374,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002051"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13148,6 +13413,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002051"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13155,6 +13439,7 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Verweis auf andere Standards für inhaltsbezogene Kompetenzen desselben Fachs (BW)</rdfs:label>
+        <skos:altLabel>Verweis auf inhaltsbezogene Kompetenzen (BW)</skos:altLabel>
     </owl:Class>
     
 
@@ -13162,11 +13447,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030177 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030177">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002051"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13188,6 +13487,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002051"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13195,6 +13513,7 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Verweis auf andere Fächer (BW)</rdfs:label>
+        <skos:altLabel>Verweis auf inhaltsbezogene Kompetenzen in anderen Fächern (BW)</skos:altLabel>
     </owl:Class>
     
 
@@ -13223,11 +13542,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030180 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030180">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000434"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13281,11 +13614,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030182 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030182">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000434"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13390,6 +13737,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002085"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13411,6 +13777,20 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002089"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13430,6 +13810,20 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002089"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13451,6 +13845,20 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002089"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13465,11 +13873,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030191 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030191">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002089"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002089"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13491,6 +13913,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002076"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13505,11 +13946,15 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030193 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030193">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000426"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000426"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030336"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -13616,6 +14061,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002093"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -13631,11 +14095,25 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030199 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030199">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002080"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002080"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -14322,11 +14800,25 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
     <!-- https://w3id.org/lehrplan/ontology/LP_0030233 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030233">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002101"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002101"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -14343,11 +14835,25 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
     <!-- https://w3id.org/lehrplan/ontology/LP_0030234 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030234">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002101"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002101"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -14834,6 +15340,25 @@ Deutsch Sek I</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000441"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000263"/>
+                                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
                     </owl:Restriction>
@@ -15173,11 +15698,15 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030274 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030274">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030065"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002103"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002103"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030072"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030270"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002158"/>
@@ -15814,7 +16343,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030308">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030304"/>
-        <rdfs:label xml:lang="de">Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)</rdfs:label>
+        <rdfs:label xml:lang="de">Bayerische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)</rdfs:label>
         <skos:altLabel>Leitlinien (BY)</skos:altLabel>
         <skos:editorialNote>nur für Grundschule und Förderschule</skos:editorialNote>
     </owl:Class>
@@ -15884,6 +16413,27 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030318 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030318">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002093"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030326"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Schlüsselkompetenz (ST)</rdfs:label>
+        <skos:editorialNote>in Grundsatzband Gymnasium enthalten</skos:editorialNote>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0030325 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325">
@@ -15899,7 +16449,18 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+        <rdfs:comment xml:lang="en">A guiding perspective is a curricular element that describes overarching educational principles connecting all subjects and types of schools, addressing socially relevant topics such as politics, culture, environment, and economy.
+These educational principles promote key competencies, value orientation, and personal development for an autonomous and responsible life.
+Serving as a unifying thread, they are embedded across subjects in both teaching and school life.
+The specific content and topics grouped under the term guiding perspectives, as well as the labels used for these concepts, vary by federal state.
+Examples of alternative terms include: cross-subject theme, cross-subject objective, educational and developmental objective, or cross-cutting theme.</rdfs:comment>
+        <rdfs:comment>Eine “CE-Leitperspektive” ist ein “Curriculares Element”, das übergreifende Bildungsprinzipien beschreibt, die alle Fächer und Schulformen verbinden und gesellschaftlich relevante Themen wie Politik, Kultur, Umwelt und Wirtschaft aufgreifen.
+Die Bildungsprinzipien fördern Schlüsselkompetenzen, Werteorientierung und Persönlichkeitsentwicklung für ein selbstbestimmtes, verantwortungsbewusstes Leben.
+Als roter Faden sind sie fächerübergreifend in Unterricht und Schulleben verankert.
+Die konkreten Inhalte und Themen, die unter dem Begriff „Leitperspektiven“ zusammengefasst werden, sowie die Bezeichnungen dieser Konzepte unterscheiden sich je nach Bundesland. 
+Beispiele für alternative Begriffe sind: (fach-)übergreifendes Thema, (fach-)übergreifendes Ziel, Bildungs- und Erziehungsziel oder Querschnittsthema.</rdfs:comment>
         <rdfs:label xml:lang="de">CE-Leitperspektive</rdfs:label>
+        <rdfs:label xml:lang="en">guiding perspective</rdfs:label>
         <skos:editorialNote>Oder:
 - (Fach)übergreifendes Thema
 - (Fach)Übergreifendes Ziel
@@ -15986,6 +16547,8 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Fachübergreifendes Thema (ST)</rdfs:label>
+        <skos:altLabel>Fächerübergreifender Themenkomplex (ST)</skos:altLabel>
+        <skos:editorialNote>in Grundsatzband Grundschule enthalten</skos:editorialNote>
     </owl:Class>
     
 
@@ -16114,6 +16677,8 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030361">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
+        <rdfs:comment>Das “Grundschulniveau” ist ein “Bildungsgangniveau”, welches das Niveau einer Schülerin oder eines  Schülers im Primarbereich beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen im Primarbereich behandelt werden.</rdfs:comment>
         <rdfs:label xml:lang="de">Grundschulniveau</rdfs:label>
     </owl:Class>
     
@@ -17629,6 +18194,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000137 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000137">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000105"/>
         <rdfs:label xml:lang="de">Mittlerer Schulabschluss (BE)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -17950,7 +18516,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001028"/>
         <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
         <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
-        <rdfs:label xml:lang="de">Gemeinschaftschulniveau (SL)</rdfs:label>
+        <rdfs:label xml:lang="de">Gemeinschaftsschulniveau (SL)</rdfs:label>
         <skos:editorialNote>gilt für die Jahrgangsstufen 5-6</skos:editorialNote>
     </owl:NamedIndividual>
     
@@ -19254,6 +19820,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000803">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000802"/>
+        <rdfs:comment>Der Anforderungsbereich 1 umfasst, dass Lernende grundlegende Inhalte aus einem klar abgegrenzten Themenfeld wiedergeben können. Dabei sollen sie vertraute Arbeitstechniken und Methoden anwenden, die zuvor eingeübt wurden.</rdfs:comment>
         <rdfs:label xml:lang="de">Anforderungsbereich 1: Reproduktion</rdfs:label>
     </owl:NamedIndividual>
     
@@ -19263,6 +19830,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000804">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000802"/>
+        <rdfs:comment>Der Anforderungsbereich 2 umfasst das selbstständige Strukturieren von Inhalten und in bekannte Zusammenhänge zu übertragen. Lernende sollen das Erlernte sinnvoll anwenden und methodisch angemessen nutzen können.</rdfs:comment>
         <rdfs:label xml:lang="de">Anforderungsbereich 2: Reorganisation und Transfer</rdfs:label>
     </owl:NamedIndividual>
     
@@ -19272,6 +19840,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000805">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000802"/>
+        <rdfs:comment>Der Anforderungsbereich 3 umfasst die Fähigkeit, sich kritisch und reflektiert mit neuen Fragestellungen auseinanderzusetzen. Lernende sollen Methoden selbstständig einsetzen, um begründete Einschätzungen, Interpretationen oder Lösungsansätze zu entwickeln.</rdfs:comment>
         <rdfs:label xml:lang="de">Anforderungsbereich 3: Reflexion und Problemlösung</rdfs:label>
     </owl:NamedIndividual>
     

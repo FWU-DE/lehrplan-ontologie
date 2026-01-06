@@ -471,6 +471,11 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:minCount             1;
         sh:path                 :LP_0000833 .
 
+:LP_0000332-__28002766355e717206166253afcf27e2
+        rdf:type     sh:PropertyShape;
+        sh:minCount  1;
+        sh:path      []  .
+
 :LP_0002093-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
         sh:class     :LP_0000040;
@@ -542,10 +547,11 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:hasValue  :LP_3000046;
         sh:path      :LP_0000029 .
 
-:LP_0000852-__1f73502fbeeca8c446b7e45fa066f12d
-        rdf:type     sh:PropertyShape;
-        sh:minCount  1;
-        sh:path      []  .
+:LP_0000263-__f52e7c5649ca081887f774af0ec70178
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  :LP_0000349;
+        sh:minCount             1;
+        sh:path                 []  .
 
 :LP_0000807-https___w3id.org_lehrplan_ontology_LP_0000008
         rdf:type                sh:PropertyShape;
@@ -559,6 +565,11 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:class     :LP_0000040;
         sh:hasValue  :LP_3000049;
         sh:path      :LP_0000029 .
+
+:LP_0000332-__a9465f70b3a774b5b97f69e8b638f2bb
+        rdf:type     sh:PropertyShape;
+        sh:minCount  1;
+        sh:path      []  .
 
 :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -601,11 +612,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         rdf:type  sh:PropertyShape;
         sh:class  <http://purl.obolibrary.org/obo/BFO_0000003>;
         sh:path   <http://purl.obolibrary.org/obo/BFO_0000139> .
-
-:LP_0000332-__eb5a8fe985e31d9d831ec8ed12e65426
-        rdf:type     sh:PropertyShape;
-        sh:minCount  1;
-        sh:path      []  .
 
 :LP_0001035-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -673,6 +679,12 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         dash:hasValueWithClass  :LP_0000809;
         sh:minCount             1;
         sh:path                 <http://purl.obolibrary.org/obo/RO_0000079> .
+
+:LP_0000263-__e27155ef8e56ee532b22823d8bbe33a0
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  :LP_0000349;
+        sh:minCount             1;
+        sh:path                 []  .
 
 :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000008
         rdf:type                sh:PropertyShape;
@@ -754,11 +766,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:hasValue  :LP_0000497;
         sh:path      :LP_0000483 .
 
-:LP_0000852-__fa8230e41e9dad822add2e8fd59d1f73
-        rdf:type     sh:PropertyShape;
-        sh:minCount  1;
-        sh:path      []  .
-
 :LP_0000508  rdf:type  sh:NodeShape , rdfs:Class;
         sh:property  :LP_0000508-https___w3id.org_lehrplan_ontology_LP_0000041 .
 
@@ -780,11 +787,10 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:hasValue  :LP_3000049;
         sh:path      :LP_0000029 .
 
-:LP_0000263-__0444151de9aaa33ae4b518945efeaf9c
-        rdf:type                sh:PropertyShape;
-        dash:hasValueWithClass  :LP_0000349;
-        sh:minCount             1;
-        sh:path                 []  .
+:LP_0000852-__1f58c6017e19f1774f457f36398e251c
+        rdf:type     sh:PropertyShape;
+        sh:minCount  1;
+        sh:path      []  .
 
 :LP_0002076-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -835,12 +841,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:class                :LP_0002051;
         sh:minCount             1;
         sh:path                 :LP_0000008 .
-
-:LP_0000263-__f34daae1533182d77e8eb4db0c08b34d
-        rdf:type                sh:PropertyShape;
-        dash:hasValueWithClass  :LP_0000349;
-        sh:minCount             1;
-        sh:path                 []  .
 
 :LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -899,6 +899,11 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         sh:hasValue  :LP_3000045;
         sh:path      :LP_0000029 .
 
+:LP_0000852-__903bf1b9dd2e6f42d0989b8900477eeb
+        rdf:type     sh:PropertyShape;
+        sh:minCount  1;
+        sh:path      []  .
+
 :LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
         sh:class     :LP_0000040;
@@ -937,11 +942,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 <http://purl.obolibrary.org/obo/BFO_0000008>
         rdf:type     sh:NodeShape , rdfs:Class;
         sh:property  <http://purl.obolibrary.org/obo/BFO_0000008-http___purl.obolibrary.org_obo_BFO_0000224> , <http://purl.obolibrary.org/obo/BFO_0000008-http___purl.obolibrary.org_obo_BFO_0000222> , <http://purl.obolibrary.org/obo/BFO_0000008-http___purl.obolibrary.org_obo_BFO_0000139> , <http://purl.obolibrary.org/obo/BFO_0000008-http___purl.obolibrary.org_obo_BFO_0000132> .
-
-:LP_0000332-__c86e08afad1c14560d1d643231152eb3
-        rdf:type     sh:PropertyShape;
-        sh:minCount  1;
-        sh:path      []  .
 
 :LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -984,125 +984,41 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
 :LP_0000475  rdf:type  rdfs:Class , sh:NodeShape;
         sh:property  :LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000477 , :LP_0000475-http___purl.obolibrary.org_obo_RO_0000059 , :LP_0000475-http___purl.obolibrary.org_obo_RO_0000079 .
 
-:LP_0002051  rdf:type       sh:NodeShape , rdfs:Class;
+:LP_0001035  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0002051-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0001035-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0002184  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
+:LP_0002080  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0002080-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000813  rdf:type       sh:NodeShape , rdfs:Class;
+:LP_0002093  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0000813-https___w3id.org_lehrplan_ontology_LP_0000833 .
+        sh:property         :LP_0002093-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 :LP_0001038  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0001038-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000819  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000008 .
-
-:LP_0000336  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000336-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0002089  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002089-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0002164  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000824  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000263  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000263-__f34daae1533182d77e8eb4db0c08b34d , :LP_0000263-__0444151de9aaa33ae4b518945efeaf9c , :LP_0000263-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0030325  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030325-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0030004  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000008 .
-
-:LP_0002101  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002101-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0002097  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002097-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0030039  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030039-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000821  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000008 .
-
 :LP_0001101  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0001101-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0001000  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
+:LP_0030041  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0030041-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0001035  rdf:type       rdfs:Class , sh:NodeShape;
+:LP_0000852  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0001035-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000802  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000802-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0001011  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001011-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0000852-__903bf1b9dd2e6f42d0989b8900477eeb , :LP_0000852-https___w3id.org_lehrplan_ontology_LP_0000483 , :LP_0000852-__1f58c6017e19f1774f457f36398e251c .
 
 :LP_0000822  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
@@ -1111,32 +1027,54 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         owl:intersectionOf  [] ;
         sh:property         :LP_0000822-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000822-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000342  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000342-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0030065  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030065-https___w3id.org_lehrplan_ontology_LP_0030072 , :LP_0030065-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
 :LP_0000434  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0000434-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000825  rdf:type       sh:NodeShape , rdfs:Class;
+:LP_0000821  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000008 .
+        sh:property         :LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000008 .
 
-:LP_0001441  rdf:type       rdfs:Class , sh:NodeShape;
+:LP_0001000  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0001441-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0002076  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002076-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000426  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000426-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000441  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000441-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0001032  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001032-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000349  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000349-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0030080  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030080-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 :LP_0000826  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
@@ -1145,122 +1083,42 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         owl:intersectionOf  [] ;
         sh:property         :LP_0000826-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000826-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0001108  rdf:type       rdfs:Class , sh:NodeShape;
+:LP_0001015  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0001108-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000818  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0001028  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001028-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0002093  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002093-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0002085  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002085-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000349  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000349-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0001105  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000806  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000008 .
-
-:LP_0000332  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000332-__eb5a8fe985e31d9d831ec8ed12e65426 , :LP_0000332-__c86e08afad1c14560d1d643231152eb3 , :LP_0000332-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0001032  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001032-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0001015-https___w3id.org_lehrplan_ontology_LP_0000483 .
 
 :LP_0000337  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0000337-https___w3id.org_lehrplan_ontology_LP_0000483 .
 
-:LP_0002103  rdf:type       rdfs:Class , sh:NodeShape;
+:LP_0002164  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0002103-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0002076  rdf:type       sh:NodeShape , rdfs:Class;
+:LP_0002118  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0002076-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0002118-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000823  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
+:LP_0002101  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000814  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000814-https___w3id.org_lehrplan_ontology_LP_0000833 .
-
-:LP_0001015  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001015-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0002080  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002080-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0030053  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030053-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0002101-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 :LP_0002102  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0002102-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0030041  rdf:type       sh:NodeShape , rdfs:Class;
+:LP_0030053  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         :LP_0030041-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000426  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000426-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0030080  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030080-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         :LP_0030053-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 :LP_0000807  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
@@ -1269,37 +1127,6 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         owl:intersectionOf  [] ;
         sh:property         :LP_0000807-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000807-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-:LP_0000852  rdf:type       sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000852-__fa8230e41e9dad822add2e8fd59d1f73 , :LP_0000852-__1f73502fbeeca8c446b7e45fa066f12d , :LP_0000852-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-:LP_0000441  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000441-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0000572  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0000572-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0030091  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0030091-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0001019  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0001019-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-:LP_0002118  rdf:type       rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         :LP_0002118-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
 :LP_0000433  rdf:type       rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
@@ -1307,9 +1134,182 @@ PREFIX xsd:         <http://www.w3.org/2001/XMLSchema#>
         owl:intersectionOf  [] ;
         sh:property         :LP_0000433-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000433-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
+:LP_0000802  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000802-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0000825  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000008 .
+
+:LP_0000572  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000572-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0001028  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001028-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000818  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0030039  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030039-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000814  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000814-https___w3id.org_lehrplan_ontology_LP_0000833 .
+
+:LP_0000263  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000263-__e27155ef8e56ee532b22823d8bbe33a0 , :LP_0000263-__f52e7c5649ca081887f774af0ec70178 , :LP_0000263-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0002085  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002085-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0001105  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000823  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000342  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000342-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0030091  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030091-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0002184  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000824  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000332  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000332-__28002766355e717206166253afcf27e2 , :LP_0000332-__a9465f70b3a774b5b97f69e8b638f2bb , :LP_0000332-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0030065  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030065-https___w3id.org_lehrplan_ontology_LP_0030072 , :LP_0030065-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0001108  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001108-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000806  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000008 .
+
+:LP_0002097  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002097-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000813  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000813-https___w3id.org_lehrplan_ontology_LP_0000833 .
+
+:LP_0002103  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002103-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0000336  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000336-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0001019  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001019-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0030004  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000008 .
+
+:LP_0000819  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000029 , :LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000008 .
+
+:LP_0001011  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001011-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0030325  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0030325-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+:LP_0002051  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002051-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0001441  rdf:type       rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0001441-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
 :LP_0000820  rdf:type       sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         :LP_0000820-https___w3id.org_lehrplan_ontology_LP_0000008 , :LP_0000820-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+:LP_0002089  rdf:type       sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         :LP_0002089-https___w3id.org_lehrplan_ontology_LP_0000029 .

@@ -6,13 +6,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-8"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-9"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-8, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2025-12-08</terms:created>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-9, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <terms:created>2026-01-06</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -24,7 +25,8 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>1.0.0-8</owl:versionInfo>
+        <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
+        <owl:versionInfo>1.0.0-9</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -79,6 +81,12 @@
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
 </rdf:RDF>
 
 

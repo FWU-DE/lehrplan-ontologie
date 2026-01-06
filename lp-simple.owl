@@ -8,15 +8,16 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-8"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-8, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2025-12-08</terms:created>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-9"/>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-9, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <terms:created>2026-01-06</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -28,7 +29,8 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>1.0.0-8</owl:versionInfo>
+        <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
+        <owl:versionInfo>1.0.0-9</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -240,6 +242,12 @@
         <rdfs:label>title</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
     
 
 
@@ -896,16 +904,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:label xml:lang="de">hat Teil</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000015 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000015">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-        <rdfs:label xml:lang="de">hat Prozessteil</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -914,6 +914,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000017">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <rdfs:label xml:lang="en">concretizes curriculum</rdfs:label>
         <rdfs:label xml:lang="de">konkretisiert Lehrplan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -925,6 +926,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
         <rdfs:label xml:lang="de">endet mit Abschluss</rdfs:label>
         <rdfs:label xml:lang="de">ermöglicht Abschluss</rdfs:label>
+        <rdfs:label xml:lang="en">leads to qualification</rdfs:label>
         <skos:example>Ein Bildungsgang (occurent) endet mit Abschluss.</skos:example>
     </owl:ObjectProperty>
     
@@ -942,6 +944,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:label xml:lang="en">has class level</rdfs:label>
         <rdfs:label xml:lang="de">hat Jahrgangsstufe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -951,6 +954,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000029">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:label xml:lang="en">of federal state</rdfs:label>
         <rdfs:label xml:lang="de">von Bundesland</rdfs:label>
     </owl:ObjectProperty>
     
@@ -971,6 +975,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000047">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:label xml:lang="en">has educational level</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulstufe</rdfs:label>
     </owl:ObjectProperty>
     
@@ -980,7 +985,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000048">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <rdfs:comment>has input</rdfs:comment>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
         <rdfs:label xml:lang="de">hat Input</rdfs:label>
     </owl:ObjectProperty>
     
@@ -990,7 +995,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000049">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <rdfs:comment xml:lang="en">has output</rdfs:comment>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
         <rdfs:label xml:lang="de">hat Output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1001,6 +1006,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000071">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:label xml:lang="de">benötigt Niveau</rdfs:label>
+        <rdfs:label xml:lang="en">requires level</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1010,6 +1016,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000072">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
         <rdfs:label xml:lang="de">inkludiert</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1020,6 +1027,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000086">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000840"/>
+        <rdfs:label xml:lang="en">is niveau of</rdfs:label>
         <rdfs:label xml:lang="de">ist Niveau von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1029,6 +1037,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000343">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <rdfs:label xml:lang="en">has school type function</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulartfunktion</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1038,6 +1047,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <rdfs:label xml:lang="en">for educational track</rdfs:label>
         <rdfs:label xml:lang="de">für Bildungsgangabschnitt</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1047,6 +1057,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000477">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <rdfs:label xml:lang="en">concretizes type of school</rdfs:label>
         <rdfs:label xml:lang="de">konkretisiert Schulart</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1057,6 +1068,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000483">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000495"/>
+        <rdfs:label xml:lang="en">has function specification</rdfs:label>
         <rdfs:label xml:lang="de">hat Funktion</rdfs:label>
         <skos:altLabel xml:lang="de">hat Funktionsspezifikation</skos:altLabel>
     </owl:ObjectProperty>
@@ -1067,6 +1079,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000495">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is function specification of</rdfs:label>
         <rdfs:label xml:lang="de">ist Funktion von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1081,6 +1094,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000537"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="de">Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem &quot;Bezug&quot; (z.B. Zweite-Fremdsprache) zuzuordnen.</rdfs:comment>
+        <rdfs:label xml:lang="en">has school subject</rdfs:label>
         <rdfs:label xml:lang="de">hat Schulfach</rdfs:label>
         <skos:editorialNote>wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen</skos:editorialNote>
         <skos:example xml:lang="de">Gegeben sind:
@@ -1128,6 +1142,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000812">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">for type of school</rdfs:label>
         <rdfs:label xml:lang="de">für Schulart</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1137,6 +1152,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000833">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:label xml:lang="en">has educational track level</rdfs:label>
         <rdfs:label xml:lang="de">hat Bildungsgangniveau</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1150,6 +1166,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840"/>
         </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">has niveau</rdfs:label>
         <rdfs:label xml:lang="de">hat Niveau</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1159,6 +1176,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0020001">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
         <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1168,6 +1186,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030051">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
         <rdfs:label xml:lang="de">hat Beschreibung</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1177,6 +1196,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030056">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">has title</rdfs:label>
         <rdfs:label xml:lang="de">hat Titel</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1186,6 +1206,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030057">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">has number</rdfs:label>
         <rdfs:label xml:lang="de">hat Nummer</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1195,6 +1216,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030071">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">has reference</rdfs:label>
         <rdfs:label xml:lang="de">hat Verweis</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1204,6 +1226,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030072">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
         <rdfs:label xml:lang="de">verweist auf</rdfs:label>
     </owl:ObjectProperty>
 </rdf:RDF>

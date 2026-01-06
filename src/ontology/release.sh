@@ -1,7 +1,7 @@
 
 
-VERSION=1.0.0-8
-PRIOR_VERSION=1.0.0-7
+VERSION=1.0.0-9
+PRIOR_VERSION=1.0.0-8
 ONTBASE=https://w3id.org/lehrplan/ontology/
 ANNOTATE_ONTOLOGY_VERSION="annotate -V $ONTBASE/$VERSION/\$@ --annotation owl:versionInfo $VERSION"
 
