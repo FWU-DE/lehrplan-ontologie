@@ -35,10 +35,6 @@ InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000008> <http://purl.obolibrary.org/obo/BFO_0000051>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000015> (hat Prozessteil)
-
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000015> <http://purl.obolibrary.org/obo/BFO_0000117>)
-
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (konkretisiert Lehrplan)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl.obolibrary.org/obo/RO_0000059>)
@@ -52,7 +48,7 @@ ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3i
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "described by"@en)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000026> (hat Jahrgangsstufe)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000026> (has class level)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
@@ -68,7 +64,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000041> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000048> (hat Input)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000048> (has input)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000048> <http://purl.obolibrary.org/obo/RO_0000057>)
 
@@ -76,7 +72,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000048> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000049> <http://purl.obolibrary.org/obo/RO_0000057>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000071> (benötigt Niveau)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000071> (requires level)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000071> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
@@ -96,7 +92,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000440> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000477> <http://purl.obolibrary.org/obo/RO_0000059>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000483> (hat Funktion)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000483> (has function specification)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
@@ -132,7 +128,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030051> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030056> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030057> (hat Nummer)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030057> (has number)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030057> <http://purl.obolibrary.org/obo/IAO_0000136>)
 
@@ -166,7 +162,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000006> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (Jahrgangsstufe)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (class level)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000009> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
