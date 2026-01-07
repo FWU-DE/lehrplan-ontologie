@@ -14,7 +14,7 @@ The latest version of the ontology can always be found at:
 
 ### Documentation
 
-Find the list of classes generated with Widoco here: https://dini-ag-kim.github.io/school-curriculum-pg/
+Find the list of classes generated with Widoco here: https://fwu-de.github.io/lehrplan-ontologie/
 
 ### Editors' version
 
