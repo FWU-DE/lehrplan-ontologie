@@ -5,6 +5,38 @@
     <uri name="https://w3id.org/lehrplan/ontology/imports/bfo_import.owl" uri="imports/bfo_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/ro_import.owl" uri="imports/ro_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/qudt_import.owl" uri="imports/qudt_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BB_import.owl" uri="imports/schulart-BB_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BE_import.owl" uri="imports/schulart-BE_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BW_import.owl" uri="imports/schulart-BW_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BY_import.owl" uri="imports/schulart-BY_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-HB_import.owl" uri="imports/schulart-HB_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-HE_import.owl" uri="imports/schulart-HE_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-HH_import.owl" uri="imports/schulart-HH_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-MV_import.owl" uri="imports/schulart-MV_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-NI_import.owl" uri="imports/schulart-NI_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-NW_import.owl" uri="imports/schulart-NW_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-RP_import.owl" uri="imports/schulart-RP_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-SH_import.owl" uri="imports/schulart-SH_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-SL_import.owl" uri="imports/schulart-SL_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-SN_import.owl" uri="imports/schulart-SN_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-ST_import.owl" uri="imports/schulart-ST_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-TH_import.owl" uri="imports/schulart-TH_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-BB_import.owl" uri="imports/schulfach-BB_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-BE_import.owl" uri="imports/schulfach-BE_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-BW_import.owl" uri="imports/schulfach-BW_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-BY_import.owl" uri="imports/schulfach-BY_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-HB_import.owl" uri="imports/schulfach-HB_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-HE_import.owl" uri="imports/schulfach-HE_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-HH_import.owl" uri="imports/schulfach-HH_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-MV_import.owl" uri="imports/schulfach-MV_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-NI_import.owl" uri="imports/schulfach-NI_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-NW_import.owl" uri="imports/schulfach-NW_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-RP_import.owl" uri="imports/schulfach-RP_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-SH_import.owl" uri="imports/schulfach-SH_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-SL_import.owl" uri="imports/schulfach-SL_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-SN_import.owl" uri="imports/schulfach-SN_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-ST_import.owl" uri="imports/schulfach-ST_import.owl" />
+    <uri name="https://w3id.org/lehrplan/ontology/imports/schulfach-TH_import.owl" uri="imports/schulfach-TH_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/components/bfo-edit.owl" uri="components/bfo-edit.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl" uri="components/lehrplan-core.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl" uri="components/lehrplan-BE-BB-shared.owl" />

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                fe3daa4bedfe3bdafc493fee81002d6e12fe1610362242e4448343200cbf55fb
+CONFIG_HASH=                01c9d9a87b41663a3121104770d09ee7f07ec7b2300026f3150df43365e26c89
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao bfo ro qudt
+IMPORTS =  iao bfo ro qudt schulart-BB schulart-BE schulart-BW schulart-BY schulart-HB schulart-HE schulart-HH schulart-MV schulart-NI schulart-NW schulart-RP schulart-SH schulart-SL schulart-SN schulart-ST schulart-TH schulfach-BB schulfach-BE schulfach-BW schulfach-BY schulfach-HB schulfach-HE schulfach-HH schulfach-MV schulfach-NI schulfach-NW schulfach-RP schulfach-SH schulfach-SL schulfach-SN schulfach-ST schulfach-TH
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -450,6 +450,294 @@ $(IMPORTDIR)/qudt_import.owl: $(MIRRORDIR)/qudt.owl $(IMPORTDIR)/qudt_terms.txt 
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
+## Module for ontology: schulart-BB (mirror)
+$(IMPORTDIR)/schulart-BB_import.owl: $(MIRRORDIR)/schulart-BB.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-BE (mirror)
+$(IMPORTDIR)/schulart-BE_import.owl: $(MIRRORDIR)/schulart-BE.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-BW (mirror)
+$(IMPORTDIR)/schulart-BW_import.owl: $(MIRRORDIR)/schulart-BW.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-BY (mirror)
+$(IMPORTDIR)/schulart-BY_import.owl: $(MIRRORDIR)/schulart-BY.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-HB (mirror)
+$(IMPORTDIR)/schulart-HB_import.owl: $(MIRRORDIR)/schulart-HB.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-HE (mirror)
+$(IMPORTDIR)/schulart-HE_import.owl: $(MIRRORDIR)/schulart-HE.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-HH (mirror)
+$(IMPORTDIR)/schulart-HH_import.owl: $(MIRRORDIR)/schulart-HH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-MV (mirror)
+$(IMPORTDIR)/schulart-MV_import.owl: $(MIRRORDIR)/schulart-MV.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-NI (mirror)
+$(IMPORTDIR)/schulart-NI_import.owl: $(MIRRORDIR)/schulart-NI.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-NW (mirror)
+$(IMPORTDIR)/schulart-NW_import.owl: $(MIRRORDIR)/schulart-NW.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-RP (mirror)
+$(IMPORTDIR)/schulart-RP_import.owl: $(MIRRORDIR)/schulart-RP.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-SH (mirror)
+$(IMPORTDIR)/schulart-SH_import.owl: $(MIRRORDIR)/schulart-SH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-SL (mirror)
+$(IMPORTDIR)/schulart-SL_import.owl: $(MIRRORDIR)/schulart-SL.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-SN (mirror)
+$(IMPORTDIR)/schulart-SN_import.owl: $(MIRRORDIR)/schulart-SN.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-ST (mirror)
+$(IMPORTDIR)/schulart-ST_import.owl: $(MIRRORDIR)/schulart-ST.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulart-TH (mirror)
+$(IMPORTDIR)/schulart-TH_import.owl: $(MIRRORDIR)/schulart-TH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-BB (mirror)
+$(IMPORTDIR)/schulfach-BB_import.owl: $(MIRRORDIR)/schulfach-BB.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-BE (mirror)
+$(IMPORTDIR)/schulfach-BE_import.owl: $(MIRRORDIR)/schulfach-BE.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-BW (mirror)
+$(IMPORTDIR)/schulfach-BW_import.owl: $(MIRRORDIR)/schulfach-BW.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-BY (mirror)
+$(IMPORTDIR)/schulfach-BY_import.owl: $(MIRRORDIR)/schulfach-BY.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-HB (mirror)
+$(IMPORTDIR)/schulfach-HB_import.owl: $(MIRRORDIR)/schulfach-HB.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-HE (mirror)
+$(IMPORTDIR)/schulfach-HE_import.owl: $(MIRRORDIR)/schulfach-HE.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-HH (mirror)
+$(IMPORTDIR)/schulfach-HH_import.owl: $(MIRRORDIR)/schulfach-HH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-MV (mirror)
+$(IMPORTDIR)/schulfach-MV_import.owl: $(MIRRORDIR)/schulfach-MV.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-NI (mirror)
+$(IMPORTDIR)/schulfach-NI_import.owl: $(MIRRORDIR)/schulfach-NI.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-NW (mirror)
+$(IMPORTDIR)/schulfach-NW_import.owl: $(MIRRORDIR)/schulfach-NW.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-RP (mirror)
+$(IMPORTDIR)/schulfach-RP_import.owl: $(MIRRORDIR)/schulfach-RP.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-SH (mirror)
+$(IMPORTDIR)/schulfach-SH_import.owl: $(MIRRORDIR)/schulfach-SH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-SL (mirror)
+$(IMPORTDIR)/schulfach-SL_import.owl: $(MIRRORDIR)/schulfach-SL.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-SN (mirror)
+$(IMPORTDIR)/schulfach-SN_import.owl: $(MIRRORDIR)/schulfach-SN.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-ST (mirror)
+$(IMPORTDIR)/schulfach-ST_import.owl: $(MIRRORDIR)/schulfach-ST.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: schulfach-TH (mirror)
+$(IMPORTDIR)/schulfach-TH_import.owl: $(MIRRORDIR)/schulfach-TH.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -584,6 +872,230 @@ mirror-ro: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/qudt.owl
 mirror-qudt: | $(TMPDIR)
 	$(ROBOT) convert -I https://qudt.org/schema/qudt -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-BB
+.PHONY: mirror-schulart-BB
+.PRECIOUS: $(MIRRORDIR)/schulart-BB.owl
+mirror-schulart-BB: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bb.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-BE
+.PHONY: mirror-schulart-BE
+.PRECIOUS: $(MIRRORDIR)/schulart-BE.owl
+mirror-schulart-BE: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-be.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-BW
+.PHONY: mirror-schulart-BW
+.PRECIOUS: $(MIRRORDIR)/schulart-BW.owl
+mirror-schulart-BW: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bw.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-BY
+.PHONY: mirror-schulart-BY
+.PRECIOUS: $(MIRRORDIR)/schulart-BY.owl
+mirror-schulart-BY: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-by.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-HB
+.PHONY: mirror-schulart-HB
+.PRECIOUS: $(MIRRORDIR)/schulart-HB.owl
+mirror-schulart-HB: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hb.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-HE
+.PHONY: mirror-schulart-HE
+.PRECIOUS: $(MIRRORDIR)/schulart-HE.owl
+mirror-schulart-HE: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-he.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-HH
+.PHONY: mirror-schulart-HH
+.PRECIOUS: $(MIRRORDIR)/schulart-HH.owl
+mirror-schulart-HH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hh.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-MV
+.PHONY: mirror-schulart-MV
+.PRECIOUS: $(MIRRORDIR)/schulart-MV.owl
+mirror-schulart-MV: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-mv.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-NI
+.PHONY: mirror-schulart-NI
+.PRECIOUS: $(MIRRORDIR)/schulart-NI.owl
+mirror-schulart-NI: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-ni.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-NW
+.PHONY: mirror-schulart-NW
+.PRECIOUS: $(MIRRORDIR)/schulart-NW.owl
+mirror-schulart-NW: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-nw.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-RP
+.PHONY: mirror-schulart-RP
+.PRECIOUS: $(MIRRORDIR)/schulart-RP.owl
+mirror-schulart-RP: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-rp.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-SH
+.PHONY: mirror-schulart-SH
+.PRECIOUS: $(MIRRORDIR)/schulart-SH.owl
+mirror-schulart-SH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sh.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-SL
+.PHONY: mirror-schulart-SL
+.PRECIOUS: $(MIRRORDIR)/schulart-SL.owl
+mirror-schulart-SL: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sl.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-SN
+.PHONY: mirror-schulart-SN
+.PRECIOUS: $(MIRRORDIR)/schulart-SN.owl
+mirror-schulart-SN: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sn.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-ST
+.PHONY: mirror-schulart-ST
+.PRECIOUS: $(MIRRORDIR)/schulart-ST.owl
+mirror-schulart-ST: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-st.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulart-TH
+.PHONY: mirror-schulart-TH
+.PRECIOUS: $(MIRRORDIR)/schulart-TH.owl
+mirror-schulart-TH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-th.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-BB
+.PHONY: mirror-schulfach-BB
+.PRECIOUS: $(MIRRORDIR)/schulfach-BB.owl
+mirror-schulfach-BB: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-bb.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-BE
+.PHONY: mirror-schulfach-BE
+.PRECIOUS: $(MIRRORDIR)/schulfach-BE.owl
+mirror-schulfach-BE: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-be.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-BW
+.PHONY: mirror-schulfach-BW
+.PRECIOUS: $(MIRRORDIR)/schulfach-BW.owl
+mirror-schulfach-BW: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-bw.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-BY
+.PHONY: mirror-schulfach-BY
+.PRECIOUS: $(MIRRORDIR)/schulfach-BY.owl
+mirror-schulfach-BY: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-by.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-HB
+.PHONY: mirror-schulfach-HB
+.PRECIOUS: $(MIRRORDIR)/schulfach-HB.owl
+mirror-schulfach-HB: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-hb.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-HE
+.PHONY: mirror-schulfach-HE
+.PRECIOUS: $(MIRRORDIR)/schulfach-HE.owl
+mirror-schulfach-HE: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-he.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-HH
+.PHONY: mirror-schulfach-HH
+.PRECIOUS: $(MIRRORDIR)/schulfach-HH.owl
+mirror-schulfach-HH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-hh.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-MV
+.PHONY: mirror-schulfach-MV
+.PRECIOUS: $(MIRRORDIR)/schulfach-MV.owl
+mirror-schulfach-MV: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-mv.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-NI
+.PHONY: mirror-schulfach-NI
+.PRECIOUS: $(MIRRORDIR)/schulfach-NI.owl
+mirror-schulfach-NI: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-ni.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-NW
+.PHONY: mirror-schulfach-NW
+.PRECIOUS: $(MIRRORDIR)/schulfach-NW.owl
+mirror-schulfach-NW: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-nw.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-RP
+.PHONY: mirror-schulfach-RP
+.PRECIOUS: $(MIRRORDIR)/schulfach-RP.owl
+mirror-schulfach-RP: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-rp.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-SH
+.PHONY: mirror-schulfach-SH
+.PRECIOUS: $(MIRRORDIR)/schulfach-SH.owl
+mirror-schulfach-SH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sh.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-SL
+.PHONY: mirror-schulfach-SL
+.PRECIOUS: $(MIRRORDIR)/schulfach-SL.owl
+mirror-schulfach-SL: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sl.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-SN
+.PHONY: mirror-schulfach-SN
+.PRECIOUS: $(MIRRORDIR)/schulfach-SN.owl
+mirror-schulfach-SN: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sn.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-ST
+.PHONY: mirror-schulfach-ST
+.PRECIOUS: $(MIRRORDIR)/schulfach-ST.owl
+mirror-schulfach-ST: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-st.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: schulfach-TH
+.PHONY: mirror-schulfach-TH
+.PRECIOUS: $(MIRRORDIR)/schulfach-TH.owl
+mirror-schulfach-TH: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-th.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
