@@ -71,12 +71,14 @@ This ontology repository was created using the Ontology Development Kit (ODK).
 
 ## Documentation
 
-Human-readable documentation (class hierarchies, properties, examples) is generated from the ontology sources and published in the `docs/` directory. You can find it here: https://fwu-de.github.io/lehrplan-ontologie/docs
+Human-readable documentation (including class hierarchies, properties, and examples) is generated from the ontology sources and published in the `docs/` directory.  
+You can access it here:  
+https://fwu-de.github.io/lehrplan-ontologie/docs
 
-Find the list of classes generated with Widoco here: https://fwu-de.github.io/lehrplan-ontologie/
+A complete list of ontology classes generated with **Widoco** is available here:  
+https://fwu-de.github.io/lehrplan-ontologie/
 
-
-Additional materials and examples, including SPARQL queries, are available in related repositories such as:
+Additional materials and examples, including **SPARQL queries**, are available in related repositories such as:
 
 - **SPARQL notebooks:** https://github.com/FWU-DE/mem-sparql-notebooks
 - **Subject ontology:** https://github.com/FWU-DE/schulfach-ontologie
@@ -88,8 +90,8 @@ Additional materials and examples, including SPARQL queries, are available in re
 
 ## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/FWU-DE/lehrplan-ontologie/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+Please use this GitHub repository’s [issue tracker](https://github.com/FWU-DE/lehrplan-ontologie/issues) to request new terms or classes, or to report errors and other ontology-related concerns.
 
-If you are interested in collaboration or otherwise get in touch with us, please contact: redaktion@mem.schule .
+If you are interested in collaboration or would like to get in touch with us, please contact **redaktion@mem.schule**.
 
 

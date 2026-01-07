@@ -15,8 +15,8 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0rc1"/>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0rc1, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
         <terms:created>2026-01-07</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
@@ -30,7 +30,7 @@
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
         <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
-        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionInfo>1.0.0rc1</owl:versionInfo>
     </owl:Ontology>
     
 
