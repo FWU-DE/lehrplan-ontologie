@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c15fe6b540abdbd6bcdf9d76309e332b7b3185ad3826bf31bea48acef629eabd
+CONFIG_HASH=                fd77a3f602d4d81cb14d6118379e3cc79c07556f0771fdb757d79a2da2041c8a
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao bfo ro qudt schulart-BB schulart-BE schulart-BW schulart-BY schulart-HB schulart-HE schulart-HH schulart-MV schulart-NI schulart-NW schulart-RP schulart-SH schulart-SL schulart-SN schulart-ST schulart-TH schulfach-BB schulfach-BE schulfach-BW schulfach-BY schulfach-HB schulfach-HE schulfach-HH schulfach-MV schulfach-NI schulfach-NW schulfach-RP schulfach-SH schulfach-SL schulfach-SN schulfach-ST schulfach-TH
+IMPORTS =  iao bfo ro schulart-BB schulart-BE schulart-BW schulart-BY schulart-HB schulart-HE schulart-HH schulart-MV schulart-NI schulart-NW schulart-RP schulart-SH schulart-SL schulart-SN schulart-ST schulart-TH schulfach-BB schulfach-BE schulfach-BW schulfach-BY schulfach-HB schulfach-HE schulfach-HH schulfach-MV schulfach-NI schulfach-NW schulfach-RP schulfach-SH schulfach-SL schulfach-SN schulfach-ST schulfach-TH
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -421,25 +421,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 $(ANNOTATE_CONVERT_FILE)
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
-
-## Module for ontology: qudt (slme)
-$(IMPORTDIR)/qudt_import.owl: $(MIRRORDIR)/qudt.owl $(IMPORTDIR)/qudt_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/qudt_terms.txt $(T_IMPORTSEED) \
-		         --copy-ontology-annotations true --force true \
-		         --individuals exclude \
-		         --method SUBSET \
-		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        --term rdfs:label \
-		        --term IAO:0000115 \
-		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/qudt_terms.txt $(T_IMPORTSEED) \
-		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: schulart-BB (mirror)
 $(IMPORTDIR)/schulart-BB_import.owl: $(MIRRORDIR)/schulart-BB.owl | all_robot_plugins
@@ -856,13 +837,6 @@ mirror-bfo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ro.owl
 mirror-ro: | $(TMPDIR)
 	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ro/core.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: qudt
-.PHONY: mirror-qudt
-.PRECIOUS: $(MIRRORDIR)/qudt.owl
-mirror-qudt: | $(TMPDIR)
-	$(ROBOT) convert -I https://qudt.org/schema/qudt -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-BB

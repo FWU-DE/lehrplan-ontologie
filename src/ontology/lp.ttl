@@ -125,19 +125,15 @@ dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-terms:created rdf:type owl:AnnotationProperty ;
-              rdfs:label "created" ;
-              rdfs:range xsd:date .
+terms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
-terms:creator rdf:type owl:AnnotationProperty ;
-              rdfs:label "creator" .
+terms:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
-terms:description rdf:type owl:AnnotationProperty ;
-                  rdfs:label "description" .
+terms:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -149,15 +145,11 @@ terms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/subject
-terms:subject rdf:type owl:AnnotationProperty ;
-              rdfs:label "subject" ;
-              rdfs:range xsd:string .
+terms:subject rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-terms:title rdf:type owl:AnnotationProperty ;
-            rdfs:label "title" ;
-            rdfs:range xsd:string .
+terms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://usefulinc.com/ns/doap#repository
@@ -469,12 +461,6 @@ skos:exactMatch rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#topConceptOf
 skos:topConceptOf rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/prov#wasDerivedFrom
-<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
-                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
-                                           rdfs:label "was derived from" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000017

@@ -273,6 +273,7 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral>))
 Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndIdentifier>))
 Declaration(AnnotationProperty(<https://w3id.org/lehrplan/ontology/LP_0000141>))
+Declaration(Datatype(<http://qudt.org/schema/qudt/LatexString>))
 ############################
 #   Annotation Properties
 ############################
@@ -503,6 +504,17 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000463> "
 # Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000027> "data item"@en)
+
+# Class: <http://qudt.org/schema/qudt/Unit> (Unit)
+
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://qudt.org/schema/qudt/Unit> "
+  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
+  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). 
+  Any measurement of the length can be expressed as a number multiplied by the unit meter. 
+  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
+  "^^<http://qudt.org/schema/qudt/LatexString>)
+AnnotationAssertion(rdfs:isDefinedBy <http://qudt.org/schema/qudt/Unit> <http://qudt.org/schema/qudt>)
+AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000001> (school subject)
 
@@ -1842,7 +1854,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000001> "1.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (Jahrgangsstufe 2)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (class level 2)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000002> "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "Jahrgangsstufe 2"@de)
@@ -1874,7 +1886,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000005> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000005> "5.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (Jahrgangsstufe 6)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (class level 6)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000006> "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "Jahrgangsstufe 6"@de)
@@ -1882,7 +1894,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000006> "6.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (class level 7)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (Jahrgangsstufe 7)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000007> "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "Jahrgangsstufe 7"@de)
@@ -1890,7 +1902,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000007> "7.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (Jahrgangsstufe 8)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (class level 8)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000008> "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "Jahrgangsstufe 8"@de)

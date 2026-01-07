@@ -4,7 +4,6 @@
     <uri name="https://w3id.org/lehrplan/ontology/imports/iao_import.owl" uri="imports/iao_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/bfo_import.owl" uri="imports/bfo_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/ro_import.owl" uri="imports/ro_import.owl" />
-    <uri name="https://w3id.org/lehrplan/ontology/imports/qudt_import.owl" uri="imports/qudt_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BB_import.owl" uri="imports/schulart-BB_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BE_import.owl" uri="imports/schulart-BE_import.owl" />
     <uri name="https://w3id.org/lehrplan/ontology/imports/schulart-BW_import.owl" uri="imports/schulart-BW_import.owl" />

@@ -10,7 +10,6 @@ Ontology(<https://w3id.org/lehrplan/ontology/components/bfo-edit.owl>
 Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 Import(<https://w3id.org/lehrplan/ontology/imports/bfo_import.owl>)
 Import(<https://w3id.org/lehrplan/ontology/imports/iao_import.owl>)
-Import(<https://w3id.org/lehrplan/ontology/imports/qudt_import.owl>)
 
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
@@ -39,7 +38,7 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.ob
 
 InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (concretizes curriculum)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (konkretisiert Lehrplan)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl.obolibrary.org/obo/RO_0000059>)
 
@@ -48,7 +47,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <http://purl.obolibrary.org/obo/BFO_0000051>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000019>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (wird beschrieben von)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (described by)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "described by"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "wird beschrieben von"@de)
@@ -57,7 +56,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (of federal state)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (von Bundesland)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
@@ -163,7 +162,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000006> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (Jahrgangsstufe)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (class level)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000009> <http://purl.obolibrary.org/obo/IAO_0000030>)
 

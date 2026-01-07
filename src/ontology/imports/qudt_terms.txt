@@ -1,8 +1,0 @@
-http://qudt.org/schema/qudt/Unit
-
-
-
-# not importable from qudt schema 
-# created instances manually 
-# http://qudt.org/vocab/unit/MIN
-# http://qudt.org/vocab/unit/HR
