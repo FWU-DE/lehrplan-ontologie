@@ -164,12 +164,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
@@ -184,26 +178,19 @@
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
-        <rdfs:label>created</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:label>creator</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:label>description</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
@@ -221,19 +208,13 @@
 
     <!-- http://purl.org/dc/terms/subject -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
-        <rdfs:label>subject</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:label>title</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -348,507 +329,22 @@
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <dc:identifier>206-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has realization</rdfs:label>
-        <skos:altLabel xml:lang="en">realized in</skos:altLabel>
-        <skos:definition xml:lang="en">b has realization c =Def c realizes b</skos:definition>
-        <skos:example xml:lang="en">As for realizes</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <dc:identifier>059-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">realizes</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
-        <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000062">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>213-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">preceded by</rdfs:label>
-        <skos:definition xml:lang="en">b preceded by c =Def b precedes c</skos:definition>
-        <skos:example xml:lang="en">The temporal region occupied by the second half of the match is preceded by the temporal region occupied by the first half of the match</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000063">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>270-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">precedes</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) precedes is a relation between occurrents o, o&apos; such that if t is the temporal extent of o &amp; t&apos; is the temporal extent of o&apos; then either the last instant of o is before the first instant of o&apos; or the last instant of o is the first instant of o&apos; &amp; neither o nor o&apos; are temporal instants</skos:definition>
-        <skos:example xml:lang="en">The temporal region occupied by Mary&apos;s birth precedes the temporal region occupied by Mary&apos;s death.</skos:example>
-        <skos:scopeNote>Each temporal region is its own temporal extent. The temporal extent of a spatiotemporal region is the temporal region it temporally projects onto. The temporal extent of a process or process boundary that occupies temporal region t is t.</skos:scopeNote>
-        <skos:scopeNote>Precedes defines a strict partial order on occurrents.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000183"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>143-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">occurs in</rdfs:label>
-        <skos:definition xml:lang="en">b occurs in c =Def b is a process or a process boundary &amp; c is a material entity or site &amp; there exists a spatiotemporal region r &amp; b occupies spatiotemporal region r &amp; for all time t, if b exists at t then c exists at t &amp; there exist spatial regions s and s&apos; where b spatially projects onto s at t &amp; c occupies spatial region s&apos; at t &amp; s is a continuant part of s&apos; at t</skos:definition>
-        <skos:example xml:lang="en">A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000108 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000108">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <dc:identifier>118-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">exists at</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists</skos:definition>
-        <skos:example xml:lang="en">First World War exists at 1914-1916; Mexico exists at January 1, 2000</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000117 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000117">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>202-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has occurrent part</rdfs:label>
-        <skos:definition xml:lang="en">b has occurrent part c =Def c occurrent part of b</skos:definition>
-        <skos:example xml:lang="en">Mary&apos;s life has occurrent part Mary&apos;s 5th birthday</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000118 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000118">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000138"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>154-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has proper occurrent part</rdfs:label>
-        <skos:definition xml:lang="en">b has proper occurrent part c =Def b has occurrent part c &amp; b and c are not identical</skos:definition>
-        <skos:example xml:lang="en">As for has occurrent part.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000121 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000121">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>211-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has temporal part</rdfs:label>
-        <skos:definition xml:lang="en">b has temporal part c =Def c temporal part of b</skos:definition>
-        <skos:example xml:lang="en">Your life has temporal part the first year of your life</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000132 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000132">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>003-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">occurrent part of</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c</skos:definition>
-        <skos:example xml:lang="en">Mary&apos;s 5th birthday is an occurrent part of Mary&apos;s life; the first set of the tennis match is an occurrent part of the tennis match</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000136 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000136">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000181"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>116-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">proper temporal part of</rdfs:label>
-        <skos:definition xml:lang="en">b proper temporal part of c =Def b temporal part of c &amp; not (b = c)</skos:definition>
-        <skos:example xml:lang="en">As for temporal part of.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000138 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000138">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>005-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">proper occurrent part of</rdfs:label>
-        <skos:definition xml:lang="en">b proper occurrent part of c =Def b occurrent part of c &amp; b and c are not identical</skos:definition>
-        <skos:example xml:lang="en">As for occurrent part of.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000139 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000139">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>078-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">temporal part of</rdfs:label>
-        <skos:definition xml:lang="en">b temporal part of c =Def b occurrent part of c &amp; (b and c are temporal regions) or (b and c are spatiotemporal regions &amp; b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries &amp; b occupies a temporal region that is an occurrent part of the temporal region that c occupies)</skos:definition>
-        <skos:example xml:lang="en">Your heart beating from 4pm to 5pm today is a temporal part of the process of your heart beating; the 4th year of your life is a temporal part of your life, as is the process boundary which separates the 3rd and 4th years of your life; the first quarter of a game of football is a temporal part of the whole game</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000153 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000153">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <dc:identifier>080-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">temporally projects onto</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) temporally projects onto is a relation between a spatiotemporal region s and some temporal region which is the temporal extent of s</skos:definition>
-        <skos:example xml:lang="en">The world line of a particle temporally projects onto the temporal region extending from the beginning to the end of the existence of the particle</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000181 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000181">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <dc:identifier>212-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has proper temporal part</rdfs:label>
-        <skos:definition xml:lang="en">b has proper temporal part c =Def c proper temporal part of b</skos:definition>
-        <skos:example xml:lang="en">As for has temporal part.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000183 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000183">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>267-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">environs</rdfs:label>
-        <skos:altLabel xml:lang="en">contains process</skos:altLabel>
-        <skos:definition xml:lang="en">b environs c =Def c occurs in b</skos:definition>
-        <skos:example xml:lang="en">Mouth environs process of mastication; city environs traffic</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000184 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000184">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000185"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000182"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>144-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">history of</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) history of is a relation between history b and material entity c such that b is the unique history of c</skos:definition>
-        <skos:example xml:lang="en">This life is the history of this organism</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000185 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000185">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000182"/>
-        <dc:identifier>145-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has history</rdfs:label>
-        <skos:definition xml:lang="en">b has history c =Def c history of b</skos:definition>
-        <skos:example xml:lang="en">This organism has history this life</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000194 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000194">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000195"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <dc:identifier>260-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">specifically depended on by</rdfs:label>
-        <skos:altLabel xml:lang="en">s-depended on by</skos:altLabel>
-        <skos:definition xml:lang="en">b specifically depended on by c =Def c specifically depends on b</skos:definition>
-        <skos:example xml:lang="en">Coloured object specifically depended on by colour</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000195 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000195">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>012-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">specifically depends on</rdfs:label>
-        <skos:altLabel xml:lang="en">s-depends on</skos:altLabel>
-        <skos:definition xml:lang="en">(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common &amp; b is of a nature such that at all times t it cannot exist unless c exists &amp; b is not a boundary of c</skos:definition>
-        <skos:example xml:lang="en">A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other</skos:example>
-        <skos:scopeNote xml:lang="en">The analogue of specifically depends on for occurrents is has participant.</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000194"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <dc:identifier>053-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">bearer of</rdfs:label>
-        <skos:definition xml:lang="en">b bearer of c =Def c inheres in b</skos:definition>
-        <skos:example xml:lang="en">A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000195"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>051-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">inheres in</rdfs:label>
-        <skos:definition xml:lang="en">b inheres in c =Def b is a specifically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; b specifically depends on c</skos:definition>
-        <skos:example xml:lang="en">A shape inheres in a shaped object; a mass inheres in a material entity</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000199 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000199">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <dc:identifier>132-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">occupies temporal region</rdfs:label>
-        <skos:definition xml:lang="en">p occupies temporal region t =Def p is a process or process boundary &amp; the spatiotemporal region occupied by p temporally projects onto t</skos:definition>
-        <skos:example xml:lang="en">The Second World War occupies the temporal region September 1, 1939 - September 2, 1945</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000200 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000200">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-        <dc:identifier>082-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">occupies spatiotemporal region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) occupies spatiotemporal region is a relation between a process or process boundary p and the spatiotemporal region s which is its spatiotemporal extent</skos:definition>
-        <skos:example xml:lang="en">A particle emitted by a nuclear reactor occupies the spatiotemporal region which is its trajectory</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000221 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000221">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000222"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <dc:identifier>268-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">first instant of</rdfs:label>
-        <skos:definition xml:lang="en">t first instant of t&apos; =Def t is a temporal instant &amp; t&apos; is a temporal region t&apos; &amp; t precedes all temporal parts of t&apos; other than t</skos:definition>
-        <skos:example xml:lang="en">An hour starting at midnight yesterday has first instant midnight yesterday</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000222 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000222">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
-        <dc:identifier>261-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has first instant</rdfs:label>
-        <skos:definition xml:lang="en">t has first instant t&apos; =Def t&apos; first instant of t</skos:definition>
-        <skos:example xml:lang="en">The first hour of a year has first instant midnight on December 31</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000223 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000223">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000224"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <dc:identifier>269-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">last instant of</rdfs:label>
-        <skos:definition xml:lang="en">t last instant of t&apos; =Def t is a temporal instant &amp; t&apos; is a temporal region &amp; all temporal parts of t&apos; other than t precede t</skos:definition>
-        <skos:example xml:lang="en">Last midnight is the last instant of yesterday</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000224 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000224">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
-        <dc:identifier>215-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has last instant</rdfs:label>
-        <skos:definition xml:lang="en">t has last instant t&apos; =Def t&apos; last instant of t</skos:definition>
-        <skos:example xml:lang="en">The last hour of a year has last instant midnight December 31</skos:example>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <rdfs:label xml:lang="de">hat Teil</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -868,6 +364,7 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <rdfs:label xml:lang="de">beschreibt</rdfs:label>
         <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
     
@@ -909,27 +406,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
-        <rdfs:label>was derived from</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-        <rdfs:label xml:lang="de">hat Teil</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000017 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000017">
@@ -944,7 +420,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000021 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000021">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
         <rdfs:label xml:lang="de">endet mit Abschluss</rdfs:label>
         <rdfs:label xml:lang="de">ermöglicht Abschluss</rdfs:label>
@@ -958,6 +434,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000024">
         <rdfs:label xml:lang="en">described by</rdfs:label>
+        <rdfs:label xml:lang="de">wird beschrieben von</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -988,7 +465,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000041">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
         <rdfs:label xml:lang="en">has unit</rdfs:label>
         <rdfs:label xml:lang="de">hat Einheit</rdfs:label>
     </owl:ObjectProperty>
@@ -1032,19 +508,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:label xml:lang="de">benötigt Niveau</rdfs:label>
         <rdfs:label xml:lang="en">requires level</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000072 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000072">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
-        <rdfs:label xml:lang="en">includes</rdfs:label>
-        <rdfs:label xml:lang="de">inkludiert</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1159,12 +622,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000578 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000812 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000812">
@@ -1204,27 +661,12 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000111"/>
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000037"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840"/>
-        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">has niveau</rdfs:label>
         <rdfs:label xml:lang="de">hat Niveau</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0020001 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0020001">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <rdfs:label xml:lang="en">is part of</rdfs:label>
-        <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1540,34 +982,10 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <dc:identifier>035-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">spatial region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time</skos:definition>
-        <skos:example xml:lang="en">As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>100-BFO</dc:identifier>
         <rdfs:label xml:lang="en">temporal region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A temporal region is an occurrent over which processes can unfold</skos:definition>
@@ -1576,34 +994,10 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>039-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">two-dimensional spatial region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A two-dimensional spatial region is a spatial region that is a whole consisting of a surface together with zero or more surfaces which may have spatial regions of lower dimension as parts</skos:definition>
-        <skos:example xml:lang="en">The surface of a sphere-shaped part of space; an infinitely thin plane in space</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>095-BFO</dc:identifier>
         <rdfs:label xml:lang="en">spatiotemporal region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime</skos:definition>
@@ -1617,31 +1011,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>083-BFO</dc:identifier>
         <rdfs:label xml:lang="en">process</rdfs:label>
         <skos:altLabel xml:lang="en">event</skos:altLabel>
@@ -1751,18 +1120,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000018 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>037-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">zero-dimensional spatial region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A zero-dimensional spatial region is one or a collection of more than one spatially disjoint points in space</skos:definition>
-        <skos:example xml:lang="en">The spatial region occupied at some time instant by the North Pole</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
@@ -1779,11 +1136,8 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <obo:IAO_0000601 xml:lang="en">If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])</obo:IAO_0000601>
         <obo:IAO_0000602>(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] </obo:IAO_0000602>
-        <dc:identifier>055-BFO</dc:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">quality</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</skos:definition>
-        <skos:example xml:lang="en">The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold</skos:example>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
@@ -1901,68 +1255,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>027-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">fiat object part</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A fiat object part b is a material entity &amp; such that if b exists then it is continuant part of some object c &amp; demarcated from the remainder of c by one or more fiat surfaces</skos:definition>
-        <skos:example xml:lang="en">The upper and lower lobes of the left lung; the dorsal and ventral surfaces of the body; the Western hemisphere of the Earth; the FMA:regional parts of an intact human body</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>038-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">one-dimensional spatial region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A one-dimensional spatial region is a whole consisting of a line together with zero or more lines which may have points as parts</skos:definition>
-        <skos:example xml:lang="en">An edge of a cube-shaped portion of space; a line connecting two points; two parallel lines extended in space</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>025-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">object aggregate</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit</skos:definition>
-        <skos:example xml:lang="en">The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank</skos:example>
-        <skos:scopeNote>&apos;Exactly&apos; means that there are no parts of the object aggregate other than its member parts.</skos:scopeNote>
-        <skos:scopeNote>The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000028">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>040-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">three-dimensional spatial region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A three-dimensional spatial region is a whole consisting of a spatial volume together with zero or more spatial volumes which may have spatial regions of lower dimension as parts</skos:definition>
-        <skos:example xml:lang="en">A cube-shaped region of space; a sphere-shaped region of space; the region of space occupied by all and only the planets in the solar system at some point in time</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <dc:identifier>034-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">site</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity</skos:definition>
-        <skos:example xml:lang="en">A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
@@ -2046,44 +1338,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>084-BFO</dc:identifier>
         <rdfs:label xml:lang="en">process boundary</rdfs:label>
         <skos:definition xml:lang="en">p is a process boundary =Def p is a temporal part of a process &amp; p has no proper temporal parts</skos:definition>
@@ -2092,174 +1346,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000038"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000148"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
-        <dc:identifier>103-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">one-dimensional temporal region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A one-dimensional temporal region is a temporal region that is a whole that has a temporal interval and zero or more temporal intervals and temporal instants as parts</skos:definition>
-        <skos:example xml:lang="en">The temporal region during which a process occurs</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <dc:identifier>019-BFO</dc:identifier>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part</skos:definition>
         <skos:example xml:lang="en">A human being; the undetached arm of a human being; an aggregate of human beings</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <dc:identifier>029-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">continuant fiat boundary</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions &amp; such that there is no time t when b has a spatial region as continuant part &amp; whose location is determined in relation to some material entity</skos:definition>
-        <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <dc:identifier>028-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
-        <skos:definition xml:lang="en">b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part</skos:definition>
-        <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface, site</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000142 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <dc:identifier>032-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">fiat line</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A fiat line is a one-dimensional continuant fiat boundary that is continuous</skos:definition>
-        <skos:example xml:lang="en">The Equator; all geopolitical boundaries; all lines of latitude and longitude; the median sulcus of your tongue; the line separating the outer surface of the mucosa of the lower lip from the outer surface of the skin of the chin</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000145 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <dc:identifier>057-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">relational quality</rdfs:label>
-        <skos:definition xml:lang="en">b is a relational quality =Def b is a quality &amp; there exists c and d such that c and d are not identical &amp; b specifically depends on c &amp; b specifically depends on d</skos:definition>
-        <skos:example xml:lang="en">A marriage bond; an instance of love; an obligation between one person and another</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000146 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000146">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <dc:identifier>033-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">fiat surface</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A fiat surface is a two-dimensional continuant fiat boundary that is self-connected</skos:definition>
-        <skos:example xml:lang="en">The surface of the Earth; the plane separating the smoking from the non-smoking zone in a restaurant</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000147 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000147">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <dc:identifier>031-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">fiat point</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A fiat point is a zero-dimensional continuant fiat boundary that consists of a single point</skos:definition>
-        <skos:example xml:lang="en">The geographic North Pole; the quadripoint where the boundaries of Colorado, Utah, New Mexico and Arizona meet; the point of origin of some spatial coordinate system</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000148 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000148">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:identifier>102-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">zero-dimensional temporal region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A zero-dimensional temporal region is a temporal region that is a whole consisting of one or more separated temporal instants as parts</skos:definition>
-        <skos:example xml:lang="en">A temporal region that is occupied by a process boundary; the moment at which a finger is detached in an industrial accident</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000182 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <dc:identifier>138-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">history</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by the material part of a material entity</skos:definition>
-        <skos:example xml:lang="en">The life of an organism from the beginning to the end of its existence</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000202 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000202">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <dc:identifier>155-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">temporal interval</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks</skos:definition>
-        <skos:example xml:lang="en">The year 2018.</skos:example>
-        <skos:scopeNote xml:lang="en">A one-dimensional temporal region can include as parts not only temporal intervals but also temporal instants separated from other parts by gaps.</skos:scopeNote>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000203 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
-        <dc:identifier>209-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">temporal instant</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A temporal instant is a zero-dimensional temporal region that has no proper temporal part</skos:definition>
-        <skos:example xml:lang="en">The millennium</skos:example>
     </owl:Class>
     
 
@@ -3022,19 +2116,19 @@ Bsp:
 
 :schuleTreburSchulform1 a Schulartfunktion .
 :schuleTreburSchulform1 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTreburSchulform1 :konkretisiertSchulform :Realschule .
+:schuleTreburSchulform1 :wirdBeschriebenVon :Realschule .
 
 :schuleTreburSchulform2 a Schulartfunktion .
 :schuleTreburSchulform2 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTreburSchulform2 :konkretisiertSchulform :Hauptschule .
+:schuleTreburSchulform2 :wirdBeschriebenVon :Hauptschule .
 
 :schuleTreburSchulform3 a Schulartfunktion .
-:schuleTreburSchulform3 :konkretisiertSchulform :Gesamtschule 
 :schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateY .
+:schuleTreburSchulform3 :wirdBeschriebenVon :Gesamtschule .
 
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform1 .
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform2 .
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform3 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform1 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform2 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform3 .
 
 :someTimeIntervalUntilDateX  bfo:precedes :someTimeIntervalUntilDateY .</skos:example>
     </owl:Class>
@@ -3076,7 +2170,7 @@ Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sin
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                             </rdf:Description>
                         </owl:onProperty>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000349"/>
@@ -3093,7 +2187,7 @@ Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sin
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000349"/>
@@ -3156,7 +2250,7 @@ While the &quot;Bildungsgangniveau&quot; describes the level of an entire educat
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                             </rdf:Description>
                         </owl:onProperty>
                         <owl:someValuesFrom>
@@ -3180,7 +2274,7 @@ While the &quot;Bildungsgangniveau&quot; describes the level of an entire educat
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom>
@@ -3865,7 +2959,7 @@ It describes the depth and level of demand with which learning content and compe
                     <owl:Restriction>
                         <owl:onProperty>
                             <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                             </rdf:Description>
                         </owl:onProperty>
                         <owl:someValuesFrom>
@@ -3890,7 +2984,7 @@ It describes the depth and level of demand with which learning content and compe
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom>
@@ -4985,10 +4079,10 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000046">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
-        <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000050"/>
-        <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000051"/>
-        <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000052"/>
-        <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000055"/>
+        <obo:BFO_0000051 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000050"/>
+        <obo:BFO_0000051 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000051"/>
+        <obo:BFO_0000051 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000052"/>
+        <obo:BFO_0000051 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000055"/>
         <rdfs:comment>Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)</rdfs:comment>
         <rdfs:label xml:lang="de">Sekundarbereich II</rdfs:label>
         <skos:altLabel xml:lang="de">Gymnasiale Oberstufe</skos:altLabel>
@@ -5829,35 +4923,10 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000006"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000011"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000009"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000018"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000026"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000028"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000142"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000146"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000147"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
