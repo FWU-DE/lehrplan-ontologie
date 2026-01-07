@@ -1,7 +1,7 @@
 
 
-VERSION=1.0.0-9
-PRIOR_VERSION=1.0.0-8
+VERSION=1.0.0
+PRIOR_VERSION=1.0.0
 ONTBASE=https://w3id.org/lehrplan/ontology/
 ANNOTATE_ONTOLOGY_VERSION="annotate -V $ONTBASE/$VERSION/\$@ --annotation owl:versionInfo $VERSION"
 
@@ -30,9 +30,9 @@ sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE ANNOTATE_ONTOLOGY_VERSION="$ANN
 #sh run.sh make VERSION=$VERSION PRIOR_VERSION=$PRIOR_VERSION update-ontology-annotations
 sh run.sh make VERSION=$VERSION  update-ontology-annotations
 
-sh run.sh make clean
+#sh run.sh make clean
 # finally refresh imports again, so that version IRIs are updated back to "normal". 
-sh run.sh make no-mirror-refresh-imports
+sh run.sh make refresh-imports
 
 ## generate the shacl shapes from the ontology
-sh utils/generate-auto-shapes.sh
+#sh utils/generate-auto-shapes.sh
