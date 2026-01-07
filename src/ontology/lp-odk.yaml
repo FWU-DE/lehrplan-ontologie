@@ -19,14 +19,16 @@ import_group:
     - id: iao
     - id: bfo
       mirror_from: http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl
-      module_type: mirror
+      #module_type: mirror
+      module_type: slme
+      module_type_slme: BOT
     - id: ro
       mirror_from: http://purl.obolibrary.org/obo/ro/core.owl
-    - id: qudt
-      mirror_from: https://qudt.org/schema/qudt
-      module_type: slme
-      module_type_slme: SUBSET
-      slme_individuals: exclude
+    #- id: qudt
+    #  mirror_from: https://qudt.org/schema/qudt
+    #  module_type: slme
+    #  module_type_slme: SUBSET
+    #  slme_individuals: exclude
     #- id: schulart
     #  mirror_from: https://w3id.org/schulart
     #  module_type: mirror
