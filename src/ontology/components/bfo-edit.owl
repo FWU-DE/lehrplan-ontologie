@@ -45,7 +45,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000021> (endet mit Abschluss)
 
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <http://purl.obolibrary.org/obo/BFO_0000117>)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <http://purl.obolibrary.org/obo/BFO_0000051>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000019>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (wird beschrieben von)

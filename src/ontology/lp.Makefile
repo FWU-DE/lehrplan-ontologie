@@ -15,6 +15,22 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt
 		$(ANNOTATE_CONVERT_FILE); fi
 
 
+$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt \
+			   $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/bfo_terms.txt \
+		         --force true --copy-ontology-annotations true \
+		         --individuals include \
+		         --method BOT \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/bfo_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 CITATION="'Lehrplan Ontology. Version $(VERSION), https://w3id.org/lehrplan/ontology'"
 
 ALL_ANNOTATIONS=--annotate-defined-by false \

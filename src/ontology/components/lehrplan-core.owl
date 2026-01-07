@@ -818,19 +818,19 @@ Bsp:
 
 :schuleTreburSchulform1 a Schulartfunktion .
 :schuleTreburSchulform1 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTreburSchulform1 :konkretisiertSchulform :Realschule .
+:schuleTreburSchulform1 :wirdBeschriebenVon :Realschule .
 
 :schuleTreburSchulform2 a Schulartfunktion .
 :schuleTreburSchulform2 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTreburSchulform2 :konkretisiertSchulform :Hauptschule .
+:schuleTreburSchulform2 :wirdBeschriebenVon :Hauptschule .
 
 :schuleTreburSchulform3 a Schulartfunktion .
-:schuleTreburSchulform3 :konkretisiertSchulform :Gesamtschule 
 :schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateY .
+:schuleTreburSchulform3 :wirdBeschriebenVon :Gesamtschule .
 
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform1 .
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform2 .
-:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform3 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform1 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform2 .
+:schuleTrebur :hatFunktion :schuleTreburSchulform3 .
 
 :someTimeIntervalUntilDateX  bfo:precedes :someTimeIntervalUntilDateY .")
 

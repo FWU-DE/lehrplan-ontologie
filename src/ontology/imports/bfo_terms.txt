@@ -1,1 +1,11 @@
+http://purl.obolibrary.org/obo/BFO_0000031
+http://purl.obolibrary.org/obo/BFO_0000030
+http://purl.obolibrary.org/obo/BFO_0000040
+http://purl.obolibrary.org/obo/BFO_0000034
+http://purl.obolibrary.org/obo/BFO_0000023
+http://purl.obolibrary.org/obo/BFO_0000015
+http://purl.obolibrary.org/obo/BFO_0000035
 
+
+http://purl.obolibrary.org/obo/BFO_0000051
+http://purl.obolibrary.org/obo/BFO_0000050

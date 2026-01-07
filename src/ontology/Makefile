@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                01c9d9a87b41663a3121104770d09ee7f07ec7b2300026f3150df43365e26c89
+CONFIG_HASH=                c15fe6b540abdbd6bcdf9d76309e332b7b3185ad3826bf31bea48acef629eabd
 
 
 # ----------------------------------------
@@ -421,15 +421,6 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 $(ANNOTATE_CONVERT_FILE)
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
-
-## Module for ontology: bfo (mirror)
-$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
-		               --subset-decls true --synonym-decls true \
-		               --add-source true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: qudt (slme)
 $(IMPORTDIR)/qudt_import.owl: $(MIRRORDIR)/qudt.owl $(IMPORTDIR)/qudt_terms.txt $(IMPORTSEED) | all_robot_plugins
