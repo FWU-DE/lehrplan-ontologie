@@ -15,7 +15,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0-9/lp-ohne-land.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0/lp-ohne-land.owl"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -28,7 +28,7 @@
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
         <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
-        <owl:versionInfo>1.0.0-9</owl:versionInfo>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -267,12 +267,6 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
@@ -285,21 +279,9 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
     
 
 
@@ -309,21 +291,9 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#related -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
     
 
 
@@ -342,6 +312,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000141 -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000141">
+        <rdfs:comment xml:lang="en">matches KIM school type</rdfs:comment>
         <rdfs:label xml:lang="de">entspricht KIM Schulart</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -1209,7 +1180,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000833">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
         <rdfs:label xml:lang="en">has educational track level</rdfs:label>
         <rdfs:label xml:lang="de">hat Bildungsgangniveau</rdfs:label>
@@ -2018,14 +1996,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
     
@@ -3735,24 +3713,36 @@ Instruction is less theoretical than at the Gymnasium but more demanding than in
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000815">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000069"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000835"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000069"/>
+                                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000835"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000069"/>
+                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000835"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
 
 Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium erfolgen. Auch in der Sekundarstufe I wird z.B. an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet.</rdfs:comment>
@@ -5639,36 +5629,51 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
-        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000076"/>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000835"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
-        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000078"/>
-        <owl:equivalentClass>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000832"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
-        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000079"/>
+        </owl:intersectionOf>
         <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000078"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000834"/>
             </owl:Restriction>
+        </owl:intersectionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000079"/>
+            </owl:Restriction>
         </owl:equivalentClass>
-    </owl:Restriction>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000835"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000076"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>

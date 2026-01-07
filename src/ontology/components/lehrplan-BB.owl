@@ -58,7 +58,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030366>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030378>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030379>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030380>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000008>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000021>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000026>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000029>))
@@ -235,7 +235,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000459> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000807> "Ein “Rahmenlehrplan (BB)” ist ein “Lehrplan” im Bundesland Brandenburg.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000807> "Rahmenlehrplan (BB)"@de)
-EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000807> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0000441>) ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0000441>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000807> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000441>) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000441>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002069> (Fachniveau Sek II (BB))
 

@@ -44,9 +44,9 @@
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
     
 
 
@@ -102,6 +102,17 @@
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000840 -->
+
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -144,7 +155,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000443 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000037"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:label xml:lang="de">Niveaustufe (BE/BB)</rdfs:label>
     </owl:Class>
     

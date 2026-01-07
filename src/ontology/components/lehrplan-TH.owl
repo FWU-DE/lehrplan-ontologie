@@ -87,7 +87,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000200> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000820> "Ein “Lehrplan (TH)” ist ein “Lehrplan” im Bundesland Thüringen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000820> "Lehrplan (TH)"@de)
-EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000820> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0002097>) ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0002097>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000031>)))
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000820> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002097>) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002097>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000031>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001038> (Bildungsgangniveau (TH))
 
