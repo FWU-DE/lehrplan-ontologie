@@ -14,6 +14,10 @@ jobs:
         path: main
     - name: Build widoco and docs 
       run: |
+           # install D2
+           curl -fsSL https://d2lang.com/install.sh | sh -s --
+           pip install mkdocs-d2-plugin
+           
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
            mkdir public
 
