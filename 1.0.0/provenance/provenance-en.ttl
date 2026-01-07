@@ -1,0 +1,21 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/lehrplan/ontology/1.0.0rc1> a prov:Entity;
+	 dc:title "Curriculum Ontology";
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-6378-2618>;
+	 dc:creator <https://orcid.org/0000-0001-6378-2618>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-7192-7143>;
+	 dc:creator <https://orcid.org/0000-0001-7192-7143>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-01-07";
+.
+:agent0 a prov:Agent; foaf:name "Almut Steinlein".
+:agent1 a prov:Agent; foaf:name "Cindy Bloes".
+:agent2 a prov:Agent; foaf:name "Johann Bergh".
+:agent3 a prov:Agent; foaf:name "Laura Junghanns".
