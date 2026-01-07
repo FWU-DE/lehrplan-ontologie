@@ -1,4 +1,4 @@
-name: HTML
+name: deploy
 
 on:
   push:
@@ -12,20 +12,49 @@ jobs:
       with:
         ref: main
         path: main
-    - name: Build HTML for main
+    - name: Build widoco and docs 
       run: |
-           #wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
-           mkdir public 
-           java -jar widoco.jar -ontFile main/lp.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang de-en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
-           ls public/doc
-           cp public/doc/index-de.html public/doc/index.html
+           mkdir public
+
+           java -jar widoco.jar -ontFile main/lp.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           ls public
+           echo -e "\n img { max-width:1000px }" >> public/doc/resources/extra.css
+           cat public/doc/resources/extra.css
            
+           cp public/doc/index-en.html public/doc/index.html
+           cp -r public/doc 1.0.0
+           cp -r public/doc/* public/
+           mv 1.0.0 public/
+
+           pip install mkdocs
+           cd main
+           mkdocs build -f mkdocs.yaml
+
+           cd ..
+           mkdir public/docs
+           cp -r main/site/* public/docs/
+
+# pattern for old versions
+#
+#    - uses: actions/checkout@v3
+#      with:
+#        ref: v1.0.0
+#        path: v1.0.0
+#    - name: Build widoco and docs for 1.0.0
+#      run: |
+#           mkdir public/1.0.0
+#           java -jar widoco.jar -ontFile v1.0.0/lp.ttl -outFolder public/1.0.0  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+#           ls public/1.0.0/
+#           mv public/1.0.0/doc/* public/1.0.0/
+#           cp public/1.0.0/index-en.html public/1.0.0/index.html
+
+
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: gh-pages
-        build_dir: public/doc
+        build_dir: public/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
