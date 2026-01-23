@@ -10,8 +10,8 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
-    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl">
-        <owl:imports rdf:resource="https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/lp/components/lehrplan-BE-BB-shared.owl">
+        <owl:imports rdf:resource="https://w3id.org/lehrplan/ontology/lp/components/lehrplan-core.owl"/>
     </owl:Ontology>
     
 

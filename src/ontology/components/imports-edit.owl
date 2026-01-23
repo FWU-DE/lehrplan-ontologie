@@ -6,9 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://w3id.org/lehrplan/ontology/components/imports-edit.owl>
-#Import(<https://w3id.org/lehrplan/ontology/imports/kim_import.owl>)
-
+Ontology(<https://w3id.org/lehrplan/ontology/lp/components/imports-edit.owl>
+#Import(<https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl>)
 
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#altLabel> "skos:altLabel")

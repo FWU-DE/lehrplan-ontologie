@@ -3,8 +3,7 @@ title: "Lehrplan Ontology"
 github_org: FWU-DE
 git_main_branch: main
 repo: lehrplan-ontologie
-uribase: https://w3id.org/lehrplan
-uribase_suffix: ontology
+uribase: https://w3id.org/lehrplan/ontology
 release_artefacts:
   - base
   - full
