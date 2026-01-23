@@ -34,10 +34,15 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt \
 CITATION="'Lehrplan Ontology. Version $(VERSION), https://w3id.org/lehrplan/ontology'"
 
 ALL_ANNOTATIONS=--annotate-defined-by false \
+	--annotation http://purl.org/dc/terms/created "$(TODAY)" \
+	--annotation http://purl.org/dc/terms/bibliographicCitation "$(CITATION)"  \
+	--link-annotation owl:priorVersion https://w3id.org/lehrplan/ontology/$(PRIOR_VERSION) \
+
+ALL_ANNOTATIONS_AND_VERSION=--annotate-defined-by false \
 	--ontology-iri https://w3id.org/lehrplan/ontology/ -V https://w3id.org/lehrplan/ontology/$(VERSION) \
 	--annotation http://purl.org/dc/terms/created "$(TODAY)" \
 	--annotation http://purl.org/dc/terms/bibliographicCitation "$(CITATION)"  \
-#	--link-annotation owl:priorVersion https://w3id.org/lehrplan/ontology/$(PRIOR_VERSION) \
+	--link-annotation owl:priorVersion https://w3id.org/lehrplan/ontology/$(PRIOR_VERSION) \
 
 lp-land-%-full.owl: $(EDIT_PREPROCESSED)
 	$(ROBOT) remove --input $< --select imports --trim false \
@@ -45,7 +50,7 @@ lp-land-%-full.owl: $(EDIT_PREPROCESSED)
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
-		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)$* annotate -V $(ONTBASE)$*/$(VERSION) --annotation owl:versionInfo $(VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
 
 release-land-%: lp-land-%-full.owl
 		cp lp-land-$*-full.owl $(RELEASEDIR)
@@ -56,7 +61,7 @@ lp-ohne-land.owl: $(EDIT_PREPROCESSED)
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
-		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE) $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
 
 
 
@@ -73,14 +78,14 @@ $(TEMPLATEDIR)/lehrplan-subjects.tsv:
 
 
 update-ontology-annotations: 
-	$(ROBOT) annotate --input ../../lp.owl $(ALL_ANNOTATIONS) --output ../../lp.owl && \
-	$(ROBOT) annotate --input ../../lp.ttl $(ALL_ANNOTATIONS) --output ../../lp.ttl && \
-	$(ROBOT) annotate --input ../../lp-simple.owl $(ALL_ANNOTATIONS) --output ../../lp-simple.owl && \
-	$(ROBOT) annotate --input ../../lp-simple.ttl $(ALL_ANNOTATIONS) --output ../../lp-simple.ttl && \
-	$(ROBOT) annotate --input ../../lp-full.owl $(ALL_ANNOTATIONS) --output ../../lp-full.owl && \
-	$(ROBOT) annotate --input ../../lp-full.ttl $(ALL_ANNOTATIONS) --output ../../lp-full.ttl && \
-	$(ROBOT) annotate --input ../../lp-base.owl $(ALL_ANNOTATIONS) --output ../../lp-base.owl && \
-	$(ROBOT) annotate --input ../../lp-base.ttl $(ALL_ANNOTATIONS) --output ../../lp-base.ttl && \
+	$(ROBOT) annotate --input ../../lp.owl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp.owl && \
+	$(ROBOT) annotate --input ../../lp.ttl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp.ttl && \
+	$(ROBOT) annotate --input ../../lp-simple.owl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-simple.owl && \
+	$(ROBOT) annotate --input ../../lp-simple.ttl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-simple.ttl && \
+	$(ROBOT) annotate --input ../../lp-full.owl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-full.owl && \
+	$(ROBOT) annotate --input ../../lp-full.ttl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-full.ttl && \
+	$(ROBOT) annotate --input ../../lp-base.owl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-base.owl && \
+	$(ROBOT) annotate --input ../../lp-base.ttl $(ALL_ANNOTATIONS_AND_VERSION) --output ../../lp-base.ttl && \
 	$(ROBOT) annotate --input ../../lp-land-BB-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Brandenburg" convert --format ofn --output ../../lp-land-BB-full.owl && \
 	$(ROBOT) annotate --input ../../lp-land-BE-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Berlin" convert --format ofn --output ../../lp-land-BE-full.owl && \
 	$(ROBOT) annotate --input ../../lp-land-BW-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Baden-Württemberg" convert --format ofn --output ../../lp-land-BW-full.owl && \
