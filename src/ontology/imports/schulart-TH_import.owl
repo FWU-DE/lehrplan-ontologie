@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/imports/schulart-TH_import.owl#>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/lp/imports/schulart-TH_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -8,10 +8,10 @@ Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
-Ontology(<https://w3id.org/lehrplan/ontology/imports/schulart-TH_import.owl>
-<https://w3id.org/lehrplan/ontology/releases/2026-01-07/imports/schulart-TH_import.owl>
+Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulart-TH_import.owl>
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-01-23/imports/schulart-TH_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulart/sa/releases/2026-01-06/components/schools-th.owl>)
-Annotation(owl:versionInfo "2026-01-07")
+Annotation(owl:versionInfo "2026-01-23")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))

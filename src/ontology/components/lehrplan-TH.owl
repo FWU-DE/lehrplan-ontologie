@@ -6,8 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-TH.owl>
-Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
+Ontology(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-TH.owl>
+Import(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-core.owl>)
 
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000160>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000176>))

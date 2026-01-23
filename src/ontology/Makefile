@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                fd77a3f602d4d81cb14d6118379e3cc79c07556f0771fdb757d79a2da2041c8a
+CONFIG_HASH=                8e49e65079d4642342c79bb2d2ac5b367c8f7393d421d9e967f5acb09362febf
 
 
 # ----------------------------------------
@@ -19,9 +19,9 @@ CONFIG_HASH=                fd77a3f602d4d81cb14d6118379e3cc79c07556f0771fdb757d7
 # these can be overwritten on the command line
 
 OBOBASE=                    http://purl.obolibrary.org/obo
-URIBASE=                    https://w3id.org/lehrplan
+URIBASE=                    https://w3id.org/lehrplan/ontology
 ONT=                        lp
-ONTBASE=                    https://w3id.org/lehrplan/ontology
+ONTBASE=                    https://w3id.org/lehrplan/ontology/lp
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -415,7 +415,7 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
@@ -425,7 +425,7 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 ## Module for ontology: schulart-BB (mirror)
 $(IMPORTDIR)/schulart-BB_import.owl: $(MIRRORDIR)/schulart-BB.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -434,7 +434,7 @@ $(IMPORTDIR)/schulart-BB_import.owl: $(MIRRORDIR)/schulart-BB.owl | all_robot_pl
 ## Module for ontology: schulart-BE (mirror)
 $(IMPORTDIR)/schulart-BE_import.owl: $(MIRRORDIR)/schulart-BE.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -443,7 +443,7 @@ $(IMPORTDIR)/schulart-BE_import.owl: $(MIRRORDIR)/schulart-BE.owl | all_robot_pl
 ## Module for ontology: schulart-BW (mirror)
 $(IMPORTDIR)/schulart-BW_import.owl: $(MIRRORDIR)/schulart-BW.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -452,7 +452,7 @@ $(IMPORTDIR)/schulart-BW_import.owl: $(MIRRORDIR)/schulart-BW.owl | all_robot_pl
 ## Module for ontology: schulart-BY (mirror)
 $(IMPORTDIR)/schulart-BY_import.owl: $(MIRRORDIR)/schulart-BY.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -461,7 +461,7 @@ $(IMPORTDIR)/schulart-BY_import.owl: $(MIRRORDIR)/schulart-BY.owl | all_robot_pl
 ## Module for ontology: schulart-HB (mirror)
 $(IMPORTDIR)/schulart-HB_import.owl: $(MIRRORDIR)/schulart-HB.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -470,7 +470,7 @@ $(IMPORTDIR)/schulart-HB_import.owl: $(MIRRORDIR)/schulart-HB.owl | all_robot_pl
 ## Module for ontology: schulart-HE (mirror)
 $(IMPORTDIR)/schulart-HE_import.owl: $(MIRRORDIR)/schulart-HE.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -479,7 +479,7 @@ $(IMPORTDIR)/schulart-HE_import.owl: $(MIRRORDIR)/schulart-HE.owl | all_robot_pl
 ## Module for ontology: schulart-HH (mirror)
 $(IMPORTDIR)/schulart-HH_import.owl: $(MIRRORDIR)/schulart-HH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -488,7 +488,7 @@ $(IMPORTDIR)/schulart-HH_import.owl: $(MIRRORDIR)/schulart-HH.owl | all_robot_pl
 ## Module for ontology: schulart-MV (mirror)
 $(IMPORTDIR)/schulart-MV_import.owl: $(MIRRORDIR)/schulart-MV.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -497,7 +497,7 @@ $(IMPORTDIR)/schulart-MV_import.owl: $(MIRRORDIR)/schulart-MV.owl | all_robot_pl
 ## Module for ontology: schulart-NI (mirror)
 $(IMPORTDIR)/schulart-NI_import.owl: $(MIRRORDIR)/schulart-NI.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -506,7 +506,7 @@ $(IMPORTDIR)/schulart-NI_import.owl: $(MIRRORDIR)/schulart-NI.owl | all_robot_pl
 ## Module for ontology: schulart-NW (mirror)
 $(IMPORTDIR)/schulart-NW_import.owl: $(MIRRORDIR)/schulart-NW.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -515,7 +515,7 @@ $(IMPORTDIR)/schulart-NW_import.owl: $(MIRRORDIR)/schulart-NW.owl | all_robot_pl
 ## Module for ontology: schulart-RP (mirror)
 $(IMPORTDIR)/schulart-RP_import.owl: $(MIRRORDIR)/schulart-RP.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -524,7 +524,7 @@ $(IMPORTDIR)/schulart-RP_import.owl: $(MIRRORDIR)/schulart-RP.owl | all_robot_pl
 ## Module for ontology: schulart-SH (mirror)
 $(IMPORTDIR)/schulart-SH_import.owl: $(MIRRORDIR)/schulart-SH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -533,7 +533,7 @@ $(IMPORTDIR)/schulart-SH_import.owl: $(MIRRORDIR)/schulart-SH.owl | all_robot_pl
 ## Module for ontology: schulart-SL (mirror)
 $(IMPORTDIR)/schulart-SL_import.owl: $(MIRRORDIR)/schulart-SL.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -542,7 +542,7 @@ $(IMPORTDIR)/schulart-SL_import.owl: $(MIRRORDIR)/schulart-SL.owl | all_robot_pl
 ## Module for ontology: schulart-SN (mirror)
 $(IMPORTDIR)/schulart-SN_import.owl: $(MIRRORDIR)/schulart-SN.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -551,7 +551,7 @@ $(IMPORTDIR)/schulart-SN_import.owl: $(MIRRORDIR)/schulart-SN.owl | all_robot_pl
 ## Module for ontology: schulart-ST (mirror)
 $(IMPORTDIR)/schulart-ST_import.owl: $(MIRRORDIR)/schulart-ST.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -560,7 +560,7 @@ $(IMPORTDIR)/schulart-ST_import.owl: $(MIRRORDIR)/schulart-ST.owl | all_robot_pl
 ## Module for ontology: schulart-TH (mirror)
 $(IMPORTDIR)/schulart-TH_import.owl: $(MIRRORDIR)/schulart-TH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -569,7 +569,7 @@ $(IMPORTDIR)/schulart-TH_import.owl: $(MIRRORDIR)/schulart-TH.owl | all_robot_pl
 ## Module for ontology: schulfach-BB (mirror)
 $(IMPORTDIR)/schulfach-BB_import.owl: $(MIRRORDIR)/schulfach-BB.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -578,7 +578,7 @@ $(IMPORTDIR)/schulfach-BB_import.owl: $(MIRRORDIR)/schulfach-BB.owl | all_robot_
 ## Module for ontology: schulfach-BE (mirror)
 $(IMPORTDIR)/schulfach-BE_import.owl: $(MIRRORDIR)/schulfach-BE.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -587,7 +587,7 @@ $(IMPORTDIR)/schulfach-BE_import.owl: $(MIRRORDIR)/schulfach-BE.owl | all_robot_
 ## Module for ontology: schulfach-BW (mirror)
 $(IMPORTDIR)/schulfach-BW_import.owl: $(MIRRORDIR)/schulfach-BW.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -596,7 +596,7 @@ $(IMPORTDIR)/schulfach-BW_import.owl: $(MIRRORDIR)/schulfach-BW.owl | all_robot_
 ## Module for ontology: schulfach-BY (mirror)
 $(IMPORTDIR)/schulfach-BY_import.owl: $(MIRRORDIR)/schulfach-BY.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -605,7 +605,7 @@ $(IMPORTDIR)/schulfach-BY_import.owl: $(MIRRORDIR)/schulfach-BY.owl | all_robot_
 ## Module for ontology: schulfach-HB (mirror)
 $(IMPORTDIR)/schulfach-HB_import.owl: $(MIRRORDIR)/schulfach-HB.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -614,7 +614,7 @@ $(IMPORTDIR)/schulfach-HB_import.owl: $(MIRRORDIR)/schulfach-HB.owl | all_robot_
 ## Module for ontology: schulfach-HE (mirror)
 $(IMPORTDIR)/schulfach-HE_import.owl: $(MIRRORDIR)/schulfach-HE.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -623,7 +623,7 @@ $(IMPORTDIR)/schulfach-HE_import.owl: $(MIRRORDIR)/schulfach-HE.owl | all_robot_
 ## Module for ontology: schulfach-HH (mirror)
 $(IMPORTDIR)/schulfach-HH_import.owl: $(MIRRORDIR)/schulfach-HH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -632,7 +632,7 @@ $(IMPORTDIR)/schulfach-HH_import.owl: $(MIRRORDIR)/schulfach-HH.owl | all_robot_
 ## Module for ontology: schulfach-MV (mirror)
 $(IMPORTDIR)/schulfach-MV_import.owl: $(MIRRORDIR)/schulfach-MV.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -641,7 +641,7 @@ $(IMPORTDIR)/schulfach-MV_import.owl: $(MIRRORDIR)/schulfach-MV.owl | all_robot_
 ## Module for ontology: schulfach-NI (mirror)
 $(IMPORTDIR)/schulfach-NI_import.owl: $(MIRRORDIR)/schulfach-NI.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -650,7 +650,7 @@ $(IMPORTDIR)/schulfach-NI_import.owl: $(MIRRORDIR)/schulfach-NI.owl | all_robot_
 ## Module for ontology: schulfach-NW (mirror)
 $(IMPORTDIR)/schulfach-NW_import.owl: $(MIRRORDIR)/schulfach-NW.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -659,7 +659,7 @@ $(IMPORTDIR)/schulfach-NW_import.owl: $(MIRRORDIR)/schulfach-NW.owl | all_robot_
 ## Module for ontology: schulfach-RP (mirror)
 $(IMPORTDIR)/schulfach-RP_import.owl: $(MIRRORDIR)/schulfach-RP.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -668,7 +668,7 @@ $(IMPORTDIR)/schulfach-RP_import.owl: $(MIRRORDIR)/schulfach-RP.owl | all_robot_
 ## Module for ontology: schulfach-SH (mirror)
 $(IMPORTDIR)/schulfach-SH_import.owl: $(MIRRORDIR)/schulfach-SH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -677,7 +677,7 @@ $(IMPORTDIR)/schulfach-SH_import.owl: $(MIRRORDIR)/schulfach-SH.owl | all_robot_
 ## Module for ontology: schulfach-SL (mirror)
 $(IMPORTDIR)/schulfach-SL_import.owl: $(MIRRORDIR)/schulfach-SL.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -686,7 +686,7 @@ $(IMPORTDIR)/schulfach-SL_import.owl: $(MIRRORDIR)/schulfach-SL.owl | all_robot_
 ## Module for ontology: schulfach-SN (mirror)
 $(IMPORTDIR)/schulfach-SN_import.owl: $(MIRRORDIR)/schulfach-SN.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -695,7 +695,7 @@ $(IMPORTDIR)/schulfach-SN_import.owl: $(MIRRORDIR)/schulfach-SN.owl | all_robot_
 ## Module for ontology: schulfach-ST (mirror)
 $(IMPORTDIR)/schulfach-ST_import.owl: $(MIRRORDIR)/schulfach-ST.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -704,7 +704,7 @@ $(IMPORTDIR)/schulfach-ST_import.owl: $(MIRRORDIR)/schulfach-ST.owl | all_robot_
 ## Module for ontology: schulfach-TH (mirror)
 $(IMPORTDIR)/schulfach-TH_import.owl: $(MIRRORDIR)/schulfach-TH.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri https://w3id.org/lehrplan \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -1169,7 +1169,7 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 		remove --axioms equivalent \
 		filter --term-file $(SIMPLESEED) --select "annotations ontology anonymous self" --trim true --signature true \
 		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
-		odk:normalize --base-iri https://w3id.org/lehrplan --subset-decls true --synonym-decls true \
+		odk:normalize --base-iri https://w3id.org/lehrplan/ontology --subset-decls true --synonym-decls true \
 		repair --merge-axiom-annotations true \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 # ----------------------------------------

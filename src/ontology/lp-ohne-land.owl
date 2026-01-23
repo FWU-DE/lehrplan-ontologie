@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl#"
-     xml:base="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl"
+<rdf:RDF xmlns="https://w3id.org/lehrplan/ontology/"
+     xml:base="https://w3id.org/lehrplan/ontology/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gnd="https://d-nb.info/standards/elementset/gnd#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -14,8 +14,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
-    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0rc1/lp-ohne-land.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//releases/1.0.0rc2/lp-ohne-land.owl"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -28,7 +28,7 @@
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
         <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
-        <owl:versionInfo>1.0.0rc1</owl:versionInfo>
+        <owl:versionInfo>1.0.0rc2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -4096,8 +4096,8 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000050">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000057"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
         <rdfs:label xml:lang="de">G8 Qualifikationsphase</rdfs:label>
         <skos:altLabel xml:lang="de">G8 Hauptphase</skos:altLabel>
     </owl:NamedIndividual>
@@ -4109,7 +4109,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000051">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000056"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
         <rdfs:label xml:lang="de">G8 Einführungsphase</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4120,8 +4120,8 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000052">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000057"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
         <rdfs:label xml:lang="de">G9 Qualifikationsphase</rdfs:label>
         <skos:altLabel xml:lang="de">G9 Hauptphase</skos:altLabel>
     </owl:NamedIndividual>
@@ -4133,7 +4133,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000055">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000056"/>
-        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
         <rdfs:label xml:lang="de">G9 Einführungsphase</rdfs:label>
     </owl:NamedIndividual>
     
