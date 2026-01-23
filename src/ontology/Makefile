@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                8e49e65079d4642342c79bb2d2ac5b367c8f7393d421d9e967f5acb09362febf
+CONFIG_HASH=                bf1cf9af7b423f865b2353fe9e86936080ddb40f5bce38c3ef1812a7bc59b2c9
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao bfo ro schulart-BB schulart-BE schulart-BW schulart-BY schulart-HB schulart-HE schulart-HH schulart-MV schulart-NI schulart-NW schulart-RP schulart-SH schulart-SL schulart-SN schulart-ST schulart-TH schulfach-BB schulfach-BE schulfach-BW schulfach-BY schulfach-HB schulfach-HE schulfach-HH schulfach-MV schulfach-NI schulfach-NW schulfach-RP schulfach-SH schulfach-SL schulfach-SN schulfach-ST schulfach-TH
+IMPORTS =  iao bfo ro skos schulart-BB schulart-BE schulart-BW schulart-BY schulart-HB schulart-HE schulart-HH schulart-MV schulart-NI schulart-NW schulart-RP schulart-SH schulart-SL schulart-SN schulart-ST schulart-TH schulfach-BB schulfach-BE schulfach-BW schulfach-BY schulfach-HB schulfach-HE schulfach-HH schulfach-MV schulfach-NI schulfach-NW schulfach-RP schulfach-SH schulfach-SL schulfach-SN schulfach-ST schulfach-TH
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -421,6 +421,25 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 $(ANNOTATE_CONVERT_FILE)
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: skos (slme)
+$(IMPORTDIR)/skos_import.owl: $(MIRRORDIR)/skos.owl $(IMPORTDIR)/skos_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/skos_terms.txt $(T_IMPORTSEED) \
+		         --copy-ontology-annotations true --force true \
+		         --individuals include \
+		         --method SUBSET \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term rdfs:label \
+		        --term IAO:0000115 \
+		        --term OMO:0002000 \
+		        --term-file $(IMPORTDIR)/skos_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: schulart-BB (mirror)
 $(IMPORTDIR)/schulart-BB_import.owl: $(MIRRORDIR)/schulart-BB.owl | all_robot_plugins
@@ -837,6 +856,13 @@ mirror-bfo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ro.owl
 mirror-ro: | $(TMPDIR)
 	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ro/core.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: skos
+.PHONY: mirror-skos
+.PRECIOUS: $(MIRRORDIR)/skos.owl
+mirror-skos: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.w3.org/TR/skos-reference/skos.rdf -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-BB

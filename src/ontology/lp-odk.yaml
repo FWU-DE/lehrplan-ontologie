@@ -34,10 +34,10 @@ import_group:
     #- id: schulfach
     #  mirror_from: https://w3id.org/schulfach
     #  module_type: mirror
-    #- id: skos
-    #  mirror_from: http://www.w3.org/TR/skos-reference/skos.rdf
-    #  module_type: slme
-    #  module_type_slme: SUBSET
+    - id: skos
+      mirror_from: http://www.w3.org/TR/skos-reference/skos.rdf
+      module_type: slme
+      module_type_slme: SUBSET
 
     - id: schulart-BB
       mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bb.owl
