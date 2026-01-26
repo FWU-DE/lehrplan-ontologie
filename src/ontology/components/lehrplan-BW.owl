@@ -65,9 +65,9 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000144> "
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000144> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_0000149>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000144> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000079> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000145> (Mittlerer Schulabschluss (BW))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000145> (Mittlerer Abschluss (BW))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000145> "Mittlerer Schulabschluss (BW)"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000145> "Mittlerer Abschluss (BW)"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000145> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_0000150>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000145> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000078> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000049>)))
 
@@ -228,9 +228,9 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000146> <https://w3id.org
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000149> "Hauptschulabschluss (BW)"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000144> <https://w3id.org/lehrplan/ontology/LP_0000149>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000150> (Mittlerer Abschluss (BW))
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000150> (Mittlerer Schulabschluss (BW))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000150> "Mittlerer Abschluss (BW)")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000150> "Mittlerer Schulabschluss (BW)")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000145> <https://w3id.org/lehrplan/ontology/LP_0000150>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000510> (Leistungsfach (BW))
