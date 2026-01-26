@@ -13,7 +13,7 @@ ex:BereichShape
     a sh:NodeShape ;
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000349> ; # "Bereich"
     sh:property [              
-        sh:path <http://purl.obolibrary.org/obo/BFO_0000176> ;       # continuant part of
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000050> ;       # part of
         sh:minCount 1 ;
     ] ;
     

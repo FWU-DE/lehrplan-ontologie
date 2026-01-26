@@ -5,7 +5,7 @@
 @prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
-
+# textual entity ist immer 'über' etwas
 
 ex:TextualEntityShape
     a sh:NodeShape ;
