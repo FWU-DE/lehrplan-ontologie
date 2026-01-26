@@ -9,9 +9,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulart-BE_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-01-23/imports/schulart-BE_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulart/sa/releases/2026-01-06/components/schools-be.owl>)
-Annotation(owl:versionInfo "2026-01-23")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-01-26/imports/schulart-BE_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulart/sa/releases/2026-01-26/components/schools-be.owl>)
+Annotation(owl:versionInfo "2026-01-26")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))
@@ -84,13 +84,13 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 
 # Individual: <https://w3id.org/schulart/BE_0000000> (Schularten (Berlin))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000000> "Schularten (Berlin)")
+AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000000> "Schularten (Berlin)"@de)
 ClassAssertion(skos:ConceptScheme <https://w3id.org/schulart/BE_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulart/BE_0000000> ontology:LP_3000048)
 
 # Individual: <https://w3id.org/schulart/BE_0000001> (Grundschule)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000001> "Grundschule")
+AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000001> "Grundschule"@de)
 ClassAssertion(skos:Concept <https://w3id.org/schulart/BE_0000001>)
 ClassAssertion(ontology:LP_0000111 <https://w3id.org/schulart/BE_0000001>)
 ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulart/BE_0000001> <https://w3id.org/kim/schularten/s02>)
@@ -123,7 +123,7 @@ ObjectPropertyAssertion(ontology:LP_0000833 <https://w3id.org/schulart/BE_000000
 
 # Individual: <https://w3id.org/schulart/BE_0000002> (Gemeinschaftsschule)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000002> "Gemeinschaftsschule")
+AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000002> "Gemeinschaftsschule"@de)
 ClassAssertion(skos:Concept <https://w3id.org/schulart/BE_0000002>)
 ClassAssertion(ontology:LP_0000111 <https://w3id.org/schulart/BE_0000002>)
 ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulart/BE_0000002> <https://w3id.org/kim/schularten/s09>)
@@ -174,7 +174,7 @@ ObjectPropertyAssertion(ontology:LP_0000833 <https://w3id.org/schulart/BE_000000
 
 # Individual: <https://w3id.org/schulart/BE_0000003> (Integrierte Sekundarschule)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000003> "Integrierte Sekundarschule")
+AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000003> "Integrierte Sekundarschule"@de)
 ClassAssertion(skos:Concept <https://w3id.org/schulart/BE_0000003>)
 ClassAssertion(ontology:LP_0000111 <https://w3id.org/schulart/BE_0000003>)
 ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulart/BE_0000003> <https://w3id.org/kim/schularten/s10>)
@@ -209,7 +209,7 @@ ObjectPropertyAssertion(ontology:LP_0000833 <https://w3id.org/schulart/BE_000000
 
 # Individual: <https://w3id.org/schulart/BE_0000004> (Gymnasium)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000004> "Gymnasium")
+AnnotationAssertion(rdfs:label <https://w3id.org/schulart/BE_0000004> "Gymnasium"@de)
 ClassAssertion(skos:Concept <https://w3id.org/schulart/BE_0000004>)
 ClassAssertion(ontology:LP_0000111 <https://w3id.org/schulart/BE_0000004>)
 ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulart/BE_0000004> <https://w3id.org/kim/schularten/s08>)
