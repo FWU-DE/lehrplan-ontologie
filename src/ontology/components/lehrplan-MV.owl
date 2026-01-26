@@ -211,6 +211,9 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030328> ObjectIntersectionOf(
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000032> (Orientierungsstufe (MV))
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000032> "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.
+
+Auch in anderen BL gibt es Orientierungsstufen, aber MV ist das einzige BL, das einen Lehrplan nur für die Orientierungsstufe hat.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000032> "Orientierungsstufe (MV)"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000020> <https://w3id.org/lehrplan/ontology/LP_0000032>)
 
