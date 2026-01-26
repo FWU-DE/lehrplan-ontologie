@@ -136,12 +136,6 @@
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000081 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000081"/>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000429 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000429">
@@ -159,12 +153,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:label xml:lang="de">Niveaustufe (BE/BB)</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000851 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000851"/>
     
 
 
