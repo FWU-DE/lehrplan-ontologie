@@ -12,14 +12,12 @@ Import(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-core.owl>)
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000170>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000184>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000208>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000365>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001011>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002080>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002081>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002136>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002139>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002140>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002141>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002143>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002144>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002145>))
@@ -48,7 +46,6 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000497>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000519>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000520>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000627>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000829>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0001014>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0002158>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030350>))
@@ -77,13 +74,6 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000184> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000208> "Mittlerer Abschluss (MV)"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000208> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_0000363>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000208> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000078> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>)))
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000365> (Orientierungsstufe)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000365> "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000365> "Orientierungsstufe"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000365> "Auch in anderen BL gibt es Orientierungsstufen, aber MV ist das einzige BL, das einen Lehrplan nur für die Orientierungsstufe hat.")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000365> <https://w3id.org/lehrplan/ontology/LP_0000020>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001011> (Bildungsgangniveau (MV))
 
@@ -117,12 +107,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002140> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002140> "Fachspezifische Kompetenz (MV)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002140> "\"Fachspezifische Kompetenz\" in Mathe Primar")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002140> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0002141> (Anforderungsbereich (MV))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002141> "Anforderungsbereich (MV)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002141> "Kommen nur in dem Fach Mathematik Sek I und Sek II vor")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002141> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000829>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002143> (Themenbereich (MV))
 
@@ -228,7 +212,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030328> ObjectIntersectionOf(
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000032> (Orientierungsstufe (MV))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000032> "Orientierungsstufe (MV)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000365> <https://w3id.org/lehrplan/ontology/LP_0000032>)
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000020> <https://w3id.org/lehrplan/ontology/LP_0000032>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000099> (Gymnasialniveau Sek I (MV))
 
@@ -250,9 +234,9 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000832> <https://w3id.org/lehrplan/ontology/LP_0000101>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0001011> <https://w3id.org/lehrplan/ontology/LP_0000101>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000102> (Orientierungsstufeniveau (MV))
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000102> (Orientierungsstufenniveau (MV))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000102> "Orientierungsstufeniveau (MV)"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000102> "Orientierungsstufenniveau (MV)"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000102>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000832> <https://w3id.org/lehrplan/ontology/LP_0000102>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000834> <https://w3id.org/lehrplan/ontology/LP_0000102>)
