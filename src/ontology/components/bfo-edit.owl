@@ -47,7 +47,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <http://purl.obolibrary.org/obo/BFO_0000051>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000019>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (described by)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (wird beschrieben von)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "described by"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "wird beschrieben von"@de)
@@ -64,17 +64,9 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3i
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000041> <http://purl.obolibrary.org/obo/BFO_0000051>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000047> (has educational level)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000047> (hat Schulstufe)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000024>)
-
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000048> (has input)
-
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000048> <http://purl.obolibrary.org/obo/RO_0000057>)
-
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000049> (hat Output)
-
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000049> <http://purl.obolibrary.org/obo/RO_0000057>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000071> (requires level)
 
