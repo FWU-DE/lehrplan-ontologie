@@ -14,78 +14,67 @@ export_formats:
   - ttl
 remove_owl_nothing: true
 import_group:
+  annotation_properties: ['rdfs:label', 'IAO:0000119','IAO:0000115', 'IAO:0000116', 'IAO:0000112', 'skos:definition', 'skos:example', 'skos:comment' ]
   products:
     - id: iao
     - id: bfo
       mirror_from: http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl
-      #module_type: mirror
       module_type: slme
       module_type_slme: BOT
     - id: ro
       mirror_from: http://purl.obolibrary.org/obo/ro/core.owl
-    #- id: qudt
-    #  mirror_from: https://qudt.org/schema/qudt
-    #  module_type: slme
-    #  module_type_slme: SUBSET
-    #  slme_individuals: exclude
-    #- id: schulart
-    #  mirror_from: https://w3id.org/schulart
-    #  module_type: mirror
-    #- id: schulfach
-    #  mirror_from: https://w3id.org/schulfach
-    #  module_type: mirror
     - id: skos
       mirror_from: http://www.w3.org/TR/skos-reference/skos.rdf
       module_type: slme
       module_type_slme: SUBSET
 
     - id: schulart-BB
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bb.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-bb.owl
       module_type: mirror
     - id: schulart-BE
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-be.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-be.owl
       module_type: mirror
     - id: schulart-BW
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bw.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-bw.owl
       module_type: mirror
     - id: schulart-BY
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-by.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-by.owl
       module_type: mirror
     - id: schulart-HB
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hb.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-hb.owl
       module_type: mirror
     - id: schulart-HE
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-he.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-he.owl
       module_type: mirror
     - id: schulart-HH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hh.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-hh.owl
       module_type: mirror
     - id: schulart-MV
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-mv.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-mv.owl
       module_type: mirror
     - id: schulart-NI
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-ni.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-ni.owl
       module_type: mirror
     - id: schulart-NW
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-nw.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-nw.owl
       module_type: mirror
     - id: schulart-RP
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-rp.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-rp.owl
       module_type: mirror
     - id: schulart-SH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sh.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sh.owl
       module_type: mirror
     - id: schulart-SL
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sl.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sl.owl
       module_type: mirror
     - id: schulart-SN
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sn.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sn.owl
       module_type: mirror
     - id: schulart-ST
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-st.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-st.owl
       module_type: mirror
     - id: schulart-TH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-th.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-th.owl
       module_type: mirror
 
 

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bf1cf9af7b423f865b2353fe9e86936080ddb40f5bce38c3ef1812a7bc59b2c9
+CONFIG_HASH=                a72f629ecc1f66bb1b5b29c4a5ed547d83a9bf5da1991bf598e831ab7458f761
 
 
 # ----------------------------------------
@@ -392,7 +392,7 @@ $(IMPORTSEED): $(PRESEED) | $(TMPDIR)
 
 T_IMPORTSEED = --term-file $(IMPORTSEED)
 
-ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 OMO:0002000 
+ANNOTATION_PROPERTIES=rdfs:label IAO:0000119 IAO:0000115 IAO:0000116 IAO:0000112 skos:definition skos:example skos:comment 
 
 # ----------------------------------------
 # Import modules
@@ -869,112 +869,112 @@ mirror-skos: | $(TMPDIR)
 .PHONY: mirror-schulart-BB
 .PRECIOUS: $(MIRRORDIR)/schulart-BB.owl
 mirror-schulart-BB: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bb.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-bb.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-BE
 .PHONY: mirror-schulart-BE
 .PRECIOUS: $(MIRRORDIR)/schulart-BE.owl
 mirror-schulart-BE: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-be.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-be.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-BW
 .PHONY: mirror-schulart-BW
 .PRECIOUS: $(MIRRORDIR)/schulart-BW.owl
 mirror-schulart-BW: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-bw.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-bw.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-BY
 .PHONY: mirror-schulart-BY
 .PRECIOUS: $(MIRRORDIR)/schulart-BY.owl
 mirror-schulart-BY: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-by.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-by.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-HB
 .PHONY: mirror-schulart-HB
 .PRECIOUS: $(MIRRORDIR)/schulart-HB.owl
 mirror-schulart-HB: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hb.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-hb.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-HE
 .PHONY: mirror-schulart-HE
 .PRECIOUS: $(MIRRORDIR)/schulart-HE.owl
 mirror-schulart-HE: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-he.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-he.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-HH
 .PHONY: mirror-schulart-HH
 .PRECIOUS: $(MIRRORDIR)/schulart-HH.owl
 mirror-schulart-HH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-hh.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-hh.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-MV
 .PHONY: mirror-schulart-MV
 .PRECIOUS: $(MIRRORDIR)/schulart-MV.owl
 mirror-schulart-MV: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-mv.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-mv.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-NI
 .PHONY: mirror-schulart-NI
 .PRECIOUS: $(MIRRORDIR)/schulart-NI.owl
 mirror-schulart-NI: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-ni.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-ni.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-NW
 .PHONY: mirror-schulart-NW
 .PRECIOUS: $(MIRRORDIR)/schulart-NW.owl
 mirror-schulart-NW: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-nw.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-nw.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-RP
 .PHONY: mirror-schulart-RP
 .PRECIOUS: $(MIRRORDIR)/schulart-RP.owl
 mirror-schulart-RP: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-rp.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-rp.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-SH
 .PHONY: mirror-schulart-SH
 .PRECIOUS: $(MIRRORDIR)/schulart-SH.owl
 mirror-schulart-SH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sh.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sh.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-SL
 .PHONY: mirror-schulart-SL
 .PRECIOUS: $(MIRRORDIR)/schulart-SL.owl
 mirror-schulart-SL: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sl.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sl.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-SN
 .PHONY: mirror-schulart-SN
 .PRECIOUS: $(MIRRORDIR)/schulart-SN.owl
 mirror-schulart-SN: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-sn.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-sn.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-ST
 .PHONY: mirror-schulart-ST
 .PRECIOUS: $(MIRRORDIR)/schulart-ST.owl
 mirror-schulart-ST: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-st.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-st.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulart-TH
 .PHONY: mirror-schulart-TH
 .PRECIOUS: $(MIRRORDIR)/schulart-TH.owl
 mirror-schulart-TH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/1.0.0/src/ontology/components/schools-th.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-th.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-BB
