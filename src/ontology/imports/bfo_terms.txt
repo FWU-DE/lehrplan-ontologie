@@ -1,11 +1,16 @@
-http://purl.obolibrary.org/obo/BFO_0000031
-http://purl.obolibrary.org/obo/BFO_0000030
-http://purl.obolibrary.org/obo/BFO_0000040
-http://purl.obolibrary.org/obo/BFO_0000034
-http://purl.obolibrary.org/obo/BFO_0000023
-http://purl.obolibrary.org/obo/BFO_0000015
-http://purl.obolibrary.org/obo/BFO_0000035
+http://purl.obolibrary.org/obo/BFO_0000031 # g.d.c.
+http://purl.obolibrary.org/obo/BFO_0000030 # object
+http://purl.obolibrary.org/obo/BFO_0000040 # material entity
+http://purl.obolibrary.org/obo/BFO_0000034 # function
+http://purl.obolibrary.org/obo/BFO_0000023 # role 
+http://purl.obolibrary.org/obo/BFO_0000015 # process
+http://purl.obolibrary.org/obo/BFO_0000035 # process boundary
 
 
-http://purl.obolibrary.org/obo/BFO_0000051
-http://purl.obolibrary.org/obo/BFO_0000050
+http://purl.obolibrary.org/obo/BFO_0000008 # temporal region
+http://purl.obolibrary.org/obo/BFO_0000203 # temporal instant
+http://purl.obolibrary.org/obo/BFO_0000202 # temporal interval
+http://purl.obolibrary.org/obo/BFO_0000108 # exists at
+http://purl.obolibrary.org/obo/BFO_0000224 # has last instant
+http://purl.obolibrary.org/obo/BFO_0000222 # has first instant
+http://purl.obolibrary.org/obo/BFO_0000199 # occupies temporal region
