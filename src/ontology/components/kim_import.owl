@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/imports/kim_import.owl#>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -7,9 +7,12 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl>
+<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>
 Annotation(rdfs:comment "This file contains externally imported content from the KIM vocabularies for Schulfächer, Schulabschlüsse, and Schularten for import into the Lehrplan Ontology (LPO).")
 
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#narrowMatch>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1000>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1001>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1002>))
@@ -57,6 +60,20 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1044>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1045>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1046>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1047>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1048>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1049>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1050>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1051>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1052>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1053>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1054>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1055>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1056>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1057>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1058>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1059>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1060>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1061>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a>))
@@ -79,414 +96,390 @@ Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s14>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s15>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s16>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#narrowMatch>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#related>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#topConceptOf>))
-Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral>))
-Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndIdentifier>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#closeMatch> (has close match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#closeMatch> "has close match"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#closeMatch> "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en)
+SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#exactMatch> (has exact match)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#exactMatch> "has exact match"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core#closeMatch>)
+SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>)
+TransitiveObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#narrowMatch> (has narrower match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#narrowMatch> "has narrower match"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#narrowMatch> "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en)
+
 
 
 ############################
 #   Named Individuals
 ############################
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/openeduhub/vocabs/discipline/20003>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/openeduhub/vocabs/discipline/080>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1001> "Biologie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/openeduhub/vocabs/discipline/100>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1002> "Chemie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1003> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1004> "Theater"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/openeduhub/vocabs/discipline/12002>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs/discipline/120>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1005> "Deutsch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1006> "DaZ"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs/discipline/12005>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs/discipline/20001>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1007> "Englisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1008> "Werte und Normen"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs/discipline/160>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1008> "Ethik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs/discipline/20002>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1009> "Französisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1010> "Erdkunde"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1010> "Geographie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/openeduhub/vocabs/discipline/220>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1010> "Geografie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/openeduhub/vocabs/discipline/20002>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1011> "Geschichte"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1012> "Gesundheitserziehung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/openeduhub/vocabs/discipline/260>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1013> "Informations- und Kommunikationstechnologie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/openeduhub/vocabs/discipline/320>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1013> "Informatik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs/discipline/20004>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1014> "Italienisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1015> "Bildende Kunst"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs/discipline/060>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1015> "Kunst"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/openeduhub/vocabs/discipline/20005>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1016> "Latein"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs/discipline/380>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1017> "Mathematik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1019> "Chemie, Physik, Biologie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1019> "Naturwissenschaften"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1019> "MINT"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1001>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1002>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1013>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1017>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#related> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1022>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs/discipline/420>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1020> "Musik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/openeduhub/vocabs/discipline/450>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1021> "Philosophie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/openeduhub/vocabs/discipline/460>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1022> "Physik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1023> "Politische Bildung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1023> "Sozialkunde"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/openeduhub/vocabs/discipline/480>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1023> "Politik"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1024> "Evangelischer Religionsunterricht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs/discipline/520>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1025> "Islamischer Religionsunterricht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs/discipline/520>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <http://w3id.org/kim/schulfaecher/s1025> "EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1026> "Katholischer Religionsunterricht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs/discipline/520>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs/discipline/20006>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1027> "Russisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1028> "Heimatunterricht"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1028> "Sachkunde"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/openeduhub/vocabs/discipline/28010>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/openeduhub/vocabs/discipline/560>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs/discipline/20007>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1030> "Spanisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs/discipline/600>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1031> "Sport"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs/discipline/20008>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1032> "Türkisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/openeduhub/vocabs/discipline/700>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1034> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1035> "Japanisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1035> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1036> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1037> "Polnisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1037> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1038> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1039> "Wendisch"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1039> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1040> "Astronomie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1040> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1041> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1042> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1043> "Psychologie"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1043> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1044> "Ernährung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1044> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1045> "Pädagogik"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1045> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1046> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (KIM))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/s1047> <http://w3id.org/kim/schulfaecher/>)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1048> (Arbeitslehre (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1048> "Arbeitslehre (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1048> "Arbeitswelt"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1048> "Arbeitslehre"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1049> (Berufs- und Studienorientierung (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1049> "Berufs- und Studienorientierung (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1049> "Beruf"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1049> "Berufliche Orientierung"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1049> "Studium und Beruf"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1049> "Berufs- und Studienorientierung"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1050> (Fremdsprachen (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1050> "Fremdsprachen (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1050> "Fortgeführte Fremdsprachen"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1050> "Moderne Fremdsprachen"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1050> "Fremdsprachen"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1051> (Herkunftssprachen (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1051> "Herkunftssprachen (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1051> "Herkunftssprachlicher Unterricht"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1051> "Herkunftssprachen"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1052> (Naturwissenschaften (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1052> "Naturwissenschaften (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1052> "Angewandte Naturwissenschaften"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1052> "Chemie, Physik, Biologie"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1052> "Naturwissenschaften"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1053> (Niederdeutsch (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1053> "Niederdeutsch (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1053> "Niederdeutsch"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1054> (Recht (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1054> "Recht (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1054> "Rechtskunde"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1054> "Recht"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1055> (Religion (konfessionslos) (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1055> "Religion (konfessionslos) (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1055> "Religion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1055> "Religion (konfessionslos)"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1056> (Religionslehre (alevitisch) (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1056> "Religionslehre (alevitisch) (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1056> "Alevitischer Religionsunterricht"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1056> "Religionslehre (alevitisch)"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1057> (Religionslehre (jüdisch) (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1057> "Religionslehre (jüdisch) (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1057> "Jüdischer Religionsunterricht"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1057> "Religionslehre (jüdisch)"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1058> (Sozialkunde (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1058> "Sozialkunde (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1058> "Soziales"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1058> "Sozialwissenschaft"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1058> "Sozialkunde"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1059> (Technik (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1059> "Technik (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1059> "Technik"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1060> (Textiles Gestalten (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1060> "Textiles Gestalten (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1060> "Textilgestaltung"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1060> "Textillehre"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1060> "Textiles Gestalten"@de)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1061> (Werken und Gestalten (KIM))
+
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1061> "Werken und Gestalten (KIM)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1061> "Gestalten"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1061> "Gestaltendes Werken"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1061> "Planen, Bauen und Gestalten"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1061> "Werken"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1061> "Werken und Gestalten"@de)
 
 # Individual: <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> (Fachgebundene Hochschulreife (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> "Fachgebundene Hochschulreife (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <http://www.wikidata.org/entity/Q1391140>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> "Fachgebundene Hochschulreife"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <https://d-nb.info/gnd/4160223-7>)
 
 # Individual: <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> (Mittlerer Schulabschluss (KIM))
 
@@ -494,211 +487,98 @@ AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/bb03cf93-e
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Qualifizierter Sekundarabschluss I"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Realschulabschluss"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Mittlerer Schulabschluss wird nach 10 Jahren erreicht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <http://www.wikidata.org/entity/Q1345057>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://d-nb.info/gnd/4170262-1>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Mittlerer Schulabschluss"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#gndIdentifier> <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "4170262-1")
 
 # Individual: <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> (Erster allgemeinbildender Schulabschluss (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster allgemeinbildender Schulabschluss (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Hauptschulabschluss"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <http://www.wikidata.org/entity/Q884856>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://d-nb.info/gnd/4130918-2>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster allgemeinbildender Schulabschluss"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#gndIdentifier> <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "4130918-2")
 
 # Individual: <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> (Ohne Schulabschluss (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> "Ohne Schulabschluss (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> "Ohne Schulabschluss"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> <https://w3id.org/kim/schulabschluesse/>)
 
 # Individual: <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> (Fachhochschulreife (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "Fachhochschulreife (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <http://www.wikidata.org/entity/Q1391297>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://d-nb.info/gnd/4395719-5>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "Fachhochschulreife"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#gndIdentifier> <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "4395719-5")
 
 # Individual: <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> (Allgemeine Hochschulreife (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Allgemeine Hochschulreife (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Abitur"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <http://www.wikidata.org/entity/Q708387>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://d-nb.info/gnd/4049194-8>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Allgemeine Hochschulreife"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://d-nb.info/gnd/4160223-7>)
-AnnotationAssertion(<https://d-nb.info/standards/elementset/gnd#gndIdentifier> <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "4049194-8")
 
 # Individual: <https://w3id.org/kim/schularten/s02> (Grundschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s02> "Grundschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s02> <http://w3id.org/kim/educationalLevel/level_1>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/isced-1997/level1>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/isced-2011/level1>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/1>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/4>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s02> "Grundschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s03> (Hauptschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s03> "Hauptschule (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s03> "Mittelschule"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s03> "Mittelstufenschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s03> "Hauptschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s04> (Realschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s04> "Realschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s04> "Realschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s05> (Gesamtschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s05> "Gesamtschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/11>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/12>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/13>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s05> "Gesamtschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s06> (Förderschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s06> "Förderschule (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s06> "Förderschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s06> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s07> (Oberschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s07> "Oberschule (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s07> "Oberschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s07> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s08> (Gymnasium (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s08> "Gymnasium (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/11>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/12>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/13>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s08> "Gymnasium"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s09> (Gemeinschaftsschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s09> "Gemeinschaftsschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s09> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/isced-2011/level3>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s09> "Gemeinschaftsschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s10> (Sekundarschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s10> "Sekundarschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#narrowMatch> <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s10> "Sekundarschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s11> (Berufsfachschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s11> "Berufsfachschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s11> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/isced-2011/level3>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s11> "Berufsfachschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s12> (Berufsschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s12> "Berufsschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s12> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/isced-2011/level3>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s12> "Berufsschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s13> (Fachoberschule (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s13> "Fachoberschule (KIM)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s13> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/isced-2011/level3>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s13> "Fachoberschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s14> (Berufliches Gymnasium (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s14> "Berufliches Gymnasium (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s14> "Fachgymnasium"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s14> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#closeMatch> <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/isced-2011/level3>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s14> "Berufliches Gymnasium"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/schularten/>)
 
 # Individual: <https://w3id.org/kim/schularten/s15> (Privat- und Ersatzschule (KIM))
 
@@ -707,14 +587,12 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s15> "Freie Schule"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s15> "Privatschule"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s15> "Privat- und Ersatzschule"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s15> <https://w3id.org/kim/schularten/>)
 
-# Individual: <https://w3id.org/kim/schularten/s16> (Abendgymnasium)
+# Individual: <https://w3id.org/kim/schularten/s16> (Abendgymnasium (KIM))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s16> "Abendgymnasium (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/kim/schularten/s16> "Kolleg"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/kim/schularten/s16> "Abendgymnasium"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/s16> <https://w3id.org/kim/schularten/>)
 
 
 )

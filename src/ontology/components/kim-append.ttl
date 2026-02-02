@@ -1,0 +1,8 @@
+<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty .
+
+<> a <http://www.w3.org/2002/07/owl#Ontology> .

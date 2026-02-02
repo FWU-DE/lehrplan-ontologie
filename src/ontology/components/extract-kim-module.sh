@@ -1,17 +1,17 @@
 # Note: For consistent results run with ROBOT v1.91 or higher
-#wget https://github.com/ontodev/robot/releases/download/v1.9.6/robot.jar
+wget https://github.com/ontodev/robot/releases/download/v1.9.6/robot.jar
 
 # Download 
 wget https://raw.githubusercontent.com/dini-ag-kim/schularten/refs/heads/main/schularten.ttl
 wget https://raw.githubusercontent.com/dini-ag-kim/schulfaecher/refs/heads/main/schulfaecher.ttl
 wget https://raw.githubusercontent.com/dini-ag-kim/schulabschluesse/refs/heads/main/schulabschluesse.ttl
 
-echo "<> a <http://www.w3.org/2002/07/owl#Ontology> ." >>  schularten.ttl
-echo "<> a <http://www.w3.org/2002/07/owl#Ontology> ." >>  schulfaecher.ttl
-echo "<> a <http://www.w3.org/2002/07/owl#Ontology> ." >>  schulabschluesse.ttl
+cat kim-append.ttl >>  schularten.ttl
+cat kim-append.ttl >>  schulfaecher.ttl
+cat kim-append.ttl >>  schulabschluesse.ttl
 
 # Extract the terms 
-java -jar robot.jar merge --input schularten.ttl  --input schulfaecher.ttl  --input schulabschluesse.ttl  extract --method TOP --term 'http://www.w3.org/2004/02/skos/core#Concept'  --output kim-extracted.ttl
+java -jar robot.jar merge --input ../imports/skos_import.owl --input schularten.ttl  --input schulfaecher.ttl  --input schulabschluesse.ttl  extract --method TOP --term 'http://www.w3.org/2004/02/skos/core#Concept' --term 'http://www.w3.org/2004/02/skos/core#closeMatch' --term 'http://www.w3.org/2004/02/skos/core#narrowMatch' remove --select "<http://w3id.org/openeduhub/vocabs/*>" remove --select "<https://d-nb.info/*>" remove --select "<http://www.wikidata.org/*>" remove --select "<https://w3id.org/kim/isced*>" remove --select "<http://w3id.org/kim/educationalLevel*>" --output kim-extracted.ttl
 
 # Create Extracted module and annotate with new ontology information
 java -jar robot.jar merge --input kim-extracted.ttl annotate --ontology-iri https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl --version-iri https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl --output kim-extracted.ttl
@@ -31,4 +31,5 @@ rm schularten.ttl
 rm schulfaecher.ttl
 rm schulabschluesse.ttl
 rm kim-extracted.ttl 
+rm robot.jar
 mv kim_import.ofn kim_import.owl
