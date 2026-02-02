@@ -6,7 +6,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl>
+Ontology(<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>
 <https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl>
 Annotation(rdfs:comment "This file contains externally imported content from the KIM vocabularies for Schulfächer, Schulabschlüsse, and Schularten for import into the Lehrplan Ontology (LPO).")
 

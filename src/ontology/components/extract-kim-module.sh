@@ -14,7 +14,7 @@ echo "<> a <http://www.w3.org/2002/07/owl#Ontology> ." >>  schulabschluesse.ttl
 java -jar robot.jar merge --input schularten.ttl  --input schulfaecher.ttl  --input schulabschluesse.ttl  extract --method TOP --term 'http://www.w3.org/2004/02/skos/core#Concept'  --output kim-extracted.ttl
 
 # Create Extracted module and annotate with new ontology information
-java -jar robot.jar merge --input kim-extracted.ttl annotate --ontology-iri https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl --version-iri https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl --output kim-extracted.ttl
+java -jar robot.jar merge --input kim-extracted.ttl annotate --ontology-iri https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl --version-iri https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl --output kim-extracted.ttl
 
 java -jar robot.jar remove --term "http://www.w3.org/2004/02/skos/core#Concept" --input kim-extracted.ttl --output kim-extracted.ttl
 
