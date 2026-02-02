@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c18ccf88fb081a31fbf16d5dabd17cb0409e886d07e20dad3a32355b3a3e3cbc
+CONFIG_HASH=                de55debcd04af5f5a52b332cc31060987c5a8991581b60c2db24c4601267b9cc
 
 
 # ----------------------------------------
@@ -421,6 +421,25 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 $(ANNOTATE_CONVERT_FILE)
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: ro (slme)
+$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/ro_terms.txt $(T_IMPORTSEED) \
+		         --copy-ontology-annotations true --force true \
+		         --individuals include \
+		         --method SUBSET \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term rdfs:label \
+		        --term IAO:0000115 \
+		        --term OMO:0002000 \
+		        --term-file $(IMPORTDIR)/ro_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri https://w3id.org/lehrplan/ontology \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: skos (slme)
 $(IMPORTDIR)/skos_import.owl: $(MIRRORDIR)/skos.owl $(IMPORTDIR)/skos_terms.txt $(IMPORTSEED) | all_robot_plugins
@@ -857,7 +876,8 @@ mirror-bfo: | $(TMPDIR)
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
 mirror-ro: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ro/core.owl -o $(TMPDIR)/$@.owl
+	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: skos

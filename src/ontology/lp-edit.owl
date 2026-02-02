@@ -8,6 +8,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<https://w3id.org/lehrplan/ontology/>
 Import(<https://w3id.org/lehrplan/ontology/lp/components/bfo-edit.owl>)
+Import(<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>)
 Import(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-BB.owl>)
 Import(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-BE-BB-shared.owl>)
 Import(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-BE.owl>)
