@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl#"
      xml:base="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl"
      xmlns:gnd="https://d-nb.info/standards/elementset/gnd#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -140,9 +141,10 @@
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:comment xml:lang="de">Ein Themenfeld ist eine textuelle Entität, die einen fachlichen, inhaltlichen oder konzeptuellen Bereich bezeichnet, dem eine Entität thematisch zugeordnet ist.</rdfs:comment>
         <rdfs:label xml:lang="de">Themenfeld</rdfs:label>
         <rdfs:label xml:lang="en">subject area</rdfs:label>
-        <skos:editorialNote>Themenfeld wird im Datendump im Zusammenhang mit Übung verwendet</skos:editorialNote>
+        <skos:editorialNote>Themenfeld wird Berlin/Brandenburg im Datendump im Zusammenhang mit Übung verwendet</skos:editorialNote>
     </owl:Class>
     
 
