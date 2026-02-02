@@ -7,11 +7,13 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/skos_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-01-26/imports/skos_import.owl>
-Annotation(owl:versionInfo "2026-01-26")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-02-02/imports/skos_import.owl>
+Annotation(owl:versionInfo "2026-02-02")
 
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#narrowMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#related>))
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#topConceptOf>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
@@ -92,6 +94,20 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www
 SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core#closeMatch>)
 SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>)
 TransitiveObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#narrowMatch> (has narrower match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#narrowMatch> "has narrower match"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#narrowMatch> "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#related> (has related)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#related> "skos:related is disjoint with skos:broaderTransitive"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#related> "has related"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#related> "Relates a concept to a concept with which there is an associative semantic relationship."@en)
+SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#related>)
 
 # Object Property: <http://www.w3.org/2004/02/skos/core#topConceptOf> (is top concept in scheme)
 
