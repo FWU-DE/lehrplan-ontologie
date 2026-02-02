@@ -7,3 +7,8 @@ http://purl.obolibrary.org/obo/BFO_0000051
 
 http://purl.obolibrary.org/obo/RO_0000056
 http://purl.obolibrary.org/obo/RO_0000057
+
+http://purl.obolibrary.org/obo/RO_0002233 # has input
+http://purl.obolibrary.org/obo/RO_0002352 # input of
+http://purl.obolibrary.org/obo/RO_0002353 # ouput of
+http://purl.obolibrary.org/obo/RO_0002234 # has output
