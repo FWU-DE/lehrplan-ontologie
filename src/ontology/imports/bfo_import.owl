@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/bfo_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-01-26/imports/bfo_import.owl>
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-02-24/imports/bfo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl>)
-Annotation(owl:versionInfo "2026-01-26")
+Annotation(owl:versionInfo "2026-02-24")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -26,13 +26,87 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000035>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000038>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000148>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000202>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000203>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000108>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000199>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000221>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000222>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000223>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000224>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/identifier>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000108> (exists at)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000108> "118-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000108> "exists at"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000108> "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000108> "First World War exists at 1914-1916; Mexico exists at January 1, 2000"@en)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000108> <http://purl.obolibrary.org/obo/BFO_0000001>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000108> <http://purl.obolibrary.org/obo/BFO_0000008>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000199> (occupies temporal region)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000199> "132-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000199> "occupies temporal region"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000199> "p occupies temporal region t =Def p is a process or process boundary & the spatiotemporal region occupied by p temporally projects onto t"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000199> "The Second World War occupies the temporal region September 1, 1939 - September 2, 1945"@en)
+FunctionalObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000199>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000199> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035>))
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000221> (first instant of)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000221> "268-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000221> "first instant of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000221> "t first instant of t' =Def t is a temporal instant & t' is a temporal region t' & t precedes all temporal parts of t' other than t"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000221> "An hour starting at midnight yesterday has first instant midnight yesterday"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000221> <http://purl.obolibrary.org/obo/BFO_0000222>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000221> <http://purl.obolibrary.org/obo/BFO_0000203>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000221> <http://purl.obolibrary.org/obo/BFO_0000008>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000222> (has first instant)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000222> "261-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000222> "has first instant"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000222> "t has first instant t' =Def t' first instant of t"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000222> "The first hour of a year has first instant midnight on December 31"@en)
+FunctionalObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000222>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000222> <http://purl.obolibrary.org/obo/BFO_0000008>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000222> <http://purl.obolibrary.org/obo/BFO_0000203>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000223> (last instant of)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000223> "269-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000223> "last instant of"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000223> "t last instant of t' =Def t is a temporal instant & t' is a temporal region & all temporal parts of t' other than t precede t"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000223> "Last midnight is the last instant of yesterday"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000223> <http://purl.obolibrary.org/obo/BFO_0000224>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000223> <http://purl.obolibrary.org/obo/BFO_0000203>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000223> <http://purl.obolibrary.org/obo/BFO_0000008>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000224> (has last instant)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000224> "215-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000224> "has last instant"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000224> "t has last instant t' =Def t' last instant of t"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000224> "The last hour of a year has last instant midnight December 31"@en)
+FunctionalObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000224>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000224> <http://purl.obolibrary.org/obo/BFO_0000008>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000224> <http://purl.obolibrary.org/obo/BFO_0000203>)
+
 
 
 ############################
@@ -167,6 +241,15 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://pur
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000035> "The boundary between the 2nd and 3rd year of your life"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000035> <http://purl.obolibrary.org/obo/BFO_0000003>)
 
+# Class: <http://purl.obolibrary.org/obo/BFO_0000038> (one-dimensional temporal region)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000038> "103-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000038> "one-dimensional temporal region"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000038> "(Elucidation) A one-dimensional temporal region is a temporal region that is a whole that has a temporal interval and zero or more temporal intervals and temporal instants as parts"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000038> "The temporal region during which a process occurs"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000038> <http://purl.obolibrary.org/obo/BFO_0000008>)
+DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000038> <http://purl.obolibrary.org/obo/BFO_0000148>)
+
 # Class: <http://purl.obolibrary.org/obo/BFO_0000040> (material entity)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000040> "019-BFO")
@@ -174,6 +257,31 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000040> "mat
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000040> "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000040> "A human being; the undetached arm of a human being; an aggregate of human beings"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000040> <http://purl.obolibrary.org/obo/BFO_0000004>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000148> (zero-dimensional temporal region)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000148> "102-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000148> "zero-dimensional temporal region"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000148> "(Elucidation) A zero-dimensional temporal region is a temporal region that is a whole consisting of one or more separated temporal instants as parts"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000148> "A temporal region that is occupied by a process boundary; the moment at which a finger is detached in an industrial accident"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000148> <http://purl.obolibrary.org/obo/BFO_0000008>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000202> (temporal interval)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000202> "155-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000202> "temporal interval"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000202> "(Elucidation) A temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000202> "The year 2018."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.obolibrary.org/obo/BFO_0000202> "A one-dimensional temporal region can include as parts not only temporal intervals but also temporal instants separated from other parts by gaps."@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000202> <http://purl.obolibrary.org/obo/BFO_0000038>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000203> (temporal instant)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/identifier> <http://purl.obolibrary.org/obo/BFO_0000203> "209-BFO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000203> "temporal instant"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000203> "(Elucidation) A temporal instant is a zero-dimensional temporal region that has no proper temporal part"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000203> "The millennium"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000203> <http://purl.obolibrary.org/obo/BFO_0000148>)
 
 
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/BFO_0000020> <http://purl.obolibrary.org/obo/BFO_0000031>)

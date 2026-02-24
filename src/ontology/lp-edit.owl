@@ -76,7 +76,6 @@ Annotation(<http://purl.org/dc/terms/title> "Curriculum Ontology"@en)
 Annotation(<http://purl.org/dc/terms/title> "Lehrplan Ontologie"@de)
 Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/FWU-DE/lehrplan-ontologie>)
 
-Declaration(Class(:LP_0000008))
 Declaration(Class(:LP_0000056))
 Declaration(Class(:LP_0000057))
 Declaration(NamedIndividual(:LP_0000046))

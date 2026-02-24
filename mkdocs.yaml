@@ -4,7 +4,7 @@ theme: mkdocs
 
 nav:
   - Welcome: index.md
-#  - Introduction: intro.md
+  - Introduction: introduction.md
 #  - Ontology: ontology.md
 #  - Patterns: patterns.md
 #  - Versions: versions.md

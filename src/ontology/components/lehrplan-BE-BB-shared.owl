@@ -87,7 +87,6 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000580"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="en">has niveau stage</rdfs:label>
         <rdfs:label xml:lang="de">hat Niveaustufe</rdfs:label>
     </owl:ObjectProperty>
@@ -150,15 +149,6 @@
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000443 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
-        <rdfs:label xml:lang="de">Niveaustufe (BE/BB)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -200,7 +190,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000464 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000464">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe A</rdfs:label>
     </owl:NamedIndividual>
     
@@ -209,7 +198,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000465 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000465">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe B</rdfs:label>
     </owl:NamedIndividual>
     
@@ -218,7 +206,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000466 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000466">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe C</rdfs:label>
     </owl:NamedIndividual>
     
@@ -227,7 +214,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000467 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000467">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe D</rdfs:label>
     </owl:NamedIndividual>
     
@@ -236,7 +222,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000468 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000468">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe E</rdfs:label>
     </owl:NamedIndividual>
     
@@ -245,7 +230,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000469 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000469">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe F</rdfs:label>
     </owl:NamedIndividual>
     
@@ -254,7 +238,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000470 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000470">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe G</rdfs:label>
     </owl:NamedIndividual>
     
@@ -263,7 +246,6 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000616 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:label xml:lang="de">Niveaustufe H</rdfs:label>
         <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
     </owl:NamedIndividual>

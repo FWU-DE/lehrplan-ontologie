@@ -86,7 +86,7 @@ ALL_ANNOTATIONS_AND_VERSION=--annotate-defined-by false \
 
 lp-land-%-full.owl: $(EDIT_PREPROCESSED)
 	$(ROBOT) remove --input $< --select imports --trim false \
-	merge --input components/bfo-edit.owl --input components/lehrplan-$*.owl --input imports/schulart-$*_import.owl --input imports/schulfach-$*_import.owl  \
+	merge --input components/bfo-edit.owl --input imports/ro_import.owl --input components/lehrplan-$*.owl --input imports/schulart-$*_import.owl --input imports/schulfach-$*_import.owl  \
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
