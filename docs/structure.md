@@ -9,7 +9,9 @@ Lehrplanwissen repräsentiern. -> was ist überhaupt ein lehrplan im ontolgische
 Core, einzele BL, full, BFO, Schulart/fach, ...
 
 ## Nachgenutzte Ontologien/Vokabulare
-### Die Schulfach- und die Schulart-Ontologie
+
+**Die Schulfach- und die Schulart-Ontologie**
+
 BFO, time ontology, relation ontology, information artefact ontology, SKOS, KIM
 
 ## Umgang mit den bundeslandspezifischen Elementen
