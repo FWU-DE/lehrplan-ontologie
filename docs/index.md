@@ -1,7 +1,8 @@
-# Lehrplan Ontology
+# Startseite - Lehrplan Ontologie
 
 **An Ontology for School Curricula in Germany**
 
+## Willkommen
 
 Welcome to the documentation page for our ontology of German curricula.
 
@@ -13,3 +14,4 @@ Further informations can also be found under https://mem.schule
 
 If you need further instructions, please contact the developers directly: redaktion@mem.schule 
 
+## Metadaten der Ontologie

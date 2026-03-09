@@ -3,14 +3,17 @@ site_name: Lehrplan Ontology
 theme: mkdocs
 
 nav:
-  - Welcome: index.md
-  - Introduction: introduction.md
-#  - Ontology: ontology.md
-#  - Patterns: patterns.md
+  - Einstieg: index.md
+  - Einführung: introduction.md
+  - Einführung in Ontologien: ontology.md
+  - Aufbau der Lehrplan Ontologie: structure.md
+  - Patterns: patterns.md
+  - Verwendung der Lehrplan Ontologie: usage.md
+  - Über uns: about.md
+
 #  - Versions: versions.md
 #  - Contributing: contributing.md
 #  - Contact: contact.md
-
 
 
 plugins:

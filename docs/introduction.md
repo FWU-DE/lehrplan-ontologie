@@ -1,11 +1,13 @@
-# Einführung
+# Einführung in die Lehrplan Ontologie
 
+## Was deckt die Lehrplan Ontologie ab?
 
-## test
+## Ausgangslage
 
-hallo welt
+## Ziele
 
----
+## Hauptmerkmale
 
-das ist ein *test123*
+## Anwendungen
 
+## Kompetenzfragen
