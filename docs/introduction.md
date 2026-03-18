@@ -1,13 +1,25 @@
 # Einführung in die Lehrplan Ontologie
 
-## Was deckt die Lehrplan Ontologie ab?
+## Was deckt die Lehrplan Ontologie ab? (Scope)
 
-Das Ziel der MEM-Ontologie ist eine Wissensrepräsentation für Lehrpläne (im weiteren Sinne) allgemeinbildender Schulen im primären und sekundären Bildungsbereich.
-Dies schließt Kerncurricula, Rahmenpläne, Bildungspläne, Fachlehrpläne, Rahmenlehrpläne, Curricula sowie Bildungs- und Erziehungspläne ein. Die Wissensrepräsentation bildet sowohl die fachlichen als auch die strukturellen Elemente der Lehrpläne ab. Dazu gehören die semantisch modellierten Kompetenz- und Inhaltsbeschreibungen sowie deren Einbettung in schulische Kontexte wie Jahrgangsstufen, Fächer, Schularten und Anforderungsniveaus. 
+### Ziel und Umfang der Wissensrepräsentation
+Die Ontologie dient der strukturierten Wissensrepräsentation von Lehrplänen im weiteren Sinne für allgemeinbildende Schulen im Primar- und Sekundarbereich. Dies schließt Kerncurricula, Rahmenpläne, Bildungspläne, Fachlehrpläne, Rahmenlehrpläne, Curricula sowie Bildungs- und Erziehungspläne ein. Die Wissensrepräsentation bildet sowohl die fachlichen als auch die strukturellen Elemente der Lehrpläne ab. Dazu gehören die semantisch modellierten Kompetenz- und Inhaltsbeschreibungen sowie deren Einbettung in schulische Kontexte wie Jahrgangsstufen, Fächer, Schularten und Anforderungsniveaus. 
+Zentrales Ziel ist es, die Inhalte dieser Lehrplandokumente formal abzubilden und dadurch eine einheitliche, maschinenlesbare Grundlage für Analyse-, Vergleichs- und Weiterverarbeitungsprozesse zu schaffen.
+### Inhaltliche Bestandteile
+Die Ontologie beschreibt unter anderem:
+- Kompetenzen, Operatoren und Bildungsstandards
+einschließlich ihrer Definitionen, Strukturierungen und Abhängigkeiten.
+- Bildungsziele
+als zentrale normative Vorgaben des jeweiligen Lehrplans.
+- Bezüge zu Jahrgangsstufen, Schulfächern sowie Schularten und -formen
+um curriculare Elemente eindeutig im schulischen Kontext zu verorten.
+- Relationen zu Bildungsinhalten
+wie Themenfeldern, Sachinhalten oder domänenspezifischem Wissen.
 
-Die Vorgaben und Beschlüsse der KMK wurden in die Ausarbeitung einbezogen und fachlich berücksichtigt; weiterführende Informationen dazu finden sich im Abschnitt “Integration der Bildungsstandards”.. Die Wissensrepräsentation wird sowohl übergreifendes Wissen als auch die Spezifika einzelner Bundesländer darstellen.
+Alle Beschreibungen orientieren sich an den bundesweit geltenden Beschlüssen der Kultusministerkonferenz (KMK), um eine möglichst hohe Anschlussfähigkeit und Vergleichbarkeit zu gewährleisten. Weiterführende Informationen dazu finden sich im Abschnitt “Integration der Bildungsstandards”.
+### Abdeckung von bundesweiten und länderspezifischen Besonderheiten
+Die Wissensrepräsentation bildet sowohl übergreifende, bundesweit gültige Strukturen ab als auch die Besonderheiten einzelner Bundesländer. Auf diese Weise erlaubt sie sowohl allgemeine Analysen als auch detaillierte Vergleiche und spezifische Auswertungen je nach länderspezifischen Regelungen.
 
-Die MEM-Ontologie bildet damit die Struktur aller Lehrpläne allgemeinbildender Schulen von Deutschland ab. In der Ontologie sind alle wesentlichen Bestandteile der Lehrpläne der jeweiligen Länder definiert. Zusätzlich wurde eine “Kern-Ontologie” entwickelt, die als Abstraktion aller Lehrpläne der Länder die Elemente enthält, die allen Bundesländern gemeinsam sind. Die Lehrpläne der Länder werden mit dieser Kern-Ontologie vernetzt, um sie vergleichbar zu machen und miteinander in Beziehung setzen zu können.
 
 ## Ausgangslage
 
