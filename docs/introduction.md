@@ -11,31 +11,23 @@ Die MEM-Ontologie bildet damit die Struktur aller Lehrpläne allgemeinbildender 
 
 ## Ausgangslage
 
-...
+Das deutsche Bildungssystem ist föderal organisiert. Die Gestaltung der schulischen Lehrpläne liegt in der Verantwortung der 16 Bundesländer, die jeweils eigene Fächerstrukturen, Terminologien und schulartspezifische Vorgaben entwickeln. Dadurch existiert eine große Vielfalt an Lehrplänen, die sich in Aufbau, Benennungen, Umfang und didaktischer Ausrichtung unterscheiden. 
+Diese Heterogenität erschwert die übergreifende Analyse und Vergleichbarkeit curricularer Daten erheblich. Hinzu kommt, dass der Digitalisierungsgrad der Lehrpläne stark variiert: Während einige Länder strukturierte digitale Daten bereitstellen, liegen in vielen Fällen nur PDF-Dokumente vor. Insgesamt verfügen derzeit sieben Bundesländer über systematisch digital aufbereitete Lehrplandaten. Für viele andere müssen Inhalte manuell extrahiert, interpretiert und in digitale Strukturen überführt werden. Die Ausgangslage ist somit geprägt von einer hohen inhaltlichen Vielfalt, begrenzter technischer Standardisierung und teilweise fehlender Maschinenlesbarkeit.
 
-## Ziele
 
-...
+## Ziele und Anwendungen
+
+Die Lehrplan-Ontologie zielt darauf ab, Lehrpläne aller Bundesländer in einer einheitlichen, maschinenlesbaren Struktur abzubilden. Durch die formale Modellierung zentraler curricularer Elemente entsteht ein gemeinsamer begrifflicher Rahmen, der die bundeslandspezifischen Unterschiede systematisch erfasst, harmonisiert und zugleich respektiert. Unterschiedliche Benennungen können so auf gemeinsame übergeordnete Konzepte abgebildet werden, ohne die Eigenheiten der jeweiligen Lehrpläne zu verlieren. Dadurch wird beispielsweise möglich, dass eine Kompetenz, die in Bundesland A anders benannt oder strukturiert ist als in Bundesland B, dennoch eindeutig erfasst und inhaltlich zugeordnet werden kann.
+Die Ontologie schafft damit die Grundlage dafür, Lehrplandaten interoperabel, vergleichbar und wiederverwendbar zu machen. Sie ermöglicht vielfältige Anwendungen im Bildungsbereich: von der Entwicklung digitaler Werkzeuge für Unterricht und Schulverwaltung über die Verknüpfung von Lehrplänen mit Lernmaterialien und Bildungsmedien bis hin zu datenbasierten Analysen und bundesweiten Übersichten über curriculare Anforderungen. So kann die Ontologie langfristig als Infrastruktur dienen, auf der innovative Bildungsservices aufbauen – etwa Empfehlungssysteme, automatische Zuordnungen von Bildungsinhalten oder digitale Recherche- und Vergleichstools für Lehrkräfte.
+
 
 ## Vorgehen
 
-Die entwickelte Ontologie teilt sich in eine Kern-Ontologie und in spezifische Ontologien für die jeweiligen Bundesländer auf. Die Lehrpläne wurden von Fachexpertinnen und -experten gesichtet und miteinander verglichen. Wesentliche Elemente, die in allen Lehrplänen vorkommen (bisweilen jedoch anders benannt werden), wurden identifiziert und definiert. Durch den Vergleich der Pläne miteinander wurden anschließend gemeinsame Elemente identifiziert, die als Abstraktion aller Lehrpläne in die Kern-Ontologie eingepflegt wurden.
+Die Ontologie wurde in einem iterativen, eng begleiteten Prozess entwickelt. Grundlage war eine systematische Sichtung und vergleichende Analyse der Lehrpläne aller Bundesländer durch Fachexpertinnen und Fachexperten. In mehreren Durchläufen wurden inhaltliche Bestandteile identifiziert, die in allen Lehrplänen vorkommen – auch wenn sie unterschiedliche Namen tragen oder unterschiedlich strukturiert sind. Diese Gemeinsamkeiten dienten als Ausgangspunkt für die Definition übergreifender Konzepte, die anschließend mit den bundeslandspezifischen Besonderheiten abgeglichen und ergänzt wurden.
+Ein zentraler Bestandteil des Vorgehens ist die kontinuierliche Zusammenarbeit mit einer Fachgruppe aus Lehrplanexpertinnen und Lehrplanexperten der Länder. Sie begleitet das Projekt fortlaufend, bringt fachliche Perspektiven ihrer Länder ein und unterstützt bei der Klärung inhaltlicher Fragen sowie bei der Einordnung relevanter curriculärer Strukturen. Der Austausch fand vor allem in den frühen Projektphasen in kurzen Abständen statt, um grundlegende Anforderungen und curricularen Unterschiede frühzeitig abzustimmen. Auch im weiteren Verlauf bleibt die Fachgruppe eine wesentliche beratende Instanz für Rückmeldungen, Diskussionen und fachliche Validierungen.
+Zusätzlich arbeitet das MEM-Team eng mit Ontologie-Expertinnen und -Experten der yovisto GmbH zusammen. In regelmäßigen gemeinsamen Arbeitssitzungen wurde die Modellierung schrittweise weiterentwickelt, verfeinert und mit technischen sowie wissenschaftlichen Best Practices abgestimmt. Die Zusammenarbeit gewährleistet, dass die Ontologie sowohl fachlich fundiert als auch technologisch robust und erweiterbar umgesetzt wird.
+Aufgrund der Komplexität und Vielfalt der Lehrplandaten wurde zu Beginn eine inhaltliche Fokussierung vorgenommen. In Abstimmung mit Schwesterprojekten des FWU konzentriert sich die erste Phase auf die Fächer Deutsch, Mathematik, Englisch und Physik. Diese dienen als Pilotbereich, um die Ontologie an realen Bildungsinhalten zu testen, zu verfeinern und für die folgenden Fächer sowie weitere Lehrplanstrukturen zu erweitern.
 
-Eine Fachgruppe, bestehend aus Lehrplanexpertinnen und Lehrplanexperten der Bundesländer, begleitet das MEM-Projekt fortlaufend als fachliche Beratungsinstanz. Die Zusammenarbeit erfolgt regelmäßig und umfasst sowohl gemeinsame Treffen aller verfügbaren Mitglieder als auch Einzelgespräche, wenn spezifische Fragen zu einzelnen Landeslehrplänen geklärt werden müssen.
-
-In den ersten Projektphasen fand der Austausch in einem besonders engen Rhythmus statt, um grundlegende Anforderungen, Unterschiede zwischen den Bildungssystemen der Länder und zentrale fachliche Fragen frühzeitig abzustimmen. Auch im weiteren Verlauf bleibt die Fachgruppe ein wichtiger Ansprechpunkt: Ihre Mitglieder bringen Erfahrungen aus der Lehrplanentwicklung ihrer jeweiligen Bundesländer ein und unterstützen das Projekt durch Rückmeldungen, Diskussionen und fachliche Einordnungen rund um Lehrpläne und bildungsstrukturelle Themen.
-
-Außerdem wird das MEM-Team durch Ontologie-Experten der yovisto GmbH unterstützt, die umfangreiche Erfahrung aus Forschungsprojekten im Bildungsbereich einbringen. Zu Beginn des Projekts fanden mehrmals pro Woche gemeinsame Arbeitstreffen statt, um die grundlegende Struktur der Ontologie zu entwickeln. Im weiteren Verlauf wurde der Rhythmus auf wöchentliche Treffen umgestellt, um die fortschreitende Modellierung zu begleiten und zielgerichtet weiterzuführen.
-
-Die Komplexität des Vorhabens erfordert eine inhaltliche Fokussierung. In Abstimmung mit Schwesterprojekten des FWU wird daher zunächst ein Schwerpunkt auf die Abbildung ausgewählter Unterrichtsfächer gelegt: Deutsch, Mathematik, Englisch und Physik, jeweils in Verbindung mit ihren entsprechenden Lehrplänen der Länder.
-
-## Hauptmerkmale
-
-...
-
-## Anwendungen
-
-...
 
 ## Kompetenzfragen
 
