@@ -7,14 +7,10 @@ Die Ontologie dient der strukturierten Wissensrepräsentation von Lehrplänen im
 Zentrales Ziel ist es, die Inhalte dieser Lehrplandokumente formal abzubilden und dadurch eine einheitliche, maschinenlesbare Grundlage für Analyse-, Vergleichs- und Weiterverarbeitungsprozesse zu schaffen.
 ### Inhaltliche Bestandteile
 Die Ontologie beschreibt unter anderem:
-- Kompetenzen, Operatoren und Bildungsstandards
-einschließlich ihrer Definitionen, Strukturierungen und Abhängigkeiten.
-- Bildungsziele
-als zentrale normative Vorgaben des jeweiligen Lehrplans.
-- Bezüge zu Jahrgangsstufen, Schulfächern sowie Schularten und -formen
-um curriculare Elemente eindeutig im schulischen Kontext zu verorten.
-- Relationen zu Bildungsinhalten
-wie Themenfeldern, Sachinhalten oder domänenspezifischem Wissen.
+- Kompetenzen, Operatoren und Bildungsstandards, einschließlich ihrer Definitionen, Strukturierungen und Abhängigkeiten.
+- Bildungsziele, als zentrale normative Vorgaben des jeweiligen Lehrplans.
+- Bezüge zu Jahrgangsstufen, Schulfächern sowie Schularten und -formen, um curriculare Elemente eindeutig im schulischen Kontext zu verorten.
+- Relationen zu Bildungsinhalten, wie Themenfeldern, Sachinhalten oder domänenspezifischem Wissen.
 
 Alle Beschreibungen orientieren sich an den bundesweit geltenden Beschlüssen der Kultusministerkonferenz (KMK), um eine möglichst hohe Anschlussfähigkeit und Vergleichbarkeit zu gewährleisten. Weiterführende Informationen dazu finden sich im Abschnitt “Integration der Bildungsstandards”.
 ### Abdeckung von bundesweiten und länderspezifischen Besonderheiten
