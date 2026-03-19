@@ -7,6 +7,7 @@ Die Ontologie dient der strukturierten Wissensrepräsentation von Lehrplänen im
 Zentrales Ziel ist es, die Inhalte dieser Lehrplandokumente formal abzubilden und dadurch eine einheitliche, maschinenlesbare Grundlage für Analyse-, Vergleichs- und Weiterverarbeitungsprozesse zu schaffen.
 ### Inhaltliche Bestandteile
 Die Ontologie beschreibt unter anderem:
+
 - Kompetenzen, Operatoren und Bildungsstandards, einschließlich ihrer Definitionen, Strukturierungen und Abhängigkeiten.
 - Bildungsziele, als zentrale normative Vorgaben des jeweiligen Lehrplans.
 - Bezüge zu Jahrgangsstufen, Schulfächern sowie Schularten und -formen, um curriculare Elemente eindeutig im schulischen Kontext zu verorten.
@@ -20,6 +21,7 @@ Die Wissensrepräsentation bildet sowohl übergreifende, bundesweit gültige Str
 ## Ausgangslage
 
 Das deutsche Bildungssystem ist föderal organisiert. Die Gestaltung der schulischen Lehrpläne liegt in der Verantwortung der 16 Bundesländer, die jeweils eigene Fächerstrukturen, Terminologien und schulartspezifische Vorgaben entwickeln. Dadurch existiert eine große Vielfalt an Lehrplänen, die sich in Aufbau, Benennungen, Umfang und didaktischer Ausrichtung unterscheiden. 
+
 Diese Heterogenität erschwert die übergreifende Analyse und Vergleichbarkeit curricularer Daten erheblich. Hinzu kommt, dass der Digitalisierungsgrad der Lehrpläne stark variiert: Während einige Länder strukturierte digitale Daten bereitstellen, liegen in vielen Fällen nur PDF-Dokumente vor. Insgesamt verfügen derzeit sieben Bundesländer über systematisch digital aufbereitete Lehrplandaten. Für viele andere müssen Inhalte manuell extrahiert, interpretiert und in digitale Strukturen überführt werden. Die Ausgangslage ist somit geprägt von einer hohen inhaltlichen Vielfalt, begrenzter technischer Standardisierung und teilweise fehlender Maschinenlesbarkeit.
 
 
