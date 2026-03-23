@@ -18,7 +18,7 @@ Das aktuelle "Arbeitsdokument" finden Sie hier: [Lehrplan-Ontologie MEM](https:/
 
 Weitere Informationen finden Sie auch unter https://mem.schule oder wenden Sie sich bitte direkt an die Entwickler: redaktion@mem.schule
 
-Die Dokumentation gliedert sich in folgende Abschnitte:
+Die Dokumentation soll sich in folgende Abschnitte gliedern:
 
 - Allgemeine Einführung in Ontologien
 	- Was ist eine Ontolgie überhaupt? 
@@ -44,7 +44,7 @@ Die Dokumentation gliedert sich in folgende Abschnitte:
  	- Verknüpfung mit Bildungsmedien
  	- Curriculum-Analyse
  	- Empfehlungssysteme
-- Datenquellen & Integration
+- Datenquellen & Integration	 
 - Governance & Weiterentwicklung 	
 - Technische Referenz (Reference Section)
 - Glossar & weiterführende Links
@@ -52,16 +52,16 @@ Die Dokumentation gliedert sich in folgende Abschnitte:
 
 
 
-
 ## Metadaten der Ontologie
 
 - Titel: Lehrplan Ontologie
-- Abkürzung: 
-- Namespace: https://w3id.org/lehrplan/ontology/
-- Sprache: OWL
-- Repository: https://github.com/FWU-DE/lehrplan-ontologie
-- Letzte Version:
+- Abkürzung: LP
+- Namespace: [https://w3id.org/lehrplan/ontology/](https://w3id.org/lehrplan/ontology/)
+- Sprache: [OWL](https://www.w3.org/TR/owl-features/)
+- Repository: [https://github.com/FWU-DE/lehrplan-ontologie](https://github.com/FWU-DE/lehrplan-ontologie)
+- Letzte Version: 1.0.0rc2
 - Ersteller: Jörg Waitelonis, Steffen Rörtgen, Cindy Bloes, Laura Junghanns
-- Verwandte Projekte:
-- Finanzierung: 
-- Lizenz:
+- Verwandte Projekte: 
+	- Schulfach Ontologie [https://github.com/FWU-DE/schulfach-ontologie](https://github.com/FWU-DE/schulfach-ontologie)
+	- Schularten Ontolgie [https://github.com/FWU-DE/schulart-ontologie](https://github.com/FWU-DE/schulart-ontologie)
+- Lizenz: 
