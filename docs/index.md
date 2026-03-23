@@ -1,28 +1,57 @@
-# Startseite - Lehrplan Ontologie
-
-**An Ontology for School Curricula in Germany**
+# Lehrplan Ontologie
 
 ***Eine Ontologie für Lehrpläne in Deutschland***
 
 ## Willkommen
 
-Welcome to the documentation page for our ontology of German curricula.
+Die **Lehrplan-Ontologie** ist eine **strukturierte** und **maschinenlesbare** **Wissensrepräsentation** **schulischer Lehrpläne** im Primar- und Sekundarbereich. Sie modelliert sowohl die inhaltlichen als auch die strukturellen Bestandteile curricularer Dokumente - darunter **Kompetenzen**, **Bildungsziele**, **Bildungsstandards** sowie deren Einbettung in **Fächer**, **Jahrgangsstufen** und **Schularten** – innerhalb eines einheitlichen semantischen Rahmens. Vor dem Hintergrund der föderalen Vielfalt des deutschen Bildungssystems harmonisiert die Ontologie unterschiedliche Terminologien und Lehrplanstrukturen, ohne länderspezifische Besonderheiten zu verlieren. Durch die Überführung heterogener Lehrplandaten in eine interoperable Wissensbasis schafft sie die Grundlage für Analyse, Vergleichbarkeit und die Entwicklung datenbasierter Bildungsanwendungen.
 
-*Willkommen auf der Dokumentationsseite zu unserer Ontologie zur Abbildung der Lehrpläne in Deutschland.*
+## Für wen ist diese Dokumentation
 
-This documentation is under development. 
+Diese Dokumentation richtet sich an alle Personen und Organisationen, die mit der Lehrplan-Ontologie arbeiten, sie verstehen oder weiterentwickeln möchten. Dazu gehören insbesondere **Entwicklerinnen und Entwickler**, die Anwendungen auf Basis der Ontologie erstellen oder **Lehrplandaten integrieren** möchten, ebenso wie **Forschende und Datenanalystinnen** und -analysten im Bildungsbereich, die curriculare Strukturen untersuchen oder vergleichen. Darüber hinaus richtet sich die Dokumentation an **Bildungsadministrationen**, **Fachredaktionen** sowie **Lehrplanexpertinnen und -experten**, die Einblick in die Modellierung curricularer Konzepte und deren semantische Abbildung erhalten möchten. Sie bietet sowohl eine fachliche Orientierung über die zugrunde liegenden Konzepte als auch technische Informationen zur Nutzung, Erweiterung und Integration der Ontologie in digitale Bildungsinfrastrukturen.
+
+## Struktur der Dokumentation
 
 *Diese Dokumentation befindet sich derzeit in der Entwicklung.*
 
-The current version can be found here in german: [Lehrplan-Ontologie MEM](https://docs.google.com/document/d/1DCpY4IY7yhbZpzofvyE67PlCpyZ-rKtpLFunX4DW5nM/edit?usp=sharing)
+Das aktuelle "Arbeitsdokument" finden Sie hier: [Lehrplan-Ontologie MEM](https://docs.google.com/document/d/1DCpY4IY7yhbZpzofvyE67PlCpyZ-rKtpLFunX4DW5nM/edit?usp=sharing)
 
-Further informations can also be found under https://mem.schule
+Weitere Informationen finden Sie auch unter https://mem.schule oder wenden Sie sich bitte direkt an die Entwickler: redaktion@mem.schule
 
-*Weitere Informationen finden Sie auch unter https://mem.schule*
+Die Dokumentation gliedert sich in folgende Abschnitte:
 
-If you need further instructions, please contact the developers directly: redaktion@mem.schule 
+- Allgemeine Einführung in Ontologien
+	- Was ist eine Ontolgie überhaupt? 
+- Konzeptuelle Grundlagen der Lehrplan Ontologie
+	- Fachliches Verständnis, Scope, Zentrale Begriffe, Abgrenzung
+- Ontologie-Modell
+	- Verständnis der Wissensstruktur
+ 	- Überblick über Klassen, Beziehungen, Hierarchien
+ 	- Design Prinzipien
+- Semantik & Modellierungsregeln
+ 	- Sicherung der Konsistenz
+ 	- Konventionen, Versionierung, 
+ 	- Mapping unterschiedlicher Terminologien der Länder 
+- Beispiele (Patterns)
+ 	- Konkrete Modellierung von Lehrplanelementen
+ 	- SPARQL-Beispiele
+- Nutzung der Ontologie
+ 	- Zugriff und Endpoints
+ 	- Release Management
+- Knowledge Graph
+- Anwendungsbeispiele
+ 	- Lehrplanvergleich zwischen Bundesländern
+ 	- Verknüpfung mit Bildungsmedien
+ 	- Curriculum-Analyse
+ 	- Empfehlungssysteme
+- Datenquellen & Integration
+- Governance & Weiterentwicklung 	
+- Technische Referenz (Reference Section)
+- Glossar & weiterführende Links
 
-*Wenn Sie weitere Anweisungen benötigen, wenden Sie sich bitte direkt an die Entwickler: redaktion@mem.schule*
+
+
+
 
 ## Metadaten der Ontologie
 
@@ -36,5 +65,3 @@ If you need further instructions, please contact the developers directly: redakt
 - Verwandte Projekte:
 - Finanzierung: 
 - Lizenz:
-
-test laura

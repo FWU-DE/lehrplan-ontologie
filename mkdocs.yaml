@@ -1,20 +1,72 @@
 site_name: Lehrplan Ontology
 #theme: readthedocs
-theme: mkdocs
+#theme: mkdocs
+theme:
+  name: material
+  logo: logo.png
+  favicon: logo.png
+  palette:
+    primary: custom
+#  font:
+#    text: Barlow
+  features:
+#    - navigation.tabs
+#    - navigation.sections
+    - navigation.path
 
 nav:
-  - Start: index.md
-  - Einführung: introduction.md
-  - Ontologien: ontology.md
-  - Aufbau: structure.md
+  - start: index.md
+#  - start: index.en.md
+
+  - Ontologien allgemein: ontology.md
+
+  - intro: introduction.md
+#  - intro: introduction.en.md
+
+  - structure: structure.md
+
   - Patterns: patterns.md
   - Verwendung: usage.md
+
   - Über uns: about.md
 
 #  - Versions: versions.md
 #  - Contributing: contributing.md
 #  - Contact: contact.md
 
-
 plugins:
   - d2
+  - search
+#  - privacy
+  - i18n:
+      default_language: 'de'
+      languages:
+        de: "Deutsch"
+        en: "English"
+      no_translation:
+        en: "This page isn't translated to English."
+        de: "Diese Seite wurde nicht auf Deutsch übersetzt."
+      translate_nav:
+        de:
+          start: "Start"
+          intro: "Einführung"
+          structure: "Aufbau"
+        en:
+          start: "Home"
+          intro: "Introduction"
+          structure: "Structure"
+
+extra_css:
+  - extra.css
+
+extra:
+  alternate:
+    - name: "Deutsch"
+      link: ""
+      lang: de
+
+    - name: "English"
+      link: "index.en/"
+      lang: en
+
+repo_url: https://github.com/FWU-DE/lehrplan-ontologie
