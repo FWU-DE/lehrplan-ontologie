@@ -165,7 +165,7 @@ Um Ontologien auch maschineninterpretierbar abzuspeichern werden überlicherweis
 
 ### RDF(S) – Die Basisstruktur 
 
-RDF (Resource Description Framework) ist ein Standard des W3C zur Repräsentation von Informationen im Web. RDF beschreibt Daten als Tripel: Subjekt – Prädikat – Objekt, z. B. „Max – istLehrkraft – SchuleA“. Damit lassen sich Fakten maschinenlesbar und universell identifizierbar darstellen. Üblicherweise werden die Teile eines Tripels durch einen IRI (International Resource Identifier) eindeutig gekennzeichnet, was Verwechslungen ausschließt und Interoperabilität zwischen verschiedenen Systemen unterstützt. Mehr Details zu RDF können in der [RDF-Spezifikation](https://www.w3.org/TR/rdf11-concepts/) gefunden werden.
+RDF (Resource Description Framework) ist ein Standard des World Wide Web Consortium (W3C) zur Repräsentation von Informationen im Web. RDF beschreibt Daten als Tripel: Subjekt – Prädikat – Objekt, z. B. „Max – istLehrkraft – SchuleA“. Damit lassen sich Fakten maschinenlesbar und universell identifizierbar darstellen. Üblicherweise werden die Teile eines Tripels durch einen IRI (International Resource Identifier) eindeutig gekennzeichnet, was Verwechslungen ausschließt und Interoperabilität zwischen verschiedenen Systemen unterstützt. Mehr Details zu RDF können in der [RDF-Spezifikation](https://www.w3.org/TR/rdf11-concepts/) gefunden werden.
 
 RDFS (RDF Schema) ist eine Erweiterung von RDF, die einfache Semantik und Struktur bereitstellt. Es definiert Klassen, Unterklassen, Eigenschaften und Hierarchien, also die grundlegende Organisation von Konzepten in RDF. RDFS legt damit die Basis, auf der komplexere Ontologien wie OWL aufbauen können.
 
@@ -176,20 +176,16 @@ RDFS = einfache Semantik/Schema für Klassen und Beziehungen
 
 ### OWL
 
-Die Web Ontology Language (OWL) ist ein international standardisierter Formalismus zur Modellierung von Wissen im Semantic Web. Sie wurde vom World Wide Web Consortium (W3C) entwickelt, um Daten nicht nur maschinenlesbar, sondern auch maschinenverständlich zu machen. OWL ermöglicht die formale Beschreibung von Konzepten, Beziehungen und logischen Regeln innerhalb einer Domäne und bildet damit die Grundlage für semantische Interoperabilität, automatisches Schlussfolgern und wissensbasierte Anwendungen.
+Die Web Ontology Language (OWL) ist ein international standardisierter Formalismus zur Modellierung von Wissen im Semantic Web. Sie wurde ebenfalls vom W3C entwickelt, um Daten nicht nur maschinenlesbar, sondern auch maschinenverständlich zu machen. OWL ermöglicht die formale Beschreibung von Konzepten, Beziehungen und logischen Regeln innerhalb einer Domäne und bildet damit die Grundlage für semantische Interoperabilität, automatisches Schlussfolgern und wissensbasierte Anwendungen.
 
 Ontologien können basierend auf verschiedenen Logiken entworfen werden, z.B. Prädikatenlogik erster Stufe (First-Order Logic, FOL), regelbasierte Logiken (Rule-Based Logics), Beschreibungslogiken (Description Logics, DL), Logikprogrammierung (z.B. Prolog), etc.. OWL nutzt bewusst Beschreibungslogiken als zugrunde liegende Logik, weil sie einen optimalen Kompromiss zwischen Ausdrucksstärke und Berechenbarkeit bietet. Ziel ist es, Wissen formell und maschinenverständlich zu modellieren, ohne dass automatisches Reasoning unentscheidbar oder unpraktikabel wird. Während die volle Prädikatenlogik theoretisch beliebig komplexe Zusammenhänge darstellen könnte, wäre das Schlussfolgern in dieser Logik im Allgemeinen nicht berechenbar. Beschreibungslogiken sind hingegen audrucksstark genug, um Klassenhierarchien, Relationen, Einschränkungen und Typisierungen präzise zu modellieren, aber gleichzeitig so strukturiert, dass Reasoner zuverlässig neue Fakten ableiten, Inkonsistenzen erkennen und Klassifikationen automatisch erstellen können.
 
 OWL folgt der Open World Assumption: Nur weil eine Information nicht vorliegt, bedeutet das nicht, dass sie falsch ist. Gleichzeitig ist das Schlußfolgern monoton, das heißt neue Informationen ändern bestehende Schlussfolgerungen nicht. Diese Eigenschaften machen OWL besonders geeignet für verteiltes, heterogenes Wissen. 
 
-OWL basiert auf RDF/RDFS. RDF (Resource Description Framework) ist ein Standard des W3C zur repräsentation von Informationen im Web. RDF beschreibt Daten als Tripel: Subjekt – Prädikat – Objekt, z.B. „Max – istLehrkraft – SchuleA“. Damit lassen sich Fakten maschinenlesbar und universell identifizierbar darstellen.
-
-RDFS (RDF Schema) ist eine Erweiterung von RDF, die einfache Semantik und Struktur bereitstellt. Es definiert Klassen, Unterklassen, Eigenschaften und Hierarchien, also die grundlegende Organisation von Konzepten in RDF. RDFS legt damit die Basis, auf der komplexere Ontologien wie OWL aufbauen können.
-
-Ein weiteres wichtiges Designprinzip von OWL ist die Modularität: Mit den OWL-2-Profilen EL, QL und RL lassen sich Ontologien je nach Anwendungsfall leichtgewichtig oder besonders ausdrucksstark gestalten. Die formale Natur von OWL sorgt zudem für Nachvollziehbarkeit, Governance und langfristige Stabilität: Aussagen sind überprüfbar, logisch konsistent und erklärbar, was besonders für Audits, rechtliche Anforderungen und nachhaltige Datenarchitekturen entscheidend ist.
+Ein weiteres wichtiges Designprinzip von OWL ist die Modularität: Mit den OWL-2-Profilen EL, QL und RL lassen sich Ontologien je nach Anwendungsfall leichtgewichtig oder besonders ausdrucksstark gestalten. 
 
 
----
+
 ---
 
 
