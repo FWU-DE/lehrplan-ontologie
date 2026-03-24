@@ -1,13 +1,13 @@
-# Einführung in Ontologien
+# Eine ganz kurze Einführung
 
 
 ## Was ist eine Ontologie?
 
-*Eine Ontologie ist eine formale, strukturierte Darstellung von Wissen innerhalb eines bestimmten Bereichs. Sie definiert Begriffe (Konzepte) und die Beziehungen zwischen ihnen, um eine gemeinsame, maschinenlesbare Bedeutung zu schaffen.*
+*Eine Ontologie ist eine formale, strukturierte Darstellung von Wissen innerhalb eines bestimmten Bereichs. Sie definiert Begriffe (Konzepte) und die Beziehungen zwischen ihnen, um eine gemeinsame, maschineninterpretierbare Bedeutung zu schaffen.*
 
 *Ontologien werden in der Informatik und KI genutzt, um Daten zu organisieren, zu verknüpfen und logisch zu verarbeiten. Sie bestehen aus Klassen (Kategorien), Eigenschaften (Attribute, Relationen) und Regeln, die festlegen, wie Konzepte miteinander in Verbindung stehen.*
 
-Eine Ontologie ist eine formal definierte logische Struktur, die Konzepte, Kategorien, Eigenschaften und Beziehungen innerhalb eines bestimmten wissenschaftlichen Bereichs unter Verwendung standardisierter Definitionen und Namenskonventionen darstellt. Ontologien bieten eine gemeinsame Sprache zur einheitlichen Beschreibung von Daten, wodurch Rohdaten einfacher organisiert, interpretiert und zwischen verschiedenen Experimenten, Datenbanken und Forschungsdisziplinen ausgetauscht werden können.
+Eine Ontologie ist eine formal definierte auf Logik basierende Struktur, die Konzepte, Kategorien, Eigenschaften und Beziehungen innerhalb eines bestimmten Wissensbereichs (Domäne) unter Verwendung standardisierter Definitionen, Namens- und Regelkonventionen darstellt. Ontologien bieten eine gemeinsame Sprache zur einheitlichen Beschreibung von Daten, wodurch Rohdaten einfacher organisiert, interpretiert und zwischen verschiedenen Experimenten, Datenbanken und Forschungsdisziplinen ausgetauscht werden können.
 
 Weiterlesen:
 
@@ -21,17 +21,145 @@ Guarino, Nicola, Daniel Oberle, und Steffen Staab. "What is an ontology?." Handb
 Ontologien sind für modernes Datenmanagement und Digitalisierung von entscheidender Bedeutung, da sie einen gemeinsamen konzeptionellen Rahmen bieten, der die Beziehungen zwischen Datenentitäten definiert und so die Interoperabilität und Konsistenz zwischen verschiedenen Systemen gewährleistet. Durch die Organisation von Daten anhand einer formalen Struktur erleichtern Ontologien die Integration, Suche und Analyse von Informationen und helfen Unternehmen dabei, rohe, heterogene Datensätze in kohärente digitale Wissensressourcen umzuwandeln. Sie unterstützen eine effektive Datenverwaltung, indem sie klare Definitionen, die Rückverfolgung von Datenherkunft und Qualitätskontrollen in digitalen Infrastrukturen ermöglichen. Im Kontext der digitalen Transformation fungieren Ontologien als universelle Sprache, die Daten, Systeme und Prozesse über Geschäftsbereiche hinweg verbindet, Silos abbaut und Automatisierung, fortschrittliche Analysen und KI-gesteuerte Entscheidungsfindung ermöglicht. Sie sind auch ein wesentlicher Bestandteil der Umsetzung der FAIR-Datenprinzipien (Findable, Accessible, Interoperable und Reusable), indem sie semantische Bedeutung direkt in Datenmodelle einbetten, was Transparenz, Reproduzierbarkeit und langfristige Datennachhaltigkeit fördert. Ohne Ontologien sehen sich Unternehmen mit fragmentierten Datenlandschaften konfrontiert, in denen digitale Informationen nicht effektiv wiederverwendet oder geteilt werden können, was die Zusammenarbeit und Innovation behindert.
 
 **Warum keine Datenbanken?** 
-*→ eher für effizientes Abspeichern, aber nicht für Wissen modellieren*
-...
+Im Gegensatz zu Datenbanken, die primär der strukturierten Speicherung und effizienten Abfrage von Daten dienen, modellieren Ontologien die semantische Bedeutung der enthaltenen Informationen. Datenbanken definieren, wie Daten organisiert sind (z. B. Tabellen und Attribute), während Ontologien zusätzlich festlegen, was die Daten bedeuten und wie Konzepte logisch miteinander verbunden sind. Diese Festlegung von Bedeutung erfolgt nach standardierten Methoden. Dadurch ermöglichen Ontologien maschinelles Schlussfolgern, Konsistenzprüfungen und semantische Interoperabilität zwischen Systemen.
 
-**Warum kein Metadaten Schema?**
-...
+**Warum keine Metadaten Schemata?**
+Ontologien unterscheiden sich von Metadaten-Schemata vor allem durch ihren Grad an Formalisierung und ihre semantische Ausdrucksstärke. Metadaten-Schemata beschreiben in erster Linie, welche Informationen über Daten erfasst werden sollen – etwa Autor, Erstellungsdatum oder Dateiformat – und legen dafür strukturierte Felder und Bezeichnungen fest. Sie standardisieren somit die Beschreibung von Daten, enthalten jedoch meist keine formale Logik über die Bedeutung oder Beziehungen der beschriebenen Konzepte. Ontologien gehen darüber hinaus, indem sie Begriffe, Klassen und Relationen explizit definieren und logisch verknüpfen, sodass Maschinen Zusammenhänge interpretieren, Schlussfolgerungen ziehen und Konsistenz automatisch prüfen können. Während Metadaten-Schemata also hauptsächlich der einheitlichen Dokumentation dienen, ermöglichen Ontologien ein semantisches Verständnis und inferenzbasierte Verarbeitung von Wissen.
 
-**Warum LLMs nicht ausreichen**
-...
+**Warum LLM-basierte Ansätze allein nicht ausreichen**
+Ontologien und darauf aufbauende Wissensgraphen modellieren Wissen **explizit** und **strukturiert**: Konzepte, Entitäten und ihre Beziehungen werden formal definiert und in einem überprüfbaren Netzwerk gespeichert. Dadurch sind die enthaltenen Aussagen nachvollziehbar, logisch prüfbar und über längere Zeit stabil reproduzierbar. Schlussfolgerungen entstehen durch regelbasierte oder logische Inferenzmechanismen, deren Ergebnisse deterministisch und erklärbar sind. 
+
+LLM-basierte Ansätze hingegen repräsentieren Wissen **implizit** in Form **statistischer Muster** innerhalb neuronaler Modelle. Sie erzeugen Antworten auf Basis von Wahrscheinlichkeiten und Kontextähnlichkeiten statt auf explizit gespeicherten Fakten oder formalen Regeln. Dadurch können sie flexibel mit unvollständigen, mehrdeutigen oder sprachlich variierenden Informationen umgehen und natürliche Sprache besonders gut verarbeiten. Allerdings fehlt ihnen eine garantierte Konsistenz, überprüfbare Wissensbasis oder langfristig stabile Referenzstruktur. Während Ontologien und Wissensgraphen daher vor allem für Governance, Nachvollziehbarkeit und interoperable Wissensintegration geeignet sind, spielen LLMs ihre Stärke in Interpretation, Exploration und sprachlicher Interaktion mit komplexen oder unscharfen Daten aus.
+
+Gleichzeitig können LLMs erheblich von Ontologien profitieren. Ontologien stellen eine strukturierte, verlässliche Wissensgrundlage bereit, die LLMs als Kontext oder Referenz nutzen können, um Begriffe eindeutig zu interpretieren, Halluzinationen zu reduzieren und konsistentere Antworten zu erzeugen. Durch die Verknüpfung mit Wissensgraphen können LLMs ihre sprachliche Flexibilität mit überprüfbaren Fakten kombinieren, etwa indem sie ontologisch definierte Konzepte für Retrieval, Klassifikation oder semantische Validierung verwenden. Ontologien fungieren damit als stabiler semantischer Anker, der probabilistische Sprachmodelle um erklärbares und governancefähiges Wissen ergänzt.
+
 
 ## Warum brauchen wir eine Ontologie für Lehrpläne?
-...
+
+Wir brauchen eine Ontologie für Lehrpläne, weil das deutsche Bildungssystem stark föderal organisiert ist und dadurch viele unterschiedliche, teilweise inkompatible Strukturen, Begriffe und Dokumentationsformen existieren. Eine Ontologie schafft hier ein gemeinsames semantisches Modell, das Lehrinhalte, Kompetenzen, Fächer, Jahrgangsstufen und Bildungsziele eindeutig beschreibt und miteinander verknüpft.
+
+Erstens ermöglicht sie **Vergleichbarkeit zwischen Bundesländern**. Obwohl ähnliche Kompetenzen vermittelt werden, verwenden Lehrpläne oft unterschiedliche Bezeichnungen, Strukturierungen oder Granularitäten. Eine Ontologie kann diese Unterschiede auf eine gemeinsame Bedeutungsebene abbilden und so nachvollziehbar machen, welche Lernziele in verschiedenen Ländern tatsächlich äquivalent sind.
+
+Zweitens verbessert sie die **Interoperabilität digitaler Bildungsplattformen**. Lernmanagementsysteme, Schulbuchplattformen, Prüfungsbanken oder Bildungsportale nutzen unterschiedliche Datenmodelle. Durch eine gemeinsame ontologische Grundlage können Inhalte automatisch ausgetauscht, wiederverwendet und systemübergreifend gefunden werden.
+
+Drittens unterstützt eine Lehrplan-Ontologie **intelligente Suche und Empfehlungssysteme**. Lernmaterialien lassen sich nicht nur nach Schlagworten, sondern nach Kompetenzen, Lernzielen oder curricularen Zusammenhängen finden. Beispielsweise kann ein System erkennen, dass ein Material zur „Bruchrechnung“ eine bestimmte mathematische Kompetenz adressiert, auch wenn dies sprachlich anders formuliert ist.
+
+Viertens schafft sie **Transparenz und Nachvollziehbarkeit** für Bildungssteuerung und Evaluation. Bildungsstandards, Prüfungsanforderungen und Lernressourcen können eindeutig miteinander verknüpft werden, was Analysen zur Kompetenzentwicklung oder curricularen Abdeckung erleichtert.
+
+Fünftens ist eine Ontologie eine wichtige Grundlage für den **sinnvollen Einsatz von KI im Bildungsbereich**. KI-Systeme – insbesondere LLMs – können Inhalte besser einordnen, klassifizieren oder generieren, wenn sie auf eine stabile, explizite Wissensstruktur zurückgreifen können, die pädagogische Begriffe eindeutig definiert.
+
+Eine Ontologie für Lehrpläne überführt heterogene curriculare Dokumente in eine gemeinsame, maschinenverständliche Wissensbasis. Sie reduziert föderale Fragmentierung, ermöglicht digitale Zusammenarbeit und schafft die Voraussetzung für interoperable, nachvollziehbare und zukunftsfähige Bildungsinfrastrukturen in Deutschland.
+
+
+
+
+## OWL-Ontolgien
+
+Die Web Ontology Language (OWL) ist ein international standardisierter Formalismus zur Modellierung von Wissen im Semantic Web. Sie wurde vom World Wide Web Consortium (W3C) entwickelt, um Daten nicht nur maschinenlesbar, sondern auch maschinenverständlich zu machen. OWL ermöglicht die formale Beschreibung von Konzepten, Beziehungen und logischen Regeln innerhalb einer Domäne und bildet damit die Grundlage für semantische Interoperabilität, automatisches Schlussfolgern und wissensbasierte Anwendungen.
+
+Ontologien können basierend auf verschiedenen Logiken entworfen werden, z.B. Prädikatenlogik erster Stufe (First-Order Logic, FOL), regelbasierte Logiken (Rule-Based Logics), Beschreibungslogiken (Description Logics, DL), Logikprogrammierung (z.B. Prolog), etc.. OWL nutzt bewusst Beschreibungslogiken als zugrunde liegende Logik, weil sie einen optimalen Kompromiss zwischen Ausdrucksstärke und Berechenbarkeit bietet. Ziel ist es, Wissen formell und maschinenverständlich zu modellieren, ohne dass automatisches Reasoning unentscheidbar oder unpraktikabel wird. Während die volle Prädikatenlogik theoretisch beliebig komplexe Zusammenhänge darstellen könnte, wäre das Schlussfolgern in dieser Logik im Allgemeinen nicht berechenbar. Beschreibungslogiken sind hingegen audrucksstark genug, um Klassenhierarchien, Relationen, Einschränkungen und Typisierungen präzise zu modellieren, aber gleichzeitig so strukturiert, dass Reasoner zuverlässig neue Fakten ableiten, Inkonsistenzen erkennen und Klassifikationen automatisch erstellen können.
+
+OWL folgt der Open World Assumption: Nur weil eine Information nicht vorliegt, bedeutet das nicht, dass sie falsch ist. Gleichzeitig ist das Schlußfolgern monoton, das heißt neue Informationen ändern bestehende Schlussfolgerungen nicht. Diese Eigenschaften machen OWL besonders geeignet für verteiltes, heterogenes Wissen. 
+
+OWL basiert auf RDF/RDFS. RDF (Resource Description Framework) ist ein Standard des W3C zur repräsentation von Informationen im Web. RDF beschreibt Daten als Tripel: Subjekt – Prädikat – Objekt, z.B. „Max – istLehrkraft – SchuleA“. Damit lassen sich Fakten maschinenlesbar und universell identifizierbar darstellen.
+
+RDFS (RDF Schema) ist eine Erweiterung von RDF, die einfache Semantik und Struktur bereitstellt. Es definiert Klassen, Unterklassen, Eigenschaften und Hierarchien, also die grundlegende Organisation von Konzepten in RDF. RDFS legt damit die Basis, auf der komplexere Ontologien wie OWL aufbauen können.
+
+Ein weiteres wichtiges Designprinzip von OWL ist die Modularität: Mit den OWL-2-Profilen EL, QL und RL lassen sich Ontologien je nach Anwendungsfall leichtgewichtig oder besonders ausdrucksstark gestalten. Die formale Natur von OWL sorgt zudem für Nachvollziehbarkeit, Governance und langfristige Stabilität: Aussagen sind überprüfbar, logisch konsistent und erklärbar, was besonders für Audits, rechtliche Anforderungen und nachhaltige Datenarchitekturen entscheidend ist.
+
+## Grundkonzepte
+
+OWL beschreibt Wissen mithilfe einiger zentraler Bausteine:
+
+#### 1. Klassen (Classes)
+
+Klassen repräsentieren allgemeine Konzepte oder Kategorien einer Domäne.
+
+Beispiele:
+
+* Person
+* Schule
+* Lehrplan
+* Kompetenz
+
+Klassen können hierarchisch organisiert werden (Subklassenbeziehungen):
+
+```
+Jede Lehrkraft ist eine Person.
+```
+
+#### 2. Individuen (Individuals)
+
+Individuen sind konkrete Instanzen von Klassen.
+
+Beispiele:
+
+```
+„Max Müller“ ist eine Instanz der Klasse Person.
+„Mathematik Klasse 7“ ist eine Instanz der Klasse Lehrplan.
+```
+#### 3. Eigenschaften (Properties)
+
+OWL unterscheidet zwei zentrale Typen:
+
+**Objekteigenschaften (Object Properties)**
+
+→ Beziehungen zwischen zwei Individuen
+
+```
+unterrichtet 
+hatTeil
+hatKompetenz
+```
+
+Dateneigenschaften (Datatype Properties)
+
+→ Verbindung zu Datentypwerten
+
+```
+hatName
+hatGeburtsdatum
+hatPunktzahl
+```
+
+#### 4. Axiome
+
+Axiome sind formale Aussagen über Klassen und Beziehungen. Sie bilden den logischen Kern einer Ontologie.
+
+Beispiele:
+
+```
+Jede Lehrkraft ist eine Person.
+Ein Kurs wird von mindestens einer Lehrkraft unterrichtet.
+Schüler und Lehrkraft sind disjunkte Klassen.
+```
+
+Diese Aussagen sind maschinell überprüfbar.
+
+### Schlusfolgern (Reasoning)
+
+Automatische Schlussfolgerungssysteme (Reasoner, Inference-Engines) können:
+
+* neue Fakten ableiten,
+* Klassifikationen automatisch berechnen,
+* Inkonsistenzen erkennen,
+* implizites Wissen explizit machen.
+
+Beispiel:
+
+Wenn definiert ist:
+
+```
+Jede Lehrkraft ist eine Person
+Anna ist eine Lehrkraft
+```
+
+→ kann ein Reasoner automatisch ableiten:
+
+```
+Anna ist eine Person.
+```
+
 
 ## Ontologieebenen 
 
@@ -47,6 +175,10 @@ Basierend auf dem Grad der Abstraktion und der formalen Ausdruckskraft werden On
 
 Warum ist das wichtig → Top-Down statt bottom up
 BFO/RO
+
+
+
+
 
 ## Ontologie Sprache
 

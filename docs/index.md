@@ -16,7 +16,7 @@ Diese Dokumentation richtet sich an alle Personen und Organisationen, die mit de
 
 Das aktuelle "Arbeitsdokument" finden Sie hier: [Lehrplan-Ontologie MEM](https://docs.google.com/document/d/1DCpY4IY7yhbZpzofvyE67PlCpyZ-rKtpLFunX4DW5nM/edit?usp=sharing)
 
-Weitere Informationen finden Sie auch unter https://mem.schule oder wenden Sie sich bitte direkt an die Entwickler: redaktion@mem.schule
+Weitere Informationen finden Sie auch unter [https://mem.schule](https://mem.schule) oder wenden Sie sich bitte direkt an die Entwickler: [redaktion@mem.schule](mailto:redaktion@mem.schule)
 
 Die Dokumentation soll sich in folgende Abschnitte gliedern:
 
@@ -27,26 +27,26 @@ Die Dokumentation soll sich in folgende Abschnitte gliedern:
 - Ontologie-Modell
 	- Verständnis der Wissensstruktur
  	- Überblick über Klassen, Beziehungen, Hierarchien
- 	- Design Prinzipien
-- Semantik & Modellierungsregeln
- 	- Sicherung der Konsistenz
- 	- Konventionen, Versionierung, 
+ 	- Design Prinzipien 
  	- Mapping unterschiedlicher Terminologien der Länder 
-- Beispiele (Patterns)
+- Beispiele / Patterns 
  	- Konkrete Modellierung von Lehrplanelementen
  	- SPARQL-Beispiele
 - Nutzung der Ontologie
- 	- Zugriff und Endpoints
- 	- Release Management
-- Knowledge Graph
-- Anwendungsbeispiele
+ 	- Release Artefakte
+- Anwendungsbeispiele / Use Cases
  	- Lehrplanvergleich zwischen Bundesländern
  	- Verknüpfung mit Bildungsmedien
  	- Curriculum-Analyse
  	- Empfehlungssysteme
-- Datenquellen & Integration	 
 - Governance & Weiterentwicklung 	
-- Technische Referenz (Reference Section)
+	- Konventionen, Versionierung
+	- Modellierungsregeln
+- Knowledge Graph
+	- Datenquellen & Integration 
+	- Zugriff und Endpoints
+- Technische Referenz 
+	- Widoco
 - Glossar & weiterführende Links
 
 
@@ -54,8 +54,8 @@ Die Dokumentation soll sich in folgende Abschnitte gliedern:
 
 ## Metadaten der Ontologie
 
-- Titel: Lehrplan Ontologie
-- Abkürzung: LP
+- Titel: **Lehrplan Ontologie**
+- Abkürzung: **LP**
 - Namespace: [https://w3id.org/lehrplan/ontology/](https://w3id.org/lehrplan/ontology/)
 - Sprache: [OWL](https://www.w3.org/TR/owl-features/)
 - Repository: [https://github.com/FWU-DE/lehrplan-ontologie](https://github.com/FWU-DE/lehrplan-ontologie)
