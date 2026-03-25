@@ -34,6 +34,11 @@ nav:
 #  - Contributing: contributing.md
 #  - Contact: contact.md
 
+markdown_extensions:
+  - attr_list
+  - pymdownx.superfences
+  - md_in_html
+
 plugins:
   - d2
   - search

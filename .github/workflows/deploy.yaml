@@ -18,6 +18,8 @@ jobs:
            curl -fsSL https://d2lang.com/install.sh | sh -s --
            pip install mkdocs-d2-plugin
            pip install mkdocs-i18n
+           pip install pymdown-extensions
+           pip install mkdocs-pymdownx-material-extras
            
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
            mkdir public
