@@ -3,12 +3,8 @@
 
 ## Was ist eine Ontologie?
 
-*Eine Ontologie ist eine formale, strukturierte Darstellung von Wissen innerhalb eines bestimmten Bereichs. Sie definiert Begriffe (Konzepte) und die Beziehungen zwischen ihnen, um eine gemeinsame, maschineninterpretierbare Bedeutung zu schaffen.*
-
-*Ontologien werden in der Informatik und KI genutzt, um Daten zu organisieren, zu verknüpfen und logisch zu verarbeiten. Sie bestehen aus Klassen (Kategorien), Eigenschaften (Attribute, Relationen) und Regeln, die festlegen, wie Konzepte miteinander in Verbindung stehen.*
-
-Eine Ontologie ist eine formal definierte auf Logik basierende Struktur, die Konzepte, Kategorien, Eigenschaften und Beziehungen innerhalb eines bestimmten Wissensbereichs (Domäne) unter Verwendung standardisierter Definitionen, Namens- und Regelkonventionen darstellt. Ontologien bieten eine gemeinsame Sprache zur einheitlichen Beschreibung von Daten, wodurch Rohdaten einfacher organisiert, interpretiert und zwischen verschiedenen Experimenten, Datenbanken und Forschungsdisziplinen ausgetauscht werden können.
-
+Eine Ontologie ist eine formal definierte, auf Logik basierende und strukturierte Darstellung von Wissen innerhalb eines bestimmten Fachbereichs (Domäne). Sie legt Begriffe bzw. Konzepte, Kategorien, Eigenschaften und die Beziehungen zwischen ihnen fest und nutzt dabei standardisierte Definitionen sowie Namens- und Regelkonventionen. Dadurch entsteht eine gemeinsame, maschineninterpretierbare Bedeutungsebene.
+In der Informatik und Künstlichen Intelligenz dienen Ontologien dazu, Daten systematisch zu organisieren, zu verknüpfen und logisch zu verarbeiten. Sie bestehen typischerweise aus Klassen (Kategorien), Eigenschaften (Attributen und Relationen) sowie Regeln, die bestimmen, wie Konzepte miteinander in Verbindung stehen. Durch diese einheitliche, formalisierte Sprache werden Rohdaten leichter beschreibbar, interpretierbar und austauschbar – sowohl zwischen verschiedenen Experimenten und Datenbanken als auch über Fachdisziplinen hinweg.
 
 ## Warum brauchen wir Ontologien?
 
