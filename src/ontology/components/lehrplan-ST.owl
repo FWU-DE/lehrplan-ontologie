@@ -167,14 +167,14 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030081> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030082> "Inhaltsbezogene Kompetenz (ST)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030082> "Inhaltliche mathematische Kompetenz (ST)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030082> "kommt vor in Priamr für die Fächer Englisch, Sachunterricht und Mathe (hier heißen sie \"inhaltliche mathematische Kompetenzen\")")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030082> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030082> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030083> (Prozessbezogene Kompetenz (ST))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030083> "Prozessbezogene Kompetenz (ST)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030083> "Allgemeine mathematische Kompetenz (ST)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030083> "kommt vor in Priamr für die Fächer Englisch, Sachunterricht und Mathe (hier heißen sie \"allgemeine mathematische Kompetenzen\")")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030083> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030083> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030085> (Sprachliches Mittel (ST))
 

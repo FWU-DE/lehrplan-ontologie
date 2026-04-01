@@ -243,13 +243,13 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030309> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030310> "Prozessbezogene Kompetenz (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030310> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030310> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030310> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030311> (Gegenstandsbereich (BY))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030311> "Gegenstandsbereich (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030311> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030311> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030311> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030331> (Übergreifendes Bildungs- und Erziehungsziel (BY))
 
