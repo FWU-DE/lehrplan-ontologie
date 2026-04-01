@@ -287,5 +287,4 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0001011> <https://w3id.org
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0030361> <https://w3id.org/lehrplan/ontology/LP_0030368>)
 
 
-SubClassOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectIntersectionOf(ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000032>))
 )
