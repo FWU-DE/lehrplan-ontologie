@@ -158,7 +158,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002229> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002230> "Leitidee (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002230> "Mathematik")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002230> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002230> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002232> (Kompetenzerwartung (SL))
 
@@ -302,7 +302,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030121> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030125> "Inhaltsbezogene Kompetenz (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030125> "mathematik")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030125> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030125> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030126> (Verfügung über sprachliche Mittel (SL))
 
@@ -475,7 +475,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030150> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030151> "Prozessbezogene Kompetenz (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030151> "Physik Gymnasium Sek I")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030151> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030151> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030152> (Hinweis zum sprachsensiblen Fachunterricht (SL))
 

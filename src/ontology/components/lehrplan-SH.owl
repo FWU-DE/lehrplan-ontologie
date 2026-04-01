@@ -217,7 +217,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030256> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030258> "Leitidee (SH)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030258> "Mathematische Leitidee (SH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030258> "Mathe Sek I")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030258> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030258> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030260> (Vorgabe und Hinweis (SH))
 
@@ -235,7 +235,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030270> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030271> "Inhaltsbezogene Kompetenz (SH)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030271> "NaWis und Mathe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030271> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030271> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030272> (Verbindlicher Inhalt (SH))
 
@@ -272,7 +272,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030276> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030278> (Prozessbezogene Kompetenz (SH))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030278> "Prozessbezogene Kompetenz (SH)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030278> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030278> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030279> (Verbindliches Thema und Inhalt (SH))
 

@@ -209,7 +209,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030235> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030235> "Prozessbezogene Kompetenz (HB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030235> "\"Prozessbezogene Anforderung\" in Sachunterricht Primar
 \"Prozessbezogene Kompetenz\" in Nawis Sek I und Mathe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030235> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030235> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030236> (Inhaltsbezogene Anforderung (HB))
 
@@ -217,7 +217,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030236> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030236> "Inhaltsbezogene Kompetenz (HB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030236> "\"Inhaltsbezogene Anforderung\" in Sachunterricht Primar
 \"Inhaltsbezogene Kompetenz\" in Nawis Sek I und Mathe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030236> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030236> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030238> (Rahmenthema (HB))
 

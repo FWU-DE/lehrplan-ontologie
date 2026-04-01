@@ -192,7 +192,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030048> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030054> "Leitidee (MV)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030054> "Mathe Primar")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030054> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030054> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030199> (Verweis auf Kompetenzbereich (MV))
 

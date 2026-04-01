@@ -215,7 +215,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030202> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030203> "Leitidee (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030203> "Inhaltsbezogener Kompetenzbereich (NI)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030203> "Mathematik")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030203> <https://w3id.org/lehrplan/ontology/LP_0002101>)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030203> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030204> (Methodenkompetenz (NI))
 
@@ -268,14 +268,14 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030212> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030213> "Prozessbezogene Kompetenz (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030213> "Naturwissenschaften")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030213> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030213> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000500>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030215> (Inhaltsbezogene Kompetenz (NI))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030215> "Inhaltsbezogene Kompetenz (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030215> "domänenspezifische Kompetenz (NI)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030215> "mathe, Naturwissenschaften. In Deutsch \"domänenspezifische Kompetenz\"")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030215> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030215> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030216> (Verweis auf Fachbezug (NI))
 
