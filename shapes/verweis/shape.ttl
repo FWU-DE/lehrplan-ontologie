@@ -5,10 +5,15 @@
 @prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
-#Verweis "ist verweis" von etwas und muss auf etwas verweisen.
+# Verweis "ist verweis" von etwas und muss auf etwas verweisen.
+#
+#
+
+@prefix verweis: <https://w3id.org/lehrplan/ontology/LP_0030065> .
+
 ex:VerweisShape
     a sh:NodeShape ;
-    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0030065> ; # "Verweis"
+    sh:targetClass  verweis: ; 
     sh:property [              
         sh:path [ sh:inversePath <https://w3id.org/lehrplan/ontology/LP_0030071> ] ;       # hat verweis
         sh:minCount 1 ;

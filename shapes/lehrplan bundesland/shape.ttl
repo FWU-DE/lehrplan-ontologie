@@ -9,13 +9,14 @@
 # Ein Lerplan ist immer mindestens einem Bundesland zugeordnet
 #
 
-ex:BereichShape
+@prefix lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix hat_bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+
+ex:LPBundeslandShape
     a sh:NodeShape ;
-    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000438> ;     # "Lehrplan"
+    sh:targetClass  lehrplan: ;    
     sh:property [              
-        sh:path <https://w3id.org/lehrplan/ontology/LP_0000029> ;       # hat bundesland
+        sh:path hat_bundesland: ;  
         sh:minCount 1 ;
     ] ;
-    
     .
- ###### add SHACL vocabulary ###### 
