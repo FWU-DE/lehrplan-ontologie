@@ -5,15 +5,16 @@
 @prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
-# textual entity ist immer 'über' etwas
+# a textual entity always is about something
+
+@prefix textual_entity: <http://purl.obolibrary.org/obo/IAO_0000300> .
+@prefix is_about: <http://purl.obolibrary.org/obo/IAO_0000136> .
 
 ex:TextualEntityShape
     a sh:NodeShape ;
-    sh:targetClass <http://purl.obolibrary.org/obo/IAO_0000300> ; # "Textual Entity"
-    sh:property [              # _:b0
-        sh:path <http://purl.obolibrary.org/obo/IAO_0000136> ;       # is about
+    sh:targetClass textual_entity:  ; 
+    sh:property [   
+        sh:path  is_about:  ; 
         sh:minCount 1 ;
     ] ;
-    
     .
- ###### add SHACL vocabulary ###### 

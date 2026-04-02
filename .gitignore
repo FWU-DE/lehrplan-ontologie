@@ -83,3 +83,5 @@ src/patterns/all_pattern_terms.txt
 /src/ontology/work
 
 d2.exe
+shapes/tmp/catalog-v001.xml
+/shapes/tmp

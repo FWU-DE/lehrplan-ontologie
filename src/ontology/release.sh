@@ -1,6 +1,6 @@
 
 
-VERSION=1.0.0rc2
+VERSION=1.0.0rc3
 PRIOR_VERSION=1.0.0rc2
 ONTBASE=https://w3id.org/lehrplan/ontology/
 ANNOTATE_ONTOLOGY_VERSION="annotate -V $ONTBASE$VERSION --annotation owl:versionInfo $VERSION"
@@ -25,7 +25,7 @@ sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE release-land-SL
 sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE release-land-SN
 sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE release-land-ST
 sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE release-land-TH
-sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE lp-ohne-land.owl
+#sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE lp-ohne-land.owl
 
 #sh run.sh make VERSION=$VERSION PRIOR_VERSION=$PRIOR_VERSION update-ontology-annotations
 sh run.sh make VERSION=$VERSION  update-ontology-annotations
@@ -35,4 +35,4 @@ sh run.sh make VERSION=$VERSION  update-ontology-annotations
 sh run.sh make refresh-imports
 
 ## generate the shacl shapes from the ontology
-#sh utils/generate-auto-shapes.sh
+sh utils/generate-auto-shapes.sh

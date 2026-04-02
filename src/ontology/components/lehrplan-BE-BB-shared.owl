@@ -160,6 +160,12 @@
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000032 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000032"/>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000437 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000437">
@@ -320,6 +326,49 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000047"/>
+                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000011"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000012"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000013"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000047"/>
+                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000046"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">

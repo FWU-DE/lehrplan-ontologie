@@ -15,9 +15,9 @@
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc2> ;
-                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc2, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-02-24" ;
+                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc3> ;
+                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology" ;
+                                       terms:created "2026-04-02" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -31,7 +31,7 @@
                                                    "Lehrplan Ontologie"@de ;
                                        doap:repository <https://github.com/FWU-DE/lehrplan-ontologie> ;
                                        owl:priorVersion <https://w3id.org/lehrplan/ontology/> ;
-                                       owl:versionInfo "1.0.0rc2" .
+                                       owl:versionInfo "1.0.0rc3" .
 
 #################################################################
 #    Annotation properties
@@ -285,9 +285,8 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000051
-obo:BFO_0000051 rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf obo:BFO_0000051 ;
-                rdf:type owl:TransitiveProperty ;
+obo:BFO_0000051 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
                 obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
                                 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
                                 "this year has part this day (occurrent parthood)"@en ;
@@ -796,10 +795,9 @@ ontology:LP_0000580 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000812
 ontology:LP_0000812 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:IAO_0000136 ,
-                                       [ owl:inverseOf ontology:LP_0000024
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
                                        ] ;
-                    rdfs:domain obo:IAO_0000030 ;
                     rdfs:range ontology:LP_0000111 ;
                     rdfs:label "for type of school"@en ,
                                "für Schulart"@de .
@@ -845,8 +843,8 @@ ontology:LP_0000840 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030051
 ontology:LP_0030051 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:IAO_0000136 ,
-                                       [ owl:inverseOf ontology:LP_0000024
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
                                        ] ;
                     rdfs:domain obo:IAO_0000030 ,
                                 [ rdf:type owl:Class ;
@@ -861,8 +859,8 @@ ontology:LP_0030051 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030056
 ontology:LP_0030056 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:IAO_0000136 ,
-                                       [ owl:inverseOf ontology:LP_0000024
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
                                        ] ;
                     rdfs:domain obo:IAO_0000030 ,
                                 [ rdf:type owl:Class ;
@@ -877,8 +875,8 @@ ontology:LP_0030056 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030057
 ontology:LP_0030057 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:IAO_0000136 ,
-                                       [ owl:inverseOf ontology:LP_0000024
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
                                        ] ;
                     rdfs:domain ontology:LP_0000261 ;
                     rdfs:range ontology:LP_0000347 ;
@@ -888,10 +886,9 @@ ontology:LP_0030057 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030071
 ontology:LP_0030071 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:IAO_0000136 ,
-                                       [ owl:inverseOf ontology:LP_0000024
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
                                        ] ;
-                    rdfs:domain obo:IAO_0000030 ;
                     rdfs:range ontology:LP_0030065 ;
                     rdfs:label "has reference"@en ,
                                "hat Verweis"@de .
@@ -2727,13 +2724,12 @@ Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sin
 ontology:LP_0000263 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000261
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty ontology:LP_0000024 ;
-                                                                 owl:someValuesFrom ontology:LP_0000346
+                                                                 owl:onProperty obo:BFO_0000050 ;
+                                                                 owl:someValuesFrom ontology:LP_0000349
                                                                ]
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                                                ] ;
-                                                                 owl:someValuesFrom ontology:LP_0000349
+                                                                 owl:onProperty ontology:LP_0000024 ;
+                                                                 owl:someValuesFrom ontology:LP_0000346
                                                                ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000483 ;
@@ -2744,13 +2740,12 @@ ontology:LP_0000263 rdf:type owl:Class ;
                                         ] ;
                     rdfs:subClassOf ontology:LP_0000261 ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty ontology:LP_0000024 ;
-                                      owl:someValuesFrom ontology:LP_0000346
+                                      owl:onProperty obo:BFO_0000050 ;
+                                      owl:someValuesFrom ontology:LP_0000349
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                     ] ;
-                                      owl:someValuesFrom ontology:LP_0000349
+                                      owl:onProperty ontology:LP_0000024 ;
+                                      owl:someValuesFrom ontology:LP_0000346
                                     ] ;
                     rdfs:comment """A “CE-Kompetenzspezifikation” is a “Curriculares Element” that describes a competence.
 It usually contains an operator and begins with “The students [...]” or “The learners [...]” for example.
@@ -2785,7 +2780,14 @@ While the \"Bildungsgangniveau\" describes the level of an entire educational tr
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000268
 ontology:LP_0000268 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0030263 ;
+                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0030263
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                     rdfs:label "Leitidee (Bista)"@de ;
                     skos:altLabel "Inhaltsbezogene Kompetenz (Bistas)" ;
                     skos:editorialNote "Kommt vor in den Bildungsstandards für das Fach Mathematik" .
@@ -6271,6 +6273,10 @@ ontology:LP_0002230 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -7260,6 +7266,10 @@ ontology:LP_0030054 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -7627,6 +7637,10 @@ ontology:LP_0030082 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -7641,6 +7655,10 @@ ontology:LP_0030083 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -8223,6 +8241,10 @@ ontology:LP_0030125 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -8633,6 +8655,10 @@ ontology:LP_0030151 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -9617,7 +9643,19 @@ ontology:LP_0030202 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030203
 ontology:LP_0030203 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0002101 ;
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000497
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                     rdfs:label "Leitidee (NI)"@de ;
                     skos:altLabel "Inhaltsbezogener Kompetenzbereich (NI)" ;
                     skos:editorialNote "Mathematik" .
@@ -9767,6 +9805,10 @@ ontology:LP_0030213 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -9794,6 +9836,10 @@ ontology:LP_0030215 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -10106,6 +10152,10 @@ ontology:LP_0030235 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -10121,6 +10171,10 @@ ontology:LP_0030236 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -10469,6 +10523,10 @@ ontology:LP_0030258 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -10553,14 +10611,28 @@ ontology:LP_0030263 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030264
 ontology:LP_0030264 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0030263 ;
+                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0030263
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0002171
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                     rdfs:label "Domänenspezifischer Kompetenzbereich (Bistas)"@de ;
                     skos:editorialNote "Kommt vor in den Bildungsstandards für das Fach Deutsch" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030265
 ontology:LP_0030265 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0030263 ;
+                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0030263
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                     rdfs:label "Prozessbezogener Kompetenzbereich (Bistas)"@de ;
                     skos:altLabel "Prozessbezogene Kompetenz (Bistas)" ;
                     skos:editorialNote "Kommt vor in den Bildungsstandards für die Fächer Deutsch und Mathematik" .
@@ -10649,6 +10721,10 @@ ontology:LP_0030271 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -10755,6 +10831,10 @@ ontology:LP_0030278 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -11184,6 +11264,10 @@ ontology:LP_0030310 rdf:type owl:Class ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
                                                            ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000500
+                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
@@ -11198,6 +11282,10 @@ ontology:LP_0030311 rdf:type owl:Class ;
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0000501
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class

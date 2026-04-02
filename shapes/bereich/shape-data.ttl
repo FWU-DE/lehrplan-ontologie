@@ -15,9 +15,13 @@
 #    Individuals
 #################################################################
 #
-# orphaned textual element (Beschreibung) 
+# diese Bereich ist  Teil von etwas anderem 
 #
 
-###  https://example.org/test/ce_elem_1
-<https://example.org/test/textual_elem_1> rdf:type owl:NamedIndividual , <https://w3id.org/lehrplan/ontology/LP_0030003>.
 
+<https://example.org/test/bereich_1> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/lehrplan/ontology/LP_0000349> 
+                                         .
+
+<https://example.org/test/something_1> rdf:type owl:NamedIndividual ;
+                                        <http://purl.obolibrary.org/obo/BFO_0000051> <https://example.org/test/bereich_1> .

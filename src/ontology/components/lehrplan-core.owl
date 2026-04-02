@@ -289,7 +289,7 @@ TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "beschreibt"@de)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about"@en)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (konkretisiert Lehrplan)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (concretizes curriculum)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000017> "concretizes curriculum"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000017> "konkretisiert Lehrplan"@de)
@@ -314,7 +314,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000026> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000026> "hat Jahrgangsstufe"@de)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000009>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (of federal state)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (von Bundesland)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000029> "of federal state"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000029> "von Bundesland"@de)
@@ -867,7 +867,7 @@ CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Gr
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "CE-Kompetenzspezifikation"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "competency specification"@en)
-EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000263> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000346>) ObjectSomeValuesFrom(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000051>) <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000263> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000346>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000265> (Fachniveau Sek II)
 
@@ -945,7 +945,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https:/
 - Stundenzahl
 - Jahrgangsstufe")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000349> <https://w3id.org/lehrplan/ontology/LP_0000261>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000438> (Lehrplan)
 
@@ -1118,7 +1117,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000809> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000809> "school"@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000809> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000808> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000475>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000810> (Schulklasse)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000810> (school class)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000810> "A school class is an organizationally defined group of students, usually belonging to the same grade level, who are taught together over a defined period of time."@en)
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000810> "Eine Schulklasse ist eine organisatorisch festgelegte Lerngruppe von Schülerinnen und Schülern, die in der Regel derselben Jahrgangsstufe angehören und über einen bestimmten Zeitraum gemeinsam unterrichtet werden."@de)
@@ -1141,7 +1140,6 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000813>
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschule track"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000813> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000834>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000813> <https://w3id.org/lehrplan/ontology/LP_0000816>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000814> (Realschule track)
 
@@ -1157,7 +1155,6 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000814>
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschule track"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000814> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000832>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000814> <https://w3id.org/lehrplan/ontology/LP_0000816>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000815> (Gymnasialer Bildungsgang)
 
@@ -1175,7 +1172,6 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000815>
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasialer Bildungsgang"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasium track"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000815> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000835>))))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000815> <https://w3id.org/lehrplan/ontology/LP_0000816>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000816> (Bildungsgang)
 
@@ -1243,7 +1239,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000845> "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000845> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000852> (note)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000852> (CE-Hinweis)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000852> "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
 - practical or methodological recommendations
@@ -1365,7 +1361,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https:/
 - Querschnittsthema
 - Weiteres Thema")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030325> <https://w3id.org/lehrplan/ontology/LP_0000261>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030335> (Weiteres Thema (Bistas))
 
@@ -1820,7 +1815,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000001> "1.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (class level 2)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (Jahrgangsstufe 2)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000002> "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "Jahrgangsstufe 2"@de)
@@ -1828,7 +1823,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000002> "2.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000003> (class level 3)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000003> (Jahrgangsstufe 3)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000003> "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000003> "Jahrgangsstufe 3"@de)
@@ -1876,7 +1871,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000008> "8.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (class level 9)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (Jahrgangsstufe 9)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000009> "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000009> "Jahrgangsstufe 9"@de)
@@ -1892,7 +1887,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000010> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_2000010> "10.Klasse"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000010>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000011> (Jahrgangsstufe 11)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000011> (class level 11)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000011> "11"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000011> "Jahrgangsstufe 11"@de)
@@ -2004,7 +1999,6 @@ SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000001> <https://w3id.org/lehrplan/ontology/LP_2000002> <https://w3id.org/lehrplan/ontology/LP_2000003> <https://w3id.org/lehrplan/ontology/LP_2000004> <https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_3000048> <https://w3id.org/lehrplan/ontology/LP_3000057>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000036>))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006> <https://w3id.org/lehrplan/ontology/LP_2000007> <https://w3id.org/lehrplan/ontology/LP_2000008> <https://w3id.org/lehrplan/ontology/LP_2000009> <https://w3id.org/lehrplan/ontology/LP_2000010>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000054>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000045>))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000007> <https://w3id.org/lehrplan/ontology/LP_2000008> <https://w3id.org/lehrplan/ontology/LP_2000009> <https://w3id.org/lehrplan/ontology/LP_2000010>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_3000048> <https://w3id.org/lehrplan/ontology/LP_3000057>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000045>))
-SubClassOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000011> <https://w3id.org/lehrplan/ontology/LP_2000012> <https://w3id.org/lehrplan/ontology/LP_2000013>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000046>))
 DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_0000006> <https://w3id.org/lehrplan/ontology/LP_0000007> <https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_0000010> <https://w3id.org/lehrplan/ontology/LP_0000011> <https://w3id.org/lehrplan/ontology/LP_0000012> <https://w3id.org/lehrplan/ontology/LP_0000013> <https://w3id.org/lehrplan/ontology/LP_0000019> <https://w3id.org/lehrplan/ontology/LP_0000037> <https://w3id.org/lehrplan/ontology/LP_0000111> <https://w3id.org/lehrplan/ontology/LP_0000261> <https://w3id.org/lehrplan/ontology/LP_0000438> <https://w3id.org/lehrplan/ontology/LP_0000478> <https://w3id.org/lehrplan/ontology/LP_0000540> <https://w3id.org/lehrplan/ontology/LP_0000571> <https://w3id.org/lehrplan/ontology/LP_0000808> <https://w3id.org/lehrplan/ontology/LP_0000816>)
 DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_0000020>)
 DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000002> <https://w3id.org/lehrplan/ontology/LP_0000004> <https://w3id.org/lehrplan/ontology/LP_0000005>)
