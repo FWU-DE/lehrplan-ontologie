@@ -275,9 +275,8 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000051
-obo:BFO_0000051 rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf obo:BFO_0000051 ;
-                rdf:type owl:TransitiveProperty ;
+obo:BFO_0000051 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
                 obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
                                 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
                                 "this year has part this day (occurrent parthood)"@en ;

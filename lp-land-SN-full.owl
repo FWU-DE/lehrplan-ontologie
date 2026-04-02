@@ -577,7 +577,6 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Parthood requires the part 
 A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."@en)
 AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
 AnnotationAssertion(rdfs:label obo:BFO_0000051 "hat Teil"@de)
-SubObjectPropertyOf(obo:BFO_0000051 obo:BFO_0000051)
 TransitiveObjectProperty(obo:BFO_0000051)
 
 # Object Property: obo:BFO_0000108 (exists at)
@@ -744,7 +743,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0002353 "inverse of has output")
 AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
 SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
 
-# Object Property: ontology:LP_0000017 (concretizes curriculum)
+# Object Property: ontology:LP_0000017 (konkretisiert Lehrplan)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "concretizes curriculum"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "konkretisiert Lehrplan"@de)
@@ -772,7 +771,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000026 "hat Jahrgangsstufe"@de)
 SubObjectPropertyOf(ontology:LP_0000026 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000026 ontology:LP_0000009)
 
-# Object Property: ontology:LP_0000029 (von Bundesland)
+# Object Property: ontology:LP_0000029 (of federal state)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "of federal state"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "von Bundesland"@de)
@@ -2138,7 +2137,7 @@ AnnotationAssertion(skos:definition ontology:LP_0000845 "Die Progresssion ist Te
 AnnotationAssertion(skos:example ontology:LP_0000845 "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de)
 SubClassOf(ontology:LP_0000845 obo:IAO_0000030)
 
-# Class: ontology:LP_0000852 (CE-Hinweis)
+# Class: ontology:LP_0000852 (note)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000852 "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
 - practical or methodological recommendations
@@ -2989,7 +2988,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0030374 "Grundschulniveau (SN)"@de)
 ClassAssertion(ontology:LP_0001032 ontology:LP_0030374)
 ClassAssertion(ontology:LP_0030361 ontology:LP_0030374)
 
-# Individual: ontology:LP_2000001 (Jahrgangsstufe 1)
+# Individual: ontology:LP_2000001 (class level 1)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000001 "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "Jahrgangsstufe 1"@de)
@@ -3029,7 +3028,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000005 "class level 5"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000005 "5.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000005)
 
-# Individual: ontology:LP_2000006 (class level 6)
+# Individual: ontology:LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000006 "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000006 "Jahrgangsstufe 6"@de)
@@ -3053,7 +3052,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000008 "class level 8"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000008 "8.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000008)
 
-# Individual: ontology:LP_2000009 (class level 9)
+# Individual: ontology:LP_2000009 (Jahrgangsstufe 9)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000009 "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000009 "Jahrgangsstufe 9"@de)
@@ -3085,7 +3084,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000012 "class level 12"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000012 "12.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000012)
 
-# Individual: ontology:LP_2000013 (Jahrgangsstufe 13)
+# Individual: ontology:LP_2000013 (class level 13)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000013 "13"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000013 "Jahrgangsstufe 13"@de)

@@ -370,7 +370,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>

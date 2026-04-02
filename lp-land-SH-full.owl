@@ -577,7 +577,6 @@ AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000051 "Parthood requires the part 
 A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."@en)
 AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
 AnnotationAssertion(rdfs:label obo:BFO_0000051 "hat Teil"@de)
-SubObjectPropertyOf(obo:BFO_0000051 obo:BFO_0000051)
 TransitiveObjectProperty(obo:BFO_0000051)
 
 # Object Property: obo:BFO_0000108 (exists at)
@@ -744,7 +743,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0002353 "inverse of has output")
 AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
 SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
 
-# Object Property: ontology:LP_0000017 (konkretisiert Lehrplan)
+# Object Property: ontology:LP_0000017 (concretizes curriculum)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "concretizes curriculum"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "konkretisiert Lehrplan"@de)
@@ -772,7 +771,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000026 "hat Jahrgangsstufe"@de)
 SubObjectPropertyOf(ontology:LP_0000026 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000026 ontology:LP_0000009)
 
-# Object Property: ontology:LP_0000029 (of federal state)
+# Object Property: ontology:LP_0000029 (von Bundesland)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "of federal state"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "von Bundesland"@de)
@@ -3119,7 +3118,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000002 "class level 2"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000002 "2.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000002)
 
-# Individual: ontology:LP_2000003 (Jahrgangsstufe 3)
+# Individual: ontology:LP_2000003 (class level 3)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000003 "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000003 "Jahrgangsstufe 3"@de)
@@ -3127,7 +3126,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000003 "class level 3"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000003 "3.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000003)
 
-# Individual: ontology:LP_2000004 (Jahrgangsstufe 4)
+# Individual: ontology:LP_2000004 (class level 4)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000004 "4"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000004 "Jahrgangsstufe 4"@de)
@@ -3159,7 +3158,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000007 "class level 7"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000007 "7.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000007)
 
-# Individual: ontology:LP_2000008 (Jahrgangsstufe 8)
+# Individual: ontology:LP_2000008 (class level 8)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000008 "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000008 "Jahrgangsstufe 8"@de)
@@ -3167,7 +3166,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000008 "class level 8"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000008 "8.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000008)
 
-# Individual: ontology:LP_2000009 (Jahrgangsstufe 9)
+# Individual: ontology:LP_2000009 (class level 9)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000009 "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000009 "Jahrgangsstufe 9"@de)
@@ -3175,7 +3174,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000009 "class level 9"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000009 "9.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000009)
 
-# Individual: ontology:LP_2000010 (class level 10)
+# Individual: ontology:LP_2000010 (Jahrgangsstufe 10)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000010 "10"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000010 "Jahrgangsstufe 10"@de)
@@ -3199,7 +3198,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000012 "class level 12"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000012 "12.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000012)
 
-# Individual: ontology:LP_2000013 (Jahrgangsstufe 13)
+# Individual: ontology:LP_2000013 (class level 13)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000013 "13"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000013 "Jahrgangsstufe 13"@de)
