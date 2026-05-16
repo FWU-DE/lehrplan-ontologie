@@ -124,6 +124,7 @@ Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030056>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030057>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030071>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030072>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0070001>))
 Declaration(DataProperty(<http://www.w3.org/2006/time#inXSDDateTimeStamp>))
 Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000344>))
 Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000460>))
@@ -453,6 +454,18 @@ ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0030071> <https://w3i
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030072> "refers to"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030072> "verweist auf"@de)
 ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030065>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0070001> (didactically requires)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0070001> "Diese Relation modelliert eine fachlich-didaktische Voraussetzung zwischen curricularen Elementen. Sie ist keine allgemeine Verweisrelation: Ein CE-Verweis kann einen Bezug herstellen, während eine didaktische Voraussetzung ausdrückt, dass das Ziel-Element in einem begründeten Lernpfad vor dem Ausgangs-Element beherrscht werden sollte."@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0070001> "This relation models a subject-specific didactic prerequisite between curricular elements. It is not a general reference relation: a CE reference can establish a relation, while a didactic prerequisite states that the target element should be mastered before approaching the source element in a justified learning path."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0070001> "didactically requires"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0070001> "setzt didaktisch voraus"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0070001> "Relates one curricular element to another curricular element that should be mastered first in order to approach the source element in a didactically justified learning path."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0070001> "Verknüpft ein curriculares Element mit einem anderen curricularen Element, das zuerst beherrscht werden sollte, um das Ausgangselement in einem didaktisch begründeten Lernpfad zu bearbeiten."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0070001> "Motivated by curriculum-bound AI learning guidance use cases in which the next learning step must be derived from explicit learning-goal prerequisites rather than from generic curriculum references."@en)
+ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0070001> <https://w3id.org/lehrplan/ontology/LP_0000261>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0070001> <https://w3id.org/lehrplan/ontology/LP_0000261>)
 
 
 ############################

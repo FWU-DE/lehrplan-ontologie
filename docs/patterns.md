@@ -594,6 +594,50 @@ CE-Kompetenzspezifikation 1 -> CE-Hinweis 2: hat Teil {
 
 ## Pattern 16 - Der Lernprozess
 
+## Pattern 17 - Lernzielgraph: umfasst und setzt didaktisch voraus
+
+Dieses Pattern beschreibt einen maschinenlesbaren Lernzielgraphen, wie er für lehrplangebundene KI-Lernbegleitung benötigt wird. Die KI-Komponente kann erklären und Feedback geben; die Entscheidung über sichtbare Lernziele und nächste sinnvolle Schritte soll jedoch aus der curricularen Struktur ableitbar bleiben.
+
+Der fachliche Treiber ist: Der nächste Lernschritt muss aus nachvollziehbaren curricularen Vorgaben begründbar bleiben. Eine Anwendung soll also nicht nur einen Lehrplanbezug kennen, sondern aus expliziten curricularen Relationen ableiten können, warum ein bestimmtes Ziel jetzt sinnvoll ist.
+
+Zwei Relationen sind dafür zentral:
+
+- `setzt didaktisch voraus`: fachlich-didaktische Voraussetzung für einen begründeten Lernpfad.
+- `hat Teil`: nur dann für Lernziel-Komposition, wenn das Unterziel semantisch ein echter curricularer Teil des übergeordneten Ziels oder Zielclusters ist.
+
+`setzt didaktisch voraus` ist nicht gleichbedeutend mit `CE-Verweis`. Ein `CE-Verweis` kann einen allgemeinen curricularen Bezug ausdrücken. Eine didaktische Voraussetzung hat dagegen eine operative Bedeutung für Lernnavigation: Das Ziel der Relation sollte beherrscht werden, bevor das Ausgangselement als nächster Lernschritt empfohlen wird.
+
+`hat Teil` darf für Lernziel-Komposition nur verwendet werden, wenn die Teil-Ganzes-Semantik wirklich stimmt. Es sollte nicht für bloße Darstellung in einer View, Sortierung, lose thematische Nähe, Reihenfolge oder Bundesland-Sichtbarkeit verwendet werden. Für solche Fälle sind eigene View-, Mapping- oder Ordnungsrelationen erforderlich.
+
+Ein anwendungsseitiges Lernziel ist nicht automatisch eine `Kompetenz` oder eine `CE-Kompetenzspezifikation`. Wenn ein Lernziel eine curriculare Beschreibung einer erwarteten Fähigkeit ist, kann `CE-Kompetenzspezifikation` passen. Wenn es Unterziele unter einem gemeinsamen curricularen Fokus bündelt, kann `CE-Bereich` passen. Reine Übungs-, Prüfungs-, Lernkarten-, Orientierungs- oder View-Knoten sollten nicht ohne weitere semantische Prüfung als Kompetenzspezifikationen modelliert werden.
+
+Beispiel in Turtle:
+
+```turtle
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ex: <https://example.org/curriculum/> .
+
+ex:lineare_funktionen
+  a lp:LP_0000349 ;
+  obo:BFO_0000051 ex:steigung_deuten ;
+  obo:BFO_0000051 ex:geradengleichung_bestimmen .
+
+ex:geradengleichung_bestimmen
+  a lp:LP_0000263 ;
+  lp:LP_0070001 ex:steigung_deuten .
+```
+
+Interpretation:
+
+- Das Themen- oder Zielbündel `lineare_funktionen` hat die Unterziele `steigung_deuten` und `geradengleichung_bestimmen` als curriculare Teile.
+- Das Ziel `geradengleichung_bestimmen` setzt `steigung_deuten` didaktisch voraus.
+- Eine Anwendung kann daraus einen nächsten Lernschritt ableiten, ohne dass die KI selbst die curriculare Reihenfolge erfindet.
+
+Offene Modellierungsfrage:
+
+Falls die Ontologie für curriculare Lernziel-Komposition eine spezifischere Relation als `BFO_0000051` benötigt, sollte diese erst nach Klärung der fachlichen Teil-Ganzes-Semantik eingeführt werden.
+
 
 # SPARQL-Abfragen
 
@@ -672,4 +716,4 @@ WHERE {
 }
 ```
 
-## 
+##
