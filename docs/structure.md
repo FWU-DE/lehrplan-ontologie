@@ -50,6 +50,8 @@ Die Ontologie verwendet eine Mischung aus **BFO-Properties** (Basic Formal Ontol
 
 Ergänzt wird dies durch **Schulartfunktion** (`LP_0000475`) und **Funktionsspezifikation** (`LP_0000478`) mit Subklassen Strukturierungsfunktion, Beschreibungsfunktion, Bezugsfunktionen und Niveauspezifikationsfunktion – ein Mechanismus, mit dem jedem curricularen Element explizit angegeben wird, welche Rolle es im Lehrplan spielt (z.B. ob es strukturiert, beschreibt, auf etwas verweist oder ein Niveau spezifiziert).
 
+Weitere Informationen zur Struktur und Modellierung der Lehrplan-Ontologie befinden sich im Kapitel [Beispiele](https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/).
+
 
 ## Modellierung / Designprinzip
 
@@ -461,7 +463,7 @@ Hierarchische Übersicht:
         - Zeitspezifikation
     - Unit 
 
-Genaue **Definitionen** der einzelnen Klassen sind zu finden unter: https://fwu-de.github.io/lehrplan-ontologie/index-de.html. 
+Genaue **Definitionen** der einzelnen Klassen sind [hier](https://fwu-de.github.io/lehrplan-ontologie/index-de.html) zu finden. 
 
 ### Instanzen (individuals)
 

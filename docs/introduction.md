@@ -37,26 +37,3 @@ Die Ontologie wurde in einem iterativen, eng begleiteten Prozess entwickelt. Gru
 Ein zentraler Bestandteil des Vorgehens ist die kontinuierliche Zusammenarbeit mit einer Fachgruppe aus Lehrplanexpertinnen und Lehrplanexperten der Länder. Sie begleitet das Projekt fortlaufend, bringt fachliche Perspektiven ihrer Länder ein und unterstützt bei der Klärung inhaltlicher Fragen sowie bei der Einordnung relevanter curriculärer Strukturen. Der Austausch fand vor allem in den frühen Projektphasen in kurzen Abständen statt, um grundlegende Anforderungen und curricularen Unterschiede frühzeitig abzustimmen. Auch im weiteren Verlauf bleibt die Fachgruppe eine wesentliche beratende Instanz für Rückmeldungen, Diskussionen und fachliche Validierungen.
 Zusätzlich arbeitet das MEM-Team eng mit Ontologie-Expertinnen und -Experten der yovisto GmbH zusammen. In regelmäßigen gemeinsamen Arbeitssitzungen wurde die Modellierung schrittweise weiterentwickelt, verfeinert und mit technischen sowie wissenschaftlichen Best Practices abgestimmt. Die Zusammenarbeit gewährleistet, dass die Ontologie sowohl fachlich fundiert als auch technologisch robust und erweiterbar umgesetzt wird.
 Aufgrund der Komplexität und Vielfalt der Lehrplandaten wurde zu Beginn eine inhaltliche Fokussierung vorgenommen. In Abstimmung mit Schwesterprojekten des FWU konzentriert sich die erste Phase auf die Fächer Deutsch, Mathematik, Englisch und Physik. Diese dienen als Pilotbereich, um die Ontologie an realen Bildungsinhalten zu testen, zu verfeinern und für die folgenden Fächer sowie weitere Lehrplanstrukturen zu erweitern.
-
-
-## Kompetenzfragen
-
-*	Welche Verknüpfung besteht zwischen Element X und Element Y?
-*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarlan?
-*	Wie hängen die Niveaustufen in Berlin/Brandenburg mit den Jahrgangsstufen zusammen?
-*	Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?
-*	Welcher Bereich aus Hamburg entspricht einem Element aus Bremen?
-*	Anhand welcher Lerninhalte kann ich eine Kompetenz erlernen?
-*	Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?
-*	Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?
-*	In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?
-*	Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?
-*	Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.
-*	Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.
-*	Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.
-*	Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.
-*	Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.
-*	Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.
-*	Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.
-*	Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.
-*	Ich möchte abbilden, welche Kompetenzen in Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.

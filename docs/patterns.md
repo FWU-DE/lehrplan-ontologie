@@ -1,8 +1,39 @@
 # Beispiele / Patterns
 
-*Notiz: (Kompetenzfragen -> patterns auf Miroboard) (vllt zusammenführen mit Besonderheiten)*
+Bei der Entwicklung und Nutzung von Ontologien spielen **Anwendungsmuster** eine entscheidende Rolle bei der Bewältigung wiederkehrender Modellierungsanforderungen. Diese Muster bieten standardisierte, wiederverwendbare semantische Bausteine, die eine konsistente Darstellung der Beziehungen zwischen Instanzen und Entitäten ermöglichen. Darüber hinaus können solche Muster zur Erstellung von SHACL-Shapes verwendet werden, um Einschränkungen in eine Wissensrepräsentation einzubinden. Durch die Befolgung von Anwendungsmustern können Ontologie-Anwender und -Entwickler Einheitlichkeit, Klarheit und Wiederverwendbarkeit in ihren Modellen gewährleisten.
 
-Pro Pattern: Bild, RDF-daten, Beschreibung	
+Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewendet werden. Jedes Muster enthält eine Visualisierung, eine Erläuterung und die RDF Daten.
+
+**Legende für Visualisierungen:**
+
+```d2
+BFO Klassen: {
+  style: {
+    font-color: white
+    opacity: 2
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Lehrplan Klassen: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Instanzen: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+```
+
 
 ## Pattern 1 - Lehrplan eines Bundeslandes
 
@@ -34,9 +65,10 @@ Oberschule: {
 
 Lehrplan (SN): {
   style: {
-    stroke: "#9F0E21"
-    stroke-width: 5
-    font-color: "#9F0E21"
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
   }
 }
 
@@ -56,16 +88,15 @@ Mathematik: {
   }
 }
 
-Lehrplan: {
+"ex:Lehrplan": {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
-Lehrplan -> Lehrplan (SN): rdf:type {
+"ex:Lehrplan" -> Lehrplan (SN): rdf:type {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -73,7 +104,7 @@ Lehrplan -> Lehrplan (SN): rdf:type {
   }
 }
 
-Lehrplan -> Lehrplan Oberschule Mathematik: hat Titel {
+"ex:Lehrplan" -> Lehrplan Oberschule Mathematik: hat Titel {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -81,7 +112,7 @@ Lehrplan -> Lehrplan Oberschule Mathematik: hat Titel {
   }
 }
 
-Lehrplan -> Sachsen: von Bundesland {
+"ex:Lehrplan" -> Sachsen: von Bundesland {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -89,7 +120,7 @@ Lehrplan -> Sachsen: von Bundesland {
   }
 }
 
-Lehrplan -> Mathematik: hat Schulfach {
+"ex:Lehrplan" -> Mathematik: hat Schulfach {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -97,7 +128,7 @@ Lehrplan -> Mathematik: hat Schulfach {
   }
 }
 
-Lehrplan -> Oberschule: für Schulart {
+"ex:Lehrplan" -> Oberschule: für Schulart {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -105,7 +136,7 @@ Lehrplan -> Oberschule: für Schulart {
   }
 }
 
-Lehrplan -> Sekundarbereich I: hat Schulstufe {
+"ex:Lehrplan" -> Sekundarbereich I: hat Schulstufe {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -114,6 +145,14 @@ Lehrplan -> Sekundarbereich I: hat Schulstufe {
 }
 
 ```
+
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
 
 ## Pattern 2 - Titel, Beschreibung und Identifikationsnummer
 
@@ -127,12 +166,11 @@ Bildungsplan Sekundarstufe I - Deutsch: {
   }
 }
 
-Fragment_xy: {
+"ex:Fragment": {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
@@ -144,7 +182,15 @@ Prozessbezogene Kompetenzen: {
   }
 }
 
-Bereich_xy: {
+"ex:Bereich": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsplan (BW): {
   style: {
     font-color: white
     opacity: 1
@@ -153,22 +199,14 @@ Bereich_xy: {
   }
 }
 
-Bildungsplan (BW): {
-  style: {
-    stroke: "#9F0E21"
-    stroke-width: 5
-    font-color: "#9F0E21"
-  }
-}
-
 Lehrplanfragment (BW): {
   style: {
-    stroke: "#9F0E21"
-    stroke-width: 5
-    font-color: "#9F0E21"
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
   }
 }
-
 Sprechen und Zuhören: {
   style: {
     stroke: "#9F0E21"
@@ -193,7 +231,115 @@ Sprechen und Zuhören: {
   }
 }
 
-Lehrplan_xy: {
+"ex:Lehrplan": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lehrplan" -> Bildungsplan (BW): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lehrplan" -> "ex:Fragment": hat Teil {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lehrplan" -> Bildungsplan Sekundarstufe I - Deutsch: hat Titel {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Fragment" -> "ex:Bereich": hat Teil {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Fragment" -> Lehrplanfragment (BW): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Fragment" -> Prozessbezogene Kompetenzen: hat Titel {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Bereich" -> Sprechen und Zuhören: hat Titel {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Bereich" -> "2.1": hat Nummer {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Bereich" -> "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ...": hat Beschreibung {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 3 - Schulfach und Schulfachbezug
+
+```d2
+
+"ex:Lehrplan": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Fachbezug_Englisch_als_Erstsprache": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Schulfach: {
   style: {
     font-color: white
     opacity: 1
@@ -202,7 +348,42 @@ Lehrplan_xy: {
   }
 }
 
-Lehrplan_xy -> Bildungsplan (BW): rdf:type {
+Fremdsprachenfach: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Schulfachbezug: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+erste Fremdsprache: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Englisch (KIM-Schulfach): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Englisch (KIM-Schulfach) -> Fremdsprachenfach: rdf:type {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -210,7 +391,7 @@ Lehrplan_xy -> Bildungsplan (BW): rdf:type {
   }
 }
 
-Lehrplan_xy -> Fragment_xy: hat Teil {
+Fremdsprachenfach -> Schulfach: rdfs:subClassOf {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -218,7 +399,7 @@ Lehrplan_xy -> Fragment_xy: hat Teil {
   }
 }
 
-Lehrplan_xy -> Bildungsplan Sekundarstufe I - Deutsch: hat Titel {
+erste Fremdsprache -> Schulfachbezug: rdfs:subClassOf {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -226,7 +407,7 @@ Lehrplan_xy -> Bildungsplan Sekundarstufe I - Deutsch: hat Titel {
   }
 }
 
-Fragment_xy -> Bereich_xy: hat Teil {
+"ex:Lehrplan" -> Englisch (KIM-Schulfach): hat Schulfach {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -234,7 +415,7 @@ Fragment_xy -> Bereich_xy: hat Teil {
   }
 }
 
-Fragment_xy -> Lehrplanfragment (BW): rdf:type {
+"ex:Lehrplan" -> "ex:Fachbezug_Englisch_als_Erstsprache": hat Schulfach {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -242,7 +423,7 @@ Fragment_xy -> Lehrplanfragment (BW): rdf:type {
   }
 }
 
-Fragment_xy -> Prozessbezogene Kompetenzen: hat Titel {
+"ex:Fachbezug_Englisch_als_Erstsprache" -> erste Fremdsprache: rdf:type {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -250,7 +431,7 @@ Fragment_xy -> Prozessbezogene Kompetenzen: hat Titel {
   }
 }
 
-Bereich_xy -> Sprechen und Zuhören: hat Titel {
+"ex:Fachbezug_Englisch_als_Erstsprache" -> Englisch (KIM-Schulfach): hat Schulfach {
   style: {
     stroke: "#9F0E21"
     stroke-width: 3
@@ -258,35 +439,27 @@ Bereich_xy -> Sprechen und Zuhören: hat Titel {
   }
 }
 
-Bereich_xy -> "2.1": hat Nummer {
-  style: {
-    stroke: "#9F0E21"
-    stroke-width: 3
-    font-color: "#9F0E21"
-  }
-}
-
-Bereich_xy -> "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ...": hat Beschreibung {
-  style: {
-    stroke: "#9F0E21"
-    stroke-width: 3
-    font-color: "#9F0E21"
-  }
-}
 
 ```
+**Erläuterung**:
 
-## Pattern 3 - Schulfach und Schulfachbezug
-
-```d2
-
-
+**RDF Daten**: 
+```
 
 ```
 
 ## Pattern 4 - Schulart und Bildungsgangniveau
 
 ```d2
+
+Schulart: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
 
 Gesamtschule (KIM): {
   style: {
@@ -314,10 +487,9 @@ Jahrgangsstufe 9-13: {
 
 Integrierte Gesamtschule: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
@@ -331,9 +503,10 @@ Grundlegendes Kompetenzniveau (RP): {
 
 Hauptschulniveau: {
   style: {
-    stroke: "#9F0E21"
-    stroke-width: 5
-    font-color: "#9F0E21"
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
   }
 }
 
@@ -347,8 +520,17 @@ Niveau Sekundarstufe II (RP): {
 
 Gymnasialniveau Sek II: {
   style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Integrierte Gesamtschule -> Schulart: rdf:type {
+  style: {
     stroke: "#9F0E21"
-    stroke-width: 5
+    stroke-width: 3
     font-color: "#9F0E21"
   }
 }
@@ -410,103 +592,397 @@ Niveau Sekundarstufe II (RP) -> Gymnasialniveau Sek II: rdf:type {
 }
 
 ```
+**Erläuterung**:
 
-## Pattern 5 - Jahrgangstufe/Schulstufe
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 5 - Jahrgangstufe/Schulstufe und Phasen der Sekundarstufe II
 
 Jahrgangsstufen 1-4 -> Primarstufe (Ausnahme Berlin: 1-6)
 5-10 -> Sek I (Ausnahme Berlin: 7-10)
 11-12/13 -> Sek II
 G8 und G9 (Jahrgangsstufe 10 = Einführungsphase der Oberstufe bei G8)
 
-## Pattern 6 - Sekundarstufe II
+```d2
+Schulstufe: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
 
-## Pattern 7 - Hierarchie der Curricularen Elemente
+Primarbereich: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
 
-- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation -> CE-Hinweis
-- CE-Fragment -> CE-Bereich -> CE-Bereich -> CE-Kompetenzspezifikation
-- CE-Fragment -> CE-Bereich -> CE-Lerninhalt -> CE-Hinweis
-- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation / -> CE-Lerninhalt
+Sekundarbereich I: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Sekundarbereich II: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Oberstufenphase: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Einführungsphase: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Qualifikationsphase: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+G8 Einführungsphase: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Einführungsphase: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Qualifikationsphase: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Qualifikationsphase: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Jahrgangsstufe 13: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 12: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 11: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 10: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Primarbereich -> Schulstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Sekundarbereich I -> Schulstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Sekundarbereich II -> Schulstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 10 -> Jahrgangsstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 11 -> Jahrgangsstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 12 -> Jahrgangsstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 13 -> Jahrgangsstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Einführungsphase -> Oberstufenphase: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Qualifikationsphase -> Oberstufenphase: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Einführungsphase -> Einführungsphase: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Einführungsphase -> Einführungsphase: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Qualifikationsphase -> Jahrgangsstufe 11: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Qualifikationsphase -> Qualifikationsphase: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Qualifikationsphase -> Qualifikationsphase: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Einführungsphase -> Jahrgangsstufe 10: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Einführungsphase -> Jahrgangsstufe 11: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G8 Qualifikationsphase -> Jahrgangsstufe 12: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Qualifikationsphase -> Jahrgangsstufe 12: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+G9 Qualifikationsphase -> Jahrgangsstufe 13: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Oberstufenphase -> Sekundarbereich II: Equivalent To {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+```
+
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+
+## Pattern 6 - Hierarchie der Curricularen Elemente
 
 ```d2
 
 CE-Kompetenzspezifikation 1: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Fragment 1: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Lerninhalt 1: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Lerninhalt 2: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Bereich 1: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Bereich 2: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Hinweis 1: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 CE-Hinweis 2: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
 Lehrplan: {
   style: {
-    font-color: white
-    opacity: 1
-    fill: "#9F0E21"
-    stroke: white
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
   }
 }
 
@@ -576,23 +1052,325 @@ CE-Kompetenzspezifikation 1 -> CE-Hinweis 2: hat Teil {
 
 ```
 
-## Pattern 8 - CE-Verweis
+**Erläuterung**:
 
-## Pattern 9 - Funktionen
+**Curriculare Elemente** (`LP_0000261`) sind die Bausteine, aus denen ein Lehrplan in der MEM-Ontologie aufgebaut ist. Jede Informationseinheit eines Lehrplans – ein Kapitel, ein Kompetenzbereich, eine einzelne Anforderung, ein Lerninhalt – wird als Curriculares Element modelliert. Die Ontologie kennt sieben generische Unterklassen:
 
-## Pattern 10 - Niveaus
+**CE-Fragment** ist der rein strukturgebende Behälter ohne inhaltliche Semantik: Kapitel, Abschnitte und Überschriften, die einen Lehrplan gliedern, ohne selbst Kompetenzen oder Inhalte zu definieren. Jedes Bundesland hat eine eigene Subklasse davon (z.B. *Lehrplanfragment (HH), Lehrplanfragment (BY)*).
 
-## Pattern 11 - Bildungsgangniveaus?
+**CE-Bereich** fasst Kompetenzen und Lerninhalte unter einem gemeinsamen inhaltlichen Fokus zusammen – er kann anderen CE-Bereichen über- oder untergeordnet sein. Die länderspezifischen Entsprechungen reichen von Kompetenzbereich (in fast allen Bundesländern) über *Lernbereich (BY, SN, NI), Leitidee (BE, BW, HH)* bis hin zu *Thema, Themenfeld* oder *Inhaltsfeld*.
 
-## Pattern 12 - Niveaustufen BE/BB
+**CE-Kompetenzspezifikation** beschreibt eine konkrete Kompetenz im Lehrplan – typischerweise als Satz mit Operator, der mit "Die Schülerinnen und Schüler …" beginnt. Die Ontologie unterscheidet dabei zwischen Fachbezogener und Fachübergreifender Kompetenzspezifikation. Länderspezifische Beispiele: *Anforderung (HH), Kompetenzerwartung (BY), Standard (BE), Kompetenz (RP)*.
 
-## Pattern 13 - Zeitangaben
+**CE-Lerninhalt** benennt konkrete Themen und Gegenstände, an denen Kompetenzen erworben werden. Er liefert die inhaltliche Basis für den Unterricht. Ein CE-Lerninhalt kann weitere CE-Lerninhalte enthalten, aber keine übergeordneteren Elemente wie CE-Bereiche.
 
-## Pattern 14 - Gültigkeitsbereich
+**CE-Hinweis** enthält ergänzende, empfehlende Informationen: methodische Anregungen, Differenzierungsvorschläge oder Vertiefungsideen. Er hat keine normative Verbindlichkeit.
 
-## Pattern 15 - Bildungsgänge und Abschlüsse
+**CE-Verweis** (im folgenden Pattern genauer erklärt) stellt eine Referenz von einem Element auf ein anderes her – auf ein Element desselben Lehrplans, eines anderen Lehrplans oder einer externen Ressource. Er ist selbst kein Inhalt, sondern ein Zeiger.
 
-## Pattern 16 - Der Lernprozess
+**CE-Leitperspektive** kodiert übergreifende Bildungsziele wie Nachhaltigkeit oder Demokratieerziehung, die sich durch mehrere Fächer und Jahrgangsstufen ziehen.
+
+Die **"hat Teil"-Beziehung**: Alle Curricularen Elemente werden über die Property `bfo:BFO_0000051` **(hat Teil)** hierarchisch miteinander verknüpft. Das Prinzip ist einfach: Ein Element enthält seine untergeordneten Elemente als Teile. Dabei gibt es keine starre Vorschrift, welcher Typ welchen anderen enthalten darf – die Ontologie lässt Flexibilität, damit die unterschiedlichen Lehrplanstrukturen der 16 Bundesländer abgebildet werden können. 
+
+Beispielhafte Hierarchien können sein:
+
+- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation -> CE-Hinweis
+- CE-Fragment -> CE-Bereich -> CE-Bereich -> CE-Kompetenzspezifikation
+- CE-Fragment -> CE-Bereich -> CE-Lerninhalt -> CE-Hinweis
+- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation / -> CE-Lerninhalt
+
+Ein bayerischer Lehrplan hat z.B. einen *Lernbereich (BY)* als CE-Bereich, der *Kompetenzerwartungen (BY)* als CE-Kompetenzspezifikationen und *Inhalte zu den Kompetenzen (BY)* als CE-Lerninhalte enthält. Ein Hamburger Bildungsplan hat stattdessen einen *Kompetenzbereich (HH)* als CE-Bereich, darunter *Themenbereiche (HH)* als weitere CE-Bereiche, und darin einzelne *Anforderungen (HH)* als CE-Kompetenzspezifikationen. Die Hierarchie sieht strukturell gleich aus – nur die Klassen-Labels unterscheiden sich. Genau das macht die „hat Teil"-Beziehung zum zentralen Werkzeug der Ontologie: Sie erlaubt bundeslandübergreifende Traversierung und Suche, unabhängig von der lokalen Terminologie.
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 7 - CE-Verweis
+
+```d2
+
+Curriculares Element: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+CE-Bereich: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+"ex:Kompetenz_1": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Verweis_1": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lernbereich_1": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Beschreibung_1": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Kompetenzspezifikation: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+CE-Verweis: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+"ex:Kompetenz_1" -> CE-Kompetenzspezifikation: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Kompetenzspezifikation -> Curriculares Element: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Kompetenz_1" -> "ex:Verweis_1": hat Verweis {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Verweis_1" -> "ex:Beschreibung_1": hat Beschreibung {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Verweis_1" -> "ex:Lernbereich_1": verweist auf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lernbereich_1" -> CE-Bereich: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Verweis_1" -> Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN) -> CE-Verweis: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+
+```
+**Erläuterung**:
+
+Ein **CE-Verweis** (`LP_0030065`) ist ein Curriculares Element, das einen Bezug von einem Element eines Lehrplans auf ein anderes oder zu einer externen Ressource herstellt. Wichtig: Der CE-Verweis ist nicht das verlinkte Ziel, sondern stellt nur die Referenz darauf dar – er ist ein explizit modellierter Zeiger.
+
+Wohin kann ein CE-Verweis zeigen? Drei Zielkategorien sind möglich:
+
+- **Innerhalb desselben Lehrplans** – z.B. wenn ein Kompetenzbereich auf einen anderen Kompetenzbereich desselben Faches verweist ("siehe auch Lernbereich 3").
+- **In einen anderen Lehrplan** – z.B. fächerverbindende Querverweise, etwa aus dem Deutschlehrplan auf den Geschichtslehrplan.
+- **Auf externe Ressourcen** – z.B. Verlinkungen auf Bildungsstandards der KMK, Referenzrahmen oder andere Dokumente.
+
+Wie wird er in der Praxis modelliert?
+
+In den Lehrplandaten der Bundesländer treten CE-Verweise als länderspezifische Subklassen auf. In Berlin gibt es z.B. Klassen wie *Verweis auf standardillustrierende Aufgaben (BE)* oder *Verweis auf vernetzte Kompetenzen (BE)*, in Sachsen *Verweis auf Lernbereich des gleichen Faches (SN)* oder *Verweis auf überfachliche Bildungsziele (SN)*. Sie hängen per `hat Teil` an dem Element, von dem aus der Verweis ausgeht.
+
+Wozu dient das?
+
+Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente modelliert werden, können sie maschinell ausgewertet werden: Man kann gezielt fragen, welche Kompetenzbereiche miteinander verlinkt sind, wie dicht ein Lehrplan intern vernetzt ist, oder ob bestimmte Bildungsstandards in mehreren Ländern referenziert werden – ohne Freitexte parsen zu müssen.
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 8 - Funktionen
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 9 - Niveaus
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 10 - Bildungsgangniveaus, Bildungsgänge und Abschlüsse
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+Die drei Klassen beschreiben gemeinsam den Rahmen, in dem Lehrplaninhalte gelten – wer lernt auf welchem Anspruchsniveau und worauf zielt die Laufbahn ab.
+
+**Bildungsgang** (LP_0000816) bezeichnet die schulische Laufbahn als Ganzes – also den Weg, den Lernende durch das Schulsystem nehmen. Die Ontologie kennt drei generische Subklassen: *Gymnasialer Bildungsgang, Realschulbildungsgang* und *Hauptschulbildungsgang*. Wichtig: Ein Bildungsgang ist nicht dasselbe wie eine Schulart. Der gymnasiale Bildungsgang kann beispielsweise auch an einer Gesamt- oder Gemeinschaftsschule absolviert werden – entscheidend ist das Ziel, nicht die Institution.
+
+**Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch, mit dem Inhalte und Kompetenzen innerhalb eines Bildungsgangs behandelt werden. Die generischen Niveaus sind *Hauptschulniveau, Realschulniveau, Gymnasialniveau Sek I und Gymnasialniveau Sek II*. Für jedes Bundesland gibt es darüber hinaus eigene Subklassen – z.B. *Gymnasialniveau Sek I (BE)* in Berlin oder die Berliner Abschlussniveaus *BOA, BBR, EBBR* und *MSA*. In den Lehrplandaten wird das Bildungsgangniveau über die Property `LP_0000833` (hat Bildungsgangniveau) direkt an einzelne Anforderungen oder Lehrplanelemente gehängt, um anzugeben, für welche Lerngruppe eine Kompetenz gilt.
+
+**Schulabschluss** (`LP_0000019`) ist der am Ende eines Bildungsgangs offiziell erworbene Qualifikationsnachweis. Er berechtigt zu weiterführenden Bildungswegen oder dem Berufseinstieg. Generische Subklassen sind Erster Schulabschluss, Mittlerer Schulabschluss, Fachabitur und Allgemeine Hochschulreife; daneben gibt es länderspezifische Varianten wie *Erster Abschluss (BE)* oder *Mittlerer Abschluss (RP)*. Der Zusammenhang zur Laufbahn wird über die Property `LP_0000021` (ermöglicht Abschluss / endet mit Abschluss) hergestellt.
+
+Die drei Konzepte bilden eine Kette: Ein **Bildungsgang** läuft auf einem bestimmten **Bildungsgangniveau** und endet mit einem bestimmten **Schulabschluss**. In der Ontologie ist das so modelliert:
+
+```
+Gymnasialer Bildungsgang
+   ──[hat Bildungsgangniveau]──▶ Gymnasialniveau Sek I / Sek II
+   ──[ermöglicht Abschluss]───▶ Allgemeine Hochschulreife
+```
+
+Für Lehrplandaten bedeutet das: Eine CE-Kompetenzspezifikation, die `hat Bildungsgangniveau → Gymnasialniveau Sek I` trägt, gilt explizit für Lernende im gymnasialen Bildungsgang der Sekundarstufe I – unabhängig davon, ob sie ein Gymnasium oder eine Gesamtschule besuchen. Das macht die Zuordnung schulartübergreifend und strukturell eindeutig.
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 11 - Niveaustufen BE/BB
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 12 - Zeitangaben
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 13 - Gültigkeitsbereich
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
+
+## Pattern 14 - Der Lernprozess
+
+```d2
+
+
+
+```
+**Erläuterung**:
+
+**RDF Daten**: 
+```
+
+```
 
 
 # SPARQL-Abfragen
@@ -672,4 +1450,24 @@ WHERE {
 }
 ```
 
-## 
+## Kompetenzfragen
+
+*	Welche Verknüpfung besteht zwischen Element X und Element Y?
+*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarlan?
+*	Wie hängen die Niveaustufen in Berlin/Brandenburg mit den Jahrgangsstufen zusammen?
+*	Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?
+*	Welcher Bereich aus Hamburg entspricht einem Element aus Bremen?
+*	Anhand welcher Lerninhalte kann ich eine Kompetenz erlernen?
+*	Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?
+*	Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?
+*	In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?
+*	Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?
+*	Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.
+*	Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.
+*	Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.
+*	Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.
+*	Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.
+*	Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.
+*	Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.
+*	Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.
+*	Ich möchte abbilden, welche Kompetenzen in Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.
