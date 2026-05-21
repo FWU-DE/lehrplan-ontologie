@@ -7,6 +7,7 @@ Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewend
 **Legende für Visualisierungen:**
 
 ```d2
+
 BFO Klassen: {
   style: {
     font-color: white
@@ -32,6 +33,7 @@ Instanzen: {
     font-color: "#9F0E21"
   }
 }
+
 ```
 
 
@@ -442,6 +444,32 @@ erste Fremdsprache -> Schulfachbezug: rdfs:subClassOf {
 
 ```
 **Erläuterung**:
+
+**Schulfach** (`LP_0000001`) ist die Basisklasse für alle Unterrichtsfächer im deutschen Schulsystem. Die Ontologie definiert vier thematische Subklassen für häufig abgefragte Fächergruppen:
+
+- **MINT-Fach** (`LP_0000002`) – Mathematik, Informatik, Naturwissenschaften, Technik; enthält seinerseits
+- **Naturwissenschaftsfach** (`LP_0000003`) als Subklasse des MINT-Fachs
+- **Fremdsprachenfach** (`LP_0000004`)
+- **Gesellschaftswissenschaftsfach** (`LP_0000005`)
+
+Diese Subklassen dienen der thematischen Filterung über Bundeslandgrenzen hinweg, etwa um gezielt alle Naturwissenschaftslehrpläne aller Länder zu finden.
+
+Die konkreten Fächer (die Individuen) sind im separaten Schulfach-Graphen (`https://w3id.org/schulfach/1.0.0`) erfasst: 894 Fach-Individuen, je eines pro Bundesland und Fachbezeichnung – z.B. `BY_0000001 (Deutsch)`, `HH_0000004 (Deutsch)`, `SN_0000001 (Deutsch)`. Dass dasselbe Fach in verschiedenen Ländern als eigenes Individuum geführt wird, bildet die Realität ab: Die Bezeichnungen weichen ab (*Arbeit-Wirtschaft-Technik* in Niedersachsen vs. *AWT* in Mecklenburg-Vorpommern vs. *Arbeitslehre* in HE, NW, RP, SL). Für 46 Fächer existiert zusätzlich ein `skos:exactMatch` auf das bundesweite **KIM-Schulfachvokabular**, das als gemeinsamer Referenzpunkt für länderübergreifende Abfragen dient.
+
+In den Lehrplandaten wird ein konkretes Fach-Individuum über die Property `LP_0000537` (**hat Schulfach**) an einen Lehrplan gehängt – z.B. zeigt `Deutsch 1/2 (BY)` auf `schulfach:BY_0000001`.
+
+Daneben gibt es die Subklasse **BistaFach** (`LP_0000039`), die Fächer kennzeichnet, für die bundesweit einheitliche Bildungsstandards der KMK existieren.
+
+Während Schulfach beschreibt, was gelehrt wird, beschreibt **Schulfachbezug** (`LP_0000540`) die Stellung eines Faches im Stundentafel- und Bildungsgangskontext. Die Subklassen spiegeln die schulorganisatorischen Kategorien direkt wider:
+
+- **Pflichtfach** (`LP_0000544`): Für alle Schülerinnen und Schüler verbindlich
+- **Wahlpflichtfach** (`LP_0000545`): Verbindliche Wahl aus einem definierten Angebot
+- **Wahlfach** (`LP_0000551`): Freiwillig wählbar ohne Pflichtcharakter
+- **Erste Fremdsprache** (`LP_0000541`): Die erste gelernte Fremdsprache im Bildungsgang
+- **Zweite Fremdsprache** (`LP_0000542`): Die zweite gelernte Fremdsprache
+- **Dritte Fremdsprache** (`LP_0000543`): Die dritte gelernte Fremdsprache
+
+Der Schulfachbezug ist für Fremdsprachen besonders wichtig: Englisch kann je nach Bundesland und Bildungsgang erste, zweite oder dritte Fremdsprache sein – mit je anderen curricularen Anforderungen. Indem der Bezug als eigene Klasse modelliert ist, lassen sich z.B. alle Lehrpläne für „Englisch als zweite Fremdsprache" bundeslandübergreifend abfragen, ohne auf Freitext angewiesen zu sein.
 
 **RDF Daten**: 
 ```
@@ -1260,6 +1288,238 @@ Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente mo
 
 ```d2
 
+Element (NW): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Funktionsspezifikation: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Beschreibungsfunktion: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Strukturierungsfunktion: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Kompetenzbeschreibungsfunktion: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Bereichsfunktion: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Kompetenz": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Bereich": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Kompetenzerwartung (NW): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+CE-Kompetenzspezifikation: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+CE-Bereich: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Curriculares Element: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Kompetenzbereich (NW): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Kompetenzbereich (NW) -> Element (NW): rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Kompetenz" -> Kompetenzerwartung (NW): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Kompetenzerwartung (NW) -> Kompetenzbeschreibungsfunktion: hat Funktion {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Kompetenzerwartung (NW) -> Element (NW): rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Element (NW) -> Curriculares Element: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Kompetenzspezifikation -> Kompetenzbeschreibungsfunktion: hat Funktion {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Kompetenzspezifikation -> Curriculares Element: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Beschreibungsfunktion -> Funktionsspezifikation: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Strukturierungsfunktion -> Funktionsspezifikation: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Bereichsfunktion -> Strukturierungsfunktion: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Kompetenzbeschreibungsfunktion -> Beschreibungsfunktion: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Bereich" -> Kompetenzbereich (NW): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Bereich -> Curriculares Element: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+CE-Bereich -> Bereichsfunktion: hat Funktion {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Kompetenzbereich (NW) -> Bereichsfunktion: hat Funktion {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
 
 
 ```
@@ -1274,6 +1534,287 @@ Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente mo
 
 ```d2
 
+Niveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgangniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Anforderungsbereich: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Fachniveau Sek II: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Fremdsprachenniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgangniveau (ST): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Gymnasialniveau Sek I: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Gymnasialniveau Sek I (ST): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Sachsen-Anhalt: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"Anforderungsbereich 2: Reorganisation und Transfer": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Grundkursniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Leistungskursniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Fachniveau Sek II (ST): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Grundlegendes Anforderungsniveau (ST): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Erhöhtes Anforderungsniveau (ST): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+B1 Fortgeschrittene Sprachverwendung: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau (ST) -> Sachsen-Anhalt: von Bundesland {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Gymnasialniveau Sek I (ST) -> Bildungsgangniveau (ST): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Gymnasialniveau Sek I (ST) -> Gymnasialniveau Sek I: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Gymnasialniveau Sek I -> Bildungsgangniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau (ST) -> Bildungsgangniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau -> Niveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Fachniveau Sek II -> Niveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Anforderungsbereich -> Niveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Fremdsprachenniveau -> Niveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Grundkursniveau -> Fachniveau Sek II: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Leistungskursniveau -> Fachniveau Sek II: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Fachniveau Sek II (ST) -> Fachniveau Sek II: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Grundlegendes Anforderungsniveau (ST) -> Grundkursniveau: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Grundlegendes Anforderungsniveau (ST) -> Fachniveau Sek II (ST): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+B1 Fortgeschrittene Sprachverwendung -> Fremdsprachenniveau: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Erhöhtes Anforderungsniveau (ST) -> Fachniveau Sek II (ST): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Erhöhtes Anforderungsniveau (ST) -> Leistungskursniveau: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"Anforderungsbereich 2: Reorganisation und Transfer" -> Anforderungsbereich: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
 
 
 ```
@@ -1288,6 +1829,214 @@ Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente mo
 
 ```d2
 
+Rheinland-Pfalz: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Niveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgangniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgang: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Realschulbildungsgang: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Realschulniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgangniveau (RP): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Mittleres Kompetenzniveau (RP): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Schulabschluss: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Mittlerer Schulabschluss: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Mittlerer Abschluss (RP): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Qualifizierter Sekundarabschluss I (RP): {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau (RP) -> Rheinland-Pfalz: von Bundesland {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Qualifizierter Sekundarabschluss I (RP) -> Mittlerer Abschluss (RP): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Mittlerer Abschluss (RP) -> Mittlerer Schulabschluss: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Realschulbildungsgang -> Bildungsgang: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau -> Niveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Bildungsgangniveau (RP) -> Bildungsgangniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Realschulniveau -> Bildungsgangniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Mittleres Kompetenzniveau (RP) -> Bildungsgangniveau (RP): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Mittleres Kompetenzniveau (RP) -> Realschulniveau: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Mittlerer Schulabschluss -> Realschulniveau: benötigt Niveau {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Realschulbildungsgang -> Realschulniveau: hat Bildungsgangniveau {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Mittlerer Schulabschluss -> Schulabschluss: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Realschulbildungsgang -> Mittlerer Schulabschluss: endet mit Abschluss {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
 
 
 ```
@@ -1450,24 +2199,118 @@ WHERE {
 }
 ```
 
-## Kompetenzfragen
+## SPARQL-Abfragen der Kompetenzfragen
 
 *	Welche Verknüpfung besteht zwischen Element X und Element Y?
-*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarlan?
+
+```
+
+```
+
+*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarland?
+
+```
+
+```
+
 *	Wie hängen die Niveaustufen in Berlin/Brandenburg mit den Jahrgangsstufen zusammen?
+
+```
+
+```
+
 *	Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?
+
+```
+
+```
+
 *	Welcher Bereich aus Hamburg entspricht einem Element aus Bremen?
+
+```
+
+```
+
 *	Anhand welcher Lerninhalte kann ich eine Kompetenz erlernen?
+
+```
+
+```
+
 *	Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?
+
+```
+
+```
+
 *	Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?
+
+```
+
+```
+
 *	In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?
+
+```
+
+```
+
 *	Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?
+
+```
+
+```
+
 *	Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.
+
+```
+
+```
+
 *	Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.
+
+```
+
+```
+
 *	Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.
+
+```
+
+```
+
 *	Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.
+
+```
+
+```
+
 *	Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.
+
+```
+
+```
+
 *	Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.
+
+```
+
+```
+
 *	Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.
+
+```
+
+```
+
 *	Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.
-*	Ich möchte abbilden, welche Kompetenzen in Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.
+
+```
+
+```
+
+*	Ich möchte abbilden, welche Kompetenzen im Fach Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.
+
+```
+
+```
