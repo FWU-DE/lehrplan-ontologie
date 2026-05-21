@@ -11,7 +11,7 @@ Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewend
 BFO Klassen: {
   style: {
     font-color: white
-    opacity: 2
+    opacity: 0.5
     fill: "#9F0E21"
     stroke: white
   }
@@ -152,7 +152,35 @@ Mathematik: {
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lehrplan_SN: <https://w3id.org/lehrplan/ontology/LP_0000818> .
+
+# Instanzen
+@prefix Sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
+@prefix Mathematik: <https://w3id.org/schulfach/SN_0000012> .
+@prefix Oberschule: <https://w3id.org/schulart/SN_0000003> .
+@prefix Sekundarbereich_II: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+
+# properties
+@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+@prefix für_Schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
+@prefix hat_Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
+
+ex:Lehrplan a Lehrplan_SN: ;
+            hat_Titel: "Lehrplan Oberschule Mathematik" ;
+            von_Bundesland: Sachsen: ;
+            hat_Schulfach: Mathematik: ;
+            für_Schulart: Oberschule: ;
+            hat_Schulstufe: Sekundarbereich_II: . 
 ```
 
 
@@ -318,7 +346,32 @@ Sprechen und Zuhören: {
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Bildungsplan_BW: <https://w3id.org/lehrplan/ontology/LP_0000806> .
+@prefix Lehrplanfragment_BW: <https://w3id.org/lehrplan/ontology/LP_0002052> .
+
+# properties
+@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
+@prefix hat_Nummer: <https://w3id.org/lehrplan/ontology/LP_0030057> .
+@prefix hat_Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+
+ex:Lehrplan a Bildungsplan_BW: ;
+            hat_Teil: ex:Fragment ;
+            hat Titel: "Bildungsplan Sekundarstufe I - Deutsch" .
+ex:Fragment a Lehrplanfragment_BW: ;
+            hat_Teil: ex:Bereich ;
+            hat Titel: "Prozessbezogene Kompetenzen" .
+ex:Bereich hat_Titel "Sprechen und Zuhören" ;
+            hat_Nummer: 2.1 ;
+            hat_Beschreibung: "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ..." .
 ```
 
 ## Pattern 3 - Schulfach und Schulfachbezug
