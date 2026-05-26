@@ -150,6 +150,27 @@ Mathematik: {
 
 **Erläuterung**:
 
+**Lehrplan** (`LP_0000438`) ist die Wurzelklasse für alle konkreten Lehrplandokumente in der Ontologie. Jede länderspezifische Lehrplanvariante – *LehrplanPLUS (BY), Bildungsplan (HH/BW), Kernlehrplan (NW), Kerncurriculum (NI/HE), Rahmenlehrplan (BB), Fachanforderung (SH)* usw. – ist eine Subklasse davon.
+
+**Kontextualisierungsangaben**
+
+Ein Lehrplan-Individuum trägt die Angaben, die seinen institutionellen Geltungsbereich vollständig beschreiben:
+
+- **von Bundesland** (`LP_0000029`) → das ausgebende Bundesland, z.B. *Bayern* (`LP_3000051`)
+- **für Schulart** (`LP_0000812`) → die Schulart, für die der Lehrplan gilt, z.B. *Grundschule* (`BY_0000001`)
+- **hat Bildungsgangniveau** (`LP_0000833`) → alternativ oder ergänzend das Bildungsgangniveau, das sich auf den angestrebten Abschluss bezieht, z.B. *Realschulniveau* (`LP_0000832`)
+- **hat Schulfach** (`LP_0000537`) → das Unterrichtsfach, z.B. *Sport* (`BY_0000013`)
+- **hat Jahrgangsstufe** (`LP_0000026`) → die Jahrgangsstufen, für die der Lehrplan gilt
+- **hat Schulstufe** (`LP_0000047`) → alternativ oder ergänzend die übergeordnete Schulstufe, z.B. *Primarbereich* (`LP_0000036`)
+
+Diese Angaben zusammen machen einen Lehrplan eindeutig identifizierbar: *„Bayern – Grundschule – Sport – Jahrgangsstufen 1 und 2"*.
+
+**Weitere Metadaten**
+
+- **hat Titel** (`LP_0030056`) → der offizielle Titel des Dokuments als Titel-Individuum
+- **hat Beschreibung** (`LP_0030051`) → ein erläuternder Beschreibungstext
+- **uri** (`LP_0000463`) → der kanonische URL zum Originaldokument beim Herausgeber, z.B. auf dem Schulportal des Bundeslandes
+
 **RDF Daten**: 
 ```
 @prefix ex: <https://www.example.org/> .
@@ -526,7 +547,32 @@ Der Schulfachbezug ist für Fremdsprachen besonders wichtig: Englisch kann je na
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000001> .
+@prefix Fremdsprachenfach: <https://w3id.org/lehrplan/ontology/LP_0000004> .
+@prefix Schulfachbezug: <https://w3id.org/lehrplan/ontology/LP_0000540> .
+@prefix erste_Fremdsprache: <https://w3id.org/lehrplan/ontology/LP_0000541> .
+
+# Instanzen
+@prefix Englisch_KIM_Schulfach: <http://w3id.org/kim/schulfaecher/s1007> .
+
+# properties
+@prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+
+ex:Lehrplan hat_Schulfach: Englisch_KIM_Schulfach: ,
+                            ex:Fachbezug_Englisch_als_Erstsprache .
+ex:Fachbezug_Englisch_als_Erstsprache hat_Schulfach: Englisch_KIM_Schulfach: ;
+                                      a erste_Fremdsprache: .
+Englisch_KIM_Schulfach: a Fremdsprachenfach: .
+Fremdsprachenfach: rdfs:subClassOf Schulfach: .
+erste_Fremdsprache: rdfs:subClassOf Schulfachbezug: .
 ```
 
 ## Pattern 4 - Schulart und Bildungsgangniveau
@@ -675,17 +721,64 @@ Niveau Sekundarstufe II (RP) -> Gymnasialniveau Sek II: rdf:type {
 ```
 **Erläuterung**:
 
+**Schulart** (`LP_0000111`) bezeichnet den institutionellen Typ einer Schule. Die Schulart-Ontologie erfasst insgesamt 89 Schulart-Individuen aus allen 16 Bundesländern – je eines pro länderspezifisch benannter Schulform.
+Grundschule und Gymnasium sind die einzigen Schularten, die in allen Ländern vorkommen. Alle anderen Bezeichnungen variieren erheblich: Was in Bayern *Mittelschule* heißt, heißt in Thüringen *Regelschule*, in Mecklenburg-Vorpommern *Regionale Schule*, in Sachsen *Oberschule* und in Niedersachsen *Hauptschule*. Ähnlich bei den Gesamtschulen: Hamburg kennt nur die *Stadtteilschule*, Schleswig-Holstein die *Gemeinschaftsschule*, Nordrhein-Westfalen unterscheidet zwischen *Gesamt- und Sekundarschule*. 
+
+Jedes Schulart-Individuum ist über `LP_0000029` (**von Bundesland**) an sein Bundesland gebunden und trägt einen länderspezifischen IRI der Form `schulart:BY_0000001`. Damit ist die Schulart der institutionelle Einstiegspunkt in die Lehrplandaten: Ein Lehrplan verweist über **für Schulart** (`LP_0000812`) auf genau eine Schulart – und die Schulart wiederum deklariert über **hat Bildungsgangniveau** (`LP_0000833`), welche Leistungsansprüche an ihr möglich sind.
+
+**Schulart** und **Bildungsgangniveau** (`LP_0000028`) sind über die Property **hat Bildungsgangniveau** (`LP_0000833`) miteinander verknüpft: Jede Schulart deklariert explizit, welche Leistungsniveaus an ihr möglich sind. Das ermöglicht es, Lehrplanelemente nicht nur nach Schulart, sondern gezielt nach Anspruchsniveau zu filtern.
+
+**Warum eine Schulart mehrere Niveaus haben kann**
+
+An einer **Einheitsschule** wie dem Gymnasium gibt es in der Regel ein Niveau pro Schulstufe – in Bayern etwa *Gymnasialniveau Sek I (BY)* und *Gymnasialniveau Sek II (BY)*. An **Schulen mit mehreren Bildungsgängen** hingegen sind mehrere Niveaus gleichzeitig möglich, weil dieselbe Institution Schülerinnen und Schüler auf unterschiedliche Abschlüsse hin unterrichtet. Ein Beispiel aus den Daten: Die Gemeinschaftsschule in Sachsen führt gleich fünf Niveaus – *Grundschulniveau (SN), Hauptschulbildungsgangniveau (SN), Oberschulniveau (SN), Realschulbildungsgangniveau (SN)* und *Gymnasialniveau Sek I (SN)* – weil sie von Klasse 1 bis 10 alle Bildungsgänge integriert.
+
+**Die Vielfalt der Niveaubezeichnungen**
+
+Wie bei den Schularten selbst spiegeln die Niveaubezeichnungen die föderale Vielfalt wider. Was inhaltlich dasselbe meint, heißt in jedem Bundesland anders. Beispiel: Das *Hauptschulniveau* heißt in BW *G Niveau*, in BY *Mittelschulniveau* und in RP *Grundlegendes Kompetenzniveau*.
+
+**Was das für die Lehrplandaten bedeutet**
+
+Ein einzelnes Curriculares Element – etwa eine Kompetenzerwartung – kann in den Lehrplandaten ebenfalls **hat Bildungsgangniveau** tragen. Durch die Verknüpfung Schulart → Bildungsgangniveau ← CE kann das System beantworten: „An welchen Schularten gilt diese Anforderung?" – ohne dass die Schulart direkt am CE stehen muss. 
+
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Schulart: <https://w3id.org/lehrplan/ontology/LP_0000111> .
+@prefix Hauptschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000834> .
+@prefix Gymnasialniveau_SekII: <https://w3id.org/lehrplan/ontology/LP_0000835> .
+
+# Instanzen
+@prefix Integrierte_Gesamtschule: <https://w3id.org/schulart/RP_0000002> .
+@prefix Gesamtschule_KIM: <https://w3id.org/kim/schularten/s05> .
+@prefix Rheinland-Pfalz: <https://w3id.org/lehrplan/ontology/LP_3000046> .
+@prefix Jahrgangsstufe_9: <https://w3id.org/lehrplan/ontology/LP_2000009> .
+@prefix Grundlegendes_Kompetenzniveau_RP: <https://w3id.org/lehrplan/ontology/LP_0000147> .
+@prefix Niveau_Sekundarstufe_II_RP: <https://w3id.org/lehrplan/ontology/LP_0030353> .
+
+# properties
+@prefix has_exact_match: <http://www.w3.org/2004/02/skos/core#exactMatch> .
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+@prefix hat_Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000833> .
+
+Integrierte_Gesamtschule: a Schulart: ;
+                          has_exact_match: Gesamtschule_KIM: ;
+                          von_Bundesland: Rheinland-Pfalz: ;
+                          hat_Jahrgangsstufe: Jahrgangsstufe_9: ;
+                          hat_Bildungsgangniveau: Grundlegendes_Kompetenzniveau_RP: ,
+                                                  Niveau_Sekundarstufe_II_RP: .
+Grundlegendes_Kompetenzniveau_RP: a Hauptschulniveau: .
+Niveau_Sekundarstufe_II_RP: a Gymnasialniveau_SekII: .
 ```
 
 ## Pattern 5 - Jahrgangstufe/Schulstufe und Phasen der Sekundarstufe II
-
-Jahrgangsstufen 1-4 -> Primarstufe (Ausnahme Berlin: 1-6)
-5-10 -> Sek I (Ausnahme Berlin: 7-10)
-11-12/13 -> Sek II
-G8 und G9 (Jahrgangsstufe 10 = Einführungsphase der Oberstufe bei G8)
 
 ```d2
 Schulstufe: {
@@ -985,9 +1078,82 @@ Oberstufenphase -> Sekundarbereich II: Equivalent To {
 
 **Erläuterung**:
 
+**Jahrgangsstufen** (`LP_0000009`)
+
+Die Ontologie definiert **13 Jahrgangsstufen-Individuen** (`LP_2000001` bis `LP_2000013`) für die Jahrgänge 1–13. Sie sind bundeslandunabhängig – Jahrgangsstufe 6 ist in jedem Land dieselbe IRI `LP_2000006`. Curriculare Elemente werden über die Property **hat Jahrgangsstufe** (`LP_0000026`) an eine oder mehrere Jahrgangsstufen gebunden. Das ist die häufigste und direkteste Zuordnung: Eine Anforderung, die für Jahrgangsstufe 8 gilt, trägt `hat Jahrgangsstufe → LP_2000008`.
+
+**Schulstufe** (`LP_0000020`) ist eine abstraktere Einordnung, die mehrere Jahrgangsstufen zu einem pädagogischen Abschnitt zusammenfasst. Sie wird über **hat Schulstufe** (`LP_0000047`) vergeben. Die Ontologie kennt folgende Schulstufen-Individuen:
+
+- **Primarbereich** (`LP_0000036`) – umfasst die Jahrgangsstufen 1–4 (Ausnahme: Berlin/Brandenburg 1-6)
+- **Sekundarbereich I** (`LP_0000045`) – umfasst die Jahrgangsstufen 5–9/10 (Ausnahme: Berlin/Brandenburg 7-10)
+- **Sekundarbereich II** (`LP_0000046`) – umfasst die Jahrgangsstufen (10/)11–12/13
+- (**Orientierungsstufe (MV)** (`LP_0000032`) – länderspezifisch für Mecklenburg-Vorpommern, umfasst die Jahrgangsstufen 5 und 6)
+
+Die Schulstufe wird eingesetzt, wenn ein Lehrplanelement keiner einzelnen Jahrgangsstufe, sondern einem ganzen Bildungsabschnitt zugeordnet ist – z.B. ein Kerncurriculum, das für die gesamte Sekundarstufe I gilt.
+
+**Die Oberstufenphasen: Einführungs- und Qualifikationsphase**
+
+Die Ontologie kennt weitere drei Klassen, die speziell die gymnasiale Oberstufe strukturieren: **Oberstufenphase** (`LP_0000043`) als gemeinsamer Oberbegriff, und darunter **Einführungsphase** (LP_0000056) und **Qualifikationsphase** (`LP_0000057`). Die **Oberstufenphase** entspricht der **Sekundarstufe II**.
+Da in Deutschland teils achtjährige (G8), teils neunjährige (G9) Gymnasien existieren, fallen Einführungs- und Qualifikationsphase in unterschiedliche Jahrgangsstufen. Beide Varianten sind in der Ontologie als eigene Individuen erfasst:
+
+- **G8 Einführungsphase** (`LP_0000051`): Jahrgangsstufe 10
+- **G8 Qualifikationsphase** (`LP_0000050`): Jahrgangsstufen 11-12
+- **G9 Einführungsphase** (`LP_0000055`): Jahrgangsstufe 11
+- **G9 Qualifikationsphase** (`LP_0000052`): Jahrgangsstufen 12-13
+
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000020> .
+@prefix Oberstufenphase: <https://w3id.org/lehrplan/ontology/LP_0000043> .
+@prefix Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000056> .
+@prefix Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000057> .
+@prefix Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000009> .
+
+# Individuen
+@prefix Sekundarbereich_II: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+@prefix Sekundarbereich_I: <https://w3id.org/lehrplan/ontology/LP_0000045> .
+@prefix Primarbereich: <https://w3id.org/lehrplan/ontology/LP_0000036> .
+@prefix G8_Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000051> .
+@prefix G8_Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000050> .
+@prefix G9_Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000055> .
+@prefix G9_Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000052> .
+@prefix Jahrgangsstufe_10: <https://w3id.org/lehrplan/ontology/LP_2000010> .
+@prefix Jahrgangsstufe_11: <https://w3id.org/lehrplan/ontology/LP_2000011> .
+@prefix Jahrgangsstufe_12: <https://w3id.org/lehrplan/ontology/LP_2000012> .
+@prefix Jahrgangsstufe_13: <https://w3id.org/lehrplan/ontology/LP_2000013> .
+
+# properties
+@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+@prefix equivalent_to: <> .
+
+G8_Einführungsphase: a Einführungsphase: ;
+                      hat_Jahrgangsstufe: Jahrgangsstufe_10: .
+G9_Einführungsphase: a Einführungsphase: ;
+                      hat_Jahrgangsstufe: Jahrgangsstufe_11: .
+G8_Qualifikationsphase: a Qualifikationsphase: ;
+                        hat_Jahrgangsstufe: Jahrgangsstufe_11: ,
+                                            Jahrgangsstufe_12: .
+G9_Qualifikationsphase: a Qualifikationsphase: ;
+                        hat_Jahrgangsstufe: Jahrgangsstufe_12: ,
+                                            Jahrgangsstufe_13: .                     
+Jahrgangsstufe_10: a Jahrgangsstufe: .
+Jahrgangsstufe_11: a Jahrgangsstufe: .
+Jahrgangsstufe_12: a Jahrgangsstufe: .
+Jahrgangsstufe_13: a Jahrgangsstufe: .
+Einführungsphase: rdfs:subClassOf Oberstufenphase: .
+Qualifikationsphase: rdfs:subClassOf Oberstufenphase: .
+Oberstufenphase: equivalent_to: Sekundarbereich_II: .
+Sekundarbereich_II: a Schulstufe: .
+Sekundarbereich_I: a Schulstufe: .
+Primarbereich: a Schulstufe: .
 ```
 
 
@@ -1164,7 +1330,32 @@ Ein bayerischer Lehrplan hat z.B. einen *Lernbereich (BY)* als CE-Bereich, der *
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix CE-Fragment: <https://w3id.org/lehrplan/ontology/LP_0001015> .
+@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE-Lerninhalt: <https://w3id.org/lehrplan/ontology/LP_0000332> .
+@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+@prefix CE-Hinweis: <https://w3id.org/lehrplan/ontology/LP_0000852> .
+
+# properties
+@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
+
+ex:Lehrplan hat_Teil: ex:CE-Fragment_1 .
+ex:CE-Fragment_1 hat_Teil: ex:CE-Bereich_1 .
+ex:CE-Bereich_1 hat_Teil: ex:CE-Bereich_2 .
+ex:CE-Bereich_2 hat_Teil: ex:CE-Lerninhalt_1 ,
+                          ex:CE-Kompetenzspezifikation_1 .                   
+ex:CE-Lerninhalt_1 hat_Teil: ex:CE-Lerninhalt_2 .
+ex:CE-Lerninhalt_2 hat_Teil: ex:CE-Hinweis_1 .
+ex:CE-Kompetenzspezifikation_1 hat_Teil: ex:CE-Hinweis_2 .
 ```
 
 ## Pattern 7 - CE-Verweis
@@ -1334,7 +1525,33 @@ Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente mo
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Curriculares_Element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+@prefix CE-Verweis: <https://w3id.org/lehrplan/ontology/LP_0030065> .
+@prefix Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: <https://w3id.org/lehrplan/ontology/LP_0030188> .
+
+# properties
+@prefix hat_Verweis: <https://w3id.org/lehrplan/ontology/LP_0030071> .
+@prefix verweist_auf: <https://w3id.org/lehrplan/ontology/LP_0030072> .
+@prefix hat_Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+
+ex:Kompetenz_1 a CE-Kompetenzspezifikation: ;
+                hat_Verweis: ex:Verweis_1 .
+ex:Verweis_1 a Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: ;
+              verweist_auf: ex_Lernbereich_1 ;
+              hat_Beschreibung: ex:Beschreibung_1 .
+ex:Lernbereich_1 a CE-Bereich: .
+CE-Kompetenzspezifikation: rdfs:subClassOf Curriculares_Element: .
+Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: rdfs:subClassOf CE-Verweis: .
 ```
 
 ## Pattern 8 - Funktionen
@@ -1577,6 +1794,60 @@ Kompetenzbereich (NW) -> Bereichsfunktion: hat Funktion {
 
 ```
 **Erläuterung**:
+
+**Das Problem: Viele Namen, eine Bedeutung**
+
+Die 16 Bundesländer haben ihre Lehrpläne strukturell sehr unterschiedlich aufgebaut und verwenden eigene Terminologien. Was in Bayern *Lernbereich* heißt, heißt in Hamburg *Kompetenzbereich*, in Rheinland-Pfalz  oder , in Sachsen ebenfalls Lernbereich, in Nordrhein-Westfalen Bereich, in Sachsen-Anhalt eBereich, in Thüringen Lernbereich oder Schwerpunkt usw. Inhaltlich spielen all diese Klassen dieselbe Rolle: Sie fassen Kompetenzen oder Lerninhalte unter einem thematischen Fokus zusammen.
+
+Ohne ein zusätzliches Zuordnungsmechanismus wäre eine bundeslandübergreifende Abfrage nicht möglich – man müsste jede der gut 200 länderspezifischen CE-Klassen einzeln kennen und benennen.
+
+**Die Lösung: Funktionsspezifikationen**
+
+Die Lehrplan-Ontologie löst dieses Problem mit dem Konzept der **Funktionsspezifikation** (`LP_0000478`). Jede länderspezifische CE-Klasse erhält in ihrer OWL-Klassendefinition eine Restriktion, die über die Property **hat Funktion** (`LP_0000483`) auf ein bestimmtes Funktionsspezifikations-Individuum zeigt. Diese Restriktion ist kein Datenpunkt, der in den Lehrplandaten stehen muss – sie ist fest in der Klassendefinition verankert und gilt damit automatisch für jede Instanz dieser Klasse.
+
+Die Ontologie definiert drei Unterklassen von Funktionsspezifikation:
+
+Die **Strukturierungsfunktion** (`LP_0000482`) beschreibt, wie ein CE-Element den Lehrplan gliedert – ohne selbst inhaltliche Semantik zu tragen:
+
+- **Fragmentfunktion** – Das Element ist ein rein strukturierender Behälter (Kapitel, Abschnitt, Überschrift). Alle 16 Lehrplanfragment-Klassen tragen diese Funktion: *Lehrplanfragment (BY), Lehrplanfragment (HH), Lehrplanfragment (SN)* usw.
+- **Bereichsfunktion** – Das Element gliedert den Lehrplan in inhaltlich zusammenhängende Bereiche. Rund 80 länderspezifische Klassen tragen diese Funktion, darunter *Kompetenzbereich (HH), Lernbereich (BY), Bereich (NW), Leitidee (BE), Inhaltsfeld (HE), Inhalt (HH)* uvm. – trotz unterschiedlicher Namen bilden sie alle einen CE-Bereich ab.
+
+Die **Beschreibungsfunktion** (`LP_0000493`) beschreibt, was ein CE-Element inhaltlich leistet:
+
+- **Kompetenzbeschreibungsfunktion** – Das Element formuliert eine zu erwerbende Kompetenz: *Anforderung (HH), Kompetenzerwartung (BY), Kompetenz (RP), Standard (BE)* usw. → entspricht der generischen Klasse CE-Kompetenzspezifikation.
+- **Lerninhaltsbeschreibungsfunktion** – Das Element benennt einen konkreten Lerngegenstand oder ein Thema → entspricht CE-Lerninhalt.
+- **Hinweisbeschreibungsfunktion** – Das Element enthält einen methodischen oder didaktischen Hinweis → entspricht CE-Hinweis. Auch hier gibt es eine große Vielfalt länderspezifischer Klassen, z.B. *Bemerkung (SN), Hinweis und Anregung (MV), Möglicher Kontext (BE), Erläuterung (BY), Differenzierungsmöglichkeit (RP)*.
+- **Verweisbeschreibungsfunktion** – Das Element ist ein Verweis auf ein anderes Element → entspricht CE-Verweis.
+- **Leitperspektivenbeschreibungsfunktion** – Das Element kodiert eine übergreifende Leitperspektive → entspricht CE-Leitperspektive.
+
+Die **Bezugsfunktion** (LP_0000499) beschreibt, worauf sich ein CE-Element inhaltlich bezieht – d.h. welche Dimension von Kompetenz es adressiert:
+
+- **Prozessbezugsfunktion** – Das Element adressiert prozessorientierte Kompetenzen (wie gelernt oder gehandelt wird).
+- **Inhaltsbezugsfunktion** – Das Element adressiert inhaltsorientierte Kompetenzen (was gelernt wird).
+- **Domänenbezugsfunktion** – Das Element bezieht sich auf eine fachliche Domäne (z.B. Lesen, Schreiben als Kompetenzdomänen).
+
+**Wie die Zuordnung technisch funktioniert**
+
+In OWL wird die Funktionszuordnung als notwendige Bedingung (`rdfs:subClassOf`) mit einer `owl:hasValue`-Restriktion modelliert:
+```
+Lernbereich (BY)
+  rdfs:subClassOf  [
+    owl:onProperty  lp:LP_0000483 (hat Funktion) ;
+    owl:hasValue    lp:LP_0000497 (Bereichsfunktion)
+  ]
+```
+
+Das bedeutet: Jede Instanz von `Lernbereich (BY)` trägt automatisch die Bereichsfunktion – ohne dass in den Lehrplandaten ein expliziter `hat Funktion`-Tripel stehen muss. Ein OWL-Reasoner kann daraus schließen, dass `Lernbereich (BY)` semantisch einem **CE-Bereich** entspricht.
+
+**Was das für Abfragen bedeutet**
+
+Dank der Funktionsspezifikationen kann man bundeslandübergreifend abfragen, ohne die länderspezifischen Klassen zu kennen:
+
+- *"Gib mir alle Kompetenzbereiche aus allen Bundesländern"* → Suche alle CE-Instanzen, deren Klasse `hat Funktion → Bereichsfunktion` trägt.
+- *"Gib mir alle konkreten Anforderungen aus dem Hamburger Deutschlehrplan"* → Suche alle Instanzen, deren Klasse `hat Funktion → Kompetenzbeschreibungsfunktion` trägt, gefiltert auf Hamburg.
+- *"Welche Elemente sind nur Hinweise?"* → Suche alle Instanzen mit `hat Funktion → Hinweisbeschreibungsfunktion`.
+
+Die Funktionsspezifikationen sind damit die zentrale Brücke zwischen der reichen länderspezifischen Terminologie und einer einheitlichen, bundeslandübergreifenden Semantik.
 
 **RDF Daten**: 
 ```
@@ -1872,6 +2143,18 @@ Erhöhtes Anforderungsniveau (ST) -> Leistungskursniveau: rdf:type {
 
 ```
 **Erläuterung**:
+
+**Niveau** (`LP_0000037`) ist die gemeinsame Superklasse für alle Leistungs- und Anforderungsstufen in der Ontologie. Sie gliedert sich in vier thematisch unterschiedliche Unterklassen.
+
+Das **Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch, mit dem Inhalte und Kompetenzen für eine bestimmte Lerngruppe formuliert sind – und damit, auf welchen Schulabschluss hin unterrichtet wird. Die Ontologie definiert vier generische Niveaus: **Hauptschulniveau, Realschulniveau, Gymnasialniveau Sek I** und **Gymnasialniveau Sek II**. Für jedes Bundesland gibt es eigene Subklassen (*Bildungsgangniveau (HH), Bildungsgangniveau (SN)* usw.), und darunter wiederum die konkreten länderspezifischen Individuen.
+
+Die Namen variieren erheblich: Dasselbe Hauptschulniveau heißt in Bayern *Mittelschulniveau*, in Thüringen *Regelschulniveau*, in Schleswig-Holstein *Sekundarstufenniveau*, in Hamburg *Mindestanforderungen*. Das Gymnasialniveau Sek I heißt in Bremen *Erweitertes Anforderungsniveau*, in Rheinland-Pfalz *Erhöhtes Kompetenzniveau*, in Nordrhein-Westfalen *Erweiterungskurs*. Berlin geht etwas anders vor und differenziert nach Abschlusstyp und Niveaustufen A-H: Die Niveaus *BOA, BBR (A–F), EBBR (A–G), MSA (A–G)* und *Gymnasialniveau Sek I (A–H)* bilden die jahrgangsbandweise Kompetenzentwicklung innerhalb eines Abschlussziels ab. (Eine detaillierte Erklärung dazu liefert Pattern 11.)
+
+Das **Fachniveau Sek II** (`LP_0000265`) beschreibt den Kurstyp in der gymnasialen Oberstufe. Die generischen Individuen sind **Grundkursniveau** und **Leistungskursniveau**. Darüber hinaus haben die Bundesländer eigene Subklassen (*Fachniveau Sek II (BY)* usw.) mit länderspezifischen Bezeichnungen für Kursarten (z.B. *Grundlegendes Anforderungsniveau*, *Erhöhtes Anforderungsniveau*, *Leistungskursfach*).
+
+Der **Anforderungsbereich** (`LP_0000802`) ist eine bundesweit einheitliche Taxonomie aus den KMK-Bildungsstandards, die den kognitiven Anspruch einer Aufgabe oder Kompetenz klassifiziert. Die drei Individuen sind fest definiert: **Anforderungsbereich 1 (Reproduktion), Anforderungsbereich 2 (Reorganisation und Transfer)** und **Anforderungsbereich 3 (Reflexion und Problemlösung)**. Im Gegensatz zu Bildungsgang- und Fachniveaus, die organisatorische Rahmenbedingungen beschreiben, charakterisiert der Anforderungsbereich die kognitive Tiefe eines Lernziels – unabhängig von Schulart oder Bundesland.
+
+Das **Fremdsprachenniveau** (`LP_0010001`) 
 
 **RDF Daten**: 
 ```
