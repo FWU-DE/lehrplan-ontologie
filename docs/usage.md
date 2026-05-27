@@ -1,4 +1,4 @@
-# Nutzung der Ontologie
+# Verwendung der Ontologie
 
 ## Release Artefakte
 

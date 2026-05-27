@@ -15,7 +15,7 @@ theme:
     - navigation.path
 
 nav:
-  - start: index.md
+  - Start: index.md
 #  - start: index.en.md
 
   - Ontologien allgemein: ontology.md
@@ -26,6 +26,9 @@ nav:
   - structure: structure.md
 
   - Beispiele: patterns.md
+
+  - SPARQL-Abfragen: sparql.md
+
   - Verwendung: usage.md
 
   - Über uns: about.md

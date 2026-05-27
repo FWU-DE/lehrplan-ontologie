@@ -1,6 +1,6 @@
-# Beispiele / Patterns
+# Patterns
 
-Bei der Entwicklung und Nutzung von Ontologien spielen **Anwendungsmuster** eine entscheidende Rolle bei der Bewältigung wiederkehrender Modellierungsanforderungen. Diese Muster bieten standardisierte, wiederverwendbare semantische Bausteine, die eine konsistente Darstellung der Beziehungen zwischen Instanzen und Entitäten ermöglichen. Darüber hinaus können solche Muster zur Erstellung von SHACL-Shapes verwendet werden, um Einschränkungen in eine Wissensrepräsentation einzubinden. Durch die Befolgung von Anwendungsmustern können Ontologie-Anwender und -Entwickler Einheitlichkeit, Klarheit und Wiederverwendbarkeit in ihren Modellen gewährleisten.
+Bei der Entwicklung und Nutzung von Ontologien spielen **Patterns (Anwendungsmuster)** eine entscheidende Rolle bei der Bewältigung wiederkehrender Modellierungsanforderungen. Diese Muster bieten standardisierte, wiederverwendbare semantische Bausteine, die eine konsistente Darstellung der Beziehungen zwischen Instanzen und Entitäten ermöglichen. Darüber hinaus können solche Muster zur Erstellung von SHACL-Shapes verwendet werden, um Einschränkungen in eine Wissensrepräsentation einzubinden. Durch die Befolgung von Anwendungsmustern können Ontologie-Anwender und -Entwickler Einheitlichkeit, Klarheit und Wiederverwendbarkeit in ihren Modellen gewährleisten.
 
 Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewendet werden. Jedes Muster enthält eine Visualisierung, eine Erläuterung und die RDF Daten.
 
@@ -364,6 +364,33 @@ Sprechen und Zuhören: {
 
 ```
 **Erläuterung**:
+
+**Titel** (`LP_0000346`) – Property: **hat Titel** (`LP_0030056`)
+
+Ein Titel-Individuum trägt die offizielle Bezeichnung eines Elements – also den Namen, wie er im gedruckten oder digitalen Lehrplan erscheint. Dabei gilt: Der `Titel` ist nicht identisch mit dem `rdfs:label` des Elements. Das `rdfs:label` ist eine technische Beschriftung für die Ontologie; der `Titel` ist das Pendant zum originalen Dokumenttext.
+
+`hat Titel` hat keinen deklarierten Domain-Constraint – es kann sowohl an Lehrplänen (dann trägt es den offiziellen Dokumenttitel, z.B. *"Lehrplan Plus Gymnasium Bayern – Deutsch"*) als auch an einzelnen Curricularen Elementen hängen. 
+
+**Beschreibung** (`LP_0030003`) – Property: **hat Beschreibung** (`LP_0030051`)
+
+Die Beschreibung trägt längere, erläuternde Texte. Das können sein: Erläuterungen zu Kompetenzbereichen, methodische Hinweise und Anregungen, didaktische Kommentare, Konkretisierungsbeispiele, Literaturhinweise, Kontextinformationen oder Freitexte zum Bildungsauftrag oder den allgemeinen Fachzielen.
+
+Im Gegensatz zu `hat Titel` hat `hat Beschreibung` die **Domain** `Curriculares Element` – es hängt also ausschließlich an CE-Elementen, nicht direkt am Lehrplan-Individuum. Der eigentliche Beschreibungstext wird nicht als `rdfs:label`, sondern als `dc:description` (`http://purl.org/dc/elements/1.1/description`) am Beschreibungs-Individuum gespeichert. Das erlaubt es, den Text sprachlich zu kennzeichnen und beliebig lang zu halten.
+
+**Identifikationsnummer** (`LP_0000347`) – Property: **hat Nummer** (`LP_0030057`)
+
+Die Identifikationsnummer trägt die im Originaldokument verwendete Kennzeichnung eines Elements – also z.B. *"3.1", "LB 2"* oder *"A.1"*. Sie hat ebenfalls die **Domain** `Curriculares Element` und dient dazu, die originale Nummerierung oder Codierung aus dem Quelldokument maschinenlesbar zu bewahren.
+
+Das ist wichtig, weil die IRI eines Elements in der Ontologie zwar eindeutig, aber opak ist (`lp-sachsen.org/resource/55099`). Die Identifikationsnummer stellt den Bezug zur menschenlesbaren Struktur des Originaldokuments her und macht es möglich, ein ontologisches Element direkt auf eine bestimmte Stelle im gedruckten Lehrplan zurückzuführen.
+
+Die drei Klassen ergänzen sich so, dass vollständige Lehrplaninhalte lückenlos abgebildet werden können:
+```
+Curriculares Element
+  ├─[hat Titel]──────────▶ Titel       → der Name des Elements im Dokument
+  ├─[hat Nummer]─────────▶ Identifikationsnummer → z.B. "3.1" oder "LB 2"
+  └─[hat Beschreibung]───▶ Beschreibung → erläuternder Text
+```
+Dabei ist wichtig, dass jedes **Curriculare Element** einen `Titel` trägt, aber nicht zwingend eine `Beschreibung` oder eine `Identifikationsnummer`.
 
 **RDF Daten**: 
 ```
@@ -1851,7 +1878,46 @@ Die Funktionsspezifikationen sind damit die zentrale Brücke zwischen der reiche
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Funktionsspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000478> .
+@prefix Beschreibungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000493> .
+@prefix Strukturierungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000482> .
+@prefix Curriculares_Element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix Element_NW: <https://w3id.org/lehrplan/ontology/LP_0002085> .
+@prefix Kompetenzerwartung_NW: <https://w3id.org/lehrplan/ontology/LP_0002188> .
+@prefix Kompetenzbereich_NW: <https://w3id.org/lehrplan/ontology/LP_0002187> .
+@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+
+# Individuen
+@prefix Kompetenzbeschreibungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000479> .
+@prefix Bereichsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000497> .
+
+# properties
+@prefix hat_Funktion: <https://w3id.org/lehrplan/ontology/LP_0000483> .
+
+ex:Kompetenz a Kompetenzerwartung_NW: .
+Kompetenzerwartung_NW: hat_Funktion: Kompetenzbeschreibungsfunktion:
+                       rdfs:subClassOf Element_NW: .
+CE-Kompetenzspezifikation: hat_Funktion: Kompetenzbeschreibungsfunktion:
+                           rdfs:subClassOf Curriculares_Element: .
+Kompetenzbeschreibungsfunktion: a Beschreibungsfunktion: .                       
+Beschreibungsfunktion: rdfs:subClassOf Funktionsspezifikation: .
+ex:Bereich a Kompetenzbereich_NW: .
+Kompetenzbereich_NW: hat_Funktion: Bereichsfunktion:
+                     rdfs:subClassOf Element_NW: .
+CE-Bereich: hat_Funktion: Bereichsfunktion:
+                     rdfs:subClassOf Curriculares_Element: .
+Bereichsfunktion: a Strukturierungsfunktion: .                       
+Strukturierungsfunktion: rdfs:subClassOf Funktionsspezifikation: .
+Element_NW: rdfs:subClassOf Curriculares_Element: .
 ```
 
 ## Pattern 9 - Niveaus
@@ -2158,7 +2224,54 @@ Das **Fremdsprachenniveau** (`LP_0010001`)
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Niveau: <https://w3id.org/lehrplan/ontology/LP_0000037> .
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Anforderungsbereich: <https://w3id.org/lehrplan/ontology/LP_0000802> .
+@prefix Fachniveau_Sek_II: <https://w3id.org/lehrplan/ontology/LP_0000265> .
+@prefix Fremdsprachenniveau: <https://w3id.org/lehrplan/ontology/LP_0010001> .
+@prefix Bildungsgangniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0001035> .
+@prefix Gymnasialniveau_Sek_I: <https://w3id.org/lehrplan/ontology/LP_0000069> .
+@prefix Grundkursniveau: <https://w3id.org/lehrplan/ontology/LP_0000530> .
+@prefix Leistungskursniveau: <https://w3id.org/lehrplan/ontology/LP_0000531> .
+@prefix Fachniveau_Sek_II_ST: <https://w3id.org/lehrplan/ontology/LP_0002094> .
+
+# Individuen
+@prefix Gymnasialniveau_Sek_I_ST: <https://w3id.org/schulart/RP_0000296> .
+@prefix Sachsen-Anhalt: <https://w3id.org/lehrplan/ontology/LP_3000053> .
+@prefix Anforderungsbereich_2: <https://w3id.org/lehrplan/ontology/LP_0000804> .
+@prefix Grundlegendes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000526> .
+@prefix Erhöhtes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000527> .
+@prefix B1: <https://w3id.org/lehrplan/ontology/LP_0030315> .
+
+# properties
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+
+Gymnasialniveau_Sek_I_ST: a Bildungsgangniveau_ST: ,
+                            Gymnasialniveau_Sek_I .
+Bildungsgangniveau_ST: von_Bundesland: Sachsen-Anhalt: ;
+                       rdfs:subClassof Bildungsgangniveau: .                       
+Gymnasialniveau_Sek_I rdfs:subClassof Bildungsgangniveau: .
+Bildungsgangniveau: rdfs:subClassof Niveau: .
+Anforderungsbereich_2: a Anforderungsbereich: .
+Anforderungsbereich rdfs:subClassof Niveau: .
+Grundlegendes_Anforderungsniveau_ST: a Grundkursniveau: ,
+                                       Fachniveau_Sek_II_ST: .
+Erhöhtes_Anforderungsniveau_ST: a Leistungskursniveau: ,
+                                  Fachniveau_Sek_II_ST: .
+Grundkursniveau: rdfs:subClassof Fachniveau_Sek_II: .
+Leistungskursniveau: rdfs:subClassof Fachniveau_Sek_II: .
+Fachniveau_Sek_II_ST: rdfs:subClassof Fachniveau_Sek_II: .
+Fachniveau_Sek_II: rdfs:subClassof Niveau: .
+B1: a Fremdsprachenniveau: .
+Fremdsprachenniveau: rdfs:subClassof Niveau: .
 ```
 
 ## Pattern 10 - Bildungsgangniveaus, Bildungsgänge und Abschlüsse
@@ -2398,7 +2511,48 @@ Für Lehrplandaten bedeutet das: Eine CE-Kompetenzspezifikation, die `hat Bildun
 
 **RDF Daten**: 
 ```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Niveau: <https://w3id.org/lehrplan/ontology/LP_0000037> .
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Realschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000832> .
+@prefix Bildungsgangniveau_RP: <https://w3id.org/lehrplan/ontology/LP_0001019> .
+@prefix Realschulbildungsgang: <https://w3id.org/lehrplan/ontology/LP_0000814> .
+@prefix Bildungsgang: <https://w3id.org/lehrplan/ontology/LP_0000816> .
+@prefix Schulabschluss: <https://w3id.org/lehrplan/ontology/LP_0000019> .
+@prefix Mittlerer_Schulabschluss: <https://w3id.org/lehrplan/ontology/LP_0000078> .
+@prefix Mittlerer_Abschluss_RP: <https://w3id.org/lehrplan/ontology/LP_0000204> .
+
+# Individuen
+@prefix Mittleres_Kompetenzniveau_RP: <https://w3id.org/schulart/RP_0000151> .
+@prefix Rheinland-Pfalz: <https://w3id.org/lehrplan/ontology/LP_3000046> .
+@prefix Qualifizierter_Sekundarabschluss_I_RP: <https://w3id.org/lehrplan/ontology/LP_0000281> .
+
+# properties
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000833> .
+@prefix benötigt_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000071> .
+@prefix endet_mit_Abschluss: <https://w3id.org/lehrplan/ontology/LP_0000021> .
+
+Qualifizierter_Sekundarabschluss_I_RP: a Mittlerer_Abschluss_RP: .
+Mittlerer_Abschluss_RP: rdfs:subClassof Mittlerer_Schulabschluss: .
+Mittlerer_Schulabschluss: rdfs:subClassof Schulabschluss: ;
+                          benötigt_Niveau: Realschulniveau: .
+Realschulbildungsgang: rdfs:subClassof Bildungsgang: ;
+                       endet_mit_Abschluss: Mittlerer_Schulabschluss: ;
+                       hat_Bildungsgangniveau: Realschulniveau: .            
+Mittleres_Kompetenzniveau_RP: a Realschulniveau: ,
+                                Bildungsgangniveau_RP: .
+Bildungsgangniveau_RP :rdfs:subClassof Bildungsgangniveau: ;
+                      von_Bundesland: Rheinland-Pfalz: .                       
+Realschulniveau: rdfs:subClassof Bildungsgangniveau: .
+Bildungsgangniveau: rdfs:subClassof Niveau: .
 ```
 
 ## Pattern 11 - Niveaustufen BE/BB
@@ -2453,200 +2607,6 @@ Für Lehrplandaten bedeutet das: Eine CE-Kompetenzspezifikation, die `hat Bildun
 **Erläuterung**:
 
 **RDF Daten**: 
-```
-
-```
-
-
-# SPARQL-Abfragen
-
-## Bundeslandübergreifende Abfragen
-
-**Welche Lehrpläne gibt es im Bundesland Sachsen?**
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT ?Lehrplan
-WHERE {
-?Lehrplan a lp:LP_0000438 .
-?Lehrplan lp:LP_0000029 lp:LP_3000047 .
-}
-```
-oder
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT ?Lehrplan
-WHERE {
-?Lehrplan a lp:LP_0000818 .
-}
-```
-**Wie viele Lehrpläne gibt es in Sachsen?**
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT DISTINCT COUNT(?Lehrplan)
-WHERE {
-?Lehrplan a lp:LP_0000818 .
-}
-```
-
-**Welche Fächer gibt es im Bundesland Sachsen?**
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT DISTINCT ?Schulfach
-WHERE {
-    ?s a lp:LP_0000001 . 
-    ?s lp:LP_0000029 lp:LP_3000047 .
-    ?s rdfs:label ?Schulfach .
-} 
-```
-
-**Welche Schularten gibt es im Bundesland Sachsen?**
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT DISTINCT ?Schulart
-WHERE {
-    ?s a lp:LP_0000111 .
-    ?s lp:LP_0000029 lp:LP_3000047 .
-    ?s rdfs:label ?Schulart .
-}
-```
-
-**In welchen Lehrplänen kommt der Begriff "Zelle" vor?**
-
-```
-PREFIX lp: <https://w3id.org/lehrplan/ontology/>
-
-SELECT *
-WHERE {
-    ?Lehrplan a lp:LP_0000438 .
-    ?Lehrplan rdfs:label ?LehrplanTitel .
-    # Verbindung zwischen Objekt und Lehrplan fehlt
-    ?Objekt rdfs:label ?ObjektTitel .
-    FILTER(regex(str(?ObjektTitel ), "zelle", "i"))
-}
-```
-
-## SPARQL-Abfragen der Kompetenzfragen
-
-*	Welche Verknüpfung besteht zwischen Element X und Element Y?
-
-```
-
-```
-
-*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarland?
-
-```
-
-```
-
-*	Wie hängen die Niveaustufen in Berlin/Brandenburg mit den Jahrgangsstufen zusammen?
-
-```
-
-```
-
-*	Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?
-
-```
-
-```
-
-*	Welcher Bereich aus Hamburg entspricht einem Element aus Bremen?
-
-```
-
-```
-
-*	Anhand welcher Lerninhalte kann ich eine Kompetenz erlernen?
-
-```
-
-```
-
-*	Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?
-
-```
-
-```
-
-*	Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?
-
-```
-
-```
-
-*	In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?
-
-```
-
-```
-
-*	Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?
-
-```
-
-```
-
-*	Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.
-
-```
-
-```
-
-*	Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.
-
-```
-
-```
-
-*	Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.
-
-```
-
-```
-
-*	Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.
-
-```
-
-```
-
-*	Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.
-
-```
-
-```
-
-*	Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.
-
-```
-
-```
-
-*	Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.
-
-```
-
-```
-
-*	Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.
-
-```
-
-```
-
-*	Ich möchte abbilden, welche Kompetenzen im Fach Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.
-
 ```
 
 ```
