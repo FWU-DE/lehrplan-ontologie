@@ -2220,7 +2220,7 @@ Das **Fachniveau Sek II** (`LP_0000265`) beschreibt den Kurstyp in der gymnasial
 
 Der **Anforderungsbereich** (`LP_0000802`) ist eine bundesweit einheitliche Taxonomie aus den KMK-Bildungsstandards, die den kognitiven Anspruch einer Aufgabe oder Kompetenz klassifiziert. Die drei Individuen sind fest definiert: **Anforderungsbereich 1 (Reproduktion), Anforderungsbereich 2 (Reorganisation und Transfer)** und **Anforderungsbereich 3 (Reflexion und Problemlösung)**. Im Gegensatz zu Bildungsgang- und Fachniveaus, die organisatorische Rahmenbedingungen beschreiben, charakterisiert der Anforderungsbereich die kognitive Tiefe eines Lernziels – unabhängig von Schulart oder Bundesland.
 
-Das **Fremdsprachenniveau** (`LP_0010001`) 
+Das **Fremdsprachenniveau** (`LP_0010001`) bildet die Kompetenzstufen des **Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER)** als sechs Individuen ab (von *A1 - Anfänger* (`LP_0030317`) bis *C2 - Annähernd muttersprachliche Kenntnisse* (`LP_0030313`)). Diese Niveaus sind bundeslandunabhängig und einheitlich – im Gegensatz zu den stark föderalen Bildungsgangniveaus. Sie ermöglichen es, Lehrplanelemente aus Fremdsprachenfächern direkt mit dem international anerkannten GER-Standard zu verknüpfen.
 
 **RDF Daten**: 
 ```
@@ -2564,6 +2564,84 @@ Bildungsgangniveau: rdfs:subClassof Niveau: .
 ```
 **Erläuterung**:
 
+**Berlin** und **Brandenburg** teilen seit 2004 gemeinsame Rahmenlehrpläne – ein bundesweites Unikat. Das spiegelt sich direkt in der Ontologie wider: Die Niveaustufen-Klasse heißt bezeichnenderweise **Niveaustufe (BE/BB)** (`LP_0000443`).
+
+Der Berliner und Brandenburger Rahmenlehrplan strukturiert Kompetenzen nicht immer nach Jahrgangsstufen, sondern nach **Buchstabenstufen A bis H**, die den Grad der Kompetenzentwicklung beschreiben. Eine Niveaustufe ist dabei ein **Curriculares Element** – sie steht als Behälter in der Lehrplanhierarchie und enthält die konkreten Standards, die für diese Stufe gelten. Die acht Individuen **Niveaustufe A** bis **Niveaustufe H** sind für BE und BB gemeinsam definiert.
+
+**Die Verknüpfung mit Jahrgangsstufen**
+
+Das Besondere am BE/BB-System: Jede Bildungsgangniveau-Stufe (z.B. *"MSA D"* oder *"Gymnasialniveau Sek I F"*) trägt über **hat Jahrgangsstufe** (`LP_0000026`) direkt die Jahrgangsstufen, in denen diese Stufe typischerweise erreicht wird. Dabei überlappen sich benachbarte Stufen bewusst über Jahrgangsgrenzen hinweg – denn der Rahmenlehrplan sieht individuelle Kompetenzentwicklung vor, keine starren Stufenschwellen. Die Zuordnung aus den Ontologiedaten ist die folgende:
+
+**Niveaustufe → Jahrgangsstufen**
+- A → 1
+- B → 1–3
+- C → 2–5
+- D → 4–7
+- E → 6–8
+- F → 8–10
+- G → 9–10
+- H → 10
+
+Diese Jahrgangsstufen gelten übergreifend für alle Abschlusstypen (*BOA, BBR, EBBR, MSA, Gymnasialniveau Sek I*). Die konkreten Bildungsgangniveau-Individuen tragen dieselben Jahrgangsstufen, jeweils angepasst an die Reichweite des Abschlusses – z.B. reicht *BOA* nur bis Stufe E (Jahrgänge 1–8), während das *Gymnasialniveau Sek I* alle acht Stufen A–H (Jahrgänge 1–10) umfasst.
+
+**Verknüpfung mit Abschlüssen: Die Bildungsgangniveaus**
+
+Über die Property **hat Niveau** (`LP_0000840`) sind die Niveaustufen-Individuen (A–H) direkt mit den abschlussspezifischen Bildungsgangniveau-Individuen verknüpft. So zeigt *Niveaustufe A* auf *BOA A, BBR A, EBBR A, MSA A und Gymnasialniveau Sek I A* gleichzeitig – und stellt damit die gemeinsame Buchstabenstufe als verbindendes Konzept her. Umgekehrt zeigt jedes Bildungsgangniveau-Individuum über **ist Niveaustufe von** (`LP_0000580`) zurück auf seine generische Buchstabenstufe.
+
+**Für Berlin (`Bildungsgangniveau (BE)`):**
+
+Jede Buchstabenstufe existiert einmal je Abschlusstyp.
+
+BOA-Niveaus (Berufsorientierungsabschluss, Stufen A–E):
+
+LP_0000583 – BOA A
+LP_0000584 – BOA B
+LP_0000585 – BOA C
+LP_0000586 – BOA D
+LP_0000587 – BOA E
+
+MSA-Niveaus (Mittlerer Schulabschluss, Stufen A–G):
+
+LP_0000601 – MSA A
+LP_0000602 – MSA B
+LP_0000603 – MSA C
+LP_0000604 – MSA D
+LP_0000605 – MSA E
+LP_0000606 – MSA F
+LP_0000607 – MSA G
+
+Gymnasialniveau Sek I BE (Stufen A–H):
+
+LP_0000608 – Gymnasialniveau Sek I A (BE)
+LP_0000609 – Gymnasialniveau Sek I B (BE)
+LP_0000610 – Gymnasialniveau Sek I C (BE)
+LP_0000611 – Gymnasialniveau Sek I D (BE)
+LP_0000612 – Gymnasialniveau Sek I E (BE)
+LP_0000613 – Gymnasialniveau Sek I F (BE)
+LP_0000614 – Gymnasialniveau Sek I G (BE)
+LP_0000616 – Gymnasialniveau Sek I H (BE)
+
+Berufsbildungsreife BBR Niveau A–F (Jg. 1–10) Hauptschulniveau
+Erweiterte Berufsbildungsreife EBBR Niveau A–G (Jg. 1–10) Hauptschulniveau
+Mittlerer SchulabschlussMSA Niveau A–G (Jg. 1–10) Realschulniveau
+Gymnasialniveau Sek I Gymnasialniveau Sek I (BE) A–H (Jg. 1–10) Gymnasialniveau Sek I
+Oberstufe Oberstufenniveau (BE) Gymnasialniveau Sek II
+
+**Für Brandenburg (`Bildungsgangniveau (BB)`):**
+
+Erster AbschlussEBR NiveauA–GHauptschulniveau
+Mittlerer AbschlussFOR NiveauA–GRealschulniveau
+Mittlerer Abschluss mit GymnasialberechtigungFOR-Q NiveauA–HGymnasialniveau Sek I
+OberstufeOberstufenniveau (BB)—Gymnasialniveau Sek II
+
+**Wie Vergleichbarkeit mit anderen Bundesländern hergestellt wird**
+
+Dank zweier Mechanismen lassen sich BE/BB-Lehrplaninhalte bundeslandübergreifend vergleichen:
+
+**1. Über das generische Bildungsgangniveau:** Jede BE/BB-Niveau-Klasse ist Subklasse eines generischen Niveaus – `BBR Niveau` und `EBBR Niveau` erben von `Hauptschulniveau`, `MSA Niveau` von `Realschulniveau`, `Gymnasialniveau Sek I (BE)` von `Gymnasialniveau Sek I`. Ein OWL-Reasoner kann damit automatisch schließen: Eine Anforderung auf `MSA F` (Jg. 8–9) entspricht generisch dem Realschulniveau – und ist damit direkt vergleichbar mit z.B. bayerischen Anforderungen auf `Realschulniveau (BY)`.
+
+**2. Über die Jahrgangsstufen:** Da jedes Bildungsgangniveau-Individuum dieselben Jahrgangsstufen-IRIs trägt wie alle anderen Bundesländer, kann man direkt fragen: *"Welche Kompetenzanforderungen gibt es in Jahrgangsstufe 8 auf Hauptschulniveau in allen Bundesländern?"* – und erhält sowohl bayerische Kompetenzerwartungen auf Mittelschulniveau als auch Berliner Standards auf BBR E / EBBR E-Niveau, die beide in Jahrgangsstufe 8 verortet und beide als Hauptschulniveau klassifiziert sind.
+
 **RDF Daten**: 
 ```
 
@@ -2578,12 +2656,32 @@ Bildungsgangniveau: rdfs:subClassof Niveau: .
 ```
 **Erläuterung**:
 
+Zeitangaben werden benötigt, um Lehrplanelemente nicht nur inhaltlich, sondern auch zeitlich zu verankern – z.B. den zeitlichen Rahmen, in dem ein Inhalt behandelt werden soll.
+
+Die Klasse **Data Item** (`IAO_0000027`) stammt aus der *Information Artifact Ontology (IAO)*, einer weitverbreiteten OBO-Bibliotheksontologie. Sie bezeichnet eine abstrakte Informationseinheit – also einen Datenpunkt, der einen Wert repräsentiert. In der MEM-Ontologie wird sie als Superklasse für alle strukturierten Angaben genutzt, die keinen eigenständigen Gegenstand in der Welt beschreiben, sondern Messwerte, Datumsangaben oder andere skalare Informationen tragen.
+
+**Unit** (`UO_0000000`) stammt aus der *Units of Measurement Ontology (UO)* und bezeichnet eine Maßeinheit. In der MEM-Ontologie wird sie herangezogen, um Zeitangaben mit einer Einheit zu versehen – z.B. „Stunden", „Wochen" oder „Schuljahr". Eine Unit ist dabei das Maß, das einer numerischen Zeitangabe erst Bedeutung gibt: Die Zahl „2" allein sagt nichts; erst „2 Unterrichtsstunden" oder „2 Schulwochen" ist eine sinnvolle curriculare Aussage.
+
+Die **Zeitspezifikation** (`LP_0000508`) ist die LP-eigene Klasse, die eine konkrete Zeitangabe als Ganzes bündelt. Sie kombiniert einen numerischen Wert mit einer Unit zu einer vollständigen Zeitaussage – z.B. "45 Minuten" oder "1 Schulhalbjahr". Sie kann an Curricularen Elementen hängen, um zeitliche Empfehlungen oder Vorgaben maschinenlesbar zu machen: Wie viel Unterrichtszeit ist für diesen Lernbereich vorgesehen? Über welchen Zeitraum soll ein Thema behandelt werden?
+
+Die drei Konzepte bauen aufeinander auf:
+```
+Zeitspezifikation
+  ├─[hat Wert]──▶ numerischer Wert (z.B. "45")     ← Data Item
+  └─[hat Einheit]▶ Unit (z.B. "Unterrichtsminuten") ← UO_0000000
+```
+Damit folgt die Zeitmodellierung demselben Prinzip wie der Rest der MEM-Ontologie: Statt Freitext – *"ca. 45 Minuten"* – werden Wert und Einheit getrennt maschinenlesbar erfasst. Das ermöglicht automatische Auswertungen, z.B. die Berechnung der Gesamtstundenzahl eines Lehrplans oder den Vergleich von Zeitvorgaben zwischen Bundesländern.
+
 **RDF Daten**: 
 ```
 
 ```
 
 ## Pattern 13 - Gültigkeitsbereich
+
+**-> aktuell noch nicht in der Ontologie modelliert!**
+`Gültigkeitszeitraum`, `Versionierung` ?
+`GültigAb`, `gültigVon`, `gültigBis`, `inkraftGetreten` ?
 
 ```d2
 

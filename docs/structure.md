@@ -467,8 +467,166 @@ Genaue **Definitionen** der einzelnen Klassen sind [hier](https://fwu-de.github.
 
 ### Instanzen (individuals)
 
+Die Individuen der Ontologie lassen sich in thematische Gruppen gliedern. Im Gegensatz zu den Klassen – die abstrakte Konzepte beschreiben – sind Individuen die konkreten Instanzen, auf die in den Lehrplandaten direkt per IRI verwiesen wird.
+
+**1. Bundesländer (`LP_0000040`)**
+
+Die 16 deutschen Bundesländer als fest definierte Individuen. Jedes Lehrplanelement trägt über `von Bundesland` eine dieser IRIs.
+- `LP_3000049` Baden-Württemberg
+- `LP_3000051` Bayern
+- `LP_3000048` Berlin
+- `LP_3000057` Brandenburg
+- `LP_3000056` Bremen
+- `LP_3000045` Hamburg
+- `LP_3000050` Hessen
+- `LP_3000052` Mecklenburg-Vorpommern
+- `LP_3000043` Niedersachsen
+- `LP_3000044` Nordrhein-Westfalen
+- `LP_3000046` Rheinland-Pfalz
+- `LP_3000055` Saarland
+- `LP_3000047` Sachsen
+- `LP_3000053` Sachsen-Anhalt
+- `LP_3000054` Schleswig-Holstein
+- `LP_3000031` Thüringen
+
+**2. Jahrgangsstufen (`LP_0000009`)**
+
+13 bundeslandunabhängige Individuen für die Jahrgänge 1–13. Alle Lehrplaninhalte referenzieren dieselben IRIs, was die länderübergreifende Vergleichbarkeit nach Jahrgangsstufe ermöglicht.
+
+- LP_2000001 (Jahrgangsstufe 1) bis LP_2000013 (Jahrgangsstufe 13)
+
+**3. Schulstufen (`LP_0000020`)**
+
+Individuen, die mehrere Jahrgangsstufen zu pädagogischen Abschnitten bündeln:
+
+- `LP_0000036` Primarbereich
+- `LP_0000045` Sekundarbereich I
+- `LP_0000046` Sekundarbereich II
+- `LP_0000051` G8 Einführungsphase
+- `LP_0000050` G8 Qualifikationsphase
+- `LP_0000055` G9 Einführungsphase
+- `LP_0000052` G9 Qualifikationsphase
+
+**4. Bildungsgangniveaus (`LP_0000028`, Auswahl)**
+
+Die fünf bundeslandunabhängigen Superklassen-Niveaus, von denen alle länderspezifischen Niveaus erben. Sie ermöglichen länderübergreifende Abfragen auf generischem Anspruchsniveau.
+
+- `LP_0000073` – Grundschulniveau
+- `LP_0000074` – Hauptschulniveau
+- `LP_0000075` – Realschulniveau
+- `LP_0000069` – Gymnasialniveau Sek I
+- `LP_0000835` – Gymnasialniveau Sek II
+
+Länderspezifische Beispiele:
+
+- `LP_0000025` – Mittelschulniveau (BY) → Hauptschulniveau
+- `LP_0000030` – Realschulniveau (BY) → Realschulniveau
+- `LP_0000023` – Gymnasialniveau Sek I (BY) → Gymnasialniveau Sek I
+- `LP_0000279` – Gymnasialniveau Sek I (SN) → Gymnasialniveau Sek I
+- `LP_0000294` – Oberschulniveau (SN) → Realschulniveau
+- `LP_0000143` – Erhöhtes Kompetenzniveau (RP) → Gymnasialniveau Sek I
+- `LP_0000147` – Grundlegendes Kompetenzniveau (RP) → Hauptschulniveau
+- `LP_0000093` – Erhöhte Anforderungen (HH) → Gymnasialniveau Sek I
+- `LP_0000014` – E Niveau (BW) → Gymnasialniveau Sek I
+- `LP_0000016` – G Niveau (BW) → Hauptschulniveau
+
+**5. Niveaustufen BE/BB (`LP_0000443`)**
+
+Die acht buchstabenbasierten Kompetenzstufen des gemeinsamen Berliner/Brandenburger Rahmenlehrplans:
+
+- `LP_0000464` – Niveaustufe A 
+- `LP_0000465` – Niveaustufe B 
+- `LP_0000466` – Niveaustufe C 
+- `LP_0000467` – Niveaustufe D 
+- `LP_0000468` – Niveaustufe E 
+- `LP_0000469` – Niveaustufe F 
+- `LP_0000470` – Niveaustufe G 
+- `LP_0000616` – Niveaustufe H 
+
+**. Anforderungsbereiche (`LP_0000802`)**
+
+Drei bundesweit einheitliche KMK-Individuen zur Klassifizierung des kognitiven Anspruchs:
+
+- `LP_0000803` – Anforderungsbereich 1: Reproduktion
+- `LP_0000804` – Anforderungsbereich 2: Reorganisation und Transfer
+- `LP_0000805` – Anforderungsbereich 3: Reflexion und Problemlösung
+
+**7. Fremdsprachenniveaus (`LP_0010001`)**
+
+Sechs GER-Stufen als bundeslandunabhängige Individuen:
+
+- `LP_0030317` – A1 (Anfänger)
+- `LP_0030316` – A2 (Grundlegende Kenntnisse)
+- `LP_0030315` – B1 (Fortgeschrittene Sprachverwendung)
+- `LP_0030314` – B2 (Selbständige Sprachverwendung)
+- `LP_0030312` – C1 (Fachkundige Sprachkenntnisse)
+- `LP_0030313` – C2 (Annähernd muttersprachliche Kenntnisse)
+
+**8. Funktionsspezifikations-Individuen**
+
+Die Individuen, die als OWL-Restriktionen in den Klassendefinitionen aller länderspezifischen CE-Klassen verankert sind und ihre semantische Rolle maschinenlesbar machen. Sie sind das zentrale Werkzeug für länderübergreifende Abfragen. (s. *Mapping unterschiedlicher Terminologien der Bundesländer* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#mapping-unterschiedlicher-terminologien-der-bundeslander](Ontologie-Modell) oder *Pattern 8 - Funktionen* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/#pattern-8-funktionen](Patterns))
+
+Strukturierungsfunktionen:
+
+- `LP_0000627` – Fragmentfunktion
+- `LP_0000497` – Bereichsfunktion
+
+Beschreibungsfunktionen:
+
+- `LP_0000479` – Kompetenzbeschreibungsfunktion
+- `LP_0000480` – Lerninhaltsbeschreibungsfunktion
+- `LP_0001014` – Hinweisbeschreibungsfunktion
+- `LP_0002158` – Verweisbeschreibungsfunktion
+- `LP_0030326` – Leitperspektivenbeschreibungsfunktion
+
+Bezugsfunktionen:
+
+- `LP_0000500` – Prozessbezugsfunktion
+- `LP_0000501` – Inhaltsbezugsfunktion
+- `LP_0002171` – Domänenbezugsfunktion
+
+**9. Schulfächer**
+
+Für generisches KIM Vokabular, s. [https://github.com/dini-ag-kim/schulfaecher](GitHub Repo *Werteliste für allgemeinbildende Schulfächer*) und das [https://skohub.io/dini-ag-kim/schulfaecher/heads/main/w3id.org/kim/schulfaecher/index.html](SKOS Vokabular dazu).
+
+s. *Schulfach-Ontologie* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare](Ontologie-Modell) und [https://fwu-de.github.io/mem-skos-vocabs/](SKOS Vokabular Schulfach Ontologie).
+
+**10. Schularten**
+
+s. *Schulart-Ontologie* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare](Ontologie-Modell) und [https://github.com/FWU-DE/schulart-ontologie](GitHub Repo Schulart Ontologie).
+
 ### Beziehungen (properties)
 
+Hier sind die wichtigsten Properties aufgelistet:
+
+- `BFO_0000051` – **hat Teil**: Die zentrale Strukturrelation der gesamten Ontologie. Sie verbindet übergeordnete mit untergeordneten Elementen: Lehrplan → CE-Fragment → CE-Bereich → CE-Kompetenzspezifikation. Transitiv und asymmetrisch.
+- `BFO_0000050` – **ist Teil von**: Die inverse Property zu `hat Teil`. Ermöglicht die Navigation von einem Element aufwärts zu seinem Elternelement.
+- `LP_0000029` – **von Bundesland** → `Bundesland Bezeichnung`: Bindet jeden Lehrplan und jedes Curriculare Element an ein Bundesland. 
+- `LP_0000812` – **für Schulart** → `Schulart`: Verknüpft einen Lehrplan mit der Schulart, für die er gilt.
+- `LP_0000537` – **hat Schulfach** → `Schulfach`: Verknüpft einen Lehrplan mit dem Unterrichtsfach.
+- `LP_0000026` – **hat Jahrgangsstufe** → `Jahrgangsstufe`: Ordnet einen Lehrplan oder ein CE einer oder mehreren Jahrgangsstufen zu. Mehrfachbelegung möglich, z.B. für Doppeljahrgangsstufen.
+- `LP_0000047` – **hat Schulstufe** → `Schulstufe`: Alternativ oder ergänzend zu `hat Jahrgangsstufe` – ordnet einem Element eine ganze Schulstufe zu (z.B. *Sekundarbereich I*).
+- `LP_0000833` – **hat Bildungsgangniveau** → `Bildungsgangniveau`: Gibt an, auf welchem Leistungsniveau ein Element gilt – z.B. *Realschulniveau* oder *Gymnasialniveau Sek I*. Zentrales Property für die Vergleichbarkeit über Bundesländer hinweg.
+- `LP_0000840` – **hat Niveau** → `Niveau`
+Allgemeinere Variante; verbindet Niveaustufen-Individuen (BE/BB) mit ihren abschlussspezifischen Bildungsgangniveau-Individuen.
+- `LP_0000578` – **hat Niveaustufe** (Domain: `Curriculares Element`, Range: `Niveaustufe (BE/BB)`): Spezifisch für Berlin und Brandenburg: ordnet einem CE die Buchstabenstufe (A–H) zu.
+- `LP_0000580` – **ist Niveaustufe von**: Inverse Property zu `hat Niveau`; zeigt von einem Bildungsgangniveau-Individuum zurück auf seine generische Niveaustufe.
+- `LP_0000071` – **benötigt Niveau**: Gibt an, welches Vorkenntnissniveau als Eingangsvoraussetzung für ein Element erwartet wird.
+- `LP_0000021` – **ermöglicht Abschluss / endet mit Abschluss** → `Schulabschluss`: Verknüpft Bildungsgänge und Schularten mit den erreichbaren Schulabschlüssen. Beide Labels sind in der Ontologie für dieselbe Property definiert.
+- `LP_0000024` – **wird beschrieben von**: Inverse zu `beschreibt` (`IAO_0000136`); von einer Schulart, Jahrgangsstufe oder einem Bundesland aus zeigt sie auf alle Lehrpläne, die diesen Kontext betreffen.
+- `IAO_0000136` – **beschreibt**: BFO/IAO-Property; verbindet einen Lehrplan mit den Entitäten (Schulart, Bundesland), auf die er sich bezieht.
+- `LP_0030056` – **hat Titel** → `Titel`: Trägt die Bezeichnung eines Lehrplans oder CE.
+- `LP_0030051` – **hat Beschreibung** (Domain: `Curriculares Element`) → `Beschreibung`: Trägt längere erläuternde Texte, Hinweise und Beispiele zu einem CE.
+- `LP_0030057` – **hat Nummer** (Domain: `Curriculares Element`) → `Identifikationsnummer`: Trägt die originale Nummerierung oder Codierung aus dem Quelldokument.
+- `LP_0000463` – **uri**: Trägt den URL zum Originaldokument des Lehrplans beim Herausgeber.
+- `LP_0000483` – **hat Funktion** → `Funktionsspezifikation`: Verknüpft länderspezifische CE-Klassen mit ihrer semantischen Rolle (Bereichsfunktion, Kompetenzbeschreibungsfunktion usw.). In der Regel als OWL-Restriktion in der Klassendefinition verankert, nicht als Datentripel.
+- `LP_0030071` – **hat Verweis** → `CE-Verweis`: Hängt einen CE-Verweis an das Element, von dem aus er ausgeht.
+- `LP_0030072` – **verweist auf** (Domain: CE-Verweis)
+: eigt vom CE-Verweis-Individuum auf das eigentliche Ziel des Verweises.
+- `LP_0000343` – **hat Schulartfunktion** → `Schulartfunktion`: Gibt an, welche Funktion eine Schulart im Bildungssystem übernimmt.
+- `LP_0000477` – **konkretisiert Schulart** (Domain: `Schulartfunktion`, Range: `Schulart`): Verknüpft eine Schulartfunktion mit der konkreten Schulart, auf die sie sich bezieht.
+- `LP_0000041` – **hat Einheit**: Verknüpft eine Zeitspezifikation mit ihrer Maßeinheit (z.B. Unterrichtsstunden, Schulwochen).
+- `LP_0000141` – **entspricht KIM Schulart** (*Annotation Property*): Verknüpft eine Schulart mit dem entsprechenden Eintrag im bundesweiten KIM-Vokabular.
 
 ## Mapping unterschiedlicher Terminologien der Bundesländer
 
