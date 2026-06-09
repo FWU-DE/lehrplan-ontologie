@@ -564,7 +564,7 @@ Sechs GER-Stufen als bundeslandunabhängige Individuen:
 
 **8. Funktionsspezifikations-Individuen**
 
-Die Individuen, die als OWL-Restriktionen in den Klassendefinitionen aller länderspezifischen CE-Klassen verankert sind und ihre semantische Rolle maschinenlesbar machen. Sie sind das zentrale Werkzeug für länderübergreifende Abfragen. (s. *Mapping unterschiedlicher Terminologien der Bundesländer* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#mapping-unterschiedlicher-terminologien-der-bundeslander](Ontologie-Modell) oder *Pattern 8 - Funktionen* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/#pattern-8-funktionen](Patterns))
+Die Individuen, die als OWL-Restriktionen in den Klassendefinitionen aller länderspezifischen CE-Klassen verankert sind und ihre semantische Rolle maschinenlesbar machen. Sie sind das zentrale Werkzeug für länderübergreifende Abfragen. (s. *Mapping unterschiedlicher Terminologien der Bundesländer* in Kapitel [Ontologie-Modell](https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#mapping-unterschiedlicher-terminologien-der-bundeslander) oder *Pattern 8 - Funktionen* in Kapitel [Patterns](https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/#pattern-8-funktionen))
 
 Strukturierungsfunktionen:
 
@@ -587,13 +587,13 @@ Bezugsfunktionen:
 
 **9. Schulfächer**
 
-Für generisches KIM Vokabular, s. [https://github.com/dini-ag-kim/schulfaecher](GitHub Repo *Werteliste für allgemeinbildende Schulfächer*) und das [https://skohub.io/dini-ag-kim/schulfaecher/heads/main/w3id.org/kim/schulfaecher/index.html](SKOS Vokabular dazu).
+Für generisches KIM Vokabular, s. [GitHub Repo *Werteliste für allgemeinbildende Schulfächer*](https://github.com/dini-ag-kim/schulfaecher) und das [SKOS Vokabular dazu](https://skohub.io/dini-ag-kim/schulfaecher/heads/main/w3id.org/kim/schulfaecher/index.html).
 
-s. *Schulfach-Ontologie* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare](Ontologie-Modell) und [https://fwu-de.github.io/mem-skos-vocabs/](SKOS Vokabular Schulfach Ontologie).
+s. *Schulfach-Ontologie* in Kapitel [Ontologie-Modell](https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare) und [SKOS Vokabular Schulfach Ontologie](https://fwu-de.github.io/mem-skos-vocabs/).
 
 **10. Schularten**
 
-s. *Schulart-Ontologie* in Kapitel [https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare](Ontologie-Modell) und [https://github.com/FWU-DE/schulart-ontologie](GitHub Repo Schulart Ontologie).
+s. *Schulart-Ontologie* in Kapitel [Ontologie-Modell](https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare) und [GitHub Repo Schulart Ontologie](https://github.com/FWU-DE/schulart-ontologie).
 
 ### Beziehungen (properties)
 
