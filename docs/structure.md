@@ -1,7 +1,7 @@
 # Ontologie-Modell
 ## Verständnis der Wissensstruktur
 
-*Lehrplanwissen repräsentiern. -> was ist überhaupt ein lehrplan im ontolgischen Sinne? → information darüber wie ein prozess ablaufen soll. Lehrprozess und lernprozess. Kompetenz vs. Kompetenzspezifikation*
+*Lehrplanwissen repräsentiern -> was ist überhaupt ein lehrplan im ontolgischen Sinne? → information darüber wie ein Prozess ablaufen soll. Lehrprozess und lernprozess. Kompetenz vs. Kompetenzspezifikation*
 
 ## Aufbau und Struktur der Lehrplan Ontologie
 
@@ -472,6 +472,7 @@ Die Individuen der Ontologie lassen sich in thematische Gruppen gliedern. Im Geg
 **1. Bundesländer (`LP_0000040`)**
 
 Die 16 deutschen Bundesländer als fest definierte Individuen. Jedes Lehrplanelement trägt über `von Bundesland` eine dieser IRIs.
+
 - `LP_3000049` Baden-Württemberg
 - `LP_3000051` Bayern
 - `LP_3000048` Berlin
@@ -543,7 +544,7 @@ Die acht buchstabenbasierten Kompetenzstufen des gemeinsamen Berliner/Brandenbur
 - `LP_0000470` – Niveaustufe G 
 - `LP_0000616` – Niveaustufe H 
 
-**. Anforderungsbereiche (`LP_0000802`)**
+**6. Anforderungsbereiche (`LP_0000802`)**
 
 Drei bundesweit einheitliche KMK-Individuen zur Klassifizierung des kognitiven Anspruchs:
 

@@ -1,6 +1,6 @@
 # SPARQL-Abfragen
 
-## Bundeslandübergreifende Abfragen
+## Allgemeine Abfragen
 
 **Welche Lehrpläne gibt es im Bundesland Sachsen?**
 

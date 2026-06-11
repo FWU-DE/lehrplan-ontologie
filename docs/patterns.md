@@ -2598,101 +2598,437 @@ Für Lehrplandaten bedeutet das: Eine CE-Kompetenzspezifikation, die `hat Bildun
 
 ```d2
 
+Niveaustufe (BE/BB): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+"ex:Standard (BE)": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Niveaustufe E: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+MSA E: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+MSA_Niveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Standard (BE): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Realschulniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Bildungsgangniveau: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Jahrgangsstufe: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Jahrgangsstufe 6: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 7: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 8: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Standard (BE)" -> Standard (BE): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Niveaustufe E -> Niveaustufe (BE/BB): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+MSA E -> MSA_Niveau: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Jahrgangsstufe 6 -> Jahrgangsstufe: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Standard (BE)" -> Niveaustufe E: hat Niveaustufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Niveaustufe E -> MSA E: hat Niveau {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+MSA_Niveau -> Realschulniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Realschulniveau -> Bildungsgangniveau: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+MSA E -> Jahrgangsstufe 6: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+MSA E -> Jahrgangsstufe 7: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+MSA E -> Jahrgangsstufe 8: hat Jahrgangsstufe {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
 
 
 ```
+
+**RDF Daten**: 
+```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Realschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000832> .
+@prefix MSA_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000576> .
+@prefix Niveaustufe_BE_BB: <> .
+@prefix Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000009> .
+@prefix Standard_BE: <https://w3id.org/lehrplan/ontology/LP_0001447> .
+
+# Individuen
+@prefix Niveaustufe_E: <https://w3id.org/lehrplan/ontology/LP_0000468> .
+@prefix MSA_E: <https://w3id.org/lehrplan/ontology/LP_0000605> .
+@prefix Jahrgangsstufe_6: <https://w3id.org/lehrplan/ontology/LP_2000006> .
+@prefix Jahrgangsstufe_7: <https://w3id.org/lehrplan/ontology/LP_2000007> .
+@prefix Jahrgangsstufe_8: <https://w3id.org/lehrplan/ontology/LP_2000008> .
+
+# properties
+@prefix hat_Niveaustufe: <https://w3id.org/lehrplan/ontology/LP_0000578> .
+@prefix hat_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000840> .
+@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+
+ex:Standard_BE a Standard_BE: ;
+               hat_Niveaustufe: Niveaustufe_E: .
+Niveaustufe_E: a Niveaustufe_BE_BB: ;
+               hat_Niveau: MSA_E: .
+MSA_E: a MSA_Niveau: ;
+       hat_Jahrgangsstufe: Jahrgangsstufe_6: ,
+                           Jahrgangsstufe_7: ,
+                           Jahrgangsstufe_8: .
+MSA_Niveau: rdfs:subClassOf Realschulniveau: .
+Realschulniveau: rdfs:subClassOf Bildungsgangniveau: .
+Jahrgangsstufe_6: a Jahrgangsstufe: .
+```
+
 **Erläuterung**:
 
-**Berlin** und **Brandenburg** teilen seit 2004 gemeinsame Rahmenlehrpläne – ein bundesweites Unikat. Das spiegelt sich direkt in der Ontologie wider: Die Niveaustufen-Klasse heißt bezeichnenderweise **Niveaustufe (BE/BB)** (`LP_0000443`).
+Berlin und Brandenburg arbeiten seit 2004 mit gemeinsamen Rahmenlehrplänen – ein bundesweites Unikat. Dieses Prinzip spiegelt sich auch in der Ontologie wider, insbesondere in der Klasse **Niveaustufe (BE/BB)** (`LP_0000443`). Der Rahmenlehrplan strukturiert Kompetenzen nicht primär nach Jahrgangsstufen, sondern entlang von acht **Niveaustufen A bis H**, die unterschiedliche Grade der Kompetenzentwicklung abbilden. Eine Niveaustufe fungiert dabei als Curriculares Element, das als Container für die zugehörigen Kompetenzanforderungen dient.
 
-Der Berliner und Brandenburger Rahmenlehrplan strukturiert Kompetenzen nicht immer nach Jahrgangsstufen, sondern nach **Buchstabenstufen A bis H**, die den Grad der Kompetenzentwicklung beschreiben. Eine Niveaustufe ist dabei ein **Curriculares Element** – sie steht als Behälter in der Lehrplanhierarchie und enthält die konkreten Standards, die für diese Stufe gelten. Die acht Individuen **Niveaustufe A** bis **Niveaustufe H** sind für BE und BB gemeinsam definiert.
+Kompetenzspezifikationen werden in BE/BB stets einer solchen Niveaustufe über **hat Niveaustufe** zugeordnet. Diese Niveaustufen sind jedoch allein noch nicht hinreichend für eine Vergleichbarkeit, da Kompetenzen immer im Kontext eines Bildungsgangniveaus interpretiert werden müssen. Eine reine Betrachtung auf Ebene der Jahrgangsstufe ist daher nicht ausreichend.
 
-**Die Verknüpfung mit Jahrgangsstufen**
+Die eigentliche Konkretisierung erfolgt über die **Bildungsgangniveaus**, die den angestrebten **Abschluss** berücksichtigen. Jedes Bildungsgangniveau ist eine Kombination aus einer *BE/BB-Niveaustufe (A–H)* und einem spezifischen *Abschluss* (z. B. *BBR, EBBR, MSA* oder *Gymnasialniveau Sek I*). Über die Property **hat Niveau** (`LP_0000840`) sind die generischen Niveaustufen direkt mit diesen abschlussspezifischen Ausprägungen verknüpft (z. B. *Niveaustufe A → BOA A, BBR A, EBBR A, MSA A, Gymnasialniveau Sek I A*). Umgekehrt referenzieren die Bildungsgangniveaus über **ist Niveaustufe von** (`LP_0000580`) zurück auf die zugrunde liegende Buchstabenstufe.
 
-Das Besondere am BE/BB-System: Jede Bildungsgangniveau-Stufe (z.B. *"MSA D"* oder *"Gymnasialniveau Sek I F"*) trägt über **hat Jahrgangsstufe** (`LP_0000026`) direkt die Jahrgangsstufen, in denen diese Stufe typischerweise erreicht wird. Dabei überlappen sich benachbarte Stufen bewusst über Jahrgangsgrenzen hinweg – denn der Rahmenlehrplan sieht individuelle Kompetenzentwicklung vor, keine starren Stufenschwellen. Die Zuordnung aus den Ontologiedaten ist die folgende:
+In Berlin existiert jede Buchstabenstufe einmal je Abschlusstyp (z. B. *BOA A–E, MSA A–G, Gymnasialniveau Sek I A–H*), während in Brandenburg entsprechende Bildungsgangniveaus (z. B. *EBR, FOR, FOR-Q*) strukturell analog organisiert sind. Die konkrete Ontologie-Verknüpfung ermöglicht es, dass einer Kompetenz – über die Zuordnung zu einer Niveaustufe und die anschließende Zuordnung zu einem Bildungsgangniveau – letztlich ein spezifisches Niveau (z. B. *A-EBBR*) zugewiesen wird.
 
-**Niveaustufe → Jahrgangsstufen**
+Ein zentrales Merkmal des BE/BB-Systems ist die **Verknüpfung von Niveaustufen mit Jahrgangsstufen**, um eine Vergleichbarkeit zu den anderen Bundesländern herstellen zu können. Jede Bildungsgangniveau-Stufe trägt über **hat Jahrgangsstufe** (`LP_0000026`) die Jahrgänge, in denen sie typischerweise erreicht wird. Diese Zuordnung ist bewusst überlappend gestaltet, da der Rahmenlehrplan individuelle Kompetenzentwicklungen statt starrer Progressionsgrenzen vorsieht. Die generische Zuordnung lautet:
+
 - A → 1
 - B → 1–3
 - C → 2–5
 - D → 4–7
-- E → 6–8
+- E → 6–9
 - F → 8–10
 - G → 9–10
 - H → 10
 
-Diese Jahrgangsstufen gelten übergreifend für alle Abschlusstypen (*BOA, BBR, EBBR, MSA, Gymnasialniveau Sek I*). Die konkreten Bildungsgangniveau-Individuen tragen dieselben Jahrgangsstufen, jeweils angepasst an die Reichweite des Abschlusses – z.B. reicht *BOA* nur bis Stufe E (Jahrgänge 1–8), während das *Gymnasialniveau Sek I* alle acht Stufen A–H (Jahrgänge 1–10) umfasst.
+Diese Jahrgangsstufen gelten abschlusstypübergreifend; die tatsächliche Reichweite hängt vom jeweiligen Bildungsgang ab (z.B. *BOA* bis *Stufe E, Gymnasialniveau Sek I* bis *H*).
 
-**Verknüpfung mit Abschlüssen: Die Bildungsgangniveaus**
+Zusammengefasst heißt das:
 
-Über die Property **hat Niveau** (`LP_0000840`) sind die Niveaustufen-Individuen (A–H) direkt mit den abschlussspezifischen Bildungsgangniveau-Individuen verknüpft. So zeigt *Niveaustufe A* auf *BOA A, BBR A, EBBR A, MSA A und Gymnasialniveau Sek I A* gleichzeitig – und stellt damit die gemeinsame Buchstabenstufe als verbindendes Konzept her. Umgekehrt zeigt jedes Bildungsgangniveau-Individuum über **ist Niveaustufe von** (`LP_0000580`) zurück auf seine generische Buchstabenstufe.
+Der Lehrplan BE/BB verknüpft **Kompetenzspzifikationen** (*Standard (BE)*) mit **Niveaustufen**. Je nach angestrebtem Abschluss, kann aus der Kombination von Niveaustufe BE/BB und Abschluss das richtige Bildungsgangniveau zugeordnet werden, durch welches wiederum die Jahrgangsstufen ermittelt werden können. Auf Ebene der **Jahrgangsstufen** kann eine Vergleichbarkeit zu den anderen Bundesländern hergestellt werden.
 
-**Für Berlin (`Bildungsgangniveau (BE)`):**
+Die Vergleichbarkeit mit anderen Bundesländern wird durch zwei Mechanismen sichergestellt:
 
-Jede Buchstabenstufe existiert einmal je Abschlusstyp.
+1. **Generische Bildungsgangniveaus**: Abschlussspezifische Niveaus (z. B. *MSA*) sind als Subklassen allgemeiner Niveaus (z. B. Realschulniveau) modelliert.
+2. **Standardisierte Jahrgangsstufen**: Da dieselben Jahrgangsstufen-IRIs verwendet werden, lassen sich Anforderungen bundeslandübergreifend vergleichen.
 
-BOA-Niveaus (Berufsorientierungsabschluss, Stufen A–E):
-
-LP_0000583 – BOA A
-LP_0000584 – BOA B
-LP_0000585 – BOA C
-LP_0000586 – BOA D
-LP_0000587 – BOA E
-
-MSA-Niveaus (Mittlerer Schulabschluss, Stufen A–G):
-
-LP_0000601 – MSA A
-LP_0000602 – MSA B
-LP_0000603 – MSA C
-LP_0000604 – MSA D
-LP_0000605 – MSA E
-LP_0000606 – MSA F
-LP_0000607 – MSA G
-
-Gymnasialniveau Sek I BE (Stufen A–H):
-
-LP_0000608 – Gymnasialniveau Sek I A (BE)
-LP_0000609 – Gymnasialniveau Sek I B (BE)
-LP_0000610 – Gymnasialniveau Sek I C (BE)
-LP_0000611 – Gymnasialniveau Sek I D (BE)
-LP_0000612 – Gymnasialniveau Sek I E (BE)
-LP_0000613 – Gymnasialniveau Sek I F (BE)
-LP_0000614 – Gymnasialniveau Sek I G (BE)
-LP_0000616 – Gymnasialniveau Sek I H (BE)
-
-Berufsbildungsreife BBR Niveau A–F (Jg. 1–10) Hauptschulniveau
-Erweiterte Berufsbildungsreife EBBR Niveau A–G (Jg. 1–10) Hauptschulniveau
-Mittlerer SchulabschlussMSA Niveau A–G (Jg. 1–10) Realschulniveau
-Gymnasialniveau Sek I Gymnasialniveau Sek I (BE) A–H (Jg. 1–10) Gymnasialniveau Sek I
-Oberstufe Oberstufenniveau (BE) Gymnasialniveau Sek II
-
-**Für Brandenburg (`Bildungsgangniveau (BB)`):**
-
-Erster AbschlussEBR NiveauA–GHauptschulniveau
-Mittlerer AbschlussFOR NiveauA–GRealschulniveau
-Mittlerer Abschluss mit GymnasialberechtigungFOR-Q NiveauA–HGymnasialniveau Sek I
-OberstufeOberstufenniveau (BB)—Gymnasialniveau Sek II
-
-**Wie Vergleichbarkeit mit anderen Bundesländern hergestellt wird**
-
-Dank zweier Mechanismen lassen sich BE/BB-Lehrplaninhalte bundeslandübergreifend vergleichen:
-
-**1. Über das generische Bildungsgangniveau:** Jede BE/BB-Niveau-Klasse ist Subklasse eines generischen Niveaus – `BBR Niveau` und `EBBR Niveau` erben von `Hauptschulniveau`, `MSA Niveau` von `Realschulniveau`, `Gymnasialniveau Sek I (BE)` von `Gymnasialniveau Sek I`. Ein OWL-Reasoner kann damit automatisch schließen: Eine Anforderung auf `MSA F` (Jg. 8–9) entspricht generisch dem Realschulniveau – und ist damit direkt vergleichbar mit z.B. bayerischen Anforderungen auf `Realschulniveau (BY)`.
-
-**2. Über die Jahrgangsstufen:** Da jedes Bildungsgangniveau-Individuum dieselben Jahrgangsstufen-IRIs trägt wie alle anderen Bundesländer, kann man direkt fragen: *"Welche Kompetenzanforderungen gibt es in Jahrgangsstufe 8 auf Hauptschulniveau in allen Bundesländern?"* – und erhält sowohl bayerische Kompetenzerwartungen auf Mittelschulniveau als auch Berliner Standards auf BBR E / EBBR E-Niveau, die beide in Jahrgangsstufe 8 verortet und beide als Hauptschulniveau klassifiziert sind.
-
-**RDF Daten**: 
-```
-
-```
 
 ## Pattern 12 - Zeitangaben
 
 ```d2
 
+Zeitspezifikation: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+"ex:Lernbereich (BY)": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Zeitspezifikation": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Unterrichtsstunde: {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+Unit: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+data item: {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+Lernbereich (BY): {
+  style: {
+    font-color: white
+    opacity: 1
+    fill: "#9F0E21"
+    stroke: white
+  }
+}
+
+"6": {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 5
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lernbereich (BY)" -> Lernbereich (BY): rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Zeitspezifikation" -> Zeitspezifikation: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Unterrichtsstunde -> Unit: rdf:type {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Lernbereich (BY)" -> "ex:Zeitspezifikation": wird beschrieben von {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Zeitspezifikation" -> "6": hat Wert {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+"ex:Zeitspezifikation" -> Unterrichtsstunde: hat Einheit {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
+
+Zeitspezifikation -> data item: rdfs:subClassOf {
+  style: {
+    stroke: "#9F0E21"
+    stroke-width: 3
+    font-color: "#9F0E21"
+  }
+}
 
 
 ```
+
+**RDF Daten**: 
+```
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lernbereich_BY: <https://w3id.org/lehrplan/ontology/LP_0002046> .
+@prefix Zeitspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000508> .
+@prefix data_item: <http://purl.obolibrary.org/obo/IAO_0000027> .
+@prefix Unit: <http://qudt.org/schema/qudt/Unit> .
+
+# Individuen
+@prefix Unterrichtsstunde: <https://w3id.org/lehrplan/ontology/LP_0000535> .
+
+# properties
+@prefix hat_Einheit: <https://w3id.org/lehrplan/ontology/LP_0000041> .
+@prefix hat_Wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+@prefix wird_beschrieben_von: <https://w3id.org/lehrplan/ontology/LP_0000024> .
+
+ex:Lernbereich_BY a Lernbereich_BY: ;
+                  wird_beschrieben_von: ex:Zeitpezifikation .
+ex:Zeitpezifikation a Zeitpezifikation: ;
+                    hat_Wert: "6"^^xsd:decimal ;
+                    hat_Einheit: Unterrichtsstunde: .
+Unterrichtsstunde: a Unit: .
+Zeitspezifikation: rdfs:subClassOf data_item: .
+```
+
 **Erläuterung**:
 
 Zeitangaben werden benötigt, um Lehrplanelemente nicht nur inhaltlich, sondern auch zeitlich zu verankern – z.B. den zeitlichen Rahmen, in dem ein Inhalt behandelt werden soll.
@@ -2711,10 +3047,6 @@ Zeitspezifikation
 ```
 Damit folgt die Zeitmodellierung demselben Prinzip wie der Rest der MEM-Ontologie: Statt Freitext – *"ca. 45 Minuten"* – werden Wert und Einheit getrennt maschinenlesbar erfasst. Das ermöglicht automatische Auswertungen, z.B. die Berechnung der Gesamtstundenzahl eines Lehrplans oder den Vergleich von Zeitvorgaben zwischen Bundesländern.
 
-**RDF Daten**: 
-```
-
-```
 
 ## Pattern 13 - Gültigkeitsbereich
 
