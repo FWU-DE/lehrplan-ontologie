@@ -66,6 +66,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000542>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000543>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000544>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000545>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000547>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000551>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000571>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000802>))
@@ -1082,6 +1083,14 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000545>
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000545> "Wahlpflichtfach"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000545> "Ggf. könnte auf Wahlfach und Pflichfach geschlossen werden. Dies ist aktuell nicht implementiert."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000545> <https://w3id.org/lehrplan/ontology/LP_0000540>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000547> (Gültigkeitsbereich)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000547> "Ein information content entity, dass den zetlichen Gültigkeitsbereich eines Lehrplans beschreibt."@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000547> "validity scope"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000547> "information content entity that describes the temporal validity of a curriculum")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000547> "Gültigkeitsbereich"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000547> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000551> (Wahlfach)
 
