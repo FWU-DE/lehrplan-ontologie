@@ -116,6 +116,7 @@ Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000477>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000483>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000495>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000537>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000550>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000812>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000833>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000840>))
@@ -400,6 +401,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 :lpe_2 :hat_schulfach :sf_1 ."@de)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000537> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_0000540>))
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000550> (hat Gültigkeitsbereich)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000550> "has validity scope"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000550> "hat Gültigkeitsbereich"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000550> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000550> <https://w3id.org/lehrplan/ontology/LP_0000547>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für Schulart)
 
