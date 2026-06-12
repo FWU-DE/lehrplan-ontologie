@@ -129,6 +129,9 @@ Declaration(DataProperty(<http://www.w3.org/2006/time#inXSDDateTimeStamp>))
 Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000344>))
 Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000460>))
 Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000463>))
+Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000548>))
+Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000549>))
+Declaration(DataProperty(<https://w3id.org/lehrplan/ontology/LP_0000553>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1000>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1001>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1002>))
@@ -495,6 +498,28 @@ DataPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000460> xsd:int)
 # Data Property: <https://w3id.org/lehrplan/ontology/LP_0000463> (uri)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000463> "uri"@de)
+
+# Data Property: <https://w3id.org/lehrplan/ontology/LP_0000548> (von Datum)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000548> "von Datum"@de)
+SubDataPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000548> <https://w3id.org/lehrplan/ontology/LP_0000344>)
+DataPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0000548> <https://w3id.org/lehrplan/ontology/LP_0000547>)
+DataPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000548> xsd:dateTimeStamp)
+
+# Data Property: <https://w3id.org/lehrplan/ontology/LP_0000549> (bis Datum)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000549> "bis Datum"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000549> "to date"@en)
+SubDataPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000549> <https://w3id.org/lehrplan/ontology/LP_0000344>)
+DataPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0000549> <https://w3id.org/lehrplan/ontology/LP_0000547>)
+DataPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000549> xsd:dateTimeStamp)
+
+# Data Property: <https://w3id.org/lehrplan/ontology/LP_0000553> (veröffentlicht am)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000553> "veröffentlicht am"@de)
+SubDataPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000553> <https://w3id.org/lehrplan/ontology/LP_0000344>)
+DataPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0000553> <https://w3id.org/lehrplan/ontology/LP_0000438>)
+DataPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000553> xsd:dateTimeStamp)
 
 
 
