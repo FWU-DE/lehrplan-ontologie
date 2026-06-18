@@ -329,115 +329,243 @@ ORDER BY ?elementLabel
 
 ## Kompetenzfragen
 
-*	Welche Verknüpfung besteht zwischen Element X und Element Y?
+*	**Welche Verknüpfung besteht zwischen Element X und Element Y?**
+
+Direkte Relation X → Y oder Y → X:
+
+[Direkter Link zu Beispiel im SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fvon+%3Fpraedikat+%3Fnach+%3Flabel%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.%0D%0A++++++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+AS+%3Fvon%29++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+AS+%3Fnach%29+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.%0D%0A++++++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+AS+%3Fvon%29++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+AS+%3Fnach%29+%7D%0D%0A%3Fpraedikat+rdfs%3Alabel+%3Flabel+.%0D%0A++%7D%0D%0A%7D%0D%0AORDER+BY+%3Fvon+%3Fpraedikat&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```
+SELECT DISTINCT ?von ?praedikat ?nach
+WHERE {
+  GRAPH ?g {
+    { <URI-VON-X> ?praedikat <URI-VON-Y> .
+      BIND(<URI-VON-X> AS ?von)  BIND(<URI-VON-Y> AS ?nach) }
+    UNION
+    { <URI-VON-Y> ?praedikat <URI-VON-X> .
+      BIND(<URI-VON-Y> AS ?von)  BIND(<URI-VON-X> AS ?nach) }
+  }
+}
+ORDER BY ?von ?praedikat
+```
+
+Indirekter Pfad über Zwischenknoten Z (X→Z→Y):
+
+[Direkter Link zu Beispiel im SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT+%3Fp1+%3Fz+%3FzLabel+%3Fp2%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fp1+%3Fz+.+%3Fz+%3Fp2+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Fz+%3Fp1+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.+%3Fz+%3Fp2+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.+%7D%0D%0A++%7D%0D%0A++OPTIONAL+%7B+%3Fz+rdfs%3Alabel+%3FzLabel+%7D%0D%0A++FILTER%28+%3Fz+%21%3D+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%26%26+%3Fz+%21%3D+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+%29%0D%0A%7D%0D%0ALIMIT+50&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```
+SELECT DISTINCT ?p1 ?z ?zLabel ?p2
+WHERE {
+  GRAPH ?g {
+    { <URI-VON-X> ?p1 ?z . ?z ?p2 <URI-VON-Y> . }
+    UNION
+    { ?z ?p1 <URI-VON-X> . ?z ?p2 <URI-VON-Y> . }
+  }
+  OPTIONAL { ?z rdfs:label ?zLabel }
+  FILTER( ?z != <URI-VON-X> && ?z != <URI-VON-Y> )
+}
+LIMIT 50
+```
+
+Alle Nachbarn und Properties eines Elements (Kontext-Dump):
+
+[Direkter Link zu Beispiel im SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT+%3Frichtung+%3Fpraedikat+%3FpraedikatLabel+%3Fnachbar+%3FnachbarLabel%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fpraedikat+%3Fnachbar+.+BIND%28%22%E2%86%92%22+AS+%3Frichtung%29+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Fnachbar+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.+BIND%28%22%E2%86%90%22+AS+%3Frichtung%29+%7D%0D%0A++%7D%0D%0A++OPTIONAL+%7B+%3Fpraedikat+rdfs%3Alabel+%3FpraedikatLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fnachbar+++rdfs%3Alabel+%3FnachbarLabel++%7D%0D%0A%7D%0D%0AORDER+BY+%3Frichtung+%3Fpraedikat&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```
+SELECT DISTINCT ?richtung ?praedikat ?praedikatLabel ?nachbar ?nachbarLabel
+WHERE {
+  GRAPH ?g {
+    { <URI-VON-X> ?praedikat ?nachbar . BIND("→" AS ?richtung) }
+    UNION
+    { ?nachbar ?praedikat <URI-VON-X> . BIND("←" AS ?richtung) }
+  }
+  OPTIONAL { ?praedikat rdfs:label ?praedikatLabel }
+  OPTIONAL { ?nachbar   rdfs:label ?nachbarLabel  }
+}
+ORDER BY ?richtung ?praedikat
+```
+
+*	**Zeige mir die Kompetenzspezifikationen im Fach Mathematik für die 7. Klasse nach den verschiedenen Schularten in Sachsen**
+
+[Direkter Link zum SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT+%3FschulartLabel+%3FlpLabel+%3FelementLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E%0D%0AWHERE+%7B%0D%0A++%3Flp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000537%3E+%3Ffach+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000026%3E+%3Fjg+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000812%3E+%3Fschulart+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B++%3Felement+.++%23+transitiv%0D%0A%0D%0A%3Felement+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000479%3E+.+%23+Kompetenzbeschreibungsfunktion%0D%0A%0D%0A++%3Ffach+++++rdfs%3Alabel+%3FfachLabel+.%0D%0A++%3Fjg+++++++rdfs%3Alabel+%3FjgLabel+.%0D%0A++%3Fschulart+rdfs%3Alabel+%3FschulartLabel+.%0D%0A++%3Felement++rdfs%3Alabel+%3FelementLabel+.%0D%0A%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FfachLabel%29%29%2C+%22mathematik%22%29+%29%0D%0A++FILTER%28+CONTAINS%28STR%28%3FjgLabel%29%2C+%227%22%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FschulartLabel+%3FlpLabel+%3FelementLabel&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```
+SELECT DISTINCT ?schulartLabel ?lpLabel ?elementLabel
+FROM <https://w3id.org/lehrplan/sn>
+WHERE {
+  ?lp rdf:type  <https://w3id.org/lehrplan/ontology/LP_0000438> ;
+      rdfs:label ?lpLabel ;
+      <https://w3id.org/lehrplan/ontology/LP_0000537> ?fach ;
+      <https://w3id.org/lehrplan/ontology/LP_0000026> ?jg ;
+      <https://w3id.org/lehrplan/ontology/LP_0000812> ?schulart ;
+      <http://purl.obolibrary.org/obo/BFO_0000051>+  ?element .  # transitiv
+
+  ?element <https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479> . # Kompetenzbeschreibungsfunktion
+
+  ?fach     rdfs:label ?fachLabel .
+  ?jg       rdfs:label ?jgLabel .
+  ?schulart rdfs:label ?schulartLabel .
+  ?element  rdfs:label ?elementLabel .
+
+  FILTER( CONTAINS(LCASE(STR(?fachLabel)), "mathematik") )
+  FILTER( CONTAINS(STR(?jgLabel), "7") )
+}
+ORDER BY ?schulartLabel ?lpLabel ?elementLabel
+```
+
+*	**Zeige mir die Niveaustufen, die in Berlin/Brandenburg den Lehrplanelementen zugeordnet sind**
+
+[Direkter Link zum SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT+%3FlpLabel+%3FniveauLabel+%3FelemLabel+%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fbb%3E%0D%0AWHERE+%7B%0D%0A%3Flp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B++++%3Felem+.%0D%0A%0D%0A%3Felem+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000578%3E+%3Fniveau+.%0D%0A%0D%0A%3Felem+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000024%3E+%3FelemTitel+.%0D%0A%3FelemTitel+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000344%3E+%3FelemLabel+.%0D%0A%0D%0A%3Fniveau+rdfs%3Alabel+%3FniveauLabel+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```
+SELECT DISTINCT ?lpLabel ?niveauLabel ?elemLabel 
+FROM <https://w3id.org/lehrplan/bb>
+WHERE {
+?lp rdf:type  <https://w3id.org/lehrplan/ontology/LP_0000438> ;
+      rdfs:label ?lpLabel ;
+      <http://purl.obolibrary.org/obo/BFO_0000051>+    ?elem .
+
+?elem <https://w3id.org/lehrplan/ontology/LP_0000578> ?niveau .
+
+?elem <https://w3id.org/lehrplan/ontology/LP_0000024> ?elemTitel .
+?elemTitel <https://w3id.org/lehrplan/ontology/LP_0000344> ?elemLabel .
+
+?niveau rdfs:label ?niveauLabel .
+}
+
+```
+
+*	**Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?**
+
+[Direkter Link zum SPARQL-Endpunkt]()
 
 ```
 
 ```
 
-*	Was sind die Unterschiede der Kompetenzspezifikationen zwischen den verschiedenen Schularten der 7. Klasse in Mathematik im Saarland?
+*	**Welcher Bereich aus Rheinland-Pfalz entspricht einem Element aus Bayern?**
+
+
+Konkretes BY-Element als Ausgangspunkt: 
+
+[Direkter Link zum SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT+%3FrpLpLabel+%3FrpElementLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E%0D%0AWHERE+%7B%0D%0A++%3FrpLp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++++rdfs%3Alabel+%3FrpLpLabel+%3B%0D%0A++++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B+%3FrpEl+.%0D%0A++%3FrpEl+rdfs%3Alabel+%3FrpElementLabel+.%0D%0A%0D%0A++BIND%28%22Nat%C3%BCrliche+Zahlen%22+AS+%3Fsuchbegriff%29++%23+%E2%86%90+BY-Label+hier+eintragen%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FrpElementLabel%29%29%2C+LCASE%28%3Fsuchbegriff%29%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FrpLpLabel+%3FrpElementLabel&format=text%2Fhtml&timeout=0&signal_void=on)
+```
+SELECT DISTINCT ?rpLpLabel ?rpElementLabel
+FROM <https://w3id.org/lehrplan/rp>
+WHERE {
+  ?rpLp rdf:type  <https://w3id.org/lehrplan/ontology/LP_0000438> ;
+        rdfs:label ?rpLpLabel ;
+        <http://purl.obolibrary.org/obo/BFO_0000051>+ ?rpEl .
+  ?rpEl rdfs:label ?rpElementLabel .
+
+  BIND("Natürliche Zahlen" AS ?suchbegriff)  # ← BY-Label hier eintragen
+  FILTER( CONTAINS(LCASE(STR(?rpElementLabel)), LCASE(?suchbegriff)) )
+}
+ORDER BY ?rpLpLabel ?rpElementLabel
+```
+
+*	**Welche Lerninhalte sind einem Bereich zugeordnet?**
+
+Beispiel: Alle Lerninhalte in Sachsen, die einem Bereich mit dem Stichwort "schreiben" zugeordnet sind:
+[Direkter Link zum SPARQL-Endpunkt](https://sparql.mem.edufeed.org/sparql?default-graph-uri=&qtxt=SELECT+DISTINCT%0D%0A++%3FlpLabel+%3FbereichLabel+%3FlerninhaltLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E%0D%0AWHERE+%7B%0D%0A++%3Fbereich+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E%0D%0A+++++++++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000497%3E+%3B+%23+Bereichsfunktion%0D%0A+++++++++++++rdfs%3Alabel+%3FbereichLabel+%3B%0D%0A+++++++++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E+%3Flerninhalt+.%0D%0A%0D%0A++%3Flerninhalt+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E%0D%0A++++++++++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000480%3E+%3B+%23+Lerninhaltsbeschreibungsfunktion%0D%0A++++++++++++++rdfs%3Alabel+%3FlerninhaltLabel+.%0D%0A%0D%0A++%23+Lehrplan-Zuordnung+f%C3%BCr+Kontext%0D%0A++%3Flp+a+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B+%3Fbereich+.%0D%0A%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FbereichLabel%29%29%2C+%22schreiben%22%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FlpLabel+%3FbereichLabel+%3FlerninhaltLabel&format=text%2Fhtml&timeout=0&signal_void=on)
+```
+SELECT DISTINCT
+  ?lpLabel ?bereichLabel ?lerninhaltLabel
+FROM <https://w3id.org/lehrplan/sn>
+WHERE {
+  ?bereich <https://w3id.org/lehrplan/ontology/LP_0000483>
+             <https://w3id.org/lehrplan/ontology/LP_0000497> ; # Bereichsfunktion
+             rdfs:label ?bereichLabel ;
+             <http://purl.obolibrary.org/obo/BFO_0000051> ?lerninhalt .
+
+  ?lerninhalt <https://w3id.org/lehrplan/ontology/LP_0000483>
+              <https://w3id.org/lehrplan/ontology/LP_0000480> ; # Lerninhaltsbeschreibungsfunktion
+              rdfs:label ?lerninhaltLabel .
+
+  # Lehrplan-Zuordnung für Kontext
+  ?lp a <https://w3id.org/lehrplan/ontology/LP_0000438> ;
+      rdfs:label ?lpLabel ;
+      <http://purl.obolibrary.org/obo/BFO_0000051>+ ?bereich .
+
+  FILTER( CONTAINS(LCASE(STR(?bereichLabel)), "schreiben") )
+}
+ORDER BY ?lpLabel ?bereichLabel ?lerninhaltLabel
+
+```
+
+*	**Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?**
 
 ```
 
 ```
 
-*	Wie hängen die Niveaustufen in Berlin/Brandenburg mit den Jahrgangsstufen zusammen?
+*	**Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?**
 
 ```
 
 ```
 
-*	Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?
+*	**In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?**
 
 ```
 
 ```
 
-*	Welcher Bereich aus Hamburg entspricht einem Element aus Bremen?
+*	**Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?**
 
 ```
 
 ```
 
-*	Anhand welcher Lerninhalte kann ich eine Kompetenz erlernen?
+*	**Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.**
 
 ```
 
 ```
 
-*	Welche Kompetenzen werden benötigt, um Kompetenz X zu erlernen?
+*	**Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.**
 
 ```
 
 ```
 
-*	Wie verläuft die Progression im Fach Mathematik in den verschiedenen Schularten in Hessen?
+*	**Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.**
 
 ```
 
 ```
 
-*	In welchen Fächern wird in BW das Querschnittsthema "Nachhaltige Entwicklung" gelistet?
+*	**Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.**
 
 ```
 
 ```
 
-*	Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Sachsen-Anhalt?
+*	**Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.**
 
 ```
 
 ```
 
-*	Ich möchte alle Kompetenzbereiche in dem Fach Mathe in Bayern sehen.
+*	**Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.**
 
 ```
 
 ```
 
-*	Ich möchte alle Kompetenzspezifikationen der Kompetenzen sehen, die in Hessen unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.
+*	**Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.**
 
 ```
 
 ```
 
-*	Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in NRW im Unterricht gelehrt werden sollen.
+*	**Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.**
 
 ```
 
 ```
 
-*	Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe im Saarland sehen.
-
-```
-
-```
-
-*	Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.
-
-```
-
-```
-
-*	Ich möchte in Hamburg die unterschiedlichen Kompetenzspezifikationen in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.
-
-```
-
-```
-
-*	Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Baden-Württemberg vorkommen aber in Brandenburg nicht.
-
-```
-
-```
-
-*	Ich möchte Lerninhalte nach Sprachniveaus (Gemeinsamer europäischer Referenzrahmen für Sprachen) filtern können.
-
-```
-
-```
-
-*	Ich möchte abbilden, welche Kompetenzen im Fach Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.
+*	**Ich möchte abbilden, welche Kompetenzen im Fach Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.**
 
 ```
 
