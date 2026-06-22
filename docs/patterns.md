@@ -11,6 +11,8 @@ Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewend
 source: patterns/pattern1.ttl
 namespaces: false
 ```
+
+
 **RDF Daten**:
 ```text
 --8<-- "docs/patterns/pattern1.ttl"
@@ -351,7 +353,7 @@ namespaces: false
 
 **RDF Daten**:
 ```text
---8<-- "docs/patterns/pattern8.ttl"
+--8<-- "docs/patterns/pattern9.ttl"
 ```
 
 
