@@ -1,0 +1,41 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Funktionsspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000478> .
+@prefix Beschreibungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000493> .
+@prefix Strukturierungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000482> .
+@prefix Curriculares_Element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix Element_NW: <https://w3id.org/lehrplan/ontology/LP_0002085> .
+@prefix Kompetenzerwartung_NW: <https://w3id.org/lehrplan/ontology/LP_0002188> .
+@prefix Kompetenzbereich_NW: <https://w3id.org/lehrplan/ontology/LP_0002187> .
+@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+
+# Individuen
+@prefix Kompetenzbeschreibungsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000479> .
+@prefix Bereichsfunktion: <https://w3id.org/lehrplan/ontology/LP_0000497> .
+
+# properties
+@prefix hat_Funktion: <https://w3id.org/lehrplan/ontology/LP_0000483> .
+
+ex:Kompetenz a Kompetenzerwartung_NW: .
+Kompetenzerwartung_NW: hat_Funktion: Kompetenzbeschreibungsfunktion: ;
+                       rdfs:subClassOf Element_NW: .
+
+CE-Kompetenzspezifikation: hat_Funktion: Kompetenzbeschreibungsfunktion: ;
+                           rdfs:subClassOf Curriculares_Element: .
+Kompetenzbeschreibungsfunktion: a Beschreibungsfunktion: .                       
+Beschreibungsfunktion: rdfs:subClassOf Funktionsspezifikation: . 
+ex:Bereich a Kompetenzbereich_NW: . 
+Kompetenzbereich_NW: hat_Funktion: Bereichsfunktion: ;
+                     rdfs:subClassOf Element_NW: .
+CE-Bereich: hat_Funktion: Bereichsfunktion: ;
+                     rdfs:subClassOf Curriculares_Element: .
+Bereichsfunktion: a Strukturierungsfunktion: .                       
+Strukturierungsfunktion: rdfs:subClassOf Funktionsspezifikation: .
+Element_NW: rdfs:subClassOf Curriculares_Element: .

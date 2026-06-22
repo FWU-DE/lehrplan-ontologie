@@ -1,0 +1,29 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lehrplan_SN: <https://w3id.org/lehrplan/ontology/LP_0000818> .
+
+# Instanzen
+@prefix Sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
+@prefix Mathematik: <https://w3id.org/schulfach/SN_0000012> .
+@prefix Oberschule: <https://w3id.org/schulart/SN_0000003> .
+@prefix Sekundarbereich_II: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+
+# properties
+@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+@prefix für_Schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
+@prefix hat_Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
+
+ex:Lehrplan a Lehrplan_SN: ;
+            hat_Titel: "Lehrplan Oberschule Mathematik" ;
+            von_Bundesland: Sachsen: ;
+            hat_Schulfach: Mathematik: ;
+            für_Schulart: Oberschule: ;
+            hat_Schulstufe: Sekundarbereich_II: . 

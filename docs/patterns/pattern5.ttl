@@ -1,0 +1,53 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000020> .
+@prefix Oberstufenphase: <https://w3id.org/lehrplan/ontology/LP_0000043> .
+@prefix Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000056> .
+@prefix Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000057> .
+@prefix Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000009> .
+
+# Individuen
+@prefix Sekundarbereich_II: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+@prefix Sekundarbereich_I: <https://w3id.org/lehrplan/ontology/LP_0000045> .
+@prefix Primarbereich: <https://w3id.org/lehrplan/ontology/LP_0000036> .
+@prefix G8_Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000051> .
+@prefix G8_Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000050> .
+@prefix G9_Einführungsphase: <https://w3id.org/lehrplan/ontology/LP_0000055> .
+@prefix G9_Qualifikationsphase: <https://w3id.org/lehrplan/ontology/LP_0000052> .
+@prefix Jahrgangsstufe_10: <https://w3id.org/lehrplan/ontology/LP_2000010> .
+@prefix Jahrgangsstufe_11: <https://w3id.org/lehrplan/ontology/LP_2000011> .
+@prefix Jahrgangsstufe_12: <https://w3id.org/lehrplan/ontology/LP_2000012> .
+@prefix Jahrgangsstufe_13: <https://w3id.org/lehrplan/ontology/LP_2000013> .
+
+# properties
+@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+@prefix hat_Teil: <> .
+G8_Einführungsphase: a Einführungsphase: ;
+                      hat_Jahrgangsstufe: Jahrgangsstufe_10: .
+G9_Einführungsphase: a Einführungsphase: ;
+                      hat_Jahrgangsstufe: Jahrgangsstufe_11: .
+G8_Qualifikationsphase: a Qualifikationsphase: ;
+                        hat_Jahrgangsstufe: Jahrgangsstufe_11: ,
+                                            Jahrgangsstufe_12: .
+G9_Qualifikationsphase: a Qualifikationsphase: ;
+                        hat_Jahrgangsstufe: Jahrgangsstufe_12: ,
+                                            Jahrgangsstufe_13: .                     
+Jahrgangsstufe_10: a Jahrgangsstufe: .
+Jahrgangsstufe_11: a Jahrgangsstufe: .
+Jahrgangsstufe_12: a Jahrgangsstufe: .
+Jahrgangsstufe_13: a Jahrgangsstufe: .
+Einführungsphase: rdfs:subClassOf Oberstufenphase: .
+Qualifikationsphase: rdfs:subClassOf Oberstufenphase: .
+Sekundarbereich_II: a Schulstufe: ;
+                    hat_Teil: G8_Einführungsphase: ,
+                              G9_Einführungsphase: ,
+                              G8_Qualifikationsphase: ,
+                              G9_Qualifikationsphase: .
+Sekundarbereich_I: a Schulstufe: .
+Primarbereich: a Schulstufe: .

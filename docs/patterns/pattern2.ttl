@@ -1,0 +1,27 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Bildungsplan_BW: <https://w3id.org/lehrplan/ontology/LP_0000806> .
+@prefix Lehrplanfragment_BW: <https://w3id.org/lehrplan/ontology/LP_0002052> .
+
+# properties
+@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
+@prefix hat_Nummer: <https://w3id.org/lehrplan/ontology/LP_0030057> .
+@prefix hat_Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+
+ex:Lehrplan a Bildungsplan_BW: ;
+            hat_Teil: ex:Fragment ;
+            hat_Titel: "Bildungsplan Sekundarstufe I - Deutsch" .
+ex:Fragment a Lehrplanfragment_BW: ;
+            hat_Teil: ex:Bereich ;
+            hat_Titel: "Prozessbezogene Kompetenzen" .
+
+ex:Bereich hat_Titel: "Sprechen und Zuhören" ;
+            hat_Nummer: 2.1 ;
+            hat_Beschreibung: "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ..." .

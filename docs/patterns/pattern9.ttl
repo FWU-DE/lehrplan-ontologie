@@ -1,0 +1,48 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Niveau: <https://w3id.org/lehrplan/ontology/LP_0000037> .
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Anforderungsbereich: <https://w3id.org/lehrplan/ontology/LP_0000802> .
+@prefix Fachniveau_Sek_II: <https://w3id.org/lehrplan/ontology/LP_0000265> .
+@prefix Fremdsprachenniveau: <https://w3id.org/lehrplan/ontology/LP_0010001> .
+@prefix Bildungsgangniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0001035> .
+@prefix Gymnasialniveau_Sek_I: <https://w3id.org/lehrplan/ontology/LP_0000069> .
+@prefix Grundkursniveau: <https://w3id.org/lehrplan/ontology/LP_0000530> .
+@prefix Leistungskursniveau: <https://w3id.org/lehrplan/ontology/LP_0000531> .
+@prefix Fachniveau_Sek_II_ST: <https://w3id.org/lehrplan/ontology/LP_0002094> .
+
+# Individuen
+@prefix Gymnasialniveau_Sek_I_ST: <https://w3id.org/schulart/RP_0000296> .
+@prefix Sachsen-Anhalt: <https://w3id.org/lehrplan/ontology/LP_3000053> .
+@prefix Anforderungsbereich_2: <https://w3id.org/lehrplan/ontology/LP_0000804> .
+@prefix Grundlegendes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000526> .
+@prefix Erhöhtes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000527> .
+@prefix B1: <https://w3id.org/lehrplan/ontology/LP_0030315> .
+
+# properties
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+
+Gymnasialniveau_Sek_I_ST: a Bildungsgangniveau_ST: ,
+                            Gymnasialniveau_Sek_I: .
+Bildungsgangniveau_ST: von_Bundesland: Sachsen-Anhalt: ;
+                       rdfs:subClassof Bildungsgangniveau: .                       
+Gymnasialniveau_Sek_I: rdfs:subClassof Bildungsgangniveau: .
+Bildungsgangniveau: rdfs:subClassof Niveau: .
+Anforderungsbereich_2: a Anforderungsbereich: .
+Anforderungsbereich: rdfs:subClassof Niveau: .
+Grundlegendes_Anforderungsniveau_ST: a Grundkursniveau: ,
+                                       Fachniveau_Sek_II_ST: .
+Erhöhtes_Anforderungsniveau_ST: a Leistungskursniveau: ,
+                                  Fachniveau_Sek_II_ST: .
+Grundkursniveau: rdfs:subClassof Fachniveau_Sek_II: .
+Leistungskursniveau: rdfs:subClassof Fachniveau_Sek_II: .
+Fachniveau_Sek_II_ST: rdfs:subClassof Fachniveau_Sek_II: .
+Fachniveau_Sek_II: rdfs:subClassof Niveau: .
+B1: a Fremdsprachenniveau: .
+Fremdsprachenniveau: rdfs:subClassof Niveau: .

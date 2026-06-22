@@ -39,12 +39,17 @@ nav:
 
 markdown_extensions:
   - attr_list
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      preserve_tabs: true
   - md_in_html
+  - pymdownx.snippets
+
+      
 
 plugins:
   - d2
   - search
+  - ontoink
 #  - privacy
   - i18n:
       default_language: 'de'
