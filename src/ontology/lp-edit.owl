@@ -78,6 +78,12 @@ Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/FWU-DE/
 
 Declaration(Class(:LP_0000056))
 Declaration(Class(:LP_0000057))
+Declaration(Class(:LP_0000547))
+Declaration(Class(:LP_0000552))
+Declaration(ObjectProperty(:LP_0000550))
+Declaration(DataProperty(:LP_0000548))
+Declaration(DataProperty(:LP_0000549))
+Declaration(DataProperty(:LP_0000553))
 Declaration(NamedIndividual(:LP_0000046))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
@@ -93,6 +99,18 @@ Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 # Class: :LP_0000443 (Niveaustufe BE/BB)
 
 SubClassOf(:LP_0000443 <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :LP_0000552 (Publikation)
+
+AnnotationAssertion(rdfs:comment :LP_0000552 "OBI publishing process")
+AnnotationAssertion(rdfs:label :LP_0000552 "Publikation"@de)
+SubClassOf(:LP_0000552 <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 
 
