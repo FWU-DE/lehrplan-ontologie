@@ -33,10 +33,10 @@ Ein Lehrplan-Individuum trägt die Angaben, die seinen institutionellen Geltungs
 
 Diese Angaben zusammen machen einen Lehrplan eindeutig identifizierbar: *„Bayern – Grundschule – Sport – Jahrgangsstufen 1 und 2"*.
 
-**Weitere Metadaten**
+**Weitere Informationen**
 
 - **hat Titel** (`LP_0030056`) → der offizielle Titel des Dokuments als Titel-Individuum
-- **hat Beschreibung** (`LP_0030051`) → ein erläuternder Beschreibungstext
+- **hat Beschreibung** (`LP_0030051`) → ein erläuternder Beschreibungstext als Individuum
 - **uri** (`LP_0000463`) → der kanonische URL zum Originaldokument beim Herausgeber, z.B. auf dem Schulportal des Bundeslandes
 
 
@@ -63,7 +63,7 @@ Ein Titel-Individuum trägt die offizielle Bezeichnung eines Elements – also d
 
 Die Beschreibung trägt längere, erläuternde Texte. Das können sein: Erläuterungen zu Kompetenzbereichen, methodische Hinweise und Anregungen, didaktische Kommentare, Konkretisierungsbeispiele, Literaturhinweise, Kontextinformationen oder Freitexte zum Bildungsauftrag oder den allgemeinen Fachzielen.
 
-Im Gegensatz zu `hat Titel` hat `hat Beschreibung` die **Domain** `Curriculares Element` – es hängt also ausschließlich an CE-Elementen, nicht direkt am Lehrplan-Individuum. Der eigentliche Beschreibungstext wird nicht als `rdfs:label`, sondern als `dc:description` (`http://purl.org/dc/elements/1.1/description`) am Beschreibungs-Individuum gespeichert. Das erlaubt es, den Text sprachlich zu kennzeichnen und beliebig lang zu halten.
+Im Gegensatz zu `hat Titel` hat `hat Beschreibung` die **Domain** `Curriculares Element` – es wird also ausschließlich an CE-Elementen verwendet, nicht direkt am Lehrplan-Individuum. 
 
 **Identifikationsnummer** (`LP_0000347`) – Property: **hat Nummer** (`LP_0030057`)
 
@@ -78,7 +78,7 @@ Curriculares Element
   ├─[hat Nummer]─────────▶ Identifikationsnummer → z.B. "3.1" oder "LB 2"
   └─[hat Beschreibung]───▶ Beschreibung → erläuternder Text
 ```
-Dabei ist wichtig, dass jedes **Curriculare Element** einen `Titel` trägt, aber nicht zwingend eine `Beschreibung` oder eine `Identifikationsnummer`.
+Jedes **Curriculare Element** trägt einen `Titel`, aber nicht zwingend eine `Beschreibung` oder eine `Identifikationsnummer`. 
 
 
 ## Pattern 3 - Schulfach und Schulfachbezug

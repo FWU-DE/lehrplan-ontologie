@@ -6,7 +6,8 @@
 @prefix lp: <https://w3id.org/lehrplan/ontology/> .
 
 # Klassen
-@prefix Lehrplan_SN: <https://w3id.org/lehrplan/ontology/LP_0000818> .
+@prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix Titel: <https://w3id.org/lehrplan/ontology/LP_0000346> .
 
 # Instanzen
 @prefix Sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
@@ -20,10 +21,14 @@
 @prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
 @prefix für_Schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
 @prefix hat_Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
+@prefix hat_Wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
 
-ex:Lehrplan a Lehrplan_SN: ;
-            hat_Titel: "Lehrplan Oberschule Mathematik" ;
+ex:Lehrplan a Lehrplan: ;
+            hat_Titel: ex:Titel ;
             von_Bundesland: Sachsen: ;
             hat_Schulfach: Mathematik: ;
             für_Schulart: Oberschule: ;
             hat_Schulstufe: Sekundarbereich_II: . 
+
+ex:Titel a Titel: ;
+        hat_Wert:  "Lehrplan Oberschule Mathematik" .
