@@ -27,18 +27,17 @@
 @prefix benötigt_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000071> .
 @prefix endet_mit_Abschluss: <https://w3id.org/lehrplan/ontology/LP_0000021> .
 
-Qualifizierter_Sekundarabschluss_I_RP: a Mittlerer_Abschluss_RP: .
+Qualifizierter_Sekundarabschluss_I_RP: a Mittlerer_Abschluss_RP: ;
+                                       benötigt_Niveau: Mittleres_Kompetenzniveau_RP: .
 Mittlerer_Abschluss_RP: rdfs:subClassof Mittlerer_Schulabschluss: .
-Mittlerer_Schulabschluss: rdfs:subClassof Schulabschluss: ;
-                          benötigt_Niveau: Realschulniveau: .
-Realschulbildungsgang: rdfs:subClassof Bildungsgang: ;
-                       endet_mit_Abschluss: Mittlerer_Schulabschluss: ;
-                       hat_Bildungsgangniveau: Realschulniveau: .            
+Mittlerer_Schulabschluss: rdfs:subClassof Schulabschluss: .
+Realschulbildungsgang: rdfs:subClassof Bildungsgang: .            
 Mittleres_Kompetenzniveau_RP: a Realschulniveau: ,
                                 Bildungsgangniveau_RP: .
-
-Bildungsgangniveau_RP: rdfs:subClassof Bildungsgangniveau: ;
-                      von_Bundesland: Rheinland-Pfalz: .                       
-
+                             von_Bundesland: Rheinland-Pfalz: .
+Bildungsgangniveau_RP: rdfs:subClassof Bildungsgangniveau: .                     
 Realschulniveau: rdfs:subClassof Bildungsgangniveau: .
 Bildungsgangniveau: rdfs:subClassof Niveau: .
+ex:Realschulbildungsgang a Realschulbildungsgang: ;
+                        hat_Bildungsgangniveau: Mittleres_Kompetenzniveau_RP: ;
+                        endet_mit_Abschluss: Qualifizierter_Sekundarabschluss_I_RP: .

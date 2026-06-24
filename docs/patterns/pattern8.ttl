@@ -23,19 +23,18 @@
 # properties
 @prefix hat_Funktion: <https://w3id.org/lehrplan/ontology/LP_0000483> .
 
-ex:Kompetenz a Kompetenzerwartung_NW: .
-Kompetenzerwartung_NW: hat_Funktion: Kompetenzbeschreibungsfunktion: ;
-                       rdfs:subClassOf Element_NW: .
-
-CE-Kompetenzspezifikation: hat_Funktion: Kompetenzbeschreibungsfunktion: ;
-                           rdfs:subClassOf Curriculares_Element: .
+ex:Kompetenz a Kompetenzerwartung_NW: ,
+               CE-Kompetenzspezifikation: ;
+             hat_Funktion: Kompetenzbeschreibungsfunktion: .
+Kompetenzerwartung_NW: rdfs:subClassOf Element_NW: .
+CE-Kompetenzspezifikation: rdfs:subClassOf Curriculares_Element: .
 Kompetenzbeschreibungsfunktion: a Beschreibungsfunktion: .                       
 Beschreibungsfunktion: rdfs:subClassOf Funktionsspezifikation: . 
-ex:Bereich a Kompetenzbereich_NW: . 
-Kompetenzbereich_NW: hat_Funktion: Bereichsfunktion: ;
-                     rdfs:subClassOf Element_NW: .
-CE-Bereich: hat_Funktion: Bereichsfunktion: ;
-                     rdfs:subClassOf Curriculares_Element: .
+ex:Bereich a Kompetenzbereich_NW: ,
+             CE-Bereich ;
+           hat_Funktion: Bereichsfunktion: . 
+Kompetenzbereich_NW: rdfs:subClassOf Element_NW: .
+CE-Bereich: rdfs:subClassOf Curriculares_Element: .
 Bereichsfunktion: a Strukturierungsfunktion: .                       
 Strukturierungsfunktion: rdfs:subClassOf Funktionsspezifikation: .
 Element_NW: rdfs:subClassOf Curriculares_Element: .

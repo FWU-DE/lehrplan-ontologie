@@ -29,9 +29,9 @@
 @prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
 
 Gymnasialniveau_Sek_I_ST: a Bildungsgangniveau_ST: ,
-                            Gymnasialniveau_Sek_I: .
-Bildungsgangniveau_ST: von_Bundesland: Sachsen-Anhalt: ;
-                       rdfs:subClassof Bildungsgangniveau: .                       
+                            Gymnasialniveau_Sek_I: ;
+                          von_Bundesland: Sachsen-Anhalt: ;
+Bildungsgangniveau_ST: rdfs:subClassof Bildungsgangniveau: .                       
 Gymnasialniveau_Sek_I: rdfs:subClassof Bildungsgangniveau: .
 Bildungsgangniveau: rdfs:subClassof Niveau: .
 Anforderungsbereich_2: a Anforderungsbereich: .

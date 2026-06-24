@@ -36,3 +36,5 @@ MSA_E: a MSA_Niveau: ;
 MSA_Niveau: rdfs:subClassOf Realschulniveau: .
 Realschulniveau: rdfs:subClassOf Bildungsgangniveau: .
 Jahrgangsstufe_6: a Jahrgangsstufe: .
+Jahrgangsstufe_7: a Jahrgangsstufe: .
+Jahrgangsstufe_8: a Jahrgangsstufe: .
