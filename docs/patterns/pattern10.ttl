@@ -33,7 +33,7 @@ Mittlerer_Abschluss_RP: rdfs:subClassof Mittlerer_Schulabschluss: .
 Mittlerer_Schulabschluss: rdfs:subClassof Schulabschluss: .
 Realschulbildungsgang: rdfs:subClassof Bildungsgang: .            
 Mittleres_Kompetenzniveau_RP: a Realschulniveau: ,
-                                Bildungsgangniveau_RP: .
+                                Bildungsgangniveau_RP: ;
                              von_Bundesland: Rheinland-Pfalz: .
 Bildungsgangniveau_RP: rdfs:subClassof Bildungsgangniveau: .                     
 Realschulniveau: rdfs:subClassof Bildungsgangniveau: .
