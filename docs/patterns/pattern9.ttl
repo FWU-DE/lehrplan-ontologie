@@ -30,7 +30,7 @@
 
 Gymnasialniveau_Sek_I_ST: a Bildungsgangniveau_ST: ,
                             Gymnasialniveau_Sek_I: ;
-                          von_Bundesland: Sachsen-Anhalt: ;
+                          von_Bundesland: Sachsen-Anhalt: .
 Bildungsgangniveau_ST: rdfs:subClassof Bildungsgangniveau: .                       
 Gymnasialniveau_Sek_I: rdfs:subClassof Bildungsgangniveau: .
 Bildungsgangniveau: rdfs:subClassof Niveau: .

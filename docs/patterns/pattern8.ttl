@@ -31,7 +31,7 @@ CE-Kompetenzspezifikation: rdfs:subClassOf Curriculares_Element: .
 Kompetenzbeschreibungsfunktion: a Beschreibungsfunktion: .                       
 Beschreibungsfunktion: rdfs:subClassOf Funktionsspezifikation: . 
 ex:Bereich a Kompetenzbereich_NW: ,
-             CE-Bereich ;
+             CE-Bereich: ;
            hat_Funktion: Bereichsfunktion: . 
 Kompetenzbereich_NW: rdfs:subClassOf Element_NW: .
 CE-Bereich: rdfs:subClassOf Curriculares_Element: .
