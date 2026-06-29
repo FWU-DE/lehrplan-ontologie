@@ -23,7 +23,7 @@ ex:Lehrplan hat_Schulfach: Englisch_TH: ,
                            ex:Fachbezug_Englisch_als_Erstsprache .
 ex:Fachbezug_Englisch_als_Erstsprache hat_Schulfach: Englisch_TH: ;
                                       a erste_Fremdsprache: .
-Englisch_TH: a Schulfach ;
+Englisch_TH: a Schulfach: ;
              has_exact_match: Englisch_KIM_Schulfach: .
 Englisch_KIM_Schulfach: a Fremdsprachenfach: .
 Fremdsprachenfach: rdfs:subClassOf Schulfach: .
