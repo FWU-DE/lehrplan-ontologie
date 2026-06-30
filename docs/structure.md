@@ -151,21 +151,23 @@ Ergänzt wird dieses Relationsmodell durch das Konzept der **Schulartfunktion** 
 Weitere Informationen zur Struktur und Modellierung der Lehrplan-Ontologie befinden sich im Kapitel [Beispiele](https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/).
 
 
----
 
 ## Modellierung / Designprinzip
 
-Das Grundprinzip der Ontologie lässt sich so zusammenfassen: **Eine gemeinsame Abstraktion, viele länderspezifische Konkretisierungen.** Alle 16 Bundesländer nutzen dieselben generischen Klassen (Lehrplan, CE-Fragment, CE-Bereich, CE-Kompetenzspezifikation) und Properties (hat Teil, hat Jahrgangsstufe, hat Bildungsgangniveau), erhalten aber jeweils eigene Subklassen, die die lokale Terminologie bewahren. So kann die Ontologie sowohl bundeslandübergreifende Suchen (z.B. „alle Kompetenzbereiche zu Thema X in allen Ländern") als auch länderspezifische Auswertungen (z.B. „alle Lernbereiche im LehrplanPLUS Bayern") präzise ermöglichen.
+Das Grundprinzip der Ontologie lässt sich wie folgt zusammenfassen: **eine gemeinsame Abstraktion mit vielfältigen länderspezifischen Konkretisierungen**. Alle 16 Bundesländer verwenden dabei dieselben generischen Klassen (z. B. *Lehrplan*, *CE-Fragment*, *CE-Bereich*, *CE-Kompetenzspezifikation*) sowie zentrale Relations-Properties (z. B. *hat Teil*, *hat Jahrgangsstufe*, *hat Bildungsgangniveau*). Gleichzeitig bleiben die jeweiligen landesspezifischen Ausprägungen in Form eigener Subklassen erhalten, sodass die terminologische und strukturelle Eigenlogik der Länder nicht verloren geht.
 
-Die Ontologie ist **modular** aufgebaut: Die Strukturen und Inhalte jedes Bundeslandes werden in eigenen, voneinander getrennten Ontologien erfasst und durch eine übergeordnete **Kern-Ontologie (Core)** zusammengeführt. Diese Kern-Ontologie enthält diejenigen Elemente und Funktionen, die in allen Bundesländern grundsätzlich vorhanden sind – auch dann, wenn sie dort unterschiedliche Bezeichnungen, Strukturen oder Ausprägungen haben.
+Dieses Modell ermöglicht sowohl bundeslandübergreifende Auswertungen (z. B. „alle Kompetenzbereiche zu Thema X in allen Ländern“) als auch detaillierte länderspezifische Analysen (z. B. „alle Lernbereiche im LehrplanPLUS Bayern“).
 
-Um Lehrpläne bundesländerübergreifend gemeinsam durchsuchbar zu machen, ohne dabei die individuellen Begrifflichkeiten oder Modellierungen der Länder zu verändern, übernimmt die Kern-Ontologie eine verbindende Rolle: Sie definiert gemeinsame Funktionen und Beziehungstypen, über die die jeweiligen Landes-Elemente eindeutig zugeordnet und in ein gemeinsames semantisches System integriert werden.
+Die Ontologie ist modular aufgebaut. Die Inhalte und Strukturen der einzelnen Bundesländer werden in getrennten Komponenten modelliert und durch eine übergeordnete **Kern-Ontologie (Core)** integriert. Diese Kern-Ontologie enthält die generischen Konzepte und Relationen, die in allen Bundesländern wiederkehren, auch wenn sie dort unterschiedlich benannt oder strukturiert sind.
 
-Ein vereinfachtes Beispiel:
+Die Kern-Ontologie übernimmt damit eine verbindende Funktion: Sie stellt gemeinsame semantische Kategorien und Beziehungstypen bereit, über die die jeweiligen landesspezifischen Modelle systematisch miteinander verknüpft werden können. Dadurch entsteht ein gemeinsames semantisches Referenzsystem, ohne die Autonomie der Länderontologien aufzugeben.
 
-Viele Bundesländer verwenden für ein ähnliches inhaltliches Element – etwa eine Kompetenzbeschreibung – unterschiedliche Begriffe oder Strukturformen. Die Kern-Ontologie weist diesen Elementen eine gemeinsame funktionale Rolle zu, z. B. eine bestimmte Art von Kompetenzbeschreibung. Dadurch können die unterschiedlichen Landesmodelle eindeutig miteinander verknüpft werden. Auf dieser Grundlage werden einheitliche Abfragen möglich, obwohl die Datenstrukturen der Lehrpläne selbst nicht vereinheitlicht werden müssen.
+Ein vereinfachtes Beispiel verdeutlicht dies: Verschiedene Bundesländer verwenden für inhaltlich vergleichbare Elemente – etwa Kompetenzbeschreibungen – unterschiedliche Begriffe und Strukturierungen. Die Kern-Ontologie führt diese Elemente auf eine gemeinsame funktionale Rolle zurück, beispielsweise als *Kompetenzspezifikation*. Auf dieser Grundlage lassen sich die unterschiedlichen Modelle eindeutig miteinander verbinden und einheitlich abfragen, ohne die jeweiligen landesspezifischen Modellierungen zu verändern.
 
-Der modulare Aufbau und die Vernetzung über die Kern-Ontologie ermöglicht es perspektivisch, dass die Länder ihre Ontologien selbst verwalten, warten und anpassen können, ohne dass dadurch die Lehrplan-Ontologien der anderen Länder betroffen werden.
+Der modulare Aufbau ermöglicht es perspektivisch zudem, dass die Bundesländer ihre jeweiligen Ontologie-Module eigenständig pflegen und weiterentwickeln können, ohne dass Änderungen unmittelbare Auswirkungen auf die Modelle anderer Länder haben.
+
+
+
 
 ```d2
 BW: {
@@ -227,9 +229,12 @@ Kern-Ontologie -> BE: {
 
 ```
 
-Zu den bereits erwähnten Kernelementen (s.o. *Curriculare Elemente*) gehören beispielsweise der Lehrplan, der als gedankliche Klammer vielfältige Lehrplan-Fragmente (*CE-Fragment*) umfasst. Solche Lehrplan-Fragmente sind als ordnende Elemente zu verstehen, die wiederum Kompetenzbereiche oder Themenfelder unter sich haben können. Kompetenzbereiche und Themenfelder können abermals jeweils Kompetenzbereiche oder Themenfelder untergeordnet haben, die auf unterster Ebene aber immer eine Kompetenzspezifikation oder einen Lerninhalt haben. 
+Die in der Kern-Ontologie modellierten **curricularen Elemente** bilden dabei die zentrale Strukturierungsbasis. Der *Lehrplan* fungiert als übergeordnete konzeptionelle Klammer, die eine Vielzahl von *CE-Fragmenten* umfasst. Diese Fragmente dienen als strukturierende Einheiten und können wiederum *CE-Bereiche* wie Kompetenzbereiche oder Themenfelder enthalten.
 
-Beispielhafter Aufbau von Lehrplänen dargestellt mit unseren Kern-Elementen:
+Diese Struktur ist rekursiv aufgebaut: Kompetenzbereiche und Themenfelder können ihrerseits weiter untergliedert sein, wobei sich die Zerlegung typischerweise bis auf die Ebene von **Kompetenzspezifikationen** oder **Lerninhalten** fortsetzt.
+
+Ein beispielhafter Aufbau der Lehrplanstruktur auf Basis der Kern-Elemente ist in der folgenden Abbildung dargestellt:
+
 
 ```d2
 CE-Fragment 1: {
@@ -432,8 +437,12 @@ CE-Lerninhalt -> CE-Hinweis: {
 
 ```
 
-Ein Lehrplan in der Kern-Ontologie setzt sich so abstrakt aus einer Abfolge verschiedener Lehrplanfragmente zusammen, die untereinander vernetzt werden können. Beispielsweise kann sich eine Kompetenzspezifikation auf einen bestimmten Lerninhalt beziehen, mit anderen Kompetenzspezifikationen oder auch mit Lehr- und Lernmaterialien verknüpft werden.
 
+
+Ein Lehrplan in der Kern-Ontologie lässt sich somit als hierarchisch und zugleich netzartig strukturierte Abfolge curricularer Elemente verstehen, die miteinander verknüpft werden können. So kann beispielsweise eine Kompetenzspezifikation auf einen bestimmten Lerninhalt referenzieren oder mit weiteren Kompetenzspezifikationen sowie Lehr- und Lernmaterialien in Beziehung stehen.
+
+
+---
 
 ## Nachgenutzte Ontologien/Vokabulare
 
