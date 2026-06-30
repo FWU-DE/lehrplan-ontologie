@@ -110,19 +110,19 @@ Die Ontologie verwendet eine Kombination aus Properties der BFO-basierten **Rela
 
 Die wichtigsten Properties sind:
 
-* **`bfo:BFO_0000051` (hat Teil)**: Zentrale mereologische Relation zur Abbildung von Teil-Ganzes-Strukturen. Sie modelliert die hierarchische Gliederung von Lehrplänen in Fragmente, Bereiche und Kompetenzelemente.
+* **hat Teil** (`bfo:BFO_0000051`): Zentrale mereologische Relation zur Abbildung von Teil-Ganzes-Strukturen. Sie modelliert die hierarchische Gliederung von Lehrplänen in Fragmente, Bereiche und Kompetenzelemente.
 
-* **`LP_0000029` (von Bundesland)**: Verknüpft jeden Lehrplanknoten mit dem jeweiligen Bundesland als Geltungsbereich.
+* **von Bundesland** (`LP_0000029`): Verknüpft jeden Lehrplanknoten mit dem jeweiligen Bundesland als Geltungsbereich.
 
-* **`LP_0000026` (hat Jahrgangsstufe)**: Ordnet curricularen Elementen spezifische Jahrgangsstufen zu und verankert sie damit im zeitlichen Verlauf des Bildungsgangs.
+* **hat Jahrgangsstufe** (`LP_0000026`): Ordnet curricularen Elementen spezifische Jahrgangsstufen zu und verankert sie damit im zeitlichen Verlauf des Bildungsgangs.
 
-* **`LP_0000833` (hat Bildungsgangniveau)**: Gibt das für ein Element relevante Bildungsgang- bzw. Leistungsniveau an.
+* **hat Bildungsgangniveau** (`LP_0000833`): Gibt das für ein Element relevante Bildungsgang- bzw. Leistungsniveau an.
 
-* **`LP_0000537` (hat Schulfach)** und **`LP_0000812` (für Schulart)**: Stellen die fachliche und institutionelle Einbettung der Lehrplanknoten sicher, indem sie diese mit Schulfach und Schulart verknüpfen.
+* **hat Schulfach** (`LP_0000537`) und **für Schulart** (`LP_0000812`): Stellen die fachliche und institutionelle Einbettung der Lehrplanknoten sicher, indem sie diese mit Schulfach und Schulart verknüpfen.
 
-* **`LP_0000021` (ermöglicht Abschluss)**: Modelliert die Beziehung zwischen Bildungsgängen und den jeweils erreichbaren Schulabschlüssen.
+* **ermöglicht Abschluss** (`LP_0000021`): Modelliert die Beziehung zwischen Bildungsgängen und den jeweils erreichbaren Schulabschlüssen.
 
-* **`LP_0030051` / `LP_0030056` / `LP_0030057` (hat Beschreibung / Titel / Nummer)**: Metadaten-Properties zur Repräsentation textueller und identifizierender Informationen curricularer Elemente.
+* **hat Beschreibung / Titel / Nummer** (`LP_0030051` / `LP_0030056` / `LP_0030057`): Metadaten-Properties zur Repräsentation textueller und identifizierender Informationen curricularer Elemente.
 
 Ergänzt wird dieses Relationsmodell durch das Property **hat Funktionspezifikation** (`LP_0000483`) und das Konzept der **Funktionsspezifikation** (`LP_0000478`). Dieses umfasst unter anderem die Subklassen **Strukturierungsfunktion**, **Beschreibungsfunktion**, **Bezugsfunktion** und **Niveauspezifikationsfunktion**. Damit kann jedem curricularen Element explizit eine funktionale Rolle innerhalb des Lehrplans zugewiesen werden, etwa ob es strukturierende, beschreibende, referenzierende oder niveauspezifizierende Aufgaben erfüllt.
 
