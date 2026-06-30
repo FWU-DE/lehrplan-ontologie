@@ -98,12 +98,12 @@ Die Instanzen der Klasse **Fremdsprachenniveau** ('LP_0010001') geben an, in wel
 
 (Wie hängen alle Elemente zusammen?)
 
-hat Teil
-hat Jahrgang
-hat Fach
-von Bundesland
-hat Beschreibung
-hat Funktionen
+* hat Teil
+* hat Jahrgangsstufe
+* hat Schulfach
+* von Bundesland
+* hat Beschreibung
+* hat Funktionen
 
 
 Die Ontologie verwendet eine Kombination aus Properties der BFO-basierten **Relation Ontology** sowie eigens definierter Relations- und Datentyp-Properties, die entsprechend als Sub-Properties dieser Basismodellierung eingeordnet sind. Dadurch wird eine konsistente Anbindung an etablierte ontologische Standards gewährleistet und zugleich die domänenspezifische Modellierung des Lehrplansystems ermöglicht.
@@ -124,10 +124,9 @@ Die wichtigsten Properties sind:
 
 * **`LP_0030051` / `LP_0030056` / `LP_0030057` (hat Beschreibung / Titel / Nummer)**: Metadaten-Properties zur Repräsentation textueller und identifizierender Informationen curricularer Elemente.
 
-Ergänzt wird dieses Relationsmodell durch das Konzept der **Schulartfunktion** (`LP_0000475`) sowie die zugehörige **Funktionsspezifikation** (`LP_0000478`). Diese umfasst unter anderem die Subklassen **Strukturierungsfunktion**, **Beschreibungsfunktion**, **Bezugsfunktion** und **Niveauspezifikationsfunktion**. Damit kann jedem curricularen Element explizit eine funktionale Rolle innerhalb des Lehrplans zugewiesen werden, etwa ob es strukturierende, beschreibende, referenzierende oder niveauspezifizierende Aufgaben erfüllt.
+Ergänzt wird dieses Relationsmodell durch das Property **hat Funktionspezifikation** (`LP_0000483`) und das Konzept der **Funktionsspezifikation** (`LP_0000478`). Dieses umfasst unter anderem die Subklassen **Strukturierungsfunktion**, **Beschreibungsfunktion**, **Bezugsfunktion** und **Niveauspezifikationsfunktion**. Damit kann jedem curricularen Element explizit eine funktionale Rolle innerhalb des Lehrplans zugewiesen werden, etwa ob es strukturierende, beschreibende, referenzierende oder niveauspezifizierende Aufgaben erfüllt.
 
 Weitere Informationen zur Struktur und Modellierung der Lehrplan-Ontologie befinden sich im Kapitel [Beispiele](https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/).
-
 
 
 ## Modellierung / Designprinzip
