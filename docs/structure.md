@@ -44,28 +44,6 @@ Die Klasse **Schulart** (`LP_0000111`) modelliert den Schultyp (z. B. Gymnasium 
 Der föderale Charakter des deutschen Bildungssystems wird durch die Klasse **Bundesland Bezeichnung** (`LP_0000040`) abgebildet. Die 16 deutschen Bundesländer sind als Individuen dieser Klasse modelliert und dienen der eindeutigen Zuordnung jedes Lehrplans zu seinem jeweiligen Geltungsbereich.
 
 
-### 2. Curriculare Elemente als semantischer Kern der Ontologie
-
-(Was beschreibt der Lehrplan?)
-
-* Lehrplan
-* Fragmente
-* Bereiche
-* Kompetenzspezifikationen
-* Lerninhalte
-* Hinweise
-
-Die umfangreichste Schicht der Ontologie ist die Klasse **Curriculares Element** (`LP_0000261`). Sie ist der generische Oberbegriff für alle inhaltlichen Bausteine eines Lehrplans. Da die 16 Bundesländer ihre Lehrpläne strukturell sehr unterschiedlich aufgebaut haben, wird dies durch die Ontologie durch ein zweistufiges Muster harmonsiert:
-
-Generische Superklassen fassen ähnliche Konzepte bundeslandübergreifend zusammen:
-
-- **CE-Fragment** (`LP_0001015`): Abschnitte und Kapitel eines Lehrplans, die selbst keine inhaltliche Semantik tragen, aber Struktur geben – entspricht in jedem Bundesland dem länderspezifischen „Lehrplanfragment": Lehrplanfragment (BE), Lehrplanfragment (BY), Lehrplanfragment (HH), Lehrplanfragment (SN) usw.
-- **CE-Bereich** (`LP_0000349`): Inhaltlich gegliederte Bereiche wie Kompetenzbereiche, Lernbereiche, Leitideen oder Themenfelder. Subklassen hiervon sind z.B. Kompetenzbereich (BE/HH/RP/SN/NW), Lernbereich (BY/SN/NI), Leitidee (BE/BW/HH/RP), Thema und Themenfeld in verschiedenen Ländervarianten sowie Inhalt (HH) oder Inhaltsfeld (HE/NW).
-- **CE-Kompetenzspezifikation** (`LP_0000263`): Beschreibt Kompetenzen und Anforderungen, z.B. Anforderung/Mindestanforderung (HH), Kompetenzerwartung (BY), Kompetenz (RP), Standard (BE), Lernziel und Lerninhalt (SN).
-- **CE-Lerninhalt** (`LP_0000332`): Inhaltliche Lerngegenstände.
-- **CE-Hinweis** (`LP_0000852`): Didaktische Hinweise und Anmerkungen.
-
-**Länderspezifische Lehrpläne** sind Subklassen von Lehrplan (`LP_0000438`): LehrplanPLUS (BY), Lehrplan (SN/RP/SL/ST/TH), Bildungsplan (BW/HH/HB), Rahmenlehrplan (BB), Kerncurriculum (NI/HE), Kernlehrplan (NW), Fachanforderung (SH), Rahmenplan (MV).
 
 ### 2. Curriculare Elemente als semantischer Kern der Ontologie
 
