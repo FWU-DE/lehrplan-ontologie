@@ -1,26 +1,61 @@
-# Ontologie-Modell
-## Verständnis der Wissensstruktur
+# Lehrplan Ontologie
 
-*Lehrplanwissen repräsentiern -> was ist überhaupt ein lehrplan im ontolgischen Sinne? → information darüber wie ein Prozess ablaufen soll. Lehrprozess und lernprozess. Kompetenz vs. Kompetenzspezifikation*
+
+Ein Lehrplan ist ontologisch nicht als Dokument zu verstehen, sondern als **Informationsobjekt mit normativer Funktion**. Das Dokument (z. B. PDF, Webseite oder Buch) dient lediglich als Träger dieser Information.
+
+Ein Lehrplan stellt eine strukturierte Informationseinheit dar, die eine systematische Zusammenstellung curricularer Elemente umfasst. Er legt verbindlich fest, welche Kompetenzen und Inhalte Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
+
+Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen.
+
+Neben den verbindlichen curricularen Vorgaben enthalten Lehrpläne häufig Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Verweise auf fachübergreifende oder verwandte Kompetenzen und Inhalte. Je nach Bundesland werden hierfür unterschiedliche Bezeichnungen verwendet, beispielsweise *Bildungsplan*, *Fachanforderungen*, *Kerncurriculum*, *Kernlehrplan*, *LehrplanPLUS*, *Rahmenlehrplan* oder *Rahmenplan*.
+
+Ein Lehrplan bezieht sich auf den Lehrprozess, den Lernprozess, die Kompetenzentwicklung sowie die Leistungsbewertung. Er beschreibt jedoch nicht den tatsächlich stattfindenden Unterricht, sondern spezifiziert, wie Lehr- und Lernprozesse idealerweise gestaltet werden sollen, um die angestrebten Bildungsziele zu erreichen.
+
+Ontologisch kann ein Lehrplan daher als **Prozessspezifikation** verstanden werden. Er enthält Informationen darüber, welche Prozesse stattfinden sollen, unter welchen Bedingungen sie ablaufen und welche Ergebnisse beziehungsweise Zielzustände angestrebt werden. Der tatsächlich durchgeführte Unterricht ist demgegenüber als **Instanz** eines solchen spezifizierten Prozesses zu verstehen.
+
+Aus ontologischer Sicht müssen **Lehrprozess** und **Lernprozess** klar voneinander unterschieden werden. Der Lehrprozess ist ein didaktischer Prozess, der durch Lehrpersonen oder das Bildungssystem initiiert und gestaltet wird. Der Lernprozess hingegen findet innerhalb der lernenden Person statt und umfasst die kognitiven und motivationalen Vorgänge, die zum Erwerb neuer Fähigkeiten und Kenntnisse führen. Der Lehrprozess kann den Lernprozess unterstützen und beeinflussen, bestimmt ihn jedoch nicht vollständig.
+
+Das Ergebnis eines erfolgreichen Lernprozesses kann der Erwerb einer neuen **Kompetenz** sein. Ontologisch ist eine Kompetenz kein Informationsobjekt, sondern eine Disposition beziehungsweise Fähigkeit eines Akteurs, in einer Klasse von Situationen erfolgreich zu handeln. Kompetenzen existieren somit als Eigenschaften beziehungsweise Dispositionen der lernenden Person.
+
+Der Lehrplan enthält die Kompetenzen selbst nicht, sondern beschreibt sie in Form von **Kompetenzspezifikationen**. Eine Kompetenzspezifikation ist wiederum ein Informationsobjekt, das eine Kompetenz hinsichtlich ihres Inhalts, ihres Anwendungsbereichs sowie gegebenenfalls ihres angestrebten Niveaus präzisiert. Kompetenzspezifikationen sind Bestandteil des Lehrplans und dienen dazu, die angestrebten Lernergebnisse eindeutig zu beschreiben.
+
+Die ontologische Modellierung trennt somit konsequent zwischen **realweltlichen Entitäten** (Akteure, Prozesse und Kompetenzen) und **Informationsobjekten** (Lehrplan, Kompetenzspezifikationen, Lernziele oder Bewertungsmaßstäbe). Dadurch wird deutlich, dass ein Lehrplan weder Kompetenzen noch Lernprozesse selbst enthält, sondern deren intendierte Ausgestaltung sowie die Beziehungen zwischen ihnen beschreibt. Diese Unterscheidung bildet die Grundlage für eine ontologisch konsistente Repräsentation von Lehrplanwissen.
+
 
 ## Aufbau und Struktur der Lehrplan Ontologie
 
-Die Lehrplan-Ontologie ist eine formale OWL-Ontologie, die die Konzepte und Beziehungen des deutschen Schulsystems im Bereich Lehrplangestaltung maschinenlesbar beschreibt. 
+Aus den beschriebenen ontologischen Überlegungen ergeben sich die Anforderungen an die Modellierung der Lehrplan-Ontologie. Ziel der Ontologie ist es, die zentralen Konzepte des deutschen Lehrplansystems sowie ihre Beziehungen formal und maschineninterpretierbar abzubilden. Dabei werden sowohl die semantischen Eigenschaften eines Lehrplans als normatives Informationsobjekt als auch die strukturellen Besonderheiten der Lehrpläne der einzelnen Bundesländer berücksichtigt.
 
-Sie lässt sich in fünf thematische Schichten gliedern:
+Die Lehrplan-Ontologie ist als OWL-Ontologie implementiert und gliedert sich in fünf konzeptionelle Schichten. Diese Schichten bilden unterschiedliche Aspekte des Lehrplansystems ab – vom institutionellen Bildungskontext über die curriculare Struktur bis hin zu den Beziehungen zwischen den einzelnen Elementen.
 
-**1. Bildungskontext: Schule, Fach und Bundesland**
+### 1. Bildungskontext:  Schule, Fach und Bundesland
+(Wo gilt der Lehrplan?)
 
-Die oberste Schicht modelliert den institutionellen Rahmen. **Schulfach** (`LP_0000001`) ist die Wurzelklasse für alle Unterrichtsfächer und wird in Subklassen wie MINT-Fach, Naturwissenschaftsfach, Fremdsprachenfach und Gesellschaftswissenschaftsfach untergliedert. Ergänzend gibt es den **Schulfachbezug** (`LP_0000540`) für Angaben zur Stellung eines Faches (Pflichtfach, Wahlpflichtfach, erste/zweite/dritte Fremdsprache).
-**Schulart** (`LP_0000111`) beschreibt den Schultyp (z.B. Gymnasium, Gesamtschule), während **Bildungsgang** (`LP_0000816`) mit Subklassen wie Gymnasialer Bildungsgang, Hauptschulbildungsgang und Realschulbildungsgang den pädagogischen Weg einer Schülerin oder eines Schülers abbildet. Die 16 Bundesländer sind als Individuen der Klasse **Bundesland Bezeichnung** (`LP_0000040`) erfasst.
+* Bundesland
+* Schulart
+* Schulfach
 
-**2. Zeitliche und stufenbezogene Einordnung**
+Die erste Schicht der Lehrplan-Ontologie beschreibt den **institutionellen Geltungsbereich** eines Lehrplans. Sie modelliert den Bildungskontext, in dem ein Lehrplan Anwendung findet, und beantwortet die Frage, **für welches Bundesland, welche Schulart und welches Schulfach** ein Lehrplan gilt.
 
-**Jahrgangsstufe** (`LP_0000009`) und **Schulstufe** (`LP_0000020`) strukturieren den zeitlichen Verlauf von Bildungsgängen. Schulstufe differenziert sich in Oberstufenphase, Einführungsphase und Qualifikationsphase. **Schulabschluss** (`LP_0000019`) modelliert erreichbare Abschlüsse wie Allgemeine Hochschulreife, Fachabitur, Mittlerer Schulabschluss und Erster Schulabschluss – jeweils auch in länderspezifischen Subklassen (z.B. Allgemeine Hochschulreife (HH), Mittlerer Abschluss (SN)).
+Die Klasse **Schulfach** (`LP_0000001`) bildet die Wurzelklasse aller Unterrichtsfächer und wird in Subklassen wie **MINT-Fach**, **Naturwissenschaftsfach**, **Fremdsprachenfach** und **Gesellschaftswissenschaftsfach** untergliedert. Ergänzend beschreibt die Klasse **Schulfachbezug** (`LP_0000540`) die Stellung eines Faches innerhalb eines Bildungsgangs, beispielsweise als Pflichtfach, Wahlpflichtfach oder erste, zweite beziehungsweise dritte Fremdsprache.
 
-**3. Die Curricularen Elemente und die Heterogenitätslösung**
+Die Klasse **Schulart** (`LP_0000111`) modelliert den Schultyp (z. B. Gymnasium oder Gesamtschule). Ergänzend beschreibt die Klasse **Bildungsgang** (`LP_0000816`) den schulischen Bildungsweg einer Schülerin oder eines Schülers. Sie umfasst unter anderem die Subklassen **Gymnasialer Bildungsgang**, **Hauptschulbildungsgang** und **Realschulbildungsgang**.
 
-Die anspruchsvollste und umfangreichste Schicht der Ontologie ist die Klasse **Curriculares Element** (`LP_0000261`). Sie ist der generische Oberbegriff für alle inhaltlichen Bausteine eines Lehrplans. Da die 16 Bundesländer ihre Lehrpläne strukturell sehr unterschiedlich aufgebaut haben, löst die Ontologie dieses Problem durch ein zweistufiges Muster:
+Der föderale Charakter des deutschen Bildungssystems wird durch die Klasse **Bundesland Bezeichnung** (`LP_0000040`) abgebildet. Die 16 deutschen Bundesländer sind als Individuen dieser Klasse modelliert und dienen der eindeutigen Zuordnung jedes Lehrplans zu seinem jeweiligen Geltungsbereich.
+
+
+### 2. Curriculare Elemente als semantischer Kern der Ontologie
+
+(Was beschreibt der Lehrplan?)
+
+* Lehrplan
+* Fragmente
+* Bereiche
+* Kompetenzspezifikationen
+* Lerninhalte
+* Hinweise
+
+Die umfangreichste Schicht der Ontologie ist die Klasse **Curriculares Element** (`LP_0000261`). Sie ist der generische Oberbegriff für alle inhaltlichen Bausteine eines Lehrplans. Da die 16 Bundesländer ihre Lehrpläne strukturell sehr unterschiedlich aufgebaut haben, wird dies durch die Ontologie durch ein zweistufiges Muster harmonsiert:
 
 Generische Superklassen fassen ähnliche Konzepte bundeslandübergreifend zusammen:
 
@@ -32,26 +67,91 @@ Generische Superklassen fassen ähnliche Konzepte bundeslandübergreifend zusamm
 
 **Länderspezifische Lehrpläne** sind Subklassen von Lehrplan (`LP_0000438`): LehrplanPLUS (BY), Lehrplan (SN/RP/SL/ST/TH), Bildungsplan (BW/HH/HB), Rahmenlehrplan (BB), Kerncurriculum (NI/HE), Kernlehrplan (NW), Fachanforderung (SH), Rahmenplan (MV).
 
-**4. Niveau-System**
+### 2. Curriculare Elemente als semantischer Kern der Ontologie
 
-**Niveau** (`LP_0000037`) ist die Superklasse für alle Leistungs- und Bildungsgangniveaus. Die wichtigsten Subklassen sind **Bildungsgangniveau** (`LP_0000028`) – z.B. Gymnasialniveau Sek I, Hauptschulniveau, Realschulniveau, Gymnasialniveau Sek II – sowie **Fachniveau Sek II** (`LP_0000265`) für Kursniveaus in der Oberstufe (Grundkurs/Leistungurs, sowie länderspezifische Varianten). Auch hier existieren für jedes Bundesland eigene Subklassen, da die Niveaubegriffe und Abschlussbezüge landesspezifisch benannt sind (z.B. BOA/BBR/EBBR/MSA-Niveau in Berlin).
+Die Klasse **Curriculares Element** (`LP_0000261`) bildet den semantischen Kern der Lehrplan-Ontologie. Sie dient als generische Oberklasse für alle inhaltlichen Bausteine eines Lehrplans und ermöglicht eine einheitliche Repräsentation curricularer Strukturen über alle Bundesländer hinweg.
 
-**5. Relationen und Funktionen**
+Eine besondere Herausforderung besteht darin, dass die Lehrpläne der 16 Bundesländer unterschiedliche Terminologien und Strukturierungsprinzipien verwenden. Inhaltlich vergleichbare Konzepte werden häufig unterschiedlich benannt oder auf verschiedene Weise gegliedert. Die Ontologie begegnet dieser Heterogenität durch ein zweistufiges Modellierungsmuster: Auf einer abstrakten Ebene werden bundeslandübergreifende generische Klassen definiert, während die jeweiligen landesspezifischen Ausprägungen als Subklassen dieser generischen Konzepte modelliert werden. Dadurch bleiben sowohl die semantische Vergleichbarkeit als auch die länderspezifischen Besonderheiten erhalten.
 
-Die Ontologie verwendet eine Mischung aus **BFO-Properties** (Basic Formal Ontology) und eigenen Properties. Die wichtigsten sind:
+Die wichtigsten generischen Klassen sind:
 
-- `bfo:BFO_0000051` (**hat Teil**): Die zentrale Hierarchierelation, mit der Lehrpläne in Fragmente, Fragmente in Bereiche und Bereiche in Kompetenzen gegliedert werden.
-- `LP_0000029` (**von Bundesland**): Verknüpft jeden Lehrplanknoten mit seinem Bundesland.
-- `LP_0000026` (**hat Jahrgangsstufe**): Ordnet Inhalte und Anforderungen Jahrgangsstufen zu.
-- `LP_0000833` (**hat Bildungsgangniveau**): Gibt an, für welches Bildungsgangniveau ein Element gilt.
-- `LP_0000537` (**hat Schulfach**) und LP_0000812 (**für Schulart**): Verknüpfen Lehrpläne mit Fach und Schultyp.
-- `LP_0000021` (**ermöglicht Abschluss**): Verbindet Bildungsgänge mit erreichbaren Schulabschlüssen.
-- `LP_0030051/56/57` (**hat Beschreibung / Titel / Nummer**): Metadaten-Properties für textuelle Inhalte.
+* **CE-Fragment** (`LP_0001015`): Modelliert strukturelle Bestandteile eines Lehrplans, beispielsweise Kapitel oder Abschnitte. Diese Elemente besitzen selbst keine fachliche Bedeutung, dienen jedoch der hierarchischen Gliederung eines Lehrplans. Länderspezifische Klassen wie *Lehrplanfragment (BE)*, *Lehrplanfragment (BY)* oder *Lehrplanfragment (HH)* sind jeweils Subklassen dieses generischen Konzepts.
 
-Ergänzt wird dies durch **Schulartfunktion** (`LP_0000475`) und **Funktionsspezifikation** (`LP_0000478`) mit Subklassen Strukturierungsfunktion, Beschreibungsfunktion, Bezugsfunktionen und Niveauspezifikationsfunktion – ein Mechanismus, mit dem jedem curricularen Element explizit angegeben wird, welche Rolle es im Lehrplan spielt (z.B. ob es strukturiert, beschreibt, auf etwas verweist oder ein Niveau spezifiziert).
+* **CE-Bereich** (`LP_0000349`): Repräsentiert fachlich strukturierende Bereiche eines Lehrplans. Hierzu gehören beispielsweise Kompetenzbereiche, Lernbereiche, Leitideen, Themen oder Themenfelder. Entsprechende landesspezifische Klassen – etwa *Kompetenzbereich* (BE/HH/RP/SN/NW), *Lernbereich* (BY/SN/NI), *Leitidee* (BE/BW/HH/RP), *Thema*, *Themenfeld*, *Inhalt* (HH) oder *Inhaltsfeld* (HE/NW) – werden als Spezialisierungen dieser Oberklasse modelliert.
+
+* **CE-Kompetenzspezifikation** (`LP_0000263`): Beschreibt die im Lehrplan formulierten Kompetenzanforderungen. Hierzu zählen unter anderem *Kompetenzerwartungen* (BY), *Standards* (BE), *Anforderungen/Mindestanforderungen* (HH), *Lernziele/Lerninhalt* (SN)  oder andere landesspezifische Formen der Kompetenzbeschreibung.
+
+* **CE-Lerninhalt** (`LP_0000332`): Modelliert die fachlichen Inhalte und Lerngegenstände, die Gegenstand des Unterrichts sind.
+
+* **CE-Hinweis** (`LP_0000852`): Umfasst ergänzende Informationen wie didaktische, methodische oder organisatorische Hinweise.
+
+Auch die Lehrpläne selbst werden auf einer gemeinsamen abstrakten Ebene modelliert. Die Klasse **Lehrplan** (`LP_0000438`) bildet die generische Oberklasse, deren Subklassen die unterschiedlichen Bezeichnungen der Bundesländer repräsentieren. Hierzu gehören unter anderem **LehrplanPLUS** (BY), **Bildungsplan** (BW, HH, HB), **Kerncurriculum** (NI, HE), **Kernlehrplan** (NV), **Rahmenlehrplan** (BE/BB), **Rahmenplan** (MV), **Fachanforderung** (SH) sowie die in mehreren Bundesländern verwendete Bezeichnung **Lehrplan**.
+
+
+
+### 3. Zeitliche und stufenbezogene Einordnung
+
+(Wann gilt etwas?)
+
+* Jahrgang
+* Schulstufe
+* Abschluss
+
+**Jahrgangsstufe** (`LP_0000009`) und **Schulstufe** (`LP_0000020`) strukturieren den zeitlichen Verlauf von Bildungsgängen. Die Schulstufe differenziert sich insbesondere in **Einführungsphase**, **Qualifikationsphase** und **Oberstufenphase** und bildet damit größere zeitliche Abschnitte schulischer Bildung ab.
+
+Die Klasse **Schulabschluss** (`LP_0000019`) modelliert die erreichbaren Bildungsabschlüsse eines Bildungsgangs, darunter die **Allgemeine Hochschulreife**, das **Fachabitur**, der **Mittlere Schulabschluss** sowie der **Erste Schulabschluss**. Diese Abschlussformen werden in der Ontologie zusätzlich in länderspezifischen Subklassen konkretisiert, beispielsweise als *Allgemeine Hochschulreife (HH)* oder *Mittlerer Abschluss (SN)*.
+
+
+### 4. Niveau-System
+
+(Für welches Anspruchsniveau gilt etwas?)
+
+* Bildungsgangniveau
+* Fachniveau
+* Fremdsprachenniveau
+
+Die wichtigsten Subklassen sind das **Bildungsgangniveau** (`LP_0000028`), das grundlegende schulische Leistungsprofile beschreibt, beispielsweise das Gymnasialniveau der Sekundarstufe I, das Hauptschulniveau, das Realschulniveau sowie das Gymnasialniveau der Sekundarstufe II. Ergänzend hierzu modelliert das **Fachniveau Sek II** (`LP_0000265`) die kursbezogenen Anforderungsniveaus der gymnasialen Oberstufe, insbesondere Grundkurse und Leistungskurse sowie deren länderspezifische Ausprägungen.
+
+Darüber hinaus existieren für die einzelnen Bundesländer spezifische Subklassen des Niveaubegriffs, da sowohl Terminologie als auch Zuordnung zu Abschlüssen föderal unterschiedlich ausgestaltet sind. Beispiele hierfür sind etwa die in Berlin verwendeten Niveaus BOA, BBR, EBBR und MSA.
+
+Die Instanzen der Klasse **Fremdsprachenniveau** ('LP_0010001') geben an, in welchem Umfang Lernende die Sprache verstehen, sprechen, lesen und schreiben können, und dient als Vergleichsgrundlage innerhalb von Bildungsabschlüssen und internationalen Qualifikationen.
+
+### 5. Relationen und Funktionen
+
+(Wie hängen alle Elemente zusammen?)
+
+hat Teil
+hat Jahrgang
+hat Fach
+von Bundesland
+hat Beschreibung
+hat Funktionen
+
+
+Die Ontologie verwendet eine Kombination aus Properties der BFO-basierten **Relation Ontology** sowie eigens definierter Relations- und Datentyp-Properties, die entsprechend als Sub-Properties dieser Basismodellierung eingeordnet sind. Dadurch wird eine konsistente Anbindung an etablierte ontologische Standards gewährleistet und zugleich die domänenspezifische Modellierung des Lehrplansystems ermöglicht.
+
+Die wichtigsten Properties sind:
+
+* **`bfo:BFO_0000051` (hat Teil)**: Zentrale mereologische Relation zur Abbildung von Teil-Ganzes-Strukturen. Sie modelliert die hierarchische Gliederung von Lehrplänen in Fragmente, Bereiche und Kompetenzelemente.
+
+* **`LP_0000029` (von Bundesland)**: Verknüpft jeden Lehrplanknoten mit dem jeweiligen Bundesland als Geltungsbereich.
+
+* **`LP_0000026` (hat Jahrgangsstufe)**: Ordnet curricularen Elementen spezifische Jahrgangsstufen zu und verankert sie damit im zeitlichen Verlauf des Bildungsgangs.
+
+* **`LP_0000833` (hat Bildungsgangniveau)**: Gibt das für ein Element relevante Bildungsgang- bzw. Leistungsniveau an.
+
+* **`LP_0000537` (hat Schulfach)** und **`LP_0000812` (für Schulart)**: Stellen die fachliche und institutionelle Einbettung der Lehrplanknoten sicher, indem sie diese mit Schulfach und Schulart verknüpfen.
+
+* **`LP_0000021` (ermöglicht Abschluss)**: Modelliert die Beziehung zwischen Bildungsgängen und den jeweils erreichbaren Schulabschlüssen.
+
+* **`LP_0030051` / `LP_0030056` / `LP_0030057` (hat Beschreibung / Titel / Nummer)**: Metadaten-Properties zur Repräsentation textueller und identifizierender Informationen curricularer Elemente.
+
+Ergänzt wird dieses Relationsmodell durch das Konzept der **Schulartfunktion** (`LP_0000475`) sowie die zugehörige **Funktionsspezifikation** (`LP_0000478`). Diese umfasst unter anderem die Subklassen **Strukturierungsfunktion**, **Beschreibungsfunktion**, **Bezugsfunktion** und **Niveauspezifikationsfunktion**. Damit kann jedem curricularen Element explizit eine funktionale Rolle innerhalb des Lehrplans zugewiesen werden, etwa ob es strukturierende, beschreibende, referenzierende oder niveauspezifizierende Aufgaben erfüllt.
 
 Weitere Informationen zur Struktur und Modellierung der Lehrplan-Ontologie befinden sich im Kapitel [Beispiele](https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/).
 
+
+---
 
 ## Modellierung / Designprinzip
 
