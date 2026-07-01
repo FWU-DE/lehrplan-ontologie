@@ -43,6 +43,9 @@ markdown_extensions:
       preserve_tabs: true
   - md_in_html
   - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+
 
       
 
