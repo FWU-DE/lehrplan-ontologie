@@ -568,10 +568,27 @@ Die Schulfach- und Schulart-Ontologien basieren auf dem **Simple Knowledge Organ
 
 
 
-ToDo
+### OWL-Time
 
-- KIM
-- Time Ontology
+Für die Modellierung zeitbezogener Informationen verwendet die Lehrplan-Ontologie die **OWL-Time Ontology**, einen W3C-Standard zur formalen Beschreibung von Zeitpunkten, Zeitintervallen und zeitlichen Beziehungen.
+
+Die OWL-Time Ontology kommt überall dort zum Einsatz, wo curriculare Informationen einen zeitlichen Bezug besitzen. Hierzu zählen insbesondere die **Gültigkeitszeiträume von Lehrplänen**, die Angabe von **Unterrichtsumfängen** (beispielsweise der Anzahl von Unterrichtsstunden oder Unterrichtseinheiten) sowie weitere zeitliche Eigenschaften curricularer Elemente. Durch die Verwendung eines etablierten Zeitmodells lassen sich sowohl Zeitintervalle als auch Dauerangaben standardisiert und maschineninterpretierbar repräsentieren.
+
+Die Nutzung der OWL-Time Ontology erhöht die Interoperabilität der Lehrplan-Ontologie mit anderen Wissensgraphen und ermöglicht die konsistente Modellierung zeitlicher Informationen auf Grundlage eines international etablierten Semantic-Web-Standards.
+
+OWL-Time Dokumentation: [https://www.w3.org/TR/owl-time/](https://www.w3.org/TR/owl-time/)
+
+
+### KIM-Vokabulare
+
+Zur bundeslandübergreifenden Harmonisierung von Schulfächern und Schularten werden außerdem die **KIM-Vokabulare** (Kompetenzzentrum Interoperable Metadaten) nachgenutzt. Die von der DINI-AG KIM entwickelten kontrollierten Vokabulare stellen bundesweit einheitliche Referenzkonzepte für verschiedene Bildungsbereiche bereit und fördern die Interoperabilität zwischen Bildungsplattformen, Repositorien und Metadatenstandards.
+
+In der Lehrplan-Ontologie dienen die KIM-Vokabulare insbesondere als gemeinsamer Referenzpunkt für die Schulfach- und Schulart-Ontologien. Die länderspezifischen Fach- und Schulartkonzepte werden über die SKOS-Mapping-Properties `skos:exactMatch` beziehungsweise `skos:closeMatch` mit den entsprechenden KIM-Konzepten verknüpft. Dadurch bleiben die offiziellen Bezeichnungen und Strukturen der einzelnen Bundesländer vollständig erhalten, während gleichzeitig eine bundeslandübergreifende semantische Vergleichbarkeit ermöglicht wird.
+
+Die KIM-Vokabulare übernehmen somit die Rolle eines standardisierten Referenzvokabulars innerhalb der Lehrplan-Ontologie. Anwendungen können entweder auf den länderspezifischen Konzepten arbeiten oder über die Verknüpfungen zu den KIM-Konzepten bundesweite Abfragen und Analysen durchführen, ohne die unterschiedlichen Terminologien der Länder gesondert berücksichtigen zu müssen.
+
+Repository: [https://github.com/dini-ag-kim/kmk-vocabs](https://github.com/dini-ag-kim/kmk-vocabs)
+
  
 
 ---
