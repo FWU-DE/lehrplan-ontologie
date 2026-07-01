@@ -423,56 +423,164 @@ Ein Lehrplan in der Kern-Ontologie lässt sich somit als hierarchisch und zuglei
 
 ## Nachgenutzte Ontologien/Vokabulare
 
-**BFO**
 
-Top-Level-Ontologien sind allgemeine, abstrakte Ontologien, die grundlegende Kategorien und Beziehungen definieren, die für viele verschiedene Domänen anwendbar sind. Sie bieten eine einheitliche Struktur, um spezifische Ontologien miteinander zu verbinden und zu integrieren.
+Die Lehrplan-Ontologie wurde nicht als vollständig eigenständiges Modell entwickelt, sondern orientiert sich konsequent am Prinzip der Wiederverwendung etablierter Ontologien. Ziel ist es, vorhandene semantische Standards zu übernehmen, wo diese bereits geeignete Modellierungskonzepte bereitstellen, und nur dort neue Klassen oder Properties einzuführen, wo die Besonderheiten des deutschen Lehrplansystems dies erfordern.
 
-Die Basic Formal Ontology (BFO) ist eine solche Top-Level-Ontologie, die zwischen Continuants (Dinge, die über die Zeit bestehen, z. B. Objekte) und Occurrents (Prozesse, die sich über die Zeit erstrecken) unterscheidet. Sie wird insbesondere in den Lebenswissenschaften und der Technik eingesetzt, um Forschungsdaten systematisch zu organisieren.
+Durch diese Strategie wird die Interoperabilität mit anderen Wissensgraphen erhöht, die Anschlussfähigkeit an bestehende Semantic-Web-Anwendungen verbessert und gleichzeitig der Modellierungsaufwand reduziert. Die Lehrplan-Ontologie versteht sich daher als domänenspezifische Erweiterung etablierter ontologischer Grundlagen.
 
-Die Nutzung einer Top-Level-Ontologie wie BFO ist sinnvoll, weil sie eine konsistente und interoperable Grundlage für verschiedene Ontologien schafft. Dies erleichtert die Datenintegration, Wiederverwendbarkeit und semantische Interoperabilität zwischen verschiedenen Systemen und Disziplinen.
+### Basic Formal Ontology (BFO)
 
-**Die Schulfach-Ontologie**
+Die grundlegende ontologische Struktur orientiert sich an der Basic Formal Ontology (BFO), die als internationale Referenzontologie insbesondere im wissenschaftlichen Bereich weit verbreitet ist. BFO unterscheidet konsequent zwischen real existierenden Entitäten (Continuants und Occurrents) sowie Informationsobjekten.
 
-Die Schulfach-Ontologie (`https://w3id.org/schulfach/1.0.0`) ist ein kontrolliertes Vokabular für die Unterrichtsfächer aller 16 deutschen Bundesländer. Der Graph enthält genau **16 SKOS-ConceptSchemes** – eines pro Bundesland (z.B. `Schulfächer (Hamburg)`, `Schulfächer (Bayern)`) – und darin insgesamt 894 **Schulfach-Individuen**, die jeweils als Instanz von `LP_0000001 (Schulfach)` und `skos:Concept` typisiert sind. Jedes Fach ist über `LP_0000029 (von Bundesland)` an sein Bundesland gebunden und trägt ein `rdfs:label` mit dem länderspezifischen Fachnamen – denn derselbe Lehrgegenstand heißt in verschiedenen Ländern unterschiedlich (z.B. „Sachkunde" vs. „Heimat- und Sachkunde" vs. „Mensch-Natur-Technik").
+Diese Unterscheidung bildet die konzeptionelle Grundlage der Lehrplan-Ontologie. Ein Lehrplan wird als Informationsobjekt modelliert, während Lehrprozesse und Lernprozesse als Prozesse aufgefasst werden. Kompetenzen werden nicht als Informationsobjekte verstanden, sondern als Dispositionen beziehungsweise Fähigkeiten von Personen. Kompetenzbeschreibungen innerhalb eines Lehrplans sind dagegen Informationsobjekte, welche diese Kompetenzen spezifizieren.
 
-Für die **Interoperabilität** über Ländergrenzen hinweg werden SKOS-Mapping-Properties genutzt: `skos:exactMatch` und `skos:closeMatch` verlinken länderspezifische Fächer sowohl untereinander als auch mit dem bundesweiten **KIM-Schulfachvokabular** (`w3id.org/kim/schulfaecher`), das als gemeinsamer Referenzpunkt dient. So lässt sich z.B. `HH:Deutsch` über `exactMatch` mit `BY:Deutsch` und dem KIM-Konzept `s1005 (Deutsch)` verknüpfen, ohne die länderspezifischen Bezeichnungen aufzugeben.
+Die Orientierung an BFO sorgt dafür, dass die Modellierung ontologisch konsistent bleibt und sich problemlos mit anderen BFO-basierten Ontologien kombinieren lässt.
 
-Repository: https://github.com/FWU-DE/schulfach-ontologie 
 
-SKOS-Vokabular: https://fwu-de.github.io/mem-skos-vocabs/ 
 
-**Die Schulart-Ontologie**
+??? info " ... mehr erfahren zu BFO als Top-Level-Ontologie? "
 
-Die Schulart-Ontologie (`https://w3id.org/schulart/1.0.0`) folgt demselben Grundmuster, ist aber inhaltlich dichter: Auch hier gibt es **16 SKOS-ConceptSchemes** (eines pro Bundesland) mit 89 **Schulart-Individuen** (`LP_0000111 Schulart` + `skos:Concept`). Daneben enthält der Graph aber noch wesentlich mehr: Die Schularten sind direkt mit ihren **Bildungsgangniveaus** verknüpft (via `LP_0000833 (hat Bildungsgangniveau)`) und tragen damit bereits die Information, welche Leistungsniveaus an einer Schulart vergeben werden können.
-Am Hamburger Beispiel wird das deutlich: Das **Gymnasium** (`HH_0000003`) hat die Niveaus `Gymnasialniveau Sek I (HH)` und `Studienstufenniveau (HH)` (welche die Sekundarstufe I und II auf dem gymnasialen Niveau abdecken), während die **Stadtteilschule** (`HH_0000002`) gleich fünf Niveaus führt – von Mindestanforderungen bis hin zu Erhöhten Anforderungen. Diese Verknüpfung macht die Schulart-Ontologie zum Bindeglied zwischen Schulart, Bildungsgangniveau und den Anforderungen in den Lehrplandaten: Ein Lehrplan-Element, das über `LP_0000833 (hat Bildungsgangniveau)` auf ein bestimmtes Niveau zeigt, lässt sich so direkt zur passenden Schulart zuordnen und umgekehrt.
+	## BFO als Top-Level-Ontologie
 
-Repository: https://github.com/FWU-DE/schulart-ontologie 
+	Die Basic Formal Ontology (BFO) ist eine **Top-Level-Ontologie**, die einen strukturierten Rahmen zur Organisation von Entitäten anhand ihrer grundlegenden Eigenschaften bereitstellt. Sie enthält keine domänenspezifischen Inhalte, sondern definiert **hoch abstrakte Kategorien**, die die Entwicklung spezialisierter Ontologien wie die Lehrplan-Ontologie unterstützen.
 
-**time ontology**
+	BFO unterscheidet Entitäten danach, ob sie über die Zeit hinweg bestehen oder sich in der Zeit entfalten, und unterteilt sie in **Continuants** und **Occurrents**.
+	
+	### **Continuants (Endurants)**
 
-...
+	Continuants sind Entitäten, die **zu jedem gegebenen Zeitpunkt existieren** und ihre Identität über die Zeit hinweg behalten. Es gibt drei Arten von Continuants: *Independent Continuants*, *Generically Dependent Continuants* und *Specifically Dependent Continuants*.
 
-**relation ontology**
+	#### **Independent Continuants (IC)**
 
-...
+	Dies sind Entitäten, die **unabhängig existieren** und keine andere Entität benötigen, um zu existieren.
+	
+	- **Material Entities** – Physische Objekte mit räumlicher Ausdehnung (z.B. Organismen, Gebäude, Werkzeuge)
+	- **Immaterial Entities** – Grenzen oder Teile von Objekten, die durch menschliche Konvention definiert sind (z.B. der Äquator, die obere Hälfte einer Kugel).
+	
+	#### **Generically Dependent Continuants (GDC)**
+	
+	Diese Entitäten **hängen in ihrer Existenz von Independent Continuants ab**. Generically Dependent Continuants können in mehreren Instanzen existieren oder an verschiedenen Orten repliziert werden. *Beispiele*:
+	
+	  - Der Inhalt eines Buches (im Gegensatz zu einer einzelnen physischen Kopie)
+	  - Ein Softwareprogramm (das auf mehreren Computern installiert sein kann)
+	  - Eine musikalische Komposition (die auf verschiedenen Instrumenten gespielt werden kann)
+	  - Ein Datensatz und einzelne Datenelemente
+	  - Entitäten mit Informationsgehalt
+	
+	#### **Specifically Dependent Continuants (SDC)**
+	
+	Specifically Dependent Continuants sind **Qualities, Roles oder Dispositions**, die **nur in Beziehung zu einem bestimmten Independent Continuant existieren**. Sie können nicht unabhängig existieren und müssen stets in etwas anderem **inhärent sein**.
+	
+	- **Qualities** – Intrinsische Eigenschaften eines Independent Continuant. Sie beschreiben, **wie eine Entität zu einem bestimmten Zeitpunkt ist**. *Beispiele*: Die Farbe eines Blattes, das Gewicht einer Person, die Temperatur einer Flüssigkeit.
+	
+	- **Roles** – Situative Eigenschaften, die eine Entität **aufgrund von Kontext oder sozialer Konvention** hat. *Beispiele*: Die Rolle eines Lehrers, der Status eines Patienten in einem Krankenhaus, die Rolle einer Maschine während der Wartung.
+	
+	- **Dispositions and functions** – Potenzielle Verhaltensweisen oder Tendenzen, die eine Entität besitzt, auch wenn sie aktuell nicht realisiert sind. Functions sind Dispositions, die den spezifischen Zweck von etwas darstellen. *Beispiele*: Die Zerbrechlichkeit von Glas (es kann beim Fallen zerbrechen), die Löslichkeit von Salz (es löst sich in Wasser), die Fähigkeit einer Person, mehrere Sprachen zu sprechen, die Funktion eines Ofens zum Erhitzen, die Funktion eines Schraubenziehers zum Ein- und Ausdrehen von Schrauben.
+	
+	### **Occurrents (Perdurants)**
+	
+	Ein Occurrent ist eine Entität, die sich **in der Zeit entfaltet**, oder der Beginn bzw. das Ende einer solchen Entität.
+	
+	#### **Processes**
+	
+	Processes sind dynamische Aktivitäten mit zeitlicher Dauer. *Beispiele*: Ein Laufereignis, eine chemische Reaktion, Zellteilung.
+	
+	#### **Temporal Regions**
+	
+	Diese repräsentieren zeitliche Abschnitte. *Beispiele*: Eine Sekunde, eine Stunde, ein historischer Zeitraum.
+	
+	#### **Spatiotemporal Regions**
+	
+	Diese verbinden Raum und Zeit zu einer gemeinsamen Entität. *Beispiele*: Die Bahn eines bewegten Objekts, die Trajektorie eines Planeten.
+	
+	### **Relations in BFO**
+	
+	BFO definiert formale **Beziehungen** zwischen Entitäten, um Konsistenz zu gewährleisten. Einige zentrale Relations sind:
+	
+	- **continuant part of** – Beschreibt kompositorische Beziehungen. *Beispiel: Ein Rad ist Teil eines Autos.*
+	- **occurrent part of** – Ein Prozess ist Teil eines anderen Prozesses. *Beispiel: Eine Konferenz umfasst mehrere Workshop-Events.*
+	- **located in** – Beschreibt räumliche Einbettung. *Beispiel: Ein Buch ist `located_in` einer Bibliothek.*
+	- **characteristic of** – Weist Specifically Dependent Continuants Independent Continuants zu. *Beispiel: `educator role` ist eine Charakteristik einer Lehrperson.*
+	- **has participant** – Ordnet Continuants Prozessen zu. *Beispiel: Ein Student nimmt an einer Vorlesung teil.*
+	
+Repository:  [https://github.com/bfo-ontology/BFO-2020](https://github.com/bfo-ontology/BFO-2020)
 
-**information artefact ontology**
+Dokumentation: [https://bfo-ontology.github.io/bfo-2020.html](https://bfo-ontology.github.io/bfo-2020.html)
 
-...
 
-**SKOS**
+### Relation Ontology (RO)
 
-...
+Für die Modellierung von Beziehungen zwischen Entitäten werden zentrale Relationen der Relation Ontology (RO) verwendet. RO enthält weitere wichtige Relationen die noch nicht in der BFO enthalten sind. 
 
-**KIM-Vokabulare**
+Insbesondere die mereologische Relation **has part** (BFO_0000051) bildet die hierarchische Struktur von Lehrplänen ab.
 
-...
+Darüber hinaus werden verschiedene domänenspezifische Properties der Lehrplan-Ontologie als Sub-Properties allgemeiner Relationen der Relation Ontology modelliert. Dadurch bleiben ihre semantischen Eigenschaften erhalten und können von allgemeinen Werkzeugen sowie Reasonern genutzt werden.
+
+
+### Information Artifact Ontology (IAO)
+
+Da Lehrpläne, Kompetenzspezifikationen, Lernziele und weitere curriculare Elemente Informationsobjekte darstellen, orientiert sich ihre Modellierung an der Information Artifact Ontology (IAO), die ebenfalls auf BFO und RO basiert.
+
+Die IAO beschreibt Informationsobjekte unabhängig von ihrer konkreten physischen Repräsentation. Dadurch wird deutlich, dass beispielsweise ein PDF-Dokument lediglich Träger eines Lehrplans ist, der Lehrplan selbst jedoch als eigenständiges Informationsobjekt existiert.
+
+Ebenso werden Kompetenzbeschreibungen oder Lernzielbeschreibungen nicht als Kompetenzen oder Lernziele selbst verstanden, sondern als Informationsartefakte, die diese beschreiben.
+
+
+### Schulfach- und Schulart-Ontologien
+
+Die Schulfach- und Schulart-Ontologien wurden als eigenständige, wiederverwendbare Wissensmodelle entwickelt, um die Lehrplan-Ontologie um eine einheitliche Beschreibung des institutionellen Bildungskontexts zu ergänzen. Sie stellen kontrollierte Vokabulare für Schulfächer und Schularten aller deutschen Bundesländer bereit und werden von der Lehrplan-Ontologie referenziert, anstatt diese Informationen mehrfach zu modellieren.
+
+Diese Trennung folgt dem Prinzip der Modularisierung und vermeidet Redundanzen. Änderungen an Fach- oder Schulartbezeichnungen müssen dadurch nur an einer zentralen Stelle gepflegt werden und stehen unmittelbar allen Ontologien zur Verfügung, die diese Vokabulare nachnutzen. Gleichzeitig erhöht sich die Interoperabilität, da unterschiedliche Bildungsontologien über dieselben Identifikatoren für Schulfächer und Schularten miteinander verknüpft werden können. Die Lehrplan-Ontologie konzentriert sich dadurch auf die Modellierung curricularer Inhalte und Relationen, während allgemeine bildungsbezogene Konzepte in diesen spezialisierten Ontologien verwaltet werden.
+
+#### Schulfach-Ontologie
+
+Die Schulfach-Ontologie (`https://w3id.org/schulfach`) stellt ein kontrolliertes Vokabular für die Unterrichtsfächer aller 16 deutschen Bundesländer bereit. Sie bildet die unterschiedlichen länderspezifischen Fachbezeichnungen semantisch ab und schafft gleichzeitig die Grundlage für bundeslandübergreifende Vergleiche.
+
+Die Ontologie umfasst insgesamt **16 SKOS Concept Schemes**, von denen jeweils eines die Schulfächer eines Bundeslandes repräsentiert (beispielsweise *Schulfächer (Hamburg)* oder *Schulfächer (Bayern)*). Innerhalb dieser Concept Schemes sind insgesamt **894 Schulfach-Individuen** modelliert. Jedes Schulfach ist sowohl als Instanz der Klasse **Schulfach** (`LP_0000001`) als auch als `skos:Concept` typisiert. Über das Property **von Bundesland** (`LP_0000029`) wird jedes Fach eindeutig seinem jeweiligen Bundesland zugeordnet.
+
+Die Bezeichnungen der Schulfächer werden über `rdfs:label` erfasst. Dadurch können die länderspezifischen Unterschiede erhalten bleiben, obwohl inhaltlich vergleichbare Fächer vorliegen. So existieren beispielsweise für denselben Unterrichtsgegenstand unterschiedliche Benennungen wie *Sachkunde*, *Heimat- und Sachunterricht* oder *Mensch, Natur und Technik*.
+
+Für die bundeslandübergreifende Interoperabilität nutzt die Ontologie die Mapping-Properties von SKOS. Über `skos:exactMatch` und `skos:closeMatch` werden fachlich entsprechende Schulfächer sowohl zwischen den Bundesländern als auch mit dem bundesweiten **KIM-Schulfachvokabular** (`https://w3id.org/kim/schulfaecher`) verknüpft, das als gemeinsames Referenzvokabular dient. So kann beispielsweise das Hamburger Fach *Deutsch* über `skos:exactMatch` sowohl mit dem entsprechenden bayerischen Fach als auch mit dem KIM-Konzept `s1005 (Deutsch)` verbunden werden, ohne die jeweiligen landesspezifischen Bezeichnungen oder Modellierungen aufzugeben.
+
+Repository: [https://github.com/FWU-DE/schulfach-ontologie](https://github.com/FWU-DE/schulart-ontologie)
+
+SKOS-Vokabular: [https://fwu-de.github.io/mem-skos-vocabs/](https://github.com/FWU-DE/schulart-ontologie)
+
+#### Schulart-Ontologie
+
+Die Schulart-Ontologie (`https://w3id.org/schulart`) folgt demselben konzeptionellen Aufbau wie die Schulfach-Ontologie, modelliert jedoch die Beziehungen zwischen Schularten und den ihnen zugeordneten Bildungsgangniveaus.
+
+Auch diese Ontologie besteht aus 16 **SKOS Concept Schemes**, die jeweils die Schularten eines Bundeslandes repräsentieren. Insgesamt enthält sie 89 **Schulart-Individuen**, die sowohl als Instanzen der Klasse **Schulart** (`LP_0000111`) als auch als `skos:Concept` modelliert sind.
+
+Über das Property **hat Bildungsgangniveau** (`LP_0000833`) werden Schularten unmittelbar mit den zugehörigen Bildungsgangniveaus verknüpft. Dadurch enthält die Ontologie bereits Informationen darüber, welche Leistungs- beziehungsweise Anforderungsniveaus innerhalb einer bestimmten Schulart vorgesehen sind.
+
+Am Beispiel Hamburgs wird dies deutlich: Das **Gymnasium** (`HH_0000003`) ist mit den Bildungsgangniveaus *Gymnasialniveau Sekundarstufe I (HH)* und *Studienstufenniveau (HH)* verknüpft und deckt damit die gymnasiale Sekundarstufe I sowie die gymnasiale Oberstufe ab. Die **Stadtteilschule** (`HH_0000002`) verweist dagegen auf insgesamt fünf unterschiedliche Bildungsgangniveaus, die von Mindestanforderungen bis zu Erhöhten Anforderungen reichen.
+
+Durch diese Modellierung fungiert die Schulart-Ontologie als semantisches Bindeglied zwischen Schularten, Bildungsgangniveaus und den curricularen Elementen der Lehrplan-Ontologie. Verweist ein Lehrplanelement über **hat Bildungsgangniveau** (`LP_0000833`) auf ein bestimmtes Bildungsgangniveau, kann daraus unmittelbar die Menge der zugehörigen Schularten bestimmt werden. Umgekehrt lassen sich ausgehend von einer Schulart sämtliche relevanten curricularen Elemente eines bestimmten Leistungsniveaus identifizieren.
+
+Repository: [https://github.com/FWU-DE/schulart-ontologie](https://github.com/FWU-DE/schulart-ontologie)
+
+#### Verwendung von SKOS
+
+Die Schulfach- und Schulart-Ontologien basieren auf dem **Simple Knowledge Organization System (SKOS)**, einem W3C-Standard zur Repräsentation kontrollierter Vokabulare, Thesauri und Klassifikationen. SKOS wird dort eingesetzt, wo eine Menge normierter Begriffe mit Bezeichnungen, Hierarchien und einfache Beziehungen beschrieben werden soll.
+
+Über Mapping-Properties wie `skos:exactMatch` und `skos:closeMatch` lassen sich inhaltlich entsprechende Schulfächer verschiedener Bundesländer sowie externe Referenzvokabulare, beispielsweise das KIM-Schulfachvokabular, miteinander verknüpfen. Dadurch bleiben die landesspezifischen Bezeichnungen erhalten, während gleichzeitig bundeslandübergreifende Abfragen und Vergleiche ermöglicht werden.
+
+
+
+ToDo
+
+- KIM
+- Time Ontology
+ 
+
+---
 
 ## Überblick über Klassen, Beziehungen, Hierarchien
 
 ### Klassen
 
-**Klassen, die den Lernprozess beschreiben:**
+**Klassen, die Lern- und Lehrprozess beschreiben:**
 
 Hierarchische Übersicht: 
 
@@ -540,20 +648,20 @@ Hierarchische Übersicht:
     - Funktionsspezifikation
         - Beschreibungsfunktion
         - Strukturierungsfunktion
-    - symbol (BFO)
+    - symbol (IAO)
         - Identifikationsnummer
-    - textual entity (BFO)
+    - textual entity (IAO)
         - Titel
         - Beschreibung
-    - data item (BFO)
+    - data item (IAO)
         - Zeitspezifikation
     - Unit 
 
-Genaue **Definitionen** der einzelnen Klassen sind [hier](https://fwu-de.github.io/lehrplan-ontologie/index-de.html) zu finden. 
+Genaue **Definitionen** der einzelnen Klassen sind in der [Widoco-Dokumentation](https://fwu-de.github.io/lehrplan-ontologie/index-de.html) oder in den [Release-Dateien](https://github.com/FWU-DE/lehrplan-ontologie) zu finden. 
 
 ### Instanzen (individuals)
 
-Die Individuen der Ontologie lassen sich in thematische Gruppen gliedern. Im Gegensatz zu den Klassen – die abstrakte Konzepte beschreiben – sind Individuen die konkreten Instanzen, auf die in den Lehrplandaten direkt per IRI verwiesen wird.
+Die Individuen der Ontologie lassen sich in thematische Gruppen gliedern. Im Gegensatz zu den Klassen, die abstrakte Konzepte beschreiben, sind Individuen die konkreten Instanzen, auf die in den Lehrplandaten direkt per IRI verwiesen wird.
 
 **1. Bundesländer (`LP_0000040`)**
 
@@ -580,7 +688,7 @@ Die 16 deutschen Bundesländer als fest definierte Individuen. Jedes Lehrplanele
 
 13 bundeslandunabhängige Individuen für die Jahrgänge 1–13. Alle Lehrplaninhalte referenzieren dieselben IRIs, was die länderübergreifende Vergleichbarkeit nach Jahrgangsstufe ermöglicht.
 
-- LP_2000001 (Jahrgangsstufe 1) bis LP_2000013 (Jahrgangsstufe 13)
+- `LP_2000001` (Jahrgangsstufe 1) bis `LP_2000013` (Jahrgangsstufe 13)
 
 **3. Schulstufen (`LP_0000020`)**
 
@@ -598,56 +706,56 @@ Individuen, die mehrere Jahrgangsstufen zu pädagogischen Abschnitten bündeln:
 
 Die fünf bundeslandunabhängigen Superklassen-Niveaus, von denen alle länderspezifischen Niveaus erben. Sie ermöglichen länderübergreifende Abfragen auf generischem Anspruchsniveau.
 
-- `LP_0000073` – Grundschulniveau
-- `LP_0000074` – Hauptschulniveau
-- `LP_0000075` – Realschulniveau
-- `LP_0000069` – Gymnasialniveau Sek I
-- `LP_0000835` – Gymnasialniveau Sek II
+- `LP_0000073` Grundschulniveau
+- `LP_0000074` Hauptschulniveau
+- `LP_0000075` Realschulniveau
+- `LP_0000069` Gymnasialniveau Sek I
+- `LP_0000835` Gymnasialniveau Sek II
 
 Länderspezifische Beispiele:
 
-- `LP_0000025` – Mittelschulniveau (BY) → Hauptschulniveau
-- `LP_0000030` – Realschulniveau (BY) → Realschulniveau
-- `LP_0000023` – Gymnasialniveau Sek I (BY) → Gymnasialniveau Sek I
-- `LP_0000279` – Gymnasialniveau Sek I (SN) → Gymnasialniveau Sek I
-- `LP_0000294` – Oberschulniveau (SN) → Realschulniveau
-- `LP_0000143` – Erhöhtes Kompetenzniveau (RP) → Gymnasialniveau Sek I
-- `LP_0000147` – Grundlegendes Kompetenzniveau (RP) → Hauptschulniveau
-- `LP_0000093` – Erhöhte Anforderungen (HH) → Gymnasialniveau Sek I
-- `LP_0000014` – E Niveau (BW) → Gymnasialniveau Sek I
-- `LP_0000016` – G Niveau (BW) → Hauptschulniveau
+- `LP_0000025` Mittelschulniveau (BY) → Hauptschulniveau
+- `LP_0000030` Realschulniveau (BY) → Realschulniveau
+- `LP_0000023` Gymnasialniveau Sek I (BY) → Gymnasialniveau Sek I
+- `LP_0000279` Gymnasialniveau Sek I (SN) → Gymnasialniveau Sek I
+- `LP_0000294` Oberschulniveau (SN) → Realschulniveau
+- `LP_0000143` Erhöhtes Kompetenzniveau (RP) → Gymnasialniveau Sek I
+- `LP_0000147` Grundlegendes Kompetenzniveau (RP) → Hauptschulniveau
+- `LP_0000093` Erhöhte Anforderungen (HH) → Gymnasialniveau Sek I
+- `LP_0000014` E Niveau (BW) → Gymnasialniveau Sek I
+- `LP_0000016` G Niveau (BW) → Hauptschulniveau
 
 **5. Niveaustufen BE/BB (`LP_0000443`)**
 
 Die acht buchstabenbasierten Kompetenzstufen des gemeinsamen Berliner/Brandenburger Rahmenlehrplans:
 
-- `LP_0000464` – Niveaustufe A 
-- `LP_0000465` – Niveaustufe B 
-- `LP_0000466` – Niveaustufe C 
-- `LP_0000467` – Niveaustufe D 
-- `LP_0000468` – Niveaustufe E 
-- `LP_0000469` – Niveaustufe F 
-- `LP_0000470` – Niveaustufe G 
-- `LP_0000616` – Niveaustufe H 
+- `LP_0000464` Niveaustufe A 
+- `LP_0000465` Niveaustufe B 
+- `LP_0000466` Niveaustufe C 
+- `LP_0000467` Niveaustufe D 
+- `LP_0000468` Niveaustufe E 
+- `LP_0000469` Niveaustufe F 
+- `LP_0000470` Niveaustufe G 
+- `LP_0000616` Niveaustufe H 
 
 **6. Anforderungsbereiche (`LP_0000802`)**
 
 Drei bundesweit einheitliche KMK-Individuen zur Klassifizierung des kognitiven Anspruchs:
 
-- `LP_0000803` – Anforderungsbereich 1: Reproduktion
-- `LP_0000804` – Anforderungsbereich 2: Reorganisation und Transfer
-- `LP_0000805` – Anforderungsbereich 3: Reflexion und Problemlösung
+- `LP_0000803` Anforderungsbereich 1: Reproduktion
+- `LP_0000804` Anforderungsbereich 2: Reorganisation und Transfer
+- `LP_0000805` Anforderungsbereich 3: Reflexion und Problemlösung
 
 **7. Fremdsprachenniveaus (`LP_0010001`)**
 
 Sechs GER-Stufen als bundeslandunabhängige Individuen:
 
-- `LP_0030317` – A1 (Anfänger)
-- `LP_0030316` – A2 (Grundlegende Kenntnisse)
-- `LP_0030315` – B1 (Fortgeschrittene Sprachverwendung)
-- `LP_0030314` – B2 (Selbständige Sprachverwendung)
-- `LP_0030312` – C1 (Fachkundige Sprachkenntnisse)
-- `LP_0030313` – C2 (Annähernd muttersprachliche Kenntnisse)
+- `LP_0030317` A1 (Anfänger)
+- `LP_0030316` A2 (Grundlegende Kenntnisse)
+- `LP_0030315` B1 (Fortgeschrittene Sprachverwendung)
+- `LP_0030314` B2 (Selbständige Sprachverwendung)
+- `LP_0030312` C1 (Fachkundige Sprachkenntnisse)
+- `LP_0030313` C2 (Annähernd muttersprachliche Kenntnisse)
 
 **8. Funktionsspezifikations-Individuen**
 
@@ -655,22 +763,22 @@ Die Individuen, die als OWL-Restriktionen in den Klassendefinitionen aller länd
 
 Strukturierungsfunktionen:
 
-- `LP_0000627` – Fragmentfunktion
-- `LP_0000497` – Bereichsfunktion
+- `LP_0000627` Fragmentfunktion
+- `LP_0000497` Bereichsfunktion
 
 Beschreibungsfunktionen:
 
-- `LP_0000479` – Kompetenzbeschreibungsfunktion
-- `LP_0000480` – Lerninhaltsbeschreibungsfunktion
-- `LP_0001014` – Hinweisbeschreibungsfunktion
-- `LP_0002158` – Verweisbeschreibungsfunktion
-- `LP_0030326` – Leitperspektivenbeschreibungsfunktion
+- `LP_0000479` Kompetenzbeschreibungsfunktion
+- `LP_0000480` Lerninhaltsbeschreibungsfunktion
+- `LP_0001014` Hinweisbeschreibungsfunktion
+- `LP_0002158` Verweisbeschreibungsfunktion
+- `LP_0030326` Leitperspektivenbeschreibungsfunktion
 
 Bezugsfunktionen:
 
-- `LP_0000500` – Prozessbezugsfunktion
-- `LP_0000501` – Inhaltsbezugsfunktion
-- `LP_0002171` – Domänenbezugsfunktion
+- `LP_0000500` Prozessbezugsfunktion
+- `LP_0000501` Inhaltsbezugsfunktion
+- `LP_0002171` Domänenbezugsfunktion
 
 **9. Schulfächer**
 
@@ -706,7 +814,7 @@ Allgemeinere Variante; verbindet Niveaustufen-Individuen (BE/BB) mit ihren absch
 - `LP_0030051` – **hat Beschreibung** (Domain: `Curriculares Element`) → `Beschreibung`: Trägt längere erläuternde Texte, Hinweise und Beispiele zu einem CE.
 - `LP_0030057` – **hat Nummer** (Domain: `Curriculares Element`) → `Identifikationsnummer`: Trägt die originale Nummerierung oder Codierung aus dem Quelldokument.
 - `LP_0000463` – **uri**: Trägt den URL zum Originaldokument des Lehrplans beim Herausgeber.
-- `LP_0000483` – **hat Funktion** → `Funktionsspezifikation`: Verknüpft länderspezifische CE-Klassen mit ihrer semantischen Rolle (Bereichsfunktion, Kompetenzbeschreibungsfunktion usw.). In der Regel als OWL-Restriktion in der Klassendefinition verankert, nicht als Datentripel.
+- `LP_0000483` – **hat Funktionsspezifikation** → `Funktionsspezifikation`: Verknüpft länderspezifische CE-Klassen mit ihrer semantischen Rolle (Bereichsfunktion, Kompetenzbeschreibungsfunktion, usw.). In der Regel als OWL-Restriktion in der Klassendefinition verankert, nicht als Datentripel.
 - `LP_0030071` – **hat Verweis** → `CE-Verweis`: Hängt einen CE-Verweis an das Element, von dem aus er ausgeht.
 - `LP_0030072` – **verweist auf** (Domain: CE-Verweis)
 : eigt vom CE-Verweis-Individuum auf das eigentliche Ziel des Verweises.
@@ -717,15 +825,15 @@ Allgemeinere Variante; verbindet Niveaustufen-Individuen (BE/BB) mit ihren absch
 
 ## Mapping unterschiedlicher Terminologien der Bundesländer
 
-So wie sich die Bildungssysteme von Bundesland zu Bundesland unterscheiden, variieren auch die Lehrpläne. Jedes Bundesland strukturiert seine Lehrpläne auf eigene Weise und verwendet teilweise unterschiedliches Vokabular, um gleiche oder ähnliche Konzepte zu beschreiben. Darüber hinaus bestehen innerhalb der Bundesländer fächerübergreifende Unterschiede, sowohl im Aufbau der Lehrpläne als auch in den verwendeten Begrifflichkeiten. Dies führt dazu, dass die Inhalte der Lehrpläne nicht immer eindeutig den von uns definierten Kern-Elementen (CE-Bereich, CE-Kompetenzspezifikation, CE-Lerninhalt und CE-Hinweis) zugeordnet werden können. Zusätzlich erschweren spezifische Besonderheiten einzelner Bundesländer — wie etwa die Aufnahme konkreter Unterrichtsbeispiele oder detaillierter Zeitvorgaben für Lerninhalte, die in anderen Lehrplänen nicht enthalten sind — die Einbindung in ein generisches Modell.
+So wie sich die Bildungssysteme von Bundesland zu Bundesland unterscheiden, variieren auch die Lehrpläne. Jedes Bundesland strukturiert seine Lehrpläne auf eigene Weise und verwendet teilweise unterschiedliches Vokabular, um gleiche oder ähnliche Konzepte zu beschreiben. Darüber hinaus bestehen innerhalb der Bundesländer fächerübergreifende Unterschiede, sowohl im Aufbau der Lehrpläne als auch in den verwendeten Begrifflichkeiten. Dies führt dazu, dass die Inhalte der Lehrpläne nicht immer eindeutig den von uns definierten Kern-Elementen (CE-Bereich, CE-Kompetenzspezifikation, CE-Lerninhalt und CE-Hinweis) zugeordnet werden können. Zusätzlich erschweren spezifische Besonderheiten einzelner Bundesländer, wie etwa die Aufnahme konkreter Unterrichtsbeispiele oder detaillierter Zeitvorgaben für Lerninhalte, die in anderen Lehrplänen nicht enthalten sind, die Einbindung in ein generisches Modell.
 
 Im Rahmen der Analyse der Lehrpläne aller Bundesländer wurden zentrale inhaltliche Strukturen identifiziert, die in nahezu allen Lehrplänen vorkommen. Dabei wurden die Fächer Deutsch, Mathematik, Englisch (bzw. die erste Fremdsprache) sowie Physik (bzw. Sachunterricht oder Naturwissenschaften) berücksichtigt. Die identifizierten inhaltlichen Kernkomponenten werden als „Curriculare Elemente“ (CE) bezeichnet. Dazu gehören: 
 
-*Grafik* 
+ToDo *Grafik* 
 
 Die nachfolgende Grafik veranschaulicht, wie diese zentralen Elemente der Ontologie dazu beitragen, bundeslandspezifische Terminologien konsistent abzubilden. Als Beispiel dienen Ausschnitte aus dem Deutsch-Lehrplan Mecklenburg-Vorpommerns. Unter jedem curricularen Element sind die Bezeichnungen aufgeführt, die in anderen Bundesländern für funktional vergleichbare Elemente verwendet werden. Diese Zuordnung ermöglicht es, die terminologischen Unterschiede der Länder beizubehalten und zugleich eine klare und strukturierte Vergleichbarkeit herzustellen.
 
-*Grafik*
+ToDo *Grafik*
 
 
 ### Integration der Bildungsstandards
