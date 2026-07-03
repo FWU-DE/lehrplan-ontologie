@@ -13,16 +13,22 @@
 
 # Instanzen
 @prefix Englisch_TH: <https://w3id.org/schulfach/TH_0000006> .
+@prefix Griechisch_ST: <https://w3id.org/schulfach/ST_0000014> .
 @prefix Englisch_KIM_Schulfach: <http://w3id.org/kim/schulfaecher/s1007> .
 
 # properties
 @prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
 @prefix has_exact_match: <http://www.w3.org/2004/02/skos/core#exactMatch> .
 
-ex:Lehrplan hat_Schulfach: Englisch_TH: ,
+ex:Lehrplan_1 hat_Schulfach: 
                            ex:Fachbezug_Englisch_als_Erstsprache .
 ex:Fachbezug_Englisch_als_Erstsprache hat_Schulfach: Englisch_TH: ;
                                       a erste_Fremdsprache: .
+
+ex:Lehrplan_2 hat_Schulfach: Griechisch_ST: .
+
+Griechisch_ST: a Schulfach: .
+
 Englisch_TH: a Schulfach: ;
              has_exact_match: Englisch_KIM_Schulfach: .
 Englisch_KIM_Schulfach: a Fremdsprachenfach: .

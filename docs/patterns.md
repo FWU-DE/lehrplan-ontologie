@@ -98,6 +98,8 @@ namespaces: false
 
 **Erläuterung**:
 
+Das Beispiel zeigt zwei Lehrpläne, denen ein Schulfach, bzw. ein Schulfachbezug zugeordnet sind. 
+
 **Schulfach** (`LP_0000001`) ist die Basisklasse für alle Unterrichtsfächer im deutschen Schulsystem. Die Ontologie definiert vier thematische Subklassen für häufig abgefragte Fächergruppen:
 
 - **MINT-Fach** (`LP_0000002`) – Mathematik, Informatik, Naturwissenschaften, Technik; enthält seinerseits
@@ -139,24 +141,33 @@ namespaces: false
 
 **Erläuterung**:
 
-**Schulart** (`LP_0000111`) bezeichnet den institutionellen Typ einer Schule. Die Schulart-Ontologie erfasst insgesamt 89 Schulart-Individuen aus allen 16 Bundesländern – je eines pro länderspezifisch benannter Schulform.
-Grundschule und Gymnasium sind die einzigen Schularten, die in allen Ländern vorkommen. Alle anderen Bezeichnungen variieren erheblich: Was in Bayern *Mittelschule* heißt, heißt in Thüringen *Regelschule*, in Mecklenburg-Vorpommern *Regionale Schule*, in Sachsen *Oberschule* und in Niedersachsen *Hauptschule*. Ähnlich bei den Gesamtschulen: Hamburg kennt nur die *Stadtteilschule*, Schleswig-Holstein die *Gemeinschaftsschule*, Nordrhein-Westfalen unterscheidet zwischen *Gesamt- und Sekundarschule*. 
+**Schulart** (LP_0000111) bezeichnet den institutionellen Typ einer Schule. Die Schulart-Ontologie umfasst 89 Schulart-Individuen aus allen 16 Bundesländern – jeweils eines für jede länderspezifisch benannte Schulform.
 
-Jedes Schulart-Individuum ist über `LP_0000029` (**von Bundesland**) an sein Bundesland gebunden und trägt einen länderspezifischen IRI der Form `schulart:BY_0000001`. Damit ist die Schulart der institutionelle Einstiegspunkt in die Lehrplandaten: Ein Lehrplan verweist über **für Schulart** (`LP_0000812`) auf genau eine Schulart – und die Schulart wiederum deklariert über **hat Bildungsgangniveau** (`LP_0000833`), welche Leistungsansprüche an ihr möglich sind.
+Nur **Grundschule** und **Gymnasium** kommen unter derselben Bezeichnung in allen Bundesländern vor. Alle anderen Schularten unterscheiden sich zum Teil erheblich. So entspricht beispielsweise die **Mittelschule** in Bayern der **Regelschule** in Thüringen, der **Regionalen Schule** in Mecklenburg-Vorpommern, der **Oberschule** in Sachsen oder der **Hauptschule** in Niedersachsen. Auch bei den Gesamtschulen zeigen sich deutliche Unterschiede: Hamburg kennt ausschließlich die **Stadtteilschule**, Schleswig-Holstein die **Gemeinschaftsschule**, Nordrhein-Westfalen unterscheidet zwischen **Gesamtschule** und **Sekundarschule**.
 
-**Schulart** und **Bildungsgangniveau** (`LP_0000028`) sind über die Property **hat Bildungsgangniveau** (`LP_0000833`) miteinander verknüpft: Jede Schulart deklariert explizit, welche Leistungsniveaus an ihr möglich sind. Das ermöglicht es, Lehrplanelemente nicht nur nach Schulart, sondern gezielt nach Anspruchsniveau zu filtern.
+Jedes Schulart-Individuum ist über **von Bundesland** (LP_0000029) genau einem Bundesland zugeordnet und besitzt einen länderspezifischen IRI, beispielsweise `schulart:RP_0000002`. Damit bildet die Schulart den institutionellen Einstiegspunkt in die Lehrplandaten: Jeder Lehrplan verweist über **für Schulart** (LP_0000812) auf genau eine Schulart.
 
-**Warum eine Schulart mehrere Niveaus haben kann**
+### Schulart und Bildungsgangniveau
 
-An einer **Einheitsschule** wie dem Gymnasium gibt es in der Regel ein Niveau pro Schulstufe – in Bayern etwa *Gymnasialniveau Sek I (BY)* und *Gymnasialniveau Sek II (BY)*. An **Schulen mit mehreren Bildungsgängen** hingegen sind mehrere Niveaus gleichzeitig möglich, weil dieselbe Institution Schülerinnen und Schüler auf unterschiedliche Abschlüsse hin unterrichtet. Ein Beispiel aus den Daten: Die Gemeinschaftsschule in Sachsen führt gleich fünf Niveaus – *Grundschulniveau (SN), Hauptschulbildungsgangniveau (SN), Oberschulniveau (SN), Realschulbildungsgangniveau (SN)* und *Gymnasialniveau Sek I (SN)* – weil sie von Klasse 1 bis 10 alle Bildungsgänge integriert.
+Die Verbindung zwischen einer Schulart und den Leistungsniveaus erfolgt über die Property **hat Bildungsgangniveau** (LP_0000833). Jede Schulart deklariert damit explizit, welche **Bildungsgangniveaus** (LP_0000028) an ihr vorkommen . Dadurch können Lehrplanelemente nicht nur einer Schulart, sondern auch einem konkreten Anspruchsniveau zugeordnet werden.
 
-**Die Vielfalt der Niveaubezeichnungen**
+An einer **Einheitsschule** wie dem Gymnasium gibt es in der Regel ein Niveau pro Schulstufe. Ein Gymnasium in Bayern besitzt beispielsweise das **Gymnasialniveau Sek I (BY)** sowie das **Gymnasialniveau Sek II (BY)**.
 
-Wie bei den Schularten selbst spiegeln die Niveaubezeichnungen die föderale Vielfalt wider. Was inhaltlich dasselbe meint, heißt in jedem Bundesland anders. Beispiel: Das *Hauptschulniveau* heißt in BW *G Niveau*, in BY *Mittelschulniveau* und in RP *Grundlegendes Kompetenzniveau*.
+Anders verhält es sich bei Schularten, die mehrere Bildungsgänge unter einem Dach vereinen. Sie können gleichzeitig mehrere Bildungsgangniveaus besitzen, da Schülerinnen und Schüler dort unterschiedliche Abschlüsse anstreben. Ein Beispiel ist die **Gemeinschaftsschule Sachsen**, die fünf Bildungsgangniveaus umfasst: **Grundschulniveau (SN)**, **Hauptschulbildungsgangniveau (SN)**, **Oberschulniveau (SN)**, **Realschulbildungsgangniveau (SN)** und **Gymnasialniveau Sek I (SN)**. Sie integriert damit alle Bildungsgänge von Klasse 1 bis 10.
 
-**Was das für die Lehrplandaten bedeutet**
+### Föderale Vielfalt der Bildungsgangniveaus
 
-Ein einzelnes Curriculares Element – etwa eine Kompetenzerwartung – kann in den Lehrplandaten ebenfalls **hat Bildungsgangniveau** tragen. Durch die Verknüpfung Schulart → Bildungsgangniveau ← CE kann das System beantworten: „An welchen Schularten gilt diese Anforderung?" – ohne dass die Schulart direkt am CE stehen muss. 
+Wie die Schularten selbst sind auch die Bildungsgangniveaus landesspezifisch benannt. Inhaltlich vergleichbare Niveaus tragen je nach Bundesland unterschiedliche Bezeichnungen. So heißt das Hauptschulniveau beispielsweise in Baden-Württemberg **G-Niveau**, in Bayern **Mittelschulniveau** und in Rheinland-Pfalz **Grundlegendes Kompetenzniveau**.
+
+Die Ontologie bildet diese föderale Vielfalt bewusst ab. Statt bundesweit einheitliche Begriffe einzuführen, werden die in den jeweiligen Lehrplänen verwendeten Bezeichnungen übernommen.
+
+### Bedeutung für die Lehrplandaten
+
+Auch curriculare Elemente, beispielsweise Kompetenzerwartungen, können über **hat Bildungsgangniveau (LP_0000833)** einem oder mehreren Bildungsgangniveaus zugeordnet werden. Dadurch entsteht die Verknüpfung
+
+**Schulart → hat Bildungsgangniveau ← Curriculares Element.**
+
+Über diese gemeinsame Zuordnung lässt sich ermitteln, an welchen Schularten eine bestimmte Anforderung gilt, ohne dass die Schulart unmittelbar am curricularen Element gespeichert werden muss. Die Schulart fungiert damit als institutioneller Kontext, während das Bildungsgangniveau den fachlichen Anspruch beschreibt.
 
 
 ## Pattern 5 - Jahrgangstufe/Schulstufe und Phasen der Sekundarstufe II

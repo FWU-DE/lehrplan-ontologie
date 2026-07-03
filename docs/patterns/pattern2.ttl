@@ -11,6 +11,7 @@
 @prefix Titel: <https://w3id.org/lehrplan/ontology/LP_0000346> .
 @prefix Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030003> .
 @prefix Identifikationsnummer: <https://w3id.org/lehrplan/ontology/LP_0000347> .
+@prefix Kompetenzbereich_BW: <https://w3id.org/lehrplan/ontology/LP_0030174> .
 
 
 # properties
@@ -27,7 +28,8 @@ ex:Fragment a Lehrplanfragment_BW: ;
             hat_Teil: ex:Bereich ;
             hat_Titel: ex:Titel_2 .
 
-ex:Bereich  hat_Titel: ex:Titel_3 ;
+ex:Bereich  a Kompetenzbereich_BW: ;
+            hat_Titel: ex:Titel_3 ;
             hat_Nummer: ex:Nummer ;
             hat_Beschreibung: ex:Beschreibung .
 
