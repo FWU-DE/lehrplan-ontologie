@@ -2058,4 +2058,6 @@ DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.or
 DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000002> <https://w3id.org/lehrplan/ontology/LP_0000004> <https://w3id.org/lehrplan/ontology/LP_0000005>)
 DifferentIndividuals(<https://w3id.org/lehrplan/ontology/LP_2000001> <https://w3id.org/lehrplan/ontology/LP_2000002> <https://w3id.org/lehrplan/ontology/LP_2000003> <https://w3id.org/lehrplan/ontology/LP_2000004> <https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006> <https://w3id.org/lehrplan/ontology/LP_2000007> <https://w3id.org/lehrplan/ontology/LP_2000008> <https://w3id.org/lehrplan/ontology/LP_2000009> <https://w3id.org/lehrplan/ontology/LP_2000010> <https://w3id.org/lehrplan/ontology/LP_2000011> <https://w3id.org/lehrplan/ontology/LP_2000012> <https://w3id.org/lehrplan/ontology/LP_2000013>)
 SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000537>) <https://w3id.org/lehrplan/ontology/LP_0000537>)
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000015> "IRIs or similar locators for requests or discussions of an ontology term."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000015> "tracker item"@de)
 )
