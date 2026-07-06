@@ -271,7 +271,17 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral>))
 Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndIdentifier>))
+Declaration(AnnotationProperty(<https://w3id.org/lehrplan/ontology/LP_0000015>))
 Declaration(Datatype(<http://qudt.org/schema/qudt/LatexString>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <https://w3id.org/lehrplan/ontology/LP_0000015> (tracker item)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000015> "IRIs or similar locators for requests or discussions of an ontology term."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000015> "tracker item"@de)
+
 
 ############################
 #   Object Properties
@@ -1139,6 +1149,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000554>
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000554> "a specialized reference expressing that the target should be mastered before the source can reasonably be addressed within a didactically justified curriculum-based learning path"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000554> "Didaktische Voraussetzung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000554> "didactic prerequisite"@en)
+AnnotationAssertion(<https://w3id.org/lehrplan/ontology/LP_0000015> <https://w3id.org/lehrplan/ontology/LP_0000554> "https://github.com/FWU-DE/lehrplan-ontologie/pull/9")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000554> <https://w3id.org/lehrplan/ontology/LP_0030065>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (educational standard (KMK))
@@ -2058,6 +2069,4 @@ DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.or
 DisjointClasses(<https://w3id.org/lehrplan/ontology/LP_0000002> <https://w3id.org/lehrplan/ontology/LP_0000004> <https://w3id.org/lehrplan/ontology/LP_0000005>)
 DifferentIndividuals(<https://w3id.org/lehrplan/ontology/LP_2000001> <https://w3id.org/lehrplan/ontology/LP_2000002> <https://w3id.org/lehrplan/ontology/LP_2000003> <https://w3id.org/lehrplan/ontology/LP_2000004> <https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006> <https://w3id.org/lehrplan/ontology/LP_2000007> <https://w3id.org/lehrplan/ontology/LP_2000008> <https://w3id.org/lehrplan/ontology/LP_2000009> <https://w3id.org/lehrplan/ontology/LP_2000010> <https://w3id.org/lehrplan/ontology/LP_2000011> <https://w3id.org/lehrplan/ontology/LP_2000012> <https://w3id.org/lehrplan/ontology/LP_2000013>)
 SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000537>) <https://w3id.org/lehrplan/ontology/LP_0000537>)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000015> "IRIs or similar locators for requests or discussions of an ontology term."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000015> "tracker item"@de)
 )
