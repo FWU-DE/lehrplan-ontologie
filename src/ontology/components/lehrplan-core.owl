@@ -1174,6 +1174,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000802> <https://w3id.org/leh
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000808> (Organisation)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000808> "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000808> "Eine Organisation ist eine materielle entität, die Rollen inne haben kann, Mitglieder hat und über ein Regelwerk verfügt. Mitglieder einer Organisation sind entweder andere Organisationen oder einzelne Personen. Mitglieder können spezifische Organisationsrollen innehaben, die durch das Regelwerk der Organisation festgelegt werden. Das Regelwerk bestimmt außerdem, wie Entscheidungen im Namen der Organisation von ihren Mitgliedern getroffen werden."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000808> "Organisation"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000808> "organization"@en)
 
