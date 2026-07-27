@@ -118,6 +118,7 @@ Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000483>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000495>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000537>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000550>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000555>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000812>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000833>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000840>))
@@ -362,6 +363,7 @@ InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000086> <https:/
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000343> "has school type function"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000343> "hat Schulartfunktion"@de)
+InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000555>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000475>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000440> (für Bildungsgangabschnitt)
@@ -422,6 +424,10 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000550> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000550> "hat Gültigkeitsbereich"@de)
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000550> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000550> <https://w3id.org/lehrplan/ontology/LP_0000547>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000555> (ist Schulartfunktion von)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000555> "ist Schulartfunktion von"@de)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für Schulart)
 
