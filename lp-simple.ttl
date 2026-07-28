@@ -17,7 +17,7 @@
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
                                        owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc3> ;
                                        terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-04-02" ;
+                                       terms:created "2026-07-28" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -79,27 +79,7 @@ We don't have definitions of 'meaning' or 'expression' or 'property'. For 'refer
 
 Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
 
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."""@en ,
-                                """2012-04-05: 
-Barry Smith
-
-The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
-
-Can you fix to something like:
-
-A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
-
-Alan Ruttenberg
-
-Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
-
-On the specifics of the proposed definition:
-
-We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
-
-Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
-
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."""@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy obo:iao.owl ;
                 rdfs:label "definition"@en ,
@@ -252,13 +232,18 @@ gnd:broaderTermGeneral rdf:type owl:AnnotationProperty .
 gnd:gndIdentifier rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000015
+ontology:LP_0000015 rdf:type owl:AnnotationProperty ;
+                    rdfs:comment "IRIs or similar locators for requests or discussions of an ontology term."@en ;
+                    rdfs:label "tracker item"@de .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/BFO_0000050
 obo:BFO_0000050 rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf obo:BFO_0000050 ;
                 owl:inverseOf obo:BFO_0000051 ;
                 rdf:type owl:TransitiveProperty ;
                 obo:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en ,
@@ -516,6 +501,7 @@ ontology:LP_0000086 rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000343
 ontology:LP_0000343 rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:RO_0000085 ;
+                    owl:inverseOf ontology:LP_0000555 ;
                     rdfs:range ontology:LP_0000475 ;
                     rdfs:label "has school type function"@en ,
                                "hat Schulartfunktion"@de .
@@ -590,11 +576,26 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 :lpe_2 :hat_schulfach :sf_1 ."""@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000550
+ontology:LP_0000550 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
+                    rdfs:range ontology:LP_0000547 ;
+                    rdfs:label "has validity scope"@en ,
+                               "hat Gültigkeitsbereich"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000555
+ontology:LP_0000555 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:RO_0000079 ;
+                    rdfs:label "ist Schulartfunktion von"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000578
 ontology:LP_0000578 rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf ontology:LP_0000024 ;
                     owl:inverseOf ontology:LP_0000580 ;
                     rdfs:domain ontology:LP_0000261 ;
+                    rdfs:range ontology:LP_0000443 ;
                     rdfs:label "has niveau stage"@en ,
                                "hat Niveaustufe"@de .
 
@@ -620,6 +621,7 @@ ontology:LP_0000833 rdf:type owl:ObjectProperty ;
                     rdfs:domain [ rdf:type owl:Class ;
                                   owl:unionOf ( ontology:LP_0000111
                                                 ontology:LP_0000261
+                                                ontology:LP_0000438
                                                 ontology:LP_0000816
                                               )
                                 ] ;
@@ -713,6 +715,28 @@ ontology:LP_0000460 rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000463
 ontology:LP_0000463 rdf:type owl:DatatypeProperty ;
                     rdfs:label "uri"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000548
+ontology:LP_0000548 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000547 ;
+                    rdfs:label "von Datum"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000549
+ontology:LP_0000549 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000547 ;
+                    rdfs:label "bis Datum"@de ,
+                               "to date"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000553
+ontology:LP_0000553 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000438 ;
+                    rdfs:label "veröffentlicht am"@de .
 
 
 #################################################################
@@ -927,7 +951,6 @@ ontology:LP_0000040 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000043
 ontology:LP_0000043 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000020 ;
                     rdfs:comment "Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation." ;
                     rdfs:label "Oberstufenphase"@de ,
                                "secondary phase"@en .
@@ -949,12 +972,14 @@ ontology:LP_0000054 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000056
 ontology:LP_0000056 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000043 ;
+                    rdfs:comment "Die Einführungsphase ist der erste Abschnitt der gymnasialen Oberstufe in der Sekundarstufe II. Sie dient dem Übergang von der Mittelstufe in die Oberstufe, der Angleichung unterschiedlicher Lernvoraussetzungen sowie der Einführung in die Kursstruktur und Arbeitsweisen der Oberstufe." ;
                     rdfs:label "Einführungsphase"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000057
 ontology:LP_0000057 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000043 ;
+                    rdfs:comment "Die Qualifikationsphase ist der zweite Abschnitt der gymnasialen Oberstufe, in dem die erbrachten Leistungen in die Abiturnote einfließen. Sie umfasst in der Regel zwei Schuljahre und dient der fachlichen Vertiefung sowie der gezielten Vorbereitung auf die Abiturprüfungen." ;
                     rdfs:label "Qualifikationsphase"@de ;
                     skos:altLabel "Hauptphase" .
 
@@ -1864,13 +1889,15 @@ ontology:LP_0000345 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000346
 ontology:LP_0000346 rdf:type owl:Class ;
-                    rdfs:comment "Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird."@de ;
+                    rdfs:comment """Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird.
+Er ist die menschenlesbare, inhaltlich beschreibende Bezeichnung einer Entität (z. B. eines Kompetenzbereichs, Themas oder Abschnitts)."""@de ;
                     rdfs:label "Titel"@de ,
                                "title"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000347
 ontology:LP_0000347 rdf:type owl:Class ;
+                    rdfs:comment "Eine Identifikationsnummer ist eine Informationseinheit, die das Ergebnis eines Synchronisationsprozesses ist und dazu dient, auf eine bestimmte Instanz einer Entität zu verweisen, die von einer Gruppe von Personen gemeinsam genutzt wird, um diese einzelne Entität zu bezeichnen. Sie ist eine innerhalb eines Dokuments vergebene Kennzeichnung, die ein Objekt eindeutig von anderen Objekten derselben Art unterscheidbar macht. Sie dient der Strukturierung, Referenzierung und Zitierbarkeit von Inhalten (z. B. Kompetenzbereiche, Kapitel oder Abschnitte) und ist in der Regel systematisch aufgebaut (z. B. numerisch oder alphanumerisch)." ;
                     rdfs:label "ID number"@en ,
                                "Identifikationsnummer"@de .
 
@@ -2063,7 +2090,7 @@ ontology:LP_0000433 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000342
+                                      owl:allValuesFrom ontology:LP_0000342
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (RP)” ist ein “Lehrplan” im Bundesland Rheinland-Pfalz." ;
                     rdfs:label "Lehrplan (RP)"@de ;
@@ -2113,6 +2140,11 @@ ontology:LP_0000441 rdf:type owl:Class ;
                     rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de ;
                     rdfs:label "Element (BB)"@de ;
                     skos:editorialNote "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000443
+ontology:LP_0000443 rdf:type owl:Class ;
+                    rdfs:label "Niveaustufe BE/BB" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000445
@@ -2252,11 +2284,11 @@ ontology:LP_0000459 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000475
 ontology:LP_0000475 rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:RO_0000059 ;
+                                      owl:onProperty ontology:LP_0000477 ;
                                       owl:someValuesFrom ontology:LP_0000111
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:RO_0000079 ;
+                                      owl:onProperty ontology:LP_0000555 ;
                                       owl:someValuesFrom ontology:LP_0000809
                                     ] ;
                     rdfs:label "Schulartfunktion"@de ,
@@ -2287,7 +2319,10 @@ ontology:LP_0000493 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000499
 ontology:LP_0000499 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000478 ;
-                    rdfs:label "Bezugsfunktionen"@de .
+                    rdfs:comment """Bezugsfunktion ist eine Funktionsspezifikation und kennzeichnet, welche inhaltliche Rolle ein länderspezifisches Curriculares Element im Lehrplan spielt – genauer: worauf es sich inhaltlich bezieht.
+Die Ontologie definiert drei konkrete Bezugsfunktionen als Individuen. Die Begrifflichkeiten stammen aus den Bildungsstandards der KMK. Sie gelten besonders für die Fächer Deutsch und Mathematik.""" ;
+                    rdfs:label "Bezugsfunktionen"@de ;
+                    skos:editorialNote "Die Bezugsfunktion ist kein Freitext, sondern wird als OWL-Restriktion direkt in die Klassendefinition des länderspezifischen CE eingebaut: Jede CE-Klasse wie Kompetenzbereich (HH), Lernbereich (BY) oder Inhaltsfeld (NW) trägt in ihrer rdfs:subClassOf-Axiomatik eine owl:hasValue-Restriktion auf hat Funktion (LP_0000483), die auf das entsprechende Bezugsfunktions-Individuum zeigt. Das bedeutet: Sobald ein Lehrplanelement als Kompetenzbereich (HH) typisiert ist, weiß das System automatisch – ohne zusätzliche Aussagen in den Daten –, dass dieses Element die Bereichsfunktion trägt und damit einem CE-Bereich entspricht." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000508
@@ -2390,12 +2425,30 @@ ontology:LP_0000545 rdf:type owl:Class ;
                     skos:editorialNote "Ggf. könnte auf Wahlfach und Pflichfach geschlossen werden. Dies ist aktuell nicht implementiert."@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000547
+ontology:LP_0000547 rdf:type owl:Class ;
+                    rdfs:comment "Ein information content entity, dass den zetlichen Gültigkeitsbereich eines Lehrplans beschreibt."@de ,
+                                 "information content entity that describes the temporal validity of a curriculum" ;
+                    rdfs:label "Gültigkeitsbereich"@de ,
+                               "validity scope"@en .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000551
 ontology:LP_0000551 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000540 ;
                     rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlfach/fakultatives Fach gemeint ist."@de ;
                     rdfs:label "Wahlfach"@de ;
                     skos:altLabel "Fakultatives Fach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000554
+ontology:LP_0000554 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030065 ;
+                    rdfs:comment "Ein didaktischer Verweis, der ausdrückt, dass das Zielobjekt vor dem Quellobjekt beherrscht werden sollte, damit dieses in einem curricular und didaktisch begründeten Lernpfad sinnvoll bearbeitet werden kann."@de ,
+                                 "a specialized reference expressing that the target should be mastered before the source can reasonably be addressed within a didactically justified curriculum-based learning path"@en ;
+                    rdfs:label "Didaktische Voraussetzung"@de ,
+                               "didactic prerequisite"@en ;
+                    ontology:LP_0000015 "https://github.com/FWU-DE/lehrplan-ontologie/pull/9" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000571
@@ -2499,7 +2552,7 @@ ontology:LP_0000806 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002051
+                                      owl:allValuesFrom ontology:LP_0002051
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (BW)” ist ein “Lehrplan” im Bundesland Baden-Württemberg." ;
                     rdfs:label "Bildungsplan (BW)"@de .
@@ -2510,7 +2563,7 @@ ontology:LP_0000807 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000441
+                                      owl:allValuesFrom ontology:LP_0000441
                                     ] ;
                     rdfs:comment "Ein “Rahmenlehrplan (BB)” ist ein “Lehrplan” im Bundesland Brandenburg." ;
                     rdfs:label "Rahmenlehrplan (BB)"@de .
@@ -2518,6 +2571,8 @@ ontology:LP_0000807 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000808
 ontology:LP_0000808 rdf:type owl:Class ;
+                    rdfs:comment "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en ,
+                                 "Eine Organisation ist eine materielle entität, die Rollen inne haben kann, Mitglieder hat und über ein Regelwerk verfügt. Mitglieder einer Organisation sind entweder andere Organisationen oder einzelne Personen. Mitglieder können spezifische Organisationsrollen innehaben, die durch das Regelwerk der Organisation festgelegt werden. Das Regelwerk bestimmt außerdem, wie Entscheidungen im Namen der Organisation von ihren Mitgliedern getroffen werden."@de ;
                     rdfs:label "Organisation"@de ,
                                "organization"@en .
 
@@ -2649,7 +2704,7 @@ ontology:LP_0000818 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002089
+                                      owl:allValuesFrom ontology:LP_0002089
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (SN)” ist ein “Lehrplan” im Bundesland Sachsen." ;
                     rdfs:label "Lehrplan (SN)"@de .
@@ -2660,7 +2715,7 @@ ontology:LP_0000819 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000434
+                                      owl:allValuesFrom ontology:LP_0000434
                                     ] ;
                     rdfs:comment "Ein “LehrplanPLUS (BY)” ist ein “Lehrplan” im Bundesland Bayern." ;
                     rdfs:label "LehrplanPLUS (BY)"@de .
@@ -2671,7 +2726,7 @@ ontology:LP_0000820 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002097
+                                      owl:allValuesFrom ontology:LP_0002097
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (TH)” ist ein “Lehrplan” im Bundesland Thüringen." ;
                     rdfs:label "Lehrplan (TH)"@de .
@@ -2682,7 +2737,7 @@ ontology:LP_0000821 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002118
+                                      owl:allValuesFrom ontology:LP_0002118
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (HB)” ist ein “Lehrplan” im Bundesland Bremen." ;
                     rdfs:label "Bildungsplan (HB)"@de ;
@@ -2694,7 +2749,7 @@ ontology:LP_0000822 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000426
+                                      owl:allValuesFrom ontology:LP_0000426
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (HH)” ist ein “Lehrplan” im Bundesland Hamburg." ;
                     rdfs:label "Bildungsplan (HH)"@de .
@@ -2705,7 +2760,7 @@ ontology:LP_0000823 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002101
+                                      owl:allValuesFrom ontology:LP_0002101
                                     ] ;
                     rdfs:comment "Ein “Kerncurriculum (NI)” ist ein “Lehrplan” im Bundesland Niedersachsen." ;
                     rdfs:label "Kerncurriculum (NI)"@de ;
@@ -2717,7 +2772,7 @@ ontology:LP_0000824 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002103
+                                      owl:allValuesFrom ontology:LP_0002103
                                     ] ;
                     rdfs:comment "Ein “Fachanforderungen (SH)” ist ein “Lehrplan” im Bundesland Schleswig-Holstein." ;
                     rdfs:label "Fachanforderung (SH)"@de .
@@ -2728,7 +2783,7 @@ ontology:LP_0000825 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002102
+                                      owl:allValuesFrom ontology:LP_0002102
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (SL)” ist ein “Lehrplan” im Bundesland Saarland." ;
                     rdfs:label "Lehrplan (SL)"@de ;
@@ -2740,7 +2795,7 @@ ontology:LP_0000826 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002093
+                                      owl:allValuesFrom ontology:LP_0002093
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (ST)” ist ein “Lehrplan” im Bundesland Sachsen-Anhalt." ;
                     rdfs:label "Lehrplan (ST)"@de .
@@ -2818,7 +2873,7 @@ ontology:LP_0001000 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002085
+                                      owl:allValuesFrom ontology:LP_0002085
                                     ] ;
                     rdfs:comment "Ein “Kernlehrplan (NW)” ist ein “Lehrplan” im Bundesland Nordrhein-Westfalen." ;
                     rdfs:label "Kernlehrplan (NW)"@de ;
@@ -4035,7 +4090,7 @@ ontology:LP_0002164 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002080
+                                      owl:allValuesFrom ontology:LP_0002080
                                     ] ;
                     rdfs:comment "Ein “Rahmenplan (MV)” ist ein “Lehrplan” im Bundesland Mecklenburg-Vorpommern." ;
                     rdfs:label "Rahmenplan (MV)"@de .
@@ -4157,7 +4212,7 @@ ontology:LP_0002184 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002076
+                                      owl:allValuesFrom ontology:LP_0002076
                                     ] ;
                     rdfs:comment "Ein “Kerncurriculum (HE)” ist ein “Lehrplan” im Bundesland Hessen." ;
                     rdfs:label "Kerncurriculum (HE)"@de .
@@ -4874,7 +4929,7 @@ ontology:LP_0010001 rdf:type owl:Class ;
                                  """The \"Fremdsprachenniveau\" is a \"Niveau\".
 It corresponds to the Common European Framework of Reference for Languages (CEFR), which systematizes foreign language proficiency into six levels from A1 (beginner) to C2 (near-native proficiency).
 The \"Fremdsprachenniveau\" indicates the extent to which learners can understand, speak, read, and write the language, and serves as a basis for comparison within educational qualifications and international certifications."""@en ;
-                    rdfs:label "Femdsprachenniveau"@de .
+                    rdfs:label "Fremdsprachenniveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030001
@@ -4908,7 +4963,7 @@ ontology:LP_0030002 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030003
 ontology:LP_0030003 rdf:type owl:Class ;
-                    rdfs:comment "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt."@de ;
+                    rdfs:comment "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt. Sie ergänzt den Titel oder Namen und dient dazu, den Inhalt, Zweck, Status oder Kontext eines Objekts verständlicher zu machen. Sie kann mehrere Sätze oder Absätze enthalten."@de ;
                     rdfs:label "Beschreibung"@de ,
                                "description"@en .
 
@@ -4918,7 +4973,7 @@ ontology:LP_0030004 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0001441
+                                      owl:allValuesFrom ontology:LP_0001441
                                     ] ;
                     rdfs:comment "Ein “Rahmenlehrplan (BE)” ist ein “Lehrplan” im Bundesland Berlin." ;
                     rdfs:label "Rahmenlehrplan (BE)"@de .
@@ -9013,12 +9068,6 @@ ontology:LP_0030266 rdf:type owl:Class ;
                     skos:altLabel "Kompetenz (Bistas)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0030267
-ontology:LP_0030267 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000536 ;
-                    rdfs:label "Anforderungsbereich (Bistas)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0030268
 ontology:LP_0030268 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000349 ,
@@ -10861,37 +10910,44 @@ ontology:LP_0000453 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000464
-ontology:LP_0000464 rdf:type owl:NamedIndividual ;
+ontology:LP_0000464 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000465
-ontology:LP_0000465 rdf:type owl:NamedIndividual ;
+ontology:LP_0000465 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000466
-ontology:LP_0000466 rdf:type owl:NamedIndividual ;
+ontology:LP_0000466 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000467
-ontology:LP_0000467 rdf:type owl:NamedIndividual ;
+ontology:LP_0000467 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000468
-ontology:LP_0000468 rdf:type owl:NamedIndividual ;
+ontology:LP_0000468 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000469
-ontology:LP_0000469 rdf:type owl:NamedIndividual ;
+ontology:LP_0000469 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe F"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000470
-ontology:LP_0000470 rdf:type owl:NamedIndividual ;
+ontology:LP_0000470 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe G"@de .
 
 
@@ -10930,13 +10986,15 @@ ontology:LP_0000497 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/lehrplan/ontology/LP_0000500
 ontology:LP_0000500 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Prozessbezugsfunktion"@de .
+                    rdfs:label "Prozessbezugsfunktion"@de ;
+                    skos:editorialNote "beschreibt prozessorientierte Kompetenzen – also wie gelernt oder gehandelt wird" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000501
 ontology:LP_0000501 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Inhaltsbezugsfunktion"@de .
+                    rdfs:label "Inhaltsbezugsfunktion"@de ;
+                    skos:editorialNote "beschreibt inhaltsorientierte Kompetenzen – also was gelernt wird" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000506
@@ -11434,7 +11492,8 @@ ontology:LP_0000615 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000616
-ontology:LP_0000616 rdf:type owl:NamedIndividual ;
+ontology:LP_0000616 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000443 ;
                     rdfs:label "Niveaustufe H"@de ;
                     skos:editorialNote "we should remove these and use the  LP_0* ones." .
 
@@ -11623,7 +11682,8 @@ ontology:LP_0002158 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/lehrplan/ontology/LP_0002171
 ontology:LP_0002171 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Domänenbezugsfunktion"@de .
+                    rdfs:label "Domänenbezugsfunktion"@de ;
+                    skos:editorialNote "bezieht sich auf eine fachliche Domäne (z.B. eine Kompetenzdomäne wie Lesen, Schreiben)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030040
@@ -12529,6 +12589,29 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ;
                 ontology:LP_0000004
                 ontology:LP_0000005
               )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ontology:LP_0000342
+                ontology:LP_0000426
+                ontology:LP_0000434
+                ontology:LP_0000441
+                ontology:LP_0000536
+                ontology:LP_0001441
+                ontology:LP_0002051
+                ontology:LP_0002076
+                ontology:LP_0002080
+                ontology:LP_0002085
+                ontology:LP_0002089
+                ontology:LP_0002093
+                ontology:LP_0002097
+                ontology:LP_0002101
+                ontology:LP_0002102
+                ontology:LP_0002103
+                ontology:LP_0002118
+              ) ;
+  rdfs:comment "we leave this axiom in the edit file, because it is not useful in the state specific ontolgies"
 ] .
 
 

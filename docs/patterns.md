@@ -9,6 +9,7 @@ Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewend
 
 ```ontoink
 source: patterns/pattern1.ttl
+shape: ../shapes/auto-shapes/auto-shapes-open.ttl
 namespaces: false
 ```
 
@@ -46,6 +47,7 @@ Diese Angaben zusammen machen einen Lehrplan eindeutig identifizierbar: *„Baye
 
 ```ontoink
 source: patterns/pattern2.ttl
+shape: ../shapes/auto-shapes/auto-shapes-open.ttl
 namespaces: false
 ```
 **RDF Daten**:
@@ -111,7 +113,7 @@ Diese Subklassen dienen der thematischen Filterung über Bundeslandgrenzen hinwe
 
 Die konkreten Fächer (die Individuen) sind im separaten Schulfach-Graphen (`https://w3id.org/schulfach/1.0.0`) erfasst: 894 Fach-Individuen, je eines pro Bundesland und Fachbezeichnung – z.B. `BY_0000001 (Deutsch)`, `HH_0000004 (Deutsch)`, `SN_0000001 (Deutsch)`. Dass dasselbe Fach in verschiedenen Ländern als eigenes Individuum geführt wird, bildet die Realität ab: Die Bezeichnungen weichen ab (*Arbeit-Wirtschaft-Technik* in Niedersachsen vs. *AWT* in Mecklenburg-Vorpommern vs. *Arbeitslehre* in HE, NW, RP, SL). Für 46 Fächer existiert zusätzlich ein `skos:exactMatch` auf das bundesweite **KIM-Schulfachvokabular**, das als gemeinsamer Referenzpunkt für länderübergreifende Abfragen dient.
 
-In den Lehrplandaten wird ein konkretes Fach-Individuum über die Property `LP_0000537` (**hat Schulfach**) an einen Lehrplan gehängt – z.B. zeigt `Deutsch 1/2 (BY)` auf `schulfach:BY_0000001`.
+In den Lehrplandaten wird ein konkretes Fach-Individuum über die Property `LP_0000537` (**hat Schulfach**) mit einem Lehrplan verknüpft – z.B. zeigt `Deutsch 1/2 (BY)` auf `schulfach:BY_0000001`.
 
 Daneben gibt es die Subklasse **BistaFach** (`LP_0000039`), die Fächer kennzeichnet, für die bundesweit einheitliche Bildungsstandards der KMK existieren.
 

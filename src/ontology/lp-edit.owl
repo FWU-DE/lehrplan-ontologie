@@ -79,8 +79,8 @@ Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/FWU-DE/
 Declaration(Class(:LP_0000056))
 Declaration(Class(:LP_0000057))
 Declaration(Class(:LP_0000547))
-Declaration(Class(:LP_0000552))
 Declaration(ObjectProperty(:LP_0000550))
+Declaration(ObjectProperty(:LP_0000555))
 Declaration(DataProperty(:LP_0000548))
 Declaration(DataProperty(:LP_0000549))
 Declaration(DataProperty(:LP_0000553))
@@ -98,14 +98,60 @@ Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 #   Classes
 ############################
 
-# Class: :LP_0000552 (Publikation)
-
-AnnotationAssertion(rdfs:comment :LP_0000552 "OBI publishing process")
-AnnotationAssertion(rdfs:label :LP_0000552 "Publikation"@de)
-SubClassOf(:LP_0000552 <http://purl.obolibrary.org/obo/BFO_0000015>)
+# Class: :LP_0000342 (Element (RP))
 
 
+# Class: :LP_0000426 (Element (HH))
 
+
+# Class: :LP_0000434 (Element (BY))
+
+
+# Class: :LP_0000441 (Element (BB))
+
+
+# Class: :LP_0000536 (Element (Bista))
+
+
+# Class: :LP_0001441 (Element (BE))
+
+
+# Class: :LP_0002051 (Element (BW))
+
+
+# Class: :LP_0002076 (Element (HE))
+
+
+# Class: :LP_0002080 (Element (MV))
+
+
+# Class: :LP_0002085 (Element (NW))
+
+
+# Class: :LP_0002089 (Element (SN))
+
+
+# Class: :LP_0002093 (Element (ST))
+
+
+# Class: :LP_0002097 (Element (TH))
+
+
+# Class: :LP_0002101 (Element (NI))
+
+
+# Class: :LP_0002102 (Element (SL))
+
+
+# Class: :LP_0002103 (Element (SH))
+
+
+# Class: :LP_0002118 (Element (HB))
+
+
+
+
+DisjointClasses(Annotation(rdfs:comment "we leave this axiom in the edit file, because it is not useful in the state specific ontolgies") :LP_0000342 :LP_0000426 :LP_0000434 :LP_0000441 :LP_0000536 :LP_0001441 :LP_0002051 :LP_0002076 :LP_0002080 :LP_0002085 :LP_0002089 :LP_0002093 :LP_0002097 :LP_0002101 :LP_0002102 :LP_0002103 :LP_0002118)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6378-2618> "Steffen Rörtgen")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 )
