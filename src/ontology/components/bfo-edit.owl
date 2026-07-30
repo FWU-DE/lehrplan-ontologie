@@ -19,6 +19,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000079>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000085>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000555>))
 Declaration(NamedIndividual(<http://qudt.org/vocab/unit/MIN>))
 Declaration(NamedIndividual(<https://qudt.org/vocab/unit/HR>))
 
@@ -30,7 +31,7 @@ Declaration(NamedIndividual(<https://qudt.org/vocab/unit/HR>))
 
 InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (concretizes curriculum)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000017> (konkretisiert Lehrplan)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000017> <http://purl.obolibrary.org/obo/RO_0000059>)
 
@@ -43,7 +44,7 @@ ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3i
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (of federal state)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (von Bundesland)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
@@ -86,6 +87,10 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000495> <http://purl
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000537> (hat Schulfach)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000555> (ist Schulartfunktion von)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000555> <http://purl.obolibrary.org/obo/RO_0000079>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für Schulart)
 
@@ -141,7 +146,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000006> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (class level)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (Jahrgangsstufe)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000009> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
@@ -205,8 +210,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000438> <http://purl.obolibra
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000475> (Schulartfunktion)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> <http://purl.obolibrary.org/obo/BFO_0000034>)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> <https://w3id.org/lehrplan/ontology/LP_0000111>))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000079> <https://w3id.org/lehrplan/ontology/LP_0000809>))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000477> <https://w3id.org/lehrplan/ontology/LP_0000111>))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000555> <https://w3id.org/lehrplan/ontology/LP_0000809>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (function specification)
 
@@ -248,4 +253,5 @@ AnnotationAssertion(rdfs:label <https://qudt.org/vocab/unit/HR> "Stunde"@de)
 ClassAssertion(<http://qudt.org/schema/qudt/Unit> <https://qudt.org/vocab/unit/HR>)
 
 
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000444> "Publikationsprozess"@de)
 )

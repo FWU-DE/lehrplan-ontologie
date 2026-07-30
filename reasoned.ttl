@@ -17,7 +17,7 @@
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
                                        owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc3> ;
                                        terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-04-02" ;
+                                       terms:created "2026-07-28" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -79,27 +79,7 @@ We don't have definitions of 'meaning' or 'expression' or 'property'. For 'refer
 
 Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
 
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."""@en ,
-                                """2012-04-05: 
-Barry Smith
-
-The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
-
-Can you fix to something like:
-
-A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
-
-Alan Ruttenberg
-
-Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
-
-On the specifics of the proposed definition:
-
-We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
-
-Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
-
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with."""@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:isDefinedBy obo:iao.owl ;
                 rdfs:label "definition"@en ,
@@ -252,6 +232,12 @@ gnd:broaderTermGeneral rdf:type owl:AnnotationProperty .
 gnd:gndIdentifier rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000015
+ontology:LP_0000015 rdf:type owl:AnnotationProperty ;
+                    rdfs:comment "IRIs or similar locators for requests or discussions of an ontology term."@en ;
+                    rdfs:label "tracker item"@de .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -268,7 +254,6 @@ gnd:gndIdentifier rdf:type owl:AnnotationProperty .
 obo:BFO_0000050 rdf:type owl:ObjectProperty ;
                 owl:equivalentProperty [ owl:inverseOf obo:BFO_0000051
                                        ] ;
-                rdfs:subPropertyOf obo:BFO_0000050 ;
                 owl:inverseOf obo:BFO_0000051 ;
                 rdf:type owl:TransitiveProperty ;
                 obo:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en ,
@@ -674,9 +659,12 @@ ontology:LP_0000086 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000343
 ontology:LP_0000343 rdf:type owl:ObjectProperty ;
+                    owl:equivalentProperty [ owl:inverseOf ontology:LP_0000555
+                                           ] ;
                     rdfs:subPropertyOf obo:RO_0000085 ,
                                        [ owl:inverseOf obo:RO_0000079
                                        ] ;
+                    owl:inverseOf ontology:LP_0000555 ;
                     rdfs:domain obo:BFO_0000004 ;
                     rdfs:range ontology:LP_0000475 ;
                     rdfs:label "has school type function"@en ,
@@ -768,6 +756,26 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 :lpe_2 :hat_schulfach :sf_1 ."""@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000550
+ontology:LP_0000550 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
+                                       ] ;
+                    rdfs:range ontology:LP_0000547 ;
+                    rdfs:label "has validity scope"@en ,
+                               "hat Gültigkeitsbereich"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000555
+ontology:LP_0000555 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:RO_0000079 ,
+                                       [ owl:inverseOf obo:RO_0000085
+                                       ] ;
+                    rdfs:domain ontology:LP_0000475 ;
+                    rdfs:range obo:BFO_0000004 ;
+                    rdfs:label "ist Schulartfunktion von"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000578
 ontology:LP_0000578 rdf:type owl:ObjectProperty ;
                     owl:equivalentProperty [ owl:inverseOf ontology:LP_0000580
@@ -777,7 +785,7 @@ ontology:LP_0000578 rdf:type owl:ObjectProperty ;
                                        ] ;
                     owl:inverseOf ontology:LP_0000580 ;
                     rdfs:domain ontology:LP_0000261 ;
-                    rdfs:range obo:IAO_0000030 ;
+                    rdfs:range ontology:LP_0000443 ;
                     rdfs:label "has niveau stage"@en ,
                                "hat Niveaustufe"@de .
 
@@ -787,7 +795,7 @@ ontology:LP_0000580 rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:IAO_0000136 ,
                                        [ owl:inverseOf ontology:LP_0000024
                                        ] ;
-                    rdfs:domain obo:IAO_0000030 ;
+                    rdfs:domain ontology:LP_0000443 ;
                     rdfs:range ontology:LP_0000261 ;
                     rdfs:label "is niveau stage of"@en ,
                                "ist Niveaustufe von"@de .
@@ -812,6 +820,7 @@ ontology:LP_0000833 rdf:type owl:ObjectProperty ;
                                 [ rdf:type owl:Class ;
                                   owl:unionOf ( ontology:LP_0000111
                                                 ontology:LP_0000261
+                                                ontology:LP_0000438
                                                 ontology:LP_0000816
                                               )
                                 ] ;
@@ -944,6 +953,31 @@ ontology:LP_0000463 rdf:type owl:DatatypeProperty ;
                     rdfs:label "uri"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000548
+ontology:LP_0000548 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000547 ;
+                    rdfs:range xsd:dateTimeStamp ;
+                    rdfs:label "von Datum"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000549
+ontology:LP_0000549 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000547 ;
+                    rdfs:range xsd:dateTimeStamp ;
+                    rdfs:label "bis Datum"@de ,
+                               "to date"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000553
+ontology:LP_0000553 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000344 ;
+                    rdfs:domain ontology:LP_0000438 ;
+                    rdfs:range xsd:dateTimeStamp ;
+                    rdfs:label "veröffentlicht am"@de .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -995,7 +1029,10 @@ obo:BFO_0000003 rdf:type owl:Class ;
                                    owl:someValuesFrom obo:BFO_0000002
                                  ] ;
                 obo:IAO_0000115 "An entity that has temporal parts and that happens, unfolds or develops through time."@en ;
+                obo:IAO_0000116 "BFO 2 Reference: every occurrent that is not a temporal or spatiotemporal region is s-dependent on some independent continuant that is not a spatial region"@en ,
+                                "BFO 2 Reference: s-dependence obtains between every process and its participants in the sense that, as a matter of necessity, this process could not have existed unless these or those participants existed also. A process may have a succession of participants at different phases of its unfolding. Thus there may be different players on the field at different times during the course of a football game; but the process which is the entire game s-depends_on all of these players nonetheless. Some temporal parts of this process will s-depend_on on only some of the players."@en ;
                 dc:identifier "077-BFO" ;
+                rdfs:isDefinedBy obo:bfo.owl ;
                 rdfs:label "occurrent"@en ;
                 skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
                 skos:example "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
@@ -1051,9 +1088,18 @@ obo:BFO_0000011 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/BFO_0000015
 obo:BFO_0000015 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000003 ;
+                obo:IAO_0000112 "a process of cell-division, \\ a beating of the heart"@en ,
+                                "a process of meiosis"@en ,
+                                "a process of sleeping"@en ,
+                                "the course of a disease"@en ,
+                                "the flight of a bird"@en ,
+                                "the life of an organism"@en ,
+                                "your process of aging."@en ;
                 obo:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
+                obo:IAO_0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
                 dc:identifier "083-BFO" ;
                 rdfs:comment "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t."@en ;
+                rdfs:isDefinedBy obo:bfo.owl ;
                 rdfs:label "process"@en ;
                 skos:altLabel "event"@en ;
                 skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
@@ -1271,7 +1317,7 @@ obo:IAO_0000027 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000030 ;
                 obo:IAO_0000112 "Data items include counts of things, analyte concentrations, and statistical summaries."@en ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
-                obo:IAO_0000115 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+                obo:IAO_0000115 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
                 obo:IAO_0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en ,
                                 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en ,
                                 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en ,
@@ -1283,7 +1329,8 @@ defer to Barry, or to Brian Cantwell Smith
 
 JAR: A data item is an approximately justified approximately true approximate belief"""@en ,
                                 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ;
-                rdfs:label "data item"@en .
+                rdfs:label "data entity"@en ,
+                           "data item"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000028
@@ -1390,6 +1437,16 @@ obo:IAO_0000409 rdf:type owl:Class ;
                 obo:IAO_0000115 "A denotator type indicates how a term should be interpreted from an ontological perspective."@en ;
                 obo:IAO_0000119 "Barry Smith, Werner Ceusters"@en ;
                 rdfs:label "denotator type"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000444
+obo:IAO_0000444 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
+                obo:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
+                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Publishing" ;
+                rdfs:label "Publikationsprozess"@de ,
+                           "publishing process"@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
@@ -1668,22 +1725,11 @@ ontology:LP_0000040 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000043
 ontology:LP_0000043 rdf:type owl:Class ;
-                    owl:equivalentClass ontology:LP_0000056 ,
-                                        [ rdf:type owl:Class ;
-                                          owl:oneOf ( ontology:LP_0000046
-                                                    )
-                                        ] ;
-                    rdfs:subClassOf ontology:LP_0000020 ;
+                    rdfs:subClassOf obo:IAO_0000030 ;
                     rdfs:comment "Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation." ;
                     rdfs:label "Oberstufenphase"@de ,
                                "secondary phase"@en .
 
-
-###  https://w3id.org/lehrplan/ontology/LP_0000056
-ontology:LP_0000056 owl:equivalentClass ontology:LP_0000057 .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000057
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000053
 ontology:LP_0000053 rdf:type owl:Class ;
@@ -1722,13 +1768,15 @@ ontology:LP_0000054 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000056
 ontology:LP_0000056 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000020 ;
+                    rdfs:subClassOf ontology:LP_0000043 ;
+                    rdfs:comment "Die Einführungsphase ist der erste Abschnitt der gymnasialen Oberstufe in der Sekundarstufe II. Sie dient dem Übergang von der Mittelstufe in die Oberstufe, der Angleichung unterschiedlicher Lernvoraussetzungen sowie der Einführung in die Kursstruktur und Arbeitsweisen der Oberstufe." ;
                     rdfs:label "Einführungsphase"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000057
 ontology:LP_0000057 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000020 ;
+                    rdfs:subClassOf ontology:LP_0000043 ;
+                    rdfs:comment "Die Qualifikationsphase ist der zweite Abschnitt der gymnasialen Oberstufe, in dem die erbrachten Leistungen in die Abiturnote einfließen. Sie umfasst in der Regel zwei Schuljahre und dient der fachlichen Vertiefung sowie der gezielten Vorbereitung auf die Abiturprüfungen." ;
                     rdfs:label "Qualifikationsphase"@de ;
                     skos:altLabel "Hauptphase" .
 
@@ -2893,7 +2941,8 @@ ontology:LP_0000345 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000346
 ontology:LP_0000346 rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000300 ;
-                    rdfs:comment "Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird."@de ;
+                    rdfs:comment """Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird.
+Er ist die menschenlesbare, inhaltlich beschreibende Bezeichnung einer Entität (z. B. eines Kompetenzbereichs, Themas oder Abschnitts)."""@de ;
                     rdfs:label "Titel"@de ,
                                "title"@en .
 
@@ -2901,6 +2950,7 @@ ontology:LP_0000346 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000347
 ontology:LP_0000347 rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000028 ;
+                    rdfs:comment "Eine Identifikationsnummer ist eine Informationseinheit, die das Ergebnis eines Synchronisationsprozesses ist und dazu dient, auf eine bestimmte Instanz einer Entität zu verweisen, die von einer Gruppe von Personen gemeinsam genutzt wird, um diese einzelne Entität zu bezeichnen. Sie ist eine innerhalb eines Dokuments vergebene Kennzeichnung, die ein Objekt eindeutig von anderen Objekten derselben Art unterscheidbar macht. Sie dient der Strukturierung, Referenzierung und Zitierbarkeit von Inhalten (z. B. Kompetenzbereiche, Kapitel oder Abschnitte) und ist in der Regel systematisch aufgebaut (z. B. numerisch oder alphanumerisch)." ;
                     rdfs:label "ID number"@en ,
                                "Identifikationsnummer"@de .
 
@@ -3109,14 +3159,6 @@ ontology:LP_0000432 rdf:type owl:Class ;
 ontology:LP_0000433 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0000342
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0000342
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000046
                                                                ]
@@ -3126,7 +3168,7 @@ ontology:LP_0000433 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000342
+                                      owl:allValuesFrom ontology:LP_0000342
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (RP)” ist ein “Lehrplan” im Bundesland Rheinland-Pfalz." ;
                     rdfs:label "Lehrplan (RP)"@de ;
@@ -3193,6 +3235,12 @@ ontology:LP_0000441 rdf:type owl:Class ;
                     rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de ;
                     rdfs:label "Element (BB)"@de ;
                     skos:editorialNote "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000443
+ontology:LP_0000443 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:IAO_0000030 ;
+                    rdfs:label "Niveaustufe BE/BB" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000445
@@ -3333,11 +3381,11 @@ ontology:LP_0000459 rdf:type owl:Class ;
 ontology:LP_0000475 rdf:type owl:Class ;
                     rdfs:subClassOf obo:BFO_0000034 ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:RO_0000059 ;
+                                      owl:onProperty ontology:LP_0000477 ;
                                       owl:someValuesFrom ontology:LP_0000111
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:RO_0000079 ;
+                                      owl:onProperty ontology:LP_0000555 ;
                                       owl:someValuesFrom ontology:LP_0000809
                                     ] ;
                     rdfs:label "Schulartfunktion"@de ,
@@ -3369,7 +3417,10 @@ ontology:LP_0000493 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000499
 ontology:LP_0000499 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000478 ;
-                    rdfs:label "Bezugsfunktionen"@de .
+                    rdfs:comment """Bezugsfunktion ist eine Funktionsspezifikation und kennzeichnet, welche inhaltliche Rolle ein länderspezifisches Curriculares Element im Lehrplan spielt – genauer: worauf es sich inhaltlich bezieht.
+Die Ontologie definiert drei konkrete Bezugsfunktionen als Individuen. Die Begrifflichkeiten stammen aus den Bildungsstandards der KMK. Sie gelten besonders für die Fächer Deutsch und Mathematik.""" ;
+                    rdfs:label "Bezugsfunktionen"@de ;
+                    skos:editorialNote "Die Bezugsfunktion ist kein Freitext, sondern wird als OWL-Restriktion direkt in die Klassendefinition des länderspezifischen CE eingebaut: Jede CE-Klasse wie Kompetenzbereich (HH), Lernbereich (BY) oder Inhaltsfeld (NW) trägt in ihrer rdfs:subClassOf-Axiomatik eine owl:hasValue-Restriktion auf hat Funktion (LP_0000483), die auf das entsprechende Bezugsfunktions-Individuum zeigt. Das bedeutet: Sobald ein Lehrplanelement als Kompetenzbereich (HH) typisiert ist, weiß das System automatisch – ohne zusätzliche Aussagen in den Daten –, dass dieses Element die Bereichsfunktion trägt und damit einem CE-Bereich entspricht." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000508
@@ -3489,12 +3540,31 @@ ontology:LP_0000545 rdf:type owl:Class ;
                     skos:editorialNote "Ggf. könnte auf Wahlfach und Pflichfach geschlossen werden. Dies ist aktuell nicht implementiert."@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000547
+ontology:LP_0000547 rdf:type owl:Class ;
+                    rdfs:subClassOf obo:IAO_0000030 ;
+                    rdfs:comment "Ein information content entity, dass den zetlichen Gültigkeitsbereich eines Lehrplans beschreibt."@de ,
+                                 "information content entity that describes the temporal validity of a curriculum" ;
+                    rdfs:label "Gültigkeitsbereich"@de ,
+                               "validity scope"@en .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000551
 ontology:LP_0000551 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000540 ;
                     rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlfach/fakultatives Fach gemeint ist."@de ;
                     rdfs:label "Wahlfach"@de ;
                     skos:altLabel "Fakultatives Fach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000554
+ontology:LP_0000554 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030065 ;
+                    rdfs:comment "Ein didaktischer Verweis, der ausdrückt, dass das Zielobjekt vor dem Quellobjekt beherrscht werden sollte, damit dieses in einem curricular und didaktisch begründeten Lernpfad sinnvoll bearbeitet werden kann."@de ,
+                                 "a specialized reference expressing that the target should be mastered before the source can reasonably be addressed within a didactically justified curriculum-based learning path"@en ;
+                    rdfs:label "Didaktische Voraussetzung"@de ,
+                               "didactic prerequisite"@en ;
+                    ontology:LP_0000015 "https://github.com/FWU-DE/lehrplan-ontologie/pull/9" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000571
@@ -3606,14 +3676,6 @@ ontology:LP_0000802 rdf:type owl:Class ;
 ontology:LP_0000806 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002051
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002051
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000049
                                                                ]
@@ -3623,7 +3685,7 @@ ontology:LP_0000806 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002051
+                                      owl:allValuesFrom ontology:LP_0002051
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (BW)” ist ein “Lehrplan” im Bundesland Baden-Württemberg." ;
                     rdfs:label "Bildungsplan (BW)"@de .
@@ -3632,14 +3694,6 @@ ontology:LP_0000806 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000807
 ontology:LP_0000807 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0000441
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0000441
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000057
@@ -3650,7 +3704,7 @@ ontology:LP_0000807 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000441
+                                      owl:allValuesFrom ontology:LP_0000441
                                     ] ;
                     rdfs:comment "Ein “Rahmenlehrplan (BB)” ist ein “Lehrplan” im Bundesland Brandenburg." ;
                     rdfs:label "Rahmenlehrplan (BB)"@de .
@@ -3659,6 +3713,8 @@ ontology:LP_0000807 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000808
 ontology:LP_0000808 rdf:type owl:Class ;
                     rdfs:subClassOf obo:BFO_0000040 ;
+                    rdfs:comment "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en ,
+                                 "Eine Organisation ist eine materielle entität, die Rollen inne haben kann, Mitglieder hat und über ein Regelwerk verfügt. Mitglieder einer Organisation sind entweder andere Organisationen oder einzelne Personen. Mitglieder können spezifische Organisationsrollen innehaben, die durch das Regelwerk der Organisation festgelegt werden. Das Regelwerk bestimmt außerdem, wie Entscheidungen im Namen der Organisation von ihren Mitgliedern getroffen werden."@de ;
                     rdfs:label "Organisation"@de ,
                                "organization"@en .
 
@@ -3818,14 +3874,6 @@ der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt."""@de ;
 ontology:LP_0000818 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002089
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002089
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000047
                                                                ]
@@ -3835,7 +3883,7 @@ ontology:LP_0000818 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002089
+                                      owl:allValuesFrom ontology:LP_0002089
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (SN)” ist ein “Lehrplan” im Bundesland Sachsen." ;
                     rdfs:label "Lehrplan (SN)"@de .
@@ -3844,14 +3892,6 @@ ontology:LP_0000818 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000819
 ontology:LP_0000819 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0000434
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0000434
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000051
@@ -3862,7 +3902,7 @@ ontology:LP_0000819 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000434
+                                      owl:allValuesFrom ontology:LP_0000434
                                     ] ;
                     rdfs:comment "Ein “LehrplanPLUS (BY)” ist ein “Lehrplan” im Bundesland Bayern." ;
                     rdfs:label "LehrplanPLUS (BY)"@de .
@@ -3871,14 +3911,6 @@ ontology:LP_0000819 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000820
 ontology:LP_0000820 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002097
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002097
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000031
@@ -3889,7 +3921,7 @@ ontology:LP_0000820 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002097
+                                      owl:allValuesFrom ontology:LP_0002097
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (TH)” ist ein “Lehrplan” im Bundesland Thüringen." ;
                     rdfs:label "Lehrplan (TH)"@de .
@@ -3898,14 +3930,6 @@ ontology:LP_0000820 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000821
 ontology:LP_0000821 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002118
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002118
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000056
@@ -3916,7 +3940,7 @@ ontology:LP_0000821 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002118
+                                      owl:allValuesFrom ontology:LP_0002118
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (HB)” ist ein “Lehrplan” im Bundesland Bremen." ;
                     rdfs:label "Bildungsplan (HB)"@de ;
@@ -3927,14 +3951,6 @@ ontology:LP_0000821 rdf:type owl:Class ;
 ontology:LP_0000822 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0000426
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0000426
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000045
                                                                ]
@@ -3944,7 +3960,7 @@ ontology:LP_0000822 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0000426
+                                      owl:allValuesFrom ontology:LP_0000426
                                     ] ;
                     rdfs:comment "Ein “Bildungsplan (HH)” ist ein “Lehrplan” im Bundesland Hamburg." ;
                     rdfs:label "Bildungsplan (HH)"@de .
@@ -3953,14 +3969,6 @@ ontology:LP_0000822 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000823
 ontology:LP_0000823 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002101
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002101
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000043
@@ -3971,7 +3979,7 @@ ontology:LP_0000823 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002101
+                                      owl:allValuesFrom ontology:LP_0002101
                                     ] ;
                     rdfs:comment "Ein “Kerncurriculum (NI)” ist ein “Lehrplan” im Bundesland Niedersachsen." ;
                     rdfs:label "Kerncurriculum (NI)"@de ;
@@ -3982,14 +3990,6 @@ ontology:LP_0000823 rdf:type owl:Class ;
 ontology:LP_0000824 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002103
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002103
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000054
                                                                ]
@@ -3999,7 +3999,7 @@ ontology:LP_0000824 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002103
+                                      owl:allValuesFrom ontology:LP_0002103
                                     ] ;
                     rdfs:comment "Ein “Fachanforderungen (SH)” ist ein “Lehrplan” im Bundesland Schleswig-Holstein." ;
                     rdfs:label "Fachanforderung (SH)"@de .
@@ -4008,14 +4008,6 @@ ontology:LP_0000824 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000825
 ontology:LP_0000825 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002102
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002102
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000055
@@ -4026,7 +4018,7 @@ ontology:LP_0000825 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002102
+                                      owl:allValuesFrom ontology:LP_0002102
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (SL)” ist ein “Lehrplan” im Bundesland Saarland." ;
                     rdfs:label "Lehrplan (SL)"@de ;
@@ -4037,14 +4029,6 @@ ontology:LP_0000825 rdf:type owl:Class ;
 ontology:LP_0000826 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002093
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002093
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000053
                                                                ]
@@ -4054,7 +4038,7 @@ ontology:LP_0000826 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002093
+                                      owl:allValuesFrom ontology:LP_0002093
                                     ] ;
                     rdfs:comment "Ein “Lehrplan (ST)” ist ein “Lehrplan” im Bundesland Sachsen-Anhalt." ;
                     rdfs:label "Lehrplan (ST)"@de .
@@ -4150,14 +4134,6 @@ ontology:LP_0000852 rdf:type owl:Class ;
 ontology:LP_0001000 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002085
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002085
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000044
                                                                ]
@@ -4167,7 +4143,7 @@ ontology:LP_0001000 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002085
+                                      owl:allValuesFrom ontology:LP_0002085
                                     ] ;
                     rdfs:comment "Ein “Kernlehrplan (NW)” ist ein “Lehrplan” im Bundesland Nordrhein-Westfalen." ;
                     rdfs:label "Kernlehrplan (NW)"@de ;
@@ -5559,14 +5535,6 @@ ontology:LP_0002163 rdf:type owl:Class ;
 ontology:LP_0002164 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002080
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002080
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000052
                                                                ]
@@ -5576,7 +5544,7 @@ ontology:LP_0002164 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002080
+                                      owl:allValuesFrom ontology:LP_0002080
                                     ] ;
                     rdfs:comment "Ein “Rahmenplan (MV)” ist ein “Lehrplan” im Bundesland Mecklenburg-Vorpommern." ;
                     rdfs:label "Rahmenplan (MV)"@de .
@@ -5697,14 +5665,6 @@ ontology:LP_0002182 rdf:type owl:Class ;
 ontology:LP_0002184 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0002076
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0002076
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000050
                                                                ]
@@ -5714,7 +5674,7 @@ ontology:LP_0002184 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0002076
+                                      owl:allValuesFrom ontology:LP_0002076
                                     ] ;
                     rdfs:comment "Ein “Kerncurriculum (HE)” ist ein “Lehrplan” im Bundesland Hessen." ;
                     rdfs:label "Kerncurriculum (HE)"@de .
@@ -6431,7 +6391,7 @@ ontology:LP_0010001 rdf:type owl:Class ;
                                  """The \"Fremdsprachenniveau\" is a \"Niveau\".
 It corresponds to the Common European Framework of Reference for Languages (CEFR), which systematizes foreign language proficiency into six levels from A1 (beginner) to C2 (near-native proficiency).
 The \"Fremdsprachenniveau\" indicates the extent to which learners can understand, speak, read, and write the language, and serves as a basis for comparison within educational qualifications and international certifications."""@en ;
-                    rdfs:label "Femdsprachenniveau"@de .
+                    rdfs:label "Fremdsprachenniveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030001
@@ -6466,7 +6426,7 @@ ontology:LP_0030002 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0030003
 ontology:LP_0030003 rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000300 ;
-                    rdfs:comment "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt."@de ;
+                    rdfs:comment "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt. Sie ergänzt den Titel oder Namen und dient dazu, den Inhalt, Zweck, Status oder Kontext eines Objekts verständlicher zu machen. Sie kann mehrere Sätze oder Absätze enthalten."@de ;
                     rdfs:label "Beschreibung"@de ,
                                "description"@en .
 
@@ -6474,14 +6434,6 @@ ontology:LP_0030003 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0030004
 ontology:LP_0030004 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000438
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:someValuesFrom ontology:LP_0001441
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                 owl:allValuesFrom ontology:LP_0001441
-                                                               ]
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty ontology:LP_0000029 ;
                                                                  owl:hasValue ontology:LP_3000048
@@ -6492,7 +6444,7 @@ ontology:LP_0030004 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000438 ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty obo:BFO_0000051 ;
-                                      owl:someValuesFrom ontology:LP_0001441
+                                      owl:allValuesFrom ontology:LP_0001441
                                     ] ;
                     rdfs:comment "Ein “Rahmenlehrplan (BE)” ist ein “Lehrplan” im Bundesland Berlin." ;
                     rdfs:label "Rahmenlehrplan (BE)"@de .
@@ -10652,12 +10604,6 @@ ontology:LP_0030266 rdf:type owl:Class ;
                     skos:altLabel "Kompetenz (Bistas)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0030267
-ontology:LP_0030267 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000536 ;
-                    rdfs:label "Anforderungsbereich (Bistas)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0030268
 ontology:LP_0030268 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000349 ,
@@ -11539,7 +11485,10 @@ obo:IAO_0000103 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
-                obo:IAO_0000115 "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en ;
+                obo:IAO_0000115 "The term was initially used in an attempt to structure part of the ontology, but in retrospect failed to do a good job."@en ;
+                obo:IAO_0000116 "Terms created as placeholders with the expectation of being permanent should instead be deprecated using the \"placeholder removed\" (obo:IAO_0000226) justification."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "failed exploratory term"@en .
 
 
@@ -11565,7 +11514,7 @@ obo:IAO_0000121 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000078 ,
                          obo:IAO_0000102 ;
-                obo:IAO_0000115 "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en ;
+                obo:IAO_0000115 "The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release."@en ;
                 rdfs:label "organizational term"@en .
 
 
@@ -11630,6 +11579,10 @@ obo:IAO_0000226 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
+                obo:IAO_0000115 "The term was created to temporarily stand in for a semantic purpose, but is no longer needed, typically due to another permanent term being defined."@en ;
+                obo:IAO_0000116 "This reason is appropriate for a temporary term even if no permanent term is defined; for example if the need for the term no longer exists. If a permanent (replacement) term is defined, the deprecated term should reference the replacement with IAO:0100001. If no replacement is defined, it may be appropriate to reference alternative terms with oboInOwl:consider."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "placeholder removed"@en .
 
 
@@ -11642,7 +11595,10 @@ obo:IAO_0000227 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
-                obo:IAO_0000116 "An editor note should explain what were the merged terms and the reason for the merge."@en ;
+                obo:IAO_0000115 "The term has been combined with one or more other terms to create a more encompassing (merged) term."@en ;
+                obo:IAO_0000116 "The deprecated term should reference the merged term with obo:IAO_0100001. The replacement term should reference the original terms as sources using obo:RO_0001000 (derives_from). An editor note should explain what were the merged terms and the reason for the merge."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "terms merged"@en .
 
 
@@ -11655,7 +11611,10 @@ obo:IAO_0000228 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
-                obo:IAO_0000116 "This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use."@en ;
+                obo:IAO_0000115 "The term has been replaced by a term imported from another ontology."@en ;
+                obo:IAO_0000116 "This is to be used when the original term has been replaced by a term imported from an other ontology. The deprecated term should reference the imported term with obo:IAO_0100001."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "term imported"@en .
 
 
@@ -11668,7 +11627,10 @@ obo:IAO_0000229 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000030 ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
-                obo:IAO_0000116 "This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created."@en ;
+                obo:IAO_0000115 "The term has been split into two or more new terms."@en ;
+                obo:IAO_0000116 "This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split. The deprecated term should reference the replacement terms with obo:IAO_0100001."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "term split"@en .
 
 
@@ -11752,7 +11714,9 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ,
                          obo:IAO_0000102 ,
                          obo:IAO_0000225 ;
                 obo:IAO_0000115 "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en ;
-                obo:IAO_0000116 "This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease."@en ;
+                obo:IAO_0000116 "This obsolesence reason should be used conservatively. Typical valid examples in disease ontologies are: unnecessary class grouping; mistaked creation of a disease associated to a phenotype."@en ;
+                dc:contributor <https://orcid.org/0000-0001-6875-5360> ,
+                               <https://orcid.org/0000-0002-7356-1779> ;
                 rdfs:label "out of scope" .
 
 
@@ -14810,23 +14774,12 @@ ontology:LP_0000046 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
-                             ontology:LP_0000020 ,
-                             ontology:LP_0000043 ,
-                             ontology:LP_0000056 ,
-                             ontology:LP_0000057 ;
-                    obo:BFO_0000050 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
+                             ontology:LP_0000020 ;
+                    obo:BFO_0000051 ontology:LP_0000050 ,
                                     ontology:LP_0000051 ,
                                     ontology:LP_0000052 ,
                                     ontology:LP_0000055 ;
-                    obo:BFO_0000051 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
+                    obo:IAO_0000136 ontology:LP_0000050 ,
                                     ontology:LP_0000052 ,
                                     ontology:LP_0000055 ,
                                     ontology:LP_0000098 ,
@@ -14872,24 +14825,6 @@ ontology:LP_0000046 rdf:type owl:NamedIndividual ,
                                     <https://w3id.org/schulart/TH_0000004> ,
                                     <https://w3id.org/schulart/TH_0000005> ,
                                     <https://w3id.org/schulart/TH_0000006> ;
-                    ontology:LP_0000024 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
-                                        ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000026 ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000047 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
                     rdfs:comment "Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)" ;
                     rdfs:label "Sekundarbereich II"@de ;
                     skos:altLabel "Gymnasiale Oberstufe"@de ,
@@ -14902,86 +14837,15 @@ ontology:LP_0000050 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
-                             ontology:LP_0000020 ,
                              ontology:LP_0000043 ,
-                             ontology:LP_0000056 ,
                              ontology:LP_0000057 ;
-                    obo:BFO_0000050 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:BFO_0000051 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
-                                    ontology:LP_0000098 ,
-                                    <https://w3id.org/schulart/BB_0000003> ,
-                                    <https://w3id.org/schulart/BB_0000004> ,
-                                    <https://w3id.org/schulart/BE_0000002> ,
-                                    <https://w3id.org/schulart/BE_0000003> ,
-                                    <https://w3id.org/schulart/BE_0000004> ,
-                                    <https://w3id.org/schulart/BW_0000002> ,
-                                    <https://w3id.org/schulart/BW_0000006> ,
-                                    <https://w3id.org/schulart/BY_0000003> ,
-                                    <https://w3id.org/schulart/BY_0000005> ,
-                                    <https://w3id.org/schulart/HB_0000002> ,
-                                    <https://w3id.org/schulart/HB_0000003> ,
-                                    <https://w3id.org/schulart/HB_0000004> ,
-                                    <https://w3id.org/schulart/HE_0000006> ,
-                                    <https://w3id.org/schulart/HE_0000007> ,
-                                    <https://w3id.org/schulart/HE_0000008> ,
-                                    <https://w3id.org/schulart/HH_0000002> ,
-                                    <https://w3id.org/schulart/HH_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000004> ,
-                                    <https://w3id.org/schulart/MV_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000006> ,
-                                    <https://w3id.org/schulart/NI_0000007> ,
-                                    <https://w3id.org/schulart/NW_0000005> ,
-                                    <https://w3id.org/schulart/NW_0000006> ,
-                                    <https://w3id.org/schulart/RP_0000002> ,
-                                    <https://w3id.org/schulart/RP_0000004> ,
-                                    <https://w3id.org/schulart/SH_0000002> ,
-                                    <https://w3id.org/schulart/SH_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000002> ,
-                                    <https://w3id.org/schulart/SL_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000005> ,
-                                    <https://w3id.org/schulart/SN_0000002> ,
-                                    <https://w3id.org/schulart/SN_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000003> ,
-                                    <https://w3id.org/schulart/ST_0000004> ,
-                                    <https://w3id.org/schulart/ST_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000006> ,
-                                    <https://w3id.org/schulart/TH_0000002> ,
-                                    <https://w3id.org/schulart/TH_0000004> ,
-                                    <https://w3id.org/schulart/TH_0000005> ,
-                                    <https://w3id.org/schulart/TH_0000006> ;
+                    obo:BFO_0000050 ontology:LP_0000046 ;
                     ontology:LP_0000024 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
-                                        ontology:LP_2000010 ,
                                         ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000026 ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000047 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
+                                        ontology:LP_2000012 ;
+                    ontology:LP_0000026 ontology:LP_2000011 ,
+                                        ontology:LP_2000012 ;
+                    ontology:LP_0000047 ontology:LP_0000046 ;
                     rdfs:label "G8 Qualifikationsphase"@de ;
                     skos:altLabel "G8 Hauptphase"@de .
 
@@ -14992,86 +14856,11 @@ ontology:LP_0000051 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
-                             ontology:LP_0000020 ,
                              ontology:LP_0000043 ,
-                             ontology:LP_0000056 ,
-                             ontology:LP_0000057 ;
-                    obo:BFO_0000050 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:BFO_0000051 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
-                                    ontology:LP_0000098 ,
-                                    <https://w3id.org/schulart/BB_0000003> ,
-                                    <https://w3id.org/schulart/BB_0000004> ,
-                                    <https://w3id.org/schulart/BE_0000002> ,
-                                    <https://w3id.org/schulart/BE_0000003> ,
-                                    <https://w3id.org/schulart/BE_0000004> ,
-                                    <https://w3id.org/schulart/BW_0000002> ,
-                                    <https://w3id.org/schulart/BW_0000006> ,
-                                    <https://w3id.org/schulart/BY_0000003> ,
-                                    <https://w3id.org/schulart/BY_0000005> ,
-                                    <https://w3id.org/schulart/HB_0000002> ,
-                                    <https://w3id.org/schulart/HB_0000003> ,
-                                    <https://w3id.org/schulart/HB_0000004> ,
-                                    <https://w3id.org/schulart/HE_0000006> ,
-                                    <https://w3id.org/schulart/HE_0000007> ,
-                                    <https://w3id.org/schulart/HE_0000008> ,
-                                    <https://w3id.org/schulart/HH_0000002> ,
-                                    <https://w3id.org/schulart/HH_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000004> ,
-                                    <https://w3id.org/schulart/MV_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000006> ,
-                                    <https://w3id.org/schulart/NI_0000007> ,
-                                    <https://w3id.org/schulart/NW_0000005> ,
-                                    <https://w3id.org/schulart/NW_0000006> ,
-                                    <https://w3id.org/schulart/RP_0000002> ,
-                                    <https://w3id.org/schulart/RP_0000004> ,
-                                    <https://w3id.org/schulart/SH_0000002> ,
-                                    <https://w3id.org/schulart/SH_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000002> ,
-                                    <https://w3id.org/schulart/SL_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000005> ,
-                                    <https://w3id.org/schulart/SN_0000002> ,
-                                    <https://w3id.org/schulart/SN_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000003> ,
-                                    <https://w3id.org/schulart/ST_0000004> ,
-                                    <https://w3id.org/schulart/ST_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000006> ,
-                                    <https://w3id.org/schulart/TH_0000002> ,
-                                    <https://w3id.org/schulart/TH_0000004> ,
-                                    <https://w3id.org/schulart/TH_0000005> ,
-                                    <https://w3id.org/schulart/TH_0000006> ;
-                    ontology:LP_0000024 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
-                                        ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000026 ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000047 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
+                             ontology:LP_0000056 ;
+                    obo:BFO_0000050 ontology:LP_0000046 ;
+                    ontology:LP_0000024 ontology:LP_2000010 ;
+                    ontology:LP_0000026 ontology:LP_2000010 ;
                     rdfs:label "G8 Einführungsphase"@de .
 
 
@@ -15081,86 +14870,15 @@ ontology:LP_0000052 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
-                             ontology:LP_0000020 ,
                              ontology:LP_0000043 ,
-                             ontology:LP_0000056 ,
                              ontology:LP_0000057 ;
-                    obo:BFO_0000050 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:BFO_0000051 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
-                                    ontology:LP_0000098 ,
-                                    <https://w3id.org/schulart/BB_0000003> ,
-                                    <https://w3id.org/schulart/BB_0000004> ,
-                                    <https://w3id.org/schulart/BE_0000002> ,
-                                    <https://w3id.org/schulart/BE_0000003> ,
-                                    <https://w3id.org/schulart/BE_0000004> ,
-                                    <https://w3id.org/schulart/BW_0000002> ,
-                                    <https://w3id.org/schulart/BW_0000006> ,
-                                    <https://w3id.org/schulart/BY_0000003> ,
-                                    <https://w3id.org/schulart/BY_0000005> ,
-                                    <https://w3id.org/schulart/HB_0000002> ,
-                                    <https://w3id.org/schulart/HB_0000003> ,
-                                    <https://w3id.org/schulart/HB_0000004> ,
-                                    <https://w3id.org/schulart/HE_0000006> ,
-                                    <https://w3id.org/schulart/HE_0000007> ,
-                                    <https://w3id.org/schulart/HE_0000008> ,
-                                    <https://w3id.org/schulart/HH_0000002> ,
-                                    <https://w3id.org/schulart/HH_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000004> ,
-                                    <https://w3id.org/schulart/MV_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000006> ,
-                                    <https://w3id.org/schulart/NI_0000007> ,
-                                    <https://w3id.org/schulart/NW_0000005> ,
-                                    <https://w3id.org/schulart/NW_0000006> ,
-                                    <https://w3id.org/schulart/RP_0000002> ,
-                                    <https://w3id.org/schulart/RP_0000004> ,
-                                    <https://w3id.org/schulart/SH_0000002> ,
-                                    <https://w3id.org/schulart/SH_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000002> ,
-                                    <https://w3id.org/schulart/SL_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000005> ,
-                                    <https://w3id.org/schulart/SN_0000002> ,
-                                    <https://w3id.org/schulart/SN_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000003> ,
-                                    <https://w3id.org/schulart/ST_0000004> ,
-                                    <https://w3id.org/schulart/ST_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000006> ,
-                                    <https://w3id.org/schulart/TH_0000002> ,
-                                    <https://w3id.org/schulart/TH_0000004> ,
-                                    <https://w3id.org/schulart/TH_0000005> ,
-                                    <https://w3id.org/schulart/TH_0000006> ;
+                    obo:BFO_0000050 ontology:LP_0000046 ;
                     ontology:LP_0000024 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
-                                        ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
                                         ontology:LP_2000012 ,
                                         ontology:LP_2000013 ;
-                    ontology:LP_0000026 ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
+                    ontology:LP_0000026 ontology:LP_2000012 ,
                                         ontology:LP_2000013 ;
-                    ontology:LP_0000047 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
+                    ontology:LP_0000047 ontology:LP_0000046 ;
                     rdfs:label "G9 Qualifikationsphase"@de ;
                     skos:altLabel "G9 Hauptphase"@de .
 
@@ -15171,86 +14889,13 @@ ontology:LP_0000055 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
-                             ontology:LP_0000020 ,
                              ontology:LP_0000043 ,
-                             ontology:LP_0000056 ,
-                             ontology:LP_0000057 ;
-                    obo:BFO_0000050 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:BFO_0000051 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
-                                    ontology:LP_0000098 ,
-                                    <https://w3id.org/schulart/BB_0000003> ,
-                                    <https://w3id.org/schulart/BB_0000004> ,
-                                    <https://w3id.org/schulart/BE_0000002> ,
-                                    <https://w3id.org/schulart/BE_0000003> ,
-                                    <https://w3id.org/schulart/BE_0000004> ,
-                                    <https://w3id.org/schulart/BW_0000002> ,
-                                    <https://w3id.org/schulart/BW_0000006> ,
-                                    <https://w3id.org/schulart/BY_0000003> ,
-                                    <https://w3id.org/schulart/BY_0000005> ,
-                                    <https://w3id.org/schulart/HB_0000002> ,
-                                    <https://w3id.org/schulart/HB_0000003> ,
-                                    <https://w3id.org/schulart/HB_0000004> ,
-                                    <https://w3id.org/schulart/HE_0000006> ,
-                                    <https://w3id.org/schulart/HE_0000007> ,
-                                    <https://w3id.org/schulart/HE_0000008> ,
-                                    <https://w3id.org/schulart/HH_0000002> ,
-                                    <https://w3id.org/schulart/HH_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000003> ,
-                                    <https://w3id.org/schulart/MV_0000004> ,
-                                    <https://w3id.org/schulart/MV_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000005> ,
-                                    <https://w3id.org/schulart/NI_0000006> ,
-                                    <https://w3id.org/schulart/NI_0000007> ,
-                                    <https://w3id.org/schulart/NW_0000005> ,
-                                    <https://w3id.org/schulart/NW_0000006> ,
-                                    <https://w3id.org/schulart/RP_0000002> ,
-                                    <https://w3id.org/schulart/RP_0000004> ,
-                                    <https://w3id.org/schulart/SH_0000002> ,
-                                    <https://w3id.org/schulart/SH_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000002> ,
-                                    <https://w3id.org/schulart/SL_0000003> ,
-                                    <https://w3id.org/schulart/SL_0000005> ,
-                                    <https://w3id.org/schulart/SN_0000002> ,
-                                    <https://w3id.org/schulart/SN_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000003> ,
-                                    <https://w3id.org/schulart/ST_0000004> ,
-                                    <https://w3id.org/schulart/ST_0000005> ,
-                                    <https://w3id.org/schulart/ST_0000006> ,
-                                    <https://w3id.org/schulart/TH_0000002> ,
-                                    <https://w3id.org/schulart/TH_0000004> ,
-                                    <https://w3id.org/schulart/TH_0000005> ,
-                                    <https://w3id.org/schulart/TH_0000006> ;
+                             ontology:LP_0000056 ;
+                    obo:BFO_0000050 ontology:LP_0000046 ;
                     ontology:LP_0000024 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
-                                        ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000026 ontology:LP_2000010 ,
-                                        ontology:LP_2000011 ,
-                                        ontology:LP_2000012 ,
-                                        ontology:LP_2000013 ;
-                    ontology:LP_0000047 ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
+                                        ontology:LP_2000011 ;
+                    ontology:LP_0000026 ontology:LP_2000011 ;
+                    ontology:LP_0000047 ontology:LP_0000046 ;
                     rdfs:label "G9 Einführungsphase"@de .
 
 
@@ -15453,10 +15098,6 @@ ontology:LP_0000098 rdf:type owl:NamedIndividual ,
                     obo:IAO_0000136 <https://w3id.org/schulart/HH_0000002> ;
                     ontology:LP_0000024 ontology:LP_0000045 ,
                                         ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ,
                                         ontology:LP_2000009 ,
                                         ontology:LP_2000010 ,
                                         ontology:LP_2000011 ,
@@ -15466,11 +15107,7 @@ ontology:LP_0000098 rdf:type owl:NamedIndividual ,
                                         ontology:LP_2000011 ;
                     ontology:LP_0000029 ontology:LP_3000045 ;
                     ontology:LP_0000047 ontology:LP_0000045 ,
-                                        ontology:LP_0000046 ,
-                                        ontology:LP_0000050 ,
-                                        ontology:LP_0000051 ,
-                                        ontology:LP_0000052 ,
-                                        ontology:LP_0000055 ;
+                                        ontology:LP_0000046 ;
                     rdfs:label "Mindestanforderungen für den Übergang in die Studienstufe (HH)"@de ;
                     skos:editorialNote "gilt für die Jahrgangsstufen 9-11" .
 
@@ -17078,7 +16715,8 @@ ontology:LP_0000464 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000583 ,
                                         ontology:LP_0000588 ,
                                         ontology:LP_0000594 ,
@@ -17103,7 +16741,8 @@ ontology:LP_0000465 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000584 ,
                                         ontology:LP_0000589 ,
                                         ontology:LP_0000595 ,
@@ -17128,7 +16767,8 @@ ontology:LP_0000466 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000585 ,
                                         ontology:LP_0000590 ,
                                         ontology:LP_0000596 ,
@@ -17153,7 +16793,8 @@ ontology:LP_0000467 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000586 ,
                                         ontology:LP_0000591 ,
                                         ontology:LP_0000597 ,
@@ -17178,7 +16819,8 @@ ontology:LP_0000468 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000587 ,
                                         ontology:LP_0000592 ,
                                         ontology:LP_0000598 ,
@@ -17203,7 +16845,8 @@ ontology:LP_0000469 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000593 ,
                                         ontology:LP_0000599 ,
                                         ontology:LP_0000606 ,
@@ -17226,7 +16869,8 @@ ontology:LP_0000470 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000600 ,
                                         ontology:LP_0000607 ,
                                         ontology:LP_0000614 ,
@@ -17302,7 +16946,8 @@ ontology:LP_0000500 rdf:type owl:NamedIndividual ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000478 ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Prozessbezugsfunktion"@de .
+                    rdfs:label "Prozessbezugsfunktion"@de ;
+                    skos:editorialNote "beschreibt prozessorientierte Kompetenzen – also wie gelernt oder gehandelt wird" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000501
@@ -17313,7 +16958,8 @@ ontology:LP_0000501 rdf:type owl:NamedIndividual ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000478 ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Inhaltsbezugsfunktion"@de .
+                    rdfs:label "Inhaltsbezugsfunktion"@de ;
+                    skos:editorialNote "beschreibt inhaltsorientierte Kompetenzen – also was gelernt wird" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000506
@@ -18575,7 +18221,8 @@ ontology:LP_0000616 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000001 ,
                              obo:BFO_0000002 ,
                              obo:BFO_0000031 ,
-                             obo:IAO_0000030 ;
+                             obo:IAO_0000030 ,
+                             ontology:LP_0000443 ;
                     ontology:LP_0000024 ontology:LP_0000615 ,
                                         ontology:LP_0030388 ;
                     ontology:LP_0000840 ontology:LP_0000615 ,
@@ -18960,7 +18607,8 @@ ontology:LP_0002171 rdf:type owl:NamedIndividual ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000478 ,
                              ontology:LP_0000499 ;
-                    rdfs:label "Domänenbezugsfunktion"@de .
+                    rdfs:label "Domänenbezugsfunktion"@de ;
+                    skos:editorialNote "bezieht sich auf eine fachliche Domäne (z.B. eine Kompetenzdomäne wie Lesen, Schreiben)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030040
@@ -20807,11 +20455,7 @@ ontology:LP_2000010 rdf:type owl:NamedIndividual ,
                     obo:IAO_0000136 ontology:LP_0000027 ,
                                     ontology:LP_0000034 ,
                                     ontology:LP_0000035 ,
-                                    ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
                                     ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
                                     ontology:LP_0000097 ,
                                     ontology:LP_0000098 ,
                                     ontology:LP_0000260 ,
@@ -20910,10 +20554,7 @@ ontology:LP_2000011 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000009 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
+                    obo:IAO_0000136 ontology:LP_0000050 ,
                                     ontology:LP_0000055 ,
                                     ontology:LP_0000098 ,
                                     <https://w3id.org/schulart/BB_0000003> ,
@@ -20971,11 +20612,8 @@ ontology:LP_2000012 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000009 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
+                    obo:IAO_0000136 ontology:LP_0000050 ,
                                     ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
                                     <https://w3id.org/schulart/BB_0000003> ,
                                     <https://w3id.org/schulart/BB_0000004> ,
                                     <https://w3id.org/schulart/BE_0000002> ,
@@ -21029,11 +20667,7 @@ ontology:LP_2000013 rdf:type owl:NamedIndividual ,
                              obo:BFO_0000031 ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000009 ;
-                    obo:IAO_0000136 ontology:LP_0000046 ,
-                                    ontology:LP_0000050 ,
-                                    ontology:LP_0000051 ,
-                                    ontology:LP_0000052 ,
-                                    ontology:LP_0000055 ,
+                    obo:IAO_0000136 ontology:LP_0000052 ,
                                     <https://w3id.org/schulart/BB_0000003> ,
                                     <https://w3id.org/schulart/BB_0000004> ,
                                     <https://w3id.org/schulart/BE_0000002> ,
@@ -22704,10 +22338,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030385 ,
                                                            ontology:LP_0030386 ,
                                                            ontology:LP_0030387 ,
@@ -22743,11 +22373,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000057 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0030385 ,
                                                            ontology:LP_0030386 ,
                                                            ontology:LP_0030387 ,
@@ -22810,10 +22436,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030385 ,
                                                            ontology:LP_0030386 ,
                                                            ontology:LP_0030387 ,
@@ -22841,11 +22463,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000057 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0030385 ,
                                                            ontology:LP_0030386 ,
                                                            ontology:LP_0030387 ,
@@ -22988,10 +22606,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000588 ,
                                                            ontology:LP_0000589 ,
                                                            ontology:LP_0000590 ,
@@ -23051,11 +22665,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000048 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000588 ,
                                                            ontology:LP_0000589 ,
                                                            ontology:LP_0000590 ,
@@ -23108,10 +22718,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000591 ,
                                                            ontology:LP_0000592 ,
                                                            ontology:LP_0000593 ,
@@ -23151,11 +22757,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000048 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000591 ,
                                                            ontology:LP_0000592 ,
                                                            ontology:LP_0000593 ,
@@ -23222,10 +22824,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000608 ,
                                                            ontology:LP_0000609 ,
                                                            ontology:LP_0000610 ,
@@ -23257,11 +22855,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000048 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000608 ,
                                                            ontology:LP_0000609 ,
                                                            ontology:LP_0000610 ,
@@ -23372,10 +22966,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_0000022 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030360 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
@@ -23398,11 +22988,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000049 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000014 ,
                                                            ontology:LP_0000016 ,
                                                            ontology:LP_0000022 ,
@@ -23576,10 +23162,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000018 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030345 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
@@ -23602,11 +23184,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000049 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000018 ,
                                                            ontology:LP_0030345 ;
                                        rdfs:label "Gymnasium"@de .
@@ -23740,10 +23318,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000030 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_2000006 ,
                                                            ontology:LP_2000007 ,
                                                            ontology:LP_2000008 ,
@@ -23759,11 +23333,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000011 ;
                                        ontology:LP_0000029 ontology:LP_3000051 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000030 ;
                                        rdfs:label "Wirtschaftsschule"@de .
 
@@ -23858,10 +23428,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000023 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030346 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
@@ -23884,11 +23450,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000051 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000023 ,
                                                            ontology:LP_0030346 ;
                                        rdfs:label "Gymnasium"@de .
@@ -24087,10 +23649,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HB_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
                                                            ontology:LP_2000007 ,
@@ -24108,11 +23666,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000011 ;
                                        ontology:LP_0000029 ontology:LP_3000056 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        rdfs:label "Werkschule"@de .
 
 
@@ -24142,10 +23696,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_0000044 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030347 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
@@ -24168,11 +23718,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000056 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000034 ,
                                                            ontology:LP_0000035 ,
                                                            ontology:LP_0000044 ,
@@ -24226,10 +23772,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000038 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030347 ,
                                                            ontology:LP_2000005 ,
                                                            ontology:LP_2000006 ,
@@ -24252,11 +23794,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000056 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000038 ,
                                                            ontology:LP_0030347 ;
                                        rdfs:label "Gymnasium"@de .
@@ -24537,10 +24075,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HE_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000090 ,
                                                            ontology:LP_0000091 ,
                                                            ontology:LP_0000092 ,
@@ -24566,11 +24100,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000050 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000090 ,
                                                            ontology:LP_0000091 ,
                                                            ontology:LP_0000092 ,
@@ -24617,10 +24147,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HE_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000090 ,
                                                            ontology:LP_0000091 ,
                                                            ontology:LP_0000092 ,
@@ -24646,11 +24172,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000050 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000090 ,
                                                            ontology:LP_0000091 ,
                                                            ontology:LP_0000092 ,
@@ -24703,10 +24225,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HE_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000090 ,
                                                            ontology:LP_0030348 ,
                                                            ontology:LP_2000005 ,
@@ -24730,11 +24248,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000050 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000090 ,
                                                            ontology:LP_0030348 ;
                                        rdfs:label "Gymnasium"@de .
@@ -24819,10 +24333,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000093 ,
                                                            ontology:LP_0000095 ,
                                                            ontology:LP_0000096 ,
@@ -24850,11 +24360,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000045 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000093 ,
                                                            ontology:LP_0000095 ,
                                                            ontology:LP_0000096 ,
@@ -24909,10 +24415,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/HH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000094 ,
                                                            ontology:LP_0030349 ,
                                                            ontology:LP_2000005 ,
@@ -24936,11 +24438,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000045 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000094 ,
                                                            ontology:LP_0030349 ;
                                        rdfs:label "Gymnasium"@de .
@@ -25087,10 +24585,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/MV_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000099 ,
                                                            ontology:LP_0000100 ,
                                                            ontology:LP_0000101 ,
@@ -25117,11 +24611,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000052 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000099 ,
                                                            ontology:LP_0000100 ,
                                                            ontology:LP_0000101 ,
@@ -25169,10 +24659,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/MV_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000099 ,
                                                            ontology:LP_0000100 ,
                                                            ontology:LP_0000101 ,
@@ -25199,11 +24685,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000052 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000099 ,
                                                            ontology:LP_0000100 ,
                                                            ontology:LP_0000101 ,
@@ -25257,10 +24739,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/MV_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000099 ,
                                                            ontology:LP_0000102 ,
                                                            ontology:LP_0030350 ,
@@ -25285,11 +24763,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000052 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000099 ,
                                                            ontology:LP_0000102 ,
                                                            ontology:LP_0030350 ;
@@ -25535,10 +25009,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/NI_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000103 ,
                                                            ontology:LP_0000104 ,
                                                            ontology:LP_0000117 ,
@@ -25564,11 +25034,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000043 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000103 ,
                                                            ontology:LP_0000104 ,
                                                            ontology:LP_0000117 ,
@@ -25615,10 +25081,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/NI_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000103 ,
                                                            ontology:LP_0000104 ,
                                                            ontology:LP_0000117 ,
@@ -25644,11 +25106,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000043 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000103 ,
                                                            ontology:LP_0000104 ,
                                                            ontology:LP_0000117 ,
@@ -25701,10 +25159,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/NI_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000107 ,
                                                            ontology:LP_0030352 ,
                                                            ontology:LP_2000005 ,
@@ -25728,11 +25182,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000043 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000107 ,
                                                            ontology:LP_0030352 ;
                                        rdfs:label "Gymnasium"@de .
@@ -25975,10 +25425,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/NW_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000130 ,
                                                            ontology:LP_0000131 ,
                                                            ontology:LP_0030351 ,
@@ -26003,11 +25449,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000044 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000130 ,
                                                            ontology:LP_0000131 ,
                                                            ontology:LP_0030351 ;
@@ -26059,10 +25501,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/NW_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000132 ,
                                                            ontology:LP_0030351 ,
                                                            ontology:LP_2000005 ,
@@ -26086,11 +25524,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000044 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000132 ,
                                                            ontology:LP_0030351 ;
                                        rdfs:label "Gymnasium"@de .
@@ -26203,10 +25637,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/RP_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000143 ,
                                                            ontology:LP_0000147 ,
                                                            ontology:LP_0000151 ,
@@ -26232,11 +25662,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000046 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000143 ,
                                                            ontology:LP_0000147 ,
                                                            ontology:LP_0000151 ,
@@ -26337,10 +25763,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/RP_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000143 ,
                                                            ontology:LP_0030353 ,
                                                            ontology:LP_2000005 ,
@@ -26364,11 +25786,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000046 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000143 ,
                                                            ontology:LP_0030353 ;
                                        rdfs:label "Gymnasium"@de .
@@ -26469,10 +25887,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/SH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000193 ,
                                                            ontology:LP_0000216 ,
                                                            ontology:LP_0000236 ,
@@ -26499,11 +25913,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000054 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000193 ,
                                                            ontology:LP_0000216 ,
                                                            ontology:LP_0000236 ,
@@ -26557,10 +25967,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/SH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000236 ,
                                                            ontology:LP_0000249 ,
                                                            ontology:LP_0030354 ,
@@ -26585,11 +25991,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000054 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000236 ,
                                                            ontology:LP_0000249 ,
                                                            ontology:LP_0030354 ;
@@ -26691,10 +26093,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/SL_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000260 ,
                                                            ontology:LP_0000264 ,
                                                            ontology:LP_0000266 ,
@@ -26721,11 +26119,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000055 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000260 ,
                                                            ontology:LP_0000264 ,
                                                            ontology:LP_0000266 ,
@@ -26779,10 +26173,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/SL_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000269 ,
                                                            ontology:LP_0030355 ,
                                                            ontology:LP_2000005 ,
@@ -26806,11 +26196,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000055 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000269 ,
                                                            ontology:LP_0030355 ;
                                        rdfs:label "Gymnasium"@de .
@@ -26856,10 +26242,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_2000001 ,
                                                            ontology:LP_2000002 ,
                                                            ontology:LP_2000003 ,
@@ -26890,11 +26272,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000055 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        rdfs:label "Europäische Schule Saarland"@de .
 
 
@@ -26994,10 +26372,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000279 ,
                                                            ontology:LP_0000293 ,
                                                            ontology:LP_0000294 ,
@@ -27034,11 +26408,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000047 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000279 ,
                                                            ontology:LP_0000293 ,
                                                            ontology:LP_0000294 ,
@@ -27197,10 +26567,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/SN_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000279 ,
                                                            ontology:LP_0030356 ,
                                                            ontology:LP_2000005 ,
@@ -27224,11 +26590,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000047 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000279 ,
                                                            ontology:LP_0030356 ;
                                        rdfs:label "Gymnasium"@de .
@@ -27385,10 +26747,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/ST_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27415,11 +26773,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000053 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27467,10 +26821,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/ST_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27497,11 +26847,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000053 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27549,10 +26895,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/ST_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27579,11 +26921,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000053 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000296 ,
                                                            ontology:LP_0000297 ,
                                                            ontology:LP_0000298 ,
@@ -27637,10 +26975,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/ST_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000296 ,
                                                            ontology:LP_0030357 ,
                                                            ontology:LP_2000005 ,
@@ -27664,11 +26998,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000053 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000296 ,
                                                            ontology:LP_0030357 ;
                                        rdfs:label "Gymnasium"@de .
@@ -27770,10 +27100,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000024 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -27810,11 +27136,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        ontology:LP_0000029 ontology:LP_3000031 ;
                                        ontology:LP_0000047 ontology:LP_0000036 ,
                                                            ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -27897,10 +27219,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/TH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -27927,11 +27245,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000031 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -27979,10 +27293,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/TH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -28009,11 +27319,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000031 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0000309 ,
                                                            ontology:LP_0000310 ,
                                                            ontology:LP_0000311 ,
@@ -28067,10 +27373,6 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                        skos:topConceptOf <https://w3id.org/schulart/TH_0000000> ;
                                        ontology:LP_0000024 ontology:LP_0000045 ,
                                                            ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ,
                                                            ontology:LP_0030358 ,
                                                            ontology:LP_0030359 ,
                                                            ontology:LP_2000005 ,
@@ -28094,11 +27396,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                            ontology:LP_2000013 ;
                                        ontology:LP_0000029 ontology:LP_3000031 ;
                                        ontology:LP_0000047 ontology:LP_0000045 ,
-                                                           ontology:LP_0000046 ,
-                                                           ontology:LP_0000050 ,
-                                                           ontology:LP_0000051 ,
-                                                           ontology:LP_0000052 ,
-                                                           ontology:LP_0000055 ;
+                                                           ontology:LP_0000046 ;
                                        ontology:LP_0000833 ontology:LP_0030358 ,
                                                            ontology:LP_0030359 ;
                                        rdfs:label "Gymnasium"@de .
@@ -67020,6 +66318,29 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                 ontology:LP_0000004
                 ontology:LP_0000005
               )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ontology:LP_0000342
+                ontology:LP_0000426
+                ontology:LP_0000434
+                ontology:LP_0000441
+                ontology:LP_0000536
+                ontology:LP_0001441
+                ontology:LP_0002051
+                ontology:LP_0002076
+                ontology:LP_0002080
+                ontology:LP_0002085
+                ontology:LP_0002089
+                ontology:LP_0002093
+                ontology:LP_0002097
+                ontology:LP_0002101
+                ontology:LP_0002102
+                ontology:LP_0002103
+                ontology:LP_0002118
+              ) ;
+  rdfs:comment "we leave this axiom in the edit file, because it is not useful in the state specific ontolgies"
 ] .
 
 

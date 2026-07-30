@@ -12,6 +12,7 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt $(I
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
  		remove --term http://www.w3.org/2002/07/owl#Nothing  --term http://purl.obolibrary.org/obo/PATO_0000001\
  		remove --select "RO:*"  \
+ 		remove --term http://purl.obolibrary.org/obo/COB_0000035 --term http://purl.obolibrary.org/obo/COB_0000082 \
  		remove --term BFO:0000180 --term BFO:0000179 --term IAO:0000601 --term IAO:0010000 --term IAO:0000602 --term IAO:0000600 --term IAO:0000234 --term IAO:0000233 --term IAO:0000118 --term IAO:0000117 --term IAO:0000111 \
  		remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		   --term-file $(IMPORTDIR)/iao_terms.txt $(T_IMPORTSEED) \
