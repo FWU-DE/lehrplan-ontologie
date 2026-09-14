@@ -15,9 +15,9 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0rc3"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2026-07-28</terms:created>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0rc4"/>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0rc4, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <terms:created>2026-09-14</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -31,7 +31,7 @@
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
         <doap:repository rdf:resource="https://github.com/FWU-DE/lehrplan-ontologie"/>
         <owl:priorVersion rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <owl:versionInfo>1.0.0rc3</owl:versionInfo>
+        <owl:versionInfo>1.0.0rc4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -910,6 +910,16 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000556 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000556">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdfs:label xml:lang="de">hat Oberstufensphase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000578 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578">
@@ -974,6 +984,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000111"/>
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000438"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1804,15 +1815,6 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- https://w3id.org/lehrplan/ontology/LP_0000003 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000003">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1001"/>
-                    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1002"/>
-                    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1022"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
         <rdfs:comment xml:lang="en">A &quot;Naturwissenschaftsfach&quot; is a &quot;MINT-Fach&quot; that focuses on living and non-living matter.
 The three &quot;Naturwissenschaftsfächer&quot; are biology, chemistry, and physics.</rdfs:comment>
@@ -3740,11 +3742,7 @@ s. außerdem Moderne Fremdsprache - Englisch Sek I.</skos:editorialNote>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
                     <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                            </rdf:Description>
-                        </owl:onProperty>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
@@ -3764,11 +3762,7 @@ s. außerdem Moderne Fremdsprache - Englisch Sek I.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                    </rdf:Description>
-                </owl:onProperty>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -5408,11 +5402,7 @@ It describes the depth and level of demand with which learning content and compe
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
                     <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                            </rdf:Description>
-                        </owl:onProperty>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
@@ -5433,11 +5423,7 @@ It describes the depth and level of demand with which learning content and compe
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                    </rdf:Description>
-                </owl:onProperty>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -15833,6 +15819,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <!-- http://w3id.org/kim/schulfaecher/s1001 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1001">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
         <rdfs:label>Biologie (KIM)</rdfs:label>
         <rdfs:label>Biologie (KIM-Schulfach)</rdfs:label>
         <skos:prefLabel xml:lang="de">Biologie</skos:prefLabel>
@@ -15843,6 +15830,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <!-- http://w3id.org/kim/schulfaecher/s1002 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1002">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
         <rdfs:label>Chemie (KIM)</rdfs:label>
         <rdfs:label>Chemie (KIM-Schulfach)</rdfs:label>
         <skos:prefLabel xml:lang="de">Chemie</skos:prefLabel>
@@ -16059,6 +16047,7 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
     <!-- http://w3id.org/kim/schulfaecher/s1022 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1022">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
         <rdfs:label>Physik (KIM)</rdfs:label>
         <rdfs:label>Physik (KIM-Schulfach)</rdfs:label>
         <skos:prefLabel xml:lang="de">Physik</skos:prefLabel>

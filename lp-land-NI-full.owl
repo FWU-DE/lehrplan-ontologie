@@ -15,9 +15,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/NI>
-<https://w3id.org/lehrplan/ontology/NI/1.0.0rc3>
-Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology")
-Annotation(terms:created "2026-07-28")
+<https://w3id.org/lehrplan/ontology/NI/1.0.0rc4>
+Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc4, https://w3id.org/lehrplan/ontology")
+Annotation(terms:created "2026-09-14")
 Annotation(terms:creator <https://orcid.org/0000-0001-6378-2618>)
 Annotation(terms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(terms:creator "Almut Steinlein"@de)
@@ -32,7 +32,7 @@ Annotation(terms:title "Curriculum Ontology"@en)
 Annotation(terms:title "Lehrplan Ontologie"@de)
 Annotation(doap:repository <https://github.com/FWU-DE/lehrplan-ontologie>)
 Annotation(owl:priorVersion <https://w3id.org/lehrplan/ontology/>)
-Annotation(owl:versionInfo "1.0.0rc3")
+Annotation(owl:versionInfo "1.0.0rc4")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -254,6 +254,7 @@ Declaration(ObjectProperty(ontology:LP_0000495))
 Declaration(ObjectProperty(ontology:LP_0000537))
 Declaration(ObjectProperty(ontology:LP_0000550))
 Declaration(ObjectProperty(ontology:LP_0000555))
+Declaration(ObjectProperty(ontology:LP_0000556))
 Declaration(ObjectProperty(ontology:LP_0000812))
 Declaration(ObjectProperty(ontology:LP_0000833))
 Declaration(ObjectProperty(ontology:LP_0000840))
@@ -593,7 +594,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000015 "tracker item"@de)
 #   Object Properties
 ############################
 
-# Object Property: obo:BFO_0000050 (part of)
+# Object Property: obo:BFO_0000050 (ist Teil von)
 
 AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my brain is part of my body (continuant parthood, two material entities)"@en)
 AnnotationAssertion(obo:IAO_0000112 obo:BFO_0000050 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en)
@@ -946,7 +947,7 @@ ObjectPropertyRange(ontology:LP_0000833 ontology:LP_0000028)
 AnnotationAssertion(rdfs:label ontology:LP_0000840 "has niveau"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000840 "hat Niveau"@de)
 SubObjectPropertyOf(ontology:LP_0000840 ontology:LP_0000024)
-ObjectPropertyDomain(ontology:LP_0000840 ObjectUnionOf(ontology:LP_0000111 ontology:LP_0000261))
+ObjectPropertyDomain(ontology:LP_0000840 ObjectUnionOf(ontology:LP_0000111 ontology:LP_0000261 ontology:LP_0000438))
 ObjectPropertyRange(ontology:LP_0000840 ontology:LP_0000037)
 
 # Object Property: ontology:LP_0030051 (hat Beschreibung)
@@ -1331,7 +1332,7 @@ AnnotationAssertion(skos:definition obo:BFO_0000203 "(Elucidation) A temporal in
 AnnotationAssertion(skos:example obo:BFO_0000203 "The millennium"@en)
 SubClassOf(obo:BFO_0000203 obo:BFO_0000148)
 
-# Class: obo:IAO_0000027 (data entity)
+# Class: obo:IAO_0000027 (data item)
 
 AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000027 "Data items include counts of things, analyte concentrations, and statistical summaries."@en)
 AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000027 obo:IAO_0000125)
@@ -1468,7 +1469,6 @@ AnnotationAssertion(rdfs:comment ontology:LP_0000003 "A \"Naturwissenschaftsfach
 The three \"Naturwissenschaftsfächer\" are biology, chemistry, and physics."@en)
 AnnotationAssertion(rdfs:comment ontology:LP_0000003 "Ein “Naturwissenschaftsfach” ist ein “MINT-Fach”, das die belebte und unbelebte Materie als Gegenstand hat. Die drei Naturwissenschaftsfächer sind die Fächer Biologie, Chemie und Physik."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000003 "Naturwissenschaftsfach"@de)
-EquivalentClasses(ontology:LP_0000003 ObjectOneOf(<http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/s1022>))
 SubClassOf(ontology:LP_0000003 ontology:LP_0000002)
 
 # Class: ontology:LP_0000004 (Fremdsprachenfach)
@@ -1876,9 +1876,9 @@ CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Gr
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000332 "CE-Lerninhalt"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000332 "learning content"@en)
-EquivalentClasses(ontology:LP_0000332 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(ObjectInverseOf(obo:BFO_0000051) ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480)))
+EquivalentClasses(ontology:LP_0000332 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480)))
 SubClassOf(ontology:LP_0000332 ontology:LP_0000261)
-SubClassOf(ontology:LP_0000332 ObjectSomeValuesFrom(ObjectInverseOf(obo:BFO_0000051) ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)))
+SubClassOf(ontology:LP_0000332 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectUnionOf(ontology:LP_0000332 ontology:LP_0000349)))
 
 # Class: ontology:LP_0000336 (Fachbezogene Kompetenzspezifikation)
 
@@ -2277,7 +2277,7 @@ AnnotationAssertion(skos:definition ontology:LP_0000845 "Die Progresssion ist Te
 AnnotationAssertion(skos:example ontology:LP_0000845 "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de)
 SubClassOf(ontology:LP_0000845 obo:IAO_0000030)
 
-# Class: ontology:LP_0000852 (note)
+# Class: ontology:LP_0000852 (CE-Hinweis)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000852 "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
 - practical or methodological recommendations
@@ -2291,9 +2291,9 @@ AnnotationAssertion(rdfs:comment ontology:LP_0000852 "Ein “CE-Hinweis” ist e
 - Differenzierungsvorschläge"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000852 "CE-Hinweis"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000852 "note"@en)
-EquivalentClasses(ontology:LP_0000852 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(ObjectInverseOf(obo:BFO_0000051) ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0001014)))
+EquivalentClasses(ontology:LP_0000852 ObjectIntersectionOf(ontology:LP_0000261 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)) ObjectHasValue(ontology:LP_0000483 ontology:LP_0001014)))
 SubClassOf(ontology:LP_0000852 ontology:LP_0000261)
-SubClassOf(ontology:LP_0000852 ObjectSomeValuesFrom(ObjectInverseOf(obo:BFO_0000051) ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)))
+SubClassOf(ontology:LP_0000852 ObjectSomeValuesFrom(obo:BFO_0000050 ObjectUnionOf(ontology:LP_0000263 ontology:LP_0000332 ontology:LP_0000349)))
 
 # Class: ontology:LP_0001003 (Erwartete Kompetenz (NI))
 
@@ -3416,7 +3416,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0030369 "Grundschulniveau (NI)"@de)
 ClassAssertion(ontology:LP_0030080 ontology:LP_0030369)
 ClassAssertion(ontology:LP_0030361 ontology:LP_0030369)
 
-# Individual: ontology:LP_2000001 (Jahrgangsstufe 1)
+# Individual: ontology:LP_2000001 (class level 1)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000001 "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "Jahrgangsstufe 1"@de)
@@ -3424,7 +3424,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000001 "class level 1"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000001 "1.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000001)
 
-# Individual: ontology:LP_2000002 (Jahrgangsstufe 2)
+# Individual: ontology:LP_2000002 (class level 2)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000002 "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "Jahrgangsstufe 2"@de)
@@ -3448,7 +3448,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000004 "class level 4"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000004 "4.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000004)
 
-# Individual: ontology:LP_2000005 (Jahrgangsstufe 5)
+# Individual: ontology:LP_2000005 (class level 5)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000005 "5"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000005 "Jahrgangsstufe 5"@de)
@@ -3464,7 +3464,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000006 "class level 6"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000006 "6.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000006)
 
-# Individual: ontology:LP_2000007 (class level 7)
+# Individual: ontology:LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000007 "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000007 "Jahrgangsstufe 7"@de)
@@ -3472,7 +3472,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000007 "class level 7"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000007 "7.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000007)
 
-# Individual: ontology:LP_2000008 (Jahrgangsstufe 8)
+# Individual: ontology:LP_2000008 (class level 8)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000008 "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000008 "Jahrgangsstufe 8"@de)
@@ -3480,7 +3480,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000008 "class level 8"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000008 "8.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000008)
 
-# Individual: ontology:LP_2000009 (class level 9)
+# Individual: ontology:LP_2000009 (Jahrgangsstufe 9)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000009 "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000009 "Jahrgangsstufe 9"@de)
@@ -3488,7 +3488,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000009 "class level 9"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000009 "9.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000009)
 
-# Individual: ontology:LP_2000010 (class level 10)
+# Individual: ontology:LP_2000010 (Jahrgangsstufe 10)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000010 "10"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000010 "Jahrgangsstufe 10"@de)
