@@ -170,6 +170,30 @@
     
 
 
+    <!-- http://w3id.org/kim/schulfaecher/s1001 -->
+
+    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1001">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/kim/schulfaecher/s1002 -->
+
+    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1002">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/kim/schulfaecher/s1022 -->
+
+    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1022">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000032 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000032"/>
