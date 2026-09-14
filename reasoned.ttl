@@ -15,9 +15,9 @@
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc3> ;
-                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc3, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-07-28" ;
+                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc4> ;
+                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc4, https://w3id.org/lehrplan/ontology" ;
+                                       terms:created "2026-09-14" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -31,7 +31,7 @@
                                                    "Lehrplan Ontologie"@de ;
                                        doap:repository <https://github.com/FWU-DE/lehrplan-ontologie> ;
                                        owl:priorVersion <https://w3id.org/lehrplan/ontology/> ;
-                                       owl:versionInfo "1.0.0rc3" .
+                                       owl:versionInfo "1.0.0rc4" .
 
 #################################################################
 #    Annotation properties
@@ -776,6 +776,15 @@ ontology:LP_0000555 rdf:type owl:ObjectProperty ;
                     rdfs:label "ist Schulartfunktion von"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000556
+ontology:LP_0000556 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ,
+                                       [ owl:inverseOf obo:IAO_0000136
+                                       ] ;
+                    rdfs:range ontology:LP_0000043 ;
+                    rdfs:label "hat Oberstufensphase"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000578
 ontology:LP_0000578 rdf:type owl:ObjectProperty ;
                     owl:equivalentProperty [ owl:inverseOf ontology:LP_0000580
@@ -840,6 +849,7 @@ ontology:LP_0000840 rdf:type owl:ObjectProperty ;
                                 [ rdf:type owl:Class ;
                                   owl:unionOf ( ontology:LP_0000111
                                                 ontology:LP_0000261
+                                                ontology:LP_0000438
                                               )
                                 ] ;
                     rdfs:range ontology:LP_0000037 ;
@@ -1492,14 +1502,7 @@ ontology:LP_0000002 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000003
 ontology:LP_0000003 rdf:type owl:Class ;
-                    owl:equivalentClass [ rdf:type owl:Class ;
-                                          owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1001>
-                                                      <http://w3id.org/kim/schulfaecher/s1002>
-                                                      <http://w3id.org/kim/schulfaecher/s1022>
-                                                    )
-                                        ] ;
-                    rdfs:subClassOf ontology:LP_0000002 ,
-                                    ontology:LP_0000039 ;
+                    rdfs:subClassOf ontology:LP_0000002 ;
                     rdfs:comment """A \"Naturwissenschaftsfach\" is a \"MINT-Fach\" that focuses on living and non-living matter.
 The three \"Naturwissenschaftsfächer\" are biology, chemistry, and physics."""@en ,
                                  "Ein “Naturwissenschaftsfach” ist ein “MINT-Fach”, das die belebte und unbelebte Materie als Gegenstand hat. Die drei Naturwissenschaftsfächer sind die Fächer Biologie, Chemie und Physik."@de ;
@@ -2861,8 +2864,7 @@ s. außerdem Moderne Fremdsprache - Englisch Sek I.""" .
 ontology:LP_0000332 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000261
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                                                ] ;
+                                                                 owl:onProperty obo:BFO_0000050 ;
                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                       owl:unionOf ( ontology:LP_0000332
                                                                                                     ontology:LP_0000349
@@ -2878,8 +2880,7 @@ ontology:LP_0000332 rdf:type owl:Class ;
                                         ] ;
                     rdfs:subClassOf ontology:LP_0000261 ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                     ] ;
+                                      owl:onProperty obo:BFO_0000050 ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:unionOf ( ontology:LP_0000332
                                                                          ontology:LP_0000349
@@ -4089,8 +4090,7 @@ ontology:LP_0000845 rdf:type owl:Class ;
 ontology:LP_0000852 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000261
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                                                ] ;
+                                                                 owl:onProperty obo:BFO_0000050 ;
                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                       owl:unionOf ( ontology:LP_0000263
                                                                                                     ontology:LP_0000332
@@ -4107,8 +4107,7 @@ ontology:LP_0000852 rdf:type owl:Class ;
                                         ] ;
                     rdfs:subClassOf ontology:LP_0000261 ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty [ owl:inverseOf obo:BFO_0000051
-                                                     ] ;
+                                      owl:onProperty obo:BFO_0000050 ;
                                       owl:someValuesFrom [ rdf:type owl:Class ;
                                                            owl:unionOf ( ontology:LP_0000263
                                                                          ontology:LP_0000332
@@ -16679,12 +16678,7 @@ ontology:LP_0000437 rdf:type owl:NamedIndividual ,
                              obo:IAO_0000030 ,
                              ontology:LP_0000001 ,
                              ontology:LP_0000002 ,
-                             ontology:LP_0000003 ,
-                             ontology:LP_0000039 ;
-                    skos:closeMatch ontology:LP_0000437 ,
-                                    <https://w3id.org/schulfach/HB_0000029> ,
-                                    <https://w3id.org/schulfach/RP_0000006> ;
-                    skos:exactMatch ontology:LP_0000437 ;
+                             ontology:LP_0000003 ;
                     rdfs:label "Naturwissenschaften (Schulfach)"@de .
 
 
@@ -40203,8 +40197,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                  ontology:LP_0000001 ;
                                         skos:closeMatch <http://w3id.org/kim/schulfaecher/s1001> ,
                                                         <http://w3id.org/kim/schulfaecher/s1002> ,
-                                                        <http://w3id.org/kim/schulfaecher/s1022> ,
-                                                        ontology:LP_0000437 ;
+                                                        <http://w3id.org/kim/schulfaecher/s1022> ;
                                         skos:topConceptOf <https://w3id.org/schulfach/HB_0000000> ;
                                         ontology:LP_0000024 ontology:LP_3000056 ;
                                         ontology:LP_0000029 ontology:LP_3000056 ;
@@ -52382,8 +52375,7 @@ ontology:LP_3000057 rdf:type owl:NamedIndividual ,
                                                  ontology:LP_0000001 ;
                                         skos:closeMatch <http://w3id.org/kim/schulfaecher/s1001> ,
                                                         <http://w3id.org/kim/schulfaecher/s1002> ,
-                                                        <http://w3id.org/kim/schulfaecher/s1022> ,
-                                                        ontology:LP_0000437 ;
+                                                        <http://w3id.org/kim/schulfaecher/s1022> ;
                                         skos:topConceptOf <https://w3id.org/schulfach/RP_0000000> ;
                                         ontology:LP_0000024 ontology:LP_3000046 ;
                                         ontology:LP_0000029 ontology:LP_3000046 ;
