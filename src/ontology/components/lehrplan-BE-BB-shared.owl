@@ -81,6 +81,16 @@
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000556 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000556">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdfs:label xml:lang="de">hat Oberstufensphase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000578 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578">
