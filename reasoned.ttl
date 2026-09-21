@@ -15,9 +15,9 @@
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc4> ;
-                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc4, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2026-09-14" ;
+                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0rc5> ;
+                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc5, https://w3id.org/lehrplan/ontology" ;
+                                       terms:created "2026-09-21" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -31,7 +31,7 @@
                                                    "Lehrplan Ontologie"@de ;
                                        doap:repository <https://github.com/FWU-DE/lehrplan-ontologie> ;
                                        owl:priorVersion <https://w3id.org/lehrplan/ontology/> ;
-                                       owl:versionInfo "1.0.0rc4" .
+                                       owl:versionInfo "1.0.0rc5" .
 
 #################################################################
 #    Annotation properties
