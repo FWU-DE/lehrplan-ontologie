@@ -15,9 +15,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/NI>
-<https://w3id.org/lehrplan/ontology/NI/1.0.0rc4>
-Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc4, https://w3id.org/lehrplan/ontology")
-Annotation(terms:created "2026-09-14")
+<https://w3id.org/lehrplan/ontology/NI/1.0.0rc5>
+Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0rc5, https://w3id.org/lehrplan/ontology")
+Annotation(terms:created "2026-09-21")
 Annotation(terms:creator <https://orcid.org/0000-0001-6378-2618>)
 Annotation(terms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(terms:creator "Almut Steinlein"@de)
@@ -32,7 +32,7 @@ Annotation(terms:title "Curriculum Ontology"@en)
 Annotation(terms:title "Lehrplan Ontologie"@de)
 Annotation(doap:repository <https://github.com/FWU-DE/lehrplan-ontologie>)
 Annotation(owl:priorVersion <https://w3id.org/lehrplan/ontology/>)
-Annotation(owl:versionInfo "1.0.0rc4")
+Annotation(owl:versionInfo "1.0.0rc5")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -254,7 +254,6 @@ Declaration(ObjectProperty(ontology:LP_0000495))
 Declaration(ObjectProperty(ontology:LP_0000537))
 Declaration(ObjectProperty(ontology:LP_0000550))
 Declaration(ObjectProperty(ontology:LP_0000555))
-Declaration(ObjectProperty(ontology:LP_0000556))
 Declaration(ObjectProperty(ontology:LP_0000812))
 Declaration(ObjectProperty(ontology:LP_0000833))
 Declaration(ObjectProperty(ontology:LP_0000840))
@@ -352,6 +351,7 @@ Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s13>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s14>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s15>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s16>))
+Declaration(NamedIndividual(ontology:LP_0000032))
 Declaration(NamedIndividual(ontology:LP_0000036))
 Declaration(NamedIndividual(ontology:LP_0000045))
 Declaration(NamedIndividual(ontology:LP_0000046))
@@ -789,7 +789,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0002353 "inverse of has output")
 AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
 SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
 
-# Object Property: ontology:LP_0000017 (konkretisiert Lehrplan)
+# Object Property: ontology:LP_0000017 (concretizes curriculum)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "concretizes curriculum"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "konkretisiert Lehrplan"@de)
@@ -817,7 +817,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000026 "hat Jahrgangsstufe"@de)
 SubObjectPropertyOf(ontology:LP_0000026 ontology:LP_0000024)
 ObjectPropertyRange(ontology:LP_0000026 ontology:LP_0000009)
 
-# Object Property: ontology:LP_0000029 (von Bundesland)
+# Object Property: ontology:LP_0000029 (of federal state)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "of federal state"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000029 "von Bundesland"@de)
@@ -1332,7 +1332,7 @@ AnnotationAssertion(skos:definition obo:BFO_0000203 "(Elucidation) A temporal in
 AnnotationAssertion(skos:example obo:BFO_0000203 "The millennium"@en)
 SubClassOf(obo:BFO_0000203 obo:BFO_0000148)
 
-# Class: obo:IAO_0000027 (data item)
+# Class: obo:IAO_0000027 (data entity)
 
 AnnotationAssertion(obo:IAO_0000112 obo:IAO_0000027 "Data items include counts of things, analyte concentrations, and statistical summaries."@en)
 AnnotationAssertion(obo:IAO_0000114 obo:IAO_0000027 obo:IAO_0000125)
@@ -3416,7 +3416,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0030369 "Grundschulniveau (NI)"@de)
 ClassAssertion(ontology:LP_0030080 ontology:LP_0030369)
 ClassAssertion(ontology:LP_0030361 ontology:LP_0030369)
 
-# Individual: ontology:LP_2000001 (class level 1)
+# Individual: ontology:LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000001 "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "Jahrgangsstufe 1"@de)
@@ -3424,7 +3424,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000001 "class level 1"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000001 "1.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000001)
 
-# Individual: ontology:LP_2000002 (class level 2)
+# Individual: ontology:LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000002 "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "Jahrgangsstufe 2"@de)
@@ -3432,7 +3432,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000002 "class level 2"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000002 "2.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000002)
 
-# Individual: ontology:LP_2000003 (class level 3)
+# Individual: ontology:LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000003 "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000003 "Jahrgangsstufe 3"@de)
@@ -3456,7 +3456,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000005 "class level 5"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000005 "5.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000005)
 
-# Individual: ontology:LP_2000006 (class level 6)
+# Individual: ontology:LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000006 "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000006 "Jahrgangsstufe 6"@de)
@@ -3464,7 +3464,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000006 "class level 6"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000006 "6.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000006)
 
-# Individual: ontology:LP_2000007 (Jahrgangsstufe 7)
+# Individual: ontology:LP_2000007 (class level 7)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000007 "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000007 "Jahrgangsstufe 7"@de)
@@ -3488,7 +3488,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000009 "class level 9"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000009 "9.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000009)
 
-# Individual: ontology:LP_2000010 (Jahrgangsstufe 10)
+# Individual: ontology:LP_2000010 (class level 10)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000010 "10"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000010 "Jahrgangsstufe 10"@de)
@@ -3496,7 +3496,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000010 "class level 10"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_2000010 "10.Klasse"@de)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000010)
 
-# Individual: ontology:LP_2000011 (Jahrgangsstufe 11)
+# Individual: ontology:LP_2000011 (class level 11)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000011 "11"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000011 "Jahrgangsstufe 11"@de)
@@ -4227,6 +4227,8 @@ SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectO
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectOneOf(ontology:LP_2000001 ontology:LP_2000002 ontology:LP_2000003 ontology:LP_2000004 ontology:LP_2000005 ontology:LP_2000006)) ObjectSomeValuesFrom(ontology:LP_0000029 ObjectOneOf(ontology:LP_3000048 ontology:LP_3000057))) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000036))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectOneOf(ontology:LP_2000005 ontology:LP_2000006 ontology:LP_2000007 ontology:LP_2000008 ontology:LP_2000009 ontology:LP_2000010)) ObjectSomeValuesFrom(ontology:LP_0000029 ontology:LP_0000054)) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000045))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectOneOf(ontology:LP_2000007 ontology:LP_2000008 ontology:LP_2000009 ontology:LP_2000010)) ObjectSomeValuesFrom(ontology:LP_0000029 ObjectOneOf(ontology:LP_3000048 ontology:LP_3000057))) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000045))
+SubClassOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectIntersectionOf(ObjectOneOf(ontology:LP_2000005 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052))) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000032))
+SubClassOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectOneOf(ontology:LP_2000011 ontology:LP_2000012 ontology:LP_2000013)) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000046))
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020 obo:BFO_0000031)
 DisjointClasses(obo:BFO_0000008 obo:BFO_0000011 obo:BFO_0000015 obo:BFO_0000035)
 DisjointClasses(ontology:LP_0000001 ontology:LP_0000006 ontology:LP_0000007 ontology:LP_0000009 ontology:LP_0000010 ontology:LP_0000011 ontology:LP_0000012 ontology:LP_0000013 ontology:LP_0000019 ontology:LP_0000037 ontology:LP_0000111 ontology:LP_0000261 ontology:LP_0000438 ontology:LP_0000478 ontology:LP_0000540 ontology:LP_0000571 ontology:LP_0000808 ontology:LP_0000816)
