@@ -1,0 +1,34 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Schulart: <https://w3id.org/lehrplan/ontology/LP_0000111> .
+@prefix Hauptschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000834> .
+@prefix Gymnasialniveau_SekII: <https://w3id.org/lehrplan/ontology/LP_0000835> .
+
+# Instanzen
+@prefix Integrierte_Gesamtschule: <https://w3id.org/schulart/RP_0000002> .
+@prefix Gesamtschule_KIM: <https://w3id.org/kim/schularten/s05> .
+@prefix Rheinland-Pfalz: <https://w3id.org/lehrplan/ontology/LP_3000046> .
+@prefix Jahrgangsstufe_9: <https://w3id.org/lehrplan/ontology/LP_2000009> .
+@prefix Grundlegendes_Kompetenzniveau_RP: <https://w3id.org/lehrplan/ontology/LP_0000147> .
+@prefix Niveau_Sekundarstufe_II_RP: <https://w3id.org/lehrplan/ontology/LP_0030353> .
+
+# properties
+@prefix has_exact_match: <http://www.w3.org/2004/02/skos/core#exactMatch> .
+@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+@prefix hat_Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000833> .
+
+Integrierte_Gesamtschule: a Schulart: ;
+                          has_exact_match: Gesamtschule_KIM: ;
+                          von_Bundesland: Rheinland-Pfalz: ;
+                          hat_Jahrgangsstufe: Jahrgangsstufe_9: ;
+                          hat_Bildungsgangniveau: Grundlegendes_Kompetenzniveau_RP: ,
+                                                  Niveau_Sekundarstufe_II_RP: .
+Grundlegendes_Kompetenzniveau_RP: a Hauptschulniveau: .
+Niveau_Sekundarstufe_II_RP: a Gymnasialniveau_SekII: .

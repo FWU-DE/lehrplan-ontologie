@@ -1,0 +1,345 @@
+{
+  "ontoink": "0.7.7",
+  "summary": {
+    "graphs": 12,
+    "minScore": 34,
+    "meanScore": 43,
+    "violations": 2,
+    "conforms": false,
+    "inconsistent": 0,
+    "smells": {
+      "errors": 0,
+      "warnings": 62,
+      "info": 22
+    },
+    "shapeDrift": 0
+  },
+  "graphs": [
+    {
+      "graph_id": "ontoink-graph-0",
+      "source": "patterns/pattern1.ttl",
+      "shape": "../shapes/auto-shapes/auto-shapes-open.ttl",
+      "smells": {
+        "total": 8,
+        "errors": 0,
+        "warnings": 6,
+        "info": 2,
+        "score": 34
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-1",
+      "source": "patterns/pattern2.ttl",
+      "shape": "../shapes/auto-shapes/auto-shapes-open.ttl",
+      "smells": {
+        "total": 8,
+        "errors": 0,
+        "warnings": 6,
+        "info": 2,
+        "score": 34
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 8,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "violations",
+        "violations": 2,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-2",
+      "source": "patterns/pattern3.ttl",
+      "shape": null,
+      "smells": {
+        "total": 6,
+        "errors": 0,
+        "warnings": 5,
+        "info": 1,
+        "score": 47
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 2,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-3",
+      "source": "patterns/pattern4.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 3,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-4",
+      "source": "patterns/pattern5.ttl",
+      "shape": null,
+      "smells": {
+        "total": 8,
+        "errors": 0,
+        "warnings": 6,
+        "info": 2,
+        "score": 34
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 5,
+        "individualCount": 11,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 2,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-5",
+      "source": "patterns/pattern6.ttl",
+      "shape": null,
+      "smells": {
+        "total": 3,
+        "errors": 0,
+        "warnings": 3,
+        "info": 0,
+        "score": 70
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 0,
+        "individualCount": 9,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-6",
+      "source": "patterns/pattern7.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 5,
+        "individualCount": 4,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 2,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-7",
+      "source": "patterns/pattern8.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 6,
+        "info": 1,
+        "score": 37
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 9,
+        "individualCount": 4,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 7,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-8",
+      "source": "patterns/pattern9.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 9,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-9",
+      "source": "patterns/pattern10.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 9,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-10",
+      "source": "patterns/pattern11.ttl",
+      "shape": null,
+      "smells": {
+        "total": 8,
+        "errors": 0,
+        "warnings": 5,
+        "info": 3,
+        "score": 41
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 2,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-11",
+      "source": "patterns/pattern12.ttl",
+      "shape": null,
+      "smells": {
+        "total": 8,
+        "errors": 0,
+        "warnings": 5,
+        "info": 3,
+        "score": 41
+      },
+      "consistency": "unknown",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 3,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 1,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    }
+  ]
+}

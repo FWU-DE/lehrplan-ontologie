@@ -1,0 +1,2026 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../patterns/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../index.en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Ontologie-Modell - Lehrplan Ontology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/mkdocs_d2_plugin.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lehrplan-ontologie" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Lehrplan Ontology" class="md-header__button md-logo" aria-label="Lehrplan Ontology" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lehrplan Ontology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ontologie-Modell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lehrplan Ontology" class="md-nav__button md-logo" aria-label="Lehrplan Ontology" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Lehrplan Ontology
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologien allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konzeptuelle Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie-Modell
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aufbau-und-struktur-der-lehrplan-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau und Struktur der Lehrplan Ontologie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufbau und Struktur der Lehrplan Ontologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bildungskontext-schule-fach-und-bundesland" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bildungskontext: Schule, Fach und Bundesland
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-curriculare-elemente-als-semantischer-kern-der-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Curriculare Elemente als semantischer Kern der Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-zeitliche-und-stufenbezogene-einordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zeitliche und stufenbezogene Einordnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-niveau-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Niveau-System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-relationen-und-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Relationen und Funktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modellierung-designprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellierung / Designprinzip
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachgenutzte-ontologienvokabulare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nachgenutzte Ontologien/Vokabulare
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nachgenutzte Ontologien/Vokabulare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-formal-ontology-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Formal Ontology (BFO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfo-als-top-level-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFO als Top-Level-Ontologie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BFO als Top-Level-Ontologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuants-endurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuants (Endurants)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuants (Endurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-continuants-ic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent Continuants (IC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generically-dependent-continuants-gdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generically Dependent Continuants (GDC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifically-dependent-continuants-sdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specifically Dependent Continuants (SDC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occurrents-perdurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Occurrents (Perdurants)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Occurrents (Perdurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatiotemporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatiotemporal Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relations-in-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relations in BFO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-ontology-ro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation Ontology (RO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-artifact-ontology-iao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Information Artifact Ontology (IAO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schulfach-und-schulart-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulfach- und Schulart-Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schulfach- und Schulart-Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schulfach-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulfach-Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schulart-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulart-Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-von-skos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung von SKOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWL-Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kim-vokabulare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KIM-Vokabulare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uberblick-uber-klassen-beziehungen-hierarchien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Überblick über Klassen, Beziehungen, Hierarchien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Überblick über Klassen, Beziehungen, Hierarchien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanzen-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instanzen (individuals)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beziehungen-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beziehungen (properties)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-unterschiedlicher-terminologien-der-bundeslander" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapping unterschiedlicher Terminologien der Bundesländer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping unterschiedlicher Terminologien der Bundesländer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-der-bildungsstandards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration der Bildungsstandards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beispiele
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL-Abfragen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verwendung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über uns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aufbau-und-struktur-der-lehrplan-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau und Struktur der Lehrplan Ontologie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufbau und Struktur der Lehrplan Ontologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bildungskontext-schule-fach-und-bundesland" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bildungskontext: Schule, Fach und Bundesland
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-curriculare-elemente-als-semantischer-kern-der-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Curriculare Elemente als semantischer Kern der Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-zeitliche-und-stufenbezogene-einordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zeitliche und stufenbezogene Einordnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-niveau-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Niveau-System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-relationen-und-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Relationen und Funktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modellierung-designprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellierung / Designprinzip
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachgenutzte-ontologienvokabulare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nachgenutzte Ontologien/Vokabulare
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nachgenutzte Ontologien/Vokabulare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-formal-ontology-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Formal Ontology (BFO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfo-als-top-level-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFO als Top-Level-Ontologie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BFO als Top-Level-Ontologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuants-endurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuants (Endurants)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuants (Endurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-continuants-ic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent Continuants (IC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generically-dependent-continuants-gdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generically Dependent Continuants (GDC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifically-dependent-continuants-sdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specifically Dependent Continuants (SDC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occurrents-perdurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Occurrents (Perdurants)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Occurrents (Perdurants)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatiotemporal-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatiotemporal Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relations-in-bfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relations in BFO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-ontology-ro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation Ontology (RO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-artifact-ontology-iao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Information Artifact Ontology (IAO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schulfach-und-schulart-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulfach- und Schulart-Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schulfach- und Schulart-Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schulfach-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulfach-Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schulart-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schulart-Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-von-skos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwendung von SKOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWL-Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kim-vokabulare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KIM-Vokabulare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uberblick-uber-klassen-beziehungen-hierarchien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Überblick über Klassen, Beziehungen, Hierarchien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Überblick über Klassen, Beziehungen, Hierarchien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanzen-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instanzen (individuals)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beziehungen-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beziehungen (properties)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-unterschiedlicher-terminologien-der-bundeslander" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapping unterschiedlicher Terminologien der Bundesländer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping unterschiedlicher Terminologien der Bundesländer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-der-bildungsstandards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration der Bildungsstandards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lehrplan-ontologie">Lehrplan Ontologie</h1>
+<p>Ein Lehrplan ist ontologisch nicht als Dokument zu verstehen, sondern als <strong>Informationsobjekt mit normativer Funktion</strong>. Das Dokument (z. B. PDF, Webseite oder Buch) dient lediglich als Träger dieser Information.</p>
+<p>Ein Lehrplan stellt eine strukturierte Informationseinheit dar, die eine systematische Zusammenstellung curricularer Elemente umfasst. Er legt verbindlich fest, welche Kompetenzen und Inhalte Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.</p>
+<p>Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen.</p>
+<p>Neben den verbindlichen curricularen Vorgaben enthalten Lehrpläne häufig Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Verweise auf fachübergreifende oder verwandte Kompetenzen und Inhalte. Je nach Bundesland werden hierfür unterschiedliche Bezeichnungen verwendet, beispielsweise <em>Bildungsplan</em>, <em>Fachanforderungen</em>, <em>Kerncurriculum</em>, <em>Kernlehrplan</em>, <em>LehrplanPLUS</em>, <em>Rahmenlehrplan</em> oder <em>Rahmenplan</em>.</p>
+<p>Ein Lehrplan bezieht sich auf den Lehrprozess, den Lernprozess, die Kompetenzentwicklung sowie die Leistungsbewertung. Er beschreibt jedoch nicht den tatsächlich stattfindenden Unterricht, sondern spezifiziert, wie Lehr- und Lernprozesse idealerweise gestaltet werden sollen, um die angestrebten Bildungsziele zu erreichen.</p>
+<p>Ontologisch kann ein Lehrplan daher als <strong>Prozessspezifikation</strong> verstanden werden. Er enthält Informationen darüber, welche Prozesse stattfinden sollen, unter welchen Bedingungen sie ablaufen und welche Ergebnisse beziehungsweise Zielzustände angestrebt werden. Der tatsächlich durchgeführte Unterricht ist demgegenüber als <strong>Instanz</strong> eines solchen spezifizierten Prozesses zu verstehen.</p>
+<p>Aus ontologischer Sicht müssen <strong>Lehrprozess</strong> und <strong>Lernprozess</strong> klar voneinander unterschieden werden. Der Lehrprozess ist ein didaktischer Prozess, der durch Lehrpersonen oder das Bildungssystem initiiert und gestaltet wird. Der Lernprozess hingegen findet innerhalb der lernenden Person statt und umfasst die kognitiven und motivationalen Vorgänge, die zum Erwerb neuer Fähigkeiten und Kenntnisse führen. Der Lehrprozess kann den Lernprozess unterstützen und beeinflussen, bestimmt ihn jedoch nicht vollständig.</p>
+<p>Das Ergebnis eines erfolgreichen Lernprozesses kann der Erwerb einer neuen <strong>Kompetenz</strong> sein. Ontologisch ist eine Kompetenz kein Informationsobjekt, sondern eine Disposition beziehungsweise Fähigkeit eines Akteurs, in einer Klasse von Situationen erfolgreich zu handeln. Kompetenzen existieren somit als Eigenschaften beziehungsweise Dispositionen der lernenden Person.</p>
+<p>Der Lehrplan enthält die Kompetenzen selbst nicht, sondern beschreibt sie in Form von <strong>Kompetenzspezifikationen</strong>. Eine Kompetenzspezifikation ist wiederum ein Informationsobjekt, das eine Kompetenz hinsichtlich ihres Inhalts, ihres Anwendungsbereichs sowie gegebenenfalls ihres angestrebten Niveaus präzisiert. Kompetenzspezifikationen sind Bestandteil des Lehrplans und dienen dazu, die angestrebten Lernergebnisse eindeutig zu beschreiben.</p>
+<p>Die ontologische Modellierung trennt somit konsequent zwischen <strong>realweltlichen Entitäten</strong> (Akteure, Prozesse und Kompetenzen) und <strong>Informationsobjekten</strong> (Lehrplan, Kompetenzspezifikationen, Lernziele oder Bewertungsmaßstäbe). Dadurch wird deutlich, dass ein Lehrplan weder Kompetenzen noch Lernprozesse selbst enthält, sondern deren intendierte Ausgestaltung sowie die Beziehungen zwischen ihnen beschreibt. Diese Unterscheidung bildet die Grundlage für eine ontologisch konsistente Repräsentation von Lehrplanwissen.</p>
+<h2 id="aufbau-und-struktur-der-lehrplan-ontologie">Aufbau und Struktur der Lehrplan Ontologie</h2>
+<p>Aus den beschriebenen ontologischen Überlegungen ergeben sich die Anforderungen an die Modellierung der Lehrplan-Ontologie. Ziel der Ontologie ist es, die zentralen Konzepte des deutschen Lehrplansystems sowie ihre Beziehungen formal und maschineninterpretierbar abzubilden. Dabei werden sowohl die semantischen Eigenschaften eines Lehrplans als normatives Informationsobjekt als auch die strukturellen Besonderheiten der Lehrpläne der einzelnen Bundesländer berücksichtigt.</p>
+<p>Die Lehrplan-Ontologie ist als OWL-Ontologie implementiert und gliedert sich in fünf konzeptionelle Schichten. Diese Schichten bilden unterschiedliche Aspekte des Lehrplansystems ab – vom institutionellen Bildungskontext über die curriculare Struktur bis hin zu den Beziehungen zwischen den einzelnen Elementen.</p>
+<h3 id="1-bildungskontext-schule-fach-und-bundesland">1. Bildungskontext:  Schule, Fach und Bundesland</h3>
+<p>(Wo gilt der Lehrplan?)</p>
+<ul>
+<li>Bundesland</li>
+<li>Schulart</li>
+<li>Schulfach</li>
+</ul>
+<p>Die erste Schicht der Lehrplan-Ontologie beschreibt den <strong>institutionellen Geltungsbereich</strong> eines Lehrplans. Sie modelliert den Bildungskontext, in dem ein Lehrplan Anwendung findet, und beantwortet die Frage, <strong>für welches Bundesland, welche Schulart und welches Schulfach</strong> ein Lehrplan gilt.</p>
+<p>Die Klasse <strong>Schulfach</strong> (<code>LP_0000001</code>) bildet die Wurzelklasse aller Unterrichtsfächer und wird in Subklassen wie <strong>MINT-Fach</strong>, <strong>Naturwissenschaftsfach</strong>, <strong>Fremdsprachenfach</strong> und <strong>Gesellschaftswissenschaftsfach</strong> untergliedert. Ergänzend beschreibt die Klasse <strong>Schulfachbezug</strong> (<code>LP_0000540</code>) die Stellung eines Faches innerhalb eines Bildungsgangs, beispielsweise als Pflichtfach, Wahlpflichtfach oder erste, zweite beziehungsweise dritte Fremdsprache.</p>
+<p>Die Klasse <strong>Schulart</strong> (<code>LP_0000111</code>) modelliert den Schultyp (z. B. Gymnasium oder Gesamtschule). Ergänzend beschreibt die Klasse <strong>Bildungsgang</strong> (<code>LP_0000816</code>) den schulischen Bildungsweg einer Schülerin oder eines Schülers. Sie umfasst unter anderem die Subklassen <strong>Gymnasialer Bildungsgang</strong>, <strong>Hauptschulbildungsgang</strong> und <strong>Realschulbildungsgang</strong>.</p>
+<p>Der föderale Charakter des deutschen Bildungssystems wird durch die Klasse <strong>Bundesland Bezeichnung</strong> (<code>LP_0000040</code>) abgebildet. Die 16 deutschen Bundesländer sind als Individuen dieser Klasse modelliert und dienen der eindeutigen Zuordnung jedes Lehrplans zu seinem jeweiligen Geltungsbereich.</p>
+<h3 id="2-curriculare-elemente-als-semantischer-kern-der-ontologie">2. Curriculare Elemente als semantischer Kern der Ontologie</h3>
+<p>Die Klasse <strong>Curriculares Element</strong> (<code>LP_0000261</code>) bildet den semantischen Kern der Lehrplan-Ontologie. Sie dient als generische Oberklasse für alle inhaltlichen Bausteine eines Lehrplans und ermöglicht eine einheitliche Repräsentation curricularer Strukturen über alle Bundesländer hinweg.</p>
+<p>Eine besondere Herausforderung besteht darin, dass die Lehrpläne der 16 Bundesländer unterschiedliche Terminologien und Strukturierungsprinzipien verwenden. Inhaltlich vergleichbare Konzepte werden häufig unterschiedlich benannt oder auf verschiedene Weise gegliedert. Die Ontologie begegnet dieser Heterogenität durch ein zweistufiges Modellierungsmuster: Auf einer abstrakten Ebene werden bundeslandübergreifende generische Klassen definiert, während die jeweiligen landesspezifischen Ausprägungen als Subklassen dieser generischen Konzepte modelliert werden. Dadurch bleiben sowohl die semantische Vergleichbarkeit als auch die länderspezifischen Besonderheiten erhalten.</p>
+<p>Die wichtigsten generischen Klassen sind:</p>
+<ul>
+<li>
+<p><strong>CE-Fragment</strong> (<code>LP_0001015</code>): Modelliert strukturelle Bestandteile eines Lehrplans, beispielsweise Kapitel oder Abschnitte. Diese Elemente besitzen selbst keine fachliche Bedeutung, dienen jedoch der hierarchischen Gliederung eines Lehrplans. Länderspezifische Klassen wie <em>Lehrplanfragment (BE)</em>, <em>Lehrplanfragment (BY)</em> oder <em>Lehrplanfragment (HH)</em> sind jeweils Subklassen dieses generischen Konzepts.</p>
+</li>
+<li>
+<p><strong>CE-Bereich</strong> (<code>LP_0000349</code>): Repräsentiert fachlich strukturierende Bereiche eines Lehrplans. Hierzu gehören beispielsweise Kompetenzbereiche, Lernbereiche, Leitideen, Themen oder Themenfelder. Entsprechende landesspezifische Klassen – etwa <em>Kompetenzbereich</em> (BE/HH/RP/SN/NW), <em>Lernbereich</em> (BY/SN/NI), <em>Leitidee</em> (BE/BW/HH/RP), <em>Thema</em>, <em>Themenfeld</em>, <em>Inhalt</em> (HH) oder <em>Inhaltsfeld</em> (HE/NW) – werden als Spezialisierungen dieser Oberklasse modelliert.</p>
+</li>
+<li>
+<p><strong>CE-Kompetenzspezifikation</strong> (<code>LP_0000263</code>): Beschreibt die im Lehrplan formulierten Kompetenzanforderungen. Hierzu zählen unter anderem <em>Kompetenzerwartungen</em> (BY), <em>Standards</em> (BE), <em>Anforderungen/Mindestanforderungen</em> (HH), <em>Lernziele/Lerninhalt</em> (SN)  oder andere landesspezifische Formen der Kompetenzbeschreibung.</p>
+</li>
+<li>
+<p><strong>CE-Lerninhalt</strong> (<code>LP_0000332</code>): Modelliert die fachlichen Inhalte und Lerngegenstände, die Gegenstand des Unterrichts sind.</p>
+</li>
+<li>
+<p><strong>CE-Hinweis</strong> (<code>LP_0000852</code>): Umfasst ergänzende Informationen wie didaktische, methodische oder organisatorische Hinweise.</p>
+</li>
+</ul>
+<p>Auch die Lehrpläne selbst werden auf einer gemeinsamen abstrakten Ebene modelliert. Die Klasse <strong>Lehrplan</strong> (<code>LP_0000438</code>) bildet die generische Oberklasse, deren Subklassen die unterschiedlichen Bezeichnungen der Bundesländer repräsentieren. Hierzu gehören unter anderem <strong>LehrplanPLUS</strong> (BY), <strong>Bildungsplan</strong> (BW, HH, HB), <strong>Kerncurriculum</strong> (NI, HE), <strong>Kernlehrplan</strong> (NV), <strong>Rahmenlehrplan</strong> (BE/BB), <strong>Rahmenplan</strong> (MV), <strong>Fachanforderung</strong> (SH) sowie die in mehreren Bundesländern verwendete Bezeichnung <strong>Lehrplan</strong>.</p>
+<h3 id="3-zeitliche-und-stufenbezogene-einordnung">3. Zeitliche und stufenbezogene Einordnung</h3>
+<p>(Wann gilt etwas?)</p>
+<ul>
+<li>Jahrgang</li>
+<li>Schulstufe</li>
+<li>Abschluss</li>
+</ul>
+<p><strong>Jahrgangsstufe</strong> (<code>LP_0000009</code>) und <strong>Schulstufe</strong> (<code>LP_0000020</code>) strukturieren den zeitlichen Verlauf von Bildungsgängen. Die Schulstufe differenziert sich insbesondere in <strong>Einführungsphase</strong>, <strong>Qualifikationsphase</strong> und <strong>Oberstufenphase</strong> und bildet damit größere zeitliche Abschnitte schulischer Bildung ab.</p>
+<p>Die Klasse <strong>Schulabschluss</strong> (<code>LP_0000019</code>) modelliert die erreichbaren Bildungsabschlüsse eines Bildungsgangs, darunter die <strong>Allgemeine Hochschulreife</strong>, das <strong>Fachabitur</strong>, der <strong>Mittlere Schulabschluss</strong> sowie der <strong>Erste Schulabschluss</strong>. Diese Abschlussformen werden in der Ontologie zusätzlich in länderspezifischen Subklassen konkretisiert, beispielsweise als <em>Allgemeine Hochschulreife (HH)</em> oder <em>Mittlerer Abschluss (SN)</em>.</p>
+<h3 id="4-niveau-system">4. Niveau-System</h3>
+<p>(Für welches Anspruchsniveau gilt etwas?)</p>
+<ul>
+<li>Bildungsgangniveau</li>
+<li>Fachniveau</li>
+<li>Fremdsprachenniveau</li>
+</ul>
+<p>Die wichtigsten Subklassen sind das <strong>Bildungsgangniveau</strong> (<code>LP_0000028</code>), das grundlegende schulische Leistungsprofile beschreibt, beispielsweise das Gymnasialniveau der Sekundarstufe I, das Hauptschulniveau, das Realschulniveau sowie das Gymnasialniveau der Sekundarstufe II. Ergänzend hierzu modelliert das <strong>Fachniveau Sek II</strong> (<code>LP_0000265</code>) die kursbezogenen Anforderungsniveaus der gymnasialen Oberstufe, insbesondere Grundkurse und Leistungskurse sowie deren länderspezifische Ausprägungen.</p>
+<p>Darüber hinaus existieren für die einzelnen Bundesländer spezifische Subklassen des Niveaubegriffs, da sowohl Terminologie als auch Zuordnung zu Abschlüssen föderal unterschiedlich ausgestaltet sind. Beispiele hierfür sind etwa die in Berlin verwendeten Niveaus BOA, BBR, EBBR und MSA.</p>
+<p>Die Instanzen der Klasse <strong>Fremdsprachenniveau</strong> ('LP_0010001') geben an, in welchem Umfang Lernende die Sprache verstehen, sprechen, lesen und schreiben können, und dient als Vergleichsgrundlage innerhalb von Bildungsabschlüssen und internationalen Qualifikationen.</p>
+<h3 id="5-relationen-und-funktionen">5. Relationen und Funktionen</h3>
+<p>(Wie hängen alle Elemente zusammen?)</p>
+<ul>
+<li>hat Teil</li>
+<li>hat Jahrgangsstufe</li>
+<li>hat Schulfach</li>
+<li>von Bundesland</li>
+<li>hat Beschreibung</li>
+<li>hat Funktionen</li>
+</ul>
+<p>Die Ontologie verwendet eine Kombination aus Properties der BFO-basierten <strong>Relation Ontology</strong> sowie eigens definierter Relations- und Datentyp-Properties, die entsprechend als Sub-Properties dieser Basismodellierung eingeordnet sind. Dadurch wird eine konsistente Anbindung an etablierte ontologische Standards gewährleistet und zugleich die domänenspezifische Modellierung des Lehrplansystems ermöglicht.</p>
+<p>Die wichtigsten Properties sind:</p>
+<ul>
+<li>
+<p><strong>hat Teil</strong> (<code>bfo:BFO_0000051</code>): Zentrale mereologische Relation zur Abbildung von Teil-Ganzes-Strukturen. Sie modelliert die hierarchische Gliederung von Lehrplänen in Fragmente, Bereiche und Kompetenzelemente.</p>
+</li>
+<li>
+<p><strong>von Bundesland</strong> (<code>LP_0000029</code>): Verknüpft jeden Lehrplanknoten mit dem jeweiligen Bundesland als Geltungsbereich.</p>
+</li>
+<li>
+<p><strong>hat Jahrgangsstufe</strong> (<code>LP_0000026</code>): Ordnet curricularen Elementen spezifische Jahrgangsstufen zu und verankert sie damit im zeitlichen Verlauf des Bildungsgangs.</p>
+</li>
+<li>
+<p><strong>hat Bildungsgangniveau</strong> (<code>LP_0000833</code>): Gibt das für ein Element relevante Bildungsgang- bzw. Leistungsniveau an.</p>
+</li>
+<li>
+<p><strong>hat Schulfach</strong> (<code>LP_0000537</code>) und <strong>für Schulart</strong> (<code>LP_0000812</code>): Stellen die fachliche und institutionelle Einbettung der Lehrplanknoten sicher, indem sie diese mit Schulfach und Schulart verknüpfen.</p>
+</li>
+<li>
+<p><strong>ermöglicht Abschluss</strong> (<code>LP_0000021</code>): Modelliert die Beziehung zwischen Bildungsgängen und den jeweils erreichbaren Schulabschlüssen.</p>
+</li>
+<li>
+<p><strong>hat Beschreibung / Titel / Nummer</strong> (<code>LP_0030051</code> / <code>LP_0030056</code> / <code>LP_0030057</code>): Metadaten-Properties zur Repräsentation textueller und identifizierender Informationen curricularer Elemente.</p>
+</li>
+</ul>
+<p>Ergänzt wird dieses Relationsmodell durch das Property <strong>hat Funktionspezifikation</strong> (<code>LP_0000483</code>) und das Konzept der <strong>Funktionsspezifikation</strong> (<code>LP_0000478</code>). Dieses umfasst unter anderem die Subklassen <strong>Strukturierungsfunktion</strong>, <strong>Beschreibungsfunktion</strong>, <strong>Bezugsfunktion</strong> und <strong>Niveauspezifikationsfunktion</strong>. Damit kann jedem curricularen Element explizit eine funktionale Rolle innerhalb des Lehrplans zugewiesen werden, etwa ob es strukturierende, beschreibende, referenzierende oder niveauspezifizierende Aufgaben erfüllt.</p>
+<p>Weitere Informationen zur Struktur und Modellierung der Lehrplan-Ontologie befinden sich im Kapitel <a href="https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/">Beispiele</a>.</p>
+<h2 id="modellierung-designprinzip">Modellierung / Designprinzip</h2>
+<p>Das Grundprinzip der Ontologie lässt sich wie folgt zusammenfassen: <strong>eine gemeinsame Abstraktion mit vielfältigen länderspezifischen Konkretisierungen</strong>. Alle 16 Bundesländer verwenden dabei dieselben generischen Klassen (z. B. <em>Lehrplan</em>, <em>CE-Fragment</em>, <em>CE-Bereich</em>, <em>CE-Kompetenzspezifikation</em>) sowie zentrale Relations-Properties (z. B. <em>hat Teil</em>, <em>hat Jahrgangsstufe</em>, <em>hat Bildungsgangniveau</em>). Gleichzeitig bleiben die jeweiligen landesspezifischen Ausprägungen in Form eigener Subklassen erhalten, sodass die terminologische und strukturelle Eigenlogik der Länder nicht verloren geht.</p>
+<p>Dieses Modell ermöglicht sowohl bundeslandübergreifende Auswertungen (z. B. „alle Kompetenzbereiche zu Thema X in allen Ländern“) als auch detaillierte länderspezifische Analysen (z. B. „alle Lernbereiche im LehrplanPLUS Bayern“).</p>
+<p>Die Ontologie ist modular aufgebaut. Die Inhalte und Strukturen der einzelnen Bundesländer werden in getrennten Komponenten modelliert und durch eine übergeordnete <strong>Kern-Ontologie (Core)</strong> integriert. Diese Kern-Ontologie enthält die generischen Konzepte und Relationen, die in allen Bundesländern wiederkehren, auch wenn sie dort unterschiedlich benannt oder strukturiert sind.</p>
+<p>Die Kern-Ontologie übernimmt damit eine verbindende Funktion: Sie stellt gemeinsame semantische Kategorien und Beziehungstypen bereit, über die die jeweiligen landesspezifischen Modelle systematisch miteinander verknüpft werden können. Dadurch entsteht ein gemeinsames semantisches Referenzsystem, ohne die Autonomie der Länderontologien aufzugeben.</p>
+<p>Ein vereinfachtes Beispiel verdeutlicht dies: Verschiedene Bundesländer verwenden für inhaltlich vergleichbare Elemente – etwa Kompetenzbeschreibungen – unterschiedliche Begriffe und Strukturierungen. Die Kern-Ontologie führt diese Elemente auf eine gemeinsame funktionale Rolle zurück, beispielsweise als <em>Kompetenzspezifikation</em>. Auf dieser Grundlage lassen sich die unterschiedlichen Modelle eindeutig miteinander verbinden und einheitlich abfragen, ohne die jeweiligen landesspezifischen Modellierungen zu verändern.</p>
+<p>Der modulare Aufbau ermöglicht es perspektivisch zudem, dass die Bundesländer ihre jeweiligen Ontologie-Module eigenständig pflegen und weiterentwickeln können, ohne dass Änderungen unmittelbare Auswirkungen auf die Modelle anderer Länder haben.</p>
+<div class="d2"><svg data-d2-version="v0.9.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 518 436" role="img" aria-label="Diagram"><svg class="d2-e64408bacd9149f1a0c5fdb1fa6d7621 d2-svg" width="518" height="436" viewBox="-103 -101 518 436"><rect x="-103" y="-101" width="518" height="436" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css">
+.d2-e64408bacd9149f1a0c5fdb1fa6d7621 .text-bold {
+	font-family: "d2-e64408bacd9149f1a0c5fdb1fa6d7621-font-bold";
+}
+@font-face {
+	font-family: d2-e64408bacd9149f1a0c5fdb1fa6d7621-font-bold;
+	src: url("data:application/font-woff;base64,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");
+}</style><style type="text/css">.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-e64408bacd9149f1a0c5fdb1fa6d7621 .fill-N7{fill:#FFFFFF;}
+		.d2-e64408bacd9149f1a0c5fdb1fa6d7621 .fill-B6{fill:#F7F8FE;}
+		.d2-e64408bacd9149f1a0c5fdb1fa6d7621 .stroke-B2{stroke:#0D32B2;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}</style><g class="Qlc="><g class="shape"><rect x="122" y="166" width="67" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="155.5" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">BW</text></g><g class="Qlk="><g class="shape"><rect x="249" y="166" width="63" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="280.5" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">BY</text></g><g class="QkU="><g class="shape"><rect x="0" y="166" width="62" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="31" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">BE</text></g><g class="S2Vybi1PbnRvbG9naWU="><g class="shape"><rect x="79" y="0" width="153" height="66" stroke="white" fill="#9F0E21" style="stroke-width:2;" /></g><text x="155.5" y="38.5" fill="white" class="text-bold" style="text-anchor:middle;font-size:16px">Kern-Ontologie</text></g><g class="KEtlcm4tT250b2xvZ2llIC0mZ3Q7IEJZKVswXQ==" style="opacity:0.4"><marker id="mk-d2-e64408bacd9149f1a0c5fdb1fa6d7621-1919600114" markerWidth="13" markerHeight="16" refX="8.5" refY="8" viewBox="0 0 13 16" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 13,8 0,16" fill="#9F0E21" class="connection" stroke-width="3" /> </marker><path d="M 207.580126 67.38675 C 265.5 106 280.5 126 280.5 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-e64408bacd9149f1a0c5fdb1fa6d7621-1919600114)" mask="url(#d2-e64408bacd9149f1a0c5fdb1fa6d7621)" /></g><g class="KEtlcm4tT250b2xvZ2llIC0mZ3Q7IEJXKVswXQ==" style="opacity:0.4"><path d="M 155.5 68.5 C 155.5 106 155.5 126 155.5 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-e64408bacd9149f1a0c5fdb1fa6d7621-1919600114)" mask="url(#d2-e64408bacd9149f1a0c5fdb1fa6d7621)" /></g><g class="KEtlcm4tT250b2xvZ2llIC0mZ3Q7IEJFKVswXQ==" style="opacity:0.4"><path d="M 103.919874 67.38675 C 46 106 31 126 31 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-e64408bacd9149f1a0c5fdb1fa6d7621-1919600114)" mask="url(#d2-e64408bacd9149f1a0c5fdb1fa6d7621)" /></g><mask id="d2-e64408bacd9149f1a0c5fdb1fa6d7621" maskUnits="userSpaceOnUse" x="-103" y="-101" width="518" height="436">
+<rect x="-103" y="-101" width="518" height="436" fill="white" />
+
+</mask></svg></svg></div>
+<p>Die in der Kern-Ontologie modellierten <strong>curricularen Elemente</strong> bilden dabei die zentrale Strukturierungsbasis. Der <em>Lehrplan</em> fungiert als übergeordnete konzeptionelle Klammer, die eine Vielzahl von <em>CE-Fragmenten</em> umfasst. Diese Fragmente dienen als strukturierende Einheiten und können wiederum <em>CE-Bereiche</em> wie Kompetenzbereiche oder Themenfelder enthalten.</p>
+<p>Diese Struktur ist rekursiv aufgebaut: Kompetenzbereiche und Themenfelder können ihrerseits weiter untergliedert sein, wobei sich die Zerlegung typischerweise bis auf die Ebene von <strong>Kompetenzspezifikationen</strong> oder <strong>Lerninhalten</strong> fortsetzt.</p>
+<p>Ein beispielhafter Aufbau der Lehrplanstruktur auf Basis der Kern-Elemente ist in der folgenden Abbildung dargestellt:</p>
+<div class="d2"><svg data-d2-version="v0.9.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 654 768" role="img" aria-label="Diagram"><svg class="d2-c97de42cc4cb404baa2a2ea65bcbe438 d2-svg" width="654" height="768" viewBox="-103 -101 654 768"><rect x="-103" y="-101" width="654" height="768" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css">
+.d2-c97de42cc4cb404baa2a2ea65bcbe438 .text-bold {
+	font-family: "d2-c97de42cc4cb404baa2a2ea65bcbe438-font-bold";
+}
+@font-face {
+	font-family: d2-c97de42cc4cb404baa2a2ea65bcbe438-font-bold;
+	src: url("data:application/font-woff;base64,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");
+}</style><style type="text/css">.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-c97de42cc4cb404baa2a2ea65bcbe438 .fill-N7{fill:#FFFFFF;}
+		.d2-c97de42cc4cb404baa2a2ea65bcbe438 .fill-B6{fill:#F7F8FE;}
+		.d2-c97de42cc4cb404baa2a2ea65bcbe438 .stroke-B2{stroke:#0D32B2;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}</style><g class="Q0UtRnJhZ21lbnQgMQ=="><g class="shape"><rect x="253" y="166" width="149" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="327.5" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Fragment 1</text></g><g class="Q0UtRnJhZ21lbnQgMg=="><g class="shape"><rect x="0" y="166" width="149" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="74.5" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Fragment 2</text></g><g class="Q0UtQmVyZWljaCAx"><g class="shape"><rect x="260" y="332" width="134" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="327" y="370.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Bereich 1</text></g><g class="Q0UtQmVyZWljaCAy"><g class="shape"><rect x="8" y="332" width="134" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="75" y="370.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Bereich 2</text></g><g class="Q0UtS29tcGV0ZW56c3BlemlmaWthdGlvbg=="><g class="shape"><rect x="206" y="498" width="242" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="327" y="536.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Kompetenzspezifikation</text></g><g class="Q0UtTGVybmluaGFsdA=="><g class="shape"><rect x="3" y="498" width="143" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="74.5" y="536.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Lerninhalt</text></g><g class="TGVocnBsYW4="><g class="shape"><rect x="147" y="0" width="108" height="66" stroke="white" fill="#9F0E21" style="stroke-width:2;" /></g><text x="201" y="38.5" fill="white" class="text-bold" style="text-anchor:middle;font-size:16px">Lehrplan</text></g><g class="KExlaHJwbGFuIC0mZ3Q7IENFLUZyYWdtZW50IDEpWzBd" style="opacity:0.4"><marker id="mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114" markerWidth="13" markerHeight="16" refX="8.5" refY="8" viewBox="0 0 13 16" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 13,8 0,16" fill="#9F0E21" class="connection" stroke-width="3" /> </marker><path d="M 253.088543 67.374041 C 311.799988 106 327 126 327 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><g class="KExlaHJwbGFuIC0mZ3Q7IENFLUZyYWdtZW50IDIpWzBd" style="opacity:0.4"><path d="M 148.411447 67.374025 C 89.698997 106 74.5 126 74.5 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><g class="KENFLUZyYWdtZW50IDEgLSZndDsgQ0UtQmVyZWljaCAxKVswXQ==" style="opacity:0.4"><path d="M 327 236 C 327 272 327 292 327 325" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><g class="KENFLUZyYWdtZW50IDIgLSZndDsgQ0UtQmVyZWljaCAyKVswXQ==" style="opacity:0.4"><path d="M 74.5 236 C 74.5 272 74.5 292 74.5 325" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><g class="KENFLUJlcmVpY2ggMSAtJmd0OyBDRS1Lb21wZXRlbnpzcGV6aWZpa2F0aW9uKVswXQ==" style="opacity:0.4"><path d="M 327 402 C 327 438 327 458 327 491" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><g class="KENFLUJlcmVpY2ggMiAtJmd0OyBDRS1MZXJuaW5oYWx0KVswXQ==" style="opacity:0.4"><path d="M 74.5 402 C 74.5 438 74.5 458 74.5 491" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-c97de42cc4cb404baa2a2ea65bcbe438-1919600114)" mask="url(#d2-c97de42cc4cb404baa2a2ea65bcbe438)" /></g><mask id="d2-c97de42cc4cb404baa2a2ea65bcbe438" maskUnits="userSpaceOnUse" x="-103" y="-101" width="654" height="768">
+<rect x="-103" y="-101" width="654" height="768" fill="white" />
+
+</mask></svg></svg></div>
+<div class="d2"><svg data-d2-version="v0.9.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 651 934" role="img" aria-label="Diagram"><svg class="d2-b33c83367a4e4767b8837e3ace0b368b d2-svg" width="651" height="934" viewBox="-103 -101 651 934"><rect x="-103" y="-101" width="651" height="934" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css">
+.d2-b33c83367a4e4767b8837e3ace0b368b .text-bold {
+	font-family: "d2-b33c83367a4e4767b8837e3ace0b368b-font-bold";
+}
+@font-face {
+	font-family: d2-b33c83367a4e4767b8837e3ace0b368b-font-bold;
+	src: url("data:application/font-woff;base64,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");
+}</style><style type="text/css">.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-b33c83367a4e4767b8837e3ace0b368b .fill-N7{fill:#FFFFFF;}
+		.d2-b33c83367a4e4767b8837e3ace0b368b .fill-B6{fill:#F7F8FE;}
+		.d2-b33c83367a4e4767b8837e3ace0b368b .stroke-B2{stroke:#0D32B2;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}</style><g class="Q0UtRnJhZ21lbnQ="><g class="shape"><rect x="129" y="166" width="138" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="198" y="204.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Fragment</text></g><g class="Q0UtQmVyZWljaA=="><g class="shape"><rect x="137" y="332" width="122" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="198" y="370.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Bereich</text></g><g class="Q0UtS29tcGV0ZW56c3BlemlmaWthdGlvbg=="><g class="shape"><rect x="203" y="498" width="242" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="324" y="536.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Kompetenzspezifikation</text></g><g class="Q0UtTGVybmluaGFsdA=="><g class="shape"><rect x="0" y="498" width="143" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="71.5" y="536.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Lerninhalt</text></g><g class="Q0UtSGlud2Vpcw=="><g class="shape"><rect x="9" y="664" width="125" height="66" stroke="#9F0E21" fill="#F7F8FE" class=" fill-B6" style="stroke-width:5;" /></g><text x="71.5" y="702.5" fill="#9F0E21" class="text-bold" style="text-anchor:middle;font-size:16px">CE-Hinweis</text></g><g class="TGVocnBsYW4="><g class="shape"><rect x="144" y="0" width="108" height="66" stroke="white" fill="#9F0E21" style="stroke-width:2;" /></g><text x="198" y="38.5" fill="white" class="text-bold" style="text-anchor:middle;font-size:16px">Lehrplan</text></g><g class="KExlaHJwbGFuIC0mZ3Q7IENFLUZyYWdtZW50KVswXQ==" style="opacity:0.4"><marker id="mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114" markerWidth="13" markerHeight="16" refX="8.5" refY="8" viewBox="0 0 13 16" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 13,8 0,16" fill="#9F0E21" class="connection" stroke-width="3" /> </marker><path d="M 197.75 68.5 C 197.75 106 197.75 126 197.75 159" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114)" mask="url(#d2-b33c83367a4e4767b8837e3ace0b368b)" /></g><g class="KENFLUZyYWdtZW50IC0mZ3Q7IENFLUJlcmVpY2gpWzBd" style="opacity:0.4"><path d="M 197.75 236 C 197.75 272 197.75 292 197.75 325" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114)" mask="url(#d2-b33c83367a4e4767b8837e3ace0b368b)" /></g><g class="KENFLUJlcmVpY2ggLSZndDsgQ0UtS29tcGV0ZW56c3BlemlmaWthdGlvbilbMF0=" style="opacity:0.4"><path d="M 251.341668 400.198466 C 308.799988 438 324 458 324 491" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114)" mask="url(#d2-b33c83367a4e4767b8837e3ace0b368b)" /></g><g class="KENFLUJlcmVpY2ggLSZndDsgQ0UtTGVybmluaGFsdClbMF0=" style="opacity:0.4"><path d="M 144.158315 400.198441 C 86.698997 438 71.5 458 71.5 491" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114)" mask="url(#d2-b33c83367a4e4767b8837e3ace0b368b)" /></g><g class="KENFLUxlcm5pbmhhbHQgLSZndDsgQ0UtSGlud2VpcylbMF0=" style="opacity:0.4"><path d="M 71.5 568 C 71.5 604 71.5 624 71.5 657" stroke="#9F0E21" fill="none" class="connection" style="stroke-width:3;" marker-end="url(#mk-d2-b33c83367a4e4767b8837e3ace0b368b-1919600114)" mask="url(#d2-b33c83367a4e4767b8837e3ace0b368b)" /></g><mask id="d2-b33c83367a4e4767b8837e3ace0b368b" maskUnits="userSpaceOnUse" x="-103" y="-101" width="651" height="934">
+<rect x="-103" y="-101" width="651" height="934" fill="white" />
+
+</mask></svg></svg></div>
+<p>Ein Lehrplan in der Kern-Ontologie lässt sich somit als hierarchisch und zugleich netzartig strukturierte Abfolge curricularer Elemente verstehen, die miteinander verknüpft werden können. So kann beispielsweise eine Kompetenzspezifikation auf einen bestimmten Lerninhalt referenzieren oder mit weiteren Kompetenzspezifikationen sowie Lehr- und Lernmaterialien in Beziehung stehen.</p>
+<hr />
+<h2 id="nachgenutzte-ontologienvokabulare">Nachgenutzte Ontologien/Vokabulare</h2>
+<p>Die Lehrplan-Ontologie wurde nicht als vollständig eigenständiges Modell entwickelt, sondern orientiert sich konsequent am Prinzip der Wiederverwendung etablierter Ontologien. Ziel ist es, vorhandene semantische Standards zu übernehmen, wo diese bereits geeignete Modellierungskonzepte bereitstellen, und nur dort neue Klassen oder Properties einzuführen, wo die Besonderheiten des deutschen Lehrplansystems dies erfordern.</p>
+<p>Durch diese Strategie wird die Interoperabilität mit anderen Wissensgraphen erhöht, die Anschlussfähigkeit an bestehende Semantic-Web-Anwendungen verbessert und gleichzeitig der Modellierungsaufwand reduziert. Die Lehrplan-Ontologie versteht sich daher als domänenspezifische Erweiterung etablierter ontologischer Grundlagen.</p>
+<h3 id="basic-formal-ontology-bfo">Basic Formal Ontology (BFO)</h3>
+<p>Die grundlegende ontologische Struktur orientiert sich an der Basic Formal Ontology (BFO), die als internationale Referenzontologie insbesondere im wissenschaftlichen Bereich weit verbreitet ist. BFO unterscheidet konsequent zwischen real existierenden Entitäten (Continuants und Occurrents) sowie Informationsobjekten.</p>
+<p>Diese Unterscheidung bildet die konzeptionelle Grundlage der Lehrplan-Ontologie. Ein Lehrplan wird als Informationsobjekt modelliert, während Lehrprozesse und Lernprozesse als Prozesse aufgefasst werden. Kompetenzen werden nicht als Informationsobjekte verstanden, sondern als Dispositionen beziehungsweise Fähigkeiten von Personen. Kompetenzbeschreibungen innerhalb eines Lehrplans sind dagegen Informationsobjekte, welche diese Kompetenzen spezifizieren.</p>
+<p>Die Orientierung an BFO sorgt dafür, dass die Modellierung ontologisch konsistent bleibt und sich problemlos mit anderen BFO-basierten Ontologien kombinieren lässt.</p>
+<details class="info">
+<summary> ... mehr erfahren zu BFO als Top-Level-Ontologie? </summary>
+<h2 id="bfo-als-top-level-ontologie">BFO als Top-Level-Ontologie</h2>
+<p>Die Basic Formal Ontology (BFO) ist eine <strong>Top-Level-Ontologie</strong>, die einen strukturierten Rahmen zur Organisation von Entitäten anhand ihrer grundlegenden Eigenschaften bereitstellt. Sie enthält keine domänenspezifischen Inhalte, sondern definiert <strong>hoch abstrakte Kategorien</strong>, die die Entwicklung spezialisierter Ontologien wie die Lehrplan-Ontologie unterstützen.</p>
+<p>BFO unterscheidet Entitäten danach, ob sie über die Zeit hinweg bestehen oder sich in der Zeit entfalten, und unterteilt sie in <strong>Continuants</strong> und <strong>Occurrents</strong>.</p>
+<h3 id="continuants-endurants"><strong>Continuants (Endurants)</strong></h3>
+<p>Continuants sind Entitäten, die <strong>zu jedem gegebenen Zeitpunkt existieren</strong> und ihre Identität über die Zeit hinweg behalten. Es gibt drei Arten von Continuants: <em>Independent Continuants</em>, <em>Generically Dependent Continuants</em> und <em>Specifically Dependent Continuants</em>.</p>
+<h4 id="independent-continuants-ic"><strong>Independent Continuants (IC)</strong></h4>
+<p>Dies sind Entitäten, die <strong>unabhängig existieren</strong> und keine andere Entität benötigen, um zu existieren.</p>
+<ul>
+<li><strong>Material Entities</strong> – Physische Objekte mit räumlicher Ausdehnung (z.B. Organismen, Gebäude, Werkzeuge)</li>
+<li><strong>Immaterial Entities</strong> – Grenzen oder Teile von Objekten, die durch menschliche Konvention definiert sind (z.B. der Äquator, die obere Hälfte einer Kugel).</li>
+</ul>
+<h4 id="generically-dependent-continuants-gdc"><strong>Generically Dependent Continuants (GDC)</strong></h4>
+<p>Diese Entitäten <strong>hängen in ihrer Existenz von Independent Continuants ab</strong>. Generically Dependent Continuants können in mehreren Instanzen existieren oder an verschiedenen Orten repliziert werden. <em>Beispiele</em>:</p>
+<ul>
+<li>Der Inhalt eines Buches (im Gegensatz zu einer einzelnen physischen Kopie)</li>
+<li>Ein Softwareprogramm (das auf mehreren Computern installiert sein kann)</li>
+<li>Eine musikalische Komposition (die auf verschiedenen Instrumenten gespielt werden kann)</li>
+<li>Ein Datensatz und einzelne Datenelemente</li>
+<li>Entitäten mit Informationsgehalt</li>
+</ul>
+<h4 id="specifically-dependent-continuants-sdc"><strong>Specifically Dependent Continuants (SDC)</strong></h4>
+<p>Specifically Dependent Continuants sind <strong>Qualities, Roles oder Dispositions</strong>, die <strong>nur in Beziehung zu einem bestimmten Independent Continuant existieren</strong>. Sie können nicht unabhängig existieren und müssen stets in etwas anderem <strong>inhärent sein</strong>.</p>
+<ul>
+<li>
+<p><strong>Qualities</strong> – Intrinsische Eigenschaften eines Independent Continuant. Sie beschreiben, <strong>wie eine Entität zu einem bestimmten Zeitpunkt ist</strong>. <em>Beispiele</em>: Die Farbe eines Blattes, das Gewicht einer Person, die Temperatur einer Flüssigkeit.</p>
+</li>
+<li>
+<p><strong>Roles</strong> – Situative Eigenschaften, die eine Entität <strong>aufgrund von Kontext oder sozialer Konvention</strong> hat. <em>Beispiele</em>: Die Rolle eines Lehrers, der Status eines Patienten in einem Krankenhaus, die Rolle einer Maschine während der Wartung.</p>
+</li>
+<li>
+<p><strong>Dispositions and functions</strong> – Potenzielle Verhaltensweisen oder Tendenzen, die eine Entität besitzt, auch wenn sie aktuell nicht realisiert sind. Functions sind Dispositions, die den spezifischen Zweck von etwas darstellen. <em>Beispiele</em>: Die Zerbrechlichkeit von Glas (es kann beim Fallen zerbrechen), die Löslichkeit von Salz (es löst sich in Wasser), die Fähigkeit einer Person, mehrere Sprachen zu sprechen, die Funktion eines Ofens zum Erhitzen, die Funktion eines Schraubenziehers zum Ein- und Ausdrehen von Schrauben.</p>
+</li>
+</ul>
+<h3 id="occurrents-perdurants"><strong>Occurrents (Perdurants)</strong></h3>
+<p>Ein Occurrent ist eine Entität, die sich <strong>in der Zeit entfaltet</strong>, oder der Beginn bzw. das Ende einer solchen Entität.</p>
+<h4 id="processes"><strong>Processes</strong></h4>
+<p>Processes sind dynamische Aktivitäten mit zeitlicher Dauer. <em>Beispiele</em>: Ein Laufereignis, eine chemische Reaktion, Zellteilung.</p>
+<h4 id="temporal-regions"><strong>Temporal Regions</strong></h4>
+<p>Diese repräsentieren zeitliche Abschnitte. <em>Beispiele</em>: Eine Sekunde, eine Stunde, ein historischer Zeitraum.</p>
+<h4 id="spatiotemporal-regions"><strong>Spatiotemporal Regions</strong></h4>
+<p>Diese verbinden Raum und Zeit zu einer gemeinsamen Entität. <em>Beispiele</em>: Die Bahn eines bewegten Objekts, die Trajektorie eines Planeten.</p>
+<h3 id="relations-in-bfo"><strong>Relations in BFO</strong></h3>
+<p>BFO definiert formale <strong>Beziehungen</strong> zwischen Entitäten, um Konsistenz zu gewährleisten. Einige zentrale Relations sind:</p>
+<ul>
+<li><strong>continuant part of</strong> – Beschreibt kompositorische Beziehungen. <em>Beispiel: Ein Rad ist Teil eines Autos.</em></li>
+<li><strong>occurrent part of</strong> – Ein Prozess ist Teil eines anderen Prozesses. <em>Beispiel: Eine Konferenz umfasst mehrere Workshop-Events.</em></li>
+<li><strong>located in</strong> – Beschreibt räumliche Einbettung. <em>Beispiel: Ein Buch ist <code>located_in</code> einer Bibliothek.</em></li>
+<li><strong>characteristic of</strong> – Weist Specifically Dependent Continuants Independent Continuants zu. <em>Beispiel: <code>educator role</code> ist eine Charakteristik einer Lehrperson.</em></li>
+<li><strong>has participant</strong> – Ordnet Continuants Prozessen zu. <em>Beispiel: Ein Student nimmt an einer Vorlesung teil.</em></li>
+</ul>
+</details>
+<p>Repository:  <a href="https://github.com/bfo-ontology/BFO-2020">https://github.com/bfo-ontology/BFO-2020</a></p>
+<p>Dokumentation: <a href="https://bfo-ontology.github.io/bfo-2020.html">https://bfo-ontology.github.io/bfo-2020.html</a></p>
+<h3 id="relation-ontology-ro">Relation Ontology (RO)</h3>
+<p>Für die Modellierung von Beziehungen zwischen Entitäten werden zentrale Relationen der Relation Ontology (RO) verwendet. RO enthält weitere wichtige Relationen die noch nicht in der BFO enthalten sind. </p>
+<p>Insbesondere die mereologische Relation <strong>has part</strong> (BFO_0000051) bildet die hierarchische Struktur von Lehrplänen ab.</p>
+<p>Darüber hinaus werden verschiedene domänenspezifische Properties der Lehrplan-Ontologie als Sub-Properties allgemeiner Relationen der Relation Ontology modelliert. Dadurch bleiben ihre semantischen Eigenschaften erhalten und können von allgemeinen Werkzeugen sowie Reasonern genutzt werden.</p>
+<h3 id="information-artifact-ontology-iao">Information Artifact Ontology (IAO)</h3>
+<p>Da Lehrpläne, Kompetenzspezifikationen, Lernziele und weitere curriculare Elemente Informationsobjekte darstellen, orientiert sich ihre Modellierung an der Information Artifact Ontology (IAO), die ebenfalls auf BFO und RO basiert.</p>
+<p>Die IAO beschreibt Informationsobjekte unabhängig von ihrer konkreten physischen Repräsentation. Dadurch wird deutlich, dass beispielsweise ein PDF-Dokument lediglich Träger eines Lehrplans ist, der Lehrplan selbst jedoch als eigenständiges Informationsobjekt existiert.</p>
+<p>Ebenso werden Kompetenzbeschreibungen oder Lernzielbeschreibungen nicht als Kompetenzen oder Lernziele selbst verstanden, sondern als Informationsartefakte, die diese beschreiben.</p>
+<h3 id="schulfach-und-schulart-ontologien">Schulfach- und Schulart-Ontologien</h3>
+<p>Die Schulfach- und Schulart-Ontologien wurden als eigenständige, wiederverwendbare Wissensmodelle entwickelt, um die Lehrplan-Ontologie um eine einheitliche Beschreibung des institutionellen Bildungskontexts zu ergänzen. Sie stellen kontrollierte Vokabulare für Schulfächer und Schularten aller deutschen Bundesländer bereit und werden von der Lehrplan-Ontologie referenziert, anstatt diese Informationen mehrfach zu modellieren.</p>
+<p>Diese Trennung folgt dem Prinzip der Modularisierung und vermeidet Redundanzen. Änderungen an Fach- oder Schulartbezeichnungen müssen dadurch nur an einer zentralen Stelle gepflegt werden und stehen unmittelbar allen Ontologien zur Verfügung, die diese Vokabulare nachnutzen. Gleichzeitig erhöht sich die Interoperabilität, da unterschiedliche Bildungsontologien über dieselben Identifikatoren für Schulfächer und Schularten miteinander verknüpft werden können. Die Lehrplan-Ontologie konzentriert sich dadurch auf die Modellierung curricularer Inhalte und Relationen, während allgemeine bildungsbezogene Konzepte in diesen spezialisierten Ontologien verwaltet werden.</p>
+<h4 id="schulfach-ontologie">Schulfach-Ontologie</h4>
+<p>Die Schulfach-Ontologie (<code>https://w3id.org/schulfach</code>) stellt ein kontrolliertes Vokabular für die Unterrichtsfächer aller 16 deutschen Bundesländer bereit. Sie bildet die unterschiedlichen länderspezifischen Fachbezeichnungen semantisch ab und schafft gleichzeitig die Grundlage für bundeslandübergreifende Vergleiche.</p>
+<p>Die Ontologie umfasst insgesamt <strong>16 SKOS Concept Schemes</strong>, von denen jeweils eines die Schulfächer eines Bundeslandes repräsentiert (beispielsweise <em>Schulfächer (Hamburg)</em> oder <em>Schulfächer (Bayern)</em>). Innerhalb dieser Concept Schemes sind insgesamt <strong>894 Schulfach-Individuen</strong> modelliert. Jedes Schulfach ist sowohl als Instanz der Klasse <strong>Schulfach</strong> (<code>LP_0000001</code>) als auch als <code>skos:Concept</code> typisiert. Über das Property <strong>von Bundesland</strong> (<code>LP_0000029</code>) wird jedes Fach eindeutig seinem jeweiligen Bundesland zugeordnet.</p>
+<p>Die Bezeichnungen der Schulfächer werden über <code>rdfs:label</code> erfasst. Dadurch können die länderspezifischen Unterschiede erhalten bleiben, obwohl inhaltlich vergleichbare Fächer vorliegen. So existieren beispielsweise für denselben Unterrichtsgegenstand unterschiedliche Benennungen wie <em>Sachkunde</em>, <em>Heimat- und Sachunterricht</em> oder <em>Mensch, Natur und Technik</em>.</p>
+<p>Für die bundeslandübergreifende Interoperabilität nutzt die Ontologie die Mapping-Properties von SKOS. Über <code>skos:exactMatch</code> und <code>skos:closeMatch</code> werden fachlich entsprechende Schulfächer sowohl zwischen den Bundesländern als auch mit dem bundesweiten <strong>KIM-Schulfachvokabular</strong> (<code>https://w3id.org/kim/schulfaecher</code>) verknüpft, das als gemeinsames Referenzvokabular dient. So kann beispielsweise das Hamburger Fach <em>Deutsch</em> über <code>skos:exactMatch</code> sowohl mit dem entsprechenden bayerischen Fach als auch mit dem KIM-Konzept <code>s1005 (Deutsch)</code> verbunden werden, ohne die jeweiligen landesspezifischen Bezeichnungen oder Modellierungen aufzugeben.</p>
+<p>Repository: <a href="https://github.com/FWU-DE/schulart-ontologie">https://github.com/FWU-DE/schulfach-ontologie</a></p>
+<p>SKOS-Vokabular: <a href="https://github.com/FWU-DE/schulart-ontologie">https://fwu-de.github.io/mem-skos-vocabs/</a></p>
+<h4 id="schulart-ontologie">Schulart-Ontologie</h4>
+<p>Die Schulart-Ontologie (<code>https://w3id.org/schulart</code>) folgt demselben konzeptionellen Aufbau wie die Schulfach-Ontologie, modelliert jedoch die Beziehungen zwischen Schularten und den ihnen zugeordneten Bildungsgangniveaus.</p>
+<p>Auch diese Ontologie besteht aus 16 <strong>SKOS Concept Schemes</strong>, die jeweils die Schularten eines Bundeslandes repräsentieren. Insgesamt enthält sie 89 <strong>Schulart-Individuen</strong>, die sowohl als Instanzen der Klasse <strong>Schulart</strong> (<code>LP_0000111</code>) als auch als <code>skos:Concept</code> modelliert sind.</p>
+<p>Über das Property <strong>hat Bildungsgangniveau</strong> (<code>LP_0000833</code>) werden Schularten unmittelbar mit den zugehörigen Bildungsgangniveaus verknüpft. Dadurch enthält die Ontologie bereits Informationen darüber, welche Leistungs- beziehungsweise Anforderungsniveaus innerhalb einer bestimmten Schulart vorgesehen sind.</p>
+<p>Am Beispiel Hamburgs wird dies deutlich: Das <strong>Gymnasium</strong> (<code>HH_0000003</code>) ist mit den Bildungsgangniveaus <em>Gymnasialniveau Sekundarstufe I (HH)</em> und <em>Studienstufenniveau (HH)</em> verknüpft und deckt damit die gymnasiale Sekundarstufe I sowie die gymnasiale Oberstufe ab. Die <strong>Stadtteilschule</strong> (<code>HH_0000002</code>) verweist dagegen auf insgesamt fünf unterschiedliche Bildungsgangniveaus, die von Mindestanforderungen bis zu Erhöhten Anforderungen reichen.</p>
+<p>Durch diese Modellierung fungiert die Schulart-Ontologie als semantisches Bindeglied zwischen Schularten, Bildungsgangniveaus und den curricularen Elementen der Lehrplan-Ontologie. Verweist ein Lehrplanelement über <strong>hat Bildungsgangniveau</strong> (<code>LP_0000833</code>) auf ein bestimmtes Bildungsgangniveau, kann daraus unmittelbar die Menge der zugehörigen Schularten bestimmt werden. Umgekehrt lassen sich ausgehend von einer Schulart sämtliche relevanten curricularen Elemente eines bestimmten Leistungsniveaus identifizieren.</p>
+<p>Repository: <a href="https://github.com/FWU-DE/schulart-ontologie">https://github.com/FWU-DE/schulart-ontologie</a></p>
+<h4 id="verwendung-von-skos">Verwendung von SKOS</h4>
+<p>Die Schulfach- und Schulart-Ontologien basieren auf dem <strong>Simple Knowledge Organization System (SKOS)</strong>, einem W3C-Standard zur Repräsentation kontrollierter Vokabulare, Thesauri und Klassifikationen. SKOS wird dort eingesetzt, wo eine Menge normierter Begriffe mit Bezeichnungen, Hierarchien und einfache Beziehungen beschrieben werden soll.</p>
+<p>Über Mapping-Properties wie <code>skos:exactMatch</code> und <code>skos:closeMatch</code> lassen sich inhaltlich entsprechende Schulfächer verschiedener Bundesländer sowie externe Referenzvokabulare, beispielsweise das KIM-Schulfachvokabular, miteinander verknüpfen. Dadurch bleiben die landesspezifischen Bezeichnungen erhalten, während gleichzeitig bundeslandübergreifende Abfragen und Vergleiche ermöglicht werden.</p>
+<h3 id="owl-time">OWL-Time</h3>
+<p>Für die Modellierung zeitbezogener Informationen verwendet die Lehrplan-Ontologie die <strong>OWL-Time Ontology</strong>, einen W3C-Standard zur formalen Beschreibung von Zeitpunkten, Zeitintervallen und zeitlichen Beziehungen.</p>
+<p>Die OWL-Time Ontology kommt überall dort zum Einsatz, wo curriculare Informationen einen zeitlichen Bezug besitzen. Hierzu zählen insbesondere die <strong>Gültigkeitszeiträume von Lehrplänen</strong>, die Angabe von <strong>Unterrichtsumfängen</strong> (beispielsweise der Anzahl von Unterrichtsstunden oder Unterrichtseinheiten) sowie weitere zeitliche Eigenschaften curricularer Elemente. Durch die Verwendung eines etablierten Zeitmodells lassen sich sowohl Zeitintervalle als auch Dauerangaben standardisiert und maschineninterpretierbar repräsentieren.</p>
+<p>Die Nutzung der OWL-Time Ontology erhöht die Interoperabilität der Lehrplan-Ontologie mit anderen Wissensgraphen und ermöglicht die konsistente Modellierung zeitlicher Informationen auf Grundlage eines international etablierten Semantic-Web-Standards.</p>
+<p>OWL-Time Dokumentation: <a href="https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/</a></p>
+<h3 id="kim-vokabulare">KIM-Vokabulare</h3>
+<p>Zur bundeslandübergreifenden Harmonisierung von Schulfächern und Schularten werden außerdem die <strong>KIM-Vokabulare</strong> (Kompetenzzentrum Interoperable Metadaten) nachgenutzt. Die von der DINI-AG KIM entwickelten kontrollierten Vokabulare stellen bundesweit einheitliche Referenzkonzepte für verschiedene Bildungsbereiche bereit und fördern die Interoperabilität zwischen Bildungsplattformen, Repositorien und Metadatenstandards.</p>
+<p>In der Lehrplan-Ontologie dienen die KIM-Vokabulare insbesondere als gemeinsamer Referenzpunkt für die Schulfach- und Schulart-Ontologien. Die länderspezifischen Fach- und Schulartkonzepte werden über die SKOS-Mapping-Properties <code>skos:exactMatch</code> beziehungsweise <code>skos:closeMatch</code> mit den entsprechenden KIM-Konzepten verknüpft. Dadurch bleiben die offiziellen Bezeichnungen und Strukturen der einzelnen Bundesländer vollständig erhalten, während gleichzeitig eine bundeslandübergreifende semantische Vergleichbarkeit ermöglicht wird.</p>
+<p>Die KIM-Vokabulare übernehmen somit die Rolle eines standardisierten Referenzvokabulars innerhalb der Lehrplan-Ontologie. Anwendungen können entweder auf den länderspezifischen Konzepten arbeiten oder über die Verknüpfungen zu den KIM-Konzepten bundesweite Abfragen und Analysen durchführen, ohne die unterschiedlichen Terminologien der Länder gesondert berücksichtigen zu müssen.</p>
+<p>Repository: <a href="https://github.com/dini-ag-kim/kmk-vocabs">https://github.com/dini-ag-kim/kmk-vocabs</a></p>
+<hr />
+<h2 id="uberblick-uber-klassen-beziehungen-hierarchien">Überblick über Klassen, Beziehungen, Hierarchien</h2>
+<h3 id="klassen">Klassen</h3>
+<p><strong>Klassen, die Lern- und Lehrprozess beschreiben:</strong></p>
+<p>Hierarchische Übersicht: </p>
+<ul>
+<li>independant continuant (BFO)<ul>
+<li>material entity (BFO)<ul>
+<li>object (BFO)<ul>
+<li>Person</li>
+</ul>
+</li>
+<li>Organisation (BFO)<ul>
+<li>Schule</li>
+<li>Schulklasse</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>specifically dependent continuant (BFO)<ul>
+<li>realizable entity (BFO)<ul>
+<li>disposition (BFO)<ul>
+<li>function (BFO)<ul>
+<li>Schulartfunktion</li>
+</ul>
+</li>
+<li>Kompetenz</li>
+</ul>
+</li>
+<li>role (BFO)<ul>
+<li>Schüler Rolle</li>
+<li>Lehrer Rolle</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>process (BFO)<ul>
+<li>Lehrprozess</li>
+<li>Lernprozess</li>
+</ul>
+</li>
+</ul>
+<p><strong>Klassen, die das Bildungssytem beschreiben:</strong></p>
+<p>Hierarchische Übersicht: </p>
+<ul>
+<li>generically dependent continuant (BFO)<ul>
+<li>information content entity (Informationseinheit) (BFO)<ul>
+<li>Schulfach</li>
+<li>Schulart</li>
+<li>Schulstufe</li>
+<li>Jahrgangsstufe</li>
+<li>Oberstufenphase</li>
+<li>Niveau <ul>
+<li>Bildungsgangniveau</li>
+<li>Fachniveaus Sek II</li>
+<li>Fremdsprachenniveau</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>process (BFO)<ul>
+<li>Bildungsgang<ul>
+<li>Gymnasialer Bildungsgang</li>
+<li>Hauptschulbildungsgang</li>
+<li>Realschulbildungsgang</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>process boundary (BFO)<ul>
+<li>Schulabschluss<ul>
+<li>Erster Schulabschluss</li>
+<li>Mittlerer Schulabschluss</li>
+<li>Allgemeine Hochschulreife</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Klassen, die die Lehrpläne beschreiben:</strong></p>
+<p>Hierarchische Übersicht: </p>
+<ul>
+<li>information content entity (Informationseinheit) (BFO)<ul>
+<li>Lehrplan</li>
+<li>Curriculares Element<ul>
+<li>CE-Fragment</li>
+<li>CE-Bereich</li>
+<li>CE-Kompetenzspezifikation</li>
+<li>CE-Lerninhalt</li>
+<li>CE-Hinweis</li>
+<li>CE-Verweis</li>
+<li>CE-Leitperspektive</li>
+</ul>
+</li>
+<li>Funktionsspezifikation<ul>
+<li>Beschreibungsfunktion</li>
+<li>Strukturierungsfunktion</li>
+</ul>
+</li>
+<li>symbol (IAO)<ul>
+<li>Identifikationsnummer</li>
+</ul>
+</li>
+<li>textual entity (IAO)<ul>
+<li>Titel</li>
+<li>Beschreibung</li>
+</ul>
+</li>
+<li>data item (IAO)<ul>
+<li>Zeitspezifikation</li>
+</ul>
+</li>
+<li>Unit </li>
+</ul>
+</li>
+</ul>
+<p>Genaue <strong>Definitionen</strong> der einzelnen Klassen sind in der <a href="https://fwu-de.github.io/lehrplan-ontologie/index-de.html">Widoco-Dokumentation</a> oder in den <a href="https://github.com/FWU-DE/lehrplan-ontologie">Release-Dateien</a> zu finden. </p>
+<h3 id="instanzen-individuals">Instanzen (individuals)</h3>
+<p>Die Individuen der Ontologie lassen sich in thematische Gruppen gliedern. Im Gegensatz zu den Klassen, die abstrakte Konzepte beschreiben, sind Individuen die konkreten Instanzen, auf die in den Lehrplandaten direkt per IRI verwiesen wird.</p>
+<p><strong>1. Bundesländer (<code>LP_0000040</code>)</strong></p>
+<p>Die 16 deutschen Bundesländer als fest definierte Individuen. Jedes Lehrplanelement trägt über <code>von Bundesland</code> eine dieser IRIs.</p>
+<ul>
+<li><code>LP_3000049</code> Baden-Württemberg</li>
+<li><code>LP_3000051</code> Bayern</li>
+<li><code>LP_3000048</code> Berlin</li>
+<li><code>LP_3000057</code> Brandenburg</li>
+<li><code>LP_3000056</code> Bremen</li>
+<li><code>LP_3000045</code> Hamburg</li>
+<li><code>LP_3000050</code> Hessen</li>
+<li><code>LP_3000052</code> Mecklenburg-Vorpommern</li>
+<li><code>LP_3000043</code> Niedersachsen</li>
+<li><code>LP_3000044</code> Nordrhein-Westfalen</li>
+<li><code>LP_3000046</code> Rheinland-Pfalz</li>
+<li><code>LP_3000055</code> Saarland</li>
+<li><code>LP_3000047</code> Sachsen</li>
+<li><code>LP_3000053</code> Sachsen-Anhalt</li>
+<li><code>LP_3000054</code> Schleswig-Holstein</li>
+<li><code>LP_3000031</code> Thüringen</li>
+</ul>
+<p><strong>2. Jahrgangsstufen (<code>LP_0000009</code>)</strong></p>
+<p>13 bundeslandunabhängige Individuen für die Jahrgänge 1–13. Alle Lehrplaninhalte referenzieren dieselben IRIs, was die länderübergreifende Vergleichbarkeit nach Jahrgangsstufe ermöglicht.</p>
+<ul>
+<li><code>LP_2000001</code> (Jahrgangsstufe 1) bis <code>LP_2000013</code> (Jahrgangsstufe 13)</li>
+</ul>
+<p><strong>3. Schulstufen (<code>LP_0000020</code>)</strong></p>
+<p>Individuen, die mehrere Jahrgangsstufen zu pädagogischen Abschnitten bündeln:</p>
+<ul>
+<li><code>LP_0000036</code> Primarbereich</li>
+<li><code>LP_0000045</code> Sekundarbereich I</li>
+<li><code>LP_0000046</code> Sekundarbereich II</li>
+<li><code>LP_0000051</code> G8 Einführungsphase</li>
+<li><code>LP_0000050</code> G8 Qualifikationsphase</li>
+<li><code>LP_0000055</code> G9 Einführungsphase</li>
+<li><code>LP_0000052</code> G9 Qualifikationsphase</li>
+</ul>
+<p><strong>4. Bildungsgangniveaus (<code>LP_0000028</code>, Auswahl)</strong></p>
+<p>Die fünf bundeslandunabhängigen Superklassen-Niveaus, von denen alle länderspezifischen Niveaus erben. Sie ermöglichen länderübergreifende Abfragen auf generischem Anspruchsniveau.</p>
+<ul>
+<li><code>LP_0000073</code> Grundschulniveau</li>
+<li><code>LP_0000074</code> Hauptschulniveau</li>
+<li><code>LP_0000075</code> Realschulniveau</li>
+<li><code>LP_0000069</code> Gymnasialniveau Sek I</li>
+<li><code>LP_0000835</code> Gymnasialniveau Sek II</li>
+</ul>
+<p>Länderspezifische Beispiele:</p>
+<ul>
+<li><code>LP_0000025</code> Mittelschulniveau (BY) → Hauptschulniveau</li>
+<li><code>LP_0000030</code> Realschulniveau (BY) → Realschulniveau</li>
+<li><code>LP_0000023</code> Gymnasialniveau Sek I (BY) → Gymnasialniveau Sek I</li>
+<li><code>LP_0000279</code> Gymnasialniveau Sek I (SN) → Gymnasialniveau Sek I</li>
+<li><code>LP_0000294</code> Oberschulniveau (SN) → Realschulniveau</li>
+<li><code>LP_0000143</code> Erhöhtes Kompetenzniveau (RP) → Gymnasialniveau Sek I</li>
+<li><code>LP_0000147</code> Grundlegendes Kompetenzniveau (RP) → Hauptschulniveau</li>
+<li><code>LP_0000093</code> Erhöhte Anforderungen (HH) → Gymnasialniveau Sek I</li>
+<li><code>LP_0000014</code> E Niveau (BW) → Gymnasialniveau Sek I</li>
+<li><code>LP_0000016</code> G Niveau (BW) → Hauptschulniveau</li>
+</ul>
+<p><strong>5. Niveaustufen BE/BB (<code>LP_0000443</code>)</strong></p>
+<p>Die acht buchstabenbasierten Kompetenzstufen des gemeinsamen Berliner/Brandenburger Rahmenlehrplans:</p>
+<ul>
+<li><code>LP_0000464</code> Niveaustufe A </li>
+<li><code>LP_0000465</code> Niveaustufe B </li>
+<li><code>LP_0000466</code> Niveaustufe C </li>
+<li><code>LP_0000467</code> Niveaustufe D </li>
+<li><code>LP_0000468</code> Niveaustufe E </li>
+<li><code>LP_0000469</code> Niveaustufe F </li>
+<li><code>LP_0000470</code> Niveaustufe G </li>
+<li><code>LP_0000616</code> Niveaustufe H </li>
+</ul>
+<p><strong>6. Anforderungsbereiche (<code>LP_0000802</code>)</strong></p>
+<p>Drei bundesweit einheitliche KMK-Individuen zur Klassifizierung des kognitiven Anspruchs:</p>
+<ul>
+<li><code>LP_0000803</code> Anforderungsbereich 1: Reproduktion</li>
+<li><code>LP_0000804</code> Anforderungsbereich 2: Reorganisation und Transfer</li>
+<li><code>LP_0000805</code> Anforderungsbereich 3: Reflexion und Problemlösung</li>
+</ul>
+<p><strong>7. Fremdsprachenniveaus (<code>LP_0010001</code>)</strong></p>
+<p>Sechs GER-Stufen als bundeslandunabhängige Individuen:</p>
+<ul>
+<li><code>LP_0030317</code> A1 (Anfänger)</li>
+<li><code>LP_0030316</code> A2 (Grundlegende Kenntnisse)</li>
+<li><code>LP_0030315</code> B1 (Fortgeschrittene Sprachverwendung)</li>
+<li><code>LP_0030314</code> B2 (Selbständige Sprachverwendung)</li>
+<li><code>LP_0030312</code> C1 (Fachkundige Sprachkenntnisse)</li>
+<li><code>LP_0030313</code> C2 (Annähernd muttersprachliche Kenntnisse)</li>
+</ul>
+<p><strong>8. Funktionsspezifikations-Individuen</strong></p>
+<p>Die Individuen, die als OWL-Restriktionen in den Klassendefinitionen aller länderspezifischen CE-Klassen verankert sind und ihre semantische Rolle maschinenlesbar machen. Sie sind das zentrale Werkzeug für länderübergreifende Abfragen. (s. <em>Mapping unterschiedlicher Terminologien der Bundesländer</em> in Kapitel <a href="https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#mapping-unterschiedlicher-terminologien-der-bundeslander">Ontologie-Modell</a> oder <em>Pattern 8 - Funktionen</em> in Kapitel <a href="https://fwu-de.github.io/lehrplan-ontologie/docs/patterns/#pattern-8-funktionen">Patterns</a>)</p>
+<p>Strukturierungsfunktionen:</p>
+<ul>
+<li><code>LP_0000627</code> Fragmentfunktion</li>
+<li><code>LP_0000497</code> Bereichsfunktion</li>
+</ul>
+<p>Beschreibungsfunktionen:</p>
+<ul>
+<li><code>LP_0000479</code> Kompetenzbeschreibungsfunktion</li>
+<li><code>LP_0000480</code> Lerninhaltsbeschreibungsfunktion</li>
+<li><code>LP_0001014</code> Hinweisbeschreibungsfunktion</li>
+<li><code>LP_0002158</code> Verweisbeschreibungsfunktion</li>
+<li><code>LP_0030326</code> Leitperspektivenbeschreibungsfunktion</li>
+</ul>
+<p>Bezugsfunktionen:</p>
+<ul>
+<li><code>LP_0000500</code> Prozessbezugsfunktion</li>
+<li><code>LP_0000501</code> Inhaltsbezugsfunktion</li>
+<li><code>LP_0002171</code> Domänenbezugsfunktion</li>
+</ul>
+<p><strong>9. Schulfächer</strong></p>
+<p>Für generisches KIM Vokabular, s. <a href="https://github.com/dini-ag-kim/schulfaecher">GitHub Repo <em>Werteliste für allgemeinbildende Schulfächer</em></a> und das <a href="https://skohub.io/dini-ag-kim/schulfaecher/heads/main/w3id.org/kim/schulfaecher/index.html">SKOS Vokabular dazu</a>.</p>
+<p>s. <em>Schulfach-Ontologie</em> in Kapitel <a href="https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare">Ontologie-Modell</a> und <a href="https://fwu-de.github.io/mem-skos-vocabs/">SKOS Vokabular Schulfach Ontologie</a>.</p>
+<p><strong>10. Schularten</strong></p>
+<p>s. <em>Schulart-Ontologie</em> in Kapitel <a href="https://fwu-de.github.io/lehrplan-ontologie/docs/structure/#nachgenutzte-ontologienvokabulare">Ontologie-Modell</a> und <a href="https://github.com/FWU-DE/schulart-ontologie">GitHub Repo Schulart Ontologie</a>.</p>
+<h3 id="beziehungen-properties">Beziehungen (properties)</h3>
+<p>Hier sind die wichtigsten Properties aufgelistet:</p>
+<ul>
+<li><code>BFO_0000051</code> – <strong>hat Teil</strong>: Die zentrale Strukturrelation der gesamten Ontologie. Sie verbindet übergeordnete mit untergeordneten Elementen: Lehrplan → CE-Fragment → CE-Bereich → CE-Kompetenzspezifikation. Transitiv und asymmetrisch.</li>
+<li><code>BFO_0000050</code> – <strong>ist Teil von</strong>: Die inverse Property zu <code>hat Teil</code>. Ermöglicht die Navigation von einem Element aufwärts zu seinem Elternelement.</li>
+<li><code>LP_0000029</code> – <strong>von Bundesland</strong> → <code>Bundesland Bezeichnung</code>: Bindet jeden Lehrplan und jedes Curriculare Element an ein Bundesland. </li>
+<li><code>LP_0000812</code> – <strong>für Schulart</strong> → <code>Schulart</code>: Verknüpft einen Lehrplan mit der Schulart, für die er gilt.</li>
+<li><code>LP_0000537</code> – <strong>hat Schulfach</strong> → <code>Schulfach</code>: Verknüpft einen Lehrplan mit dem Unterrichtsfach.</li>
+<li><code>LP_0000026</code> – <strong>hat Jahrgangsstufe</strong> → <code>Jahrgangsstufe</code>: Ordnet einen Lehrplan oder ein CE einer oder mehreren Jahrgangsstufen zu. Mehrfachbelegung möglich, z.B. für Doppeljahrgangsstufen.</li>
+<li><code>LP_0000047</code> – <strong>hat Schulstufe</strong> → <code>Schulstufe</code>: Alternativ oder ergänzend zu <code>hat Jahrgangsstufe</code> – ordnet einem Element eine ganze Schulstufe zu (z.B. <em>Sekundarbereich I</em>).</li>
+<li><code>LP_0000833</code> – <strong>hat Bildungsgangniveau</strong> → <code>Bildungsgangniveau</code>: Gibt an, auf welchem Leistungsniveau ein Element gilt – z.B. <em>Realschulniveau</em> oder <em>Gymnasialniveau Sek I</em>. Zentrales Property für die Vergleichbarkeit über Bundesländer hinweg.</li>
+<li><code>LP_0000840</code> – <strong>hat Niveau</strong> → <code>Niveau</code>
+Allgemeinere Variante; verbindet Niveaustufen-Individuen (BE/BB) mit ihren abschlussspezifischen Bildungsgangniveau-Individuen.</li>
+<li><code>LP_0000578</code> – <strong>hat Niveaustufe</strong> (Domain: <code>Curriculares Element</code>, Range: <code>Niveaustufe (BE/BB)</code>): Spezifisch für Berlin und Brandenburg: ordnet einem CE die Buchstabenstufe (A–H) zu.</li>
+<li><code>LP_0000580</code> – <strong>ist Niveaustufe von</strong>: Inverse Property zu <code>hat Niveau</code>; zeigt von einem Bildungsgangniveau-Individuum zurück auf seine generische Niveaustufe.</li>
+<li><code>LP_0000071</code> – <strong>benötigt Niveau</strong>: Gibt an, welches Vorkenntnissniveau als Eingangsvoraussetzung für ein Element erwartet wird.</li>
+<li><code>LP_0000021</code> – <strong>ermöglicht Abschluss / endet mit Abschluss</strong> → <code>Schulabschluss</code>: Verknüpft Bildungsgänge und Schularten mit den erreichbaren Schulabschlüssen. Beide Labels sind in der Ontologie für dieselbe Property definiert.</li>
+<li><code>LP_0000024</code> – <strong>wird beschrieben von</strong>: Inverse zu <code>beschreibt</code> (<code>IAO_0000136</code>); von einer Schulart, Jahrgangsstufe oder einem Bundesland aus zeigt sie auf alle Lehrpläne, die diesen Kontext betreffen.</li>
+<li><code>IAO_0000136</code> – <strong>beschreibt</strong>: BFO/IAO-Property; verbindet einen Lehrplan mit den Entitäten (Schulart, Bundesland), auf die er sich bezieht.</li>
+<li><code>LP_0030056</code> – <strong>hat Titel</strong> → <code>Titel</code>: Trägt die Bezeichnung eines Lehrplans oder CE.</li>
+<li><code>LP_0030051</code> – <strong>hat Beschreibung</strong> (Domain: <code>Curriculares Element</code>) → <code>Beschreibung</code>: Trägt längere erläuternde Texte, Hinweise und Beispiele zu einem CE.</li>
+<li><code>LP_0030057</code> – <strong>hat Nummer</strong> (Domain: <code>Curriculares Element</code>) → <code>Identifikationsnummer</code>: Trägt die originale Nummerierung oder Codierung aus dem Quelldokument.</li>
+<li><code>LP_0000463</code> – <strong>uri</strong>: Trägt den URL zum Originaldokument des Lehrplans beim Herausgeber.</li>
+<li><code>LP_0000483</code> – <strong>hat Funktionsspezifikation</strong> → <code>Funktionsspezifikation</code>: Verknüpft länderspezifische CE-Klassen mit ihrer semantischen Rolle (Bereichsfunktion, Kompetenzbeschreibungsfunktion, usw.). In der Regel als OWL-Restriktion in der Klassendefinition verankert, nicht als Datentripel.</li>
+<li><code>LP_0030071</code> – <strong>hat Verweis</strong> → <code>CE-Verweis</code>: Hängt einen CE-Verweis an das Element, von dem aus er ausgeht.</li>
+<li><code>LP_0030072</code> – <strong>verweist auf</strong> (Domain: CE-Verweis)
+: eigt vom CE-Verweis-Individuum auf das eigentliche Ziel des Verweises.</li>
+<li><code>LP_0000343</code> – <strong>hat Schulartfunktion</strong> → <code>Schulartfunktion</code>: Gibt an, welche Funktion eine Schulart im Bildungssystem übernimmt.</li>
+<li><code>LP_0000477</code> – <strong>konkretisiert Schulart</strong> (Domain: <code>Schulartfunktion</code>, Range: <code>Schulart</code>): Verknüpft eine Schulartfunktion mit der konkreten Schulart, auf die sie sich bezieht.</li>
+<li><code>LP_0000041</code> – <strong>hat Einheit</strong>: Verknüpft eine Zeitspezifikation mit ihrer Maßeinheit (z.B. Unterrichtsstunden, Schulwochen).</li>
+<li><code>LP_0000141</code> – <strong>entspricht KIM Schulart</strong> (<em>Annotation Property</em>): Verknüpft eine Schulart mit dem entsprechenden Eintrag im bundesweiten KIM-Vokabular.</li>
+</ul>
+<h2 id="mapping-unterschiedlicher-terminologien-der-bundeslander">Mapping unterschiedlicher Terminologien der Bundesländer</h2>
+<p>So wie sich die Bildungssysteme von Bundesland zu Bundesland unterscheiden, variieren auch die Lehrpläne. Jedes Bundesland strukturiert seine Lehrpläne auf eigene Weise und verwendet teilweise unterschiedliches Vokabular, um gleiche oder ähnliche Konzepte zu beschreiben. Darüber hinaus bestehen innerhalb der Bundesländer fächerübergreifende Unterschiede, sowohl im Aufbau der Lehrpläne als auch in den verwendeten Begrifflichkeiten. Dies führt dazu, dass die Inhalte der Lehrpläne nicht immer eindeutig den von uns definierten Kern-Elementen (CE-Bereich, CE-Kompetenzspezifikation, CE-Lerninhalt und CE-Hinweis) zugeordnet werden können. Zusätzlich erschweren spezifische Besonderheiten einzelner Bundesländer, wie etwa die Aufnahme konkreter Unterrichtsbeispiele oder detaillierter Zeitvorgaben für Lerninhalte, die in anderen Lehrplänen nicht enthalten sind, die Einbindung in ein generisches Modell.</p>
+<p>Im Rahmen der Analyse der Lehrpläne aller Bundesländer wurden zentrale inhaltliche Strukturen identifiziert, die in nahezu allen Lehrplänen vorkommen. Dabei wurden die Fächer Deutsch, Mathematik, Englisch (bzw. die erste Fremdsprache) sowie Physik (bzw. Sachunterricht oder Naturwissenschaften) berücksichtigt. Die identifizierten inhaltlichen Kernkomponenten werden als „Curriculare Elemente“ (CE) bezeichnet. Dazu gehören: </p>
+<p>ToDo <em>Grafik</em> </p>
+<p>Die nachfolgende Grafik veranschaulicht, wie diese zentralen Elemente der Ontologie dazu beitragen, bundeslandspezifische Terminologien konsistent abzubilden. Als Beispiel dienen Ausschnitte aus dem Deutsch-Lehrplan Mecklenburg-Vorpommerns. Unter jedem curricularen Element sind die Bezeichnungen aufgeführt, die in anderen Bundesländern für funktional vergleichbare Elemente verwendet werden. Diese Zuordnung ermöglicht es, die terminologischen Unterschiede der Länder beizubehalten und zugleich eine klare und strukturierte Vergleichbarkeit herzustellen.</p>
+<p>ToDo <em>Grafik</em></p>
+<h3 id="integration-der-bildungsstandards">Integration der Bildungsstandards</h3>
+<p><strong>Die Rolle der Kultusministerkonferenz (KMK) und die Nutzung ihrer Bildungsstandards in der Ontologie</strong></p>
+<p>Die Kultusministerkonferenz (KMK) ist das zentrale Gremium der 16 deutschen Bundesländer für alle Fragen rund um Bildung, Wissenschaft und Kultur. Da das Bildungswesen in Deutschland Länderhoheit ist, sorgt die KMK dafür, dass wichtige Aspekte des Schul- und Bildungsbereichs bundesweit abgestimmt sind und vergleichbare Standards bestehen. Zu ihren Aufgaben gehören unter anderem die Entwicklung gemeinsamer Rahmenvorgaben, die Abstimmung von Schulabschlüssen sowie die Formulierung bundesweit verbindlicher <a href="https://www.kmk.org/themen/qualitaetssicherung-in-schulen/bildungsstandards.html">Bildungsstandards</a>.</p>
+<p>Für viele dieser Bildungsstandards stellt das IQB (Institut zur Qualitätsentwicklung im Bildungswesen) bereits <a href="https://iqb-vocabs.github.io/vokabulare/bildungstandards.html">digital nutzbare Daten</a> bereit. Diese liegen in strukturierten, maschinenlesbaren Formaten vor und ermöglichen dadurch eine effiziente Weiterverarbeitung, Verknüpfung und Analyse. Zu diesen Standards zählen beispielsweise Kompetenzbeschreibungen für die Fächer Deutsch, Mathematik, die erste Fremdsprache (Englisch/Französisch) sowie die naturwissenschaftlichen Fächer (Biologie, Chemie und Physik). Die Bereitstellung in standardisierter Form schafft die Grundlage dafür, Bildungsinhalte über Ländergrenzen hinweg vergleichbar zu machen und digitale Anwendungen zu unterstützen.</p>
+<p>In unserer Ontologie dienen die Bildungsstandards der KMK als übergeordnete Referenzstruktur. Analog zur Vorgehensweise bei den einzelnene Bundesländern, werden auch die in den Bildungsstandards vorkommenden Elemente den übergeordneten Curricularen Elementen zugeordnet und als eindeutig definierte Entitäten im Datenmodell hinterlegt. Diese Referenzpunkte können anschließend mit Lehrplanbestandteilen der Bundesländer verknüpft werden. Dadurch unterstützen die Bildungsstandards eine konsistente Verwendung von Kompetenzbeschreibungen, Betitlungen von Bereichen und Erwartungsniveaus und ermöglichen eine vergleichbare Einordnung der Lehrplaninhalte.</p>
+<p>Die Bildungsstandards beziehen sich dabei auf eine Bildungsstufe und sind bis zum Ende der Primarstufe, der Sekundarstufe I (aufgeteilt in den Ersten und Mittleren Schulabschluss) und der Sekundarstufe II (Allgemeine Hochschulreife) zu erwerben. Da die Lehrpläne der Bundesländer allerdings meist auf Ebene der Jahrgangsstufen ausdifferenziert sind, können die Bildungsstandards nicht genau gleich übernommen werden. Außerdem gibt es nur für die oben genannten Fächer Bildungsstandards. Aus diesen Gründen reichen die Bildungsstandards nicht als gemeinsamer Nenner aller Lehrpläne. Trotzdem bieten sie eine wichtige Referenzquelle.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

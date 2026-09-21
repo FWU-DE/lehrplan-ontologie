@@ -1,0 +1,1260 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../patterns/">
+      
+      
+        <link rel="next" href="../usage/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../index.en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>SPARQL-Abfragen - Lehrplan Ontology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/mkdocs_d2_plugin.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sparql-abfragen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Lehrplan Ontology" class="md-header__button md-logo" aria-label="Lehrplan Ontology" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lehrplan Ontology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SPARQL-Abfragen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../index.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lehrplan Ontology" class="md-nav__button md-logo" aria-label="Lehrplan Ontology" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Lehrplan Ontology
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologien allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konzeptuelle Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beispiele
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL-Abfragen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL-Abfragen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-den-lehrplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu den Lehrplänen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-fachern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu Fächern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-den-schularten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu den Schularten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-inhalten-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu Inhalten der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zur-struktur-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zur Struktur der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-konkretere-abfragen-zu-den-inhalten-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere konkretere Abfragen zu den Inhalten der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verwendung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über uns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-den-lehrplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu den Lehrplänen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-fachern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu Fächern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-den-schularten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu den Schularten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zu-inhalten-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zu Inhalten der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abfragen-zur-struktur-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abfragen zur Struktur der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-konkretere-abfragen-zu-den-inhalten-der-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere konkretere Abfragen zu den Inhalten der Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="sparql-abfragen">SPARQL-Abfragen</h1>
+<h2 id="abfragen-zu-den-lehrplanen">Abfragen zu den Lehrplänen</h2>
+<ul>
+<li><strong>Welche Lehrpläne gibt es im Bundesland Sachsen?</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lehrplan%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E%0D%0APREFIX+von_bundesland%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000029%3E%0D%0APREFIX+sachsen%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_3000047%3E%0D%0A%0D%0ASELECT+%3FLehrplan+%3FTitel%0D%0AWHERE+%7B%0D%0A%3FLehrplan+a+lehrplan%3A+.%0D%0A%3FLehrplan+von_bundesland%3A+sachsen%3A+.%0D%0A%3FLehrplan+rdfs%3Alabel+%3FTitel+.%0D%0A%7D&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lehrplan: &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt;
+PREFIX von_bundesland: &lt;https://w3id.org/lehrplan/ontology/LP_0000029&gt;
+PREFIX sachsen: &lt;https://w3id.org/lehrplan/ontology/LP_3000047&gt;
+
+SELECT ?Lehrplan ?Titel
+WHERE {
+?Lehrplan a lehrplan: .
+?Lehrplan von_bundesland: sachsen: .
+?Lehrplan rdfs:label ?Titel .
+}
+</code></pre></div>
+oder</p>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lehrplan_sachsen%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000818%3E%0D%0A%0D%0ASELECT+%3FLehrplan+%3FTitel%0D%0AWHERE+%7B%0D%0A%3FLehrplan+a+lehrplan_sachsen%3A+.%0D%0A%3FLehrplan+rdfs%3Alabel+%3FTitel+.%0D%0A%7D&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lehrplan_sachsen: &lt;https://w3id.org/lehrplan/ontology/LP_0000818&gt;
+
+SELECT ?Lehrplan ?Titel
+WHERE {
+?Lehrplan a lehrplan_sachsen: .
+?Lehrplan rdfs:label ?Titel .
+}
+</code></pre></div></p>
+<ul>
+<li><strong>Wie viele Lehrpläne gibt es in Sachsen?</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+lehrplan_sachsen%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000818%3E%0D%0A%0D%0ASELECT+DISTINCT+COUNT%28%3FLehrplan%29%0D%0AWHERE+%7B%0D%0A%3FLehrplan+a+lehrplan_sachsen%3A+.%0D%0A%7D&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX lehrplan_sachsen: &lt;https://w3id.org/lehrplan/ontology/LP_0000818&gt;
+
+SELECT DISTINCT COUNT(?Lehrplan)
+WHERE {
+?Lehrplan a lehrplan_sachsen: .
+}
+</code></pre></div></p>
+<ul>
+<li><strong>Wie viele Lehrpläne gibt es in Rheinland-Pfalz?</strong></li>
+</ul>
+<p>Zählt alle Instanzen der Klasse Lehrplan im RP-Graphen: <a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+%28COUNT%28DISTINCT+%3Flp%29+AS+%3Fanzahl%29%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E%0D%0AWHERE+%7B%0D%0A++%3Flp+rdf%3Atype+lp%3ALP_0000438+.+%23+lp%3ALP_0000438+%3D+Lehrplan%0D%0A%7D&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT (COUNT(DISTINCT ?lp) AS ?anzahl)
+FROM &lt;https://w3id.org/lehrplan/rp&gt;
+WHERE {
+  ?lp rdf:type lp:LP_0000438 . # lp:LP_0000438 = Lehrplan
+}
+</code></pre></div></p>
+<ul>
+<li><strong>Lehrplananzahl der Bundesländer BY, SN, RP und BB nebeneinander</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+%3Fbundesland+%28COUNT%28DISTINCT+%3Flp%29+AS+%3Fanzahl%29%0D%0AWHERE+%7B%0D%0A++%7B+GRAPH+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fby%3E+%7B%0D%0A++++++%3Flp+rdf%3Atype+lp%3ALP_0000438+.+%7D%0D%0A++++BIND%28%22Bayern%22+AS+%3Fbundesland%29+%7D%0D%0A++UNION%0D%0A++%7B+GRAPH+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E+%7B%0D%0A++++++%3Flp+rdf%3Atype+lp%3ALP_0000438+.+%7D%0D%0A++++BIND%28%22Sachsen%22+AS+%3Fbundesland%29+%7D%0D%0A++UNION%0D%0A++%7B+GRAPH+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E+%7B%0D%0A++++++%3Flp+rdf%3Atype+lp%3ALP_0000438+.+%7D%0D%0A++++BIND%28%22Rheinland-Pfalz%22+AS+%3Fbundesland%29+%7D%0D%0A++UNION%0D%0A++%7B+GRAPH+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fbb%3E+%7B%0D%0A++++++%3Flp+rdf%3Atype+lp%3ALP_0000438+.+%7D%0D%0A++++BIND%28%22Brandenburg%22+AS+%3Fbundesland%29+%7D%0D%0A%7D%0D%0AGROUP+BY+%3Fbundesland%0D%0AORDER+BY+DESC%28%3Fanzahl%29&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT ?bundesland (COUNT(DISTINCT ?lp) AS ?anzahl)
+WHERE {
+  { GRAPH &lt;https://w3id.org/lehrplan/by&gt; {
+      ?lp rdf:type lp:LP_0000438 . }
+    BIND(&quot;Bayern&quot; AS ?bundesland) }
+  UNION
+  { GRAPH &lt;https://w3id.org/lehrplan/sn&gt; {
+      ?lp rdf:type lp:LP_0000438 . }
+    BIND(&quot;Sachsen&quot; AS ?bundesland) }
+  UNION
+  { GRAPH &lt;https://w3id.org/lehrplan/rp&gt; {
+      ?lp rdf:type lp:LP_0000438 . }
+    BIND(&quot;Rheinland-Pfalz&quot; AS ?bundesland) }
+  UNION
+  { GRAPH &lt;https://w3id.org/lehrplan/bb&gt; {
+      ?lp rdf:type lp:LP_0000438 . }
+    BIND(&quot;Brandenburg&quot; AS ?bundesland) }
+}
+GROUP BY ?bundesland
+ORDER BY DESC(?anzahl)
+</code></pre></div></p>
+<h2 id="abfragen-zu-fachern">Abfragen zu Fächern</h2>
+<ul>
+<li><strong>Welche Fächer gibt es im Bundesland Sachsen?</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FSchulfach%0D%0AWHERE+%7B%0D%0A++++%3Fs+a+lp%3ALP_0000001+.+%0D%0A++++%3Fs+lp%3ALP_0000029+lp%3ALP_3000047+.%0D%0A++++%3Fs+rdfs%3Alabel+%3FSchulfach+.%0D%0A%7D+&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+
+SELECT DISTINCT ?Schulfach
+WHERE {
+    ?s a lp:LP_0000001 . 
+    ?s lp:LP_0000029 lp:LP_3000047 .
+    ?s rdfs:label ?Schulfach .
+} 
+</code></pre></div></p>
+<p>Listet alle Schulfächer aus dem zentralen Schulfach-Graphen, gefiltert auf das Präfix SN_:
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ffach+%3Flabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F1.0.0%3E%0D%0AWHERE+%7B%0D%0A++%3Ffach+rdf%3Atype+++%3Ftype+%3B%0D%0A++++++++rdfs%3Alabel+%3Flabel+.%0D%0A++FILTER%28+STRSTARTS%28STR%28%3Ffach%29%2C+%22https%3A%2F%2Fw3id.org%2Fschulfach%2FSN%22%29+%29%0D%0A++FILTER%28+%3Ffach+%21%3D+sf%3ASN_0000000+%29+%23+Root-Knoten+ausblenden%0D%0A%7D%0D%0AORDER+BY+%3Flabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?fach ?label
+FROM &lt;https://w3id.org/schulfach/1.0.0&gt;
+WHERE {
+  ?fach rdf:type   ?type ;
+        rdfs:label ?label .
+  FILTER( STRSTARTS(STR(?fach), &quot;https://w3id.org/schulfach/SN&quot;) )
+  FILTER( ?fach != sf:SN_0000000 ) # Root-Knoten ausblenden
+}
+ORDER BY ?label
+</code></pre></div></p>
+<ul>
+<li><strong>Fächer von BY, SN, RP und BE/BB im Vergleich</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fbundesland+%3Flabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F1.0.0%3E%0D%0AWHERE+%7B%0D%0A++VALUES+%28%3Fprefix+%3Fbundesland%29+%7B%0D%0A++++%28%22https%3A%2F%2Fw3id.org%2Fschulfach%2FBY%22+%22Bayern%22%29%0D%0A++++%28%22https%3A%2F%2Fw3id.org%2Fschulfach%2FSN%22+%22Sachsen%22%29%0D%0A++++%28%22https%3A%2F%2Fw3id.org%2Fschulfach%2FRP%22+%22Rheinland-Pfalz%22%29%0D%0A++++%28%22https%3A%2F%2Fw3id.org%2Fschulfach%2FBB%22+%22Brandenburg%22%29%0D%0A++%7D%0D%0A++%3Ffach+a+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000001%3E+%3B%0D%0A++++++++rdfs%3Alabel+%3Flabel+.%0D%0A++FILTER%28+STRSTARTS%28STR%28%3Ffach%29%2C+%3Fprefix%29+%29%0D%0A++FILTER%28+%21REGEX%28%3Flabel%2C+%22%5ESchulf%C3%A4cher%22%29+%29%0D%0A%7D%0D%0AORDER+BY+%3Fbundesland+%3Flabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?bundesland ?label
+FROM &lt;https://w3id.org/schulfach/1.0.0&gt;
+WHERE {
+  VALUES (?prefix ?bundesland) {
+    (&quot;https://w3id.org/schulfach/BY&quot; &quot;Bayern&quot;)
+    (&quot;https://w3id.org/schulfach/SN&quot; &quot;Sachsen&quot;)
+    (&quot;https://w3id.org/schulfach/RP&quot; &quot;Rheinland-Pfalz&quot;)
+    (&quot;https://w3id.org/schulfach/BB&quot; &quot;Brandenburg&quot;)
+  }
+  ?fach a &lt;https://w3id.org/lehrplan/ontology/LP_0000001&gt; ;
+        rdfs:label ?label .
+  FILTER( STRSTARTS(STR(?fach), ?prefix) )
+  FILTER( !REGEX(?label, &quot;^Schulfächer&quot;) )
+}
+ORDER BY ?bundesland ?label
+</code></pre></div></p>
+<h2 id="abfragen-zu-den-schularten">Abfragen zu den Schularten</h2>
+<ul>
+<li><strong>Welche Schularten gibt es im Bundesland Sachsen?</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+schulart%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000111%3E%0D%0APREFIX+sachsen%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_3000047%3E%0D%0APREFIX+von_bundesland%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000029%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FSchulart%0D%0AWHERE+%7B%0D%0A++++%3Fs+a+schulart%3A+.%0D%0A++++%3Fs+von_bundesland%3A+sachsen%3A+.%0D%0A++++%3Fs+rdfs%3Alabel+%3FSchulart+.%0D%0A%7D&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX schulart: &lt;https://w3id.org/lehrplan/ontology/LP_0000111&gt;
+PREFIX sachsen: &lt;https://w3id.org/lehrplan/ontology/LP_3000047&gt;
+PREFIX von_bundesland: &lt;https://w3id.org/lehrplan/ontology/LP_0000029&gt;
+
+SELECT DISTINCT ?Schulart
+WHERE {
+    ?s a schulart: .
+    ?s von_bundesland: sachsen: .
+    ?s rdfs:label ?Schulart .
+}
+</code></pre></div></p>
+<h2 id="abfragen-zu-inhalten-der-lehrplane">Abfragen zu Inhalten der Lehrpläne</h2>
+<ul>
+<li><strong>In welchen Lehrplänen kommt der Begriff "Zelle" vor?</strong></li>
+</ul>
+<p>Sucht über alle vier Graphen nach Labels, die den Begriff enthalten, und gibt den zugehörigen Lehrplan sowie das Bundesland zurück. Die transitive Eigenschaft bfo:BFO_0000051+ (mit +) traversiert beliebig tief in die Hierarchie.
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fbundesland+%3FlpLabel+%3Ftreffer%0D%0AWHERE+%7B%0D%0A++VALUES+%28%3Fg+%3Fbundesland%29+%7B%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fby%3E+%22Bayern%22%29%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E+%22Sachsen%22%29%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E+%22Rheinland-Pfalz%22%29%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fbb%3E+%22Brandenburg%22%29%0D%0A++%7D%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Flp+rdf%3Atype++++++++lp%3ALP_0000438+%3B%0D%0A++++++++rdfs%3Alabel++++++%3FlpLabel+%3B%0D%0A++++++++bfo%3ABFO_0000051%2B+%3Fnode+.++++++%23+transitiv%3A+alle+Ebenen%0D%0A++++%3Fnode+rdfs%3Alabel+%3Ftreffer+.%0D%0A++++FILTER%28CONTAINS%28LCASE%28%3Ftreffer%29%2C+%22zelle%22%29%29%0D%0A++%7D%0D%0A%7D%0D%0AORDER+BY+%3Fbundesland+%3FlpLabel+%3Ftreffer&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?bundesland ?lpLabel ?treffer
+WHERE {
+  VALUES (?g ?bundesland) {
+    (&lt;https://w3id.org/lehrplan/by&gt; &quot;Bayern&quot;)
+    (&lt;https://w3id.org/lehrplan/sn&gt; &quot;Sachsen&quot;)
+    (&lt;https://w3id.org/lehrplan/rp&gt; &quot;Rheinland-Pfalz&quot;)
+    (&lt;https://w3id.org/lehrplan/bb&gt; &quot;Brandenburg&quot;)
+  }
+  GRAPH ?g {
+    ?lp rdf:type        lp:LP_0000438 ;
+        rdfs:label      ?lpLabel ;
+        bfo:BFO_0000051+ ?node .      # transitiv: alle Ebenen
+    ?node rdfs:label ?treffer .
+    FILTER(CONTAINS(LCASE(?treffer), &quot;zelle&quot;))
+  }
+}
+ORDER BY ?bundesland ?lpLabel ?treffer
+</code></pre></div>
+<ul>
+<li><strong>Begriff in Beschreibungstexten (nicht nur labels) suchen</strong></li>
+</ul>
+<p>Schließt auch Beschreibungsliteral (lp:LP_0030051 = hat Beschreibung) ein – liefert mehr Treffer als reine Label-Suche. Bayern und Sachsen wurden hier beispielhaft verwendet.
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fbundesland+%3FlpLabel+%3Ftext%0D%0AWHERE+%7B%0D%0A++VALUES+%28%3Fg+%3Fbundesland%29+%7B%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fby%3E+%22Bayern%22%29%0D%0A++++%28%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E+%22Sachsen%22%29%0D%0A++%7D%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%3Flp+rdf%3Atype+++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B+%3Fnode+.%0D%0A++++%3Fnode+%28+rdfs%3Alabel+%7C+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0030051%3E+%29+%3Ftext+.%0D%0A++++FILTER%28+CONTAINS%28LCASE%28STR%28%3Ftext%29%29%2C+%22zelle%22%29+%29%0D%0A++%7D%0D%0A%7D%0D%0AORDER+BY+%3Fbundesland+%3FlpLabel%0D%0ALIMIT+50&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?bundesland ?lpLabel ?text
+WHERE {
+  VALUES (?g ?bundesland) {
+    (&lt;https://w3id.org/lehrplan/by&gt; &quot;Bayern&quot;)
+    (&lt;https://w3id.org/lehrplan/sn&gt; &quot;Sachsen&quot;)
+  }
+  GRAPH ?g {
+    ?lp rdf:type   &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt; ;
+        rdfs:label ?lpLabel ;
+        &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;+ ?node .
+    ?node ( rdfs:label | &lt;https://w3id.org/lehrplan/ontology/LP_0030051&gt; ) ?text .
+    FILTER( CONTAINS(LCASE(STR(?text)), &quot;zelle&quot;) )
+  }
+}
+ORDER BY ?bundesland ?lpLabel
+LIMIT 50
+</code></pre></div></p>
+<ul>
+<li><strong>Lernbereiche Mathematik 5. Klasse in Bayern (Gymnasium)</strong></li>
+</ul>
+<p>Findet alle Lernbereiche (lp:LP_0002046) aus Lehrplänen, die Mathematik, Jahrgangsstufe 5 und Schulart Gymnasium kombinieren. In Bayern heißt die erste Strukturebene unterhalb des Lehrplans „Lernbereich".
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FlpLabel+%3FbereichLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fby%3E%0D%0AWHERE+%7B%0D%0A++%3Flp+rdf%3Atype++++++++++++++lp%3ALP_0000438+%3B+++++++%23+Lehrplan%0D%0A++++++rdfs%3Alabel++++++++++++%3FlpLabel+%3B%0D%0A++++++lp%3ALP_0000537+++++++++%3Ffach+%3B+++++++++++++++%23+hat+Schulfach%0D%0A++++++lp%3ALP_0000026+++++++++lp%3ALP_2000005+%3B+++++++%23+hat+Jahrgangsstufe+5%0D%0A++++++lp%3ALP_0000812+++++++++sa%3ABY_0000005+%3B+++++++%23+f%C3%BCr+Schulart+Gymnasium%0D%0A++++++bfo%3ABFO_0000051+++++++%3Fbereich+.++++++++++++%23+hat+Teil%0D%0A%0D%0A++%3Ffach+rdfs%3Alabel+%3FfachLabel+.%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FfachLabel%29%2C+%22mathematik%22%29%29%0D%0A%0D%0A++%3Fbereich+rdf%3Atype+++lp%3ALP_0002046+%3B++++++++++++%23+Lernbereich+%28BY%29%0D%0A+++++++++++rdfs%3Alabel+%3FbereichLabel+.%0D%0A%7D%0D%0AORDER+BY+%3FlpLabel+%3FbereichLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?lpLabel ?bereichLabel
+FROM &lt;https://w3id.org/lehrplan/by&gt;
+WHERE {
+  ?lp rdf:type              lp:LP_0000438 ;       # Lehrplan
+      rdfs:label            ?lpLabel ;
+      lp:LP_0000537         ?fach ;               # hat Schulfach
+      lp:LP_0000026         lp:LP_2000005 ;       # hat Jahrgangsstufe 5
+      lp:LP_0000812         sa:BY_0000005 ;       # für Schulart Gymnasium
+      bfo:BFO_0000051       ?bereich .            # hat Teil
+
+  ?fach rdfs:label ?fachLabel .
+  FILTER(CONTAINS(LCASE(?fachLabel), &quot;mathematik&quot;))
+
+  ?bereich rdf:type   lp:LP_0002046 ;            # Lernbereich (BY)
+           rdfs:label ?bereichLabel .
+}
+ORDER BY ?lpLabel ?bereichLabel
+</code></pre></div></p>
+<ul>
+<li><strong>Kompetenzbereiche Mathematik in Rheinland-Pflaz</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FlpLabel+%3FkbLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E%0D%0AWHERE+%7B%0D%0A++%3Flp+rdf%3Atype++++++++lp%3ALP_0000438+%3B%0D%0A++++++rdfs%3Alabel++++++%3FlpLabel+%3B%0D%0A++++++lp%3ALP_0000537+++%3Ffach+%3B%0D%0A++++++bfo%3ABFO_0000051+%3Fkb+.%0D%0A%0D%0A++%3Ffach+rdfs%3Alabel+%3FfachLabel+.%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FfachLabel%29%2C+%22mathematik%22%29%29%0D%0A%0D%0A++%3Fkb+rdf%3Atype+++lp%3ALP_0000431+%3B+%23+Kompetenzbereich+%28RP%29%0D%0A++++++rdfs%3Alabel+%3FkbLabel+.%0D%0A%7D%0D%0AORDER+BY+%3FlpLabel+%3FkbLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+SELECT DISTINCT ?lpLabel ?kbLabel
+FROM &lt;https://w3id.org/lehrplan/rp&gt;
+WHERE {
+  ?lp rdf:type        lp:LP_0000438 ;
+      rdfs:label      ?lpLabel ;
+      lp:LP_0000537   ?fach ;
+      bfo:BFO_0000051 ?kb .
+
+  ?fach rdfs:label ?fachLabel .
+  FILTER(CONTAINS(LCASE(?fachLabel), &quot;mathematik&quot;))
+
+  ?kb rdf:type   lp:LP_0000431 ; # Kompetenzbereich (RP)
+      rdfs:label ?kbLabel .
+}
+ORDER BY ?lpLabel ?kbLabel
+</code></pre></div></p>
+<h2 id="abfragen-zur-struktur-der-lehrplane">Abfragen zur Struktur der Lehrpläne</h2>
+<ul>
+<li><strong>Erste Strukturebene eines beliebigen Lehrplans</strong></li>
+</ul>
+<p>Bundeslandübergreifend: Gibt alle direkten Teilelemente (hat Teil) eines Lehrplans zurück – unabhängig vom konkreten Klassen-Namen.</p>
+<p><div class="highlight"><pre><span></span><code>PREFIX lp: &lt;https://w3id.org/lehrplan/ontology/&gt;
+PREFIX sf: &lt;https://w3id.org/schulfach/&gt;
+PREFIX sa: &lt;https://w3id.org/schulart/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX bfo:  &lt;http://purl.obolibrary.org/obo/&gt;
+
+# &lt;LEHRPLAN-URI&gt; durch die konkrete URI ersetzen,
+# &lt;GRAPH-URI&gt;    durch den passenden Graphen
+SELECT DISTINCT ?elementLabel ?typ
+FROM &lt;GRAPH-URI&gt;
+WHERE {
+  &lt;LEHRPLAN-URI&gt; bfo:BFO_0000051 ?element .
+  ?element rdfs:label ?elementLabel .
+  OPTIONAL { ?element rdf:type ?typ .
+             FILTER(STRSTARTS(STR(?typ),
+               &quot;https://w3id.org/lehrplan/ontology/&quot;)) }
+}
+ORDER BY ?elementLabel
+</code></pre></div>
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0A%23+%3CLEHRPLAN-URI%3E+durch+die+konkrete+URI+ersetzen%2C%0D%0A%23+%3CGRAPH-URI%3E++++durch+den+passenden+Graphen%0D%0ASELECT+DISTINCT+%3FelementLabel+%3Ftyp%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fby%3E%0D%0AWHERE+%7B%0D%0A++%3Chttps%3A%2F%2Flp-bavaria.org%2Flehrplanplus-lis_live_isb.c.117097.de%3E+bfo%3ABFO_0000051+%3Felement+.%0D%0A++%3Felement+rdfs%3Alabel+%3FelementLabel+.%0D%0A++OPTIONAL+%7B+%3Felement+rdf%3Atype+%3Ftyp+.%0D%0A+++++++++++++FILTER%28STRSTARTS%28STR%28%3Ftyp%29%2C%0D%0A+++++++++++++++%22https%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%22%29%29+%7D%0D%0A%7D%0D%0AORDER+BY+%3FelementLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zu Beispiel mit bayrischem Lehrplan im SPARQL-Endpunkt</a>
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=PREFIX+lp%3A+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%3E%0D%0APREFIX+sf%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulfach%2F%3E%0D%0APREFIX+sa%3A+%3Chttps%3A%2F%2Fw3id.org%2Fschulart%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+bfo%3A++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F%3E%0D%0A%0D%0A%23+%3CLEHRPLAN-URI%3E+durch+die+konkrete+URI+ersetzen%2C%0D%0A%23+%3CGRAPH-URI%3E++++durch+den+passenden+Graphen%0D%0ASELECT+DISTINCT+%3FelementLabel+%3Ftyp%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E%0D%0AWHERE+%7B%0D%0A++%3Chttps%3A%2F%2Flp-sachsen.org%2Fresource%2Flehrplan-935-1%3E+bfo%3ABFO_0000051+%3Felement+.%0D%0A++%3Felement+rdfs%3Alabel+%3FelementLabel+.%0D%0A++OPTIONAL+%7B+%3Felement+rdf%3Atype+%3Ftyp+.%0D%0A+++++++++++++FILTER%28STRSTARTS%28STR%28%3Ftyp%29%2C%0D%0A+++++++++++++++%22https%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2F%22%29%29+%7D%0D%0A%7D%0D%0AORDER+BY+%3FelementLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zu Beispiel mit einem sächsischen Lehrplan im SPARQL-Endpunkt</a></p>
+<ul>
+<li><strong>Welche Verknüpfung besteht zwischen Element X und Element Y?</strong></li>
+</ul>
+<p>Direkte Relation X → Y oder Y → X:</p>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;query=SELECT+DISTINCT+%3Fvon+%3Fpraedikat+%3Fnach+%3Flabel%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.%0D%0A++++++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+AS+%3Fvon%29++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+AS+%3Fnach%29+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.%0D%0A++++++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+AS+%3Fvon%29++BIND%28%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+AS+%3Fnach%29+%7D%0D%0A%3Fpraedikat+rdfs%3Alabel+%3Flabel+.%0D%0A++%7D%0D%0A%7D%0D%0AORDER+BY+%3Fvon+%3Fpraedikat&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zu Beispiel im SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?von ?praedikat ?nach
+WHERE {
+  GRAPH ?g {
+    { &lt;URI-VON-X&gt; ?praedikat &lt;URI-VON-Y&gt; .
+      BIND(&lt;URI-VON-X&gt; AS ?von)  BIND(&lt;URI-VON-Y&gt; AS ?nach) }
+    UNION
+    { &lt;URI-VON-Y&gt; ?praedikat &lt;URI-VON-X&gt; .
+      BIND(&lt;URI-VON-Y&gt; AS ?von)  BIND(&lt;URI-VON-X&gt; AS ?nach) }
+  }
+}
+ORDER BY ?von ?praedikat
+</code></pre></div>
+<p>Indirekter Pfad über Zwischenknoten Z (X→Z→Y):</p>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT+%3Fp1+%3Fz+%3FzLabel+%3Fp2%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fp1+%3Fz+.+%3Fz+%3Fp2+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Fz+%3Fp1+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.+%3Fz+%3Fp2+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+.+%7D%0D%0A++%7D%0D%0A++OPTIONAL+%7B+%3Fz+rdfs%3Alabel+%3FzLabel+%7D%0D%0A++FILTER%28+%3Fz+%21%3D+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%26%26+%3Fz+%21%3D+%3Chttps%3A%2F%2Flp-bavaria.org%2Fb2e89d1f-00b9-4c96-b66b-8ab6ca774b57%3E+%29%0D%0A%7D%0D%0ALIMIT+50&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zu Beispiel im SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?p1 ?z ?zLabel ?p2
+WHERE {
+  GRAPH ?g {
+    { &lt;URI-VON-X&gt; ?p1 ?z . ?z ?p2 &lt;URI-VON-Y&gt; . }
+    UNION
+    { ?z ?p1 &lt;URI-VON-X&gt; . ?z ?p2 &lt;URI-VON-Y&gt; . }
+  }
+  OPTIONAL { ?z rdfs:label ?zLabel }
+  FILTER( ?z != &lt;URI-VON-X&gt; &amp;&amp; ?z != &lt;URI-VON-Y&gt; )
+}
+LIMIT 50
+</code></pre></div>
+<p>Alle Nachbarn und Properties eines Elements (Kontext-Dump):</p>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT+%3Frichtung+%3Fpraedikat+%3FpraedikatLabel+%3Fnachbar+%3FnachbarLabel%0D%0AWHERE+%7B%0D%0A++GRAPH+%3Fg+%7B%0D%0A++++%7B+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+%3Fpraedikat+%3Fnachbar+.+BIND%28%22%E2%86%92%22+AS+%3Frichtung%29+%7D%0D%0A++++UNION%0D%0A++++%7B+%3Fnachbar+%3Fpraedikat+%3Chttps%3A%2F%2Flp-bavaria.org%2Flis_01.c.348.de%3E+.+BIND%28%22%E2%86%90%22+AS+%3Frichtung%29+%7D%0D%0A++%7D%0D%0A++OPTIONAL+%7B+%3Fpraedikat+rdfs%3Alabel+%3FpraedikatLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fnachbar+++rdfs%3Alabel+%3FnachbarLabel++%7D%0D%0A%7D%0D%0AORDER+BY+%3Frichtung+%3Fpraedikat&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zu Beispiel im SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?richtung ?praedikat ?praedikatLabel ?nachbar ?nachbarLabel
+WHERE {
+  GRAPH ?g {
+    { &lt;URI-VON-X&gt; ?praedikat ?nachbar . BIND(&quot;→&quot; AS ?richtung) }
+    UNION
+    { ?nachbar ?praedikat &lt;URI-VON-X&gt; . BIND(&quot;←&quot; AS ?richtung) }
+  }
+  OPTIONAL { ?praedikat rdfs:label ?praedikatLabel }
+  OPTIONAL { ?nachbar   rdfs:label ?nachbarLabel  }
+}
+ORDER BY ?richtung ?praedikat
+</code></pre></div>
+<h2 id="weitere-konkretere-abfragen-zu-den-inhalten-der-lehrplane">Weitere konkretere Abfragen zu den Inhalten der Lehrpläne</h2>
+<ul>
+<li><strong>Zeige mir die Kompetenzspezifikationen im Fach Mathematik für die 7. Klasse nach den verschiedenen Schularten in Sachsen</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT+%3FschulartLabel+%3FlpLabel+%3FelementLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E%0D%0AWHERE+%7B%0D%0A++%3Flp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000537%3E+%3Ffach+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000026%3E+%3Fjg+%3B%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000812%3E+%3Fschulart+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B++%3Felement+.++%23+transitiv%0D%0A%0D%0A%3Felement+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000479%3E+.+%23+Kompetenzbeschreibungsfunktion%0D%0A%0D%0A++%3Ffach+++++rdfs%3Alabel+%3FfachLabel+.%0D%0A++%3Fjg+++++++rdfs%3Alabel+%3FjgLabel+.%0D%0A++%3Fschulart+rdfs%3Alabel+%3FschulartLabel+.%0D%0A++%3Felement++rdfs%3Alabel+%3FelementLabel+.%0D%0A%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FfachLabel%29%29%2C+%22mathematik%22%29+%29%0D%0A++FILTER%28+CONTAINS%28STR%28%3FjgLabel%29%2C+%227%22%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FschulartLabel+%3FlpLabel+%3FelementLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?schulartLabel ?lpLabel ?elementLabel
+FROM &lt;https://w3id.org/lehrplan/sn&gt;
+WHERE {
+  ?lp rdf:type  &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt; ;
+      rdfs:label ?lpLabel ;
+      &lt;https://w3id.org/lehrplan/ontology/LP_0000537&gt; ?fach ;
+      &lt;https://w3id.org/lehrplan/ontology/LP_0000026&gt; ?jg ;
+      &lt;https://w3id.org/lehrplan/ontology/LP_0000812&gt; ?schulart ;
+      &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;+  ?element .  # transitiv
+
+  ?element &lt;https://w3id.org/lehrplan/ontology/LP_0000483&gt; &lt;https://w3id.org/lehrplan/ontology/LP_0000479&gt; . # Kompetenzbeschreibungsfunktion
+
+  ?fach     rdfs:label ?fachLabel .
+  ?jg       rdfs:label ?jgLabel .
+  ?schulart rdfs:label ?schulartLabel .
+  ?element  rdfs:label ?elementLabel .
+
+  FILTER( CONTAINS(LCASE(STR(?fachLabel)), &quot;mathematik&quot;) )
+  FILTER( CONTAINS(STR(?jgLabel), &quot;7&quot;) )
+}
+ORDER BY ?schulartLabel ?lpLabel ?elementLabel
+</code></pre></div>
+<ul>
+<li><strong>Zeige mir die Niveaustufen, die in Berlin/Brandenburg den Lehrplanelementen zugeordnet sind</strong></li>
+</ul>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT+%3FlpLabel+%3FniveauLabel+%3FelemLabel+%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fbb%3E%0D%0AWHERE+%7B%0D%0A%3Flp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B++++%3Felem+.%0D%0A%0D%0A%3Felem+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000578%3E+%3Fniveau+.%0D%0A%0D%0A%3Felem+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000024%3E+%3FelemTitel+.%0D%0A%3FelemTitel+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000344%3E+%3FelemLabel+.%0D%0A%0D%0A%3Fniveau+rdfs%3Alabel+%3FniveauLabel+.%0D%0A%7D%0D%0A&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a></p>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?lpLabel ?niveauLabel ?elemLabel 
+FROM &lt;https://w3id.org/lehrplan/bb&gt;
+WHERE {
+?lp rdf:type  &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt; ;
+      rdfs:label ?lpLabel ;
+      &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;+    ?elem .
+
+?elem &lt;https://w3id.org/lehrplan/ontology/LP_0000578&gt; ?niveau .
+
+?elem &lt;https://w3id.org/lehrplan/ontology/LP_0000024&gt; ?elemTitel .
+?elemTitel &lt;https://w3id.org/lehrplan/ontology/LP_0000344&gt; ?elemLabel .
+
+?niveau rdfs:label ?niveauLabel .
+}
+</code></pre></div>
+<ul>
+<li><strong>Welcher Bereich aus Rheinland-Pfalz entspricht einem Element aus Bayern?</strong></li>
+</ul>
+<p>Konkretes BY-Element als Ausgangspunkt: </p>
+<p><a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT+%3FrpLpLabel+%3FrpElementLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Frp%3E%0D%0AWHERE+%7B%0D%0A++%3FrpLp+rdf%3Atype++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++++rdfs%3Alabel+%3FrpLpLabel+%3B%0D%0A++++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B+%3FrpEl+.%0D%0A++%3FrpEl+rdfs%3Alabel+%3FrpElementLabel+.%0D%0A%0D%0A++BIND%28%22Nat%C3%BCrliche+Zahlen%22+AS+%3Fsuchbegriff%29++%23+%E2%86%90+BY-Label+hier+eintragen%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FrpElementLabel%29%29%2C+LCASE%28%3Fsuchbegriff%29%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FrpLpLabel+%3FrpElementLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT ?rpLpLabel ?rpElementLabel
+FROM &lt;https://w3id.org/lehrplan/rp&gt;
+WHERE {
+  ?rpLp rdf:type  &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt; ;
+        rdfs:label ?rpLpLabel ;
+        &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;+ ?rpEl .
+  ?rpEl rdfs:label ?rpElementLabel .
+
+  BIND(&quot;Natürliche Zahlen&quot; AS ?suchbegriff)  # ← BY-Label hier eintragen
+  FILTER( CONTAINS(LCASE(STR(?rpElementLabel)), LCASE(?suchbegriff)) )
+}
+ORDER BY ?rpLpLabel ?rpElementLabel
+</code></pre></div></p>
+<ul>
+<li><strong>Welche Lerninhalte sind einem Bereich zugeordnet?</strong></li>
+</ul>
+<p>Beispiel: Alle Lerninhalte in Sachsen, die einem Bereich mit dem Stichwort "schreiben" zugeordnet sind:
+<a href="https://sparql.mem.edufeed.org/sparql?default-graph-uri=&amp;qtxt=SELECT+DISTINCT%0D%0A++%3FlpLabel+%3FbereichLabel+%3FlerninhaltLabel%0D%0AFROM+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fsn%3E%0D%0AWHERE+%7B%0D%0A++%3Fbereich+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E%0D%0A+++++++++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000497%3E+%3B+%23+Bereichsfunktion%0D%0A+++++++++++++rdfs%3Alabel+%3FbereichLabel+%3B%0D%0A+++++++++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E+%3Flerninhalt+.%0D%0A%0D%0A++%3Flerninhalt+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000483%3E%0D%0A++++++++++++++%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000480%3E+%3B+%23+Lerninhaltsbeschreibungsfunktion%0D%0A++++++++++++++rdfs%3Alabel+%3FlerninhaltLabel+.%0D%0A%0D%0A++%23+Lehrplan-Zuordnung+f%C3%BCr+Kontext%0D%0A++%3Flp+a+%3Chttps%3A%2F%2Fw3id.org%2Flehrplan%2Fontology%2FLP_0000438%3E+%3B%0D%0A++++++rdfs%3Alabel+%3FlpLabel+%3B%0D%0A++++++%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%2B+%3Fbereich+.%0D%0A%0D%0A++FILTER%28+CONTAINS%28LCASE%28STR%28%3FbereichLabel%29%29%2C+%22schreiben%22%29+%29%0D%0A%7D%0D%0AORDER+BY+%3FlpLabel+%3FbereichLabel+%3FlerninhaltLabel&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">Direkter Link zum SPARQL-Endpunkt</a>
+<div class="highlight"><pre><span></span><code>SELECT DISTINCT
+  ?lpLabel ?bereichLabel ?lerninhaltLabel
+FROM &lt;https://w3id.org/lehrplan/sn&gt;
+WHERE {
+  ?bereich &lt;https://w3id.org/lehrplan/ontology/LP_0000483&gt;
+             &lt;https://w3id.org/lehrplan/ontology/LP_0000497&gt; ; # Bereichsfunktion
+             rdfs:label ?bereichLabel ;
+             &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt; ?lerninhalt .
+
+  ?lerninhalt &lt;https://w3id.org/lehrplan/ontology/LP_0000483&gt;
+              &lt;https://w3id.org/lehrplan/ontology/LP_0000480&gt; ; # Lerninhaltsbeschreibungsfunktion
+              rdfs:label ?lerninhaltLabel .
+
+  # Lehrplan-Zuordnung für Kontext
+  ?lp a &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt; ;
+      rdfs:label ?lpLabel ;
+      &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;+ ?bereich .
+
+  FILTER( CONTAINS(LCASE(STR(?bereichLabel)), &quot;schreiben&quot;) )
+}
+ORDER BY ?lpLabel ?bereichLabel ?lerninhaltLabel
+</code></pre></div></p>
+<ul>
+<li><strong>Wie unterscheiden sich die Inhalte im Fach Mathematik in der 10. Klasse in den verschiedenen Schularten in Sachsen?</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Welche zusätzlichen Kompetenzen müssen erlangt werden im Leistungskurs Physik gegenüber dem Grundkurs Physik in Bayern?</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte alle Kompetenzbereiche im Fach Mathematik in Rheinland-Pfalz sehen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte alle Kompetenzen sehen, die in Berlin unter dem Kompetenzbereich "Mathematisch modellieren" in der Jahrgangsstufe 7 erworben werden müssen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte sehen, welche Lerninhalte in der 5. Klasse in dem Fach Biologie in Bayern im Unterricht gelehrt werden sollen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte alle Kompetenzbereiche in Französisch von der Primarstufe über die Sek I zur Sek II nach Jahrgangsstufe in Rheinland-Pfalz sehen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte alle Kompetenzspezifikationen des Kompetenzbereichs „Lesen“ des Fachs Deutsch in der Primarstufe sehen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte in Sachsen die unterschiedlichen Kompetenzen und Inhalte in Biologie nach Bildungsgang in der 8. Jahrgangsstufe sehen.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte wissen, welche Kompetenzspezifikationen in Englisch von Jahrgangsstufe 1-9 in Bayern vorkommen aber in Brandenburg nicht.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Ich möchte abbilden, welche Kompetenzen im Fach Mathematik im Primarbereich erlernt werden und wie diese sich in der Sek I je nach Bildungsgang weiterentwickeln.</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li><strong>Welche Jahrgangsstufen umfasst die Niveaustufe C in Berlin im Gymnasium?</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
