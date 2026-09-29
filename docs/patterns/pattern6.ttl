@@ -1,0 +1,26 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix CE-Fragment: <https://w3id.org/lehrplan/ontology/LP_0001015> .
+@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE-Lerninhalt: <https://w3id.org/lehrplan/ontology/LP_0000332> .
+@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+@prefix CE-Hinweis: <https://w3id.org/lehrplan/ontology/LP_0000852> .
+
+# properties
+@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
+
+ex:Lehrplan hat_Teil: ex:CE-Fragment_1 .
+ex:CE-Fragment_1 hat_Teil: ex:CE-Bereich_1 .
+ex:CE-Bereich_1 hat_Teil: ex:CE-Bereich_2 .
+ex:CE-Bereich_2 hat_Teil: ex:CE-Lerninhalt_1 ,
+                          ex:CE-Kompetenzspezifikation_1 .                   
+ex:CE-Lerninhalt_1 hat_Teil: ex:CE-Lerninhalt_2 .
+ex:CE-Lerninhalt_2 hat_Teil: ex:CE-Hinweis_1 .
+ex:CE-Kompetenzspezifikation_1 hat_Teil: ex:CE-Hinweis_2 .
