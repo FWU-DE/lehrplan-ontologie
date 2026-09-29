@@ -18,10 +18,14 @@
 # some resource is described by textual element (Beschreibung) 
 #
 
+@prefix has_value:      <https://w3id.org/lehrplan/ontology/LP_0000344> .
 
 ###  https://example.org/test/ce_elem_1
 <https://example.org/test/textual_elem_1> rdf:type owl:NamedIndividual ,
+
                                                 <https://w3id.org/lehrplan/ontology/LP_0030003> ;
+
+                                has_value: "some title" 
                                          .
 
 

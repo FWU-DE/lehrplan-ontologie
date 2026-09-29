@@ -1,0 +1,65 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:       <http://www.example.org/#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix lehrplan: <https://w3id.org/lehrplan/ontology/> .
+@prefix iao:      <http://purl.obolibrary.org/obo/> .
+
+#
+# Jeder Lehrplan und jedes CE-Element wird von mindestens einem Title beschrieben.
+#
+@prefix lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix is_about: <http://purl.obolibrary.org/obo/IAO_0000136> .
+@prefix title: <https://w3id.org/lehrplan/ontology/LP_0000346> .
+@prefix element: <ttps://w3id.org/lehrplan/ontology/LP_0000261> .
+
+ex:LehrplanHatTitelShape
+    a sh:NodeShape ;
+
+    # Alle Instanzen der Klasse Lehrplan validieren
+    sh:targetClass lehrplan: ;
+
+    sh:property [
+        # inverse Relation von is_about: ("is about")
+        # -> "wird beschrieben von"
+        sh:path [
+            sh:inversePath is_about:
+        ] ;
+
+        # Mindestens eine beschreibende Ressource
+        # muss vom Typ Title sein.
+        sh:qualifiedValueShape [
+            sh:class title:
+        ] ;
+        sh:qualifiedMinCount 1 ;
+
+        sh:message
+            "Jeder Lehrplan muss von mindestens einem Title beschrieben werden."@de ;
+    ] .
+
+
+ex:CE-ElementHatTitelShape
+    a sh:NodeShape ;
+
+    # Alle Instanzen der Klasse CE-Element validieren
+    sh:targetClass element: ;
+
+    sh:property [
+        # inverse Relation von is_about: ("is about")
+        # -> "wird beschrieben von"
+        sh:path [
+            sh:inversePath is_about:
+        ] ;
+
+        # Mindestens eine beschreibende Ressource
+        # muss vom Typ Title sein.
+        sh:qualifiedValueShape [
+            sh:class title:
+        ] ;
+        sh:qualifiedMinCount 1 ;
+
+        sh:message
+            "Jedes CE-Element muss von mindestens einem Title beschrieben werden."@de ;
+    ] .

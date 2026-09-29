@@ -5,16 +5,33 @@
 @prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
-# a textual entity always is about something
-
 @prefix textual_entity: <http://purl.obolibrary.org/obo/IAO_0000300> .
-@prefix is_about: <http://purl.obolibrary.org/obo/IAO_0000136> .
+@prefix is_about:       <http://purl.obolibrary.org/obo/IAO_0000136> .
+@prefix has_value:      <https://w3id.org/lehrplan/ontology/LP_0000344> .
+
+#
+# A textual entity always:
+# 1. is about at least one thing
+# 2. has at least one value via has_value
+# 3. that value is a string literal
+#
 
 ex:TextualEntityShape
     a sh:NodeShape ;
-    sh:targetClass textual_entity:  ; 
-    sh:property [   
-        sh:path  is_about:  ; 
+
+    sh:targetClass textual_entity: ;
+
+    # A textual entity is always about something
+    sh:property [
+        sh:path is_about: ;
         sh:minCount 1 ;
     ] ;
-    .
+
+    # A textual entity always has a textual value
+    sh:property [
+        sh:path has_value: ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:nodeKind sh:Literal ;
+        sh:message "A textual entity must have at least one 'has_value:' value that is a string literal."@en ;
+    ] .

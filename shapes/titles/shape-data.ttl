@@ -1,0 +1,34 @@
+@prefix : <https://example.org/test#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://example.org/test#> .
+
+<https://example.org/test/1> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://example.org/test/1/1.0.0> ;
+                              owl:imports <https://w3id.org/lehrplan/ontology/> .
+
+@prefix ex: <http://example.org/> .
+
+@prefix lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix is_about: <http://purl.obolibrary.org/obo/IAO_0000136> .
+@prefix title: <https://w3id.org/lehrplan/ontology/LP_0000346> .
+@prefix has_value:      <https://w3id.org/lehrplan/ontology/LP_0000344> .
+@prefix element: <ttps://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix part_of: <http://purl.obolibrary.org/obo/BFO_0000050> .
+
+ex:lp_1 a lehrplan: .
+ex:title_1 a title: .
+ex:title_1 has_value: "some lehrplan title" .
+ex:title_1 is_about: ex:lp_1 .
+
+
+ex:elem_1 a  element: .
+ex:elem_1 part_of: ex:lp_1 .
+
+ex:title_2 a title: .
+ex:title_2 has_value: "some element title" .
+ex:title_2 is_about: ex:elem_1 .
+
