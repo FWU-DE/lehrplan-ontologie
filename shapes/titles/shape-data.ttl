@@ -20,12 +20,14 @@
 @prefix part_of: <http://purl.obolibrary.org/obo/BFO_0000050> .
 
 ex:lp_1 a lehrplan: .
+ex:lp_1 rdfs:label "some lehrplan title" .
 ex:title_1 a title: .
 ex:title_1 has_value: "some lehrplan title" .
 ex:title_1 is_about: ex:lp_1 .
 
 
 ex:elem_1 a  element: .
+ex:elem_1 rdfs:label  "some element title" .
 ex:elem_1 part_of: ex:lp_1 .
 
 ex:title_2 a title: .

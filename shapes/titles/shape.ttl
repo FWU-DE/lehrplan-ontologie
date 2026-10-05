@@ -63,3 +63,33 @@ ex:CE-ElementHatTitelShape
         sh:message
             "Jedes CE-Element muss von mindestens einem Title beschrieben werden."@de ;
     ] .
+
+
+ex:TitelRequiresLabelShape
+
+    sh:targetClass title: ;    
+
+    # The thing the title is about must have
+    # an rdfs:label equal to its has_value
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The item that the title is about must have an rdfs:label equal to the title's has_value."@en ;
+
+        sh:select """
+            PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX is_about:  <http://purl.obolibrary.org/obo/IAO_0000136>
+            PREFIX has_value: <https://w3id.org/lehrplan/ontology/LP_0000344>
+
+            SELECT $this ?item
+            WHERE {
+                $this is_about: ?item .
+
+                FILTER NOT EXISTS {
+                    $this has_value: ?value .
+                    ?item rdfs:label ?label .
+
+                    FILTER(?label = ?value)
+                }
+            }
+        """ ;
+    ] .
