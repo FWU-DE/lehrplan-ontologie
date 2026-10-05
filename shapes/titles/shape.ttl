@@ -4,16 +4,16 @@
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex:       <http://www.example.org/#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix lehrplan: <https://w3id.org/lehrplan/ontology/> .
 @prefix iao:      <http://purl.obolibrary.org/obo/> .
 
 #
 # Jeder Lehrplan und jedes CE-Element wird von mindestens einem Title beschrieben.
 #
+
 @prefix lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
 @prefix is_about: <http://purl.obolibrary.org/obo/IAO_0000136> .
 @prefix title: <https://w3id.org/lehrplan/ontology/LP_0000346> .
-@prefix element: <ttps://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
 
 ex:LehrplanHatTitelShape
     a sh:NodeShape ;
@@ -86,9 +86,7 @@ ex:TitelRequiresLabelShape
 
                 FILTER NOT EXISTS {
                     $this has_value: ?value .
-                    ?item rdfs:label ?label .
-
-                    FILTER(?label = ?value)
+                    ?item rdfs:label ?value .
                 }
             }
         """ ;
