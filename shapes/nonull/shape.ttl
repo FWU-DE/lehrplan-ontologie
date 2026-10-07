@@ -1,0 +1,26 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:       <http://www.example.org/#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix iao:      <http://purl.obolibrary.org/obo/> .
+
+#
+# There should not be a rdfs:label with value null
+#
+
+ex:NoNullLabelShape
+    a sh:NodeShape ;
+
+    sh:targetSubjectsOf rdfs:label ;
+
+    sh:not [
+        sh:property [
+            sh:path rdfs:label ;
+            sh:hasValue "null" ;
+        ]
+    ] ;
+
+    sh:message
+        "An rdfs:label must not have the value 'null'."@en .
