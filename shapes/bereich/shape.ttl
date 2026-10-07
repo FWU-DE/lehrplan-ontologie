@@ -6,16 +6,18 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
 #
-# Ein Bereich ist immer teil von etwas
+# Bereich und Kompetenzspezifikation sind immer Teil von etwas
 #
 
 ex:BereichShape
     a sh:NodeShape ;
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000349> ; # "Bereich"
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000263> ; # "Kompetenzspezifikation" 
     sh:property [              
         sh:path <http://purl.obolibrary.org/obo/BFO_0000050> ;       # part of
         sh:minCount 1 ;
     ] ;
-    
+    sh:message "Bereich und Kompetenzspezifikation müssen immer Teil von etwas sein." 
     .
- ###### add SHACL vocabulary ###### 
+ 
+ 
