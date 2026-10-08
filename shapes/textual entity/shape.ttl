@@ -31,7 +31,6 @@ ex:TextualEntityShape
     sh:property [
         sh:path has_value: ;
         sh:minCount 1 ;
-        sh:datatype xsd:string ;
         sh:nodeKind sh:Literal ;
         sh:message "A textual entity must have at least one 'has_value:' value that is a string literal."@en ;
     ] .
