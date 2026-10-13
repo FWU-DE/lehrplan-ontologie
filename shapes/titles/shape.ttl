@@ -7,7 +7,7 @@
 @prefix iao:      <http://purl.obolibrary.org/obo/> .
 
 #
-# Jeder Lehrplan und jedes CE-Element wird von mindestens einem Title beschrieben.
+# Jeder Lehrplan und jedes CE-Element (ausser Verweis und Fragment) wird von mindestens einem Title beschrieben.
 #
 
 @prefix lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
@@ -40,11 +40,15 @@ ex:LehrplanHatTitelShape
     ] .
 
 
-ex:CE-ElementHatTitelShape
+ex:CE-ElementHatTitelShape  ## ausser Verweis und Fragment
     a sh:NodeShape ;
 
     # Alle Instanzen der Klasse CE-Element validieren
-    sh:targetClass element: ;
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000349> ; # bereich
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000852> ; # hinweis
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000263> ; # kompetenzspezifikation
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0030325< ; # leitperspektive
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000332> ; # lerninhalt
 
     sh:property [
         # inverse Relation von is_about: ("is about")
@@ -61,7 +65,7 @@ ex:CE-ElementHatTitelShape
         sh:qualifiedMinCount 1 ;
 
         sh:message
-            "Jedes CE-Element muss von mindestens einem Title beschrieben werden."@de ;
+            "Jedes CE-Element (ausser Verweis und Fragment) muss von mindestens einem Titel beschrieben werden."@de ;
     ] .
 
 
