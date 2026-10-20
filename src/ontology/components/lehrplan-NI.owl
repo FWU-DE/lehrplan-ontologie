@@ -109,9 +109,9 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000201> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000823> (Kerncurriculum (NI))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000823> "Ein “Kerncurriculum (NI)” ist ein “Lehrplan” im Bundesland Niedersachsen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000823> "Kerncurriculum (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000823> "Lehrplan (NI)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000823> "Ein “Kerncurriculum (NI)” ist ein “Lehrplan” im Bundesland Niedersachsen.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000823> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000043>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000823> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002101>))
 
@@ -141,8 +141,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001009> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002101> (Element (NI))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002101> "Lehrplan Element bezogen auf den Lehrplan von Niedersachsen"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002101> "Element (NI)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002101> "Lehrplan Element bezogen auf den Lehrplan von Niedersachsen"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000043>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002203> (Kompetenzbereich (NI))

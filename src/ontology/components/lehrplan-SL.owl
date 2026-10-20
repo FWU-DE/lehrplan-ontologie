@@ -128,9 +128,9 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000211> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000825> (Lehrplan (SL))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000825> "Ein “Lehrplan (SL)” ist ein “Lehrplan” im Bundesland Saarland.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000825> "Lehrplan (SL)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000825> "Kernlehrplan (SL)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000825> "Ein “Lehrplan (SL)” ist ein “Lehrplan” im Bundesland Saarland.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000825> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000055>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000825> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002102>))
 
@@ -146,8 +146,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001028> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002102> (Element (SL))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002102> "Lehrplan Element bezogen auf den Lehrplan des Saarland"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002102> "Element (SL)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002102> "Lehrplan Element bezogen auf den Lehrplan des Saarland"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002102> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000055>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002229> (Lehrplanfragment (SL))
@@ -605,8 +605,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030262> ObjectIntersectionOf(
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000260> (A Kurs (SL))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000260> "gilt für die Jahrgangsstufen 9-10")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000260> "A Kurs (SL)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000260> "gilt für die Jahrgangsstufen 9-10")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000260>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0001028> <https://w3id.org/lehrplan/ontology/LP_0000260>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000260> <https://w3id.org/lehrplan/ontology/LP_2000009>)

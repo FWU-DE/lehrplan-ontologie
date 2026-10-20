@@ -267,7 +267,6 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/identifier>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/subject>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
-Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:isDefinedBy))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
@@ -285,8 +284,8 @@ Declaration(Datatype(<http://qudt.org/schema/qudt/LatexString>))
 
 # Annotation Property: <https://w3id.org/lehrplan/ontology/LP_0000015> (tracker item)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000015> "IRIs or similar locators for requests or discussions of an ontology term."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000015> "tracker item"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000015> "IRIs or similar locators for requests or discussions of an ontology term."@en)
 
 
 ############################
@@ -398,9 +397,9 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000495> "
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000537> (hat Schulfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000537> "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000537> "has school subject"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000537> "hat Schulfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000537> "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000537> "wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000537> "Gegeben sind:
 
@@ -442,9 +441,9 @@ ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000556> <https://w3i
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000565> (hat direkten Teil)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000565> "a non-transitive relation to specify a part at a particular level of granularity"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000565> "has direct part"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000565> "hat direkten Teil"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000565> "a relation to specify a part at a particular level of granularity"@en)
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000565> <http://purl.obolibrary.org/obo/BFO_0000051>)
 InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000565> <https://w3id.org/lehrplan/ontology/LP_0000566>)
 
@@ -452,6 +451,7 @@ InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000565> <https:/
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000566> "direct part of"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000566> "direkt Teil von"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000566> "a relation between a specific part (at some level of granularity) and its whole."@en)
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000566> <http://purl.obolibrary.org/obo/BFO_0000050>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für Schulart)
@@ -514,8 +514,8 @@ ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3
 
 # Data Property: <http://www.w3.org/2006/time#inXSDDateTimeStamp> (in XSD Date-Time-Stamp)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/time#inXSDDateTimeStamp> "Position of an instant, expressed using xsd:dateTimeStamp"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2006/time#inXSDDateTimeStamp> "in XSD Date-Time-Stamp"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2006/time#inXSDDateTimeStamp> "Position of an instant, expressed using xsd:dateTimeStamp"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2006/time#inXSDDateTimeStamp> "Valid examples:
     UTC Time: 2026-02-02T14:30:00Z
     Time with Offset:2026-02-02T09:30:00-05:00
@@ -579,9 +579,9 @@ DisjointClasses(<http://purl.obolibrary.org/obo/IAO_0000300> <https://w3id.org/l
 
 # Class: <http://qudt.org/schema/qudt/Unit> (Unit)
 
-AnnotationAssertion(rdfs:comment <http://qudt.org/schema/qudt/Unit> "A reference to the unit of measure of a quantity (variable or constant) of interest."@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://qudt.org/schema/qudt/Unit> <http://qudt.org/schema/qudt>)
 AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://qudt.org/schema/qudt/Unit> "A reference to the unit of measure of a quantity (variable or constant) of interest."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://qudt.org/schema/qudt/Unit> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
   For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). 
   Any measurement of the length can be expressed as a number multiplied by the unit meter. 
@@ -589,74 +589,74 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://qudt.o
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000001> (school subject)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000001> "A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000001> "Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000001> "Schulfach"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000001> "school subject"@en)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000001> <https://de.wikipedia.org/wiki/Unterrichtsfach>)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000001> <https://github.com/FWU-DE/schulfach-ontologie>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000001> "Fach")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000001> "A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000001> "Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000001> "Examples of school subjects include German, mathematics, history, and biology."@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000002> (MINT-Fach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000002> "A \"MINT-Fach\" is a \"Schulfach\" in which learners engage with one of the four areas: Mathematics, computer science, natural sciences, and technology."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000002> "Ein “MINT-Fach” ist ein “Schulfach”, in dem sich die Lernenden mit einem der vier Bereiche Mathematik, Informatik, Naturwissenschaft und Technik auseinandersetzen."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000002> "MINT-Fach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000002> "A \"MINT-Fach\" is a \"Schulfach\" in which learners engage with one of the four areas: Mathematics, computer science, natural sciences, and technology."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000002> "Ein “MINT-Fach” ist ein “Schulfach”, in dem sich die Lernenden mit einem der vier Bereiche Mathematik, Informatik, Naturwissenschaft und Technik auseinandersetzen."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000002> <https://w3id.org/lehrplan/ontology/LP_0000001>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000003> (Naturwissenschaftsfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000003> "A \"Naturwissenschaftsfach\" is a \"MINT-Fach\" that focuses on living and non-living matter.
-The three \"Naturwissenschaftsfächer\" are biology, chemistry, and physics."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000003> "Ein “Naturwissenschaftsfach” ist ein “MINT-Fach”, das die belebte und unbelebte Materie als Gegenstand hat. Die drei Naturwissenschaftsfächer sind die Fächer Biologie, Chemie und Physik."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000003> "Naturwissenschaftsfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000003> "A \"Naturwissenschaftsfach\" is a \"MINT-Fach\" that focuses on living and non-living matter.
+The three \"Naturwissenschaftsfächer\" are biology, chemistry, and physics."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000003> "Ein “Naturwissenschaftsfach” ist ein “MINT-Fach”, das die belebte und unbelebte Materie als Gegenstand hat. Die drei Naturwissenschaftsfächer sind die Fächer Biologie, Chemie und Physik."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000003> <https://w3id.org/lehrplan/ontology/LP_0000002>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000004> (Fremdsprachenfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000004> "A \"Fremdsprachenfach\" is a \"Schulfach\" in which learners acquire a foreign language.
-Common \"Fremdsprachenfächer\" in Germany include English and French."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000004> "Ein “Fremsprachenfach” ist ein “Schulfach”, in dem die Lernenden eine Fremdsprache erlernen. In Deutschland übliche Fremdsprachenfächer sind zum Beispiel die Fächer Englisch und Französisch."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000004> "Fremdsprachenfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000004> "A \"Fremdsprachenfach\" is a \"Schulfach\" in which learners acquire a foreign language.
+Common \"Fremdsprachenfächer\" in Germany include English and French."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000004> "Ein “Fremsprachenfach” ist ein “Schulfach”, in dem die Lernenden eine Fremdsprache erlernen. In Deutschland übliche Fremdsprachenfächer sind zum Beispiel die Fächer Englisch und Französisch."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000004> <https://w3id.org/lehrplan/ontology/LP_0000001>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000005> (Gesellschaftswissenschaftsfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000005> "A \"Gesellschaftswissenschaftsfach\" is a \"Schulfach\" that deals with cultural, social, economic, and political topics.
-Subjects in this category include educational sciences, geography, history, general studies, social studies, political science, and economics."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000005> "Ein “Gesellschaftswissenschaftsfach” ist ein “Schulfach”, in dem sich mit kulturellen, sozialen, ökonomischen und politischen Themen auseinandergesetzt wird. Zu den Gesellschaftswissenschaftsfächern gehören die Fächer Erziehungswissenschaften, Geographie, Geschichte, Sachunterricht, Sozialkunde, Politikwissenschaft und Wirtschaftskunde."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000005> "Gesellschaftswissenschaftsfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000005> "A \"Gesellschaftswissenschaftsfach\" is a \"Schulfach\" that deals with cultural, social, economic, and political topics.
+Subjects in this category include educational sciences, geography, history, general studies, social studies, political science, and economics."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000005> "Ein “Gesellschaftswissenschaftsfach” ist ein “Schulfach”, in dem sich mit kulturellen, sozialen, ökonomischen und politischen Themen auseinandergesetzt wird. Zu den Gesellschaftswissenschaftsfächern gehören die Fächer Erziehungswissenschaften, Geographie, Geschichte, Sachunterricht, Sozialkunde, Politikwissenschaft und Wirtschaftskunde."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000005> <https://w3id.org/lehrplan/ontology/LP_0000001>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000006> (Lehrprozess)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000006> "A planned process in which different persons participate in role of teachers or students."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000006> "Lehrprozess"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000006> "teaching process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000006> "A planned process in which different persons participate in role of teachers or students."@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000007> (learning process)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000007> "A natural process that occurs in a person (bearer). It might be caused by a teaching process."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000007> "Lernprozess"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000007> "learning process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000007> "A natural process that occurs in a person (bearer). It might be caused by a teaching process."@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (Jahrgangsstufe)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000009> "A \"Jahrgangsstufe\" is an \"Information Content Entity\".
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000009> "Jahrgangsstufe"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000009> "class level"@en)
+AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000009> <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000009> "Klassenstufe"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000009> "A \"Jahrgangsstufe\" is an \"Information Content Entity\".
 It encompasses all classes and courses in which learners progress together through a specific stage of their educational journey.
 A \"Jahrgangsstufe\" refers to a systematic grouping of learners and indicates the phase of their educational path, defining the competencies and learning content intended for them.
 Upon completion of a school year, learners transition to the next \"Jahrgangsstufe\".
 In curricula, the \"Jahrgangsstufe\" serves as an organizational element that structures teaching content in an age-appropriate manner.
 Depending on the type of school and the federal state, \"Jahrgangsstufen\" may be referred to differently (e.g., \"Klassenstufen\") or grouped together, such as in the form of double year groups."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000009> "Eine “Jahrgangsstufe” ist eine “Informationseinheit”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000009> "Eine “Jahrgangsstufe” ist eine “Informationseinheit”.
 Sie umfasst die Gesamtheit der Klassen und Kurse, in denen Lernende gemeinsam einen bestimmten Abschnitt ihrer schulischen Laufbahn durchlaufen.
 Eine Jahrgangsstufe bezeichnet eine systematische Einteilung der Lernenden und gibt an, in welcher Phase ihres Bildungswegs sie sich befinden und legt die für sie vorgesehenen Kompetenzen und Lerninhalte fest. Nach Abschluss eines Schuljahres erfolgt der Übergang in die nächste Jahrgangsstufe.
 In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das den Unterrichtsinhalt altersgerecht strukturiert. Je nach Schulart und Bundesland können Jahrgangsstufen unterschiedlich benannt werden, wie zum Beispiel “Klassenstufen”, oder zusammengefasst werden, beispielsweise in Form von Doppeljahrgangsstufen."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000009> "Jahrgangsstufe"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000009> "class level"@en)
-AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000009> <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000009> "Klassenstufe"@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000010> (Person)
 
@@ -675,35 +675,39 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000012> "
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000013> (Kompetenz)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000013> "A “competence” is a characteristic that a person either already possesses or acquires in the course of a learning process.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000013> "Kompetenz"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000013> "competence"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000013> "A “competence” is a characteristic that a person either already possesses or acquires in the course of a learning process.
 It is the ability of a learner to apply knowledge and skills to solve problems (cf. KMK).
 The ontology distinguishes between “competence” and “CE competence specification”:
 In contrast to the “CE competence specification”, which describes a “competence” within the framework of a curriculum or educational standard, the “competence” is anchored as an ability or skill in the learner himself."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000013> "Eine „Kompetenz“ ist eine Eigenschaft, die eine Person entweder bereits besitzt oder im Verlauf eines Lernprozesses erwirbt.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000013> "Eine „Kompetenz“ ist eine Eigenschaft, die eine Person entweder bereits besitzt oder im Verlauf eines Lernprozesses erwirbt.
 Sie ist die Fähigkeit eines Lernenden, Wissen und Können zur Lösung von Problemen anzuwenden (vgl. KMK).
 Die Ontologie unterscheidet zwischen “Kompetenz” und “CE-Kompetenzspezifikation”:
 Im Unterschied zur “CE-Kompetenzspezifikation”, die eine “Kompetenz” im Rahmen eines Lehrplans oder Bildungsstandards beschreibt, ist die “Kompetenz” als Fähigkeit oder Fertigkeit im Lernenden selbst verankert."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000013> "Kompetenz"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000013> "competence"@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000019> (educational qualification)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000019> "A \"Schulabschluss\" is a \"process boundary\".
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000019> "Schulabschluss"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000019> "educational qualification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000019> "Abschluss")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000019> "A \"Schulabschluss\" is a \"process boundary\".
 It is an officially recognized educational qualification obtained at the end of a specific educational track.
 It certifies the successful completion of a school career and serves as proof of qualification for further education or entry into the workforce.
 \"Schulabschlüsse\" vary in their requirements, entitlements, and designations depending on the type of school and the federal state.
 Common general education \"Schulabschlüsse\" in Germany include the \"Erste Schulabschluss\", the \"Mittlere Schulabschluss\", and the \"Allgemeine Hochschulreife\" (Abitur). Additional qualifications may also be awarded depending on the federal state and educational track."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000019> "Ein “Schulabschluss” ist ein “Prozessende”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000019> "Ein “Schulabschluss” ist ein “Prozessende”.
 Es ist ein offiziell anerkannter Bildungsabschluss, der am Ende eines bestimmten Bildungsgangs erworben wird. Er bestätigt den erfolgreichen Abschluss einer schulischen Laufbahn und dient als Qualifikationsnachweis für weiterführende Bildungswege oder den Eintritt in das Berufsleben.
 Schulabschlüsse unterscheiden sich je nach Schulart und Bundesland in ihren Anforderungen und Berechtigungen sowie der Bezeichnung.
 Zu den gängigen Schulabschlüssen im allgemeinbildenden Bereich in Deutschland gehören der “Erste Schulabschluss”, der “Mittlere Schulabschluss” sowie die “Allgemeine Hochschulreife” (Abitur). Weitere Abschlüsse können ebenfalls erworben werden, je nach Bundesland und Bildungsgang."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000019> "Schulabschluss"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000019> "educational qualification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000019> "Abschluss")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000020> (educational level)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000020> "Die “Schulstufe” ist eine “Informationseinheit”.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulstufe"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000020> "educational level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000020> "Bildungsbereich"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulbereich"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000020> "Die “Schulstufe” ist eine “Informationseinheit”.
 Sie bezeichnet eine bestimmte Phase der schulischen Laufbahn, in der Lernende bestimmte Ziele gemäß den Anforderungen des Bildungssystems erreichen sollen. 
 Schulstufen dienen dazu, den Lernenden einen strukturierten Lernweg zu bieten, in dem die pädagogischen und didaktischen Anforderungen an die jeweiligen Altersgruppen angepasst sind.
 Die Schulstufe umfasst je nach Bildungsgang bzw. Bundesland festgelegte Jahrgangsstufen.
@@ -712,7 +716,7 @@ dem “Bildungsgang” (der sich auf die Art des Abschlusses bezieht, z. B. Gymn
 dem \"Bildungsgangniveau\" (welches das Niveau eines Bildungsgangs beschreibt) und 
 dem “Fachniveau” (das die Tiefe und den Umfang eines spezifischen Fachs der Sekundarstufe II beschreibt).
 Im Bereich der allgemeinbildenden Schulen wird unterschieden zwischen der “Primarstufe” (auch Grundschule genannt), der “Sekundarstufe I” und der “Sekundarstufe II” (auch gymnasiale Oberstufe genannt)."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000020> "The \"Schulstufe\" is an “information content entity”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000020> "The \"Schulstufe\" is an “information content entity”.
 It refers to a specific phase of the school career in which learners are expected to achieve certain goals according to the requirements of the education system.
 \"Schulstufen\" provide learners with a structured learning path, with pedagogical and didactic requirements adapted to the respective age groups.
 Each \"Schulstufe\" includes designated grade levels depending on the educational track and federal state.
@@ -723,65 +727,61 @@ the \"Fachniveau\" (which describes the depth and scope of a specific subject in
 In general education, we distinguish between the \"Primarstufe\" (also called Grundschule), the \"Sekundarstufe I\", and the \"Sekundarstufe II\" (also known as the upper secondary level or \"gymnasiale Oberstufe\").
 Note:
 The \"Primarbereich\", \"Sekundarbereich I\", and \"Sekundarbereich II\" are instances of the class \"Schulstufe\"."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulstufe"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000020> "educational level"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000020> "Bildungsbereich"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulbereich"@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000028> (Bildungsgangniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000028> "Das “Bildungsgangniveau” ist ein “Niveau”, das die Anforderungen innerhalb eines “Bildungsgangs” beschreibt und dabei den Unterschied in den Leistungsniveaus zwischen verschiedenen Bildungsgängen kennzeichnet.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000028> "Bildungsgangniveau"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000028> "educational track level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000028> "Das “Bildungsgangniveau” ist ein “Niveau”, das die Anforderungen innerhalb eines “Bildungsgangs” beschreibt und dabei den Unterschied in den Leistungsniveaus zwischen verschiedenen Bildungsgängen kennzeichnet.
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden. 
 In der Ontologie wird unterschieden zwischen dem “Hauptschulniveau”, dem “Realschulniveau”, dem “Gymnasialniveau Sek I” und dem “Gymnasialniveau Sek II”.
 Diese entsprechen den grundlegenden, mittleren und erweiterten Anforderungen, die in einigen Lehrplänen der Sekundarstufe I zur Kategorisierung von Kompetenzspezifikationen verwendet werden.
 Während das „Fachniveau Sek II“ die spezifischen Anforderungen in einem einzelnen Fach innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II beschreibt, bezieht sich das „Bildungsgangniveau“ auf das Niveau eines gesamten Bildungsgangs, der auf einen bestimmten Abschluss abzielt."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000028> "The \"Bildungsgangniveau\" is a \"Niveau\" that describes the requirements within an \"Bildungsgang\" and characterizes the differences in performance levels between various educational tracks.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000028> "The \"Bildungsgangniveau\" is a \"Niveau\" that describes the requirements within an \"Bildungsgang\" and characterizes the differences in performance levels between various educational tracks.
 It describes the depth and level of demand with which learning content and competencies are addressed within this educational track.
 In the ontology, a distinction is made between \"Hauptschulniveau\", \"Realschulniveau\", \"Gymnasialniveau Sek I\", and \"Gymnasialniveau Sek II\".
 These correspond to the basic, intermediate, and advanced requirements used in some lower secondary curricula to categorize competences.
 While the \"Fachniveau Sek II\" describes the specific requirements in a single subject within the upper secondary level of the Gymnasium track, the \"Bildungsgangniveau\" refers to the level of an entire educational track aimed at a specific qualification."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000028> "Bildungsgangniveau"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000028> "educational track level"@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000028> <https://w3id.org/lehrplan/ontology/LP_0000037>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000037> (Niveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000037> "Das “Niveau” ist eine “Informationseinheit”. 
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000037> "Niveau"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000037> "niveau"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000037> "Das “Niveau” ist eine “Informationseinheit”. 
 Sie bezeichnet eine Kategorisierung des Ausmaßes der Ausprägung eines oder mehrerer bestimmten Merkmale. 
 Im Bildungskontext bezeichnet das “Niveau” das Level, die Komplexität, die Tiefe oder den Schwierigkeitsgrad eines Lerninhalts oder einer Kompetenz, die in einem Lehrplan oder Bildungsstandard festgelegt ist.
 Das Niveau gibt an, welche Anforderungen in Bezug auf Wissen, Fähigkeiten und Fertigkeiten an Lernende gestellt werden und kann sich in Anforderungsbereiche, Bildungsgang-, Fach-  und Fremdsprachenniveau differenzieren. 
 Es drückt nicht aus, in welcher Jahrgangs- oder Schulstufe sich die Lernenden befinden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000037> "The \"Niveau\" is an “information content entity”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000037> "The \"Niveau\" is an “information content entity”.
 It denotes a categorization of the extent to which one or more specific characteristics are expressed.
 In the educational context, the \"Niveau\" refers to the level, complexity, depth, or degree of difficulty of a learning content or a competence defined in a curriculum or educational standard.
 The \"Niveau\" indicates the requirements placed on learners in terms of knowledge, skills, and abilities, and can be differentiated into areas such as levels of demand, educational track level, subject level, and foreign language level.
 It does not indicate the grade or school level of the learners."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000037> "Niveau"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000037> "niveau"@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000039> (BistaFach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000039> "A \"Bistafach\" is a \"Schulfach\" for which the KMK has published \"Bildungsstandards\".
-The \"Bistafächer\" are German, mathematics, the first foreign language (English or French), and the three natural sciences: biology, chemistry, and physics."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000039> "Ein “Bistafach” ist ein “Schulfach”, zu dem es von der KMK veröffentlichte
-Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fremdsprache (Englisch oder Französisch) und die drei Naturwissenschaften Biologie, Chemie und Physik."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000039> "BistaFach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000039> "A \"Bistafach\" is a \"Schulfach\" for which the KMK has published \"Bildungsstandards\".
+The \"Bistafächer\" are German, mathematics, the first foreign language (English or French), and the three natural sciences: biology, chemistry, and physics."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000039> "Ein “Bistafach” ist ein “Schulfach”, zu dem es von der KMK veröffentlichte
+Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fremdsprache (Englisch oder Französisch) und die drei Naturwissenschaften Biologie, Chemie und Physik."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000039> ObjectOneOf(<http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/kim/schulfaecher/s1022>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000039> <https://w3id.org/lehrplan/ontology/LP_0000001>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000040> (state designation)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000040> "Class of the designations of the German federal states whose ministries of education and cultural affairs are responsible for the curricula."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000040> "Klasse der Bezeichnungen der deutschen Bundesländer, deren Kultusministerien für die Lehrpläne zuständig ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000040> "Bundesland Bezeichnung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000040> "state designation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000040> "Class of the designations of the German federal states whose ministries of education and cultural affairs are responsible for the curricula."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000040> "Klasse der Bezeichnungen der deutschen Bundesländer, deren Kultusministerien für die Lehrpläne zuständig ist."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000040> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_3000031> <https://w3id.org/lehrplan/ontology/LP_3000043> <https://w3id.org/lehrplan/ontology/LP_3000044> <https://w3id.org/lehrplan/ontology/LP_3000045> <https://w3id.org/lehrplan/ontology/LP_3000046> <https://w3id.org/lehrplan/ontology/LP_3000047> <https://w3id.org/lehrplan/ontology/LP_3000048> <https://w3id.org/lehrplan/ontology/LP_3000049> <https://w3id.org/lehrplan/ontology/LP_3000050> <https://w3id.org/lehrplan/ontology/LP_3000051> <https://w3id.org/lehrplan/ontology/LP_3000052> <https://w3id.org/lehrplan/ontology/LP_3000053> <https://w3id.org/lehrplan/ontology/LP_3000054> <https://w3id.org/lehrplan/ontology/LP_3000055> <https://w3id.org/lehrplan/ontology/LP_3000056> <https://w3id.org/lehrplan/ontology/LP_3000057>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000043> (secondary phase)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000043> "Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000043> "Oberstufenphase"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000043> "secondary phase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000043> "Die “Oberstufenphase” ist eine Informationseinheit, die die Phase der Sekundarstufe II beschreibt. Sie umfasst die Einführungs- und die Qualifikationsphase der gymnasialen Oberstufe, welche die Schülerinnen und Schüler systematisch auf das Abitur (Allgemeine Hochschulreife) vorbereitet – beginnend mit der fachlichen Einführung bis hin zur prüfungsrelevanten Qualifikation.")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000053> (Berlin-Brandenburg)
 
@@ -798,38 +798,39 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000054> <https://w3id.org/leh
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000056> (Einführungsphase)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000056> "Die Einführungsphase ist der erste Abschnitt der gymnasialen Oberstufe in der Sekundarstufe II. Sie dient dem Übergang von der Mittelstufe in die Oberstufe, der Angleichung unterschiedlicher Lernvoraussetzungen sowie der Einführung in die Kursstruktur und Arbeitsweisen der Oberstufe.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000056> "Einführungsphase"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000056> "Die Einführungsphase ist der erste Abschnitt der gymnasialen Oberstufe in der Sekundarstufe II. Sie dient dem Übergang von der Mittelstufe in die Oberstufe, der Angleichung unterschiedlicher Lernvoraussetzungen sowie der Einführung in die Kursstruktur und Arbeitsweisen der Oberstufe.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000056> <https://w3id.org/lehrplan/ontology/LP_0000043>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000057> (Qualifikationsphase)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000057> "Die Qualifikationsphase ist der zweite Abschnitt der gymnasialen Oberstufe, in dem die erbrachten Leistungen in die Abiturnote einfließen. Sie umfasst in der Regel zwei Schuljahre und dient der fachlichen Vertiefung sowie der gezielten Vorbereitung auf die Abiturprüfungen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000057> "Qualifikationsphase"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000057> "Hauptphase")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000057> "Die Qualifikationsphase ist der zweite Abschnitt der gymnasialen Oberstufe, in dem die erbrachten Leistungen in die Abiturnote einfließen. Sie umfasst in der Regel zwei Schuljahre und dient der fachlichen Vertiefung sowie der gezielten Vorbereitung auf die Abiturprüfungen.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000057> <https://w3id.org/lehrplan/ontology/LP_0000043>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000069> (Gymnasialniveau Sek I)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000069> "Das \"Gymnasialniveau Sek I” ist ein “Bildungsgangniveau”, welches das Niveau des \"gymnasialen Bildungsgangs\" im Sekundarbereich I beschreibt und somit meistens die Jahrgangsstufen 5-10 umfasst.
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000069> "The \"Gymnasialniveau Sek I\" is a \"Bildungsgangniveau\" that describes the level of the “Gymnasialer Bildungsgang” in lower secondary education, usually covering grades 5 to 10.
-It describes the depth and level of demand with which learning content and competencies are addressed within this educational track."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000069> "Gymnasialniveau Sek I"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000069> "Das \"Gymnasialniveau Sek I” ist ein “Bildungsgangniveau”, welches das Niveau des \"gymnasialen Bildungsgangs\" im Sekundarbereich I beschreibt und somit meistens die Jahrgangsstufen 5-10 umfasst.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000069> "The \"Gymnasialniveau Sek I\" is a \"Bildungsgangniveau\" that describes the level of the “Gymnasialer Bildungsgang” in lower secondary education, usually covering grades 5 to 10.
+It describes the depth and level of demand with which learning content and competencies are addressed within this educational track."@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000028>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000076> (Allgemeine Hochschulreife)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000076> "The \"Allgemeine Hochschulreife\" is a \"Schulabschluss\" and the highest general education school-leaving qualification.
-It is awarded after grade 12 or 13, depending on the federal state and type of school, and entitles the holder to study at a university.
-The term \"Allgemeine Hochschulreife\" is used synonymously with \"Abitur\"."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000076> "Allgemeine Hochschulreife"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000076> "Die “Allgemeine Hochschulreife” ist ein “Schulabschluss” und der höchste allgemeinbildende Schulabschluss. Er wird je nach Bundesland und Schulart nach der Jahrgangsstufe 12 oder 13 verliehen und berechtigt zum Studium an einer Hochschule. Die “Allgemeine Hochschulreife” wird synonym zum Begriff Abitur verwendet."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000076> "The \"Allgemeine Hochschulreife\" is a \"Schulabschluss\" and the highest general education school-leaving qualification.
+It is awarded after grade 12 or 13, depending on the federal state and type of school, and entitles the holder to study at a university.
+The term \"Allgemeine Hochschulreife\" is used synonymously with \"Abitur\"."@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000076> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000019> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000071> <https://w3id.org/lehrplan/ontology/LP_0000835>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000078> (Mittlerer Schulabschluss)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000078> "Der “Mittlere Schulabschluss” ist ein “Schulabschluss” und ein allgemeinbildender Schulabschluss. Er wird nach der Jahrgangsstufe 10 verliehen. In den Bundesländern trägt der “Mittlere Schulabschluss” verschiedene Bezeichnungen:
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000078> "Mittlerer Schulabschluss"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000078> "Der “Mittlere Schulabschluss” ist ein “Schulabschluss” und ein allgemeinbildender Schulabschluss. Er wird nach der Jahrgangsstufe 10 verliehen. In den Bundesländern trägt der “Mittlere Schulabschluss” verschiedene Bezeichnungen:
 - Mittlerer Schulabschluss (BY, BE, HB, HH, SH, BW, NW)
 - Mittlere Reife (MV)
 - Mittlerer Bildungsabschluss (SL)
@@ -837,7 +838,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000078>
 - Berechtigung zum Besuch der gymnasialen Oberstufe (BB, NW)
 - Fachoberschulreife (BB)
 - Qualifizierter Sekundarabschluss I (RP)"@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000078> "The \"Mittlere Schulabschluss\" is a \"Schulabschluss\" and a general education school-leaving qualification.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000078> "The \"Mittlere Schulabschluss\" is a \"Schulabschluss\" and a general education school-leaving qualification.
 It is awarded after grade 10.
 In the federal states, the \"Mittlere Schulabschluss\" has various designations:
 - Mittlerer Schulabschluss (BY, BE, HB, HH, SH, BW, NW)
@@ -847,18 +848,18 @@ In the federal states, the \"Mittlere Schulabschluss\" has various designations:
 - Berechtigung zum Besuch der gymnasialen Oberstufe (BB, NW)
 - Fachoberschulreife (BB)
 - Qualifizierter Sekundarabschluss I (RP)"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000078> "Mittlerer Schulabschluss"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000078> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000019> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000071> <https://w3id.org/lehrplan/ontology/LP_0000832>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000079> (Erster Schulabschluss)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000079> "Der “Erste Schulabschluss” ist ein “Schulabschluss” und ist der erste allgemeinbildende Schulabschluss. Er wird je nach Bundesland und Schulart nach der Jahrgangsstufe 9 oder 10 verliehen. In den Bundesländern trägt der “Erste Schulabschluss” verschiedene Bezeichnungen:
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000079> "Erster Schulabschluss"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000079> "Der “Erste Schulabschluss” ist ein “Schulabschluss” und ist der erste allgemeinbildende Schulabschluss. Er wird je nach Bundesland und Schulart nach der Jahrgangsstufe 9 oder 10 verliehen. In den Bundesländern trägt der “Erste Schulabschluss” verschiedene Bezeichnungen:
 - Erster allgemeinbildender Schulabschluss (HH, NW, SH)
 - Hauptschulabschluss (BW, HE, NI, SL, SN, ST, TH)
 - Berufsbildungsreife (BB, BE, HB)
 - Berufsreife (MV, RP)
 - Erfolgreicher Abschluss der Mittelschule (BY)"@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000079> "The \"Erste Schulabschluss\" is a \"Schulabschluss\" and represents the first general education school-leaving qualification.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000079> "The \"Erste Schulabschluss\" is a \"Schulabschluss\" and represents the first general education school-leaving qualification.
 It is awarded after grade 9 or 10, depending on the federal state and type of school.
 In the federal states, the \"Erste Schulabschluss\" has various designations:
 - Erster allgemeinbildender Schulabschluss (HH, NW, SH)
@@ -866,22 +867,21 @@ In the federal states, the \"Erste Schulabschluss\" has various designations:
 - Berufsbildungsreife (BB, BE, HB)
 - Berufsreife (MV, RP)
 - Erfolgreicher Abschluss der Mittelschule (BY)"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000079> "Erster Schulabschluss"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000079> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000019> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000071> <https://w3id.org/lehrplan/ontology/LP_0000834>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000111> (type of school)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000111> "A \"Schulart\" is a “information content entity”.
-It is a form of school characterized by specific features that define its organizational structure, pedagogical orientation, duration of the educational stage, and the intended school-leaving qualifications.
-Depending on the education system and the federal state, it may include different names and concepts such as Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, vocational school (\"Berufsschule\"), or special needs school (\"Förderschule\").
-In everyday language, \"Schulart\" and \"Schulform\" are often used synonymously."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000111> "Eine “Schulart” ist eine “Informationseinheit”.
-Sie beschreibt eine durch bestimmte Merkmale gekennzeichnete Form der Schule, die deren organisatorische Struktur, pädagogische Ausrichtung, die Dauer des Bildungsgangabschnitts sowie die angestrebten Schulabschlüsse festlegt. Sie kann je nach Bildungssystem und Bundesland unterschiedliche Bezeichnungen und Konzepte umfassen, wie Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, Berufsschule oder Förderschule.
-Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym verwendet."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000111> "Schulart"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000111> "type of school"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000111> "Schulform"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000111> "Schultyp"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000111> "A \"Schulart\" is a “information content entity”.
+It is a form of school characterized by specific features that define its organizational structure, pedagogical orientation, duration of the educational stage, and the intended school-leaving qualifications.
+Depending on the education system and the federal state, it may include different names and concepts such as Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, vocational school (\"Berufsschule\"), or special needs school (\"Förderschule\").
+In everyday language, \"Schulart\" and \"Schulform\" are often used synonymously."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000111> "Eine “Schulart” ist eine “Informationseinheit”.
+Sie beschreibt eine durch bestimmte Merkmale gekennzeichnete Form der Schule, die deren organisatorische Struktur, pädagogische Ausrichtung, die Dauer des Bildungsgangabschnitts sowie die angestrebten Schulabschlüsse festlegt. Sie kann je nach Bildungssystem und Bundesland unterschiedliche Bezeichnungen und Konzepte umfassen, wie Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, Berufsschule oder Förderschule.
+Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym verwendet."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000111> "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als \"Kategorie\" der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -909,32 +909,34 @@ Bsp:
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000261> (curricular element)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000261> "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "Curriculares Element"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "curricular element"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000261> "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
 
 In the ontology, the \"Curriculares Element\" serves as a superordinate category to structure the components that describe the content and competencies to be acquired within a curriculum or educational standard.
 
 A “Curriculares Element” can also have a function that defines its purpose within the curriculum in more detail. This allows the state-specific components of the curricula to be mapped, as common functions can be assigned to them.
 
 Subclasses of the “Curriculares Element” that are not state-specific are labelled with the prefix ‘CE-’."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000261> "Ein “Curriculares Element” ist eine Informationseinheit, die bei der Beschreibung der Bestandteile eines Lehrplans oder Bildungsstandards verwendet wird.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000261> "Ein “Curriculares Element” ist eine Informationseinheit, die bei der Beschreibung der Bestandteile eines Lehrplans oder Bildungsstandards verwendet wird.
 
 In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die Elemente zu ordnen, aus denen sich Beschreibungen der zu erwerbenden Inhalte und Kompetenzen eines Lehrplans oder eines Bildungsstandards zusammensetzen.
 
 Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können.
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "Curriculares Element"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "curricular element"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000261> "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bildungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000263> (competency specification)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000263> "A “CE-Kompetenzspezifikation” is a “Curriculares Element” that describes a competence.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "CE-Kompetenzspezifikation"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "competency specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000263> "A “CE-Kompetenzspezifikation” is a “Curriculares Element” that describes a competence.
 It usually contains an operator and begins with “The students [...]” or “The learners [...]” for example.
 The ontology distinguishes between “CE-Kompetenzspezifikation” and “Kompetenz”:
 A competence is understood as the ability of a learner to apply knowledge and skills to solve problems (cf. KMK). 
 In contrast to competence, which is anchored in the learner as an ability or skill, the “CE-Kompetenzspezifikation” is the description of this competence within the framework of a curriculum or educational standard."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000263> "Eine “CE-Kompetenzspezifikation” ist ein “Curriculares Element”, das eine Kompetenz beschreibt.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000263> "Eine “CE-Kompetenzspezifikation” ist ein “Curriculares Element”, das eine Kompetenz beschreibt.
 Es enthält üblicherweise einen Operator und beginnt zum Beispiel mit “Die Schülerinnen und Schüler [...]” oder “Die Lernenden [...]”.
 Die Ontologie unterscheidet zwischen “CE-Kompetenzspezifikation” und “Kompetenz”:
 Unter einer Kompetenz wird die Fähigkeit eines Lernenden verstanden, Wissen und Können zur Lösung von Problemen anzuwenden (vgl. KMK). 
@@ -944,19 +946,17 @@ Beispiel:
 
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "CE-Kompetenzspezifikation"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000263> "competency specification"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000263> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <https://w3id.org/lehrplan/ontology/LP_0000349>) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000346>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000265> (Fachniveau Sek II)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000265> "Das “Fachniveau Sek II” ist ein “Niveau”. Es bezeichnet das Anforderungsniveau eines bestimmten Fachs in der Sekundarstufe II und bringt zum Ausdruck, ob ein “Curriculares Element” einem “Grundkurs” oder einem “Leistungskurs” zugeordnet ist. 
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000265> "Fachniveau Sek II"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000265> "Das “Fachniveau Sek II” ist ein “Niveau”. Es bezeichnet das Anforderungsniveau eines bestimmten Fachs in der Sekundarstufe II und bringt zum Ausdruck, ob ein “Curriculares Element” einem “Grundkurs” oder einem “Leistungskurs” zugeordnet ist. 
 Die beiden Fachniveaus unterscheiden sich in der Komplexität und Tiefe des Unterrichts sowie im Umfang der Inhalte und der zu erbringenden Leistungen.
 Während das „Bildungsgangniveau“ das Niveau eines gesamten Bildungsgangs beschreibt, der auf einen bestimmten Abschluss abzielt, bezieht sich das „Fachniveau Sek II“ auf die spezifischen Anforderungen eines Fachs innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000265> "The \"Fachniveau Sek II\" is a \"Niveau\". It refers to the level of requirements for a specific subject in upper secondary education (\"Sekundarstufe II\") and indicates whether a \"Curriculares Element\" is assigned to a \"Grundkurs\" or a \"Leistungskurs\".
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000265> "The \"Fachniveau Sek II\" is a \"Niveau\". It refers to the level of requirements for a specific subject in upper secondary education (\"Sekundarstufe II\") and indicates whether a \"Curriculares Element\" is assigned to a \"Grundkurs\" or a \"Leistungskurs\".
 The two “Fachniveaus” differ in the complexity and depth of instruction, as well as in the scope of content and the performance expectations.
 While the \"Bildungsgangniveau\" describes the level of an entire educational track aimed at a specific qualification, the \"Fachniveau Sek II\" refers to the specific requirements of a subject within the Gymnasium track of upper secondary education."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000265> "Fachniveau Sek II"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000265> <https://w3id.org/lehrplan/ontology/LP_0000037>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000268> (Leitidee (Bista))
@@ -968,10 +968,12 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000268> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000332> (CE-Lerninhalt)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000332> "A “CE-Lerninhalt” is a “curricular element” that describes a learning content in the form of specific topics. The “CE-Lerninhalt” provides the content basis for the preparation of school lessons.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000332> "CE-Lerninhalt"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000332> "learning content"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000332> "A “CE-Lerninhalt” is a “curricular element” that describes a learning content in the form of specific topics. The “CE-Lerninhalt” provides the content basis for the preparation of school lessons.
 Competencies can be acquired on the basis of the “CE-Lerninhalt”.
 A “CE-Lerninhalt” can contain another “CE-Lerninhalt”, but no other element (such as e.g. “CE-Bereich” or “CE-Kompetenzspezifikation”)."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000332> "Ein “CE-Lerninhalt” ist ein “Curriculares Element\", das einen Lerninhalt in Form konkreter Themen beschreibt. Der „CE-Lerninhalt“ liefert die inhaltliche Basis für die Gestaltung des Unterrichts.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000332> "Ein “CE-Lerninhalt” ist ein “Curriculares Element\", das einen Lerninhalt in Form konkreter Themen beschreibt. Der „CE-Lerninhalt“ liefert die inhaltliche Basis für die Gestaltung des Unterrichts.
 Anhand des \"CE-Lerninhalts\" können Kompetenzen erworben werden.
 Ein CE-Lerninhalt kann einen anderen CE-Lerninhalt enthalten, aber kein anderes Element (wie z.B. CE-Bereich oder CE-Kompetenzspezifikation). 
 
@@ -980,8 +982,6 @@ Beispiel:
 
 CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
 CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000332> "CE-Lerninhalt"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000332> "learning content"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000332> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000332> <https://w3id.org/lehrplan/ontology/LP_0000349>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000336> (Fachbezogene Kompetenzspezifikation)
@@ -998,27 +998,27 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000337> <https://w3id.org/leh
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000346> (title)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000346> "Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird.
-Er ist die menschenlesbare, inhaltlich beschreibende Bezeichnung einer Entität (z. B. eines Kompetenzbereichs, Themas oder Abschnitts)."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000346> "Titel"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000346> "title"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000346> "Ein Titel ist eine textuelle Entität, die dazu dient, eine andere Entität eindeutig zu benennen oder kurz zu kennzeichnen und primär zur Identifikation oder Wiedererkennung dieser Entität verwendet wird.
+Er ist die menschenlesbare, inhaltlich beschreibende Bezeichnung einer Entität (z. B. eines Kompetenzbereichs, Themas oder Abschnitts)."@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000347> (ID number)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000347> "Eine Identifikationsnummer ist eine Informationseinheit, die das Ergebnis eines Synchronisationsprozesses ist und dazu dient, auf eine bestimmte Instanz einer Entität zu verweisen, die von einer Gruppe von Personen gemeinsam genutzt wird, um diese einzelne Entität zu bezeichnen. Sie ist eine innerhalb eines Dokuments vergebene Kennzeichnung, die ein Objekt eindeutig von anderen Objekten derselben Art unterscheidbar macht. Sie dient der Strukturierung, Referenzierung und Zitierbarkeit von Inhalten (z. B. Kompetenzbereiche, Kapitel oder Abschnitte) und ist in der Regel systematisch aufgebaut (z. B. numerisch oder alphanumerisch).")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000347> "ID number"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000347> "Identifikationsnummer"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000347> "Eine Identifikationsnummer ist eine Informationseinheit, die das Ergebnis eines Synchronisationsprozesses ist und dazu dient, auf eine bestimmte Instanz einer Entität zu verweisen, die von einer Gruppe von Personen gemeinsam genutzt wird, um diese einzelne Entität zu bezeichnen. Sie ist eine innerhalb eines Dokuments vergebene Kennzeichnung, die ein Objekt eindeutig von anderen Objekten derselben Art unterscheidbar macht. Sie dient der Strukturierung, Referenzierung und Zitierbarkeit von Inhalten (z. B. Kompetenzbereiche, Kapitel oder Abschnitte) und ist in der Regel systematisch aufgebaut (z. B. numerisch oder alphanumerisch).")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000349> (area)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000349> "A “CE-Bereich” is a “Curriculares Element”.
-A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
-The element serves to structure curricula and educational standards by grouping “CE-Kompetenzspezifikationen” and/or “CE-Lerninhalte” under a common content focus, which is defined by the “CE-Bereich”."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000349> "Ein “CE-Bereich” ist ein “Curriculares Element”.
-Ein “CE-Bereich” kann anderen “CE-Bereichen” über- oder untergeordnet sein.
-Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es “CE-Kompetenzspezifikationen” und/oder “CE-Lerninhalte” unter einem gemeinsamen inhaltlichen Fokus zusammenfasst, der durch den “CE-Bereich” definiert wird."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000349> "CE-Bereich"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000349> "area"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000349> "A “CE-Bereich” is a “Curriculares Element”.
+A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
+The element serves to structure curricula and educational standards by grouping “CE-Kompetenzspezifikationen” and/or “CE-Lerninhalte” under a common content focus, which is defined by the “CE-Bereich”."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000349> "Ein “CE-Bereich” ist ein “Curriculares Element”.
+Ein “CE-Bereich” kann anderen “CE-Bereichen” über- oder untergeordnet sein.
+Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es “CE-Kompetenzspezifikationen” und/oder “CE-Lerninhalte” unter einem gemeinsamen inhaltlichen Fokus zusammenfasst, der durch den “CE-Bereich” definiert wird."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000349> "Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -1029,18 +1029,18 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000438> (Lehrplan)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000438> "A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000438> "Lehrplan"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000438> "curriculum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000438> "A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
 
 A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They serve as the basis for the development of specific curricula in the federal states.
 
 In addition to the binding requirements, the curriculum often also contains information on the didactic and methodological design of lessons as well as cross-references to related and interdisciplinary skills and content from other school subjects. Depending on the federal state, curricula can have different names."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000438> "Ein Lehrplan ist eine Informationseinheit, die eine systematische Zusammenstellung von curricularen Elementen umfasst. Er definiert verbindlich die Kompetenzen und Inhalte, die Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000438> "Ein Lehrplan ist eine Informationseinheit, die eine systematische Zusammenstellung von curricularen Elementen umfasst. Er definiert verbindlich die Kompetenzen und Inhalte, die Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
 
 Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen.
 
 Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Querverweise zu verwandten und fachübergreifenden Kompetenzen und Inhalten aus anderen Schulfächern. Je nach Bundesland können Lehrpläne unterschiedliche Bezeichnungen tragen, wie z. B. Bildungsplan, Fachanforderungen, Kerncurriculum, Kernlehrplan, LehrplanPLUS, Rahmenlehrplan oder Rahmenplan."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000438> "Lehrplan"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000438> "curriculum"@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000475> (Schulartfunktion)
 
@@ -1054,30 +1054,30 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000478> "
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000482> (Strukturierungsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000482> "Elemente, die diese Funktion inne haben, strukturieren die Lehrpläne."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000482> "Strukturierungsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000482> "Elemente, die diese Funktion inne haben, strukturieren die Lehrpläne."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000482> "Überschriften, Kapitel, Themenfelder, Kompetenzbereiche"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000482> <https://w3id.org/lehrplan/ontology/LP_0000478>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000493> (Beschreibungsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000493> "Elemente, die diese Funktion inne haben, beschreiben Teile des Lehrplans."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000493> "Beschreibungsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000493> "Elemente, die diese Funktion inne haben, beschreiben Teile des Lehrplans."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0000478>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000499> (Bezugsfunktionen)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000499> "Bezugsfunktion ist eine Funktionsspezifikation und kennzeichnet, welche inhaltliche Rolle ein länderspezifisches Curriculares Element im Lehrplan spielt – genauer: worauf es sich inhaltlich bezieht.
-Die Ontologie definiert drei konkrete Bezugsfunktionen als Individuen. Die Begrifflichkeiten stammen aus den Bildungsstandards der KMK. Sie gelten besonders für die Fächer Deutsch und Mathematik.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000499> "Bezugsfunktionen"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000499> "Bezugsfunktion ist eine Funktionsspezifikation und kennzeichnet, welche inhaltliche Rolle ein länderspezifisches Curriculares Element im Lehrplan spielt – genauer: worauf es sich inhaltlich bezieht.
+Die Ontologie definiert drei konkrete Bezugsfunktionen als Individuen. Die Begrifflichkeiten stammen aus den Bildungsstandards der KMK. Sie gelten besonders für die Fächer Deutsch und Mathematik.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000499> "Die Bezugsfunktion ist kein Freitext, sondern wird als OWL-Restriktion direkt in die Klassendefinition des länderspezifischen CE eingebaut: Jede CE-Klasse wie Kompetenzbereich (HH), Lernbereich (BY) oder Inhaltsfeld (NW) trägt in ihrer rdfs:subClassOf-Axiomatik eine owl:hasValue-Restriktion auf hat Funktion (LP_0000483), die auf das entsprechende Bezugsfunktions-Individuum zeigt. Das bedeutet: Sobald ein Lehrplanelement als Kompetenzbereich (HH) typisiert ist, weiß das System automatisch – ohne zusätzliche Aussagen in den Daten –, dass dieses Element die Bereichsfunktion trägt und damit einem CE-Bereich entspricht.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000499> <https://w3id.org/lehrplan/ontology/LP_0000478>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000508> (Zeitspezifikation)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000508> "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000508> "Zeitspezifikation"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000508> "temporal specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000508> "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000508> "Soll z.B. ausgedrückt werden, dass der Unterricht 6 Unterrichtsstunden enhält kann folgendes Muster verwendet werden:
 
 :unterricht_1 'mem:described by' :zs_1 .
@@ -1096,189 +1096,193 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000508> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000530> (Grundkursniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000530> "A \"Grundkursniveau\" is a \"Fachniveau Sek II\" within the Gymnasium track of upper secondary education (\"Sekundarstufe II\") that conveys content and competencies at a basic level of requirements.
-It describes the depth and level of demand with which learning content and competencies are addressed within a subject."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000530> "Ein \"Grundkursniveau\" ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem grundlegenden Anforderungsniveau vermittelt.
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000530> "Grundkursniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000530> "A \"Grundkursniveau\" is a \"Fachniveau Sek II\" within the Gymnasium track of upper secondary education (\"Sekundarstufe II\") that conveys content and competencies at a basic level of requirements.
+It describes the depth and level of demand with which learning content and competencies are addressed within a subject."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000530> "Ein \"Grundkursniveau\" ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem grundlegenden Anforderungsniveau vermittelt.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000530> <https://w3id.org/lehrplan/ontology/LP_0000265>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000531> (Leistungskursniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000531> "A \"Leistungskursniveau\" is a \"Fachniveau Sek II\" within the Gymnasium track of upper secondary education (\"Sekundarstufe II\") that conveys content and competencies at an advanced level of requirements.
-It describes the depth and level of demand with which learning content and competencies are addressed within a subject."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000531> "Ein \"Leistungskursniveau\" ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem vertieften Anforderungsniveau vermittelt.
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000531> "Leistungskursniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000531> "A \"Leistungskursniveau\" is a \"Fachniveau Sek II\" within the Gymnasium track of upper secondary education (\"Sekundarstufe II\") that conveys content and competencies at an advanced level of requirements.
+It describes the depth and level of demand with which learning content and competencies are addressed within a subject."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000531> "Ein \"Leistungskursniveau\" ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem vertieften Anforderungsniveau vermittelt.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000531> <https://w3id.org/lehrplan/ontology/LP_0000265>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000536> (Element (Bista))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000536> "Lehrplan Element bezogen auf die Vorgaben der KMK Bildungsstandards"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000536> "Element (Bista)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000536> "element (Bista)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000536> "Lehrplan Element bezogen auf die Vorgaben der KMK Bildungsstandards"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000536> <https://w3id.org/lehrplan/ontology/LP_0000261>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000540> (Schulfachbezug)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000540> "A \"Schulfachbezug\" is an “information content entity” that specifies the function and classification of a \"Schulfach\" in a particular context.
-Examples of \"Schulfachbezug\" include \"Erste Fremdsprache\", \"Pflichtfach\", or \"Wahlfach\"."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000540> "Ein “Schulfachbezug” ist eine “Informationseinheit” und gibt die Funktion und Spezifikation eines “Schulfachs”  in einem bestimmten Kontext an.
-Beispiele für “Schulfachbezug” sind “Erste Fremdsprache”, “Pflichtfach” oder “Wahlfach”."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000540> "Schulfachbezug"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000540> "school subject property"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000540> "A \"Schulfachbezug\" is an “information content entity” that specifies the function and classification of a \"Schulfach\" in a particular context.
+Examples of \"Schulfachbezug\" include \"Erste Fremdsprache\", \"Pflichtfach\", or \"Wahlfach\"."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000540> "Ein “Schulfachbezug” ist eine “Informationseinheit” und gibt die Funktion und Spezifikation eines “Schulfachs”  in einem bestimmten Kontext an.
+Beispiele für “Schulfachbezug” sind “Erste Fremdsprache”, “Pflichtfach” oder “Wahlfach”."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000540> "Die Bezeichnung Rolle war nicht günstig gewählt, da sie mit bfo:role verwechselt werden kann."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000540> "siehe Property https://w3id.org/lehrplan/ontology/LP_0000537")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000540> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000001>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000541> (Erste Fremdsprache)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000541> "Schulfachbezug, der ausdrückt, dass ein Schulfach als erste Fremdsprache gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000541> "Erste Fremdsprache"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000541> "Schulfachbezug, der ausdrückt, dass ein Schulfach als erste Fremdsprache gemeint ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000541> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000542> (Zweite Fremdsprache)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000542> "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000542> "Zweite Fremdsprache"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000542> "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000542> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000543> (Dritte Fremdsprache)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000543> "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000543> "Dritte Fremdsprache"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000543> "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000543> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000544> (Pflichtfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000544> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Pflichtfach gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000544> "Pflichtfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000544> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Pflichtfach gemeint ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000544> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000545> (Wahlpflichtfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000545> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlpflicht gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000545> "Wahlpflichtfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000545> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlpflicht gemeint ist."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000545> "Ggf. könnte auf Wahlfach und Pflichfach geschlossen werden. Dies ist aktuell nicht implementiert."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000545> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000547> (validity scope)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000547> "Ein information content entity, dass den zetlichen Gültigkeitsbereich eines Lehrplans beschreibt."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000547> "information content entity that describes the temporal validity of a curriculum")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000547> "Gültigkeitsbereich"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000547> "validity scope"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000547> "Ein information content entity, dass den zetlichen Gültigkeitsbereich eines Lehrplans beschreibt."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000547> "information content entity that describes the temporal validity of a curriculum")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000547> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000551> (Wahlfach)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000551> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlfach/fakultatives Fach gemeint ist."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000551> "Wahlfach"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000551> "Fakultatives Fach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000551> "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlfach/fakultatives Fach gemeint ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000551> <https://w3id.org/lehrplan/ontology/LP_0000540>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000554> (Didaktische Voraussetzung)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000554> "Ein didaktischer Verweis, der ausdrückt, dass das Zielobjekt vor dem Quellobjekt beherrscht werden sollte, damit dieses in einem curricular und didaktisch begründeten Lernpfad sinnvoll bearbeitet werden kann."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000554> "a specialized reference expressing that the target should be mastered before the source can reasonably be addressed within a didactically justified curriculum-based learning path"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000554> "Didaktische Voraussetzung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000554> "didactic prerequisite"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000554> "Ein didaktischer Verweis, der ausdrückt, dass das Zielobjekt vor dem Quellobjekt beherrscht werden sollte, damit dieses in einem curricular und didaktisch begründeten Lernpfad sinnvoll bearbeitet werden kann."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000554> "a specialized reference expressing that the target should be mastered before the source can reasonably be addressed within a didactically justified curriculum-based learning path"@en)
 AnnotationAssertion(<https://w3id.org/lehrplan/ontology/LP_0000015> <https://w3id.org/lehrplan/ontology/LP_0000554> "https://github.com/FWU-DE/lehrplan-ontologie/pull/9")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000554> <https://w3id.org/lehrplan/ontology/LP_0030065>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (educational standard (KMK))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000571> "Der “Bildungsstandard” ist eine “Informationseinheit”, die klar definierte, verbindliche Lernziele beschreibt, welche die Lernenden zu einem bestimmten Zeitpunkt erreichen sollen. Sie sorgt für eine einheitliche Qualität und Transparenz im Bildungssystem und ermöglicht eine objektive Messung der Leistungen.
-Die von der Kultusministerkonferenz (KMK) verabschiedeten Bildungsstandards greifen allgemeine Bildungsziele auf und legen fest, welche Kompetenzen die Schülerinnen und Schüler bis zu einer bestimmten Jahrgangsstufe an wesentlichen Inhalten erworben haben sollen. Die Bildungsstandards konzentrieren sich auf Kernbereiche eines Fachs und beschreiben erwartete Lernergebnisse. Die Bildungsstandards der Kultusministerkonferenz stellen eine Mischung aus Inhalts- und Outputstandards dar. Sie beziehen sich auf das im Durchschnitt erwartete Niveau der Leistungen von Schülerinnen und Schülern am Ende der Jahrgangsstufe 4, beim Ersten Schulabschluss, beim Mittleren Schulabschluss und bei der Allgemeinen Hochschulreife und sind damit Regelstandards. (Vgl. KMK)"@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000571> "The \"Bildungsstandard\" is an “Information Content Entity” that describes clearly defined, binding learning objectives which learners are expected to achieve at a specific point in time. It ensures consistent quality and transparency within the education system and enables objective performance measurement.
-The \"Bildungsstandards\" adopted by the Kultusministerkonferenz (KMK) reflect general educational goals and define which competencies students should have acquired in key subject areas by a certain grade level.
-The \"Bildungsstandards\" focus on core areas of a subject and describe expected learning outcomes.
-The \"Bildungsstandards\" of the KMK represent a combination of content and output standards. They refer to the average expected performance level of students at the end of grade 4, at the point of the First School Leaving Certificate, the Intermediate School Leaving Certificate, and the General Higher Education Entrance Qualification, and are therefore considered regular standards. (cf. KMK)"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000571> "Bildungsstandard (KMK)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000571> "educational standard (KMK)"@en)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000571> <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000571> "Der “Bildungsstandard” ist eine “Informationseinheit”, die klar definierte, verbindliche Lernziele beschreibt, welche die Lernenden zu einem bestimmten Zeitpunkt erreichen sollen. Sie sorgt für eine einheitliche Qualität und Transparenz im Bildungssystem und ermöglicht eine objektive Messung der Leistungen.
+Die von der Kultusministerkonferenz (KMK) verabschiedeten Bildungsstandards greifen allgemeine Bildungsziele auf und legen fest, welche Kompetenzen die Schülerinnen und Schüler bis zu einer bestimmten Jahrgangsstufe an wesentlichen Inhalten erworben haben sollen. Die Bildungsstandards konzentrieren sich auf Kernbereiche eines Fachs und beschreiben erwartete Lernergebnisse. Die Bildungsstandards der Kultusministerkonferenz stellen eine Mischung aus Inhalts- und Outputstandards dar. Sie beziehen sich auf das im Durchschnitt erwartete Niveau der Leistungen von Schülerinnen und Schülern am Ende der Jahrgangsstufe 4, beim Ersten Schulabschluss, beim Mittleren Schulabschluss und bei der Allgemeinen Hochschulreife und sind damit Regelstandards. (Vgl. KMK)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000571> "The \"Bildungsstandard\" is an “Information Content Entity” that describes clearly defined, binding learning objectives which learners are expected to achieve at a specific point in time. It ensures consistent quality and transparency within the education system and enables objective performance measurement.
+The \"Bildungsstandards\" adopted by the Kultusministerkonferenz (KMK) reflect general educational goals and define which competencies students should have acquired in key subject areas by a certain grade level.
+The \"Bildungsstandards\" focus on core areas of a subject and describe expected learning outcomes.
+The \"Bildungsstandards\" of the KMK represent a combination of content and output standards. They refer to the average expected performance level of students at the end of grade 4, at the point of the First School Leaving Certificate, the Intermediate School Leaving Certificate, and the General Higher Education Entrance Qualification, and are therefore considered regular standards. (cf. KMK)"@en)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000802> (Anforderungsbereich)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000802> "Umfasst Repräsentationen für die drei Anforderungsbereiche. Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000802> "Anforderungsbereich"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000802> "Umfasst Repräsentationen für die drei Anforderungsbereiche. Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000802> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000802> <https://w3id.org/lehrplan/ontology/LP_0000037>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000808> (Organisation)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000808> "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000808> "Eine Organisation ist eine materielle entität, die Rollen inne haben kann, Mitglieder hat und über ein Regelwerk verfügt. Mitglieder einer Organisation sind entweder andere Organisationen oder einzelne Personen. Mitglieder können spezifische Organisationsrollen innehaben, die durch das Regelwerk der Organisation festgelegt werden. Das Regelwerk bestimmt außerdem, wie Entscheidungen im Namen der Organisation von ihren Mitgliedern getroffen werden."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000808> "Organisation"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000808> "organization"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000808> "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000808> "Eine Organisation ist eine materielle entität, die Rollen inne haben kann, Mitglieder hat und über ein Regelwerk verfügt. Mitglieder einer Organisation sind entweder andere Organisationen oder einzelne Personen. Mitglieder können spezifische Organisationsrollen innehaben, die durch das Regelwerk der Organisation festgelegt werden. Das Regelwerk bestimmt außerdem, wie Entscheidungen im Namen der Organisation von ihren Mitgliedern getroffen werden."@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000809> (Schule)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000809> "Eine Schule ist eine Organisation (Bildungseinrichtung), in der Lernende im Rahmen eines geregelten Bildungsauftrags nach verbindlichen Lehrplänen unterrichtet werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000809> "School is an organization (educational institution) that provides organized and continuous instruction and learning for students, typically within a defined educational framework, curriculum, and governance structure."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000809> "Schule"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000809> "school"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000809> "Eine Schule ist eine Organisation (Bildungseinrichtung), in der Lernende im Rahmen eines geregelten Bildungsauftrags nach verbindlichen Lehrplänen unterrichtet werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000809> "School is an organization (educational institution) that provides organized and continuous instruction and learning for students, typically within a defined educational framework, curriculum, and governance structure."@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000809> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000808> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000475>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000810> (school class)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000810> "A school class is an organizationally defined group of students, usually belonging to the same grade level, who are taught together over a defined period of time."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000810> "Eine Schulklasse ist eine organisatorisch festgelegte Lerngruppe von Schülerinnen und Schülern, die in der Regel derselben Jahrgangsstufe angehören und über einen bestimmten Zeitraum gemeinsam unterrichtet werden."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000810> "Schulklasse"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000810> "school class"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000810> "A school class is an organizationally defined group of students, usually belonging to the same grade level, who are taught together over a defined period of time."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000810> "Eine Schulklasse ist eine organisatorisch festgelegte Lerngruppe von Schülerinnen und Schülern, die in der Regel derselben Jahrgangsstufe angehören und über einen bestimmten Zeitraum gemeinsam unterrichtet werden."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000810> <https://w3id.org/lehrplan/ontology/LP_0000808>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000813> (Hauptschulbildungsgang)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000813> "ALT Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000813> "NEU Der “Hauptschulbildungsgang” ist ein “Bildungsgang”.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschulbildungsgang"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschule track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000813> "ALT Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000813> "NEU Der “Hauptschulbildungsgang” ist ein “Bildungsgang”.
 Er bereitet Lernende in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Jahrgangsstufe mit dem Ersten Schulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Lernende erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der erste Schulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen die Zulassung zu höheren Bildungsgängen (Realschulbildungsgang, Gymnasialer Bildungsgang) ermöglichen."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000813> "The \"Hauptschulbildungsgang\" is a \"Bildungsgang\".
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000813> "The \"Hauptschulbildungsgang\" is a \"Bildungsgang\".
 It primarily prepares learners for vocational training and direct entry into the workforce.
 It typically concludes after grade 9 or 10 with the \"Erste Schulabschluss\".
 The focus is on a basic general education, combined with practical and career-oriented elements.
 In addition to core subjects (German, mathematics), learners also acquire technical or manual skills.
 The \"Erste Schulabschluss\" provides access to vocational training programs and, with appropriate performance, may also allow admission to higher educational tracks (e.g., \"Realschulbildungsgang\", \"Gymnasialer Bildungsgang\")."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000813> "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschulbildungsgang"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000813> "Hauptschule track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000813> "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000813> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000834>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000814> (Realschule track)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000814> "ALT Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000814> "NEU Der “Realschulbildungsgang” ist ein “Bildungsgang”.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschulbildungsgang"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschule track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000814> "ALT Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000814> "NEU Der “Realschulbildungsgang” ist ein “Bildungsgang”.
 Er vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zum Mittleren Schulabschluss. Dieser ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen die Zulassung zum gymnasialen Bildungsgang befähigen. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000814> "The \"Realschulbildungsgang\" is a \"Bildungsgang\".
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000814> "The \"Realschulbildungsgang\" is a \"Bildungsgang\".
 It provides a solid general education with an emphasis on practical content.
 It leads to the \"Mittlere Schulabschluss\" after grade 10.
 This qualification allows access to vocational training and, with sufficient achievement, may also enable admission to the \"Gymnasialer Bildungsgang\".
 Instruction is less theoretical than at the Gymnasium but more demanding than in the \"Hauptschulbildungsgang\"."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000814> "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschulbildungsgang"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000814> "Realschule track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000814> "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000814> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000832>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000815> (Gymnasialer Bildungsgang)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000815> "ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasialer Bildungsgang"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasium track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000815> "ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
 
 Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium erfolgen. Auch in der Sekundarstufe I wird z.B. an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000815> "NEU Der “Gymnasiale Bildungsgang” ist ein “Bildungsgang”. Er zielt darauf ab, Lernende auf das Abitur und ein späteres Studium vorzubereiten. In der Regel erschreckt sich der Bildungsgang bis zur 12. oder 13. Jahrgangsstufe und endet mit dem Abschluss der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Die Lehrplaninhalte für den “Gymnasialen Bildungsgang” sind akademisch anspruchsvoller und theoretischer als die für den “Hauptschul-” oder “Realschulbildungsgang”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000815> "NEU Der “Gymnasiale Bildungsgang” ist ein “Bildungsgang”. Er zielt darauf ab, Lernende auf das Abitur und ein späteres Studium vorzubereiten. In der Regel erschreckt sich der Bildungsgang bis zur 12. oder 13. Jahrgangsstufe und endet mit dem Abschluss der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Die Lehrplaninhalte für den “Gymnasialen Bildungsgang” sind akademisch anspruchsvoller und theoretischer als die für den “Hauptschul-” oder “Realschulbildungsgang”.
 Der “Gymnasiale Bildungsgang” muss nicht zwangsläufig an der Schulart Gymnasium erfolgen, sondern kann auch an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000815> "The \"Gymnasiale Bildungsgang\" is a \"Bildungsgang\".
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000815> "The \"Gymnasiale Bildungsgang\" is a \"Bildungsgang\".
 It aims to prepare learners for the \"Abitur\" and subsequent university studies.
 Typically, this educational track extends to grade 12 or 13 and concludes with the \"Allgemeine Hochschulreife\" (Abitur), which grants access to universities and higher education institutions.
 The curriculum content for the \"Gymnasiale Bildungsgang\" is more academically demanding and theoretical than that of the \"Hauptschul-\" or \"Realschulbildungsgang\".
 The \"Gymnasiale Bildungsgang\" does not necessarily have to be completed at a Gymnasium; it can also be pursued at “Gesamt- oder Gemeinschaftsschulen” offering schooling at the Gymnasium level with the goal of achieving the \"Allgemeine Hochschulreife\"."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000815> "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasialer Bildungsgang"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000815> "Gymnasium track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000815> "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000815> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000835>))))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000816> (Bildungsgang)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000816> "A \"Bildungsgang\" refers to a specific educational pathway that leads to a particular qualification or school-leaving certificate.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "Bildungsgang"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "educational track"@en)
+AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926>)
+AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "A \"Bildungsgang\" refers to a specific educational pathway that leads to a particular qualification or school-leaving certificate.
 This pathway includes multiple school levels, the duration of which is defined by the \"Bildungsgang\".
 It requires the achievement of a defined competence profile, which is assessed through various forms of performance evaluation.
 Curricula specify the content and competencies to be assessed in each subject.
@@ -1286,7 +1290,7 @@ In the ontology, we distinguish three \"Bildungsgänge\" in general education:
 - The \"Hauptschulbildungsgang\", leading to the \"Erste Schulabschluss\";
 - The \"Realschulbildungsgang\", leading to the \"Mittlere Schulabschluss\";
 - The \"Gymnasiale Bildungsgang\", leading to the \"Allgemeine Hochschulreife\"."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000816> "ALT Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "ALT Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
 
 Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
 
@@ -1295,42 +1299,38 @@ Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anford
     Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
 
 Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000816> "NEU Ein Bildungsgang bezeichnet eine spezifische schulische Laufbahn, die zu einem bestimmten Abschluss oder einer Qualifikation führt. Innerhalb dieser Laufbahn werden mehrere Schulstufen durchlaufen, deren Dauer durch den Bildungsgang definiert ist. Er erfordert das Erreichen eines definierten Kompetenzprofils, welches durch verschiedene Arten der Leistungsfeststellung überprüft wird. Im Lehrplan werden die zu prüfenden Inhalte und Kompetenzen der jeweiligen Fächer festgelegt.  
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "NEU Ein Bildungsgang bezeichnet eine spezifische schulische Laufbahn, die zu einem bestimmten Abschluss oder einer Qualifikation führt. Innerhalb dieser Laufbahn werden mehrere Schulstufen durchlaufen, deren Dauer durch den Bildungsgang definiert ist. Er erfordert das Erreichen eines definierten Kompetenzprofils, welches durch verschiedene Arten der Leistungsfeststellung überprüft wird. Im Lehrplan werden die zu prüfenden Inhalte und Kompetenzen der jeweiligen Fächer festgelegt.  
 In der Ontologie unterscheiden wir im Bereich der allgemeinbildenden Schulen zwischen drei Bildungsgängen: 
 Der Hauptschulbildungsgang, der zum Ersten Schulabschluss führt;
 der Realschulbildungsgang, der zum Mittleren Schulabschluss führt;
 der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "Bildungsgang"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "educational track"@en)
-AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926>)
-AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000832> (Realschulniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000832> "Das “Realschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000832> "Realschulniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000832> "Das “Realschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des
 \"Realschulbildungsgangs\" beschreibt. 
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000832> "The \"Realschulniveau\" is a \"Bildungsgangniveau\" that describes the level of the “Realschulbildungsgang”.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000832> "The \"Realschulniveau\" is a \"Bildungsgangniveau\" that describes the level of the “Realschulbildungsgang”.
 It describes the depth and level of demand with which learning content and competencies are addressed within this educational track."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000832> "Realschulniveau"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000832> <https://w3id.org/lehrplan/ontology/LP_0000028>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000834> (Hauptschulniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000834> "Das “Hauptschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des \"Hauptschulbildungsgangs\" beschreibt. 
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000834> "The \"Hauptschulniveau\" is a \"Bildungsgangniveau\" that describes the level of the “Hauptschulbildungsgang”.
-It describes the depth and level of demand with which learning content and competencies are addressed within this educational track."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000834> "Hauptschulniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000834> "Das “Hauptschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des \"Hauptschulbildungsgangs\" beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000834> "The \"Hauptschulniveau\" is a \"Bildungsgangniveau\" that describes the level of the “Hauptschulbildungsgang”.
+It describes the depth and level of demand with which learning content and competencies are addressed within this educational track."@en)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000834> <https://w3id.org/lehrplan/ontology/LP_0000028>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000835> (Gymnasialniveau Sek II)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000835> "Das “Gymnasialniveau Sek II” ist ein “Bildungsgangniveau”, welches das Niveau des \"gymnasialen Bildungsgangs\" im Sekundarbereich II beschreibt und somit meistens die Jahrgangsstufen 11-13 umfasst.
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000835> "The \"Gymnasialniveau Sek II\" is a \"Bildungsgangniveau\" that describes the level of the “Gymnasialer Bildungsgangs” in upper secondary education, usually covering grades 11 to 13.
-It describes the depth and level of demand with which learning content and competencies are addressed within this educational track.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000835> "Gymnasialniveau Sek II"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000835> "Das “Gymnasialniveau Sek II” ist ein “Bildungsgangniveau”, welches das Niveau des \"gymnasialen Bildungsgangs\" im Sekundarbereich II beschreibt und somit meistens die Jahrgangsstufen 11-13 umfasst.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000835> "The \"Gymnasialniveau Sek II\" is a \"Bildungsgangniveau\" that describes the level of the “Gymnasialer Bildungsgangs” in upper secondary education, usually covering grades 11 to 13.
+It describes the depth and level of demand with which learning content and competencies are addressed within this educational track.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000835> <https://w3id.org/lehrplan/ontology/LP_0000028>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000845> (progression)
@@ -1342,28 +1342,28 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000845> "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000845> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000852> (CE-Hinweis)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000852> (note)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000852> "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000852> "CE-Hinweis"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000852> "note"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000852> "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
 - practical or methodological recommendations
 - Suggestions or tips for implementation in the classroom
 - Suggestions for in-depth study
 - Differentiation suggestions"@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000852> "Ein “CE-Hinweis” ist ein “Curriculares Element”, das ergänzende Informationen oder Anregungen zu einem “CE-Bereich”, einem “CE-Lerninhalt” oder einer “CE-Kompetenzspezifikation” beinhaltet. Der “CE-Hinweis” hat einen Empfehlungscharakter. Beispiele:
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000852> "Ein “CE-Hinweis” ist ein “Curriculares Element”, das ergänzende Informationen oder Anregungen zu einem “CE-Bereich”, einem “CE-Lerninhalt” oder einer “CE-Kompetenzspezifikation” beinhaltet. Der “CE-Hinweis” hat einen Empfehlungscharakter. Beispiele:
 - praktische oder methodische Empfehlungen
 - Vorschläge oder Hinweise zur Umsetzung im Unterricht
 - Vertiefungsvorschläge
 - Differenzierungsvorschläge"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000852> "CE-Hinweis"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000852> "note"@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000852> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000263> <https://w3id.org/lehrplan/ontology/LP_0000332> <https://w3id.org/lehrplan/ontology/LP_0000349>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001015> (fragment)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0001015> "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0001015> "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001015> "CE-Fragment"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001015> "fragment"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001015> "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001015> "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001015> "Mögliche Properties:
 - Titel
 - Ordnungsnummer
@@ -1376,25 +1376,25 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001015> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0010001> (Fremdsprachenniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010001> "Das “Fremdsprachenniveau” ist ein “Niveau”. Es entspricht dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER), der die Sprachbeherrschung einer Fremdsprache in sechs Stufen von A1 (Anfänger) bis C2 (annähernd muttersprachliches Niveau) systematisiert. Das Fremdsprachenniveau gibt an, in welchem Umfang Lernende die Sprache verstehen, sprechen, lesen und schreiben können, und dient als Vergleichsgrundlage innerhalb von Bildungsabschlüssen und internationalen Qualifikationen."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010001> "The \"Fremdsprachenniveau\" is a \"Niveau\".
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010001> "Fremdsprachenniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0010001> "Das “Fremdsprachenniveau” ist ein “Niveau”. Es entspricht dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER), der die Sprachbeherrschung einer Fremdsprache in sechs Stufen von A1 (Anfänger) bis C2 (annähernd muttersprachliches Niveau) systematisiert. Das Fremdsprachenniveau gibt an, in welchem Umfang Lernende die Sprache verstehen, sprechen, lesen und schreiben können, und dient als Vergleichsgrundlage innerhalb von Bildungsabschlüssen und internationalen Qualifikationen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0010001> "The \"Fremdsprachenniveau\" is a \"Niveau\".
 It corresponds to the Common European Framework of Reference for Languages (CEFR), which systematizes foreign language proficiency into six levels from A1 (beginner) to C2 (near-native proficiency).
 The \"Fremdsprachenniveau\" indicates the extent to which learners can understand, speak, read, and write the language, and serves as a basis for comparison within educational qualifications and international certifications."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010001> "Fremdsprachenniveau"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0000037>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030003> (description)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030003> "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt. Sie ergänzt den Titel oder Namen und dient dazu, den Inhalt, Zweck, Status oder Kontext eines Objekts verständlicher zu machen. Sie kann mehrere Sätze oder Absätze enthalten."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030003> "Beschreibung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030003> "description"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030003> "Eine Beschreibung ist eine textuelle Entität, die Eigenschaften, Merkmale, Inhalte oder Zusammenhänge einer Entität in erklärender oder erläuternder Form darstellt. Sie ergänzt den Titel oder Namen und dient dazu, den Inhalt, Zweck, Status oder Kontext eines Objekts verständlicher zu machen. Sie kann mehrere Sätze oder Absätze enthalten."@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030065> (reference)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030065> "A \"CE-Verweis\" is a \"Curriculares Element\" that establishes a connection from one “Curriculares Element” to another element within the same curriculum, a different curriculum, or external resources. The \"CE-Verweis\" is not the linked object itself but rather a reference to it."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030065> "Ein “CE-Verweis” ist ein “Curriculares Element”, das einen Bezug von einem Curricularen Element zu einem anderen Element desselben Lehrplans, eines anderen Lehrplans oder externen Ressourcen herstellt. Dabei ist der “CE-Verweis” nicht selbst das verlinkte Objekt, sondern stellt eine Referenz darauf dar."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030065> "CE-Verweis"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030065> "reference"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030065> "A \"CE-Verweis\" is a \"Curriculares Element\" that establishes a connection from one “Curriculares Element” to another element within the same curriculum, a different curriculum, or external resources. The \"CE-Verweis\" is not the linked object itself but rather a reference to it."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030065> "Ein “CE-Verweis” ist ein “Curriculares Element”, das einen Bezug von einem Curricularen Element zu einem anderen Element desselben Lehrplans, eines anderen Lehrplans oder externen Ressourcen herstellt. Dabei ist der “CE-Verweis” nicht selbst das verlinkte Objekt, sondern stellt eine Referenz darauf dar."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030065> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030263> (Kompetenzbereich (Bistas))
@@ -1440,18 +1440,18 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030269> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030325> (guiding perspective)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030325> "A guiding perspective is a curricular element that describes overarching educational principles connecting all subjects and types of schools, addressing socially relevant topics such as politics, culture, environment, and economy.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030325> "CE-Leitperspektive"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030325> "guiding perspective"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030325> "A guiding perspective is a curricular element that describes overarching educational principles connecting all subjects and types of schools, addressing socially relevant topics such as politics, culture, environment, and economy.
 These educational principles promote key competencies, value orientation, and personal development for an autonomous and responsible life.
 Serving as a unifying thread, they are embedded across subjects in both teaching and school life.
 The specific content and topics grouped under the term guiding perspectives, as well as the labels used for these concepts, vary by federal state.
 Examples of alternative terms include: cross-subject theme, cross-subject objective, educational and developmental objective, or cross-cutting theme."@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030325> "Eine “CE-Leitperspektive” ist ein “Curriculares Element”, das übergreifende Bildungsprinzipien beschreibt, die alle Fächer und Schulformen verbinden und gesellschaftlich relevante Themen wie Politik, Kultur, Umwelt und Wirtschaft aufgreifen.
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030325> "Eine “CE-Leitperspektive” ist ein “Curriculares Element”, das übergreifende Bildungsprinzipien beschreibt, die alle Fächer und Schulformen verbinden und gesellschaftlich relevante Themen wie Politik, Kultur, Umwelt und Wirtschaft aufgreifen.
 Die Bildungsprinzipien fördern Schlüsselkompetenzen, Werteorientierung und Persönlichkeitsentwicklung für ein selbstbestimmtes, verantwortungsbewusstes Leben.
 Als roter Faden sind sie fächerübergreifend in Unterricht und Schulleben verankert.
 Die konkreten Inhalte und Themen, die unter dem Begriff „Leitperspektiven“ zusammengefasst werden, sowie die Bezeichnungen dieser Konzepte unterscheiden sich je nach Bundesland. 
 Beispiele für alternative Begriffe sind: (fach-)übergreifendes Thema, (fach-)übergreifendes Ziel, Bildungs- und Erziehungsziel oder Querschnittsthema.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030325> "CE-Leitperspektive"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030325> "guiding perspective"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030325> "Oder:
 - (Fach)übergreifendes Thema
 - (Fach)Übergreifendes Ziel
@@ -1467,9 +1467,9 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030335> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030361> (Grundschulniveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030361> "Das “Grundschulniveau” ist ein “Bildungsgangniveau”, welches das Niveau einer Schülerin oder eines  Schülers im Primarbereich beschreibt. 
-Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen im Primarbereich behandelt werden.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030361> "Grundschulniveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030361> "Das “Grundschulniveau” ist ein “Bildungsgangniveau”, welches das Niveau einer Schülerin oder eines  Schülers im Primarbereich beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen im Primarbereich behandelt werden.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030361> <https://w3id.org/lehrplan/ontology/LP_0000028>)
 
 
@@ -1723,10 +1723,10 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000020> <https://w3id.org
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000046> (Sekundarbereich II)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000046> "Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000046> "Sekundarbereich II"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000046> "Gymnasiale Oberstufe"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000046> "Sekundarstufe II"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000046> "Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000020> <https://w3id.org/lehrplan/ontology/LP_0000046>)
 ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000046> <https://w3id.org/lehrplan/ontology/LP_0000050>)
 ObjectPropertyAssertion(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000046> <https://w3id.org/lehrplan/ontology/LP_0000051>)
@@ -1767,28 +1767,28 @@ ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https:/
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000479> (Kompetenzbeschreibungsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000479> "Ein Element, das diese Funktion inne hat, beschreibt Kompetenzen, die SuS haben können oder eine Ausführung in der die Kompetenz angewandt wird."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000479> "Kompetenzbeschreibungsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000479> "Ein Element, das diese Funktion inne hat, beschreibt Kompetenzen, die SuS haben können oder eine Ausführung in der die Kompetenz angewandt wird."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000479> "Ein Lehrplanelement das die Funktion inne hat das beschreibt z.B. \"Die SuS sollen Kompexen Zahlen addieren können\" oder \"über Konflikte sprechen\". Üblicherweise beginnt die Beschreibung mit \"Die SuS sollen .... \". Die Beschreibungen enthalten üblicherweise Operatoren."@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0000479>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000480> (Lerninhaltsbeschreibungsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000480> "Ein Element, das diese Funktion inne hat, beschreibt Inhalte, die im Unterricht vermittelt werden. Es beschreibt konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000480> "Lerninhaltsbeschreibungsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000480> "Ein Element, das diese Funktion inne hat, beschreibt Inhalte, die im Unterricht vermittelt werden. Es beschreibt konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen."@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0000480>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000481> (Materialbeschreibungsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000481> "Ein Element, das diese Funktion inne hat, beschreibt Materialien, die im Unterricht verwendet werden können."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000481> "Materialbeschreibungsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000481> "Ein Element, das diese Funktion inne hat, beschreibt Materialien, die im Unterricht verwendet werden können."@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0000481>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000497> (Bereichsfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich können Teilkomptenzbereiche untergeordnet werden."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000497> "Bereichsfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich können Teilkomptenzbereiche untergeordnet werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000497> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000482> <https://w3id.org/lehrplan/ontology/LP_0000497>)
@@ -1817,38 +1817,38 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000478> <https://w3id.org
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000535> (Unterrichtsstunde)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000535> "Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000535> "Unterrichtsstunde"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000535> "Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000535> "Im Allgemeinen umfasst eine Schulstunde 45 Minuten."@de)
 ClassAssertion(<http://qudt.org/schema/qudt/Unit> <https://w3id.org/lehrplan/ontology/LP_0000535>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000627> (Fragmentfunktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000627> "Ist eine Stukturierungsfunktion, die ein Lehrplanelement inne haben kann. 
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000627> "Fragmentfunktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000627> "Ist eine Stukturierungsfunktion, die ein Lehrplanelement inne haben kann. 
 Ein Lehrplanelement, das diese Funktion inne hat, identifiziert einen Teil des Lehrplan. Die Art des Lehrplanteils muss nicht näher spezifizert sein.
 
 Wenngleich diese Definition auch auf Kompetenzbereiche oder Themenfelder anwendbar ist, ist sie ihnen ausdrücklich nicht gleichzusetzen, über- oder unterzuordnen. 
 Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die anderen Strukturierungsfunktionen spezifiziert werden können."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000627> "Fragmentfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000627> "Funktion eines Lehrplanelements, das z.B. ein Kapitel, einen Absatz, oder bestimmte Seiten des Lehrplans identifiziert."@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000482> <https://w3id.org/lehrplan/ontology/LP_0000627>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000803> (Anforderungsbereich 1: Reproduktion)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000803> "Der Anforderungsbereich 1 umfasst, dass Lernende grundlegende Inhalte aus einem klar abgegrenzten Themenfeld wiedergeben können. Dabei sollen sie vertraute Arbeitstechniken und Methoden anwenden, die zuvor eingeübt wurden.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000803> "Anforderungsbereich 1: Reproduktion"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000803> "Der Anforderungsbereich 1 umfasst, dass Lernende grundlegende Inhalte aus einem klar abgegrenzten Themenfeld wiedergeben können. Dabei sollen sie vertraute Arbeitstechniken und Methoden anwenden, die zuvor eingeübt wurden.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000802> <https://w3id.org/lehrplan/ontology/LP_0000803>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000804> (Anforderungsbereich 2: Reorganisation und Transfer)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000804> "Der Anforderungsbereich 2 umfasst das selbstständige Strukturieren von Inhalten und in bekannte Zusammenhänge zu übertragen. Lernende sollen das Erlernte sinnvoll anwenden und methodisch angemessen nutzen können.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000804> "Anforderungsbereich 2: Reorganisation und Transfer"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000804> "Der Anforderungsbereich 2 umfasst das selbstständige Strukturieren von Inhalten und in bekannte Zusammenhänge zu übertragen. Lernende sollen das Erlernte sinnvoll anwenden und methodisch angemessen nutzen können.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000802> <https://w3id.org/lehrplan/ontology/LP_0000804>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000805> (Anforderungsbereich 3: Reflexion und Problemlösung)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000805> "Der Anforderungsbereich 3 umfasst die Fähigkeit, sich kritisch und reflektiert mit neuen Fragestellungen auseinanderzusetzen. Lernende sollen Methoden selbstständig einsetzen, um begründete Einschätzungen, Interpretationen oder Lösungsansätze zu entwickeln.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000805> "Anforderungsbereich 3: Reflexion und Problemlösung"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000805> "Der Anforderungsbereich 3 umfasst die Fähigkeit, sich kritisch und reflektiert mit neuen Fragestellungen auseinanderzusetzen. Lernende sollen Methoden selbstständig einsetzen, um begründete Einschätzungen, Interpretationen oder Lösungsansätze zu entwickeln.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000802> <https://w3id.org/lehrplan/ontology/LP_0000805>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0001014> (Hinweisbeschreibungsfunktion)
@@ -1869,38 +1869,38 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000499> <https://w3id.org
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030312> (C1 Fachkundige Sprachkenntnisse)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030312> "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030312> "C1 Fachkundige Sprachkenntnisse"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030312> "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030312>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030313> (C2 Annähernd muttersprachliche Kenntnisse)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030313> "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030313> "C2 Annähernd muttersprachliche Kenntnisse"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030313> "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030313>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030314> (B2 Selbständige Sprachverwendung)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030314> "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030314> "B2 Selbständige Sprachverwendung"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030314> "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030314>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030315> (B1 Fortgeschrittene Sprachverwendung)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030315> "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030315> "B1 Fortgeschrittene Sprachverwendung"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030315> "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030315>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030316> (A2 Grundlegende Kenntnisse)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030316> "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030316> "A2 Grundlegende Kenntnisse"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030316> "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030316>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030317> (A1 Anfänger)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030317> "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030317> "A1 Anfänger"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030317> "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0030317>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030326> (Leitperspektivenbeschreibungsfunktion)

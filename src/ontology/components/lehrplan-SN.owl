@@ -72,8 +72,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000205> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000818> (Lehrplan (SN))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000818> "Ein “Lehrplan (SN)” ist ein “Lehrplan” im Bundesland Sachsen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000818> "Lehrplan (SN)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000818> "Ein “Lehrplan (SN)” ist ein “Lehrplan” im Bundesland Sachsen.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000818> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000818> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002089>))
 
@@ -84,8 +84,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001032> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002089> (Element (SN))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002089> "Lehrplan Element bezogen auf den Lehrplan von Sachsen"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002089> "Element (SN)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002089> "Lehrplan Element bezogen auf den Lehrplan von Sachsen"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000047>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002090> (Fachniveau Sek II (SN))
@@ -110,16 +110,16 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002114> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002115> (Lernziel und Lerninhalt (SN))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002115> "\"Lernziele und Lerninhalte sind verbindlich. Sie kennzeichnen grundlegende Anforderungen in den Bereichen Wissenserwerb, Kompetenzentwicklung und Werteorientierung.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002115> "Lernziel und Lerninhalt (SN)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002115> "\"Lernziele und Lerninhalte sind verbindlich. Sie kennzeichnen grundlegende Anforderungen in den Bereichen Wissenserwerb, Kompetenzentwicklung und Werteorientierung.
 
 Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Lernziele in der Regel unter Verwendung einheitlicher Begriffe. Diese verdeutlichen bei zunehmendem Umfang und steigender Komplexität der Lernanforderungen didaktische Schwerpunktsetzungen für die unterrichtliche Erarbeitung der Lerninhalte.\"")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002115> "Lernziel und Lerninhalt (SN)"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002115> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002116> (Bemerkung (SN))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002116> "\"Bemerkungen haben Empfehlungscharakter. Gegenstand der Bemerkungen sind inhaltliche Erläuterungen, Hinweise auf geeignete Lehr- und Lernmethoden und Beispiele für Möglichkeiten einer differenzierten Förderung der Schüler. Sie umfassen Bezüge zu Lernzielen und Lerninhalten des gleichen Faches, zu anderen Fächern und zu den überfachlichen Bildungs- und Erziehungszielen.\"")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002116> "Bemerkung (SN)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002116> "\"Bemerkungen haben Empfehlungscharakter. Gegenstand der Bemerkungen sind inhaltliche Erläuterungen, Hinweise auf geeignete Lehr- und Lernmethoden und Beispiele für Möglichkeiten einer differenzierten Förderung der Schüler. Sie umfassen Bezüge zu Lernzielen und Lerninhalten des gleichen Faches, zu anderen Fächern und zu den überfachlichen Bildungs- und Erziehungszielen.\"")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002116> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002089> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030050> (Allgemeines fachliches Ziel (SN))

@@ -152,39 +152,39 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000564> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Bildungsgangniveau (BE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000572> "Bildungsgangniveau (BE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000028> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000573> (BOA Niveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000573> "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000573> "BOA Niveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000573> "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000572>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000574> (BBR Niveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000574> "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000574> "BBR Niveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000574> "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000834> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000575> (EBBR Niveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000575> "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000575> "EBBR Niveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000575> "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000834> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000576> (MSA Niveau)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000576> "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000576> "MSA Niveau"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000576> "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000832> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000577> (Gymnasialniveau Sek I (BE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000577> "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000577> "Gymnasialniveau Sek I (BE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000577> "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000069> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001169> (Fachniveau Sek II (BE))
@@ -223,8 +223,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001228> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001441> (Element (BE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0001441> "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001441> "Element (BE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001441> "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001441> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 
@@ -247,11 +247,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001446> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001447> (standard (BE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0001447> "operationalisierbar und meßbar"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001447> "Standard (BE)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001447> "standard (BE)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0001447> "Abschlussorientierter Standard (BE)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001447> "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001447> "operationalisierbar und meßbar"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001447> "Inhaltsbezogener mathematischer Standard (BE)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001447> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
@@ -304,8 +304,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001459> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030004> (Rahmenlehrplan (BE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030004> "Ein “Rahmenlehrplan (BE)” ist ein “Lehrplan” im Bundesland Berlin.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030004> "Rahmenlehrplan (BE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030004> "Ein “Rahmenlehrplan (BE)” ist ein “Lehrplan” im Bundesland Berlin.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030004> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030004> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0001441>))
 

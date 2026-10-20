@@ -8,7 +8,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>
 <https://w3id.org/lehrplan/ontology/lp/components/kim_import.owl>
-Annotation(rdfs:comment "This file contains externally imported content from the KIM vocabularies for Schulfächer, Schulabschlüsse, and Schularten for import into the Lehrplan Ontology (LPO).")
+Annotation(<http://www.w3.org/2004/02/skos/core#definition> "This file contains externally imported content from the KIM vocabularies for Schulfächer, Schulabschlüsse, and Schularten for import into the Lehrplan Ontology (LPO).")
 
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
@@ -113,9 +113,9 @@ SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>)
 
 # Object Property: <http://www.w3.org/2004/02/skos/core#exactMatch> (has exact match)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#exactMatch> "has exact match"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en)
 SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core#closeMatch>)
 SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>)
@@ -133,254 +133,254 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www
 #   Named Individuals
 ############################
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1001> "Biologie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1002> "Chemie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1004> "Theater"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1005> "Deutsch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1006> "DaZ"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1007> "Englisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1008> "Werte und Normen"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1008> "Ethik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1009> "Französisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1010> "Erdkunde"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1010> "Geographie"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1010> "Geografie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1011> "Geschichte"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1012> "Gesundheitserziehung"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1013> "Informations- und Kommunikationstechnologie"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1013> "Informatik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1014> "Italienisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1015> "Bildende Kunst"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1015> "Kunst"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1016> "Latein"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1017> "Mathematik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1019> "MINT"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1020> "Musik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1021> "Philosophie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1022> "Physik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1023> "Politische Bildung"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1023> "Politik"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1024> "Evangelischer Religionsunterricht"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische)"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1025> "Islamischer Religionsunterricht"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <http://w3id.org/kim/schulfaecher/s1025> "EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch)"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1026> "Katholischer Religionsunterricht"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische)"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1027> "Russisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1028> "Heimatunterricht"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1028> "Sachkunde"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1030> "Spanisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1031> "Sport"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1032> "Türkisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1035> "Japanisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1037> "Polnisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1039> "Wendisch"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1040> "Astronomie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1043> "Psychologie"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1044> "Ernährung"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://w3id.org/kim/schulfaecher/s1045> "Pädagogik"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung"@de)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (KIM-Schulfach))
 
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (KIM)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft"@de)

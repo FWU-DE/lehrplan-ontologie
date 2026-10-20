@@ -89,15 +89,15 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000210> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000824> (Fachanforderung (SH))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000824> "Ein “Fachanforderungen (SH)” ist ein “Lehrplan” im Bundesland Schleswig-Holstein.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000824> "Fachanforderung (SH)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000824> "Ein “Fachanforderungen (SH)” ist ein “Lehrplan” im Bundesland Schleswig-Holstein.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000824> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000054>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000824> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002103>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002103> (Element (SH))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002103> "Lehrplan Element bezogen auf den Lehrplan von Schleswig-Holstein")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002103> "Element (SH)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002103> "Lehrplan Element bezogen auf den Lehrplan von Schleswig-Holstein")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002103> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000054>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030010> (Fachniveau Sek II (SH))

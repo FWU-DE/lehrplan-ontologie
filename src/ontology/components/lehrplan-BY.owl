@@ -89,8 +89,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000207> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000434> (Element (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000434> "Lehrplan Element bezogen auf den Lehrplan von Bayern"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000434> "Element (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000434> "Lehrplan Element bezogen auf den Lehrplan von Bayern"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000435> (Fachniveau Sek II (BY))
@@ -101,8 +101,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000435> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000819> (LehrplanPLUS (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000819> "Ein “LehrplanPLUS (BY)” ist ein “Lehrplan” im Bundesland Bayern.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000819> "LehrplanPLUS (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000819> "Ein “LehrplanPLUS (BY)” ist ein “Lehrplan” im Bundesland Bayern.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000819> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000819> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000434>))
 
@@ -144,22 +144,22 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030053> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030180> (Verweis auf DaZ (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis auf DaZ (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis zum Lehrplan Deutsch als Zweitsprache -> also auf Lernbereiche eines anderen Lehrplans")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030180> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030181> (Verweis auf übergreifende Ziele (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweist auf Kap0 - Textabsatz FUEZ")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweis auf übergreifende Ziele (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweist auf Kap0 - Textabsatz FUEZ")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweis zu den Übergreifenden Zielen (\"Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie\") -> also auf Prosatextteil?")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030181> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030182> (Verweis auf Querverweise (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf Querverweise (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf die Fachlehrpläne anderer Fächer -> also auf Lernbereiche eines anderen Lehrplans")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030182> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0030072> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000051>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
@@ -171,29 +171,29 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030183> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030299> (Verweis auf Aufgabe (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030299> "Besteht aus Text, Dateianhängen, Links")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030299> "Verweis auf Aufgabe (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030299> "Besteht aus Text, Dateianhängen, Links")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030299> "z.B. PDF-Dokument zum Downloaden (Arbeitsblätter o.ä.)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030299> <https://w3id.org/lehrplan/ontology/LP_0030183>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030300> (Verweis auf Material (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030300> "Besteht aus Text, Dateianhängen, Links")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030300> "Verweis auf Material (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030300> "Besteht aus Text, Dateianhängen, Links")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030300> "z.B. Verlinkung auf Mundo zu einem spzifischen Material da")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030300> <https://w3id.org/lehrplan/ontology/LP_0030183>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030301> (Verweis auf mebis (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030301> "Besteht aus Text, Links in die ByCS")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030301> "Verweis auf mebis (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030301> "Besteht aus Text, Links in die ByCS")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030301> "Verlinkung zu mebis -> Einloggen über ByCS")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030301> <https://w3id.org/lehrplan/ontology/LP_0030183>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030302> (Verweis auf Erläuterung (BY))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030302> "Erläutert Kompetenzerwartungen und Inhalte; besteht aus Text (inkl. HTML u TeX), Dateianhängen, Links")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030302> "Verweis auf Erläuterung (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0030302> "Erläutert Kompetenzerwartungen und Inhalte; besteht aus Text (inkl. HTML u TeX), Dateianhängen, Links")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030302> "Verweist auf Erläuterungen -> Erläuterungen selbst sind CE-Hinweise")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030302> <https://w3id.org/lehrplan/ontology/LP_0030183>)
 

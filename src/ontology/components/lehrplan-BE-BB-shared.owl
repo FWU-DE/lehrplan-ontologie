@@ -152,9 +152,9 @@
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <rdfs:comment xml:lang="de">Ein Themenfeld ist eine textuelle Entität, die einen fachlichen, inhaltlichen oder konzeptuellen Bereich bezeichnet, dem eine Entität thematisch zugeordnet ist.</rdfs:comment>
         <rdfs:label xml:lang="de">Themenfeld</rdfs:label>
         <rdfs:label xml:lang="en">subject area</rdfs:label>
+        <skos:definition xml:lang="de">Ein Themenfeld ist eine textuelle Entität, die einen fachlichen, inhaltlichen oder konzeptuellen Bereich bezeichnet, dem eine Entität thematisch zugeordnet ist.</skos:definition>
         <skos:editorialNote>Themenfeld wird Berlin/Brandenburg im Datendump im Zusammenhang mit Übung verwendet</skos:editorialNote>
     </owl:Class>
     

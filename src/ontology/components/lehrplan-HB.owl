@@ -81,9 +81,9 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000212> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000821> (Bildungsplan (HB))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000821> "Ein “Bildungsplan (HB)” ist ein “Lehrplan” im Bundesland Bremen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000821> "Bildungsplan (HB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000821> "Lehrplan (HB)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000821> "Ein “Bildungsplan (HB)” ist ein “Lehrplan” im Bundesland Bremen.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000821> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000056>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000821> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002118>))
 
@@ -252,8 +252,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030243> ObjectIntersectionOf(
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000034> (Erweitertes Anforderungsniveau (HB))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000034> "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13).")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000034> "Erweitertes Anforderungsniveau (HB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000034> "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13).")
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000034>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000832> <https://w3id.org/lehrplan/ontology/LP_0000034>)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0001105> <https://w3id.org/lehrplan/ontology/LP_0000034>)

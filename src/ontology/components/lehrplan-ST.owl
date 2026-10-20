@@ -87,8 +87,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000209> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000826> (Lehrplan (ST))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000826> "Ein “Lehrplan (ST)” ist ein “Lehrplan” im Bundesland Sachsen-Anhalt.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000826> "Lehrplan (ST)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000826> "Ein “Lehrplan (ST)” ist ein “Lehrplan” im Bundesland Sachsen-Anhalt.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000826> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000053>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000826> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002093>))
 
@@ -99,8 +99,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001035> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002093> (Element (ST))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002093> "Lehrplan Element bezogen auf den Lehrplan von Sachsen-Anhalt"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002093> "Element (ST)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002093> "Lehrplan Element bezogen auf den Lehrplan von Sachsen-Anhalt"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002093> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000053>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002094> (Fachniveau Sek II (ST))

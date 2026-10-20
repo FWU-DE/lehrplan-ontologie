@@ -82,8 +82,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001011> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002080> (Element (MV))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002080> "Lehrplan Element bezogen auf den Lehrplan von Mecklenburg-Vorpommern"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002080> "Element (MV)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002080> "Lehrplan Element bezogen auf den Lehrplan von Mecklenburg-Vorpommern"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002081> (Fachniveau Sek II (MV))
@@ -152,8 +152,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002149> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002151> (Konkretisierung (MV))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002151> "Fach Deutsch in der Sek I")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002151> "Konkretisierung (MV)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002151> "Fach Deutsch in der Sek I")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002151> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002080> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002153> (Standard (MV))
@@ -173,8 +173,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002163> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002164> (Rahmenplan (MV))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002164> "Ein “Rahmenplan (MV)” ist ein “Lehrplan” im Bundesland Mecklenburg-Vorpommern.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002164> "Rahmenplan (MV)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002164> "Ein “Rahmenplan (MV)” ist ein “Lehrplan” im Bundesland Mecklenburg-Vorpommern.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002164> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000052>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002164> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002080>))
 
@@ -212,10 +212,10 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030328> ObjectIntersectionOf(
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000032> (Orientierungsstufe (MV))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000032> "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000032> "Orientierungsstufe (MV)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000032> "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.
 
 Auch in anderen BL gibt es Orientierungsstufen, aber MV ist das einzige BL, das einen Lehrplan nur für die Orientierungsstufe hat.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000032> "Orientierungsstufe (MV)"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000020> <https://w3id.org/lehrplan/ontology/LP_0000032>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000099> (Gymnasialniveau Sek I (MV))

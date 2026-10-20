@@ -83,8 +83,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001005> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002076> (Element (HE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002076> "Lehrplan Element bezogen auf den Lehrplan von Hessen"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002076> "Element (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002076> "Lehrplan Element bezogen auf den Lehrplan von Hessen"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000050>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002077> (Fachniveau Sek II (HE))
@@ -100,8 +100,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002169> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002184> (Kerncurriculum (HE))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0002184> "Ein “Kerncurriculum (HE)” ist ein “Lehrplan” im Bundesland Hessen.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002184> "Kerncurriculum (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0002184> "Ein “Kerncurriculum (HE)” ist ein “Lehrplan” im Bundesland Hessen.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002184> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000050>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002184> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0002076>))
 

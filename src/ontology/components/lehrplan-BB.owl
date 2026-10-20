@@ -143,8 +143,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000213> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000441> (Element (BB))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000441> "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000441> "Element (BB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000441> "Lehrplan Element bezogen auf den Lehrplan von Brandenburg."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000441> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 
@@ -167,11 +167,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000446> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000447> (Standard (BB))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000447> "operationalisierbar und meßbar"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000447> "Standard (BB)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000447> "standard (BB)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000447> "Abschlussorientierter Standard (BB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000447> "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000447> "operationalisierbar und meßbar"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000447> "Inhaltsbezogener mathematischer Standard (BB)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000447> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
@@ -224,8 +224,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000459> ObjectIntersectionOf(
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000807> (Rahmenlehrplan (BB))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000807> "Ein “Rahmenlehrplan (BB)” ist ein “Lehrplan” im Bundesland Brandenburg.")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000807> "Rahmenlehrplan (BB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000807> "Ein “Rahmenlehrplan (BB)” ist ein “Lehrplan” im Bundesland Brandenburg.")
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000807> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000807> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/lehrplan/ontology/LP_0000441>))
 
