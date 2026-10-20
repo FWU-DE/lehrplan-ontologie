@@ -29,7 +29,6 @@ import_group:
       mirror_from: http://www.w3.org/TR/skos-reference/skos.rdf
       module_type: slme
       module_type_slme: SUBSET
-
     - id: schulart-BB
       mirror_from: https://raw.githubusercontent.com/FWU-DE/schulart-ontologie/refs/tags/v1.0.1/src/ontology/components/schools-bb.owl
       module_type: mirror
@@ -82,52 +81,52 @@ import_group:
 
 
     - id: schulfach-BB
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-bb.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-bb.owl
       module_type: mirror
     - id: schulfach-BE
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-be.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-be.owl
       module_type: mirror
     - id: schulfach-BW
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-bw.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-bw.owl
       module_type: mirror
     - id: schulfach-BY
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-by.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-by.owl
       module_type: mirror
     - id: schulfach-HB
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-hb.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-hb.owl
       module_type: mirror
     - id: schulfach-HE
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-he.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-he.owl
       module_type: mirror
     - id: schulfach-HH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-hh.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-hh.owl
       module_type: mirror
     - id: schulfach-MV
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-mv.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-mv.owl
       module_type: mirror
     - id: schulfach-NI
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-ni.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-ni.owl
       module_type: mirror
     - id: schulfach-NW
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-nw.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-nw.owl
       module_type: mirror
     - id: schulfach-RP
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-rp.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-rp.owl
       module_type: mirror
     - id: schulfach-SH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sh.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sh.owl
       module_type: mirror
     - id: schulfach-SL
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sl.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sl.owl
       module_type: mirror
     - id: schulfach-SN
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-sn.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sn.owl
       module_type: mirror
     - id: schulfach-ST
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-st.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-st.owl
       module_type: mirror
     - id: schulfach-TH
-      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.0/src/ontology/components/subjects-th.owl
+      mirror_from: https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-th.owl
       module_type: mirror
 
 
@@ -153,6 +152,7 @@ components:
     - filename: lehrplan-SH.owl 
     - filename: lehrplan-SN.owl 
     - filename: lehrplan-TH.owl
+    - filename: lehrplan-Bista.owl
     - filename: kim_import.owl
 
 robot_java_args: "-Xmx8G"

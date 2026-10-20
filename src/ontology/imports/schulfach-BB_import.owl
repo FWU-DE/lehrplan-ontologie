@@ -9,9 +9,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulfach-BB_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-07-28/imports/schulfach-BB_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.0/components/subjects-bb.owl>)
-Annotation(owl:versionInfo "2026-07-28")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-10-20/imports/schulfach-BB_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.1/components/subjects-bb.owl>)
+Annotation(owl:versionInfo "2026-10-20")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))
@@ -56,6 +56,12 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1040>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1041>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1042>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1043>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1046>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1050>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1052>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1054>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1058>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1059>))
 Declaration(NamedIndividual(ontology:LP_3000057))
 Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000000>))
 Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000001>))
@@ -112,6 +118,8 @@ Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000051>))
 Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000052>))
 Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000053>))
 Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000054>))
+Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000055>))
+Declaration(NamedIndividual(<https://w3id.org/schulfach/BB_0000056>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(skos:editorialNote))
 
@@ -346,6 +354,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000023> "Naturwis
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000023> "Jahrgangsstufe 5 & 6")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000023>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000023>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000023> <http://w3id.org/kim/schulfaecher/s1052>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000023> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000023> ontology:LP_3000057)
 
@@ -355,6 +364,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000024> "Naturwis
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000024> "Jahrgangsstufe 7 - 10")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000024>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000024>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000024> <http://w3id.org/kim/schulfaecher/s1052>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000024> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000024> ontology:LP_3000057)
 
@@ -442,6 +452,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000033> "Recht"@d
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000033> "Sek II")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000033>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000033>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000033> <http://w3id.org/kim/schulfaecher/s1054>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000033> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000033> ontology:LP_3000057)
 
@@ -469,6 +480,7 @@ ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_00000
 AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000036> "Moderne Fremdsprachen"@de)
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000036>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000036>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000036> <http://w3id.org/kim/schulfaecher/s1050>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000036> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000036> ontology:LP_3000057)
 
@@ -478,6 +490,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000037> "Sozialwi
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000037> "nur Sek II")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000037>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000037>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000037> <http://w3id.org/kim/schulfaecher/s1058>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000037> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000037> ontology:LP_3000057)
 
@@ -525,7 +538,8 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000042> "Wirtscha
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000042> "Jahrgangsstufen 5-10")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000042>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000042>)
-ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000042> <http://w3id.org/kim/schulfaecher/s1033>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/BB_0000042> <http://w3id.org/kim/schulfaecher/s1033>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/BB_0000042> <http://w3id.org/kim/schulfaecher/s1059>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000042> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000042> ontology:LP_3000057)
 
@@ -618,6 +632,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000052> "Technik"
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/BB_0000052> "Sek II")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000052>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000052>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000052> <http://w3id.org/kim/schulfaecher/s1059>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000052> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000052> ontology:LP_3000057)
 
@@ -641,6 +656,23 @@ ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000054>)
 ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000054> <http://w3id.org/kim/schulfaecher/s1033>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000054> <https://w3id.org/schulfach/BB_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000054> ontology:LP_3000057)
+
+# Individual: <https://w3id.org/schulfach/BB_0000055> (Sprachbildung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000055> "Sprachbildung"@de)
+ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000055>)
+ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000055>)
+ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000055> <https://w3id.org/schulfach/BB_0000000>)
+ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000055> ontology:LP_3000057)
+
+# Individual: <https://w3id.org/schulfach/BB_0000056> (Medienbildung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/BB_0000056> "Medienbildung"@de)
+ClassAssertion(skos:Concept <https://w3id.org/schulfach/BB_0000056>)
+ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/BB_0000056>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/BB_0000056> <http://w3id.org/kim/schulfaecher/s1046>)
+ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/BB_0000056> <https://w3id.org/schulfach/BB_0000000>)
+ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/BB_0000056> ontology:LP_3000057)
 
 
 )
