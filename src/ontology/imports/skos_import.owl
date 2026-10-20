@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/skos_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-07-28/imports/skos_import.owl>
-Annotation(owl:versionInfo "2026-07-28")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-10-20/imports/skos_import.owl>
+Annotation(owl:versionInfo "2026-10-20")
 
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
@@ -29,8 +29,6 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
 
 # Annotation Property: <http://www.w3.org/2004/02/skos/core#altLabel> (alternative label)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#altLabel> "The range of skos:altLabel is the class of RDF plain literals."@en)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#altLabel> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2004/02/skos/core>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#altLabel> "alternative label"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#altLabel> "An alternative lexical label for a resource."@en)
@@ -57,10 +55,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www
 
 # Annotation Property: <http://www.w3.org/2004/02/skos/core#prefLabel> (preferred label)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "The range of skos:prefLabel is the class of RDF plain literals."@en)
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#prefLabel> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
-      disjoint properties."@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2004/02/skos/core>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#prefLabel> "preferred label"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#prefLabel> "The preferred lexical label for a resource, in a given language."@en)
@@ -86,7 +80,6 @@ SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>)
 
 # Object Property: <http://www.w3.org/2004/02/skos/core#exactMatch> (has exact match)
 
-AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#exactMatch> "has exact match"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en)
