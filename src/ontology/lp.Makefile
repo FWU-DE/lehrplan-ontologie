@@ -93,8 +93,20 @@ lp-land-%-full.owl: $(EDIT_PREPROCESSED)
 		reduce -r ELK \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)$* annotate -V $(ONTBASE)$*/$(VERSION) --annotation owl:versionInfo $(VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
 
+lp-bista-full.owl: $(EDIT_PREPROCESSED) ## actually the same like above, but without schulart and schulfaach
+	$(ROBOT) remove --input $< --select imports --trim false \
+	merge --input components/bfo-edit.owl --input imports/ro_import.owl --input components/lehrplan-Bista.owl  \
+	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)$* annotate -V $(ONTBASE)$*/$(VERSION) --annotation owl:versionInfo $(VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+
+
 release-land-%: lp-land-%-full.owl
 		cp lp-land-$*-full.owl $(RELEASEDIR)
+
+release-bista: lp-bista-full.owl
+		cp lp-bista-full.owl $(RELEASEDIR)
 
 lp-ohne-land.owl: $(EDIT_PREPROCESSED)
 	$(ROBOT) remove --input $< --select imports --trim false \
@@ -143,6 +155,7 @@ update-ontology-annotations:
 	$(ROBOT) annotate --input ../../lp-land-SN-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Sachsen" convert --format ofn --output ../../lp-land-SN-full.owl && \
 	$(ROBOT) annotate --input ../../lp-land-ST-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Sachsen Anhalt" convert --format ofn --output ../../lp-land-ST-full.owl && \
 	$(ROBOT) annotate --input ../../lp-land-TH-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Lehrplan Thüringen" convert --format ofn --output ../../lp-land-TH-full.owl 
+	$(ROBOT) annotate --input ../../lp-bista-full.owl $(ALL_ANNOTATIONS) --annotation http://purl.org/dc/terms/subject "Bildungsstandards" convert --format ofn --output ../../lp-bista-full.owl 
 	
 
 
