@@ -15,6 +15,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000109>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000423>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000424>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000425>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000564>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000572>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000573>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000574>))
@@ -50,7 +51,6 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030123>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030124>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030248>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030332>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_90b3d843_b209_42c3_bda9_1616450fd64d>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000133>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000135>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000136>))
@@ -144,6 +144,12 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000425> "Verlinkung zu Materialsammlung (=Dokumente)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000425> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000564> (Verweis auf vernetzte Kompetenzen (BE))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000564> "Verweis auf vernetzte Kompetenzen (BE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000564> "Verlinkung zu Kompetenzen anderer Fächer (meist zu \"Medienbildung\")")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000564> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Bildungsgangniveau (BE))
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
@@ -224,7 +230,7 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001445> (learning content (BE))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "Inhalt (BE)")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "Inhalt (BE)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "learning content (BE)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0001445> "Lerninhalt (BE)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001445> "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en)
@@ -384,12 +390,6 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030248> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030332> "Fachübergreifendes Thema (BE)"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030332> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_90b3d843_b209_42c3_bda9_1616450fd64d> (Verweis auf vernetzte Kompetenzen (BE))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_90b3d843_b209_42c3_bda9_1616450fd64d> "Verweis auf vernetzte Kompetenzen (BE)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_90b3d843_b209_42c3_bda9_1616450fd64d> "Verlinkung zu Kompetenzen anderer Fächer (meist zu \"Medienbildung\")")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_90b3d843_b209_42c3_bda9_1616450fd64d> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 
 ############################
