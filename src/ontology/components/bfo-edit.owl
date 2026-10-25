@@ -62,10 +62,6 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000086> <http://purl
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000440> <http://purl.obolibrary.org/obo/RO_0000056>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000477> (concretizes type of school)
-
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000477> <https://w3id.org/lehrplan/ontology/LP_0000024>)
-
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000483> (has function specification)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000024>)
@@ -196,7 +192,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000438> <http://purl.obolibra
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000475> (Schulartfunktion)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> <http://purl.obolibrary.org/obo/BFO_0000023>)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000477> <https://w3id.org/lehrplan/ontology/LP_0000111>))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000111>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000555> <https://w3id.org/lehrplan/ontology/LP_0000809>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (function specification)
