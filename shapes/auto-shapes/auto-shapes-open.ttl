@@ -14,6 +14,8 @@ PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sh:          <http://www.w3.org/ns/shacl#>
 PREFIX skos:        <http://www.w3.org/2004/02/skos/core#>
 PREFIX swa:         <http://topbraid.org/swa#>
+PREFIX swrl:        <http://www.w3.org/2003/11/swrl#>
+PREFIX swrlb:       <http://www.w3.org/2003/11/swrlb#>
 PREFIX terms:       <http://purl.org/dc/terms/>
 PREFIX tosh:        <http://topbraid.org/tosh#>
 PREFIX xml:         <http://www.w3.org/XML/1998/namespace>
@@ -42,6 +44,11 @@ obo:BFO_0000004-http___purl.obolibrary.org_obo_RO_0000085
         rdf:type  sh:PropertyShape;
         sh:class  obo:BFO_0000034;
         sh:path   obo:RO_0000085 .
+
+obo:BFO_0000004-http___purl.obolibrary.org_obo_RO_0000087
+        rdf:type  sh:PropertyShape;
+        sh:class  obo:BFO_0000023;
+        sh:path   obo:RO_0000087 .
 
 ontology:LP_0000816-https___w3id.org_lehrplan_ontology_LP_0000833
         rdf:type  sh:PropertyShape;
@@ -236,6 +243,12 @@ obo:BFO_0000015  rdf:type  sh:NodeShape , rdfs:Class;
 ontology:LP_0000111  rdf:type  rdfs:Class , sh:NodeShape;
         sh:property  ontology:LP_0000111-https___w3id.org_lehrplan_ontology_LP_0000840 , ontology:LP_0000111-https___w3id.org_lehrplan_ontology_LP_0000833 .
 
+ontology:LP_0000508-http___qudt.org_schema_qudt_hasUnit
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  <http://qudt.org/schema/qudt/Unit>;
+        sh:minCount             1;
+        sh:path                 <http://qudt.org/schema/qudt/hasUnit> .
+
 ontology:LP_0001441-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
         sh:class     ontology:LP_0000040;
@@ -310,12 +323,6 @@ ontology:LP_0000263-https___w3id.org_lehrplan_ontology_LP_0000024
         dash:hasValueWithClass  ontology:LP_0000346;
         sh:minCount             1;
         sh:path                 ontology:LP_0000024 .
-
-ontology:LP_0000508-https___w3id.org_lehrplan_ontology_LP_0000041
-        rdf:type                sh:PropertyShape;
-        dash:hasValueWithClass  <http://qudt.org/schema/qudt/Unit>;
-        sh:minCount             1;
-        sh:path                 ontology:LP_0000041 .
 
 ontology:LP_0000823-http___purl.obolibrary.org_obo_BFO_0000051
         rdf:type  sh:PropertyShape;
@@ -460,12 +467,6 @@ ontology:LP_0000540-https___w3id.org_lehrplan_ontology_LP_0000537
         sh:minCount             1;
         sh:path                 ontology:LP_0000537 .
 
-ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000477
-        rdf:type     sh:PropertyShape;
-        sh:class     ontology:LP_0000111;
-        sh:minCount  1;
-        sh:path      ontology:LP_0000477 .
-
 ontology:LP_0000821-http___purl.obolibrary.org_obo_BFO_0000051
         rdf:type  sh:PropertyShape;
         sh:class  ontology:LP_0002118;
@@ -489,6 +490,12 @@ ontology:LP_0002102-https___w3id.org_lehrplan_ontology_LP_0000029
         sh:hasValue  ontology:LP_3000055;
         sh:path      ontology:LP_0000029 .
 
+ontology:LP_0000008-https___w3id.org_lehrplan_ontology_LP_0000024
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  ontology:LP_0000019;
+        sh:minCount             1;
+        sh:path                 ontology:LP_0000024 .
+
 ontology:LP_0001032-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
         sh:class     ontology:LP_0000040;
@@ -511,6 +518,15 @@ obo:BFO_0000004-http___purl.obolibrary.org_obo_BFO_0000050
         sh:class  obo:BFO_0000004;
         sh:path   obo:BFO_0000050 .
 
+ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000024
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  ontology:LP_0000111;
+        sh:minCount             1;
+        sh:path                 ontology:LP_0000024 .
+
+ontology:LP_0000013  rdf:type  rdfs:Class , sh:NodeShape;
+        sh:property  ontology:LP_0000013-https___w3id.org_lehrplan_ontology_LP_0000024 .
+
 ontology:LP_0000434-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
         sh:class     ontology:LP_0000040;
@@ -528,6 +544,12 @@ ontology:LP_0030039-https___w3id.org_lehrplan_ontology_LP_0000029
         sh:class     ontology:LP_0000040;
         sh:hasValue  ontology:LP_3000050;
         sh:path      ontology:LP_0000029 .
+
+ontology:LP_0000008-http___purl.obolibrary.org_obo_RO_0000081
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  ontology:LP_0000010;
+        sh:minCount             1;
+        sh:path                 obo:RO_0000081 .
 
 ontology:LP_0000263-http___purl.obolibrary.org_obo_BFO_0000050
         rdf:type                sh:PropertyShape;
@@ -569,9 +591,6 @@ ontology:LP_0002184-http___purl.obolibrary.org_obo_BFO_0000051
         rdf:type  sh:PropertyShape;
         sh:class  ontology:LP_0002076;
         sh:path   obo:BFO_0000051 .
-
-ontology:LP_0000508  rdf:type  sh:NodeShape , rdfs:Class;
-        sh:property  ontology:LP_0000508-https___w3id.org_lehrplan_ontology_LP_0000041 .
 
 ontology:LP_0002085-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -620,6 +639,9 @@ ontology:LP_0001015-https___w3id.org_lehrplan_ontology_LP_0000483
         sh:hasValue  ontology:LP_0000627;
         sh:path      ontology:LP_0000483 .
 
+ontology:LP_0000508  rdf:type  sh:NodeShape , rdfs:Class;
+        sh:property  ontology:LP_0000508-http___qudt.org_schema_qudt_hasUnit .
+
 ontology:LP_0000819-http___purl.obolibrary.org_obo_BFO_0000051
         rdf:type  sh:PropertyShape;
         sh:class  ontology:LP_0000434;
@@ -630,6 +652,12 @@ ontology:LP_0000342-https___w3id.org_lehrplan_ontology_LP_0000029
         sh:class     ontology:LP_0000040;
         sh:hasValue  ontology:LP_3000046;
         sh:path      ontology:LP_0000029 .
+
+ontology:LP_0000013-https___w3id.org_lehrplan_ontology_LP_0000024
+        rdf:type                sh:PropertyShape;
+        dash:hasValueWithClass  ontology:LP_0000263;
+        sh:minCount             1;
+        sh:path                 ontology:LP_0000024 .
 
 ontology:LP_0000540  rdf:type  rdfs:Class , sh:NodeShape;
         sh:property  ontology:LP_0000540-https___w3id.org_lehrplan_ontology_LP_0000537 .
@@ -694,7 +722,7 @@ obo:BFO_0000002  rdf:type  sh:NodeShape , rdfs:Class;
         sh:property  obo:BFO_0000002-http___purl.obolibrary.org_obo_RO_0000056 , obo:BFO_0000002-http___purl.obolibrary.org_obo_BFO_0000050 .
 
 obo:BFO_0000004  rdf:type  sh:NodeShape , rdfs:Class;
-        sh:property  obo:BFO_0000004-http___purl.obolibrary.org_obo_RO_0000085 , obo:BFO_0000004-http___purl.obolibrary.org_obo_BFO_0000050 .
+        sh:property  obo:BFO_0000004-http___purl.obolibrary.org_obo_RO_0000085 , obo:BFO_0000004-http___purl.obolibrary.org_obo_RO_0000087 , obo:BFO_0000004-http___purl.obolibrary.org_obo_BFO_0000050 .
 
 ontology:LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -724,6 +752,9 @@ obo:BFO_0000003-http___purl.obolibrary.org_obo_BFO_0000050
         rdf:type  sh:PropertyShape;
         sh:class  obo:BFO_0000003;
         sh:path   obo:BFO_0000050 .
+
+ontology:LP_0000008  rdf:type  rdfs:Class , sh:NodeShape;
+        sh:property  ontology:LP_0000008-https___w3id.org_lehrplan_ontology_LP_0000024 , ontology:LP_0000008-http___purl.obolibrary.org_obo_RO_0000081 .
 
 ontology:LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029
         rdf:type     sh:PropertyShape;
@@ -764,143 +795,82 @@ obo:BFO_0000019  rdf:type  sh:NodeShape , rdfs:Class;
         sh:property  obo:BFO_0000019-http___purl.obolibrary.org_obo_BFO_0000050 .
 
 ontology:LP_0000475  rdf:type  rdfs:Class , sh:NodeShape;
-        sh:property  ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000477 , ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000555 .
+        sh:property  ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000024 , ontology:LP_0000475-https___w3id.org_lehrplan_ontology_LP_0000555 .
 
 ontology:LP_0000433-http___purl.obolibrary.org_obo_BFO_0000051
         rdf:type  sh:PropertyShape;
         sh:class  ontology:LP_0000342;
         sh:path   obo:BFO_0000051 .
 
-ontology:LP_0000342  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0001105  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000342-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0001000  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0002164  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001000-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0030065  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030065-https___w3id.org_lehrplan_ontology_LP_0030072 , ontology:LP_0030065-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-ontology:LP_0001015  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001015-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-ontology:LP_0001011  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001011-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000820  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000820-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000820-http___purl.obolibrary.org_obo_BFO_0000051 .
-
-ontology:LP_0000818  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000818-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000819  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000819-http___purl.obolibrary.org_obo_BFO_0000051 .
-
-ontology:LP_0001019  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001019-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0030080  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030080-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0002164-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0000823  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0000823-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000823-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0000332  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
+ontology:LP_0000825  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000332-http___purl.obolibrary.org_obo_BFO_0000050 , ontology:LP_0000332-https___w3id.org_lehrplan_ontology_LP_0000483 .
+        sh:property         ontology:LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000825-http___purl.obolibrary.org_obo_BFO_0000051 .
 
-ontology:LP_0000821  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0002097  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000821-http___purl.obolibrary.org_obo_BFO_0000051 .
-
-ontology:LP_0001105  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001105-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0030325  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030325-https___w3id.org_lehrplan_ontology_LP_0000483 .
-
-ontology:LP_0000813  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000813-https___w3id.org_lehrplan_ontology_LP_0000833 .
-
-ontology:LP_0000426  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000426-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000814  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000814-https___w3id.org_lehrplan_ontology_LP_0000833 .
+        sh:property         ontology:LP_0002097-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0002093  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0002093-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0002051  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0000819  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002051-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0000819-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000819-http___purl.obolibrary.org_obo_BFO_0000051 .
 
-ontology:LP_0002184  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0002118  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002184-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000822  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000822-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000822-http___purl.obolibrary.org_obo_BFO_0000051 .
+        sh:property         ontology:LP_0002118-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0000349  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0000349-https___w3id.org_lehrplan_ontology_LP_0000483 .
 
-ontology:LP_0001032  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0002085  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001032-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0002085-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0030053  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0000820  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030053-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0000820-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000820-http___purl.obolibrary.org_obo_BFO_0000051 .
 
-ontology:LP_0030004  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0000821  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0030004-http___purl.obolibrary.org_obo_BFO_0000051 .
+        sh:property         ontology:LP_0000821-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000821-http___purl.obolibrary.org_obo_BFO_0000051 .
+
+ontology:LP_0002080  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002080-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0001019  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0001019-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0000852  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
@@ -908,10 +878,166 @@ ontology:LP_0000852  rdf:type  sh:NodeShape , rdfs:Class;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0000852-http___purl.obolibrary.org_obo_BFO_0000050 , ontology:LP_0000852-https___w3id.org_lehrplan_ontology_LP_0000483 .
 
+ontology:LP_0030065  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030065-https___w3id.org_lehrplan_ontology_LP_0030072 , ontology:LP_0030065-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+ontology:LP_0000822  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000822-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000822-http___purl.obolibrary.org_obo_BFO_0000051 .
+
+ontology:LP_0000332  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000332-http___purl.obolibrary.org_obo_BFO_0000050 , ontology:LP_0000332-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+ontology:LP_0030041  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030041-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0002101  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002101-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0002184  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002184-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0002184-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000807  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000807-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000807-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0030325  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030325-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
 ontology:LP_0002102  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0002102-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000572  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000572-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0001011  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0001011-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0001015  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0001015-https___w3id.org_lehrplan_ontology_LP_0000483 .
+
+ontology:LP_0000818  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000818-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000818-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0002089  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002089-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0030080  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030080-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0002103  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002103-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0030039  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030039-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000824  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000824-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0030053  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030053-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000815  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000815-https___w3id.org_lehrplan_ontology_LP_0000833 .
+
+ontology:LP_0000433  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000433-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000433-http___purl.obolibrary.org_obo_BFO_0000051 .
+
+ontology:LP_0000826  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000826-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000826-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000814  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000814-https___w3id.org_lehrplan_ontology_LP_0000833 .
+
+ontology:LP_0001441  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0001441-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000426  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000426-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000806  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000806-http___purl.obolibrary.org_obo_BFO_0000051 .
+
+ontology:LP_0030091  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030091-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0001028  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0001028-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0000434  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000434-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0002076  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0002076-https___w3id.org_lehrplan_ontology_LP_0000029 .
+
+ontology:LP_0030004  rdf:type  sh:NodeShape , rdfs:Class;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0030004-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0030004-http___purl.obolibrary.org_obo_BFO_0000051 .
+
+ontology:LP_0000441  rdf:type  rdfs:Class , sh:NodeShape;
+        rdfs:subClassOf     [] ;
+        owl:intersectionOf  [] ;
+        sh:property         ontology:LP_0000441-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0000263  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
@@ -920,142 +1046,47 @@ ontology:LP_0000263  rdf:type  rdfs:Class , sh:NodeShape;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0000263-https___w3id.org_lehrplan_ontology_LP_0000483 , ontology:LP_0000263-https___w3id.org_lehrplan_ontology_LP_0000024 , ontology:LP_0000263-http___purl.obolibrary.org_obo_BFO_0000050 .
 
-ontology:LP_0000441  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0001000  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000441-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002089  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002089-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002097  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002097-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0001101  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001101-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0030039  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030039-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000825  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000825-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000825-http___purl.obolibrary.org_obo_BFO_0000051 .
-
-ontology:LP_0002164  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002164-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0002164-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0001028  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001028-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000572  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000572-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000826  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000826-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000826-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0001038  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001038-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002080  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002080-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002101  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002101-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0001000-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0001000-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0001108  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0001108-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0002118  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0001038  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002118-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0001038-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0002103  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0002051  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002103-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0002051-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0000434  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0000342  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000434-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0000342-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0000824  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0000813  rdf:type  sh:NodeShape , rdfs:Class;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000824-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000824-https___w3id.org_lehrplan_ontology_LP_0000029 .
+        sh:property         ontology:LP_0000813-https___w3id.org_lehrplan_ontology_LP_0000833 .
 
-ontology:LP_0030041  rdf:type  sh:NodeShape , rdfs:Class;
+ontology:LP_0001032  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030041-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000807  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000807-http___purl.obolibrary.org_obo_BFO_0000051 , ontology:LP_0000807-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0030091  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0030091-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002076  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002076-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0002085  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0002085-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000806  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000806-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000806-http___purl.obolibrary.org_obo_BFO_0000051 .
+        sh:property         ontology:LP_0001032-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
 ontology:LP_0001035  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
         sh:property         ontology:LP_0001035-https___w3id.org_lehrplan_ontology_LP_0000029 .
 
-ontology:LP_0000433  rdf:type  rdfs:Class , sh:NodeShape;
+ontology:LP_0001101  rdf:type  rdfs:Class , sh:NodeShape;
         rdfs:subClassOf     [] ;
         owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000433-https___w3id.org_lehrplan_ontology_LP_0000029 , ontology:LP_0000433-http___purl.obolibrary.org_obo_BFO_0000051 .
-
-ontology:LP_0001441  rdf:type  rdfs:Class , sh:NodeShape;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0001441-https___w3id.org_lehrplan_ontology_LP_0000029 .
-
-ontology:LP_0000815  rdf:type  sh:NodeShape , rdfs:Class;
-        rdfs:subClassOf     [] ;
-        owl:intersectionOf  [] ;
-        sh:property         ontology:LP_0000815-https___w3id.org_lehrplan_ontology_LP_0000833 .
+        sh:property         ontology:LP_0001101-https___w3id.org_lehrplan_ontology_LP_0000029 .

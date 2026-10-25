@@ -107,6 +107,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000199>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000224>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000081>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://qudt.org/schema/qudt/hasUnit>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000017>))
@@ -653,6 +654,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000008> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000008> "A school-leaving qualification role is a role inherent in a person, conferred through official recognition of successful completion of a specified school educational track, and associated with eligibility for specified further educational or employment opportunities."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000008> "Ein Schulabschluss ist ein einer Person innewohnender Status (Rolle), der durch die offizielle Anerkennung des erfolgreichen Abschlusses eines bestimmten schulischen Bildungswegs verliehen wird und mit der Berechtigung zu bestimmten Weiterbildungs- oder Beschäftigungsmöglichkeiten verbunden ist."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000008> <http://purl.obolibrary.org/obo/BFO_0000023>)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000081> <https://w3id.org/lehrplan/ontology/LP_0000010>))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000008> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000019>))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (class level)
@@ -1213,7 +1215,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 A specific educational pathway may span multiple school levels and involve attending different schools. It may be successfully completed, interrupted, or terminated early. Therefore, completing an educational pathway does not necessarily lead to the attainment of the intended qualification."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000567> "Ein Bildungsgang ist ein Prozess, in dem eine Person eine strukturierte schulische Laufbahn gemäß einer Bildungsgangspezifikation durchläuft. Er umfasst zeitlich aufeinanderfolgende Lehr-, Lern- und Leistungsfeststellungsprozesse und ist auf den Erwerb eines festgelegten Kompetenzprofils sowie einer bestimmten schulischen Qualifikation ausgerichtet.
 Ein konkreter Bildungsgang kann mehrere Schulstufen und den Besuch unterschiedlicher Schulen umfassen. Er kann erfolgreich abgeschlossen, unterbrochen oder vorzeitig beendet werden. Das Durchlaufen eines Bildungsgangs führt daher nicht zwangsläufig zum Erwerb der angestrebten Qualifikation."@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000567> <http://purl.obolibrary.org/obo/BFO_0000015>)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000567> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000024> <https://w3id.org/lehrplan/ontology/LP_0000816>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (educational standard (KMK))
 
