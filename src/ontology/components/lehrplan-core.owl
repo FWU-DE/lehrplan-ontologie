@@ -107,6 +107,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000199>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000224>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000017>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000021>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
@@ -370,6 +371,7 @@ InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000086> <https:/
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000343> "has school type function"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000343> "hat Schulartfunktion"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000343> <http://purl.obolibrary.org/obo/RO_0000087>)
 InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000555>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000343> <https://w3id.org/lehrplan/ontology/LP_0000475>)
 
@@ -1057,7 +1059,12 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000475> (Schulartfunktion)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000475> "Schulartfunktion"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000475> "school type function"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000475> "school type role"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000475> "A school type role assigned to a school based on its institutional recognition as a school of a specific type. It is linked to a school-type-specific educational mission and the associated organizational and pedagogical guidelines, and is carried out through the provision of corresponding educational programs.
+This role is fulfilled by a specific school and is described by a school type specification. A school may hold multiple school type functions simultaneously. Through institutional reclassification, existing school type functions may end and new ones may be added without the school ceasing to exist as an organization."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000475> "Eine Schulartfunktion ist eine Rolle, die einer Schule aufgrund ihrer institutionellen Anerkennung als Schule einer bestimmten Schulart zukommt. Sie ist mit einem schulartspezifischen Bildungsauftrag und den damit verbundenen organisatorischen und pädagogischen Vorgaben verknüpft und wird in der Durchführung entsprechender Bildungsangebote realisiert.
+Die Rolle wird von einer konkreten Schule getragen und durch eine Schulartspezifikation beschrieben. Eine Schule kann gleichzeitig mehrere Schulartfunktionen innehaben. Durch eine institutionelle Umwidmung können bestehende Schulartfunktionen enden und neue hinzukommen, ohne dass die Schule als Organisation aufhört zu bestehen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000475> "BFO’s technical function is a disposition grounded in the bearer’s physical makeup and its evolutionary or design history. An institution’s designation as a Realschule or Gesamtschule is primarily grounded in institutional arrangements. I would therefore prefer a school-type role for that designation.")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (function specification)
 
