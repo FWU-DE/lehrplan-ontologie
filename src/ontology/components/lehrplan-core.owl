@@ -9,6 +9,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<https://w3id.org/lehrplan/ontology/lp/components/lehrplan-core.owl>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
@@ -72,6 +73,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000545>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000547>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000551>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000554>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000567>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000571>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000802>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000808>))
@@ -316,12 +318,12 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000017> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000017> "konkretisiert Lehrplan"@de)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000017> <https://w3id.org/lehrplan/ontology/LP_0000438>)
 
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000021> (endet mit Abschluss)
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000021> (leads to qualification)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000021> "endet mit Abschluss"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000021> "ermöglicht Abschluss"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000021> "leads to qualification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000021> "Ein Bildungsgang (occurent) endet mit Abschluss.")
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000019>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (wird beschrieben von)
@@ -1196,6 +1198,16 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/lehrplan/ontology/LP_0000015> <https://w3id.org/lehrplan/ontology/LP_0000554> "https://github.com/FWU-DE/lehrplan-ontologie/pull/9")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000554> <https://w3id.org/lehrplan/ontology/LP_0030065>)
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000567> (Bildungsgang)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000567> "Bildungsgang"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000567> "educational track"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000567> "An educational track is a process in which a person follows a structured educational path in accordance with a program specification. It comprises sequential teaching, learning, and assessment processes and is geared toward the acquisition of a defined competency profile and a specific educational qualification.
+A specific educational pathway may span multiple school levels and involve attending different schools. It may be successfully completed, interrupted, or terminated early. Therefore, completing an educational pathway does not necessarily lead to the attainment of the intended qualification."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000567> "Ein Bildungsgang ist ein Prozess, in dem eine Person eine strukturierte schulische Laufbahn gemäß einer Bildungsgangspezifikation durchläuft. Er umfasst zeitlich aufeinanderfolgende Lehr-, Lern- und Leistungsfeststellungsprozesse und ist auf den Erwerb eines festgelegten Kompetenzprofils sowie einer bestimmten schulischen Qualifikation ausgerichtet.
+Ein konkreter Bildungsgang kann mehrere Schulstufen und den Besuch unterschiedlicher Schulen umfassen. Er kann erfolgreich abgeschlossen, unterbrochen oder vorzeitig beendet werden. Das Durchlaufen eines Bildungsgangs führt daher nicht zwangsläufig zum Erwerb der angestrebten Qualifikation."@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000567> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (educational standard (KMK))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000571> "Bildungsstandard (KMK)"@de)
@@ -1286,30 +1298,18 @@ The \"Gymnasiale Bildungsgang\" does not necessarily have to be completed at a G
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000815> "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000815> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> ObjectUnionOf(<https://w3id.org/lehrplan/ontology/LP_0000069> <https://w3id.org/lehrplan/ontology/LP_0000835>))))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000816> (Bildungsgang)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000816> (Bildungsgangspezifikation)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "Bildungsgang"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "educational track"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "Bildungsgangspezifikation"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000816> "educational track specification"@en)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926>)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000816> <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "A \"Bildungsgang\" refers to a specific educational pathway that leads to a particular qualification or school-leaving certificate.
-This pathway includes multiple school levels, the duration of which is defined by the \"Bildungsgang\".
-It requires the achievement of a defined competence profile, which is assessed through various forms of performance evaluation.
-Curricula specify the content and competencies to be assessed in each subject.
-In the ontology, we distinguish three \"Bildungsgänge\" in general education:
-- The \"Hauptschulbildungsgang\", leading to the \"Erste Schulabschluss\";
-- The \"Realschulbildungsgang\", leading to the \"Mittlere Schulabschluss\";
-- The \"Gymnasiale Bildungsgang\", leading to the \"Allgemeine Hochschulreife\"."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "ALT Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
-
-Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
-
-    Im gymnasialen Bildungsgang zielt der Abschluss auf das Abitur.
-    er Realschulbildungsgang führt zur Mittleren Reife.
-    Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
-
-Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "NEU Ein Bildungsgang bezeichnet eine spezifische schulische Laufbahn, die zu einem bestimmten Abschluss oder einer Qualifikation führt. Innerhalb dieser Laufbahn werden mehrere Schulstufen durchlaufen, deren Dauer durch den Bildungsgang definiert ist. Er erfordert das Erreichen eines definierten Kompetenzprofils, welches durch verschiedene Arten der Leistungsfeststellung überprüft wird. Im Lehrplan werden die zu prüfenden Inhalte und Kompetenzen der jeweiligen Fächer festgelegt.  
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "An educational track specification is a unit of information that represents a specific educational track leading to a particular diploma or qualification. Within this track, students progress through several school levels, the duration of which is defined by the educational pathway. It requires the attainment of a defined competency profile, which is assessed through various types of performance evaluations. The curriculum specifies the content and competencies to be assessed in the respective subjects.
+In the ontology, we distinguish between three educational tracks in the area of general education schools:
+The Hauptschule track, which leads to the First School Leaving Certificate;
+the Realschule track, which leads to the Intermediate School Leaving Certificate;
+the Gymnasium track, which leads to the General University Entrance Qualification."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000816> "Eine Bildungsgangspezifikation ist eine Informationseinheit, die eine spezifische schulische Laufbahn, die zu einem bestimmten Abschluss oder einer Qualifikation führt repräsetiert. Innerhalb dieser Laufbahn werden mehrere Schulstufen durchlaufen, deren Dauer durch den Bildungsgang definiert ist. Er erfordert das Erreichen eines definierten Kompetenzprofils, welches durch verschiedene Arten der Leistungsfeststellung überprüft wird. Im Lehrplan werden die zu prüfenden Inhalte und Kompetenzen der jeweiligen Fächer festgelegt.  
 In der Ontologie unterscheiden wir im Bereich der allgemeinbildenden Schulen zwischen drei Bildungsgängen: 
 Der Hauptschulbildungsgang, der zum Ersten Schulabschluss führt;
 der Realschulbildungsgang, der zum Mittleren Schulabschluss führt;
@@ -2103,6 +2103,9 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_3000057> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_3000057> "BB")
 
 
+EquivalentClasses(ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000076>)) ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000835>)))
+EquivalentClasses(ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000078>)) ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000832>)))
+EquivalentClasses(ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000079>)) ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000816> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000834>)))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000001> <https://w3id.org/lehrplan/ontology/LP_2000002> <https://w3id.org/lehrplan/ontology/LP_2000003> <https://w3id.org/lehrplan/ontology/LP_2000004>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000054>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000036>))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000001> <https://w3id.org/lehrplan/ontology/LP_2000002> <https://w3id.org/lehrplan/ontology/LP_2000003> <https://w3id.org/lehrplan/ontology/LP_2000004> <https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_3000048> <https://w3id.org/lehrplan/ontology/LP_3000057>))) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000036>))
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> ObjectOneOf(<https://w3id.org/lehrplan/ontology/LP_2000005> <https://w3id.org/lehrplan/ontology/LP_2000006> <https://w3id.org/lehrplan/ontology/LP_2000007> <https://w3id.org/lehrplan/ontology/LP_2000008> <https://w3id.org/lehrplan/ontology/LP_2000009> <https://w3id.org/lehrplan/ontology/LP_2000010>)) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000054>)) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000045>))
