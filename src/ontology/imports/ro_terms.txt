@@ -12,3 +12,9 @@ http://purl.obolibrary.org/obo/RO_0002233 # has input
 http://purl.obolibrary.org/obo/RO_0002352 # input of
 http://purl.obolibrary.org/obo/RO_0002353 # ouput of
 http://purl.obolibrary.org/obo/RO_0002234 # has output
+
+http://purl.obolibrary.org/obo/RO_0000053 # has characteristic
+http://purl.obolibrary.org/obo/RO_0000087 # has role
+
+http://purl.obolibrary.org/obo/RO_0000052 # characteristic of
+http://purl.obolibrary.org/obo/RO_0000081 # role of
