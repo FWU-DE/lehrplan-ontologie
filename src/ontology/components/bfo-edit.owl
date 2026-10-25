@@ -60,7 +60,7 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000086> <http://purl
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000440> (für Bildungsgangabschnitt)
 
-SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000440> <http://purl.obolibrary.org/obo/RO_0000056>)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000440> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000483> (has function specification)
 
