@@ -85,3 +85,4 @@ src/patterns/all_pattern_terms.txt
 d2.exe
 shapes/tmp/catalog-v001.xml
 /shapes/tmp
+.github/workflows/docs.yml

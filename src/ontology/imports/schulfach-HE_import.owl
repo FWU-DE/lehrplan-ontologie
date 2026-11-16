@@ -9,9 +9,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulfach-HE_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-10-25/imports/schulfach-HE_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.1/components/subjects-he.owl>)
-Annotation(owl:versionInfo "2026-10-25")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-11-16/imports/schulfach-HE_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.2/components/subjects-he.owl>)
+Annotation(owl:versionInfo "2026-11-16")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))
@@ -50,6 +50,7 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1033>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1036>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1037>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1041>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1048>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1050>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1056>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1057>))
@@ -134,6 +135,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/HE_0000003> "Arbeitsl
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/HE_0000003> "Haupt- und Realschulen")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/HE_0000003>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/HE_0000003>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/HE_0000003> <http://w3id.org/kim/schulfaecher/s1048>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/HE_0000003> <https://w3id.org/schulfach/HE_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/HE_0000003> ontology:LP_3000050)
 

@@ -9,9 +9,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulfach-NI_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-10-25/imports/schulfach-NI_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.1/components/subjects-ni.owl>)
-Annotation(owl:versionInfo "2026-10-25")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-11-16/imports/schulfach-NI_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.2/components/subjects-ni.owl>)
+Annotation(owl:versionInfo "2026-11-16")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))
@@ -56,10 +56,13 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1037>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1041>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1042>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1043>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1047>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1048>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1051>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1052>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1053>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1054>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1058>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1059>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1060>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1061>))
@@ -137,7 +140,9 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/NI_0000001> "Arbeit-W
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/NI_0000001> "nur IGS")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/NI_0000001>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/NI_0000001>)
-ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/NI_0000001> <http://w3id.org/kim/schulfaecher/s1033>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/NI_0000001> <http://w3id.org/kim/schulfaecher/s1033>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/NI_0000001> <http://w3id.org/kim/schulfaecher/s1048>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/NI_0000001> <http://w3id.org/kim/schulfaecher/s1059>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/NI_0000001> <https://w3id.org/schulfach/NI_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/NI_0000001> ontology:LP_3000043)
 
@@ -293,6 +298,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/NI_0000017> "Hauswirt
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/NI_0000017> "Oberschule, Hauptschule, Realschule")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/NI_0000017>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/NI_0000017>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/NI_0000017> <http://w3id.org/kim/schulfaecher/s1047>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/NI_0000017> <https://w3id.org/schulfach/NI_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/NI_0000017> ontology:LP_3000043)
 
@@ -477,7 +483,8 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/NI_0000036> "Profil G
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/NI_0000036> "Realschule")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/NI_0000036>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/NI_0000036>)
-ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/NI_0000036> <http://w3id.org/kim/schulfaecher/s1012>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/NI_0000036> <http://w3id.org/kim/schulfaecher/s1012>)
+ObjectPropertyAssertion(skos:closeMatch <https://w3id.org/schulfach/NI_0000036> <http://w3id.org/kim/schulfaecher/s1058>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/NI_0000036> <https://w3id.org/schulfach/NI_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/NI_0000036> ontology:LP_3000043)
 

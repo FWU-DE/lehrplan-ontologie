@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                1347f77e980de2bb582ddf693321c632edd6b9d3b0d36a70cb297b48a4548082
+CONFIG_HASH=                b974cb08eaf03e5ad89a084c79952c3e22c46d9f93315c1c78b3be76627f8899
 
 
 # ----------------------------------------
@@ -1005,112 +1005,112 @@ mirror-schulart-TH: | $(TMPDIR)
 .PHONY: mirror-schulfach-BB
 .PRECIOUS: $(MIRRORDIR)/schulfach-BB.owl
 mirror-schulfach-BB: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-bb.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-bb.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-BE
 .PHONY: mirror-schulfach-BE
 .PRECIOUS: $(MIRRORDIR)/schulfach-BE.owl
 mirror-schulfach-BE: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-be.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-be.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-BW
 .PHONY: mirror-schulfach-BW
 .PRECIOUS: $(MIRRORDIR)/schulfach-BW.owl
 mirror-schulfach-BW: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-bw.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-bw.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-BY
 .PHONY: mirror-schulfach-BY
 .PRECIOUS: $(MIRRORDIR)/schulfach-BY.owl
 mirror-schulfach-BY: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-by.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-by.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-HB
 .PHONY: mirror-schulfach-HB
 .PRECIOUS: $(MIRRORDIR)/schulfach-HB.owl
 mirror-schulfach-HB: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-hb.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-hb.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-HE
 .PHONY: mirror-schulfach-HE
 .PRECIOUS: $(MIRRORDIR)/schulfach-HE.owl
 mirror-schulfach-HE: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-he.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-he.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-HH
 .PHONY: mirror-schulfach-HH
 .PRECIOUS: $(MIRRORDIR)/schulfach-HH.owl
 mirror-schulfach-HH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-hh.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-hh.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-MV
 .PHONY: mirror-schulfach-MV
 .PRECIOUS: $(MIRRORDIR)/schulfach-MV.owl
 mirror-schulfach-MV: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-mv.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-mv.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-NI
 .PHONY: mirror-schulfach-NI
 .PRECIOUS: $(MIRRORDIR)/schulfach-NI.owl
 mirror-schulfach-NI: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-ni.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-ni.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-NW
 .PHONY: mirror-schulfach-NW
 .PRECIOUS: $(MIRRORDIR)/schulfach-NW.owl
 mirror-schulfach-NW: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-nw.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-nw.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-RP
 .PHONY: mirror-schulfach-RP
 .PRECIOUS: $(MIRRORDIR)/schulfach-RP.owl
 mirror-schulfach-RP: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-rp.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-rp.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-SH
 .PHONY: mirror-schulfach-SH
 .PRECIOUS: $(MIRRORDIR)/schulfach-SH.owl
 mirror-schulfach-SH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sh.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-sh.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-SL
 .PHONY: mirror-schulfach-SL
 .PRECIOUS: $(MIRRORDIR)/schulfach-SL.owl
 mirror-schulfach-SL: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sl.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-sl.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-SN
 .PHONY: mirror-schulfach-SN
 .PRECIOUS: $(MIRRORDIR)/schulfach-SN.owl
 mirror-schulfach-SN: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-sn.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-sn.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-ST
 .PHONY: mirror-schulfach-ST
 .PRECIOUS: $(MIRRORDIR)/schulfach-ST.owl
 mirror-schulfach-ST: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-st.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-st.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: schulfach-TH
 .PHONY: mirror-schulfach-TH
 .PRECIOUS: $(MIRRORDIR)/schulfach-TH.owl
 mirror-schulfach-TH: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.1/src/ontology/components/subjects-th.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/FWU-DE/schulfach-ontologie/refs/tags/1.0.2/src/ontology/components/subjects-th.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

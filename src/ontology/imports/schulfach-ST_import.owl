@@ -9,9 +9,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/lp/imports/schulfach-ST_import.owl>
-<https://w3id.org/lehrplan/ontology/lp/releases/2026-10-25/imports/schulfach-ST_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.1/components/subjects-st.owl>)
-Annotation(owl:versionInfo "2026-10-25")
+<https://w3id.org/lehrplan/ontology/lp/releases/2026-11-16/imports/schulfach-ST_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/schulfach/1.0.2/components/subjects-st.owl>)
+Annotation(owl:versionInfo "2026-11-16")
 
 Declaration(Class(skos:Concept))
 Declaration(Class(skos:ConceptScheme))
@@ -47,6 +47,7 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1036>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1040>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1043>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1046>))
+Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1047>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1052>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1054>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1058>))
@@ -249,6 +250,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/schulfach/ST_0000015> "Hauswirt
 AnnotationAssertion(skos:editorialNote <https://w3id.org/schulfach/ST_0000015> "Sekundarschule")
 ClassAssertion(skos:Concept <https://w3id.org/schulfach/ST_0000015>)
 ClassAssertion(ontology:LP_0000001 <https://w3id.org/schulfach/ST_0000015>)
+ObjectPropertyAssertion(skos:exactMatch <https://w3id.org/schulfach/ST_0000015> <http://w3id.org/kim/schulfaecher/s1047>)
 ObjectPropertyAssertion(skos:topConceptOf <https://w3id.org/schulfach/ST_0000015> <https://w3id.org/schulfach/ST_0000000>)
 ObjectPropertyAssertion(ontology:LP_0000029 <https://w3id.org/schulfach/ST_0000015> ontology:LP_3000053)
 
