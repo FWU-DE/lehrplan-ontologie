@@ -1,11 +1,11 @@
 # Patterns
 
-Bei der Entwicklung und Nutzung von Ontologien spielen **Patterns (Anwendungsmuster)** eine entscheidende Rolle bei der Bewältigung wiederkehrender Modellierungsanforderungen. Diese Muster bieten standardisierte, wiederverwendbare semantische Bausteine, die eine konsistente Darstellung der Beziehungen zwischen Instanzen und Entitäten ermöglichen. Darüber hinaus können solche Muster zur Erstellung von SHACL-Shapes verwendet werden, um Einschränkungen in eine Wissensrepräsentation einzubinden. Durch die Befolgung von Anwendungsmustern können Ontologie-Anwender und -Entwickler Einheitlichkeit, Klarheit und Wiederverwendbarkeit in ihren Modellen gewährleisten.
+Patterns (Anwendungsmuster) zeigen, wie wiederkehrende Sachverhalte mit der Lehrplan-Ontologie modelliert werden. Sie sind wiederverwendbare Bausteine, die eine einheitliche Darstellung in den Lehrplandaten sicherstellen, und können als Grundlage für SHACL-Shapes (SHACL: Shapes Constraint Language) dienen, mit denen sich die Daten prüfen lassen.
 
-Die folgenden Abschnitte veranschaulichen, wie diese Muster gelesen und angewendet werden. Jedes Muster enthält eine Visualisierung, eine Erläuterung und die RDF Daten.
+Jedes Pattern enthält eine Visualisierung, die RDF-Daten (RDF: Resource Description Framework) und eine Erläuterung. Die Beispiele beziehen sich auf die Version **1.0.0rc6** der Ontologie. Ressourcen mit dem Präfix `ex:` sind erfundene Beispiele; in den echten Lehrplandaten haben sie Internationalized Resource Identifiers (IRIs) der Form `https://w3id.org/lehrplan/resource/by/…`. Damit die Beispiele lesbar bleiben, erhält jeder verwendete Begriff der Ontologie einen eigenen Prefix, der nach seiner Bezeichnung benannt ist (siehe [Schreibweise der Abfragen](sparql.md#schreibweise-der-abfragen)). Prefixe von Klassen beginnen mit einem Großbuchstaben (`Lehrplan:`, `CE_Bereich:`), Prefixe von Properties und Individuen der Ontologie mit einem Kleinbuchstaben (`hat_teil:`, `sachsen:`). Die erfundenen Beispiel-Instanzen sind klein geschrieben und nummeriert (`ex:lehrplan_1`, `ex:titel_2`).
 
 
-## Pattern 1 - Lehrplan eines Bundeslandes
+## Pattern 1 - Lehrplan eines Landes
 
 ```ontoink
 source: patterns/pattern1.ttl
@@ -13,34 +13,36 @@ shape: ../shapes/auto-shapes/auto-shapes-open.ttl
 namespaces: false
 ```
 
-
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern1.ttl"
 ```
 
 **Erläuterung**:
 
-**Lehrplan** (`LP_0000438`) ist die Wurzelklasse für alle konkreten Lehrplandokumente in der Ontologie. Jede länderspezifische Lehrplanvariante – *LehrplanPLUS (BY), Bildungsplan (HH/BW), Kernlehrplan (NW), Kerncurriculum (NI/HE), Rahmenlehrplan (BB), Fachanforderung (SH)* usw. – ist eine Subklasse davon.
+**Lehrplan** (`LP_0000438`) ist die gemeinsame Oberklasse aller Lehrpläne. Jede länderspezifische Bezeichnung ist eine Unterklasse davon: *LehrplanPLUS (BY)*, *Bildungsplan (BW, HB, HH)*, *Kernlehrplan (NW)*, *Kerncurriculum (NI, HE)*, *Rahmenlehrplan (BE, BB)*, *Rahmenplan (MV)*, *Fachanforderung (SH)* sowie *Lehrplan (RP, SL, SN, ST, TH)*.
 
 **Kontextualisierungsangaben**
 
-Ein Lehrplan-Individuum trägt die Angaben, die seinen institutionellen Geltungsbereich vollständig beschreiben:
+Ein Lehrplan trägt die Angaben, die seinen institutionellen Geltungsbereich beschreiben:
 
-- **von Bundesland** (`LP_0000029`) → das ausgebende Bundesland, z.B. *Bayern* (`LP_3000051`)
-- **für Schulart** (`LP_0000812`) → die Schulart, für die der Lehrplan gilt, z.B. *Grundschule* (`BY_0000001`)
-- **hat Bildungsgangniveau** (`LP_0000833`) → alternativ oder ergänzend das Bildungsgangniveau, das sich auf den angestrebten Abschluss bezieht, z.B. *Realschulniveau* (`LP_0000832`)
-- **hat Schulfach** (`LP_0000537`) → das Unterrichtsfach, z.B. *Sport* (`BY_0000013`)
+- **von Bundesland** (`LP_0000029`) → das ausgebende Land, z. B. *Bayern* (`LP_3000051`)
+- **für Schulart** (`LP_0000812`) → die Schulart, für die der Lehrplan gilt, z. B. *Grundschule* (`schulart:BY_0000001`)
+- **hat Bildungsgangniveau** (`LP_0000833`) → alternativ oder ergänzend das Bildungsgangniveau, z. B. *Realschulniveau (BY)* (`LP_0000030`)
+- **hat Schulfach** (`LP_0000537`) → das Unterrichtsfach, z. B. *Sport* (`schulfach:BY_0000013`)
 - **hat Jahrgangsstufe** (`LP_0000026`) → die Jahrgangsstufen, für die der Lehrplan gilt
-- **hat Schulstufe** (`LP_0000047`) → alternativ oder ergänzend die übergeordnete Schulstufe, z.B. *Primarbereich* (`LP_0000036`)
+- **hat Schulstufe** (`LP_0000047`) → alternativ oder ergänzend die übergeordnete Schulstufe, z. B. *Primarbereich* (`LP_0000036`)
 
-Diese Angaben zusammen machen einen Lehrplan eindeutig identifizierbar: *„Bayern – Grundschule – Sport – Jahrgangsstufen 1 und 2"*.
+Zusammen machen diese Angaben einen Lehrplan eindeutig identifizierbar: *„Bayern – Grundschule – Sport – Jahrgangsstufen 1 und 2“*.
 
 **Weitere Informationen**
 
-- **hat Titel** (`LP_0030056`) → der offizielle Titel des Dokuments als Titel-Individuum
-- **hat Beschreibung** (`LP_0030051`) → ein erläuternder Beschreibungstext als Individuum
-- **uri** (`LP_0000463`) → der kanonische URL zum Originaldokument beim Herausgeber, z.B. auf dem Schulportal des Bundeslandes
+- **hat Titel** (`LP_0030056`) → der offizielle Titel als Titel-Individuum (siehe Pattern 2)
+- **hat Beschreibung** (`LP_0030051`) → ein erläuternder Text als Beschreibungs-Individuum
+- **uri** (`LP_0000463`) → die Uniform Resource Locator (URL) des Originaldokuments beim Herausgeber, z. B. auf dem Schulportal des Landes
+- **hat direkten Teil** (`LP_0000565`) → die oberste Gliederungsebene des Lehrplans (siehe Pattern 6)
+- **veröffentlicht am** und **hat Gültigkeitsbereich** → zeitliche Angaben (siehe Pattern 13)
 
 
 ## Pattern 2 - Titel, Beschreibung und Identifikationsnummer
@@ -50,83 +52,78 @@ source: patterns/pattern2.ttl
 shape: ../shapes/auto-shapes/auto-shapes-open.ttl
 namespaces: false
 ```
+
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern2.ttl"
 ```
 
 **Erläuterung**:
 
+Die Texte eines Lehrplans werden nicht als einfache Literale an die Elemente gehängt, sondern als eigene Informationseinheiten modelliert. Der eigentliche Text steht jeweils über **hat Wert** (`LP_0000344`) an diesem Individuum.
+
 **Titel** (`LP_0000346`) – Property: **hat Titel** (`LP_0030056`)
 
-Ein Titel-Individuum trägt die offizielle Bezeichnung eines Elements – also den Namen, wie er im gedruckten oder digitalen Lehrplan erscheint. Dabei gilt: Der `Titel` ist nicht identisch mit dem `rdfs:label` des Elements. Das `rdfs:label` ist eine technische Beschriftung für die Ontologie; der `Titel` ist das Pendant zum originalen Dokumenttext.
-
-`hat Titel` hat keinen deklarierten Domain-Constraint – es kann sowohl an Lehrplänen (dann trägt es den offiziellen Dokumenttitel, z.B. *"Lehrplan Plus Gymnasium Bayern – Deutsch"*) als auch an einzelnen Curricularen Elementen hängen. 
+Ein Titel trägt die Bezeichnung eines Elements, wie sie im gedruckten oder digitalen Lehrplan erscheint. Er ist nicht identisch mit dem `rdfs:label` des Elements: Das Label ist eine Beschriftung für die Anzeige, der Titel bildet den Originaltext des Dokuments ab. *hat Titel* kann an Lehrplänen und an curricularen Elementen verwendet werden (Domain: *Curriculares Element* oder *Lehrplan*). Für eine *CE-Kompetenzspezifikation* ist ein Titel Teil der Definition.
 
 **Beschreibung** (`LP_0030003`) – Property: **hat Beschreibung** (`LP_0030051`)
 
-Die Beschreibung trägt längere, erläuternde Texte. Das können sein: Erläuterungen zu Kompetenzbereichen, methodische Hinweise und Anregungen, didaktische Kommentare, Konkretisierungsbeispiele, Literaturhinweise, Kontextinformationen oder Freitexte zum Bildungsauftrag oder den allgemeinen Fachzielen.
-
-Im Gegensatz zu `hat Titel` hat `hat Beschreibung` die **Domain** `Curriculares Element` – es wird also ausschließlich an CE-Elementen verwendet, nicht direkt am Lehrplan-Individuum. 
+Die Beschreibung trägt längere, erläuternde Texte: Erläuterungen zu Kompetenzbereichen, methodische Hinweise, didaktische Kommentare, Konkretisierungsbeispiele oder Texte zum Bildungsauftrag. Auch *hat Beschreibung* kann an Lehrplänen und curricularen Elementen verwendet werden.
 
 **Identifikationsnummer** (`LP_0000347`) – Property: **hat Nummer** (`LP_0030057`)
 
-Die Identifikationsnummer trägt die im Originaldokument verwendete Kennzeichnung eines Elements – also z.B. *"3.1", "LB 2"* oder *"A.1"*. Sie hat ebenfalls die **Domain** `Curriculares Element` und dient dazu, die originale Nummerierung oder Codierung aus dem Quelldokument maschinenlesbar zu bewahren.
+Die Identifikationsnummer bewahrt die Nummerierung des Originaldokuments, z. B. *„3.1“*, *„LB 2“* oder *„A.1“*. Sie ist nur an curricularen Elementen vorgesehen (Domain: *Curriculares Element*). Da die IRIs der Elemente zwar eindeutig, aber für Menschen nicht sprechend sind (z. B. `https://w3id.org/lehrplan/resource/by/a0010229-…`), stellt die Nummer den Bezug zur Stelle im Originaldokument her.
 
-Das ist wichtig, weil die IRI eines Elements in der Ontologie zwar eindeutig, aber opak ist (`lp-sachsen.org/resource/55099`). Die Identifikationsnummer stellt den Bezug zur menschenlesbaren Struktur des Originaldokuments her und macht es möglich, ein ontologisches Element direkt auf eine bestimmte Stelle im gedruckten Lehrplan zurückzuführen.
+**Gliederung und Reihenfolge**
 
-Die drei Klassen ergänzen sich so, dass vollständige Lehrplaninhalte lückenlos abgebildet werden können:
-```
+Das Beispiel zeigt außerdem, wie Elemente ineinander gegliedert werden: Über **hat direkten Teil** (`LP_0000565`) verweist ein Element auf seine unmittelbaren Teile, über **hat Position** (`LP_0000460`) wird die Reihenfolge der Teile innerhalb ihres Elternelements festgehalten.
+
+```text
 Curriculares Element
-  ├─[hat Titel]──────────▶ Titel       → der Name des Elements im Dokument
-  ├─[hat Nummer]─────────▶ Identifikationsnummer → z.B. "3.1" oder "LB 2"
-  └─[hat Beschreibung]───▶ Beschreibung → erläuternder Text
+  ├─[hat Titel]──────────▶ Titel                  → Name des Elements im Dokument
+  ├─[hat Nummer]─────────▶ Identifikationsnummer  → z. B. "3.1" oder "LB 2"
+  ├─[hat Beschreibung]───▶ Beschreibung           → erläuternder Text
+  └─[hat Position]───────▶ 1, 2, 3 …              → Reihenfolge im Elternelement
 ```
-Jedes **Curriculare Element** trägt einen `Titel`, aber nicht zwingend eine `Beschreibung` oder eine `Identifikationsnummer`. 
 
 
 ## Pattern 3 - Schulfach und Schulfachbezug
-
 
 ```ontoink
 source: patterns/pattern3.ttl
 namespaces: false
 ```
+
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern3.ttl"
 ```
 
-
 **Erläuterung**:
 
-Das Beispiel zeigt zwei Lehrpläne, denen ein Schulfach, bzw. ein Schulfachbezug zugeordnet sind. 
+Das Beispiel zeigt zwei Lehrpläne: Einem ist direkt ein Schulfach zugeordnet, dem anderen ein Schulfachbezug.
 
-**Schulfach** (`LP_0000001`) ist die Basisklasse für alle Unterrichtsfächer im deutschen Schulsystem. Die Ontologie definiert vier thematische Subklassen für häufig abgefragte Fächergruppen:
+**Schulfach** (`LP_0000001`) ist die Klasse aller Unterrichtsfächer. Für häufig abgefragte Fächergruppen gibt es Unterklassen:
 
-- **MINT-Fach** (`LP_0000002`) – Mathematik, Informatik, Naturwissenschaften, Technik; enthält seinerseits
-- **Naturwissenschaftsfach** (`LP_0000003`) als Subklasse des MINT-Fachs
+- **MINT-Fach** (`LP_0000002`; MINT: Mathematik, Informatik, Naturwissenschaften und Technik) mit der Unterklasse **Naturwissenschaftsfach** (`LP_0000003`)
 - **Fremdsprachenfach** (`LP_0000004`)
 - **Gesellschaftswissenschaftsfach** (`LP_0000005`)
+- **BistaFach** (`LP_0000039`) für die Fächer, für die es KMK-Bildungsstandards (KMK: Kultusministerkonferenz) gibt
 
-Diese Subklassen dienen der thematischen Filterung über Bundeslandgrenzen hinweg, etwa um gezielt alle Naturwissenschaftslehrpläne aller Länder zu finden.
+Die konkreten Fächer stammen aus der Schulfach-Ontologie (`https://w3id.org/schulfach`): 898 Fächer, je eines pro Land und Fachbezeichnung, z. B. `schulfach:BY_0000001` (Deutsch), `schulfach:HH_0000004` (Deutsch), `schulfach:SN_0000001` (Deutsch). Dass dasselbe Fach in jedem Land ein eigenes Individuum ist, bildet die Realität ab: Die Bezeichnungen weichen voneinander ab, etwa *Arbeit-Wirtschaft-Technik*, *AWT* oder *Arbeitslehre*. Für 733 Fächer gibt es ein `skos:exactMatch` und für 51 ein `skos:closeMatch` auf das bundesweite **KIM-Schulfachvokabular** (KIM: Kompetenzzentrum Interoperable Metadaten), das als gemeinsamer Bezugspunkt für länderübergreifende Abfragen dient.
 
-Die konkreten Fächer (die Individuen) sind im separaten Schulfach-Graphen (`https://w3id.org/schulfach/1.0.0`) erfasst: 894 Fach-Individuen, je eines pro Bundesland und Fachbezeichnung – z.B. `BY_0000001 (Deutsch)`, `HH_0000004 (Deutsch)`, `SN_0000001 (Deutsch)`. Dass dasselbe Fach in verschiedenen Ländern als eigenes Individuum geführt wird, bildet die Realität ab: Die Bezeichnungen weichen ab (*Arbeit-Wirtschaft-Technik* in Niedersachsen vs. *AWT* in Mecklenburg-Vorpommern vs. *Arbeitslehre* in HE, NW, RP, SL). Für 46 Fächer existiert zusätzlich ein `skos:exactMatch` auf das bundesweite **KIM-Schulfachvokabular**, das als gemeinsamer Referenzpunkt für länderübergreifende Abfragen dient.
+In den Lehrplandaten wird ein Fach über **hat Schulfach** (`LP_0000537`) mit einem Lehrplan verknüpft.
 
-In den Lehrplandaten wird ein konkretes Fach-Individuum über die Property `LP_0000537` (**hat Schulfach**) mit einem Lehrplan verknüpft – z.B. zeigt `Deutsch 1/2 (BY)` auf `schulfach:BY_0000001`.
+**Schulfachbezug** (`LP_0000540`) beschreibt die Stellung eines Fachs in einem bestimmten Kontext:
 
-Daneben gibt es die Subklasse **BistaFach** (`LP_0000039`), die Fächer kennzeichnet, für die bundesweit einheitliche Bildungsstandards der KMK existieren.
+- **Pflichtfach** (`LP_0000544`): für alle Schülerinnen und Schüler verbindlich
+- **Wahlpflichtfach** (`LP_0000545`): verbindliche Wahl aus einem festgelegten Angebot
+- **Wahlfach** (`LP_0000551`): freiwillig wählbar
+- **Erste**, **Zweite** und **Dritte Fremdsprache** (`LP_0000541`, `LP_0000542`, `LP_0000543`)
 
-Während Schulfach beschreibt, was gelehrt wird, beschreibt **Schulfachbezug** (`LP_0000540`) die Stellung eines Faches im Stundentafel- und Bildungsgangskontext. Die Subklassen spiegeln die schulorganisatorischen Kategorien direkt wider:
-
-- **Pflichtfach** (`LP_0000544`): Für alle Schülerinnen und Schüler verbindlich
-- **Wahlpflichtfach** (`LP_0000545`): Verbindliche Wahl aus einem definierten Angebot
-- **Wahlfach** (`LP_0000551`): Freiwillig wählbar ohne Pflichtcharakter
-- **Erste Fremdsprache** (`LP_0000541`): Die erste gelernte Fremdsprache im Bildungsgang
-- **Zweite Fremdsprache** (`LP_0000542`): Die zweite gelernte Fremdsprache
-- **Dritte Fremdsprache** (`LP_0000543`): Die dritte gelernte Fremdsprache
-
-Der Schulfachbezug ist für Fremdsprachen besonders wichtig: Englisch kann je nach Bundesland und Bildungsgang erste, zweite oder dritte Fremdsprache sein – mit je anderen curricularen Anforderungen. Indem der Bezug als eigene Klasse modelliert ist, lassen sich z.B. alle Lehrpläne für „Englisch als zweite Fremdsprache" bundeslandübergreifend abfragen, ohne auf Freitext angewiesen zu sein.
+Ein Schulfachbezug verweist seinerseits über *hat Schulfach* auf das Fach. Deshalb erlaubt *hat Schulfach* als Range sowohl *Schulfach* als auch *Schulfachbezug*. Besonders wichtig ist das für Fremdsprachen: Englisch kann je nach Land und Bildungsgang erste, zweite oder dritte Fremdsprache sein – mit jeweils anderen Anforderungen. So lassen sich z. B. alle Lehrpläne für „Englisch als zweite Fremdsprache“ bundesweit abfragen.
 
 
 ## Pattern 4 - Schulart und Bildungsgangniveau
@@ -137,43 +134,39 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern4.ttl"
 ```
 
 **Erläuterung**:
 
-**Schulart** (LP_0000111) bezeichnet den institutionellen Typ einer Schule. Die Schulart-Ontologie umfasst 89 Schulart-Individuen aus allen 16 Bundesländern – jeweils eines für jede länderspezifisch benannte Schulform.
+**Schulart** (`LP_0000111`) beschreibt eine Schulform. Die Schulart-Ontologie umfasst 89 Schularten aus allen 16 Ländern – jeweils eine pro länderspezifisch benannter Schulform. Eine Schulart ist eine Informationseinheit; die Rolle, die eine konkrete Schule als Schule dieser Art hat, ist die *Schulartfunktion*.
 
-Nur **Grundschule** und **Gymnasium** kommen unter derselben Bezeichnung in allen Bundesländern vor. Alle anderen Schularten unterscheiden sich zum Teil erheblich. So entspricht beispielsweise die **Mittelschule** in Bayern der **Regelschule** in Thüringen, der **Regionalen Schule** in Mecklenburg-Vorpommern, der **Oberschule** in Sachsen oder der **Hauptschule** in Niedersachsen. Auch bei den Gesamtschulen zeigen sich deutliche Unterschiede: Hamburg kennt ausschließlich die **Stadtteilschule**, Schleswig-Holstein die **Gemeinschaftsschule**, Nordrhein-Westfalen unterscheidet zwischen **Gesamtschule** und **Sekundarschule**.
+Nur **Grundschule** und **Gymnasium** gibt es unter derselben Bezeichnung in allen Ländern. Die übrigen Schularten unterscheiden sich zum Teil erheblich: Der **Mittelschule** in Bayern entsprechen etwa die **Regelschule** in Thüringen, die **Regionale Schule** in Mecklenburg-Vorpommern, die **Oberschule** in Sachsen oder die **Hauptschule** in Niedersachsen. Hamburg kennt als integrierte Schulform ausschließlich die **Stadtteilschule**, Schleswig-Holstein die **Gemeinschaftsschule**, Nordrhein-Westfalen unterscheidet zwischen **Gesamtschule** und **Sekundarschule**.
 
-Jedes Schulart-Individuum ist über **von Bundesland** (LP_0000029) genau einem Bundesland zugeordnet und besitzt einen länderspezifischen IRI, beispielsweise `schulart:RP_0000002`. Damit bildet die Schulart den institutionellen Einstiegspunkt in die Lehrplandaten: Jeder Lehrplan verweist über **für Schulart** (LP_0000812) auf genau eine Schulart.
+Jede Schulart ist über **von Bundesland** (`LP_0000029`) einem Land zugeordnet und hat eine länderspezifische IRI, z. B. `schulart:RP_0000002` (Integrierte Gesamtschule in Rheinland-Pfalz). Lehrpläne verweisen über **für Schulart** (`LP_0000812`) auf die Schulart, für die sie gelten.
 
 ### Schulart und Bildungsgangniveau
 
-Die Verbindung zwischen einer Schulart und den Leistungsniveaus erfolgt über die Property **hat Bildungsgangniveau** (LP_0000833). Jede Schulart deklariert damit explizit, welche **Bildungsgangniveaus** (LP_0000028) an ihr vorkommen . Dadurch können Lehrplanelemente nicht nur einer Schulart, sondern auch einem konkreten Anspruchsniveau zugeordnet werden.
+Über **hat Bildungsgangniveau** (`LP_0000833`) gibt jede Schulart an, welche **Bildungsgangniveaus** (`LP_0000028`) an ihr unterrichtet werden. Das Gymnasium in Bayern (`schulart:BY_0000005`) hat beispielsweise das *Gymnasialniveau Sek I (BY)* und das *Gymnasialniveau Sek II (BY)*.
 
-An einer **Einheitsschule** wie dem Gymnasium gibt es in der Regel ein Niveau pro Schulstufe. Ein Gymnasium in Bayern besitzt beispielsweise das **Gymnasialniveau Sek I (BY)** sowie das **Gymnasialniveau Sek II (BY)**.
-
-Anders verhält es sich bei Schularten, die mehrere Bildungsgänge unter einem Dach vereinen. Sie können gleichzeitig mehrere Bildungsgangniveaus besitzen, da Schülerinnen und Schüler dort unterschiedliche Abschlüsse anstreben. Ein Beispiel ist die **Gemeinschaftsschule Sachsen**, die fünf Bildungsgangniveaus umfasst: **Grundschulniveau (SN)**, **Hauptschulbildungsgangniveau (SN)**, **Oberschulniveau (SN)**, **Realschulbildungsgangniveau (SN)** und **Gymnasialniveau Sek I (SN)**. Sie integriert damit alle Bildungsgänge von Klasse 1 bis 10.
+Schularten, die mehrere Bildungsgänge unter einem Dach vereinen, haben entsprechend mehrere Niveaus. Die **Gemeinschaftsschule** in Sachsen (`schulart:SN_0000002`) umfasst sechs: *Grundschulniveau (SN)*, *Hauptschulbildungsgangniveau (SN)*, *Realschulbildungsgangniveau (SN)*, *Oberschulniveau (SN)*, *Gymnasialniveau Sek I (SN)* und *Gymnasialniveau Sek II (SN)*. Sie reicht damit von der Grundschule bis zur gymnasialen Oberstufe.
 
 ### Föderale Vielfalt der Bildungsgangniveaus
 
-Wie die Schularten selbst sind auch die Bildungsgangniveaus landesspezifisch benannt. Inhaltlich vergleichbare Niveaus tragen je nach Bundesland unterschiedliche Bezeichnungen. So heißt das Hauptschulniveau beispielsweise in Baden-Württemberg **G-Niveau**, in Bayern **Mittelschulniveau** und in Rheinland-Pfalz **Grundlegendes Kompetenzniveau**.
-
-Die Ontologie bildet diese föderale Vielfalt bewusst ab. Statt bundesweit einheitliche Begriffe einzuführen, werden die in den jeweiligen Lehrplänen verwendeten Bezeichnungen übernommen.
+Wie die Schularten sind auch die Bildungsgangniveaus länderspezifisch benannt. Das Hauptschulniveau heißt etwa in Baden-Württemberg *G Niveau*, in Bayern *Mittelschulniveau* und in Rheinland-Pfalz *Grundlegendes Kompetenzniveau*. Die Ontologie übernimmt die Bezeichnungen der Länder und ordnet sie über die generischen Niveauklassen einander zu (siehe Pattern 9).
 
 ### Bedeutung für die Lehrplandaten
 
-Auch curriculare Elemente, beispielsweise Kompetenzerwartungen, können über **hat Bildungsgangniveau (LP_0000833)** einem oder mehreren Bildungsgangniveaus zugeordnet werden. Dadurch entsteht die Verknüpfung
+Auch curriculare Elemente, etwa Kompetenzerwartungen, können über **hat Bildungsgangniveau** einem oder mehreren Niveaus zugeordnet werden. So entsteht die Verknüpfung
 
-**Schulart → hat Bildungsgangniveau ← Curriculares Element.**
+**Schulart → hat Bildungsgangniveau ← Curriculares Element**
 
-Über diese gemeinsame Zuordnung lässt sich ermitteln, an welchen Schularten eine bestimmte Anforderung gilt, ohne dass die Schulart unmittelbar am curricularen Element gespeichert werden muss. Die Schulart fungiert damit als institutioneller Kontext, während das Bildungsgangniveau den fachlichen Anspruch beschreibt.
+Darüber lässt sich ermitteln, an welchen Schularten eine Anforderung gilt, ohne dass die Schulart am curricularen Element selbst angegeben sein muss. Die Schulart liefert den institutionellen Kontext, das Bildungsgangniveau den fachlichen Anspruch.
 
 
 ## Pattern 5 - Jahrgangstufe/Schulstufe und Phasen der Sekundarstufe II
-
 
 ```ontoink
 source: patterns/pattern5.ttl
@@ -181,35 +174,38 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern5.ttl"
 ```
-
 
 **Erläuterung**:
 
 **Jahrgangsstufen** (`LP_0000009`)
 
-Die Ontologie definiert **13 Jahrgangsstufen-Individuen** (`LP_2000001` bis `LP_2000013`) für die Jahrgänge 1–13. Sie sind bundeslandunabhängig – Jahrgangsstufe 6 ist in jedem Land dieselbe IRI `LP_2000006`. Curriculare Elemente werden über die Property **hat Jahrgangsstufe** (`LP_0000026`) an eine oder mehrere Jahrgangsstufen gebunden. Das ist die häufigste und direkteste Zuordnung: Eine Anforderung, die für Jahrgangsstufe 8 gilt, trägt `hat Jahrgangsstufe → LP_2000008`.
+Die Ontologie definiert 13 Jahrgangsstufen (`LP_2000001` bis `LP_2000013`). Sie sind länderunabhängig – Jahrgangsstufe 6 ist in jedem Land dieselbe IRI `LP_2000006`. Lehrpläne und curriculare Elemente werden über **hat Jahrgangsstufe** (`LP_0000026`) an eine oder mehrere Jahrgangsstufen gebunden. Das ist die häufigste und direkteste Zuordnung: Eine Anforderung für Jahrgangsstufe 8 trägt `hat Jahrgangsstufe → LP_2000008`.
 
-**Schulstufe** (`LP_0000020`) ist eine abstraktere Einordnung, die mehrere Jahrgangsstufen zu einem pädagogischen Abschnitt zusammenfasst. Sie wird über **hat Schulstufe** (`LP_0000047`) vergeben. Die Ontologie kennt folgende Schulstufen-Individuen:
+**Schulstufe** (`LP_0000020`)
 
-- **Primarbereich** (`LP_0000036`) – umfasst die Jahrgangsstufen 1–4 (Ausnahme: Berlin/Brandenburg 1-6)
-- **Sekundarbereich I** (`LP_0000045`) – umfasst die Jahrgangsstufen 5–9/10 (Ausnahme: Berlin/Brandenburg 7-10)
-- **Sekundarbereich II** (`LP_0000046`) – umfasst die Jahrgangsstufen (10/)11–12/13
-- (**Orientierungsstufe (MV)** (`LP_0000032`) – länderspezifisch für Mecklenburg-Vorpommern, umfasst die Jahrgangsstufen 5 und 6)
+Die Schulstufe fasst mehrere Jahrgangsstufen zu einem Bildungsabschnitt zusammen und wird über **hat Schulstufe** (`LP_0000047`) vergeben:
 
-Die Schulstufe wird eingesetzt, wenn ein Lehrplanelement keiner einzelnen Jahrgangsstufe, sondern einem ganzen Bildungsabschnitt zugeordnet ist – z.B. ein Kerncurriculum, das für die gesamte Sekundarstufe I gilt.
+- **Primarbereich** (`LP_0000036`) – Jahrgangsstufen 1–4 (in Berlin und Brandenburg 1–6)
+- **Sekundarbereich I** (`LP_0000045`) – Jahrgangsstufen 5–9/10 (in Berlin und Brandenburg 7–10)
+- **Sekundarbereich II** (`LP_0000046`) – Jahrgangsstufen (10/)11–12/13
+- **Orientierungsstufe (MV)** (`LP_0000032`) – länderspezifisch für Mecklenburg-Vorpommern, Jahrgangsstufen 5 und 6
 
-**Die Oberstufenphasen: Einführungs- und Qualifikationsphase**
+Die Schulstufe wird verwendet, wenn ein Element keiner einzelnen Jahrgangsstufe, sondern einem ganzen Bildungsabschnitt zugeordnet ist – z. B. ein Kerncurriculum, das für die gesamte Sekundarstufe I gilt.
 
-Die Ontologie kennt weitere drei Klassen, die speziell die gymnasiale Oberstufe strukturieren: **Oberstufenphase** (`LP_0000043`) als gemeinsamer Oberbegriff, und darunter **Einführungsphase** (LP_0000056) und **Qualifikationsphase** (`LP_0000057`). Die **Oberstufenphase** entspricht der **Sekundarstufe II**.
-Da in Deutschland teils achtjährige (G8), teils neunjährige (G9) Gymnasien existieren, fallen Einführungs- und Qualifikationsphase in unterschiedliche Jahrgangsstufen. Beide Varianten sind in der Ontologie als eigene Individuen erfasst:
+**Oberstufenphasen**
+
+Die Klasse **Oberstufenphase** (`LP_0000043`) gliedert die gymnasiale Oberstufe mit den Unterklassen **Einführungsphase** (`LP_0000056`) und **Qualifikationsphase** (`LP_0000057`). Zugeordnet werden die Phasen über **hat Oberstufensphase** (`LP_0000556`).
+
+Da es achtjährige (G8) und neunjährige (G9) Gymnasien gibt, liegen die Phasen in unterschiedlichen Jahrgangsstufen. Beide Varianten sind als eigene Individuen erfasst, die ihre Jahrgangsstufen über *hat Jahrgangsstufe* angeben:
 
 - **G8 Einführungsphase** (`LP_0000051`): Jahrgangsstufe 10
-- **G8 Qualifikationsphase** (`LP_0000050`): Jahrgangsstufen 11-12
+- **G8 Qualifikationsphase** (`LP_0000050`): Jahrgangsstufen 11–12
 - **G9 Einführungsphase** (`LP_0000055`): Jahrgangsstufe 11
-- **G9 Qualifikationsphase** (`LP_0000052`): Jahrgangsstufen 12-13
+- **G9 Qualifikationsphase** (`LP_0000052`): Jahrgangsstufen 12–13
 
 
 ## Pattern 6 - Hierarchie der Curricularen Elemente
@@ -220,43 +216,43 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern6.ttl"
 ```
 
-
 **Erläuterung**:
 
-**Curriculare Elemente** (`LP_0000261`) sind die Bausteine, aus denen ein Lehrplan in der MEM-Ontologie aufgebaut ist. Jede Informationseinheit eines Lehrplans – ein Kapitel, ein Kompetenzbereich, eine einzelne Anforderung, ein Lerninhalt – wird als Curriculares Element modelliert. Die Ontologie kennt sieben generische Unterklassen:
+**Curriculare Elemente** (`LP_0000261`) sind die Bausteine, aus denen ein Lehrplan aufgebaut ist. Jede Informationseinheit eines Lehrplans – ein Kapitel, ein Kompetenzbereich, eine einzelne Anforderung, ein Lerninhalt – ist ein curriculares Element. Die generischen Unterklassen tragen das Präfix *CE-*:
 
-**CE-Fragment** ist der rein strukturgebende Behälter ohne inhaltliche Semantik: Kapitel, Abschnitte und Überschriften, die einen Lehrplan gliedern, ohne selbst Kompetenzen oder Inhalte zu definieren. Jedes Bundesland hat eine eigene Subklasse davon (z.B. *Lehrplanfragment (HH), Lehrplanfragment (BY)*).
+**CE-Fragment** ist ein rein strukturgebender Bestandteil: Kapitel, Abschnitte und Überschriften, die einen Lehrplan gliedern, ohne selbst Kompetenzen oder Inhalte zu beschreiben. Jedes Land hat dafür eine eigene Klasse, z. B. *Lehrplanfragment (BY)*.
 
-**CE-Bereich** fasst Kompetenzen und Lerninhalte unter einem gemeinsamen inhaltlichen Fokus zusammen – er kann anderen CE-Bereichen über- oder untergeordnet sein. Die länderspezifischen Entsprechungen reichen von Kompetenzbereich (in fast allen Bundesländern) über *Lernbereich (BY, SN, NI), Leitidee (BE, BW, HH)* bis hin zu *Thema, Themenfeld* oder *Inhaltsfeld*.
+**CE-Bereich** fasst Kompetenzen und Lerninhalte unter einem gemeinsamen fachlichen Fokus zusammen und kann anderen CE-Bereichen über- oder untergeordnet sein. Die Bezeichnungen der Länder reichen von *Kompetenzbereich* über *Lernbereich*, *Leitidee* und *Themenfeld* bis *Inhaltsfeld*.
 
-**CE-Kompetenzspezifikation** beschreibt eine konkrete Kompetenz im Lehrplan – typischerweise als Satz mit Operator, der mit "Die Schülerinnen und Schüler …" beginnt. Die Ontologie unterscheidet dabei zwischen Fachbezogener und Fachübergreifender Kompetenzspezifikation. Länderspezifische Beispiele: *Anforderung (HH), Kompetenzerwartung (BY), Standard (BE), Kompetenz (RP)*.
+**CE-Kompetenzspezifikation** beschreibt eine konkrete Kompetenz – typischerweise als Satz mit Operator, der mit „Die Schülerinnen und Schüler …“ beginnt. Die Ontologie unterscheidet zwischen **Fachbezogener** und **Fachübergreifender Kompetenzspezifikation**. Eine Kompetenzspezifikation ist per Definition Teil eines CE-Bereichs und hat einen Titel.
 
-**CE-Lerninhalt** benennt konkrete Themen und Gegenstände, an denen Kompetenzen erworben werden. Er liefert die inhaltliche Basis für den Unterricht. Ein CE-Lerninhalt kann weitere CE-Lerninhalte enthalten, aber keine übergeordneteren Elemente wie CE-Bereiche.
+**CE-Lerninhalt** benennt konkrete Themen und Gegenstände, an denen Kompetenzen erworben werden. Ein Lerninhalt ist Teil eines CE-Bereichs oder eines anderen Lerninhalts.
 
-**CE-Hinweis** enthält ergänzende, empfehlende Informationen: methodische Anregungen, Differenzierungsvorschläge oder Vertiefungsideen. Er hat keine normative Verbindlichkeit.
+**CE-Hinweis** enthält ergänzende, empfehlende Informationen: methodische Anregungen, Differenzierungsvorschläge oder Vertiefungsideen. Ein Hinweis ist Teil einer Kompetenzspezifikation, eines Lerninhalts oder eines Bereichs.
 
-**CE-Verweis** (im folgenden Pattern genauer erklärt) stellt eine Referenz von einem Element auf ein anderes her – auf ein Element desselben Lehrplans, eines anderen Lehrplans oder einer externen Ressource. Er ist selbst kein Inhalt, sondern ein Zeiger.
+**CE-Verweis** (siehe Pattern 7) stellt eine Referenz von einem Element auf ein anderes her.
 
-**CE-Leitperspektive** kodiert übergreifende Bildungsziele wie Nachhaltigkeit oder Demokratieerziehung, die sich durch mehrere Fächer und Jahrgangsstufen ziehen.
+**CE-Leitperspektive** beschreibt übergreifende Bildungsziele wie Nachhaltigkeit oder Medienbildung, die sich durch mehrere Fächer und Jahrgangsstufen ziehen.
 
-Die **"hat Teil"-Beziehung**: Alle Curricularen Elemente werden über die Property `bfo:BFO_0000051` **(hat Teil)** hierarchisch miteinander verknüpft. Das Prinzip ist einfach: Ein Element enthält seine untergeordneten Elemente als Teile. Dabei gibt es keine starre Vorschrift, welcher Typ welchen anderen enthalten darf – die Ontologie lässt Flexibilität, damit die unterschiedlichen Lehrplanstrukturen der 16 Bundesländer abgebildet werden können. 
+**Die Teil-Ganzes-Beziehung**
 
-Beispielhafte Hierarchien können sein:
+Die Elemente werden über **hat direkten Teil** (`LP_0000565`) bzw. die Inverse **direkt Teil von** (`LP_0000566`) miteinander verknüpft: Ein Element verweist auf seine unmittelbar untergeordneten Elemente. Die Reihenfolge gibt **hat Position** (`LP_0000460`) an. Da *hat direkten Teil* eine Sub-Property der transitiven Relation **hat Teil** (`BFO_0000051`) ist, lassen sich daraus alle mittelbaren Teile ableiten – etwa alle Kompetenzspezifikationen eines Lehrplans, unabhängig von der Tiefe der Gliederung.
 
-- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation -> CE-Hinweis
-- CE-Fragment -> CE-Bereich -> CE-Bereich -> CE-Kompetenzspezifikation
-- CE-Fragment -> CE-Bereich -> CE-Lerninhalt -> CE-Hinweis
-- CE-Fragment -> CE-Bereich -> CE-Kompetenzspezifikation / -> CE-Lerninhalt
+Typische Hierarchien sind:
 
-Ein bayerischer Lehrplan hat z.B. einen *Lernbereich (BY)* als CE-Bereich, der *Kompetenzerwartungen (BY)* als CE-Kompetenzspezifikationen und *Inhalte zu den Kompetenzen (BY)* als CE-Lerninhalte enthält. Ein Hamburger Bildungsplan hat stattdessen einen *Kompetenzbereich (HH)* als CE-Bereich, darunter *Themenbereiche (HH)* als weitere CE-Bereiche, und darin einzelne *Anforderungen (HH)* als CE-Kompetenzspezifikationen. Die Hierarchie sieht strukturell gleich aus – nur die Klassen-Labels unterscheiden sich. Genau das macht die „hat Teil"-Beziehung zum zentralen Werkzeug der Ontologie: Sie erlaubt bundeslandübergreifende Traversierung und Suche, unabhängig von der lokalen Terminologie.
+- CE-Fragment → CE-Bereich → CE-Kompetenzspezifikation → CE-Hinweis
+- CE-Fragment → CE-Bereich → CE-Bereich → CE-Kompetenzspezifikation
+- CE-Fragment → CE-Bereich → CE-Lerninhalt → CE-Lerninhalt → CE-Hinweis
+
+Ein bayerischer Lehrplan gliedert sich z. B. in Elemente der Klasse *Lernbereich (BY)* (CE-Bereich), die Elemente der Klassen *Kompetenzerwartung (BY)* (CE-Kompetenzspezifikation) und *Inhalt zu den Kompetenzen (BY)* (CE-Lerninhalt) enthalten. Ein Hamburger Bildungsplan verwendet stattdessen *Kompetenzbereich (HH)* und *Anforderung (HH)*.
 
 
 ## Pattern 7 - CE-Verweis
-
 
 ```ontoink
 source: patterns/pattern7.ttl
@@ -264,28 +260,58 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern7.ttl"
 ```
 
-
 **Erläuterung**:
 
-Ein **CE-Verweis** (`LP_0030065`) ist ein Curriculares Element, das einen Bezug von einem Element eines Lehrplans auf ein anderes oder zu einer externen Ressource herstellt. Wichtig: Der CE-Verweis ist nicht das verlinkte Ziel, sondern stellt nur die Referenz darauf dar – er ist ein explizit modellierter Zeiger.
+Ein **CE-Verweis** (`LP_0030065`) ist ein curriculares Element, das einen Bezug von einem Element auf ein anderes oder auf eine externe Ressource herstellt. Der CE-Verweis ist nicht das Ziel selbst, sondern die Referenz darauf: Das Ausgangselement trägt den Verweis über **hat Verweis** (`LP_0030071`), der Verweis zeigt über **verweist auf** (`LP_0030072`) auf das Ziel und kann eine eigene Beschreibung haben.
 
-Wohin kann ein CE-Verweis zeigen? Drei Zielkategorien sind möglich:
+Ein Verweis kann zeigen
 
-- **Innerhalb desselben Lehrplans** – z.B. wenn ein Kompetenzbereich auf einen anderen Kompetenzbereich desselben Faches verweist ("siehe auch Lernbereich 3").
-- **In einen anderen Lehrplan** – z.B. fächerverbindende Querverweise, etwa aus dem Deutschlehrplan auf den Geschichtslehrplan.
-- **Auf externe Ressourcen** – z.B. Verlinkungen auf Bildungsstandards der KMK, Referenzrahmen oder andere Dokumente.
+- **innerhalb desselben Lehrplans**, z. B. von einem Kompetenzbereich auf einen anderen („siehe auch Lernbereich 3“),
+- **in einen anderen Lehrplan**, z. B. fächerverbindend vom Deutsch- auf den Geschichtslehrplan,
+- **auf externe Ressourcen**, z. B. Bildungsstandards der KMK oder Materialien.
 
-Wie wird er in der Praxis modelliert?
+In den Lehrplandaten treten Verweise als länderspezifische Klassen auf – in rc6 sind es 47, z. B. *Verweis auf standardillustrierende Aufgaben (BE)*, *Verweis auf vernetzte Kompetenzen (BE)* oder *Verweis auf Lernbereich des gleichen Faches einer anderen Klassenstufe (SN)*. Sie tragen die *Verweisbeschreibungsfunktion* und werden dadurch als Unterklassen von *CE-Verweis* abgeleitet (siehe Pattern 8); im Beispiel ist diese abgeleitete Unterklassenbeziehung direkt eingezeichnet.
 
-In den Lehrplandaten der Bundesländer treten CE-Verweise als länderspezifische Subklassen auf. In Berlin gibt es z.B. Klassen wie *Verweis auf standardillustrierende Aufgaben (BE)* oder *Verweis auf vernetzte Kompetenzen (BE)*, in Sachsen *Verweis auf Lernbereich des gleichen Faches (SN)* oder *Verweis auf überfachliche Bildungsziele (SN)*. Sie hängen per `hat Teil` an dem Element, von dem aus der Verweis ausgeht.
+Da Querverweise nicht als Freitext, sondern als typisierte Elemente modelliert sind, lassen sie sich auswerten: Welche Kompetenzbereiche sind miteinander verknüpft? Wie dicht ist ein Lehrplan intern vernetzt? Welche Fächer verweisen aufeinander?
 
-Wozu dient das?
+**Provenienz von Verweisen**
 
-Indem Querverweise nicht als Freitext, sondern als eigene typisierte Elemente modelliert werden, können sie maschinell ausgewertet werden: Man kann gezielt fragen, welche Kompetenzbereiche miteinander verlinkt sind, wie dicht ein Lehrplan intern vernetzt ist, oder ob bestimmte Bildungsstandards in mehreren Ländern referenziert werden – ohne Freitexte parsen zu müssen.
+Verweise stammen nicht immer aus dem Lehrplandokument selbst. Sie können auch nachträglich ergänzt werden, etwa durch ein KI-System (KI: Künstliche Intelligenz), das inhaltlich verwandte Elemente automatisch ermittelt, oder durch eine Redaktion, die Bezüge manuell festlegt. Für die Bewertung und Pflege solcher Verweise ist es wichtig festzuhalten, woher sie stammen.
+
+Dies lässt sich mit den Mitteln von Basic Formal Ontology (BFO) und der Relation Ontology (RO) abbilden, die die Lehrplan-Ontologie bereits nachnutzt: Ein CE-Verweis ist der Output eines Prozesses (`BFO_0000015`, *process*), über **output of** (`RO_0002353`) bzw. invers **has output** (`RO_0002234`). An diesem Prozess nimmt über **has participant** (`RO_0000057`) der Akteur teil, der den Verweis erzeugt hat: eine *Person* (`LP_0000010`) oder ein technisches System, auf dem ein KI-Verfahren ausgeführt wird.
+
+```turtle
+@prefix ex:             <https://www.example.org/> .
+@prefix CE_Verweis:     <https://w3id.org/lehrplan/ontology/LP_0030065> .
+@prefix Person:         <https://w3id.org/lehrplan/ontology/LP_0000010> .
+@prefix Process:        <http://purl.obolibrary.org/obo/BFO_0000015> .
+@prefix Object:         <http://purl.obolibrary.org/obo/BFO_0000030> .
+@prefix output_of:      <http://purl.obolibrary.org/obo/RO_0002353> .
+@prefix hat_teilnehmer: <http://purl.obolibrary.org/obo/RO_0000057> .
+
+# automatisch durch ein KI-System ermittelter Verweis
+ex:verweis_2 a CE_Verweis: ;
+             output_of: ex:zuordnung_1 .
+ex:zuordnung_1 a Process: ;
+             hat_teilnehmer: ex:ki_system_1 .
+ex:ki_system_1 a Object: .
+
+# von einer Person angegebener Verweis
+ex:verweis_3 a CE_Verweis: ;
+             output_of: ex:zuordnung_2 .
+ex:zuordnung_2 a Process: ;
+             hat_teilnehmer: ex:redakteurin_1 .
+ex:redakteurin_1 a Person: .
+```
+
+Auf dieser Grundlage lassen sich Verweise aus dem Lehrplan selbst von nachträglich ergänzten unterscheiden, automatisch ermittelte Verweise vor ihrer Übernahme prüfen und bei Bedarf gezielt filtern.
+
+Die Lehrplan-Ontologie enthält in der Version rc6 noch keine spezifischen Klassen für solche Prozesse. Für eine einfache Unterscheidung in den Daten bieten sich eigene Unterklassen von *process* an, etwa für automatische und redaktionelle Zuordnungen. Ebenso offen ist, wie Zeitpunkt und Verlässlichkeit einer automatischen Zuordnung, etwa ein Konfidenzwert, angegeben werden.
 
 
 ## Pattern 8 - Funktionen
@@ -296,6 +322,7 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern8.ttl"
 ```
@@ -304,57 +331,78 @@ namespaces: false
 
 **Das Problem: Viele Namen, eine Bedeutung**
 
-Die 16 Bundesländer haben ihre Lehrpläne strukturell sehr unterschiedlich aufgebaut und verwenden eigene Terminologien. Was in Bayern *Lernbereich* heißt, heißt in Hamburg *Kompetenzbereich*, in Rheinland-Pfalz  oder , in Sachsen ebenfalls Lernbereich, in Nordrhein-Westfalen Bereich, in Sachsen-Anhalt eBereich, in Thüringen Lernbereich oder Schwerpunkt usw. Inhaltlich spielen all diese Klassen dieselbe Rolle: Sie fassen Kompetenzen oder Lerninhalte unter einem thematischen Fokus zusammen.
-
-Ohne ein zusätzliches Zuordnungsmechanismus wäre eine bundeslandübergreifende Abfrage nicht möglich – man müsste jede der gut 200 länderspezifischen CE-Klassen einzeln kennen und benennen.
+Die Länder haben ihre Lehrpläne sehr unterschiedlich aufgebaut und verwenden eigene Begriffe. Was in Bayern *Lernbereich* heißt, heißt in Hamburg *Kompetenzbereich*, in Rheinland-Pfalz etwa *Kompetenzbereich*, *Leitidee* oder *Thema* und in Sachsen ebenfalls *Lernbereich*. Ohne einen Zuordnungsmechanismus müsste man für eine bundesweite Abfrage jede der über 400 länderspezifischen Klassen kennen.
 
 **Die Lösung: Funktionsspezifikationen**
 
-Die Lehrplan-Ontologie löst dieses Problem mit dem Konzept der **Funktionsspezifikation** (`LP_0000478`). Jede länderspezifische CE-Klasse erhält in ihrer OWL-Klassendefinition eine Restriktion, die über die Property **hat Funktion** (`LP_0000483`) auf ein bestimmtes Funktionsspezifikations-Individuum zeigt. Diese Restriktion ist kein Datenpunkt, der in den Lehrplandaten stehen muss – sie ist fest in der Klassendefinition verankert und gilt damit automatisch für jede Instanz dieser Klasse.
+Jede länderspezifische Klasse ist in rc6 als Unterklasse einer Schnittmenge definiert: aus dem *Element (XX)* ihres Landes und einer festen Funktion, die über **hat Funktion** (`LP_0000483`) auf ein Individuum der Klasse **Funktionsspezifikation** (`LP_0000478`) verweist. Es gibt drei Arten von Funktionen:
 
-Die Ontologie definiert drei Unterklassen von Funktionsspezifikation:
+Die **Strukturierungsfunktion** (`LP_0000482`) beschreibt, wie ein Element den Lehrplan gliedert:
 
-Die **Strukturierungsfunktion** (`LP_0000482`) beschreibt, wie ein CE-Element den Lehrplan gliedert – ohne selbst inhaltliche Semantik zu tragen:
+- **Fragmentfunktion** – rein strukturierender Bestandteil (Kapitel, Abschnitt). Diese Funktion tragen die 16 Klassen *Lehrplanfragment (XX)*.
+- **Bereichsfunktion** – Gliederung in fachlich zusammenhängende Bereiche. 119 Klassen tragen diese Funktion, darunter *Kompetenzbereich (HH)*, *Lernbereich (BY)*, *Leitidee (BE)* und *Inhaltsfeld (HE)*.
 
-- **Fragmentfunktion** – Das Element ist ein rein strukturierender Behälter (Kapitel, Abschnitt, Überschrift). Alle 16 Lehrplanfragment-Klassen tragen diese Funktion: *Lehrplanfragment (BY), Lehrplanfragment (HH), Lehrplanfragment (SN)* usw.
-- **Bereichsfunktion** – Das Element gliedert den Lehrplan in inhaltlich zusammenhängende Bereiche. Rund 80 länderspezifische Klassen tragen diese Funktion, darunter *Kompetenzbereich (HH), Lernbereich (BY), Bereich (NW), Leitidee (BE), Inhaltsfeld (HE), Inhalt (HH)* uvm. – trotz unterschiedlicher Namen bilden sie alle einen CE-Bereich ab.
+Die **Beschreibungsfunktion** (`LP_0000493`) beschreibt, was ein Element inhaltlich leistet:
 
-Die **Beschreibungsfunktion** (`LP_0000493`) beschreibt, was ein CE-Element inhaltlich leistet:
+- **Kompetenzbeschreibungsfunktion** – formuliert eine zu erwerbende Kompetenz, z. B. *Anforderung (HH)*, *Kompetenzerwartung (BY)*, *Kompetenz (RP)*, *Standard (BE)* → CE-Kompetenzspezifikation
+- **Lerninhaltsbeschreibungsfunktion** – benennt einen Lerngegenstand → CE-Lerninhalt
+- **Hinweisbeschreibungsfunktion** – enthält einen methodischen oder didaktischen Hinweis, z. B. *Bemerkung (SN)*, *Hinweis und Anregung (MV)* → CE-Hinweis
+- **Verweisbeschreibungsfunktion** – verweist auf ein anderes Element → CE-Verweis
+- **Leitperspektivenbeschreibungsfunktion** – beschreibt eine übergreifende Leitperspektive → CE-Leitperspektive
+- **Materialbeschreibungsfunktion** – beschreibt Lern- oder Zusatzmaterial, z. B. *Lernmaterial (BE)*
 
-- **Kompetenzbeschreibungsfunktion** – Das Element formuliert eine zu erwerbende Kompetenz: *Anforderung (HH), Kompetenzerwartung (BY), Kompetenz (RP), Standard (BE)* usw. → entspricht der generischen Klasse CE-Kompetenzspezifikation.
-- **Lerninhaltsbeschreibungsfunktion** – Das Element benennt einen konkreten Lerngegenstand oder ein Thema → entspricht CE-Lerninhalt.
-- **Hinweisbeschreibungsfunktion** – Das Element enthält einen methodischen oder didaktischen Hinweis → entspricht CE-Hinweis. Auch hier gibt es eine große Vielfalt länderspezifischer Klassen, z.B. *Bemerkung (SN), Hinweis und Anregung (MV), Möglicher Kontext (BE), Erläuterung (BY), Differenzierungsmöglichkeit (RP)*.
-- **Verweisbeschreibungsfunktion** – Das Element ist ein Verweis auf ein anderes Element → entspricht CE-Verweis.
-- **Leitperspektivenbeschreibungsfunktion** – Das Element kodiert eine übergreifende Leitperspektive → entspricht CE-Leitperspektive.
+Die **Bezugsfunktion** (`LP_0000499`) gibt zusätzlich an, worauf sich ein Element inhaltlich bezieht. Sie kommt immer in Verbindung mit einer der anderen Funktionen vor:
 
-Die **Bezugsfunktion** (LP_0000499) beschreibt, worauf sich ein CE-Element inhaltlich bezieht – d.h. welche Dimension von Kompetenz es adressiert:
+- **Prozessbezugsfunktion** – prozessbezogene Kompetenzen (wie gelernt oder gehandelt wird), z. B. *Prozessbezogene Kompetenz (NI)*
+- **Inhaltsbezugsfunktion** – inhaltsbezogene Kompetenzen (was gelernt wird), z. B. *Leitidee (BW)*
+- **Domänenbezugsfunktion** – Bezug auf eine fachliche Domäne
 
-- **Prozessbezugsfunktion** – Das Element adressiert prozessorientierte Kompetenzen (wie gelernt oder gehandelt wird).
-- **Inhaltsbezugsfunktion** – Das Element adressiert inhaltsorientierte Kompetenzen (was gelernt wird).
-- **Domänenbezugsfunktion** – Das Element bezieht sich auf eine fachliche Domäne (z.B. Lesen, Schreiben als Kompetenzdomänen).
+Daneben enthält die Klasse *Funktionsspezifikation* die Individuen **Verbindlich** und **Optional**.
 
 **Wie die Zuordnung technisch funktioniert**
 
-In OWL wird die Funktionszuordnung als notwendige Bedingung (`rdfs:subClassOf`) mit einer `owl:hasValue`-Restriktion modelliert:
-```
-Lernbereich (BY)
-  rdfs:subClassOf  [
-    owl:onProperty  lp:LP_0000483 (hat Funktion) ;
-    owl:hasValue    lp:LP_0000497 (Bereichsfunktion)
-  ]
+```turtle
+@prefix rdfs:                 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:                  <http://www.w3.org/2002/07/owl#> .
+@prefix Lernbereich_BY:       <https://w3id.org/lehrplan/ontology/LP_0002046> .
+@prefix Element_BY:           <https://w3id.org/lehrplan/ontology/LP_0000434> .
+@prefix CE_Bereich:           <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix Curriculares_Element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix hat_funktion:         <https://w3id.org/lehrplan/ontology/LP_0000483> .
+@prefix bereichsfunktion:     <https://w3id.org/lehrplan/ontology/LP_0000497> .
+
+Lernbereich_BY:
+  rdfs:subClassOf [
+    owl:intersectionOf (
+      Element_BY:
+      [ owl:onProperty hat_funktion: ;
+        owl:hasValue   bereichsfunktion: ]
+    )
+  ] .
+
+CE_Bereich:
+  owl:equivalentClass [
+    owl:intersectionOf (
+      Curriculares_Element:
+      [ owl:onProperty hat_funktion: ;
+        owl:hasValue   bereichsfunktion: ]
+    )
+  ] .
 ```
 
-Das bedeutet: Jede Instanz von `Lernbereich (BY)` trägt automatisch die Bereichsfunktion – ohne dass in den Lehrplandaten ein expliziter `hat Funktion`-Tripel stehen muss. Ein OWL-Reasoner kann daraus schließen, dass `Lernbereich (BY)` semantisch einem **CE-Bereich** entspricht.
+Jede Instanz von *Lernbereich (BY)* hat damit automatisch die Bereichsfunktion – ohne dass in den Lehrplandaten ein expliziter *hat Funktion*-Tripel stehen muss. Da *CE-Bereich* als genau diese Kombination definiert ist, ordnet ein Reasoner *Lernbereich (BY)* als Unterklasse von *CE-Bereich* ein.
+
+Für *CE-Kompetenzspezifikation*, *CE-Lerninhalt* und *CE-Hinweis* verlangt die Definition zusätzlich eine Einbettung in die Gliederung (siehe Pattern 6). Diese Klassen werden daher nicht auf Klassenebene, sondern für jedes einzelne Element in den Daten abgeleitet. Das Beispiel zeigt das Ergebnis: Das Element ist zugleich *Kompetenzerwartung (NW)* und *CE-Kompetenzspezifikation* und trägt die Kompetenzbeschreibungsfunktion.
 
 **Was das für Abfragen bedeutet**
 
-Dank der Funktionsspezifikationen kann man bundeslandübergreifend abfragen, ohne die länderspezifischen Klassen zu kennen:
+Im SPARQL-Endpunkt (SPARQL: SPARQL Protocol and RDF Query Language) liegen die vom Reasoner abgeleiteten Tripel in eigenen Graphen vor (siehe [SPARQL-Abfragen](sparql.md)). Damit kann man bundesweit abfragen, ohne die länderspezifischen Klassen zu kennen:
 
-- *"Gib mir alle Kompetenzbereiche aus allen Bundesländern"* → Suche alle CE-Instanzen, deren Klasse `hat Funktion → Bereichsfunktion` trägt.
-- *"Gib mir alle konkreten Anforderungen aus dem Hamburger Deutschlehrplan"* → Suche alle Instanzen, deren Klasse `hat Funktion → Kompetenzbeschreibungsfunktion` trägt, gefiltert auf Hamburg.
-- *"Welche Elemente sind nur Hinweise?"* → Suche alle Instanzen mit `hat Funktion → Hinweisbeschreibungsfunktion`.
+- *„Alle Kompetenzbereiche aus allen Ländern“* → alle Instanzen von *CE-Bereich* bzw. mit *hat Funktion* → *Bereichsfunktion*
+- *„Alle Anforderungen aus dem Hamburger Deutschlehrplan“* → alle Instanzen mit *hat Funktion* → *Kompetenzbeschreibungsfunktion*, gefiltert auf Hamburg
+- *„Alle Hinweise“* → alle Instanzen mit *hat Funktion* → *Hinweisbeschreibungsfunktion*
 
-Die Funktionsspezifikationen sind damit die zentrale Brücke zwischen der reichen länderspezifischen Terminologie und einer einheitlichen, bundeslandübergreifenden Semantik.
+Die Funktionsspezifikationen sind damit die zentrale Brücke zwischen der Terminologie der Länder und einer einheitlichen, bundesweiten Semantik.
 
 
 ## Pattern 9 - Niveaus
@@ -365,28 +413,27 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern9.ttl"
 ```
 
-
 **Erläuterung**:
 
-**Niveau** (`LP_0000037`) ist die gemeinsame Superklasse für alle Leistungs- und Anforderungsstufen in der Ontologie. Sie gliedert sich in vier thematisch unterschiedliche Unterklassen.
+**Niveau** (`LP_0000037`) ist die Oberklasse aller Leistungs- und Anforderungsstufen. Sie gliedert sich in vier Unterklassen.
 
-Das **Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch, mit dem Inhalte und Kompetenzen für eine bestimmte Lerngruppe formuliert sind – und damit, auf welchen Schulabschluss hin unterrichtet wird. Die Ontologie definiert vier generische Niveaus: **Hauptschulniveau, Realschulniveau, Gymnasialniveau Sek I** und **Gymnasialniveau Sek II**. Für jedes Bundesland gibt es eigene Subklassen (*Bildungsgangniveau (HH), Bildungsgangniveau (SN)* usw.), und darunter wiederum die konkreten länderspezifischen Individuen.
+Das **Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch, mit dem Inhalte und Kompetenzen für eine bestimmte Lerngruppe formuliert sind – und damit, auf welchen Schulabschluss hin unterrichtet wird. Es gibt fünf generische Niveauklassen: **Grundschulniveau**, **Hauptschulniveau**, **Realschulniveau**, **Gymnasialniveau Sek I** und **Gymnasialniveau Sek II**. Für jedes Land gibt es außerdem eine Klasse *Bildungsgangniveau (XX)*, definiert als Bildungsgangniveau mit *von Bundesland* = XX. Die konkreten Niveaus der Länder sind Individuen, die einer oder mehreren generischen Klassen und der Klasse ihres Landes angehören.
 
-Die Namen variieren erheblich: Dasselbe Hauptschulniveau heißt in Bayern *Mittelschulniveau*, in Thüringen *Regelschulniveau*, in Schleswig-Holstein *Sekundarstufenniveau*, in Hamburg *Mindestanforderungen*. Das Gymnasialniveau Sek I heißt in Bremen *Erweitertes Anforderungsniveau*, in Rheinland-Pfalz *Erhöhtes Kompetenzniveau*, in Nordrhein-Westfalen *Erweiterungskurs*. Berlin geht etwas anders vor und differenziert nach Abschlusstyp und Niveaustufen A-H: Die Niveaus *BOA, BBR (A–F), EBBR (A–G), MSA (A–G)* und *Gymnasialniveau Sek I (A–H)* bilden die jahrgangsbandweise Kompetenzentwicklung innerhalb eines Abschlussziels ab. (Eine detaillierte Erklärung dazu liefert Pattern 11.)
+Die Namen variieren erheblich: Das Hauptschulniveau heißt in Bayern *Mittelschulniveau*, in Hamburg *Mindestanforderungen*; das *Regelschulniveau (TH)* und das *Sekundarstufenniveau (SH)* decken mehrere Niveaus zugleich ab. Das Gymnasialniveau Sek I heißt in Bremen *Erweitertes Anforderungsniveau*, in Rheinland-Pfalz *Erhöhtes Kompetenzniveau* und in Nordrhein-Westfalen *Erweiterungskurs*. Berlin und Brandenburg differenzieren nach Abschluss und Niveaustufe, z. B. *MSA A–G* für den mittleren Schulabschluss (MSA) oder *Gymnasialniveau Sek I A–H* (siehe Pattern 11).
 
-Das **Fachniveau Sek II** (`LP_0000265`) beschreibt den Kurstyp in der gymnasialen Oberstufe. Die generischen Individuen sind **Grundkursniveau** und **Leistungskursniveau**. Darüber hinaus haben die Bundesländer eigene Subklassen (*Fachniveau Sek II (BY)* usw.) mit länderspezifischen Bezeichnungen für Kursarten (z.B. *Grundlegendes Anforderungsniveau*, *Erhöhtes Anforderungsniveau*, *Leistungskursfach*).
+Das **Fachniveau Sek II** (`LP_0000265`) beschreibt den Kurstyp in der gymnasialen Oberstufe. Es hat die generischen Unterklassen **Grundkursniveau** und **Leistungskursniveau**. Die Kursarten der Länder sind Individuen dieser Klassen und der Klasse *Fachniveau Sek II (XX)* ihres Landes, z. B. *Grundlegendes Anforderungsniveau (ST)* oder *Leistungskursfach (BB)*.
 
-Der **Anforderungsbereich** (`LP_0000802`) ist eine bundesweit einheitliche Taxonomie aus den KMK-Bildungsstandards, die den kognitiven Anspruch einer Aufgabe oder Kompetenz klassifiziert. Die drei Individuen sind fest definiert: **Anforderungsbereich 1 (Reproduktion), Anforderungsbereich 2 (Reorganisation und Transfer)** und **Anforderungsbereich 3 (Reflexion und Problemlösung)**. Im Gegensatz zu Bildungsgang- und Fachniveaus, die organisatorische Rahmenbedingungen beschreiben, charakterisiert der Anforderungsbereich die kognitive Tiefe eines Lernziels – unabhängig von Schulart oder Bundesland.
+Der **Anforderungsbereich** (`LP_0000802`) stammt aus den KMK-Bildungsstandards und klassifiziert den kognitiven Anspruch einer Aufgabe oder Kompetenz. Die drei Individuen sind **Anforderungsbereich 1 (Reproduktion)**, **Anforderungsbereich 2 (Reorganisation und Transfer)** und **Anforderungsbereich 3 (Reflexion und Problemlösung)**. Anders als Bildungsgang- und Fachniveaus beschreibt er nicht organisatorische Rahmenbedingungen, sondern die kognitive Tiefe eines Lernziels – unabhängig von Schulart oder Land.
 
-Das **Fremdsprachenniveau** (`LP_0010001`) bildet die Kompetenzstufen des **Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER)** als sechs Individuen ab (von *A1 - Anfänger* (`LP_0030317`) bis *C2 - Annähernd muttersprachliche Kenntnisse* (`LP_0030313`)). Diese Niveaus sind bundeslandunabhängig und einheitlich – im Gegensatz zu den stark föderalen Bildungsgangniveaus. Sie ermöglichen es, Lehrplanelemente aus Fremdsprachenfächern direkt mit dem international anerkannten GER-Standard zu verknüpfen.
+Das **Fremdsprachenniveau** (`LP_0010001`) bildet die sechs Stufen des **Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER)** ab, von *A1 Anfänger* (`LP_0030317`) bis *C2 Annähernd muttersprachliche Kenntnisse* (`LP_0030313`). Diese Niveaus sind bundeseinheitlich und ermöglichen es, Lehrplanelemente aus Fremdsprachenfächern mit dem GER zu verknüpfen.
 
 
 ## Pattern 10 - Bildungsgangniveaus, Bildungsgänge und Abschlüsse
-
 
 ```ontoink
 source: patterns/pattern10.ttl
@@ -394,35 +441,42 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern10.ttl"
 ```
 
-
-
 **Erläuterung**:
 
-Die drei Klassen beschreiben gemeinsam den Rahmen, in dem Lehrplaninhalte gelten – wer lernt auf welchem Anspruchsniveau und worauf zielt die Laufbahn ab.
+Bildungsgänge, Bildungsgangniveaus und Abschlüsse beschreiben gemeinsam den Rahmen, in dem Lehrplaninhalte gelten: auf welchem Anspruchsniveau gelernt wird und worauf die Laufbahn abzielt. Wie überall in der Ontologie wird dabei zwischen der realen Entität und der Informationseinheit unterschieden, die sie beschreibt.
 
-**Bildungsgang** (LP_0000816) bezeichnet die schulische Laufbahn als Ganzes – also den Weg, den Lernende durch das Schulsystem nehmen. Die Ontologie kennt drei generische Subklassen: *Gymnasialer Bildungsgang, Realschulbildungsgang* und *Hauptschulbildungsgang*. Wichtig: Ein Bildungsgang ist nicht dasselbe wie eine Schulart. Der gymnasiale Bildungsgang kann beispielsweise auch an einer Gesamt- oder Gemeinschaftsschule absolviert werden – entscheidend ist das Ziel, nicht die Institution.
+**Bildungsgangspezifikation** (`LP_0000816`) beschreibt eine schulische Laufbahn, die zu einem bestimmten Abschluss führt. Die drei generischen Unterklassen *Gymnasialer Bildungsgang*, *Realschulbildungsgang* und *Hauptschulbildungsgang* sind über ihr Bildungsgangniveau definiert – ein *Realschulbildungsgang* ist genau eine Bildungsgangspezifikation mit Realschulniveau. Der **Bildungsgang** (`LP_0000567`) selbst ist der Prozess, den eine Person gemäß dieser Spezifikation durchläuft. Ein Bildungsgang ist nicht dasselbe wie eine Schulart: Der gymnasiale Bildungsgang kann auch an einer Gesamt- oder Gemeinschaftsschule durchlaufen werden.
 
-**Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch, mit dem Inhalte und Kompetenzen innerhalb eines Bildungsgangs behandelt werden. Die generischen Niveaus sind *Hauptschulniveau, Realschulniveau, Gymnasialniveau Sek I und Gymnasialniveau Sek II*. Für jedes Bundesland gibt es darüber hinaus eigene Subklassen – z.B. *Gymnasialniveau Sek I (BE)* in Berlin oder die Berliner Abschlussniveaus *BOA, BBR, EBBR* und *MSA*. In den Lehrplandaten wird das Bildungsgangniveau über die Property `LP_0000833` (hat Bildungsgangniveau) direkt an einzelne Anforderungen oder Lehrplanelemente gehängt, um anzugeben, für welche Lerngruppe eine Kompetenz gilt.
+**Bildungsgangniveau** (`LP_0000028`) beschreibt den Leistungsanspruch innerhalb eines Bildungsgangs (siehe Pattern 9). In den Lehrplandaten wird es über **hat Bildungsgangniveau** (`LP_0000833`) an Lehrpläne und einzelne Elemente gehängt, um anzugeben, für welche Lerngruppe eine Kompetenz gilt.
 
-**Schulabschluss** (`LP_0000019`) ist der am Ende eines Bildungsgangs offiziell erworbene Qualifikationsnachweis. Er berechtigt zu weiterführenden Bildungswegen oder dem Berufseinstieg. Generische Subklassen sind Erster Schulabschluss, Mittlerer Schulabschluss, Fachabitur und Allgemeine Hochschulreife; daneben gibt es länderspezifische Varianten wie *Erster Abschluss (BE)* oder *Mittlerer Abschluss (RP)*. Der Zusammenhang zur Laufbahn wird über die Property `LP_0000021` (ermöglicht Abschluss / endet mit Abschluss) hergestellt.
+**Schulabschlussspezifikation** (`LP_0000019`) beschreibt einen Schulabschluss und die Anforderungen für seine Verleihung. Die generischen Unterklassen sind über das benötigte Niveau definiert:
 
-Die drei Konzepte bilden eine Kette: Ein **Bildungsgang** läuft auf einem bestimmten **Bildungsgangniveau** und endet mit einem bestimmten **Schulabschluss**. In der Ontologie ist das so modelliert:
+- **Erster Schulabschluss** – *benötigt Niveau* some Hauptschulniveau
+- **Mittlerer Schulabschluss** – *benötigt Niveau* some Realschulniveau
+- **Allgemeine Hochschulreife** – *benötigt Niveau* some Gymnasialniveau Sek II
 
+Für jedes Land gibt es Unterklassen wie *Mittlerer Abschluss (RP)*, deren Individuen die konkreten Abschlüsse sind, z. B. *Qualifizierter Sekundarabschluss I (RP)*. Der **Schulabschluss** (`LP_0000008`) selbst ist die Rolle, die eine Person mit dem Erwerb erhält. Eine Bildungsgangspezifikation verweist über **ermöglicht Abschluss** (`LP_0000021`) auf die erreichbare Schulabschlussspezifikation.
+
+Die Konzepte bilden eine Kette:
+
+```text
+Realschulbildungsgang
+   ──[hat Bildungsgangniveau]──▶ Realschulniveau
+   ──[ermöglicht Abschluss]────▶ Mittlerer Schulabschluss
+                                    ──[benötigt Niveau]──▶ Realschulniveau
 ```
-Gymnasialer Bildungsgang
-   ──[hat Bildungsgangniveau]──▶ Gymnasialniveau Sek I / Sek II
-   ──[ermöglicht Abschluss]───▶ Allgemeine Hochschulreife
-```
 
-Für Lehrplandaten bedeutet das: Eine CE-Kompetenzspezifikation, die `hat Bildungsgangniveau → Gymnasialniveau Sek I` trägt, gilt explizit für Lernende im gymnasialen Bildungsgang der Sekundarstufe I – unabhängig davon, ob sie ein Gymnasium oder eine Gesamtschule besuchen. Das macht die Zuordnung schulartübergreifend und strukturell eindeutig.
+Im Beispiel ist das benötigte Niveau direkt am rheinland-pfälzischen Abschluss angegeben. In rc6 ist es als Klassenaxiom an *Mittlerer Schulabschluss* festgelegt und gilt damit für alle mittleren Abschlüsse.
+
+Für Lehrplandaten bedeutet das: Eine Kompetenzspezifikation mit `hat Bildungsgangniveau → Gymnasialniveau Sek I` gilt für Lernende im gymnasialen Bildungsgang der Sekundarstufe I – unabhängig davon, ob sie ein Gymnasium oder eine Gesamtschule besuchen.
 
 
 ## Pattern 11 - Niveaustufen BE/BB
-
 
 ```ontoink
 source: patterns/pattern11.ttl
@@ -430,46 +484,41 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern11.ttl"
 ```
 
-
 **Erläuterung**:
 
-Berlin und Brandenburg arbeiten seit 2004 mit gemeinsamen Rahmenlehrplänen – ein bundesweites Unikat. Dieses Prinzip spiegelt sich auch in der Ontologie wider, insbesondere in der Klasse **Niveaustufe (BE/BB)** (`LP_0000443`). Der Rahmenlehrplan strukturiert Kompetenzen nicht primär nach Jahrgangsstufen, sondern entlang von acht **Niveaustufen A bis H**, die unterschiedliche Grade der Kompetenzentwicklung abbilden. Eine Niveaustufe fungiert dabei als Curriculares Element, das als Container für die zugehörigen Kompetenzanforderungen dient.
+Berlin und Brandenburg arbeiten mit gemeinsamen Rahmenlehrplänen. Diese strukturieren Kompetenzen nicht primär nach Jahrgangsstufen, sondern entlang von acht **Niveaustufen A bis H**, die unterschiedliche Grade der Kompetenzentwicklung abbilden. In der Ontologie sind sie Individuen der Klasse **Niveaustufe BE/BB** (`LP_0000443`).
 
-Kompetenzspezifikationen werden in BE/BB stets einer solchen Niveaustufe über **hat Niveaustufe** zugeordnet. Diese Niveaustufen sind jedoch allein noch nicht hinreichend für eine Vergleichbarkeit, da Kompetenzen immer im Kontext eines Bildungsgangniveaus interpretiert werden müssen. Eine reine Betrachtung auf Ebene der Jahrgangsstufe ist daher nicht ausreichend.
+Kompetenzspezifikationen, z. B. *Standard (BE)*, werden über **hat Niveaustufe** (`LP_0000578`) einer Niveaustufe zugeordnet; die Inverse ist **ist Niveaustufe von** (`LP_0000580`). Die Niveaustufe allein reicht für die Vergleichbarkeit aber nicht aus, denn eine Kompetenz ist immer im Kontext des angestrebten Abschlusses zu lesen.
 
-Die eigentliche Konkretisierung erfolgt über die **Bildungsgangniveaus**, die den angestrebten **Abschluss** berücksichtigen. Jedes Bildungsgangniveau ist eine Kombination aus einer *BE/BB-Niveaustufe (A–H)* und einem spezifischen *Abschluss* (z. B. *BBR, EBBR, MSA* oder *Gymnasialniveau Sek I*). Über die Property **hat Niveau** (`LP_0000840`) sind die generischen Niveaustufen direkt mit diesen abschlussspezifischen Ausprägungen verknüpft (z. B. *Niveaustufe A → BOA A, BBR A, EBBR A, MSA A, Gymnasialniveau Sek I A*). Umgekehrt referenzieren die Bildungsgangniveaus über **ist Niveaustufe von** (`LP_0000580`) zurück auf die zugrunde liegende Buchstabenstufe.
+Die Konkretisierung erfolgt daher über **Bildungsgangniveaus**, die Niveaustufe und Abschluss kombinieren: In Berlin gibt es je Abschlusstyp eine Reihe von Niveaus – *BOA A–E*, *BBR A–F*, *EBBR A–G*, *MSA A–G* und *Gymnasialniveau Sek I A–H* –, in Brandenburg entsprechend *EBR A–G*, *FOR A–G* und *FOR-Q A–H*. Die Kürzel bezeichnen die angestrebten Abschlüsse: in Berlin den berufsorientierenden Abschluss (BOA), die Berufsbildungsreife (BBR), die erweiterte Berufsbildungsreife (EBBR) und den mittleren Schulabschluss (MSA), in Brandenburg die erweiterte Berufsbildungsreife (EBR), die Fachoberschulreife (FOR) und die Fachoberschulreife mit Berechtigung zum Besuch der gymnasialen Oberstufe (FOR-Q). Jedes dieser Niveaus verweist über **ist Niveau von** (`LP_0000086`) auf seine Niveaustufe; umgekehrt hat die Niveaustufe über **hat Niveau** (`LP_0000840`) alle zugehörigen Niveaus. Die Niveaus sind Individuen von Klassen wie *MSA Niveau*, die als Bildungsgangniveau des Landes und zugleich als generisches Niveau definiert sind (*MSA Niveau* als Realschulniveau in Berlin).
 
-In Berlin existiert jede Buchstabenstufe einmal je Abschlusstyp (z. B. *BOA A–E, MSA A–G, Gymnasialniveau Sek I A–H*), während in Brandenburg entsprechende Bildungsgangniveaus (z. B. *EBR, FOR, FOR-Q*) strukturell analog organisiert sind. Die konkrete Ontologie-Verknüpfung ermöglicht es, dass einer Kompetenz – über die Zuordnung zu einer Niveaustufe und die anschließende Zuordnung zu einem Bildungsgangniveau – letztlich ein spezifisches Niveau (z. B. *A-EBBR*) zugewiesen wird.
+Damit die BE/BB-Niveaus mit den anderen Ländern vergleichbar sind, trägt jedes Niveau über **hat Jahrgangsstufe** (`LP_0000026`) die Jahrgangsstufen, in denen es typischerweise erreicht wird. Die Zuordnung ist bewusst überlappend, weil der Rahmenlehrplan individuelle Lernentwicklungen statt starrer Grenzen vorsieht. Über alle Abschlusstypen hinweg ergeben sich in rc6 folgende Spannen:
 
-Ein zentrales Merkmal des BE/BB-Systems ist die **Verknüpfung von Niveaustufen mit Jahrgangsstufen**, um eine Vergleichbarkeit zu den anderen Bundesländern herstellen zu können. Jede Bildungsgangniveau-Stufe trägt über **hat Jahrgangsstufe** (`LP_0000026`) die Jahrgänge, in denen sie typischerweise erreicht wird. Diese Zuordnung ist bewusst überlappend gestaltet, da der Rahmenlehrplan individuelle Kompetenzentwicklungen statt starrer Progressionsgrenzen vorsieht. Die generische Zuordnung lautet:
+| Niveaustufe | Jahrgangsstufen |
+|-------------|-----------------|
+| A           | 1–2             |
+| B           | 1–3             |
+| C           | 2–7             |
+| D           | 4–9             |
+| E           | 6–10            |
+| F           | 7–10            |
+| G           | 9–10            |
+| H           | 10              |
 
-- A → 1
-- B → 1–3
-- C → 2–5
-- D → 4–7
-- E → 6–9
-- F → 8–10
-- G → 9–10
-- H → 10
+Die genauen Jahrgangsstufen hängen vom Abschlusstyp ab; *MSA E* liegt beispielsweise in den Jahrgangsstufen 6–8.
 
-Diese Jahrgangsstufen gelten abschlusstypübergreifend; die tatsächliche Reichweite hängt vom jeweiligen Bildungsgang ab (z.B. *BOA* bis *Stufe E, Gymnasialniveau Sek I* bis *H*).
+Zusammengefasst: Der Rahmenlehrplan BE/BB verknüpft **Kompetenzspezifikationen** mit **Niveaustufen**. Aus der Kombination von Niveaustufe und angestrebtem Abschluss ergibt sich das Bildungsgangniveau, über das wiederum die Jahrgangsstufen ermittelt werden können. Die Vergleichbarkeit mit den anderen Ländern beruht auf zwei Mechanismen:
 
-Zusammengefasst heißt das:
-
-Der Lehrplan BE/BB verknüpft **Kompetenzspzifikationen** (*Standard (BE)*) mit **Niveaustufen**. Je nach angestrebtem Abschluss, kann aus der Kombination von Niveaustufe BE/BB und Abschluss das richtige Bildungsgangniveau zugeordnet werden, durch welches wiederum die Jahrgangsstufen ermittelt werden können. Auf Ebene der **Jahrgangsstufen** kann eine Vergleichbarkeit zu den anderen Bundesländern hergestellt werden.
-
-Die Vergleichbarkeit mit anderen Bundesländern wird durch zwei Mechanismen sichergestellt:
-
-1. **Generische Bildungsgangniveaus**: Abschlussspezifische Niveaus (z. B. *MSA*) sind als Subklassen allgemeiner Niveaus (z. B. Realschulniveau) modelliert.
-2. **Standardisierte Jahrgangsstufen**: Da dieselben Jahrgangsstufen-IRIs verwendet werden, lassen sich Anforderungen bundeslandübergreifend vergleichen.
+1. **Generische Bildungsgangniveaus**: Die abschlussspezifischen Niveaus (z. B. *MSA*) gehören den generischen Niveauklassen an (z. B. *Realschulniveau*).
+2. **Gemeinsame Jahrgangsstufen**: Da alle Länder dieselben Jahrgangsstufen-IRIs verwenden, lassen sich Anforderungen bundesweit vergleichen.
 
 
 ## Pattern 12 - Zeitangaben
-
 
 ```ontoink
 source: patterns/pattern12.ttl
@@ -477,59 +526,108 @@ namespaces: false
 ```
 
 **RDF Daten**:
+
 ```text
 --8<-- "docs/patterns/pattern12.ttl"
 ```
 
-
-
 **Erläuterung**:
 
-Zeitangaben werden benötigt, um Lehrplanelemente nicht nur inhaltlich, sondern auch zeitlich zu verankern – z.B. den zeitlichen Rahmen, in dem ein Inhalt behandelt werden soll.
+Zeitangaben verankern Lehrplanelemente nicht nur inhaltlich, sondern auch zeitlich – z. B. die Zahl der Unterrichtsstunden, die für einen Lernbereich vorgesehen ist.
 
-Die Klasse **Data Item** (`IAO_0000027`) stammt aus der *Information Artifact Ontology (IAO)*, einer weitverbreiteten OBO-Bibliotheksontologie. Sie bezeichnet eine abstrakte Informationseinheit – also einen Datenpunkt, der einen Wert repräsentiert. In der MEM-Ontologie wird sie als Superklasse für alle strukturierten Angaben genutzt, die keinen eigenständigen Gegenstand in der Welt beschreiben, sondern Messwerte, Datumsangaben oder andere skalare Informationen tragen.
+Die **Zeitspezifikation** (`LP_0000508`) bündelt eine Zeitangabe aus Wert und Einheit, z. B. „6 Unterrichtsstunden“ oder „45 Minuten“. Sie ist ein *data item* (`IAO_0000027`) aus der Information Artifact Ontology, also eine Informationseinheit, die einen Messwert trägt. Laut Definition hat jede Zeitspezifikation einen dezimalen Wert über **hat Wert** (`LP_0000344`) und eine Einheit über **hat Einheit** (`qudt:hasUnit`).
 
-**Unit** (`UO_0000000`) stammt aus der *Units of Measurement Ontology (UO)* und bezeichnet eine Maßeinheit. In der MEM-Ontologie wird sie herangezogen, um Zeitangaben mit einer Einheit zu versehen – z.B. „Stunden", „Wochen" oder „Schuljahr". Eine Unit ist dabei das Maß, das einer numerischen Zeitangabe erst Bedeutung gibt: Die Zahl „2" allein sagt nichts; erst „2 Unterrichtsstunden" oder „2 Schulwochen" ist eine sinnvolle curriculare Aussage.
+Die Einheiten sind Individuen der Klasse **Unit** aus dem Vokabular **Quantities, Units, Dimensions and Types (QUDT)**. Zur Verfügung stehen *Stunde* (`qudt:HR`), *Minute* (`qudt:MIN`) und die eigene Einheit *Unterrichtsstunde* (`LP_0000535`).
 
-Die **Zeitspezifikation** (`LP_0000508`) ist die LP-eigene Klasse, die eine konkrete Zeitangabe als Ganzes bündelt. Sie kombiniert einen numerischen Wert mit einer Unit zu einer vollständigen Zeitaussage – z.B. "45 Minuten" oder "1 Schulhalbjahr". Sie kann an Curricularen Elementen hängen, um zeitliche Empfehlungen oder Vorgaben maschinenlesbar zu machen: Wie viel Unterrichtszeit ist für diesen Lernbereich vorgesehen? Über welchen Zeitraum soll ein Thema behandelt werden?
+Ein curriculares Element verweist über **wird beschrieben von** (`LP_0000024`) auf seine Zeitspezifikation.
 
-Die drei Konzepte bauen aufeinander auf:
-```
+```text
 Zeitspezifikation
-  ├─[hat Wert]──▶ numerischer Wert (z.B. "45")     ← Data Item
-  └─[hat Einheit]▶ Unit (z.B. "Unterrichtsminuten") ← UO_0000000
+  ├─[hat Wert]────▶ 6                    (xsd:decimal)
+  └─[hat Einheit]─▶ Unterrichtsstunde    (qudt:Unit)
 ```
-Damit folgt die Zeitmodellierung demselben Prinzip wie der Rest der MEM-Ontologie: Statt Freitext – *"ca. 45 Minuten"* – werden Wert und Einheit getrennt maschinenlesbar erfasst. Das ermöglicht automatische Auswertungen, z.B. die Berechnung der Gesamtstundenzahl eines Lehrplans oder den Vergleich von Zeitvorgaben zwischen Bundesländern.
+
+Statt Freitext wie *„ca. 6 Stunden“* werden Wert und Einheit getrennt maschinenlesbar erfasst. Das ermöglicht Auswertungen, z. B. die Summe der Unterrichtsstunden eines Lehrplans oder den Vergleich von Zeitvorgaben zwischen Ländern.
 
 
 ## Pattern 13 - Gültigkeitsbereich
 
-**-> aktuell noch nicht in der Ontologie modelliert!**
-`Gültigkeitszeitraum`, `Versionierung` ?
-`GültigAb`, `gültigVon`, `gültigBis`, `inkraftGetreten` ?
-
-```d2
-
-
-
+```ontoink
+source: patterns/pattern13.ttl
+namespaces: false
 ```
+
+**RDF Daten**:
+
+```text
+--8<-- "docs/patterns/pattern13.ttl"
+```
+
 **Erläuterung**:
 
-**RDF Daten**: 
-```
+Lehrpläne gelten für einen bestimmten Zeitraum: Sie treten zu einem Schuljahr in Kraft und werden später durch neue Fassungen abgelöst. Für diese Angaben stehen zwei Mechanismen zur Verfügung:
 
-```
+- **veröffentlicht am** (`LP_0000553`) gibt das Veröffentlichungsdatum eines Lehrplans an.
+- **hat Gültigkeitsbereich** (`LP_0000550`) verweist auf einen **Gültigkeitsbereich** (`LP_0000547`), der den zeitlichen Geltungsbereich beschreibt. Er trägt über **von Datum** (`LP_0000548`) und **bis Datum** (`LP_0000549`) Beginn und Ende der Gültigkeit.
+
+Alle Datumsangaben haben den Datentyp `xsd:dateTimeStamp` und sind Sub-Properties von *hat Wert*.
+
+Ein Gültigkeitsbereich ist eine eigenständige Informationseinheit und kann daher von mehreren Lehrplänen gemeinsam genutzt werden. Das ist der Regelfall, wenn ein Land die Lehrpläne mehrerer Fächer oder Jahrgangsstufen zum selben Termin in Kraft setzt. Im Beispiel verweisen die Lehrpläne für Deutsch und Mathematik auf denselben Gültigkeitsbereich. Ändert sich der Zeitraum, etwa weil eine Übergangsfrist verlängert wird, genügt eine Anpassung an einer Stelle.
+
+!!! note "Noch nicht in den Lehrplandaten"
+
+    Die Klassen und Properties sind in rc6 angelegt, werden in den Lehrplandaten aber noch nicht verwendet.
+
 
 ## Pattern 14 - Der Lernprozess
 
-```d2
-
-
-
+```ontoink
+source: patterns/pattern14.ttl
+namespaces: false
 ```
+
+**RDF Daten**:
+
+```text
+--8<-- "docs/patterns/pattern14.ttl"
+```
+
 **Erläuterung**:
 
-**RDF Daten**: 
+Die bisherigen Patterns beschreiben Lehrpläne als Informationseinheiten: Sie legen fest, welche Kompetenzen erworben werden sollen. Dieses Pattern zeigt, wie sich der tatsächliche Unterricht und das Lernen einzelner Personen damit verbinden lassen. Es greift die Unterscheidung zwischen realweltlichen Entitäten und den Informationseinheiten auf, die sie beschreiben (siehe [Ontologisches Grundverständnis](structure.md#ontologisches-grundverstandnis)).
+
+**Personen und Rollen**
+
+Schülerinnen und Schüler sowie Lehrkräfte sind Instanzen der Klasse **Person** (`LP_0000010`). Ihre Funktion im Unterricht ist keine eigene Art von Person, sondern eine Rolle, die eine Person trägt: die **Schüler Rolle** (`LP_0000012`) bzw. die **Lehrer Rolle** (`LP_0000011`). Verbunden werden Person und Rolle über **has role** (`RO_0000087`). Dieselbe Person kann so im Lauf der Zeit unterschiedliche Rollen einnehmen.
+
+**Lehrprozess und Lernprozess**
+
+Der **Lehrprozess** (`LP_0000006`) ist ein geplanter Prozess, an dem Personen in der Rolle von Lehrkräften und Lernenden teilnehmen, etwa eine Unterrichtsstunde. Der **Lernprozess** (`LP_0000007`) findet dagegen in der lernenden Person selbst statt; das wird über **occurs in** (`BFO_0000066`) ausgedrückt. Er kann durch einen Lehrprozess angestoßen werden, ist mit ihm aber nicht identisch: Nicht jeder Unterricht führt zum Lernen, und Lernen findet auch außerhalb des Unterrichts statt. An beiden Prozessen nehmen Personen über **has participant** (`RO_0000057`) teil. Die Relation *occurs in* ist in rc6 noch nicht enthalten und muss für dieses Pattern aus BFO bzw. der Relation Ontology in die Lehrplan-Ontologie übernommen werden.
+
+**Kompetenz als Ergebnis**
+
+Das Ergebnis eines erfolgreichen Lernprozesses ist eine **Kompetenz** (`LP_0000013`). Sie ist eine Eigenschaft der lernenden Person, keine Information: Die Person trägt sie über **has characteristic** (`RO_0000053`). Im Beispiel ist die Kompetenz über **has output** (`RO_0002234`) als Ergebnis des Lernprozesses angegeben. Die Verbindung zum Lehrplan stellt **wird beschrieben von** (`LP_0000024`) her: Die Kompetenz einer konkreten Person wird von einer *CE-Kompetenzspezifikation* im Lehrplan beschrieben, etwa einer Kompetenzerwartung. Laut Definition in rc6 wird jede Kompetenz von mindestens einer Kompetenzspezifikation beschrieben.
+
+**Einbettung in den Bildungsgang**
+
+Der Unterricht ist über **ist Teil von** (`BFO_0000050`) Teil eines **Bildungsgangs** (`LP_0000567`), also der schulischen Laufbahn, die eine Person durchläuft. Der Lernprozess ist dagegen nicht Teil des Bildungsgangs: Er findet in der lernenden Person statt und ist nicht an den organisatorischen Rahmen der Schullaufbahn gebunden. Der Bildungsgang wird von einer *Bildungsgangspezifikation* beschrieben, im Beispiel einem *Realschulbildungsgang* (siehe [Pattern 10](#pattern-10-bildungsgangniveaus-bildungsgange-und-abschlusse)).
+
+```text
+Lehrplan ──[hat Teil]──▶ CE-Kompetenzspezifikation
+                                  ▲
+                      [wird beschrieben von]
+                                  │
+Person ──[has characteristic]──▶ Kompetenz ◀──[has output]── Lernprozess
 ```
 
-```
+!!! note "Noch nicht in den Lehrplandaten"
+
+    Die Klassen und Relationen dieses Patterns sind in rc6 angelegt, werden in den Lehrplandaten aber nicht verwendet: Die Lehrplandaten beschreiben Vorgaben, nicht den tatsächlichen Unterricht. Das Pattern zeigt, wie Daten über Unterricht, Lernstände oder Bildungsverläufe, etwa aus Lernplattformen, an die Lehrplandaten angebunden werden können. Personenbezogene Daten unterliegen dabei den Anforderungen des Datenschutzes.
+
+
+## Ausblick auf die folgenden Kapitel
+
+Die Patterns haben an konkreten Beispielen gezeigt, wie Lehrpläne, curriculare Elemente, Bildungskontext, Niveaus, Verweise und Zeitangaben modelliert werden und wie sich der tatsächliche Unterricht daran anbinden lässt. Die folgenden Kapitel zeigen, wie mit den so modellierten Daten gearbeitet wird:
+
+- Das Kapitel [SPARQL-Abfragen](sparql.md) zeigt, wie sich die Lehrplandaten abfragen lassen, vom Auflisten der Lehrpläne eines Landes über die Suche nach Begriffen bis zur Auswertung der Struktur eines Lehrplans.
+- Das Kapitel [Verwendung](usage.md) beschreibt die verfügbaren Release-Dateien, den Zugriff auf die Daten und ihre Validierung mit SHACL-Shapes, die auf den hier beschriebenen Patterns beruhen.

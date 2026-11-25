@@ -10,25 +10,25 @@
 @prefix Titel: <https://w3id.org/lehrplan/ontology/LP_0000346> .
 
 # Instanzen
-@prefix Sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
-@prefix Mathematik: <https://w3id.org/schulfach/SN_0000012> .
-@prefix Oberschule: <https://w3id.org/schulart/SN_0000003> .
-@prefix Sekundarbereich_II: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+@prefix sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
+@prefix mathematik_sn: <https://w3id.org/schulfach/SN_0000012> .
+@prefix oberschule_sn: <https://w3id.org/schulart/SN_0000003> .
+@prefix sekundarbereich_ii: <https://w3id.org/lehrplan/ontology/LP_0000046> .
 
 # properties
-@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
-@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
-@prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
-@prefix für_Schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
-@prefix hat_Schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
-@prefix hat_Wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+@prefix hat_titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix von_bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+@prefix fuer_schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
+@prefix hat_schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
+@prefix hat_wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
 
-ex:Lehrplan a Lehrplan: ;
-            hat_Titel: ex:Titel ;
-            von_Bundesland: Sachsen: ;
-            hat_Schulfach: Mathematik: ;
-            für_Schulart: Oberschule: ;
-            hat_Schulstufe: Sekundarbereich_II: . 
+ex:lehrplan_1 a Lehrplan: ;
+            hat_titel: ex:titel_1 ;
+            von_bundesland: sachsen: ;
+            hat_schulfach: mathematik_sn: ;
+            fuer_schulart: oberschule_sn: ;
+            hat_schulstufe: sekundarbereich_ii: . 
 
-ex:Titel a Titel: ;
-        hat_Wert:  "Lehrplan Oberschule Mathematik" .
+ex:titel_1 a Titel: ;
+        hat_wert:  "Lehrplan Oberschule Mathematik" .

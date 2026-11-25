@@ -18,31 +18,31 @@
 @prefix Fachniveau_Sek_II_ST: <https://w3id.org/lehrplan/ontology/LP_0002094> .
 
 # Individuen
-@prefix Gymnasialniveau_Sek_I_ST: <https://w3id.org/schulart/RP_0000296> .
-@prefix Sachsen-Anhalt: <https://w3id.org/lehrplan/ontology/LP_3000053> .
-@prefix Anforderungsbereich_2: <https://w3id.org/lehrplan/ontology/LP_0000804> .
-@prefix Grundlegendes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000526> .
-@prefix Erhöhtes_Anforderungsniveau_ST: <https://w3id.org/lehrplan/ontology/LP_0000527> .
-@prefix B1: <https://w3id.org/lehrplan/ontology/LP_0030315> .
+@prefix gymnasialniveau_sek_i_st: <https://w3id.org/lehrplan/ontology/LP_0000296> .
+@prefix sachsen_anhalt: <https://w3id.org/lehrplan/ontology/LP_3000053> .
+@prefix anforderungsbereich_2_reorganisation_und_transfer: <https://w3id.org/lehrplan/ontology/LP_0000804> .
+@prefix grundlegendes_anforderungsniveau_st: <https://w3id.org/lehrplan/ontology/LP_0000526> .
+@prefix erhoehtes_anforderungsniveau_st: <https://w3id.org/lehrplan/ontology/LP_0000527> .
+@prefix b1_fortgeschrittene_sprachverwendung: <https://w3id.org/lehrplan/ontology/LP_0030315> .
 
 # properties
-@prefix von_Bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix von_bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
 
-Gymnasialniveau_Sek_I_ST: a Bildungsgangniveau_ST: ,
+gymnasialniveau_sek_i_st: a Bildungsgangniveau_ST: ,
                             Gymnasialniveau_Sek_I: ;
-                          von_Bundesland: Sachsen-Anhalt: .
-Bildungsgangniveau_ST: rdfs:subClassof Bildungsgangniveau: .                       
-Gymnasialniveau_Sek_I: rdfs:subClassof Bildungsgangniveau: .
-Bildungsgangniveau: rdfs:subClassof Niveau: .
-Anforderungsbereich_2: a Anforderungsbereich: .
-Anforderungsbereich: rdfs:subClassof Niveau: .
-Grundlegendes_Anforderungsniveau_ST: a Grundkursniveau: ,
+                          von_bundesland: sachsen_anhalt: .
+Bildungsgangniveau_ST: rdfs:subClassOf Bildungsgangniveau: .                       
+Gymnasialniveau_Sek_I: rdfs:subClassOf Bildungsgangniveau: .
+Bildungsgangniveau: rdfs:subClassOf Niveau: .
+anforderungsbereich_2_reorganisation_und_transfer: a Anforderungsbereich: .
+Anforderungsbereich: rdfs:subClassOf Niveau: .
+grundlegendes_anforderungsniveau_st: a Grundkursniveau: ,
                                        Fachniveau_Sek_II_ST: .
-Erhöhtes_Anforderungsniveau_ST: a Leistungskursniveau: ,
+erhoehtes_anforderungsniveau_st: a Leistungskursniveau: ,
                                   Fachniveau_Sek_II_ST: .
-Grundkursniveau: rdfs:subClassof Fachniveau_Sek_II: .
-Leistungskursniveau: rdfs:subClassof Fachniveau_Sek_II: .
-Fachniveau_Sek_II_ST: rdfs:subClassof Fachniveau_Sek_II: .
-Fachniveau_Sek_II: rdfs:subClassof Niveau: .
-B1: a Fremdsprachenniveau: .
-Fremdsprachenniveau: rdfs:subClassof Niveau: .
+Grundkursniveau: rdfs:subClassOf Fachniveau_Sek_II: .
+Leistungskursniveau: rdfs:subClassOf Fachniveau_Sek_II: .
+Fachniveau_Sek_II_ST: rdfs:subClassOf Fachniveau_Sek_II: .
+Fachniveau_Sek_II: rdfs:subClassOf Niveau: .
+b1_fortgeschrittene_sprachverwendung: a Fremdsprachenniveau: .
+Fremdsprachenniveau: rdfs:subClassOf Niveau: .

@@ -1,0 +1,26 @@
+@prefix ex: <https://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Klassen
+@prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix Gueltigkeitsbereich: <https://w3id.org/lehrplan/ontology/LP_0000547> .
+
+# properties
+@prefix hat_gueltigkeitsbereich: <https://w3id.org/lehrplan/ontology/LP_0000550> .
+@prefix von_datum: <https://w3id.org/lehrplan/ontology/LP_0000548> .
+@prefix bis_datum: <https://w3id.org/lehrplan/ontology/LP_0000549> .
+@prefix veroeffentlicht_am: <https://w3id.org/lehrplan/ontology/LP_0000553> .
+
+ex:lehrplan_deutsch_1 a Lehrplan: ;
+            veroeffentlicht_am: "2019-06-01T00:00:00Z"^^xsd:dateTimeStamp ;
+            hat_gueltigkeitsbereich: ex:gueltigkeitsbereich_1 .
+
+ex:lehrplan_mathematik_1 a Lehrplan: ;
+            veroeffentlicht_am: "2019-06-01T00:00:00Z"^^xsd:dateTimeStamp ;
+            hat_gueltigkeitsbereich: ex:gueltigkeitsbereich_1 .
+
+ex:gueltigkeitsbereich_1 a Gueltigkeitsbereich: ;
+                      von_datum: "2019-08-01T00:00:00Z"^^xsd:dateTimeStamp ;
+                      bis_datum: "2027-07-31T23:59:59Z"^^xsd:dateTimeStamp .

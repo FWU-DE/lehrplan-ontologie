@@ -7,20 +7,20 @@
 
 # Klassen
 @prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
-@prefix CE-Fragment: <https://w3id.org/lehrplan/ontology/LP_0001015> .
-@prefix CE-Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
-@prefix CE-Lerninhalt: <https://w3id.org/lehrplan/ontology/LP_0000332> .
-@prefix CE-Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
-@prefix CE-Hinweis: <https://w3id.org/lehrplan/ontology/LP_0000852> .
+@prefix CE_Fragment: <https://w3id.org/lehrplan/ontology/LP_0001015> .
+@prefix CE_Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE_Lerninhalt: <https://w3id.org/lehrplan/ontology/LP_0000332> .
+@prefix CE_Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+@prefix CE_Hinweis: <https://w3id.org/lehrplan/ontology/LP_0000852> .
 
 # properties
-@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
+@prefix hat_direkten_teil: <https://w3id.org/lehrplan/ontology/LP_0000565> .
 
-ex:Lehrplan hat_Teil: ex:CE-Fragment_1 .
-ex:CE-Fragment_1 hat_Teil: ex:CE-Bereich_1 .
-ex:CE-Bereich_1 hat_Teil: ex:CE-Bereich_2 .
-ex:CE-Bereich_2 hat_Teil: ex:CE-Lerninhalt_1 ,
-                          ex:CE-Kompetenzspezifikation_1 .                   
-ex:CE-Lerninhalt_1 hat_Teil: ex:CE-Lerninhalt_2 .
-ex:CE-Lerninhalt_2 hat_Teil: ex:CE-Hinweis_1 .
-ex:CE-Kompetenzspezifikation_1 hat_Teil: ex:CE-Hinweis_2 .
+ex:lehrplan_1 hat_direkten_teil: ex:ce_fragment_1 .
+ex:ce_fragment_1 hat_direkten_teil: ex:ce_bereich_1 .
+ex:ce_bereich_1 hat_direkten_teil: ex:ce_bereich_2 .
+ex:ce_bereich_2 hat_direkten_teil: ex:ce_lerninhalt_1 ,
+                          ex:ce_kompetenzspezifikation_1 .                   
+ex:ce_lerninhalt_1 hat_direkten_teil: ex:ce_lerninhalt_2 .
+ex:ce_lerninhalt_2 hat_direkten_teil: ex:ce_hinweis_1 .
+ex:ce_kompetenzspezifikation_1 hat_direkten_teil: ex:ce_hinweis_2 .

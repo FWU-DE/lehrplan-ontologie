@@ -9,32 +9,32 @@
 @prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
 @prefix Realschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000832> .
 @prefix MSA_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000576> .
-@prefix Niveaustufe_BE_BB: <> .
+@prefix Niveaustufe_BE_BB: <https://w3id.org/lehrplan/ontology/LP_0000443> .
 @prefix Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000009> .
 @prefix Standard_BE: <https://w3id.org/lehrplan/ontology/LP_0001447> .
 
 # Individuen
-@prefix Niveaustufe_E: <https://w3id.org/lehrplan/ontology/LP_0000468> .
-@prefix MSA_E: <https://w3id.org/lehrplan/ontology/LP_0000605> .
-@prefix Jahrgangsstufe_6: <https://w3id.org/lehrplan/ontology/LP_2000006> .
-@prefix Jahrgangsstufe_7: <https://w3id.org/lehrplan/ontology/LP_2000007> .
-@prefix Jahrgangsstufe_8: <https://w3id.org/lehrplan/ontology/LP_2000008> .
+@prefix niveaustufe_e: <https://w3id.org/lehrplan/ontology/LP_0000468> .
+@prefix msa_e: <https://w3id.org/lehrplan/ontology/LP_0000605> .
+@prefix jahrgangsstufe_6: <https://w3id.org/lehrplan/ontology/LP_2000006> .
+@prefix jahrgangsstufe_7: <https://w3id.org/lehrplan/ontology/LP_2000007> .
+@prefix jahrgangsstufe_8: <https://w3id.org/lehrplan/ontology/LP_2000008> .
 
 # properties
-@prefix hat_Niveaustufe: <https://w3id.org/lehrplan/ontology/LP_0000578> .
-@prefix hat_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000840> .
-@prefix hat_Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+@prefix hat_niveaustufe: <https://w3id.org/lehrplan/ontology/LP_0000578> .
+@prefix hat_niveau: <https://w3id.org/lehrplan/ontology/LP_0000840> .
+@prefix hat_jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
 
-ex:Standard_BE a Standard_BE: ;
-               hat_Niveaustufe: Niveaustufe_E: .
-Niveaustufe_E: a Niveaustufe_BE_BB: ;
-               hat_Niveau: MSA_E: .
-MSA_E: a MSA_Niveau: ;
-       hat_Jahrgangsstufe: Jahrgangsstufe_6: ,
-                           Jahrgangsstufe_7: ,
-                           Jahrgangsstufe_8: .
+ex:standard_be_1 a Standard_BE: ;
+               hat_niveaustufe: niveaustufe_e: .
+niveaustufe_e: a Niveaustufe_BE_BB: ;
+               hat_niveau: msa_e: .
+msa_e: a MSA_Niveau: ;
+       hat_jahrgangsstufe: jahrgangsstufe_6: ,
+                           jahrgangsstufe_7: ,
+                           jahrgangsstufe_8: .
 MSA_Niveau: rdfs:subClassOf Realschulniveau: .
 Realschulniveau: rdfs:subClassOf Bildungsgangniveau: .
-Jahrgangsstufe_6: a Jahrgangsstufe: .
-Jahrgangsstufe_7: a Jahrgangsstufe: .
-Jahrgangsstufe_8: a Jahrgangsstufe: .
+jahrgangsstufe_6: a Jahrgangsstufe: .
+jahrgangsstufe_7: a Jahrgangsstufe: .
+jahrgangsstufe_8: a Jahrgangsstufe: .

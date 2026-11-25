@@ -47,7 +47,7 @@ ex:CE-ElementHatTitelShape  ## ausser Verweis und Fragment
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000349> ; # bereich
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000852> ; # hinweis
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000263> ; # kompetenzspezifikation
-    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0030325< ; # leitperspektive
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0030325> ; # leitperspektive
     sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0000332> ; # lerninhalt
 
     sh:property [

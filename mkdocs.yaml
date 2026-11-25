@@ -1,4 +1,4 @@
-site_name: Lehrplan Ontology
+site_name: Lehrplan-Ontologie
 #theme: readthedocs
 #theme: mkdocs
 theme:
@@ -13,25 +13,44 @@ theme:
 #    - navigation.tabs
 #    - navigation.sections
     - navigation.path
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
 
 nav:
-  - Start: index.md
-#  - start: index.en.md
+  - start: index.md
+  - start: index.en.md
 
-  - Ontologien allgemein: ontology.md
+  - ontology: ontology.md
+  - ontology: ontology.en.md
 
   - intro: introduction.md
-#  - intro: introduction.en.md
+  - intro: introduction.en.md
 
   - structure: structure.md
+  - structure: structure.en.md
 
-  - Beispiele: patterns.md
+  - patterns: patterns.md
+  - patterns: patterns.en.md
 
-  - SPARQL-Abfragen: sparql.md
+  - sparql: sparql.md
+  - sparql: sparql.en.md
 
-  - Verwendung: usage.md
+  - usage: usage.md
+  - usage: usage.en.md
 
-  - Über uns: about.md
+  - kg: knowledge-graph.md
+  - kg: knowledge-graph.en.md
+
+  - governance: governance.md
+  - governance: governance.en.md
+
+  - glossary: glossar.md
+  - glossary: glossar.en.md
+
+  - about: about.md
+  - about: about.en.md
 
 #  - Versions: versions.md
 #  - Contributing: contributing.md
@@ -39,6 +58,8 @@ nav:
 
 markdown_extensions:
   - attr_list
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.superfences:
       preserve_tabs: true
   - md_in_html
@@ -51,7 +72,10 @@ markdown_extensions:
 
 plugins:
   - d2
-  - search
+  - search:
+      lang:
+        - de
+        - en
   - ontoink
 #  - privacy
   - i18n:
@@ -65,12 +89,28 @@ plugins:
       translate_nav:
         de:
           start: "Start"
+          ontology: "Einführung in Ontologien"
           intro: "Konzeptuelle Grundlagen"
           structure: "Ontologie-Modell"
+          patterns: "Patterns"
+          sparql: "SPARQL-Abfragen"
+          usage: "Verwendung"
+          kg: "Knowledge Graph"
+          governance: "Governance"
+          glossary: "Glossar"
+          about: "Über uns"
         en:
           start: "Home"
-          intro: "Conceptual Overview"
-          structure: "Ontology Structure"
+          ontology: "Introduction to Ontologies"
+          intro: "Conceptual Foundations"
+          structure: "Ontology Model"
+          patterns: "Patterns"
+          sparql: "SPARQL Queries"
+          usage: "Usage"
+          kg: "Knowledge Graph"
+          governance: "Governance"
+          glossary: "Glossary"
+          about: "About Us"
 
 extra_css:
   - extra.css

@@ -9,28 +9,28 @@
 @prefix Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000001> .
 @prefix Fremdsprachenfach: <https://w3id.org/lehrplan/ontology/LP_0000004> .
 @prefix Schulfachbezug: <https://w3id.org/lehrplan/ontology/LP_0000540> .
-@prefix erste_Fremdsprache: <https://w3id.org/lehrplan/ontology/LP_0000541> .
+@prefix Erste_Fremdsprache: <https://w3id.org/lehrplan/ontology/LP_0000541> .
 
 # Instanzen
-@prefix Englisch_TH: <https://w3id.org/schulfach/TH_0000006> .
-@prefix Griechisch_ST: <https://w3id.org/schulfach/ST_0000014> .
-@prefix Englisch_KIM_Schulfach: <http://w3id.org/kim/schulfaecher/s1007> .
+@prefix englisch_th: <https://w3id.org/schulfach/TH_0000006> .
+@prefix griechisch_st: <https://w3id.org/schulfach/ST_0000014> .
+@prefix englisch_kim_schulfach: <http://w3id.org/kim/schulfaecher/s1007> .
 
 # properties
-@prefix hat_Schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+@prefix hat_schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
 @prefix has_exact_match: <http://www.w3.org/2004/02/skos/core#exactMatch> .
 
-ex:Lehrplan_1 hat_Schulfach: 
-                           ex:Fachbezug_Englisch_als_Erstsprache .
-ex:Fachbezug_Englisch_als_Erstsprache hat_Schulfach: Englisch_TH: ;
-                                      a erste_Fremdsprache: .
+ex:lehrplan_1 hat_schulfach: 
+                           ex:fachbezug_englisch_als_erstsprache_1 .
+ex:fachbezug_englisch_als_erstsprache_1 hat_schulfach: englisch_th: ;
+                                      a Erste_Fremdsprache: .
 
-ex:Lehrplan_2 hat_Schulfach: Griechisch_ST: .
+ex:lehrplan_2 hat_schulfach: griechisch_st: .
 
-Griechisch_ST: a Schulfach: .
+griechisch_st: a Schulfach: .
 
-Englisch_TH: a Schulfach: ;
-             has_exact_match: Englisch_KIM_Schulfach: .
-Englisch_KIM_Schulfach: a Fremdsprachenfach: .
+englisch_th: a Schulfach: ;
+             has_exact_match: englisch_kim_schulfach: .
+englisch_kim_schulfach: a Fremdsprachenfach: .
 Fremdsprachenfach: rdfs:subClassOf Schulfach: .
-erste_Fremdsprache: rdfs:subClassOf Schulfachbezug: .
+Erste_Fremdsprache: rdfs:subClassOf Schulfachbezug: .

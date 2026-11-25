@@ -15,36 +15,39 @@
 
 
 # properties
-@prefix hat_Titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
-@prefix hat_Teil: <http://purl.obolibrary.org/obo/BFO_0000051> .
-@prefix hat_Nummer: <https://w3id.org/lehrplan/ontology/LP_0030057> .
-@prefix hat_Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
-@prefix hat_Wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+@prefix hat_titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix hat_direkten_teil: <https://w3id.org/lehrplan/ontology/LP_0000565> .
+@prefix hat_position: <https://w3id.org/lehrplan/ontology/LP_0000460> .
+@prefix hat_nummer: <https://w3id.org/lehrplan/ontology/LP_0030057> .
+@prefix hat_beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+@prefix hat_wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
 
-ex:Lehrplan a Bildungsplan_BW: ;
-            hat_Teil: ex:Fragment ;
-            hat_Titel: ex:Titel_1 .
-ex:Fragment a Lehrplanfragment_BW: ;
-            hat_Teil: ex:Bereich ;
-            hat_Titel: ex:Titel_2 .
+ex:lehrplan_1 a Bildungsplan_BW: ;
+            hat_direkten_teil: ex:fragment_1 ;
+            hat_titel: ex:titel_1 .
+ex:fragment_1 a Lehrplanfragment_BW: ;
+            hat_direkten_teil: ex:bereich_1 ;
+            hat_position: 1 ;
+            hat_titel: ex:titel_2 .
 
-ex:Bereich  a Kompetenzbereich_BW: ;
-            hat_Titel: ex:Titel_3 ;
-            hat_Nummer: ex:Nummer ;
-            hat_Beschreibung: ex:Beschreibung .
+ex:bereich_1  a Kompetenzbereich_BW: ;
+            hat_position: 1 ;
+            hat_titel: ex:titel_3 ;
+            hat_nummer: ex:nummer_1 ;
+            hat_beschreibung: ex:beschreibung_1 .
 
-ex:Titel_1 a Titel: ;
-    hat_Wert: "Bildungsplan Sekundarstufe I - Deutsch" .
+ex:titel_1 a Titel: ;
+    hat_wert: "Bildungsplan Sekundarstufe I - Deutsch" .
 
-ex:Titel_2 a Titel: ;
-    hat_Wert: "Prozessbezogene Kompetenzen" .
+ex:titel_2 a Titel: ;
+    hat_wert: "Prozessbezogene Kompetenzen" .
 
-ex:Titel_3 a Titel: ;
-    hat_Wert: "Sprechen und Zuhören" .
+ex:titel_3 a Titel: ;
+    hat_wert: "Sprechen und Zuhören" .
 
 
-ex:Beschreibung a Beschreibung: ;
-    hat_Wert: "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ..."  .
+ex:beschreibung_1 a Beschreibung: ;
+    hat_wert: "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ..."  .
 
-ex:Nummer a Identifikationsnummer: ;
-    hat_Wert: "2.1" .
+ex:nummer_1 a Identifikationsnummer: ;
+    hat_wert: "2.1" .
