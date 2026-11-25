@@ -1,8 +1,25 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="lp-hero" markdown>
+
+![](logo.png){ .lp-hero-logo }
+
 # Curriculum Ontology
 
-***An ontology for school curricula in Germany***
+<p class="lp-tagline">An ontology for school curricula in Germany</p>
 
-The **Curriculum Ontology** (Lehrplan-Ontologie, LP) is a **structured** and **machine-readable** **knowledge representation** of **school curricula** at the primary and secondary levels. It models both the content-related and the structural components of curricular documents – including **competences**, **learning contents** and **educational standards** as well as their embedding in **subjects**, **class levels** and **school types** – within a uniform semantic framework.
+The **Curriculum Ontology** (Lehrplan-Ontologie, LP) is a structured and machine-readable knowledge representation of school curricula at the primary and secondary levels. It represents competences, learning contents and educational standards as well as their embedding in subjects, class levels and school types within a uniform semantic framework.
+
+[Get started :material-arrow-right:](ontology.en.md){ .md-button .md-button--primary }
+[Ontology model](structure.en.md){ .md-button }
+[Patterns](patterns.en.md){ .md-button }
+[:material-github: GitHub](https://github.com/FWU-DE/lehrplan-ontologie){ .md-button }
+
+</div>
 
 Against the background of the federal diversity of the German education system, the ontology harmonizes different terminologies and curriculum structures without losing state-specific characteristics. By transforming heterogeneous curriculum data into an interoperable knowledge base, it lays the foundation for analysis, comparability and the development of data-driven educational applications.
 
@@ -11,83 +28,99 @@ Against the background of the federal diversity of the German education system, 
 
 The documentation is intended for everyone who wants to work with, understand or further develop the Curriculum Ontology. Depending on the background, different entry points are recommended:
 
-| You are …                                                                  | Recommended entry point                                                                                                                          |
-|----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| new to ontologies                                                          | [Introduction to ontologies](ontology.en.md) → [Conceptual foundations](introduction.en.md)                                                      |
-| working in education administration, as a subject editor or as a curriculum expert | [Conceptual foundations](introduction.en.md) → [Ontology model](structure.en.md)                                                        |
-| a developer who wants to integrate curriculum data                         | [Ontology model](structure.en.md) → [Examples / patterns](patterns.en.md) → [Usage](usage.en.md)                                                 |
-| a researcher or data analyst                                               | [Examples / patterns](patterns.en.md) → [SPARQL queries](sparql.en.md)                                                                           |
+| You are …                                                                          | Recommended entry point                                                                         |
+|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| new to ontologies                                                                  | [Introduction to ontologies](ontology.en.md) → [Conceptual foundations](introduction.en.md)     |
+| working in education administration, as a subject editor or as a curriculum expert | [Conceptual foundations](introduction.en.md) → [Ontology model](structure.en.md)                |
+| a developer who wants to integrate curriculum data                                 | [Ontology model](structure.en.md) → [Patterns](patterns.en.md) → [Usage](usage.en.md)           |
+| a researcher or data analyst                                                       | [Patterns](patterns.en.md) → [SPARQL queries](sparql.en.md)                                     |
 
 
 ## Structure of the documentation
 
-### 1. Introduction to ontologies
+<div class="grid cards" markdown>
 
-[Introduction to ontologies](ontology.en.md): the concept and benefits of ontologies and how they differ from databases, metadata schemas and approaches based on large language models (LLMs). Also: Resource Description Framework (RDF), RDF Schema (RDFS) and Web Ontology Language (OWL), ontology levels, tools and further reading.
+-   :material-book-open-variant:{ .lg .middle } **Introduction to ontologies**
 
-### 2. Conceptual foundations
+    ---
 
-[Conceptual foundations](introduction.en.md): domain understanding and scope.
+    The concept and benefits of ontologies, how they differ from databases and approaches based on large language models, the languages RDF (Resource Description Framework) and OWL (Web Ontology Language), tools and further reading.
 
-- [Initial situation](introduction.en.md#initial-situation) and [goals](introduction.en.md#objectives-and-applications)
-- [Application scenarios](introduction.en.md#application-scenarios): indexing of educational media, curriculum-based search, cross-state analysis
-- [Subject and scope](introduction.en.md#subject-matter-and-scope): which curricula and contents are covered and what is not included
-- [Key terms](introduction.en.md#central-terms): curriculum, curricular element, competence and competency specification, educational track, niveau, and others
-- [Approach](introduction.en.md#approach): comparative analysis of the curricula, collaboration with the working group of the federal states (Fachgruppe der Länder) and with ontology experts
-- [Choice of the top-level ontology](introduction.en.md#choice-of-the-top-level-ontology): reasons for the Basic Formal Ontology (BFO)
-- [Competency questions](introduction.en.md#competency-questions): which questions the ontology should be able to answer
+    [:octicons-arrow-right-24: Introduction to ontologies](ontology.en.md)
 
-### 3. Ontology model
+-   :material-lightbulb-on-outline:{ .lg .middle } **Conceptual foundations**
 
-[Ontology model](structure.en.md): how the knowledge is structured.
+    ---
 
-- [Basic ontological understanding](structure.en.md#basic-ontological-understanding): information entities and the real-world entities they describe
-- [The five layers](structure.en.md#structure-of-the-curriculum-ontology): educational context, curricular elements, temporal classification, niveaus, relations
-- [Design principle](structure.en.md#modeling-design-principle): shared core ontology with state-specific specializations
-- [Reused ontologies and vocabularies](structure.en.md#reused-ontologiesvocabularies): BFO, Relation Ontology (RO), Information Artifact Ontology (IAO), school subject and school type ontologies, Kompetenzzentrum Interoperable Metadaten (KIM, Competence Center for Interoperable Metadata), Quantities, Units, Dimensions and Types (QUDT)
-- [Classes, individuals and relations](structure.en.md#overview-of-classes-relations-hierarchies)
-- [Mapping of the terminologies of the federal states](structure.en.md#mapping-the-different-terminologies-of-the-states) and [integration of the KMK educational standards](structure.en.md#integration-of-the-educational-standards) (KMK: Standing Conference of the Ministers of Education and Cultural Affairs, Kultusministerkonferenz)
+    Initial situation, goals and application scenarios, scope and key terms, the choice of the Basic Formal Ontology (BFO) and the competency questions for the ontology.
 
-### 4. Patterns and SPARQL queries
+    [:octicons-arrow-right-24: Conceptual foundations](introduction.en.md)
 
-- [Patterns](patterns.en.md): concrete modeling of curriculum elements, each with a diagram, an explanation and RDF data
-- [SPARQL queries](sparql.en.md) (SPARQL: SPARQL Protocol and RDF Query Language): example queries on curricula, subjects, school types, contents and structure as well as queries for the [competency questions](introduction.en.md#competency-questions) – each with a direct link to the endpoint
+-   :material-graph-outline:{ .lg .middle } **Ontology model**
 
-### 5. Usage
+    ---
 
-[Usage](usage.en.md): how to work with the ontology and the curriculum data.
+    Layers and design principle, a common core with state-specific specializations, reused vocabularies, classes and properties, and the integration of the educational standards of the Standing Conference of the Ministers of Education and Cultural Affairs (Kultusministerkonferenz, KMK).
 
-- [Release artifacts](usage.en.md#release-artifacts) and [versions](usage.en.md#versions), including the changes in version 1.0.0rc6
-- [Access](usage.en.md#access): resolution of the Internationalized Resource Identifiers (IRIs), [SPARQL endpoint](https://mem.bmi.fwu.de/sparql) and examples of programmatic use
-- [Integration into your own ontologies](usage.en.md#integration-into-custom-ontologies) and [creating your own curriculum data](usage.en.md#creating-custom-curriculum-data)
-- [Reasoning](usage.en.md#reasoning) and [validation](usage.en.md#validation) with SHACL shapes (SHACL: Shapes Constraint Language)
-- [Technical reference](usage.en.md#technical-reference), [license and citation](usage.en.md#license-and-citation) and [contributing](usage.en.md#contributing)
-- Application examples (comparison of curricula between federal states, linking with educational media, curriculum analysis, recommender systems) – *in preparation*
+    [:octicons-arrow-right-24: Ontology model](structure.en.md)
 
-### 6. Knowledge graph
+-   :material-puzzle-outline:{ .lg .middle } **Patterns**
 
-[Knowledge graph](knowledge-graph.en.md): the curriculum data in the SPARQL endpoint.
+    ---
 
-- [Data inventory](knowledge-graph.en.md#data-holdings): curricula and curricular elements of Bavaria, Saxony, Rhineland-Palatinate, Berlin/Brandenburg and the KMK educational standards
-- [Origin of the data](knowledge-graph.en.md#origin-of-the-data) and [particularities of the federal states](knowledge-graph.en.md#particularities-of-the-federal-states)
-- [Limitations](knowledge-graph.en.md#limitations) of the current data inventory
+    Fourteen modeling patterns for curricula and their elements, each with a diagram, explanation and example data.
 
-### 7. Governance and further development
+    [:octicons-arrow-right-24: Patterns](patterns.en.md)
 
-[Governance and further development](governance.en.md): rules for the maintenance and further development of the ontology.
+-   :material-database-search-outline:{ .lg .middle } **SPARQL queries**
 
-- [Responsibility](governance.en.md#responsibility) and [development environment](governance.en.md#development-environment)
-- [Identifiers](governance.en.md#identifiers): structure and assignment of the `LP_` numbers
-- [Versioning](governance.en.md#versioning) and [deprecation of terms](governance.en.md#deprecating-terms)
-- [Modeling rules](governance.en.md#modeling-rules) and [contributing](governance.en.md#contributing), also for the federal states
+    ---
 
-### 8. Glossary
+    Example queries on curricula, subjects, school types, contents and structure as well as on the competency questions, each with a direct link to the SPARQL endpoint (SPARQL: SPARQL Protocol and RDF Query Language).
 
-[Glossary](glossar.en.md): abbreviations of the federal states and of the Berlin and Brandenburg school-leaving qualifications as well as key terms such as curriculum, curricular element, guiding perspective, niveau stage and educational track level.
+    [:octicons-arrow-right-24: SPARQL queries](sparql.en.md)
 
-### 9. About us
+-   :material-tools:{ .lg .middle } **Usage**
 
-[About us](about.en.md): the people and institutions behind the Curriculum Ontology, acknowledgments and contact.
+    ---
+
+    Release artifacts and versions, programmatic access, integration into other ontologies, creating curriculum data, reasoning and validation.
+
+    [:octicons-arrow-right-24: Usage](usage.en.md)
+
+-   :material-hub-outline:{ .lg .middle } **Knowledge graph**
+
+    ---
+
+    The curriculum data in the SPARQL endpoint: data per federal state, data sources, special features and limitations.
+
+    [:octicons-arrow-right-24: Knowledge graph](knowledge-graph.en.md)
+
+-   :material-scale-balance:{ .lg .middle } **Governance and further development**
+
+    ---
+
+    Responsibilities, assignment of identifiers, versioning, deprecation of terms, modeling rules and contributing.
+
+    [:octicons-arrow-right-24: Governance](governance.en.md)
+
+-   :material-book-alphabet:{ .lg .middle } **Glossary**
+
+    ---
+
+    Abbreviations of the federal states and school-leaving qualifications as well as key terms such as curriculum, curricular element, guiding perspective, niveau stage and educational track level.
+
+    [:octicons-arrow-right-24: Glossary](glossar.en.md)
+
+-   :material-account-group-outline:{ .lg .middle } **About us**
+
+    ---
+
+    The people and institutions behind the Curriculum Ontology, its beginnings, acknowledgments and contact.
+
+    [:octicons-arrow-right-24: About us](about.en.md)
+
+</div>
 
 
 ## Ontology metadata

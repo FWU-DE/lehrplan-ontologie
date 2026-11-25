@@ -5,3 +5,47 @@
   --md-primary-fg-color--light: #ECB7B7;
   --md-primary-fg-color--dark:  #90030C;
 }
+
+/* Startseite: Kopfbereich */
+.lp-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  margin: 0 0 2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, rgba(159, 14, 33, 0.08), rgba(159, 14, 33, 0.02));
+  border: 1px solid rgba(159, 14, 33, 0.15);
+}
+.lp-hero .lp-hero-logo {
+  width: 96px;
+  height: 96px;
+}
+.md-typeset .lp-hero h1 {
+  margin: 0.6rem 0 0.2rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+.lp-hero .lp-tagline {
+  margin-top: 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+}
+.lp-hero > p:not(.lp-tagline) {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp-hero .md-button {
+  margin: 0.3rem 0.2rem;
+}
+
+/* Kacheln: Icons in Primärfarbe, leichter Hover-Effekt */
+.md-typeset .grid.cards .lg {
+  color: var(--md-primary-fg-color);
+}
+.md-typeset .grid.cards > ul > li {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+}

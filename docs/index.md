@@ -1,8 +1,25 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="lp-hero" markdown>
+
+![](logo.png){ .lp-hero-logo }
+
 # Lehrplan-Ontologie
 
-***Eine Ontologie für Lehrpläne in Deutschland***
+<p class="lp-tagline">Eine Ontologie für Lehrpläne in Deutschland</p>
 
-Die **Lehrplan-Ontologie** ist eine **strukturierte** und **maschinenlesbare** **Wissensrepräsentation** **schulischer Lehrpläne** im Primar- und Sekundarbereich. Sie modelliert sowohl die inhaltlichen als auch die strukturellen Bestandteile curricularer Dokumente – darunter **Kompetenzen**, **Lerninhalte**, **Bildungsstandards** sowie deren Einbettung in **Fächer**, **Jahrgangsstufen** und **Schularten** – innerhalb eines einheitlichen semantischen Rahmens.
+Die **Lehrplan-Ontologie** ist eine strukturierte und maschinenlesbare Wissensrepräsentation schulischer Lehrpläne im Primar- und Sekundarbereich. Sie bildet Kompetenzen, Lerninhalte und Bildungsstandards sowie deren Einbettung in Fächer, Jahrgangsstufen und Schularten in einem einheitlichen semantischen Rahmen ab.
+
+[Einstieg :material-arrow-right:](ontology.md){ .md-button .md-button--primary }
+[Ontologie-Modell](structure.md){ .md-button }
+[Patterns](patterns.md){ .md-button }
+[:material-github: GitHub](https://github.com/FWU-DE/lehrplan-ontologie){ .md-button }
+
+</div>
 
 Vor dem Hintergrund der föderalen Vielfalt des deutschen Bildungssystems harmonisiert die Ontologie unterschiedliche Terminologien und Lehrplanstrukturen, ohne länderspezifische Besonderheiten zu verlieren. Durch die Überführung heterogener Lehrplandaten in eine interoperable Wissensbasis schafft sie die Grundlage für Analyse, Vergleichbarkeit und die Entwicklung datenbasierter Bildungsanwendungen.
 
@@ -15,79 +32,95 @@ Die Dokumentation richtet sich an alle, die mit der Lehrplan-Ontologie arbeiten,
 |----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | neu im Thema Ontologien                                                    | [Einführung in Ontologien](ontology.md) → [Konzeptuelle Grundlagen](introduction.md)                                                                 |
 | Bildungsadministration, Fachredaktion oder Lehrplanexpertin bzw. -experte | [Konzeptuelle Grundlagen](introduction.md) → [Ontologie-Modell](structure.md)                                                                    |
-| Entwicklerin oder Entwickler, die Lehrplandaten integrieren möchten        | [Ontologie-Modell](structure.md) → [Beispiele / Patterns](patterns.md) → [Verwendung](usage.md)                                                  |
-| Forschende oder Datenanalystin bzw. -analyst                               | [Beispiele / Patterns](patterns.md) → [SPARQL-Abfragen](sparql.md)                                                                               |
+| Entwicklerin oder Entwickler, die Lehrplandaten integrieren möchten        | [Ontologie-Modell](structure.md) → [Patterns](patterns.md) → [Verwendung](usage.md)                                                  |
+| Forschende oder Datenanalystin bzw. -analyst                               | [Patterns](patterns.md) → [SPARQL-Abfragen](sparql.md)                                                                               |
 
 
 ## Aufbau der Dokumentation
 
-### 1. Einführung in Ontologien
+<div class="grid cards" markdown>
 
-[Einführung in Ontologien](ontology.md): Begriff und Nutzen von Ontologien und wie sie sich von Datenbanken, Metadatenschemata und LLM-basierten (LLM: Large Language Model) Ansätzen unterscheiden. Außerdem: Resource Description Framework (RDF), RDF Schema (RDFS) und Web Ontology Language (OWL), Ontologieebenen, Werkzeuge und Lesestoff.
+-   :material-book-open-variant:{ .lg .middle } **Einführung in Ontologien**
 
-### 2. Konzeptuelle Grundlagen
+    ---
 
-[Konzeptuelle Grundlagen](introduction.md): fachliches Verständnis und Abgrenzung.
+    Begriff und Nutzen von Ontologien, Abgrenzung zu Datenbanken und Ansätzen auf Basis großer Sprachmodelle, die Sprachen RDF (Resource Description Framework) und OWL (Web Ontology Language) sowie Werkzeuge und Lesestoff.
 
-- [Ausgangslage](introduction.md#ausgangslage) und [Ziele](introduction.md#ziele-und-anwendungen)
-- [Anwendungsszenarien](introduction.md#anwendungsszenarien): Erschließung von Bildungsmedien, lehrplanbezogene Suche, länderübergreifende Analyse
-- [Gegenstand und Umfang](introduction.md#gegenstand-und-umfang): welche Lehrpläne und Inhalte abgedeckt sind und was nicht dazugehört
-- [Zentrale Begriffe](introduction.md#zentrale-begriffe): Lehrplan, curriculares Element, Kompetenz und Kompetenzspezifikation, Bildungsgang, Niveau u. a.
-- [Vorgehen](introduction.md#vorgehen): vergleichende Analyse der Lehrpläne, Zusammenarbeit mit der Fachgruppe der Länder und mit Ontologie-Fachleuten
-- [Wahl der Top-Level-Ontologie](introduction.md#wahl-der-top-level-ontologie): Gründe für die Basic Formal Ontology (BFO)
-- [Kompetenzfragen](introduction.md#kompetenzfragen): welche Fragen die Ontologie beantworten können soll
+    [:octicons-arrow-right-24: Einführung in Ontologien](ontology.md)
 
-### 3. Ontologie-Modell
+-   :material-lightbulb-on-outline:{ .lg .middle } **Konzeptuelle Grundlagen**
 
-[Ontologie-Modell](structure.md): wie das Wissen strukturiert ist.
+    ---
 
-- [Ontologisches Grundverständnis](structure.md#ontologisches-grundverstandnis): Informationseinheiten und die realweltlichen Entitäten, die sie beschreiben
-- [Die fünf Schichten](structure.md#aufbau-und-struktur-der-lehrplan-ontologie): Bildungskontext, curriculare Elemente, zeitliche Einordnung, Niveaus, Relationen
-- [Designprinzip](structure.md#modellierung-designprinzip): gemeinsame Kern-Ontologie mit länderspezifischen Konkretisierungen
-- [Nachgenutzte Ontologien und Vokabulare](structure.md#nachgenutzte-ontologienvokabulare): BFO, Relation Ontology (RO), Information Artifact Ontology (IAO), Schulfach- und Schulart-Ontologie, Kompetenzzentrum Interoperable Metadaten (KIM), Quantities, Units, Dimensions and Types (QUDT)
-- [Klassen, Individuen und Beziehungen](structure.md#uberblick-uber-klassen-beziehungen-hierarchien)
-- [Mapping der Terminologien der Länder](structure.md#mapping-unterschiedlicher-terminologien-der-lander) und [Integration der KMK-Bildungsstandards](structure.md#integration-der-bildungsstandards) (KMK: Kultusministerkonferenz)
+    Ausgangslage, Ziele und Anwendungsszenarien, Umfang und zentrale Begriffe, die Wahl der Basic Formal Ontology (BFO) und die Kompetenzfragen an die Ontologie.
 
-### 4. Patterns und SPARQL-Abfragen
+    [:octicons-arrow-right-24: Konzeptuelle Grundlagen](introduction.md)
 
-- [Patterns](patterns.md): konkrete Modellierung von Lehrplanelementen, jeweils mit Diagramm, Erläuterung und RDF-Daten
-- [SPARQL-Abfragen](sparql.md) (SPARQL: SPARQL Protocol and RDF Query Language): Beispielabfragen zu Lehrplänen, Fächern, Schularten, Inhalten und Struktur sowie Abfragen zu den [Kompetenzfragen](introduction.md#kompetenzfragen) – jeweils mit direktem Link zum Endpunkt
+-   :material-graph-outline:{ .lg .middle } **Ontologie-Modell**
 
-### 5. Verwendung
+    ---
 
-[Verwendung](usage.md): wie mit der Ontologie und den Lehrplandaten gearbeitet wird.
+    Schichten und Designprinzip, gemeinsamer Kern mit länderspezifischen Konkretisierungen, nachgenutzte Vokabulare, Klassen und Properties sowie die Integration der Bildungsstandards der Kultusministerkonferenz (KMK).
 
-- [Release-Artefakte](usage.md#release-artefakte) und [Versionen](usage.md#versionen), einschließlich der Änderungen in Version 1.0.0rc6
-- [Zugriff](usage.md#zugriff): Auflösung der Internationalized Resource Identifiers (IRIs), [SPARQL-Endpunkt](https://mem.bmi.fwu.de/sparql) und Beispiele für die Nutzung aus Programmen
-- [Einbindung in eigene Ontologien](usage.md#einbindung-in-eigene-ontologien) und [Erstellen eigener Lehrplandaten](usage.md#erstellen-eigener-lehrplandaten)
-- [Schlussfolgern](usage.md#schlussfolgern) und [Validierung](usage.md#validierung) mit SHACL-Shapes (SHACL: Shapes Constraint Language)
-- [Technische Referenz](usage.md#technische-referenz), [Lizenz und Zitation](usage.md#lizenz-und-zitation) sowie [Mitwirken](usage.md#mitwirken)
-- Anwendungsbeispiele (Lehrplanvergleich zwischen Ländern, Verknüpfung mit Bildungsmedien, Curriculum-Analyse, Empfehlungssysteme) – *in Vorbereitung*
+    [:octicons-arrow-right-24: Ontologie-Modell](structure.md)
 
-### 6. Knowledge Graph
+-   :material-puzzle-outline:{ .lg .middle } **Patterns**
 
-[Knowledge Graph](knowledge-graph.md): die Lehrplandaten im SPARQL-Endpunkt.
+    ---
 
-- [Datenbestand](knowledge-graph.md#datenbestand): Lehrpläne und curriculare Elemente von Bayern, Sachsen, Rheinland-Pfalz, Berlin/Brandenburg und die KMK-Bildungsstandards
-- [Herkunft der Daten](knowledge-graph.md#herkunft-der-daten) und [Besonderheiten der Länder](knowledge-graph.md#besonderheiten-der-lander)
-- [Einschränkungen](knowledge-graph.md#einschrankungen) des aktuellen Datenbestands
+    Vierzehn Modellierungsmuster für Lehrpläne und ihre Elemente, jeweils mit Diagramm, Erläuterung und Beispieldaten.
 
-### 7. Governance und Weiterentwicklung
+    [:octicons-arrow-right-24: Patterns](patterns.md)
 
-[Governance und Weiterentwicklung](governance.md): Regeln für Pflege und Weiterentwicklung der Ontologie.
+-   :material-database-search-outline:{ .lg .middle } **SPARQL-Abfragen**
 
-- [Verantwortung](governance.md#verantwortung) und [Entwicklungsumgebung](governance.md#entwicklungsumgebung)
-- [Identifikatoren](governance.md#identifikatoren): Aufbau und Vergabe der `LP_`-Nummern
-- [Versionierung](governance.md#versionierung) und [Zurückziehen von Begriffen](governance.md#zuruckziehen-von-begriffen)
-- [Modellierungsregeln](governance.md#modellierungsregeln) und [Mitwirken](governance.md#mitwirken), auch für die Länder
+    ---
 
-### 8. Glossar
+    Beispielabfragen zu Lehrplänen, Fächern, Schularten, Inhalten und Struktur sowie zu den Kompetenzfragen, jeweils mit direktem Link zum SPARQL-Endpunkt (SPARQL: SPARQL Protocol and RDF Query Language).
 
-[Glossar](glossar.md): Abkürzungen der Länder und der Berliner und Brandenburger Abschlüsse sowie zentrale Begriffe wie Lehrplan, curriculares Element, Leitperspektive, Niveaustufe und Bildungsgangniveau.
+    [:octicons-arrow-right-24: SPARQL-Abfragen](sparql.md)
 
-### 9. Über uns
+-   :material-tools:{ .lg .middle } **Verwendung**
 
-[Über uns](about.md): die Menschen und Einrichtungen hinter der Lehrplan-Ontologie, Dank und Kontakt.
+    ---
+
+    Release-Artefakte und Versionen, Zugriff aus Programmen, Einbindung in eigene Ontologien, eigene Lehrplandaten, Schlussfolgern und Validierung.
+
+    [:octicons-arrow-right-24: Verwendung](usage.md)
+
+-   :material-hub-outline:{ .lg .middle } **Knowledge Graph**
+
+    ---
+
+    Die Lehrplandaten im SPARQL-Endpunkt: Datenbestand je Land, Herkunft der Daten, Besonderheiten und Einschränkungen.
+
+    [:octicons-arrow-right-24: Knowledge Graph](knowledge-graph.md)
+
+-   :material-scale-balance:{ .lg .middle } **Governance und Weiterentwicklung**
+
+    ---
+
+    Verantwortung, Vergabe der Identifikatoren, Versionierung, Zurückziehen von Begriffen, Modellierungsregeln und Mitwirken.
+
+    [:octicons-arrow-right-24: Governance](governance.md)
+
+-   :material-book-alphabet:{ .lg .middle } **Glossar**
+
+    ---
+
+    Abkürzungen der Länder und Abschlüsse sowie zentrale Begriffe wie Lehrplan, curriculares Element, Leitperspektive, Niveaustufe und Bildungsgangniveau.
+
+    [:octicons-arrow-right-24: Glossar](glossar.md)
+
+-   :material-account-group-outline:{ .lg .middle } **Über uns**
+
+    ---
+
+    Die Menschen und Einrichtungen hinter der Lehrplan-Ontologie, ihre Anfänge, Dank und Kontakt.
+
+    [:octicons-arrow-right-24: Über uns](about.md)
+
+</div>
 
 
 ## Metadaten der Ontologie

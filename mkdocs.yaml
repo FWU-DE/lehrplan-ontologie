@@ -12,7 +12,10 @@ theme:
   features:
 #    - navigation.tabs
 #    - navigation.sections
+    - navigation.tabs
+    - navigation.sections
     - navigation.path
+    - navigation.footer
     - navigation.top
     - toc.follow
     - search.highlight
@@ -22,35 +25,33 @@ nav:
   - start: index.md
   - start: index.en.md
 
-  - ontology: ontology.md
-  - ontology: ontology.en.md
+  - basics:
+    - ontology: ontology.md
+    - ontology: ontology.en.md
+    - intro: introduction.md
+    - intro: introduction.en.md
 
-  - intro: introduction.md
-  - intro: introduction.en.md
+  - model:
+    - structure: structure.md
+    - structure: structure.en.md
+    - patterns: patterns.md
+    - patterns: patterns.en.md
 
-  - structure: structure.md
-  - structure: structure.en.md
+  - practice:
+    - sparql: sparql.md
+    - sparql: sparql.en.md
+    - usage: usage.md
+    - usage: usage.en.md
+    - kg: knowledge-graph.md
+    - kg: knowledge-graph.en.md
 
-  - patterns: patterns.md
-  - patterns: patterns.en.md
-
-  - sparql: sparql.md
-  - sparql: sparql.en.md
-
-  - usage: usage.md
-  - usage: usage.en.md
-
-  - kg: knowledge-graph.md
-  - kg: knowledge-graph.en.md
-
-  - governance: governance.md
-  - governance: governance.en.md
-
-  - glossary: glossar.md
-  - glossary: glossar.en.md
-
-  - about: about.md
-  - about: about.en.md
+  - project:
+    - governance: governance.md
+    - governance: governance.en.md
+    - glossary: glossar.md
+    - glossary: glossar.en.md
+    - about: about.md
+    - about: about.en.md
 
 #  - Versions: versions.md
 #  - Contributing: contributing.md
@@ -66,6 +67,9 @@ markdown_extensions:
   - pymdownx.snippets
   - admonition
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
       
@@ -99,6 +103,10 @@ plugins:
           governance: "Governance"
           glossary: "Glossar"
           about: "Über uns"
+          basics: "Einführung"
+          model: "Ontologie"
+          practice: "Praxis"
+          project: "Projekt"
         en:
           start: "Home"
           ontology: "Introduction to Ontologies"
@@ -111,6 +119,10 @@ plugins:
           governance: "Governance"
           glossary: "Glossary"
           about: "About Us"
+          basics: "Introduction"
+          model: "Ontology"
+          practice: "In Practice"
+          project: "Project"
 
 extra_css:
   - extra.css
