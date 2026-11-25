@@ -1,0 +1,2012 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../introduction/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../ontology.en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Einführung in Ontologien - Lehrplan-Ontologie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/mkdocs_d2_plugin.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#einfuhrung-in-ontologien" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Lehrplan-Ontologie" class="md-header__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lehrplan-Ontologie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Einführung in Ontologien
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../ontology.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Einführung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../structure/" class="md-tabs__link">
+          
+  
+  
+  Ontologie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sparql/" class="md-tabs__link">
+          
+  
+  
+  Praxis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../governance/" class="md-tabs__link">
+          
+  
+  
+  Projekt
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lehrplan-Ontologie" class="md-nav__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Lehrplan-Ontologie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Einführung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung in Ontologien
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung in Ontologien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#begriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Begriff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzen-von-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nutzen von Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nutzen von Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-datenbanken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu Datenbanken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-metadatenschemata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu Metadatenschemata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-groen-sprachmodellen-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu großen Sprachmodellen (LLMs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzen-einer-ontologie-fur-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nutzen einer Ontologie für Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grundkonzepte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundkonzepte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grundkonzepte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individuen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axiome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Axiome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussfolgern-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlussfolgern (Reasoning)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologien-und-wissensgraphen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologien und Wissensgraphen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf-rdfs-und-owl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDF, RDFS und OWL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDF, RDFS und OWL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdf-das-datenmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDF – das Datenmodell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdfs-das-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDFS – das Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-die-ontologiesprache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWL – die Ontologiesprache
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebenen-von-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebenen von Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ebenen von Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bedeutung-der-einteilung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bedeutung der Einteilung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologieentwicklung-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologieentwicklung in der Praxis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ontologieentwicklung in der Praxis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modellierungsprinzipien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellierungsprinzipien
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#werkzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Werkzeuge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verzeichnisse-und-terminologiedienste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verzeichnisse und Terminologiedienste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weiterfuhrende-literatur-und-materialien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weiterführende Literatur und Materialien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausblick-auf-die-folgenden-kapitel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausblick auf die folgenden Kapitel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konzeptuelle Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ontologie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Praxis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Praxis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL-Abfragen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verwendung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowledge-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projekt
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projekt
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über uns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#begriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Begriff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzen-von-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nutzen von Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nutzen von Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-datenbanken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu Datenbanken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-metadatenschemata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu Metadatenschemata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abgrenzung-zu-groen-sprachmodellen-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgrenzung zu großen Sprachmodellen (LLMs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzen-einer-ontologie-fur-lehrplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nutzen einer Ontologie für Lehrpläne
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grundkonzepte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundkonzepte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grundkonzepte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#klassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klassen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individuen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individuen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axiome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Axiome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussfolgern-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlussfolgern (Reasoning)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologien-und-wissensgraphen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologien und Wissensgraphen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf-rdfs-und-owl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDF, RDFS und OWL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDF, RDFS und OWL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdf-das-datenmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDF – das Datenmodell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdfs-das-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDFS – das Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-die-ontologiesprache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWL – die Ontologiesprache
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebenen-von-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebenen von Ontologien
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ebenen von Ontologien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bedeutung-der-einteilung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bedeutung der Einteilung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologieentwicklung-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologieentwicklung in der Praxis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ontologieentwicklung in der Praxis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modellierungsprinzipien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellierungsprinzipien
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#werkzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Werkzeuge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verzeichnisse-und-terminologiedienste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verzeichnisse und Terminologiedienste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weiterfuhrende-literatur-und-materialien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weiterführende Literatur und Materialien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausblick-auf-die-folgenden-kapitel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausblick auf die folgenden Kapitel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Start
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Einführung
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<ul>
+<li class="i18n-link i18n-link-found i18n-link-en"><a href="../ontology.en/">English</a></li>
+</ul>
+<h1 id="einfuhrung-in-ontologien">Einführung in Ontologien</h1>
+<p>Dieser Abschnitt gibt einen Überblick über Begriff, Nutzen und technische Umsetzung von Ontologien. Er vermittelt die wichtigsten Grundbegriffe als Orientierung für das Verständnis der Lehrplan-Ontologie und stellt, wo sinnvoll, Bezüge zu ihr her. Eine fundierte Einarbeitung in das Thema kann er nicht ersetzen; hierfür sei auf die <a href="#weiterfuhrende-literatur-und-materialien">weiterführende Literatur</a> am Ende des Abschnitts verwiesen.</p>
+<h2 id="begriff">Begriff</h2>
+<p>Eine Ontologie ist eine formale, auf Logik basierende Darstellung von Wissen in einem bestimmten Fachgebiet (Domäne). Sie legt fest, welche Begriffe in diesem Fachgebiet verwendet werden, was sie bedeuten und in welcher Beziehung sie zueinander stehen. Diese Festlegungen sind so präzise formuliert, dass sie sowohl für Menschen verständlich als auch maschinell auswertbar sind.</p>
+<p>Alles, worüber eine Ontologie Aussagen trifft, wird als <strong>Entität</strong> bezeichnet: physische Objekte wie Personen oder Schulen ebenso wie Prozesse, Eigenschaften, Rollen oder Informationen wie ein Lehrplan.</p>
+<p>Ontologien bestehen typischerweise aus <strong>Klassen</strong> (Kategorien), <strong>Eigenschaften</strong> (Relationen und Attribute) und <strong>Axiomen</strong> (Regeln), die den Zusammenhang der Begriffe bestimmen. Daten, die auf Grundlage einer Ontologie beschrieben sind, lassen sich einheitlich interpretieren, miteinander verknüpfen und zwischen Anwendungen, Datenbanken und Fachgebieten austauschen.</p>
+<h2 id="nutzen-von-ontologien">Nutzen von Ontologien</h2>
+<p>Ontologien bilden einen gemeinsamen begrifflichen Rahmen für Daten aus unterschiedlichen Quellen. Sie unterstützen insbesondere:</p>
+<ul>
+<li><strong>Interoperabilität</strong>: Systeme, die dieselbe Ontologie verwenden, können die Daten des jeweils anderen Systems korrekt interpretieren, auch wenn sie intern unterschiedlich aufgebaut sind.</li>
+<li><strong>Integration und Recherche</strong>: Heterogene Datenbestände lassen sich zusammenführen und über gemeinsame Begriffe durchsuchen und auswerten.</li>
+<li><strong>Qualitätssicherung</strong>: Eindeutige Definitionen und logische Regeln ermöglichen es, Widersprüche und Lücken in den Daten automatisch zu erkennen.</li>
+<li><strong>Nachnutzbarkeit</strong>: Ontologien sind ein zentraler Baustein der <a href="https://www.go-fair.org/fair-principles/">FAIR-Prinzipien</a> (Findable, Accessible, Interoperable, Reusable), da sie die Bedeutung von Daten explizit und dauerhaft festhalten.</li>
+</ul>
+<p>Fehlt ein solcher Rahmen, bleiben Daten häufig auf einzelne Systeme beschränkt und lassen sich nur mit erheblichem Aufwand wiederverwenden oder austauschen.</p>
+<h3 id="abgrenzung-zu-datenbanken">Abgrenzung zu Datenbanken</h3>
+<p>Datenbanken dienen in erster Linie der strukturierten Speicherung und effizienten Abfrage von Daten. Sie legen fest, <em>wie</em> Daten organisiert sind, etwa in Tabellen und Spalten. Ontologien legen darüber hinaus fest, <em>was</em> die Daten bedeuten und wie die Begriffe logisch zusammenhängen. Diese Bedeutung wird nach standardisierten Verfahren formalisiert und ermöglicht dadurch automatisches Schlussfolgern (Reasoning), Konsistenzprüfungen und semantische Interoperabilität zwischen Systemen. Ontologien und Datenbanken schließen sich dabei nicht aus: Die Daten der Lehrplan-Ontologie werden beispielsweise in einer Graphdatenbank (Triple Store) vorgehalten.</p>
+<h3 id="abgrenzung-zu-metadatenschemata">Abgrenzung zu Metadatenschemata</h3>
+<p>Metadatenschemata beschreiben, welche Angaben über Daten erfasst werden, etwa Autor, Erstellungsdatum oder Dateiformat, und definieren dafür einheitliche Felder. Sie standardisieren die Beschreibung von Daten, enthalten jedoch in der Regel keine formale Logik über die Bedeutung der beschriebenen Begriffe. Ontologien gehen darüber hinaus: Sie definieren Begriffe und Relationen explizit und verknüpfen sie logisch, sodass Zusammenhänge maschinell interpretiert, Schlussfolgerungen gezogen und die Konsistenz geprüft werden können. Aus einer Ontologie lässt sich in der Regel ein Metadatenschema ableiten, umgekehrt ist dies nur eingeschränkt möglich.</p>
+<h3 id="abgrenzung-zu-groen-sprachmodellen-llms">Abgrenzung zu großen Sprachmodellen (LLMs)</h3>
+<p>Ontologien und darauf aufbauende Wissensgraphen bilden Wissen <strong>explizit</strong> ab: Begriffe, Entitäten und ihre Beziehungen sind formal definiert und als überprüfbare Aussagen gespeichert. Schlussfolgerungen entstehen durch logische Verfahren, deren Ergebnisse reproduzierbar und nachvollziehbar sind.</p>
+<p>Große Sprachmodelle (Large Language Models, LLMs) bilden Wissen dagegen <strong>implizit</strong> in Form statistischer Muster ab. Ihre Antworten beruhen auf Wahrscheinlichkeiten und nicht auf gespeicherten Fakten oder formalen Regeln. Sie verarbeiten natürliche Sprache sowie unvollständige oder mehrdeutige Informationen sehr flexibel, gewährleisten jedoch weder Konsistenz noch eine überprüfbare Wissensbasis.</p>
+<p>Beide Ansätze ergänzen sich: Ontologien eignen sich für Nachvollziehbarkeit, Qualitätssicherung und verlässliche Datenintegration, LLMs für Interpretation, Exploration und sprachliche Interaktion. Ontologien können LLMs als verlässlicher Bezugsrahmen dienen, um Begriffe eindeutig zu interpretieren, Halluzinationen zu verringern und Antworten durch überprüfbare Fakten zu belegen.</p>
+<h2 id="nutzen-einer-ontologie-fur-lehrplane">Nutzen einer Ontologie für Lehrpläne</h2>
+<p>Das deutsche Bildungssystem ist föderal organisiert. Jedes Land entwickelt eigene Lehrpläne mit eigenen Strukturen, Begriffen und Dokumentformen. Eine Ontologie stellt hierfür ein gemeinsames Modell bereit, das Kompetenzen, Inhalte, Fächer, Jahrgangsstufen und Bildungsziele eindeutig beschreibt und miteinander verknüpft. Daraus ergeben sich folgende Vorteile:</p>
+<ul>
+<li><strong>Vergleichbarkeit zwischen den Ländern</strong>: Unterschiedliche Bezeichnungen, Gliederungen und Detaillierungsgrade werden auf eine gemeinsame Bedeutungsebene abgebildet. Dadurch wird nachvollziehbar, welche Anforderungen in verschiedenen Ländern einander entsprechen.</li>
+<li><strong>Interoperabilität digitaler Bildungsplattformen</strong>: Lernmanagementsysteme, Schulbuchplattformen, Aufgabendatenbanken und Bildungsportale können Inhalte auf einer gemeinsamen Grundlage austauschen und systemübergreifend auffindbar machen.</li>
+<li><strong>Verbesserte Recherche und Empfehlungen</strong>: Lernmaterialien lassen sich nicht nur nach Schlagworten, sondern nach Kompetenzen und curricularen Zusammenhängen finden. So kann beispielsweise ein Material zur Bruchrechnung einer bestimmten mathematischen Kompetenz zugeordnet werden, auch wenn diese darin anders bezeichnet ist.</li>
+<li><strong>Transparenz für Bildungssteuerung und Evaluation</strong>: Bildungsstandards, Prüfungsanforderungen und Lernressourcen lassen sich eindeutig verknüpfen. Dies erleichtert Analysen zur Kompetenzentwicklung und zur curricularen Abdeckung.</li>
+<li><strong>Verlässlicher Einsatz von Künstlicher Intelligenz (KI)</strong>: KI-Systeme können Inhalte zuverlässiger einordnen und erzeugen, wenn sie auf eine explizite Wissensstruktur mit eindeutig definierten pädagogischen Begriffen zurückgreifen.</li>
+</ul>
+<p>Ziele und Umfang der Lehrplan-Ontologie werden im Abschnitt <a href="../introduction/">Konzeptuelle Grundlagen</a> ausführlich beschrieben.</p>
+<h2 id="grundkonzepte">Grundkonzepte</h2>
+<p>Ontologien beschreiben Wissen mit einer überschaubaren Zahl zentraler Bausteine.</p>
+<h3 id="klassen">Klassen</h3>
+<p>Klassen repräsentieren allgemeine Begriffe oder Kategorien einer Domäne, beispielsweise:</p>
+<ul>
+<li>Person</li>
+<li>Schule</li>
+<li>Lehrplan</li>
+<li>Kompetenz</li>
+</ul>
+<p>Klassen lassen sich hierarchisch ordnen. Alle Aussagen über eine Oberklasse gelten auch für ihre Unterklassen:</p>
+<div class="highlight"><pre><span></span><code>Jede Lehrkraft ist eine Person.     (Lehrkraft ist Unterklasse von Person)
+</code></pre></div>
+<h3 id="individuen">Individuen</h3>
+<p>Individuen (Instanzen) sind die konkreten Entitäten, die einer Klasse angehören:</p>
+<div class="highlight"><pre><span></span><code>„Max Müller“ ist eine Instanz der Klasse Person.
+„Mathematik Klasse 7 Gymnasium“ ist eine Instanz der Klasse Lehrplan.
+</code></pre></div>
+<h3 id="eigenschaften">Eigenschaften</h3>
+<p>Eigenschaften (Properties) verbinden Individuen miteinander oder mit Werten. Die Ontologiesprache OWL (<a href="https://www.w3.org/TR/owl2-overview/">Web Ontology Language</a>, siehe <a href="#owl-die-ontologiesprache">unten</a>) unterscheidet drei Arten:</p>
+<p><strong>Objekteigenschaften</strong> (Object Properties) verbinden zwei Individuen:</p>
+<div class="highlight"><pre><span></span><code>Max unterrichtet Klasse7b
+Lehrplan hatTeil Lernbereich1
+</code></pre></div>
+<p><strong>Dateneigenschaften</strong> (Datatype Properties) verbinden ein Individuum mit einem Wert, etwa einer Zahl, einem Text oder einem Datum:</p>
+<div class="highlight"><pre><span></span><code>Max hatName "Max Mustermann"
+Max hatGeburtsdatum "1970-01-01"
+</code></pre></div>
+<p><strong>Annotationseigenschaften</strong> (Annotation Properties) enthalten Angaben für menschliche Leserinnen und Leser, etwa Bezeichnungen, Definitionen oder Kommentare. Sie haben keine logische Bedeutung und werden beim Schlussfolgern nicht berücksichtigt:</p>
+<div class="highlight"><pre><span></span><code>Schulfach hatLabel "Schulfach"
+Schulfach hatDefinition "Ein Schulfach ist ein an Schulen unterrichtetes Fachgebiet …"
+Schulfach hatKommentar "Die Definition muss noch überarbeitet werden."
+</code></pre></div>
+<h3 id="axiome">Axiome</h3>
+<p>Axiome sind formale Aussagen über Klassen und Eigenschaften. Sie bilden den logischen Kern einer Ontologie und sind maschinell überprüfbar:</p>
+<div class="highlight"><pre><span></span><code>Jede Lehrkraft ist eine Person.
+Jeder Kurs wird von mindestens einer Lehrkraft unterrichtet.
+Nichts kann zugleich Schüler und Lehrkraft sein.   (disjunkte Klassen)
+</code></pre></div>
+<h3 id="schlussfolgern-reasoning">Schlussfolgern (Reasoning)</h3>
+<p>Programme zum automatischen Schlussfolgern (Reasoner, siehe <a href="#werkzeuge">Werkzeuge</a>) werten die Axiome aus. Sie können</p>
+<ul>
+<li>neue Fakten ableiten,</li>
+<li>Klassen automatisch in die Hierarchie einordnen,</li>
+<li>Widersprüche (Inkonsistenzen) erkennen,</li>
+<li>implizites Wissen explizit machen.</li>
+</ul>
+<p>Beispiel: Ist festgelegt, dass ausschließlich Personen Kompetenzen besitzen können, und besitzt X die Kompetenz „Lesen“, leitet der Reasoner ab, dass X eine Person ist:</p>
+<div class="highlight"><pre><span></span><code>Nur Personen haben Kompetenzen.     (Axiom)
+X hatKompetenz Lesen                (Fakt)
+→ X ist eine Person.                (abgeleitet)
+</code></pre></div>
+<p>Die Lehrplan-Ontologie nutzt diesen Mechanismus, um die Begriffe der Länder einzuordnen: Da der bayerische <em>Lernbereich (BY)</em> die Bereichsfunktion trägt und <em>CE-Bereich</em> (CE: curriculares Element) als „curriculares Element mit Bereichsfunktion“ definiert ist, ordnet der Reasoner <em>Lernbereich (BY)</em> automatisch als Unterklasse von <em>CE-Bereich</em> ein (siehe <a href="../patterns/#pattern-8-funktionen">Pattern 8</a>).</p>
+<h2 id="ontologien-und-wissensgraphen">Ontologien und Wissensgraphen</h2>
+<p>In vielen Anwendungen bilden Ontologien die Grundlage von Wissensgraphen:</p>
+<ul>
+<li>Die <strong>Ontologie</strong> legt fest, welche Arten von Entitäten es gibt und wie diese zusammenhängen (Schema-Ebene, auch <em>T-Box</em> für „terminologische Box“).</li>
+<li>Der <strong>Wissensgraph</strong> enthält die konkreten Entitäten und Fakten (Daten-Ebene, auch <em>A-Box</em> für „assertionale Box“, also die Menge der Faktenaussagen).</li>
+</ul>
+<p>Erst im Zusammenspiel beider entsteht ein semantisches Netz, das Datenintegration und automatisches Schlussfolgern ermöglicht. Im Fall der Lehrplan-Ontologie bilden die Lehrplandaten der Länder den Wissensgraphen; sie sind über einen <a href="https://mem.bmi.fwu.de/sparql">SPARQL-Endpunkt</a> abfragbar, eine Schnittstelle für Abfragen in der standardisierten Abfragesprache <a href="https://www.w3.org/TR/sparql11-overview/">SPARQL (SPARQL Protocol and RDF Query Language)</a>.</p>
+<h2 id="rdf-rdfs-und-owl">RDF, RDFS und OWL</h2>
+<p>Für die maschinelle Verarbeitung werden Ontologien in standardisierten Formaten des <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> gespeichert:</p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Aufgabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.w3.org/TR/rdf11-concepts/">RDF (Resource Description Framework)</a></td>
+<td>Datenmodell: Aussagen als Tripel aus Subjekt, Prädikat und Objekt</td>
+</tr>
+<tr>
+<td><a href="https://www.w3.org/TR/rdf11-schema/">RDFS (RDF Schema)</a></td>
+<td>einfaches Schema: Klassen, Unterklassen, Properties</td>
+</tr>
+<tr>
+<td>OWL</td>
+<td>ausdrucksstarke Ontologiesprache mit logischer Semantik</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rdf-das-datenmodell">RDF – das Datenmodell</h3>
+<p>RDF beschreibt Daten als Tripel der Form <code>Subjekt – Prädikat – Objekt</code>, z. B. <code>Max – unterrichtetAn – SchuleA</code>. Subjekt und Prädikat, in der Regel auch das Objekt, werden durch eine <strong>IRI</strong> (<a href="https://www.rfc-editor.org/rfc/rfc3987">Internationalized Resource Identifier</a>) bezeichnet. Eine IRI ist eine global eindeutige Kennung, vergleichbar mit einer Webadresse. Sie schließt Verwechslungen aus und ermöglicht es, Daten aus verschiedenen Quellen zusammenzuführen.</p>
+<p>RDF kann in verschiedenen Syntaxen notiert werden. In dieser Dokumentation wird hauptsächlich die gut lesbare Syntax <a href="https://www.w3.org/TR/turtle/"><strong>Turtle</strong></a> verwendet. Das folgende Beispiel beschreibt einen sächsischen Lehrplan:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">lp:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w">   </span><span class="nv">&lt;https://www.example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">ex</span><span class="p">:</span><span class="nt">lehrplan-mathe</span> <span class="kt">a</span> <span class="nn">lp</span><span class="p">:</span><span class="nt">LP_0000438</span> <span class="p">;</span>           <span class="c"># ist ein Lehrplan</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Gymnasium Mathematik"</span> <span class="p">;</span>
+    <span class="nn">lp</span><span class="p">:</span><span class="nt">LP_0000029</span> <span class="nn">lp</span><span class="p">:</span><span class="nt">LP_3000047</span> <span class="p">.</span>             <span class="c"># von Bundesland: Sachsen</span>
+</code></pre></div>
+<p>Wie viele etablierte Ontologien verwendet die Lehrplan-Ontologie bewusst „nicht sprechende“ IRIs wie <code>LP_0000438</code>. Die lesbare Bezeichnung („Lehrplan“) ist als <code>rdfs:label</code> an der Klasse hinterlegt. Die IRI bleibt dadurch stabil, auch wenn sich die Bezeichnung ändert oder in mehreren Sprachen vorliegt.</p>
+<h3 id="rdfs-das-schema">RDFS – das Schema</h3>
+<p>RDFS erweitert RDF um die Möglichkeit, Klassen und Properties zu definieren und hierarchisch zu ordnen (<code>rdfs:subClassOf</code>, <code>rdfs:subPropertyOf</code>) sowie Bezeichnungen (<code>rdfs:label</code>) und Kommentare anzugeben. RDFS bildet die Grundlage für OWL.</p>
+<h3 id="owl-die-ontologiesprache">OWL – die Ontologiesprache</h3>
+<p>OWL ist die vom W3C standardisierte Sprache für Ontologien. Sie ermöglicht es, Klassen über Bedingungen zu definieren, Eigenschaften näher zu charakterisieren (z. B. als transitiv oder als zueinander invers) und Klassen als disjunkt festzulegen.</p>
+<p>Ontologien lassen sich grundsätzlich in verschiedenen Logiken formulieren, etwa in Prädikatenlogik erster Stufe, in regelbasierten Logiken oder in Beschreibungslogiken. Die maßgebliche Variante OWL 2 DL beruht auf <strong>Beschreibungslogiken</strong> (Description Logics, DL), da diese einen ausgewogenen Kompromiss zwischen Ausdrucksstärke und Berechenbarkeit bieten. Die volle Prädikatenlogik ist zwar ausdrucksstärker, das Schlussfolgern ist dort jedoch im Allgemeinen nicht entscheidbar, d.h. es kann nicht garantiert werden, dass ein entsprechender Schlussfolgerungsalgorithmus auch wirklich zu Ende kommt. Beschreibungslogiken reichen für Klassenhierarchien, Relationen und Einschränkungen aus und gewährleisten zugleich, dass Reasoner zuverlässig Fakten ableiten, Widersprüche erkennen und Klassen einordnen können.</p>
+<p>Für das Verständnis von OWL sind zwei Grundannahmen wesentlich:</p>
+<ul>
+<li><strong>Open World Assumption</strong>: Eine nicht angegebene Aussage gilt nicht als falsch, sondern als unbekannt. Ist für eine Lehrkraft beispielsweise nur das Fach Mathematik erfasst, folgt daraus nicht, dass sie kein weiteres Fach unterrichtet. Auf die Frage „Unterrichtet sie Physik?“ würde eine klassische Datenbank in der Regel mit „nein“ antworten (Closed World Assumption); aus Sicht von OWL lautet die Antwort „unbekannt“.</li>
+<li><strong>Monotonie</strong>: Neue Aussagen machen bereits gezogene Schlussfolgerungen nicht ungültig; es können lediglich weitere hinzukommen.</li>
+</ul>
+<p>Diese Eigenschaften machen OWL besonders geeignet für verteiltes, unvollständiges Wissen aus unterschiedlichen Quellen. Für die Prüfung, ob Daten vollständig sind – etwa ob jedes Element einen Titel besitzt –, wird ergänzend die <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a> eingesetzt.</p>
+<p>Für Anwendungen mit sehr großen Datenmengen definiert OWL 2 zudem drei <a href="https://www.w3.org/TR/owl2-profiles/">Profile</a>, die die Ausdrucksmittel so einschränken, dass sich das Schlussfolgern besonders effizient umsetzen lässt: OWL 2 EL (benannt nach der Beschreibungslogik <em>EL</em>) für Ontologien mit sehr vielen Klassen, OWL 2 QL (<em>Query Language</em>) für Abfragen über große Datenbestände und OWL 2 RL (<em>Rule Language</em>) für regelbasierte Systeme.</p>
+<h2 id="ebenen-von-ontologien">Ebenen von Ontologien</h2>
+<p>Ontologien lassen sich nach ihrem Abstraktionsgrad in aufeinander aufbauende Ebenen einteilen.</p>
+<p><strong>Top-Level-Ontologien</strong> beschreiben sehr allgemeine, fachübergreifende Kategorien wie Objekt, Prozess, Eigenschaft oder Zeit. Sie legen gemeinsame Grundannahmen fest, auf denen unterschiedliche Ontologien aufbauen können. Ein bekanntes Beispiel ist die <a href="https://basic-formal-ontology.org/">Basic Formal Ontology (BFO)</a>, die vor allem in wissenschaftlichen und biomedizinischen Anwendungen verbreitet ist.</p>
+<p><strong>Mid-Level-Ontologien</strong> vermitteln zwischen diesen allgemeinen Kategorien und konkreten Fachgebieten. Sie stellen wiederverwendbare Bausteine bereit, etwa für Organisationen, Personen oder Informationsobjekte.</p>
+<p><strong>Domänenontologien</strong> beschreiben das Wissen eines Fachgebiets, beispielsweise Bildung, Medizin, Recht oder Ingenieurwesen, mit fachlich präzisen Begriffen, Definitionen und Axiomen.</p>
+<p><strong>Anwendungsontologien</strong> sind auf einen konkreten Nutzungskontext zugeschnitten und spezialisieren Domänenontologien für die Anforderungen eines Systems, eines Projekts oder eines Datenbestands.</p>
+<h3 id="bedeutung-der-einteilung">Bedeutung der Einteilung</h3>
+<p>Anstatt eine Ontologie isoliert aus einzelnen Datensätzen heraus zu entwickeln („bottom-up“), sollte sie idealerweise auf den höheren Ebenen aufbauen („top-down“):</p>
+<ol>
+<li>Eine Top-Level-Ontologie liefert die grundlegenden Kategorien.</li>
+<li>Mid-Level-Ontologien stellen wiederverwendbare Muster bereit.</li>
+<li>Domänenontologien beschreiben das Fachwissen.</li>
+<li>Anwendungsontologien passen das Modell an konkrete Systeme an.</li>
+</ol>
+<p>Dieser schichtweise Aufbau verbessert Konsistenz, Wiederverwendbarkeit und Interoperabilität. Die Lehrplan-Ontologie baut beispielsweise auf BFO als Top-Level-Ontologie auf und nutzt Relationen aus der <a href="https://oborel.github.io/">Relation Ontology (RO)</a> sowie die <a href="https://github.com/information-artifact-ontology/IAO">Information Artifact Ontology (IAO)</a> für Informationseinheiten (siehe <a href="../structure/#nachgenutzte-ontologienvokabulare">Nachgenutzte Ontologien</a>).</p>
+<p>Die Gründe für die Wahl von BFO sind im Abschnitt <a href="../introduction/#wahl-der-top-level-ontologie">Wahl der Top-Level-Ontologie</a> beschrieben.</p>
+<h2 id="ontologieentwicklung-in-der-praxis">Ontologieentwicklung in der Praxis</h2>
+<p>Die Entwicklung einer Ontologie ist kein rein technischer Vorgang, sondern verbindet fachliche Modellierung, logische Formalisierung und die fortlaufende Abstimmung mit Fachexpertinnen und Fachexperten. Ziel ist nicht eine vollständige Ontologie im ersten Entwurf, sondern ein schrittweise wachsendes, gemeinsames Verständnis eines Wissensgebiets. Die Entwicklung umfasst typischerweise folgende Schritte:</p>
+<ol>
+<li><strong>Domänenanalyse</strong>: Festlegung des zu modellierenden Wissensgebiets (Scope) und der Fragen, die die Ontologie beantworten soll. Diese <em>Kompetenzfragen</em> bestimmen, welche Begriffe tatsächlich benötigt werden (siehe <a href="../introduction/#kompetenzfragen">Kompetenzfragen der Lehrplan-Ontologie</a>).</li>
+<li><strong>Begriffserhebung</strong>: Identifikation der zentralen Begriffe, Beziehungen und Eigenschaften, etwa durch die Analyse vorhandener Dokumente und Datenmodelle oder durch Gespräche mit Fachleuten.</li>
+<li><strong>Modellierung</strong>: Formalisierung der Begriffe als Klassen, Eigenschaften und Axiome sowie deren Einordnung in eine Hierarchie.</li>
+<li><strong>Formalisierung</strong>: Überführung des Modells in OWL/RDF.</li>
+<li><strong>Evaluation</strong>: Prüfung mit Reasonern auf Widersprüche und auf die gewünschten Schlussfolgerungen sowie Prüfung anhand von Beispieldaten, ob sich die Kompetenzfragen beantworten lassen.</li>
+<li><strong>Weiterentwicklung</strong>: Anpassung an neue Anforderungen, Daten oder Erkenntnisse und Veröffentlichung neuer Versionen. Ontologien sind keine abgeschlossenen Artefakte, sondern werden kontinuierlich weiterentwickelt.</li>
+</ol>
+<h3 id="modellierungsprinzipien">Modellierungsprinzipien</h3>
+<p>Die Qualität einer Ontologie hängt weniger von den eingesetzten Werkzeugen ab als von fundierten Modellierungsentscheidungen. Bewährt haben sich folgende Prinzipien:</p>
+<ul>
+<li><strong>Eindeutige Definitionen</strong>: Jeder Begriff ist klar und verständlich definiert.</li>
+<li><strong>Trennung von Klasse und Individuum</strong>: Klassen beschreiben allgemeine Kategorien, Individuen konkrete Entitäten.</li>
+<li><strong>Wiederverwendung</strong>: Etablierte Ontologien werden nachgenutzt, anstatt Begriffe neu zu modellieren.</li>
+<li><strong>Angemessene Komplexität</strong>: Eine verständliche Ontologie ist in der Regel wertvoller als eine maximal ausdrucksstarke.</li>
+<li><strong>Explizite Annahmen</strong>: Implizites Fachwissen wird formalisiert, damit es maschinell ausgewertet werden kann.</li>
+<li><strong>Stabile Identifikatoren</strong>: Begriffe bleiben über ihre IRIs langfristig eindeutig referenzierbar.</li>
+</ul>
+<p>Maßgeblich ist daher nicht die Komplexität einer Ontologie, sondern ihre Verständlichkeit für Menschen und ihre zuverlässige Nutzbarkeit durch Maschinen.</p>
+<h2 id="werkzeuge">Werkzeuge</h2>
+<p><strong>Modellierung und Entwicklung</strong></p>
+<ul>
+<li><a href="https://protege.stanford.edu/">Protégé</a>: verbreiteter Ontologie-Editor für OWL 2 mit Visualisierung und integrierten Reasonern</li>
+<li><a href="https://github.com/INCATools/ontology-development-kit">Ontology Development Kit (ODK)</a>: Werkzeugsammlung und Workflows für den gesamten Lebenszyklus einer Ontologie, einschließlich Qualitätskontrolle, Releases und Importen; die Lehrplan-Ontologie wird mit dem ODK entwickelt</li>
+<li><a href="https://robot.obolibrary.org/">ROBOT</a>: Kommandozeilenwerkzeug für typische Aufgaben wie das Zusammenführen, Prüfen und Konvertieren von Ontologien</li>
+<li><a href="https://ottr.xyz/">OTTR (Reasonable Ontology Templates)</a>: Sprache für wiederverwendbare Modellierungsmuster, aus denen RDF- und OWL-Daten erzeugt werden</li>
+<li><a href="https://github.com/RDFLib/rdflib">rdflib</a> und <a href="https://owlready2.readthedocs.io/">Owlready2</a>: Python-Bibliotheken zur Verarbeitung von RDF-Daten und Ontologien</li>
+<li>Versionsverwaltung mit Git, z. B. über <a href="https://github.com/">GitHub</a>: Nachverfolgung von Änderungen, Diskussion und gemeinsame Entwicklung</li>
+</ul>
+<p><strong>Datenintegration</strong></p>
+<ul>
+<li><a href="https://rml.io/specs/rml/">RML (RDF Mapping Language)</a>: Sprache zur deklarativen Abbildung strukturierter Daten wie <a href="https://www.rfc-editor.org/rfc/rfc4180">CSV (Comma-Separated Values)</a>, <a href="https://www.json.org/json-de.html">JSON (JavaScript Object Notation)</a>, <a href="https://www.w3.org/XML/">XML (Extensible Markup Language)</a> oder relationaler Datenbanken nach RDF; die Weiterentwicklung erfolgt in der W3C Community Group <a href="https://www.w3.org/community/kg-construct/"><em>Knowledge Graph Construction</em></a> (<a href="https://kg-construct.github.io/rml-core/spec/docs/">RML-Core</a>)</li>
+<li><a href="https://rml.io/yarrrml/">YARRRML</a>: kompakte, auf <a href="https://yaml.org/">YAML (YAML Ain’t Markup Language)</a> basierende Notation für RML-Mappings, die sich leichter lesen und schreiben lässt und automatisch in RML übersetzt wird</li>
+</ul>
+<p><strong>Prüfung und Schlussfolgern</strong></p>
+<ul>
+<li>Reasoner wie <a href="http://www.hermit-reasoner.com/">HermiT</a>, <a href="https://github.com/stardog-union/pellet">Pellet</a> oder <a href="https://github.com/konclude/Konclude">Konclude</a>: logische Prüfung und automatische Klassifikation</li>
+<li>SHACL: W3C-Standard zur Prüfung, ob Daten festgelegten Vorgaben entsprechen</li>
+<li><a href="https://oops.linkeddata.es/">OOPS! (Ontology Pitfall Scanner)</a>: Webdienst zur Erkennung typischer Modellierungsfehler</li>
+</ul>
+<p><strong>Speicherung, Abfrage und Darstellung</strong></p>
+<ul>
+<li>Triple Stores wie <a href="https://vos.openlinksw.com/owiki/wiki/VOS">Virtuoso</a> oder <a href="https://graphdb.ontotext.com/">GraphDB</a>: Datenbanken für RDF-Daten</li>
+<li>SPARQL: Abfragesprache für RDF-Daten und Wissensgraphen</li>
+<li><a href="https://github.com/dgarijo/Widoco">Widoco</a>: Erzeugung einer Dokumentation im Webformat <a href="https://html.spec.whatwg.org/">HTML (Hypertext Markup Language)</a> aus einer Ontologie</li>
+<li><a href="https://www.ldf.fi/service/rdf-grapher">RDF Grapher</a>: Webdienst zur Darstellung von RDF-Daten als Graph</li>
+</ul>
+<h2 id="verzeichnisse-und-terminologiedienste">Verzeichnisse und Terminologiedienste</h2>
+<p>Ontologien werden in der Regel nicht über allgemeine Suchmaschinen, sondern über Ontologie-Verzeichnisse und Terminologiedienste recherchiert, beispielsweise:</p>
+<ul>
+<li><a href="https://terminology.tib.eu/ts">TIB Terminology Service</a> der <a href="https://www.tib.eu/">Technischen Informationsbibliothek (TIB)</a></li>
+<li><a href="https://ontobee.org/">Ontobee</a></li>
+<li><a href="https://lov.linkeddata.es/">Linked Open Vocabularies (LOV)</a></li>
+<li><a href="https://bioportal.bioontology.org/">BioPortal</a></li>
+</ul>
+<h2 id="weiterfuhrende-literatur-und-materialien">Weiterführende Literatur und Materialien</h2>
+<p><strong>Tutorials und Kurse</strong></p>
+<ul>
+<li><a href="https://www.michaeldebellis.com/post/new-protege-pizza-tutorial">Pizza-Tutorial</a>: praxisorientierte Einführung in die Erstellung von OWL-Ontologien mit Protégé</li>
+<li><a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf">Ontology Development 101</a>: methodischer Leitfaden der Stanford University zur Entwicklung einer ersten Ontologie</li>
+<li><a href="https://oboacademy.github.io/obook/lesson/ontology-design/">OBO Academy – Ontology Design</a>: frei zugänglicher Online-Kurs der Gemeinschaft der Open Biological and Biomedical Ontologies (OBO) zu Aufbau, Schlussfolgern und Designprinzipien von Ontologien</li>
+<li><a href="https://www.youtube.com/watch?v=CiU1sMbL3k4&amp;list=PLNXdQl4kBgzubTOfY5cbtxZCgg9UTe-uF">„Knowledge Graphs – Foundations and Applications“</a>: Vorlesungsreihe des Bereichs Information Service Engineering (ISE) am <a href="https://www.fiz-karlsruhe.de/">FIZ Karlsruhe – Leibniz-Institut für Informationsinfrastruktur</a> auf YouTube</li>
+<li><a href="https://www.youtube.com/channel/UCDYw4LTZfK27Q0lJ8pxQC8Q">YouTube-Kanal von Barry Smith</a>: Vorträge zu BFO und angewandter Ontologie</li>
+</ul>
+<p><strong>Blogs</strong></p>
+<ul>
+<li><a href="https://keet.wordpress.com/">Maria Keet</a></li>
+<li><a href="https://www.michaeldebellis.com/">Michael DeBellis</a></li>
+<li><a href="https://douroucouli.wordpress.com/">Chris Mungall</a></li>
+</ul>
+<p><strong>Bücher</strong></p>
+<ul>
+<li>C. Maria Keet: <a href="https://people.cs.uct.ac.za/~mkeet/OEbook/"><em>An Introduction to Ontology Engineering</em></a>. College Publications, 2018. Frei verfügbar unter der Creative-Commons-Lizenz <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de">CC BY-NC-SA 4.0</a> (Namensnennung – Nicht kommerziell – Weitergabe unter gleichen Bedingungen).</li>
+<li>Pascal Hitzler, Markus Krötzsch, Sebastian Rudolph, York Sure: <a href="https://www.semantic-web-grundlagen.de/"><em>Semantic Web: Grundlagen</em></a>. Springer, 2008.</li>
+<li>Robert Arp, Barry Smith, Andrew D. Spear: <a href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/"><em>Building Ontologies with Basic Formal Ontology</em></a>. MIT Press, 2015.</li>
+<li>Nicola Guarino, Daniel Oberle, Steffen Staab: „What Is an Ontology?“ In: Steffen Staab, Rudi Studer (Hrsg.): <em>Handbook on Ontologies</em>. Springer, 2009.</li>
+</ul>
+<h2 id="ausblick-auf-die-folgenden-kapitel">Ausblick auf die folgenden Kapitel</h2>
+<p>Dieser Abschnitt hat die allgemeinen Grundlagen eingeführt: was Ontologien sind, aus welchen Bausteinen sie bestehen, wie sie mit RDF, RDFS und OWL umgesetzt werden und nach welchen Prinzipien sie entwickelt werden. Die folgenden Kapitel wenden diese Grundlagen auf Lehrpläne an:</p>
+<ul>
+<li>Das Kapitel <a href="../introduction/">Konzeptuelle Grundlagen</a> beschreibt Ausgangslage, Ziele und Umfang der Lehrplan-Ontologie, führt ihre zentralen Begriffe ein und begründet die Wahl von BFO als Top-Level-Ontologie.</li>
+<li>Das Kapitel <a href="../structure/">Ontologie-Modell</a> zeigt, wie Klassen, Eigenschaften und Axiome in der Lehrplan-Ontologie konkret eingesetzt werden, etwa um die unterschiedlichen Begriffe der Länder über einen gemeinsamen Kern vergleichbar zu machen.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Zurück: Start">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Start
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../introduction/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Konzeptuelle Grundlagen">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Konzeptuelle Grundlagen
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.footer", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,53 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Bildungsplan_BW: <https://w3id.org/lehrplan/ontology/LP_0000806> .
+@prefix Lehrplanfragment_BW: <https://w3id.org/lehrplan/ontology/LP_0002052> .
+@prefix Titel: <https://w3id.org/lehrplan/ontology/LP_0000346> .
+@prefix Beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030003> .
+@prefix Identifikationsnummer: <https://w3id.org/lehrplan/ontology/LP_0000347> .
+@prefix Kompetenzbereich_BW: <https://w3id.org/lehrplan/ontology/LP_0030174> .
+
+
+# properties
+@prefix hat_titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix hat_direkten_teil: <https://w3id.org/lehrplan/ontology/LP_0000565> .
+@prefix hat_position: <https://w3id.org/lehrplan/ontology/LP_0000460> .
+@prefix hat_nummer: <https://w3id.org/lehrplan/ontology/LP_0030057> .
+@prefix hat_beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+@prefix hat_wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+
+ex:lehrplan_1 a Bildungsplan_BW: ;
+            hat_direkten_teil: ex:fragment_1 ;
+            hat_titel: ex:titel_1 .
+ex:fragment_1 a Lehrplanfragment_BW: ;
+            hat_direkten_teil: ex:bereich_1 ;
+            hat_position: 1 ;
+            hat_titel: ex:titel_2 .
+
+ex:bereich_1  a Kompetenzbereich_BW: ;
+            hat_position: 1 ;
+            hat_titel: ex:titel_3 ;
+            hat_nummer: ex:nummer_1 ;
+            hat_beschreibung: ex:beschreibung_1 .
+
+ex:titel_1 a Titel: ;
+    hat_wert: "Bildungsplan Sekundarstufe I - Deutsch" .
+
+ex:titel_2 a Titel: ;
+    hat_wert: "Prozessbezogene Kompetenzen" .
+
+ex:titel_3 a Titel: ;
+    hat_wert: "Sprechen und Zuhören" .
+
+
+ex:beschreibung_1 a Beschreibung: ;
+    hat_wert: "Die Schülerinnen und Schüler erwerben kommunikative Kompetenz ..."  .
+
+ex:nummer_1 a Identifikationsnummer: ;
+    hat_wert: "2.1" .

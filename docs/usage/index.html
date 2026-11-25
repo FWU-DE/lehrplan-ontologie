@@ -1,0 +1,1835 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../sparql/">
+      
+      
+        <link rel="next" href="../knowledge-graph/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../usage.en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Verwendung - Lehrplan-Ontologie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/mkdocs_d2_plugin.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#verwendung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Lehrplan-Ontologie" class="md-header__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lehrplan-Ontologie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Verwendung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../usage.en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ontology/" class="md-tabs__link">
+          
+  
+  
+  Einführung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../structure/" class="md-tabs__link">
+          
+  
+  
+  Ontologie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../sparql/" class="md-tabs__link">
+          
+  
+  
+  Praxis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../governance/" class="md-tabs__link">
+          
+  
+  
+  Projekt
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lehrplan-Ontologie" class="md-nav__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Lehrplan-Ontologie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Einführung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung in Ontologien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konzeptuelle Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ontologie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontologie-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Praxis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Praxis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL-Abfragen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verwendung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verwendung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-artefakte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release-Artefakte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-in-version-100rc6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Änderungen in Version 1.0.0rc6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zugriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zugriff
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zugriff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-der-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IRIs der Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparql-endpunkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPARQL-Endpunkt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontologie-lokal-verarbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologie lokal verarbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#einbindung-in-eigene-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einbindung in eigene Ontologien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erstellen-eigener-lehrplandaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erstellen eigener Lehrplandaten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schlussfolgern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlussfolgern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technische-referenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Referenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lizenz-und-zitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lizenz und Zitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitwirken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitwirken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausblick-auf-die-folgenden-kapitel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausblick auf die folgenden Kapitel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowledge-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projekt
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projekt
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über uns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-artefakte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release-Artefakte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-in-version-100rc6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Änderungen in Version 1.0.0rc6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zugriff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zugriff
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zugriff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iris-der-ontologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IRIs der Ontologie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparql-endpunkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPARQL-Endpunkt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontologie-lokal-verarbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologie lokal verarbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#einbindung-in-eigene-ontologien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einbindung in eigene Ontologien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erstellen-eigener-lehrplandaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erstellen eigener Lehrplandaten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schlussfolgern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlussfolgern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technische-referenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Referenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lizenz-und-zitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lizenz und Zitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitwirken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitwirken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausblick-auf-die-folgenden-kapitel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausblick auf die folgenden Kapitel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Start
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../sparql/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Praxis
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<ul>
+<li class="i18n-link i18n-link-found i18n-link-en"><a href="../usage.en/">English</a></li>
+</ul>
+<h1 id="verwendung">Verwendung</h1>
+<p>Dieses Kapitel beschreibt, wie die Lehrplan-Ontologie und die Lehrplandaten praktisch genutzt werden können: welche Dateien zur Verfügung stehen, wie die Ontologie und die Daten abgerufen werden, wie eigene Lehrplandaten erstellt und geprüft werden und unter welchen Bedingungen die Ontologie genutzt werden kann.</p>
+<h2 id="release-artefakte">Release-Artefakte</h2>
+<p>Die Ontologie wird mit dem <a href="https://github.com/INCATools/ontology-development-kit">Ontology Development Kit (ODK)</a> entwickelt und im <a href="https://github.com/FWU-DE/lehrplan-ontologie">GitHub-Repository</a> in mehreren Varianten bereitgestellt. Die Dateien liegen in der Web Ontology Language (OWL) im Format <a href="https://www.w3.org/TR/rdf-syntax-grammar/">RDF/XML</a> (RDF: Resource Description Framework; XML: Extensible Markup Language) und teilweise zusätzlich im Format <a href="https://www.w3.org/TR/turtle/">Turtle</a> vor:</p>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Inhalt</th>
+<th>Geeignet für</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lp.owl</code> / <code>lp.ttl</code></td>
+<td>aktuelle Version; entspricht <code>lp-full</code></td>
+<td>die meisten Anwendungen</td>
+</tr>
+<tr>
+<td><code>lp-full.owl</code> / <code>lp-full.ttl</code></td>
+<td>vollständige Ontologie: alle Klassen, Properties und Axiome der Lehrplan-Ontologie, die verwendeten Begriffe aus der Basic Formal Ontology (BFO), der Relation Ontology (RO), der Information Artifact Ontology (IAO) und dem Vokabular QUDT (Quantities, Units, Dimensions and Types) sowie die Schulfächer und Schularten der Länder</td>
+<td>Abfragen, Schlussfolgern, Validierung</td>
+</tr>
+<tr>
+<td><code>lp-base.owl</code> / <code>lp-base.ttl</code></td>
+<td>nur die Klassen, Properties und Individuen der Lehrplan-Ontologie selbst; nachgenutzte Begriffe sind nur referenziert, Schulfächer und Schularten nicht enthalten</td>
+<td>Import in eigene Ontologien</td>
+</tr>
+<tr>
+<td><code>lp-simple.owl</code> / <code>lp-simple.ttl</code></td>
+<td>vereinfachte Variante ohne Äquivalenzaxiome (<code>owl:equivalentClass</code>)</td>
+<td>Anwendungen, die nur die Klassenhierarchie benötigen</td>
+</tr>
+<tr>
+<td><code>lp-land-XX-full.owl</code></td>
+<td>länderspezifische Module, je eines pro Land (z. B. <code>lp-land-BY-full.owl</code>)</td>
+<td>Arbeit mit den Begriffen eines einzelnen Landes</td>
+</tr>
+<tr>
+<td><code>lp-bista-full.owl</code></td>
+<td>Modul für die Bildungsstandards der Kultusministerkonferenz (KMK)</td>
+<td>Arbeit mit den KMK-Bildungsstandards</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Einschränkung von <code>lp-simple</code></p>
+<p>Da <code>lp-simple</code> keine Äquivalenzaxiome enthält, kann ein Reasoner die länderspezifischen Klassen damit nicht den gemeinsamen Klassen wie <em>CE-Bereich</em> zuordnen (siehe <a href="../structure/#modellierung-designprinzip">Designprinzip</a>). Für länderübergreifende Auswertungen ist daher <code>lp-full</code> zu verwenden.</p>
+</div>
+<h2 id="versionen">Versionen</h2>
+<p>Die Versionen werden als <a href="https://github.com/FWU-DE/lehrplan-ontologie/releases">Releases im Repository</a> veröffentlicht. Die Versionsnummern folgen dem Schema <code>1.0.0rcN</code>; „rc“ steht für <em>Release Candidate</em>, also eine Vorabversion vor der ersten stabilen Version 1.0.0.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Wesentliche Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0rc6</td>
+<td>25.10.2026</td>
+<td>Trennung von Spezifikation und realweltlicher Entität bei Schulabschluss und Bildungsgang, direkte Teil-Beziehung, Einheiten aus QUDT, erweiterte Schulfach-Mappings</td>
+</tr>
+<tr>
+<td>1.0.0rc5</td>
+<td>21.09.2026</td>
+<td>fehlendes allgemeines Axiom zur Sekundarstufe II ergänzt</td>
+</tr>
+<tr>
+<td>1.0.0rc4</td>
+<td>14.09.2026</td>
+<td>Axiome von <em>CE-Hinweis</em> und weiteren Klassen bereinigt</td>
+</tr>
+<tr>
+<td>1.0.0rc3</td>
+<td>28.07.2026</td>
+<td>Dokumentation und Patterns überarbeitet, zeitliche Angaben eingeführt</td>
+</tr>
+<tr>
+<td>1.0.0rc2</td>
+<td>24.02.2026</td>
+<td>Import von Properties aus SKOS (Simple Knowledge Organization System), zahlreiche kleinere Verbesserungen</td>
+</tr>
+<tr>
+<td>1.0.0rc1</td>
+<td>07.01.2026</td>
+<td>erste Vorabversion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anderungen-in-version-100rc6">Änderungen in Version 1.0.0rc6</h3>
+<p>Version rc6 enthält Änderungen, die bestehende Daten betreffen können:</p>
+<ul>
+<li><strong>Schulabschlüsse</strong>: <code>LP_0000019</code> steht jetzt für die <em>Schulabschlussspezifikation</em>. Die neue Klasse <code>LP_0000008</code> <em>Schulabschluss</em> beschreibt die Rolle, die eine Person mit dem Abschluss erhält.</li>
+<li><strong>Bildungsgänge</strong>: <code>LP_0000816</code> steht jetzt für die <em>Bildungsgangspezifikation</em>. Die neue Klasse <code>LP_0000567</code> <em>Bildungsgang</em> beschreibt den Prozess, den eine Person durchläuft.</li>
+<li><strong>Schularten</strong>: Die <em>Schulartfunktion</em> (<code>LP_0000475</code>) ist jetzt eine Rolle statt einer Funktion im Sinne von BFO.</li>
+<li><strong>Rollen und Kompetenzen</strong>: Lehrer- und Schülerrolle setzen eine Person als Träger voraus; eine Kompetenz setzt eine Person und eine Kompetenzspezifikation voraus.</li>
+<li><strong>Gliederung</strong>: Die neuen Properties <em>hat direkten Teil</em> (<code>LP_0000565</code>) und <em>direkt Teil von</em> (<code>LP_0000566</code>) bilden die unmittelbare Gliederung ab.</li>
+<li><strong>Einheiten</strong>: Zeitspezifikationen verweisen über <code>qudt:hasUnit</code> auf ihre Einheit.</li>
+</ul>
+<p>Für die Umstellung bestehender Daten auf rc6 sind folgende Schritte nötig:</p>
+<ol>
+<li>Daten prüfen, die die umgedeuteten IRIs (Internationalized Resource Identifiers) für Schulabschlüsse (<code>LP_0000019</code>), Bildungsgänge (<code>LP_0000816</code>) und Schularten (<code>LP_0000475</code>) verwenden.</li>
+<li>Verweise auf Einheiten über <code>LP_0000041</code> durch <code>qudt:hasUnit</code> ersetzen.</li>
+<li>Verweise über <code>LP_0000477</code> (<em>konkretisiert Schulart</em>) durch <code>LP_0000024</code> (<em>wird beschrieben von</em>) ersetzen.</li>
+</ol>
+<h2 id="zugriff">Zugriff</h2>
+<h3 id="iris-der-ontologie">IRIs der Ontologie</h3>
+<p>Die Ontologie-IRI <code>https://w3id.org/lehrplan/ontology/</code> wird über den Dienst <a href="https://w3id.org/">w3id.org</a> dauerhaft auf die aktuelle Version weitergeleitet. Welches Format geliefert wird, richtet sich nach dem angefragten Inhaltstyp (<em>Content Negotiation</em>):</p>
+<table>
+<thead>
+<tr>
+<th>Angefragter Inhaltstyp</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text/turtle</code></td>
+<td>Ontologie im Format Turtle</td>
+</tr>
+<tr>
+<td><code>application/rdf+xml</code></td>
+<td>Ontologie im Format RDF/XML</td>
+</tr>
+<tr>
+<td><code>text/html</code> (Webbrowser)</td>
+<td>Referenzdokumentation</td>
+</tr>
+</tbody>
+</table>
+<p>Die Versions-IRI (z. B. <code>https://w3id.org/lehrplan/ontology/1.0.0rc6</code>) und die IRIs der einzelnen Begriffe (z. B. <code>https://w3id.org/lehrplan/ontology/LP_0000438</code>) verweisen derzeit ebenfalls auf die aktuelle Version der Ontologie. Ältere Versionen sind über die Releases im Repository abrufbar.</p>
+<h3 id="sparql-endpunkt">SPARQL-Endpunkt</h3>
+<p>Die Lehrplandaten der Länder sind gemeinsam mit der Ontologie über den <a href="https://mem.bmi.fwu.de/sparql">SPARQL-Endpunkt</a> abfragbar (SPARQL: SPARQL Protocol and RDF Query Language). Der Endpunkt folgt dem <a href="https://www.w3.org/TR/sparql11-protocol/">Protokoll von SPARQL 1.1</a> und kann im Webbrowser, über die Kommandozeile oder aus Programmen heraus genutzt werden. Wie die Daten dort in Graphen organisiert sind und wie typische Abfragen aussehen, beschreibt das Kapitel <a href="../sparql/">SPARQL-Abfragen</a>.</p>
+<p>Abfrage mit <code>curl</code> auf der Kommandozeile, mit dem Ergebnis im Format CSV (Comma-Separated Values):</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-G<span class="w"> </span><span class="s2">"https://mem.bmi.fwu.de/sparql"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">"Accept: text/csv"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--data-urlencode<span class="w"> </span><span class="s2">"query=</span>
+<span class="s2">PREFIX Lehrplan:       &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt;</span>
+<span class="s2">PREFIX von_bundesland: &lt;https://w3id.org/lehrplan/ontology/LP_0000029&gt;</span>
+<span class="s2">PREFIX sachsen:        &lt;https://w3id.org/lehrplan/ontology/LP_3000047&gt;</span>
+<span class="s2">SELECT (COUNT(DISTINCT ?lehrplan) AS ?anzahl)</span>
+<span class="s2">WHERE { ?lehrplan a Lehrplan: ; von_bundesland: sachsen: . }"</span>
+</code></pre></div>
+<p>Dieselbe Abfrage in Python, nur mit der Standardbibliothek und mit dem Ergebnis im Format JSON (JavaScript Object Notation):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.parse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="n">abfrage</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">PREFIX Lehrplan:       &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt;</span>
+<span class="s2">PREFIX von_bundesland: &lt;https://w3id.org/lehrplan/ontology/LP_0000029&gt;</span>
+<span class="s2">PREFIX sachsen:        &lt;https://w3id.org/lehrplan/ontology/LP_3000047&gt;</span>
+<span class="s2">SELECT (COUNT(DISTINCT ?lehrplan) AS ?anzahl)</span>
+<span class="s2">WHERE { ?lehrplan a Lehrplan: ; von_bundesland: sachsen: . }</span>
+<span class="s2">"""</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://mem.bmi.fwu.de/sparql?"</span> <span class="o">+</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s2">"query"</span><span class="p">:</span> <span class="n">abfrage</span><span class="p">})</span>
+<span class="n">anfrage</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"Accept"</span><span class="p">:</span> <span class="s2">"application/sparql-results+json"</span><span class="p">})</span>
+<span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">anfrage</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span> <span class="k">as</span> <span class="n">antwort</span><span class="p">:</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">antwort</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">zeile</span> <span class="ow">in</span> <span class="n">ergebnis</span><span class="p">[</span><span class="s2">"results"</span><span class="p">][</span><span class="s2">"bindings"</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">zeile</span><span class="p">[</span><span class="s2">"anzahl"</span><span class="p">][</span><span class="s2">"value"</span><span class="p">])</span>
+</code></pre></div>
+<h3 id="ontologie-lokal-verarbeiten">Ontologie lokal verarbeiten</h3>
+<p>Die Ontologie lässt sich auch direkt laden und lokal abfragen, etwa mit der Python-Bibliothek <a href="https://rdflib.readthedocs.io/">rdflib</a>. Das folgende Beispiel listet die länderspezifischen Bezeichnungen für Lehrpläne auf:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">rdflib</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"https://w3id.org/lehrplan/ontology/"</span><span class="p">)</span>
+
+<span class="n">abfrage</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="s2">PREFIX Lehrplan: &lt;https://w3id.org/lehrplan/ontology/LP_0000438&gt;</span>
+<span class="s2">SELECT ?klasse ?bezeichnung</span>
+<span class="s2">WHERE {</span>
+<span class="s2">  ?klasse rdfs:subClassOf Lehrplan: ;</span>
+<span class="s2">          rdfs:label ?bezeichnung .</span>
+<span class="s2">  FILTER(LANG(?bezeichnung) = "de")</span>
+<span class="s2">}</span>
+<span class="s2">ORDER BY ?bezeichnung</span>
+<span class="s2">"""</span>
+<span class="k">for</span> <span class="n">zeile</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">abfrage</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">zeile</span><span class="o">.</span><span class="n">bezeichnung</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="einbindung-in-eigene-ontologien">Einbindung in eigene Ontologien</h2>
+<p>Eigene Ontologien, die Begriffe der Lehrplan-Ontologie verwenden oder erweitern, importieren in der Regel <code>lp-base</code>. So werden nur die Begriffe der Lehrplan-Ontologie selbst übernommen; die nachgenutzten Ontologien wie BFO und IAO werden unabhängig davon eingebunden. Da die Ontologie- und Versions-IRIs auf die vollständige Ontologie verweisen, wird <code>lp-base</code> über die Datei eines bestimmten Releases importiert:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://www.example.org/meine-ontologie&gt;</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Ontology</span> <span class="p">;</span>
+    <span class="nn">owl</span><span class="p">:</span><span class="nt">imports</span> <span class="nv">&lt;https://raw.githubusercontent.com/FWU-DE/lehrplan-ontologie/v1.0.0rc6/lp-base.owl&gt;</span> <span class="p">.</span>
+</code></pre></div>
+<p>Wird die vollständige Ontologie benötigt, genügt der Import über die Versions-IRI <code>https://w3id.org/lehrplan/ontology/1.0.0rc6</code>.</p>
+<p>Die Lehrplan-Ontologie verwendet bewusst nicht sprechende IRIs wie <code>LP_0000438</code>. Neue Begriffe in eigenen Erweiterungen sollten einen eigenen Namensraum erhalten und nicht im Namensraum der Lehrplan-Ontologie angelegt werden. Vorschläge für neue Begriffe in der Lehrplan-Ontologie selbst nimmt das Projekt über das Repository entgegen (siehe <a href="#mitwirken">Mitwirken</a>).</p>
+<h2 id="erstellen-eigener-lehrplandaten">Erstellen eigener Lehrplandaten</h2>
+<p>Lehrplandaten werden nach den Patterns aus dem Kapitel <a href="../patterns/">Patterns</a> erstellt. Für Daten, die mit den vorhandenen Lehrplandaten zusammen genutzt werden sollen, gelten folgende Regeln:</p>
+<ol>
+<li><strong>Länderspezifische Klassen verwenden</strong>: Jedes Element erhält die Klasse aus der Terminologie seines Landes, z. B. <em>Lernbereich (SN)</em> oder <em>Kompetenzerwartung (BY)</em>. Die Zuordnung zu den gemeinsamen Klassen wie <em>CE-Bereich</em> ergibt sich durch Schlussfolgern (siehe <a href="../patterns/#pattern-8-funktionen">Pattern 8</a>).</li>
+<li><strong>Kontext angeben</strong>: Der Lehrplan trägt Land, Schulart, Schulfach und gegebenenfalls Jahrgangs- und Schulstufe (siehe <a href="../patterns/#pattern-1-lehrplan-eines-landes">Pattern 1</a>). Für Schulfächer und Schularten werden die IRIs aus der Schulfach- und Schulart-Ontologie verwendet.</li>
+<li><strong>Gliederung abbilden</strong>: Elemente werden über <em>hat direkten Teil</em> miteinander verbunden; die Reihenfolge gibt <em>hat Position</em> an (siehe <a href="../patterns/#pattern-6-hierarchie-der-curricularen-elemente">Pattern 6</a>).</li>
+<li><strong>Titel als Informationseinheit</strong>: Der Text eines Elements wird als <em>Titel</em> mit <em>hat Wert</em> angegeben. Das <code>rdfs:label</code> des Elements entspricht dem Wert seines Titels (siehe <a href="../patterns/#pattern-2-titel-beschreibung-und-identifikationsnummer">Pattern 2</a>).</li>
+<li><strong>Stabile IRIs vergeben</strong>: Jedes Element erhält eine IRI, die bei späteren Aktualisierungen der Daten unverändert bleibt, damit andere Systeme dauerhaft darauf verweisen können. Bewährt hat sich, die IRI aus einer Kennung der Quelldaten abzuleiten.</li>
+</ol>
+<p>Das folgende Beispiel zeigt einen minimalen sächsischen Lehrplan mit einem Lernbereich und einem Lernziel:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w">                       </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">ex:</span><span class="w">                         </span><span class="nv">&lt;https://www.example.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">Lehrplan_SN:</span><span class="w">                </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000818&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">Lernbereich_SN:</span><span class="w">             </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0002113&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">Lernziel_und_Lerninhalt_SN:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0002115&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">Titel:</span><span class="w">                      </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000346&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">von_bundesland:</span><span class="w">             </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000029&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">sachsen:</span><span class="w">                    </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_3000047&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">fuer_schulart:</span><span class="w">              </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000812&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">oberschule_sn:</span><span class="w">              </span><span class="nv">&lt;https://w3id.org/schulart/SN_0000003&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_schulfach:</span><span class="w">              </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000537&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">mathematik_sn:</span><span class="w">              </span><span class="nv">&lt;https://w3id.org/schulfach/SN_0000012&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_jahrgangsstufe:</span><span class="w">         </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000026&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">jahrgangsstufe_5:</span><span class="w">           </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_2000005&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_direkten_teil:</span><span class="w">          </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000565&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_position:</span><span class="w">               </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000460&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_titel:</span><span class="w">                  </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0030056&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">hat_wert:</span><span class="w">                   </span><span class="nv">&lt;https://w3id.org/lehrplan/ontology/LP_0000344&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="c"># Lehrplan mit Kontextangaben</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">lehrplan_1</span> <span class="kt">a</span> <span class="nn">Lehrplan_SN</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Oberschule Mathematik"</span> <span class="p">;</span>
+    <span class="nn">hat_titel</span><span class="p">:</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">titel_1</span> <span class="p">;</span>
+    <span class="nn">von_bundesland</span><span class="p">:</span> <span class="nn">sachsen</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">fuer_schulart</span><span class="p">:</span> <span class="nn">oberschule_sn</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">hat_schulfach</span><span class="p">:</span> <span class="nn">mathematik_sn</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">hat_direkten_teil</span><span class="p">:</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">lernbereich_1</span> <span class="p">.</span>
+
+<span class="c"># Lernbereich als erste Gliederungsebene</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">lernbereich_1</span> <span class="kt">a</span> <span class="nn">Lernbereich_SN</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Arbeiten mit natürlichen Zahlen"</span> <span class="p">;</span>
+    <span class="nn">hat_titel</span><span class="p">:</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">titel_2</span> <span class="p">;</span>
+    <span class="nn">von_bundesland</span><span class="p">:</span> <span class="nn">sachsen</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">hat_jahrgangsstufe</span><span class="p">:</span> <span class="nn">jahrgangsstufe_5</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">hat_position</span><span class="p">:</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">hat_direkten_teil</span><span class="p">:</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">lernziel_1</span> <span class="p">.</span>
+
+<span class="c"># Lernziel innerhalb des Lernbereichs</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">lernziel_1</span> <span class="kt">a</span> <span class="nn">Lernziel_und_Lerninhalt_SN</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Kennen der Darstellung natürlicher Zahlen im Zehnersystem"</span> <span class="p">;</span>
+    <span class="nn">hat_titel</span><span class="p">:</span> <span class="nn">ex</span><span class="p">:</span><span class="nt">titel_3</span> <span class="p">;</span>
+    <span class="nn">von_bundesland</span><span class="p">:</span> <span class="nn">sachsen</span><span class="p">:</span> <span class="p">;</span>
+    <span class="nn">hat_position</span><span class="p">:</span> <span class="mi">1</span> <span class="p">.</span>
+
+<span class="c"># Titel als eigene Informationseinheiten; der Wert entspricht dem rdfs:label</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">titel_1</span> <span class="kt">a</span> <span class="nn">Titel</span><span class="p">:</span> <span class="p">;</span> <span class="nn">hat_wert</span><span class="p">:</span> <span class="s">"Oberschule Mathematik"</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">titel_2</span> <span class="kt">a</span> <span class="nn">Titel</span><span class="p">:</span> <span class="p">;</span> <span class="nn">hat_wert</span><span class="p">:</span> <span class="s">"Arbeiten mit natürlichen Zahlen"</span> <span class="p">.</span>
+<span class="nn">ex</span><span class="p">:</span><span class="nt">titel_3</span> <span class="kt">a</span> <span class="nn">Titel</span><span class="p">:</span> <span class="p">;</span> <span class="nn">hat_wert</span><span class="p">:</span> <span class="s">"Kennen der Darstellung natürlicher Zahlen im Zehnersystem"</span> <span class="p">.</span>
+</code></pre></div>
+<p>Liegen die Quelldaten in strukturierter Form vor, etwa als Tabellen oder in einem eigenen Datenformat, lassen sie sich mit Abbildungssprachen wie RML (RDF Mapping Language) oder YARRRML in diese Form überführen (siehe <a href="../ontology/#werkzeuge">Werkzeuge</a>).</p>
+<h2 id="schlussfolgern">Schlussfolgern</h2>
+<p>Viele Auswertungen setzen voraus, dass ein Reasoner die Daten zusammen mit der Ontologie verarbeitet hat. Erst dadurch werden etwa die länderspezifischen Elemente den gemeinsamen Klassen wie <em>CE-Bereich</em> zugeordnet, die transitive Relation <em>hat Teil</em> aus <em>hat direkten Teil</em> abgeleitet und inverse Relationen ergänzt. Der SPARQL-Endpunkt hält diese abgeleiteten Tripel bereits in eigenen Graphen vor (siehe <a href="../sparql/#aufbau-des-endpunkts">Aufbau des Endpunkts</a>).</p>
+<p>Für eigene Daten empfiehlt es sich, die Ableitungen einmalig zu berechnen und zusammen mit den Daten zu speichern (Materialisierung). Geeignet sind Reasoner, die die Variante OWL 2 DL (DL: Description Logics) vollständig unterstützen, etwa <a href="https://github.com/konclude/Konclude">Konclude</a> oder HermiT, der zusammen mit dem Werkzeug <a href="https://robot.obolibrary.org/reason">ROBOT</a> genutzt werden kann. Konclude klassifiziert die Ontologie in der Version rc6 in Bruchteilen einer Sekunde; HermiT kann wegen der zahlreichen Wertebeschränkungen (<code>owl:hasValue</code>) in den Klassendefinitionen deutlich länger benötigen.</p>
+<h2 id="validierung">Validierung</h2>
+<p>Im Verzeichnis <a href="https://github.com/FWU-DE/lehrplan-ontologie/tree/main/shapes"><code>shapes/</code></a> des Repositorys liegen Shapes in der <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a>, mit denen sich Lehrplandaten auf ihre Übereinstimmung mit den Patterns prüfen lassen:</p>
+<table>
+<thead>
+<tr>
+<th>Shape</th>
+<th>Prüft, ob …</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auto-shapes</code></td>
+<td>die Properties mit Werten der vorgesehenen Klassen verwendet werden (automatisch aus der Ontologie erzeugt)</td>
+</tr>
+<tr>
+<td><code>bereich</code></td>
+<td>jeder Bereich und jede Kompetenzspezifikation Teil eines übergeordneten Elements ist</td>
+</tr>
+<tr>
+<td><code>lehrplan bundesland</code></td>
+<td>jeder Lehrplan einem Land zugeordnet ist</td>
+</tr>
+<tr>
+<td><code>titles</code></td>
+<td>jeder Lehrplan und jedes curriculare Element einen Titel hat und das <code>rdfs:label</code> dem Wert des Titels entspricht</td>
+</tr>
+<tr>
+<td><code>textual entity</code></td>
+<td>jeder Titel und jede Beschreibung einen Textwert hat und sich auf ein Element bezieht</td>
+</tr>
+<tr>
+<td><code>verweis</code></td>
+<td>jeder Verweis einem Element zugeordnet ist und auf ein Ziel verweist</td>
+</tr>
+<tr>
+<td><code>nonull</code></td>
+<td>kein <code>rdfs:label</code> den Wert „null“ hat</td>
+</tr>
+</tbody>
+</table>
+<p>Da sich mehrere Shapes auf abgeleitete Klassen und Relationen beziehen, werden die Daten vor der Prüfung mit der Ontologie zusammengeführt und materialisiert. Der Ablauf entspricht dem Skript <code>test.sh</code> im Verzeichnis <code>shapes/</code>:</p>
+<ol>
+<li>Ontologie und Daten zusammenführen, z. B. mit <code>robot merge</code>.</li>
+<li>Die Ableitungen mit einem Reasoner berechnen, z. B. mit Konclude oder mit <code>robot reason</code>, und zu den Daten hinzufügen.</li>
+<li>Das Ergebnis mit <a href="https://github.com/RDFLib/pySHACL">pySHACL</a> gegen die Shapes prüfen, z. B. <code>python3 -m pyshacl -s shapes/bereich/shape.ttl daten-materialisiert.ttl</code>.</li>
+</ol>
+<h2 id="technische-referenz">Technische Referenz</h2>
+<p>Eine vollständige Liste aller Klassen und Properties mit ihren Definitionen bietet die mit Widoco erzeugte <a href="https://fwu-de.github.io/lehrplan-ontologie/index-de.html">Referenzdokumentation</a>.</p>
+<h2 id="lizenz-und-zitation">Lizenz und Zitation</h2>
+<p>Die Lehrplan-Ontologie steht unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 (CC BY-SA 4.0)</a>. Sie darf genutzt, verändert und weitergegeben werden, sofern die Urheberschaft genannt wird und Bearbeitungen unter derselben Lizenz veröffentlicht werden.</p>
+<p>Zitiervorschlag:</p>
+<blockquote>
+<p>Lehrplan Ontology. Version 1.0.0rc6, https://w3id.org/lehrplan/ontology</p>
+</blockquote>
+<h2 id="mitwirken">Mitwirken</h2>
+<p>Fehler, Fragen und Vorschläge für neue Begriffe können als <a href="https://github.com/FWU-DE/lehrplan-ontologie/issues">Issue im Repository</a> gemeldet werden. Die <a href="https://github.com/FWU-DE/lehrplan-ontologie/blob/main/CONTRIBUTING.md">Hinweise zum Mitwirken</a> beschreiben, wie Fehlermeldungen und Änderungsvorschläge aufgebaut sein sollten; für die Zusammenarbeit gilt der <a href="https://github.com/FWU-DE/lehrplan-ontologie/blob/main/CODE_OF_CONDUCT.md">Verhaltenskodex</a> des Projekts. Fachliche Fragen zu den Lehrplandaten beantwortet die Redaktion des Projekts MEM (Metadata for Educational Media) unter <a href="mailto:redaktion@mem.schule">redaktion@mem.schule</a>. Wie Identifikatoren vergeben, Versionen veröffentlicht und Änderungen abgestimmt werden, beschreibt das Kapitel <a href="../governance/">Governance und Weiterentwicklung</a>.</p>
+<h2 id="ausblick-auf-die-folgenden-kapitel">Ausblick auf die folgenden Kapitel</h2>
+<ul>
+<li>Das Kapitel <a href="../knowledge-graph/">Knowledge Graph</a> beschreibt, welche Lehrplandaten im SPARQL-Endpunkt vorliegen, woher sie stammen und welche Besonderheiten die Daten der einzelnen Länder haben.</li>
+<li>Das Kapitel <a href="../governance/">Governance und Weiterentwicklung</a> erläutert, wie die Ontologie gepflegt und versioniert wird und wie Länder und Fachleute mitwirken können.</li>
+<li>Das <a href="../glossar/">Glossar</a> fasst die wichtigsten Begriffe und Abkürzungen zusammen.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="../sparql/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: SPARQL-Abfragen">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                SPARQL-Abfragen
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../knowledge-graph/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Knowledge Graph">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Knowledge Graph
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.footer", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

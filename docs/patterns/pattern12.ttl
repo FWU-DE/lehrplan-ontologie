@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lernbereich_BY: <https://w3id.org/lehrplan/ontology/LP_0002046> .
+@prefix Zeitspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000508> .
+@prefix Data_item: <http://purl.obolibrary.org/obo/IAO_0000027> .
+@prefix Unit: <http://qudt.org/schema/qudt/Unit> .
+
+# Individuen
+@prefix unterrichtsstunde: <https://w3id.org/lehrplan/ontology/LP_0000535> .
+
+# properties
+@prefix hat_einheit: <http://qudt.org/schema/qudt/hasUnit> .
+@prefix hat_wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+@prefix wird_beschrieben_von: <https://w3id.org/lehrplan/ontology/LP_0000024> .
+
+ex:lernbereich_by_1 a Lernbereich_BY: ;
+                  wird_beschrieben_von: ex:zeitspezifikation_1 .
+ex:zeitspezifikation_1 a Zeitspezifikation: ;
+                    hat_wert: "6"^^xsd:decimal ;
+                    hat_einheit: unterrichtsstunde: .
+unterrichtsstunde: a Unit: .
+Zeitspezifikation: rdfs:subClassOf Data_item: .

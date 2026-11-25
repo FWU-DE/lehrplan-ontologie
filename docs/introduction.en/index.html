@@ -1,0 +1,1574 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ontology.en/">
+      
+      
+        <link rel="next" href="../structure.en/">
+      
+      
+        
+          <link rel="alternate" href="../introduction/" hreflang="de">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Conceptual Foundations - Lehrplan-Ontologie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/mkdocs_d2_plugin.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceptual-foundations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lehrplan-Ontologie" class="md-header__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lehrplan-Ontologie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceptual Foundations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../introduction/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.en/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ontology.en/" class="md-tabs__link">
+          
+  
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../structure.en/" class="md-tabs__link">
+          
+  
+  
+  Ontology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sparql.en/" class="md-tabs__link">
+          
+  
+  
+  In Practice
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../governance.en/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lehrplan-Ontologie" class="md-nav__button md-logo" aria-label="Lehrplan-Ontologie" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Lehrplan-Ontologie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FWU-DE/lehrplan-ontologie" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Introduction
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Ontologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Foundations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Foundations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial situation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives and applications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objectives and applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application scenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject-matter-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject matter and scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject matter and scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curricula-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curricula covered
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nationwide-and-state-specific-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nationwide and state-specific structures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delimitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delimitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice-of-the-top-level-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice of the top-level ontology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competency-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competency questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook-on-the-following-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlook on the following chapters
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ontology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    In Practice
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    In Practice
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPARQL Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowledge-graph.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossar.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Us
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial situation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives and applications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objectives and applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application scenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject-matter-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subject matter and scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subject matter and scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curricula-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curricula covered
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nationwide-and-state-specific-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nationwide and state-specific structures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delimitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delimitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice-of-the-top-level-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice of the top-level ontology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competency-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competency questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook-on-the-following-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlook on the following chapters
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    start
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../ontology.en/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<ul>
+<li class="i18n-link i18n-link-found i18n-link-de"><a href="../introduction/">Deutsch</a></li>
+</ul>
+<h1 id="conceptual-foundations">Conceptual Foundations</h1>
+<p>This chapter describes the conceptual foundations of the Curriculum Ontology (Lehrplan-Ontologie): the initial situation from which it emerged, its objectives and application scenarios, its subject matter and scope, the central terms, the approach taken in its development including the choice of the top-level ontology, and the questions it is intended to answer. The Curriculum Ontology is being developed in the project <a href="https://mem.schule/">MEM (Metadata for Educational Media)</a> of the <a href="https://fwu.de/">FWU Institut für Film und Bild in Wissenschaft und Unterricht</a>, the media institute of the federal states.</p>
+<h2 id="initial-situation">Initial situation</h2>
+<p>The German education system is organized federally. Designing curricula is the responsibility of the 16 federal states, each of which develops its own subject structures, terms and school-type-specific requirements. Accordingly, the curricula are diverse: they differ in structure, designations, scope and didactic orientation.</p>
+<p>This heterogeneity makes cross-state analyses and comparisons considerably more difficult. In addition, the degree of digitization varies greatly: while some states provide their curricula as structured digital data, in many cases they are available only as documents in PDF (Portable Document Format). Currently, only about half of the states have systematically digitized curriculum data. For the remaining states, the content has to be extracted manually, interpreted and converted into digital structures.</p>
+<p>The initial situation is thus characterized by great diversity of content, little technical standardization and, in part, a lack of machine readability.</p>
+<h2 id="objectives-and-applications">Objectives and applications</h2>
+<p>The objective of the Curriculum Ontology is to represent the curricula of all federal states in a uniform, machine-processable structure. The formal modeling of the central curricular elements creates a shared conceptual framework that systematically captures and at the same time preserves the differences between the states: different designations are mapped to shared higher-level terms without losing the particularities of the individual curricula. For example, a competence that is named or structured differently in two states can nevertheless be captured and compared unambiguously.</p>
+<p>Curriculum data thereby become interoperable, comparable and reusable. This enables, among others, the following applications:</p>
+<ul>
+<li>digital tools for teaching and school administration,</li>
+<li>linking curricula with learning materials and educational media,</li>
+<li>data-based analyses and cross-state overviews of curricular requirements,</li>
+<li>recommender systems as well as search and comparison tools for teachers.</li>
+</ul>
+<p>In the long term, the Curriculum Ontology is intended to serve as an infrastructure on which such educational services can build.</p>
+<h3 id="application-scenarios">Application scenarios</h3>
+<p>The starting point is the project context of MEM: the project extends the joint educational media infrastructure of the federal states, <a href="https://www.sodix.de/">SODIX</a>, which holds teaching materials centrally and provides them via interfaces to the media libraries of the states. The educational media are described there with metadata; MEM supplements these descriptions with references to the competences and content of the curricula. This results in, among others, the following scenarios:</p>
+<p><strong>Indexing educational media</strong>: An editorial team or a media provider assigns a teaching material to the competency specifications and learning content it covers, for example a specific competence expectation (<em>Kompetenzerwartung</em>) in the Bavarian <em>LehrplanPLUS</em> (the Bavarian curriculum). Since the curriculum elements are uniquely identified, this assignment is precise and machine-processable.</p>
+<p><strong>Curriculum-based search</strong>: A teacher searches for material on a competence from the curriculum of their state. Instead of a long list of results filtered only by keywords, the teacher receives hits that are assigned to this competence. Via the shared reference points of the ontology, i.e. subject, class level, requirement level and the cross-state element types, suitable materials that were indexed on the basis of the curricula of other states can, in the future, also be found.</p>
+<p><strong>Cross-state analysis</strong>: Education administrations or researchers compare curricula of different states, for example which competence areas a subject comprises at a particular class level or how requirements differ between educational tracks. For this purpose, the curriculum data can be queried via a <a href="https://mem.bmi.fwu.de/sparql">SPARQL endpoint</a> in the query language SPARQL (SPARQL Protocol and RDF Query Language; RDF: Resource Description Framework); examples are shown in the chapter <a href="../sparql.en/">SPARQL queries</a>.</p>
+<p><strong>Integration into third-party systems</strong>: Learning management systems, education portals or lesson-planning tools can retrieve the curriculum data via interfaces and display or evaluate curriculum references without having to capture the curricula themselves.</p>
+<h2 id="subject-matter-and-scope">Subject matter and scope</h2>
+<h3 id="curricula-covered">Curricula covered</h3>
+<p>The Curriculum Ontology serves the structured knowledge representation of curricula in the broader sense for general-education schools at primary and secondary level. These include <em>Kerncurricula</em> (core curricula), <em>Rahmenpläne</em> and <em>Rahmenlehrpläne</em> (framework curricula), <em>Bildungspläne</em> (education plans), <em>Fachlehrpläne</em> (subject curricula), <em>Curricula</em> and <em>Bildungs- und Erziehungspläne</em> (education and upbringing plans). In addition, the cross-state educational standards of the <a href="https://www.kmk.org/">Standing Conference of the Ministers of Education and Cultural Affairs (Kultusministerkonferenz, KMK)</a> are represented, which serve as a shared frame of reference for the curricula of the states (see <a href="../structure.en/#integration-of-the-educational-standards">Integration of the educational standards</a>).</p>
+<h3 id="content-components">Content components</h3>
+<p>The ontology represents both the subject-related and the structural elements of the curricula:</p>
+<ul>
+<li>the <strong>structure</strong> of the curricula into sections and subject-related areas such as competence areas, learning areas or topic areas,</li>
+<li><strong>competency specifications</strong>, i.e. the competence expectations and standards formulated in the curriculum,</li>
+<li><strong>learning content</strong> through which competences are acquired,</li>
+<li><strong>supplementary elements</strong> such as didactic notes, references to other elements as well as cross-cutting educational objectives and guiding perspectives,</li>
+<li>the <strong>school context</strong> in which these elements apply: federal state, school type, school subject, class level, educational track and requirement level.</li>
+</ul>
+<p>How these components are modeled is described in the chapter <a href="../structure.en/">Ontology model</a>.</p>
+<h3 id="nationwide-and-state-specific-structures">Nationwide and state-specific structures</h3>
+<p>The Curriculum Ontology represents both cross-state structures and the particularities of the individual federal states. It thus enables both nationwide analyses and detailed comparisons and evaluations that take into account the respective regulations of a state.</p>
+<h3 id="delimitation">Delimitation</h3>
+<p>Vocational education and special-needs education are currently not within the scope of the Curriculum Ontology. An exception is the curriculum data from Saxony, which also include curricula of vocational schools. Furthermore, the ontology itself does not create links to educational media or learning materials; it does, however, form the basis on which applications can create such links.</p>
+<h2 id="central-terms">Central terms</h2>
+<p>The Curriculum Ontology uses some terms in a precise meaning that may differ from general usage. Fundamental here is the distinction between a thing and its description: a curriculum does not contain competences but describes them. The following explanations provide an overview; the formal definitions are given in the chapter <a href="../structure.en/">Ontology model</a>.</p>
+<p><strong>Curriculum</strong> (<em>Lehrplan</em>): A systematic compilation of curricular elements that specifies bindingly which competences and content students are to acquire in a subject, a class level, a school type or an educational track of a federal state. Depending on the state, a curriculum is called, for example, <em>Bildungsplan</em>, <em>Kerncurriculum</em>, <em>LehrplanPLUS</em> or <em>Rahmenlehrplan</em>.</p>
+<p><strong>Educational standard</strong> (<em>Bildungsstandard</em>): A cross-state specification of the KMK that defines which competences learners are to have acquired by a particular school-leaving qualification. Educational standards serve the states as the basis for their curricula.</p>
+<p><strong>Curricular element</strong> (<em>Curriculares Element</em>): A component of a curriculum or educational standard, for example a chapter, a competence area, an individual competence expectation or a learning content. In the ontology, the German labels of the cross-state kinds of curricular elements carry the prefix <em>CE-</em> (CE: <em>Curriculares Element</em>, curricular element), e.g. <em>CE-Bereich</em> (<em>area</em>) or <em>CE-Kompetenzspezifikation</em> (<em>competency specification</em>).</p>
+<p><strong>Function</strong> (<em>Funktion</em>): The purpose that a curricular element fulfills in the curriculum, for example structuring into areas, describing a competence or a didactic note. Via their function, the differently named elements of the states are assigned to the shared <em>CE-</em> kinds: a <em>Lernbereich</em> (learning area) in Bavaria and a <em>Kompetenzbereich</em> (competence area) in Hamburg fulfill the same function.</p>
+<p><strong>Competence and competency specification</strong> (<em>Kompetenz</em> and <em>Kompetenzspezifikation</em>): A competence is the ability of a person to apply knowledge and skills to solve problems. It is a quality of the learning person. A competency specification, by contrast, is the description of such a competence in the curriculum, typically a sentence such as "Die Schülerinnen und Schüler …" ("Students …"). Curriculum data contain the descriptions of competences, i.e. competency specifications, not the competences themselves.</p>
+<p><strong>Learning content</strong> (<em>Lerninhalt</em>): A concrete topic or a concrete subject matter through which competences are acquired, and thus the content-related basis of teaching.</p>
+<p><strong>Educational track and educational track specification</strong> (<em>Bildungsgang</em> and <em>Bildungsgangspezifikation</em>): An educational track is the school career that a person actually goes through, for example up to the <em>Mittlerer Schulabschluss</em> (MSA, intermediate school-leaving certificate). The educational track specification describes this career, i.e. its duration, its requirements and the intended school-leaving qualification. An educational track is not tied to a school type: the <em>Gymnasium</em> track (academic track), for example, can also be completed at a <em>Gesamtschule</em> (comprehensive school).</p>
+<p><strong>School type</strong> (<em>Schulart</em>): A form of school such as <em>Grundschule</em> (primary school), <em>Gymnasium</em> (academic secondary school) or <em>Gemeinschaftsschule</em> (community school), characterized by its organization, pedagogical orientation and the qualifications that can be obtained. The school types are recorded per state with their official designations.</p>
+<p><strong>School-leaving qualification and school-leaving qualification specification</strong> (<em>Schulabschluss</em> and <em>Schulabschlussspezifikation</em>): A school-leaving qualification is the status that a person acquires by successfully completing an educational track. The school-leaving qualification specification describes the qualification and the requirements for awarding it, e.g. the <em>Mittlerer Schulabschluss</em> or the <em>Allgemeine Hochschulreife</em> (general higher-education entrance qualification).</p>
+<p><strong>Level and educational track level</strong> (<em>Niveau</em> and <em>Bildungsgangniveau</em>): A level describes the standard of demand at which content and competences are formulated in a curriculum. The educational track level is the level within an educational track; across states, the ontology distinguishes <em>Grundschule</em>, <em>Hauptschule</em> and <em>Realschule</em> level as well as <em>Gymnasium</em> level for lower and upper secondary level (Sek I and II). The designations of the states, for example <em>Mittelschulniveau</em> (<em>Mittelschule</em> level) in Bavaria or <em>Erhöhte Anforderungen</em> (increased requirements) in Hamburg, are assigned to these levels.</p>
+<h2 id="approach">Approach</h2>
+<p>The Curriculum Ontology was developed in an iterative, closely supervised process. The basis was a systematic review and comparative analysis of the curricula of all federal states by domain experts. In several iterations, content components were identified that occur in all curricula, even if they are named or structured differently. These commonalities formed the starting point for the cross-state terms, which were subsequently matched against and supplemented with the particularities of the states.</p>
+<p>A central part of the approach is the continuous collaboration with a working group of curriculum experts from the federal states (Fachgruppe der Länder). The working group contributes the subject-related perspectives of the states and supports the clarification of content-related questions and the classification of curricular structures. In the early project phases, exchanges took place at short intervals in order to agree on fundamental requirements and differences at an early stage. In the further course, too, the working group remains an essential advisory body for feedback, discussion and subject-matter validation.</p>
+<h2 id="choice-of-the-top-level-ontology">Choice of the top-level ontology</h2>
+<p>The Curriculum Ontology builds on the <a href="https://basic-formal-ontology.org/">Basic Formal Ontology (BFO)</a> as its top-level ontology. A top-level ontology specifies the most general categories, such as object, process or quality, on which the domain-specific terms build (see <a href="../ontology.en/#levels-of-ontologies">Levels of ontologies</a>). Several reasons speak in favor of choosing BFO:</p>
+<ul>
+<li><strong>Standardization</strong>: BFO is standardized as the international standard <a href="https://www.iso.org/standard/74572.html">ISO/IEC 21838-2</a> of the <a href="https://www.iso.org/">International Organization for Standardization (ISO)</a> and the <a href="https://www.iec.ch/">International Electrotechnical Commission (IEC)</a> and is maintained in a stable manner.</li>
+<li><strong>Adoption</strong>: BFO forms the shared basis of numerous ontologies, especially in the environment of the <a href="https://obofoundry.org/">OBO Foundry</a> (OBO: Open Biological and Biomedical Ontologies), a community that develops ontologies according to shared principles. The Curriculum Ontology is thus compatible with these ontologies and can directly reuse established building blocks such as the <a href="https://oborel.github.io/">Relation Ontology (RO)</a> and the <a href="https://github.com/information-artifact-ontology/IAO">Information Artifact Ontology (IAO)</a>.</li>
+<li><strong>Leanness</strong>: BFO comprises only about 35 very general classes and contains no domain-specific content. It thus provides a clear framework without restricting the modeling of the domain.</li>
+<li><strong>Clear fundamental distinctions</strong>: BFO consistently distinguishes between continuant entities (e.g. persons, qualities, information) and processes. This distinction is central for curricula: a curriculum is an information content entity, teaching is a process and a competence is a quality of a person. The ontology keeps these levels cleanly apart (see <a href="../structure.en/#basic-ontological-understanding">Basic ontological understanding</a>).</li>
+</ul>
+<h2 id="competency-questions">Competency questions</h2>
+<p>Competency questions (CQ) describe which questions an ontology should be able to answer. They serve as requirements for the modeling and as a touchstone for whether the model fulfills its purpose. For the Curriculum Ontology, the following competency questions, among others, were formulated. The queries in the chapter <a href="../sparql.en/">SPARQL queries</a> refer to these questions with the numbers CQ 1 to CQ 19.</p>
+<p><strong>Structure and links</strong></p>
+<ul>
+<li><a id="cq-1"></a><strong>CQ 1:</strong> What link exists between element X and element Y? (<a href="../sparql.en/#abfrage-cq-1">to the query</a>)</li>
+<li><a id="cq-2"></a><strong>CQ 2:</strong> Which area from Rhineland-Palatinate corresponds to an element from Bavaria? (<a href="../sparql.en/#abfrage-cq-2">to the query</a>)</li>
+<li><a id="cq-3"></a><strong>CQ 3:</strong> Through which learning content can a competence be acquired? (<a href="../sparql.en/#abfrage-cq-3">to the query</a>)</li>
+<li><a id="cq-4"></a><strong>CQ 4:</strong> Which competences are prerequisites for acquiring competence X? (<a href="../sparql.en/#abfrage-cq-4">to the query</a>)</li>
+</ul>
+<p><strong>Comparisons between school types, educational tracks and federal states</strong></p>
+<ul>
+<li><a id="cq-5"></a><strong>CQ 5:</strong> What differences exist in the competency specifications for the subject mathematics at class level 7 between the school types in Saxony? (<a href="../sparql.en/#abfrage-cq-5">to the query</a>)</li>
+<li><a id="cq-6"></a><strong>CQ 6:</strong> How does progression in the subject mathematics proceed in the different school types in Saxony? (<a href="../sparql.en/#abfrage-cq-6">to the query</a>)</li>
+<li><a id="cq-7"></a><strong>CQ 7:</strong> Which competences are to be acquired in the advanced course in physics in Bavaria in addition to the basic course? (<a href="../sparql.en/#abfrage-cq-7">to the query</a>)</li>
+<li><a id="cq-8"></a><strong>CQ 8:</strong> Which competency specifications apply in Saxony in the subject biology at class level 8, distinguished by educational track? (<a href="../sparql.en/#abfrage-cq-8">to the query</a>)</li>
+<li><a id="cq-9"></a><strong>CQ 9:</strong> Which competency specifications in the subject English for class levels 1 to 9 occur in Bavaria but not in Brandenburg? (<a href="../sparql.en/#abfrage-cq-9">to the query</a>)</li>
+<li><a id="cq-10"></a><strong>CQ 10:</strong> Which competences are acquired in the subject mathematics at primary level, and how do they develop further at lower secondary level (Sek I) depending on the educational track? (<a href="../sparql.en/#abfrage-cq-10">to the query</a>)</li>
+</ul>
+<p><strong>Content of a subject or area</strong></p>
+<ul>
+<li><a id="cq-11"></a><strong>CQ 11:</strong> Which competence areas does the subject mathematics comprise in Rhineland-Palatinate? (<a href="../sparql.en/#abfrage-cq-11">to the query</a>)</li>
+<li><a id="cq-12"></a><strong>CQ 12:</strong> Which competency specifications belong in Berlin to the competence area "Mathematisch modellieren" (mathematical modeling) at class level 7? (<a href="../sparql.en/#abfrage-cq-12">to the query</a>)</li>
+<li><a id="cq-13"></a><strong>CQ 13:</strong> Which learning content is provided for in the subject biology at class level 5 in Bavaria? (<a href="../sparql.en/#abfrage-cq-13">to the query</a>)</li>
+<li><a id="cq-14"></a><strong>CQ 14:</strong> Which competence areas does the subject French comprise in Rhineland-Palatinate from primary level through lower secondary level (Sek I) to upper secondary level (Sek II), structured by class level? (<a href="../sparql.en/#abfrage-cq-14">to the query</a>)</li>
+<li><a id="cq-15"></a><strong>CQ 15:</strong> Which competency specifications belong to the competence area "Lesen" (reading) in the subject German at primary level? (<a href="../sparql.en/#abfrage-cq-15">to the query</a>)</li>
+<li><a id="cq-16"></a><strong>CQ 16:</strong> In which subjects in Saxony is the cross-curricular educational objective "Bildung für nachhaltige Entwicklung" (education for sustainable development) taken up? (<a href="../sparql.en/#abfrage-cq-16">to the query</a>)</li>
+</ul>
+<p><strong>Levels</strong></p>
+<ul>
+<li><a id="cq-17"></a><strong>CQ 17:</strong> How are the niveau stages (<em>Niveaustufen</em>) in Berlin and Brandenburg related to the class levels? (<a href="../sparql.en/#abfrage-cq-17">to the query</a>)</li>
+<li><a id="cq-18"></a><strong>CQ 18:</strong> Which class levels does niveau stage C comprise at the <em>Gymnasium</em> in Berlin? (<a href="../sparql.en/#abfrage-cq-18">to the query</a>)</li>
+<li><a id="cq-19"></a><strong>CQ 19:</strong> How can learning content be filtered by the language levels of the Common European Framework of Reference for Languages (CEFR; German: GER)? (<a href="../sparql.en/#abfrage-cq-19">to the query</a>)</li>
+</ul>
+<p>Some of these questions can already be answered with the existing curriculum data; others describe requirements for the further development of the ontology and for the capture of the data.</p>
+<h2 id="outlook-on-the-following-chapters">Outlook on the following chapters</h2>
+<p>This chapter has set out the initial situation from which the Curriculum Ontology emerged, which objectives it pursues, what it represents and which terms underlie it. The following chapters describe how these foundations are implemented:</p>
+<ul>
+<li>The chapter <a href="../structure.en/">Ontology model</a> explains the formal structure of the ontology: the layers from the educational context to the relations, the interplay of the shared core and state-specific terms, and the reused ontologies.</li>
+<li>The chapter <a href="../patterns.en/">Patterns</a> uses concrete modeling patterns to show how curriculum elements are represented in the data.</li>
+<li>The chapter <a href="../sparql.en/">SPARQL queries</a> shows how the curriculum data can be queried and how competency questions such as those above can be answered.</li>
+<li>The chapter <a href="../usage.en/">Usage</a> describes the available release files, access to the data and their validation.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ontology.en/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction to Ontologies">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introduction to Ontologies
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../structure.en/" class="md-footer__link md-footer__link--next" aria-label="Next: Ontology Model">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Ontology Model
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.footer", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

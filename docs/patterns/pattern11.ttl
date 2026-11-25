@@ -1,0 +1,40 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Realschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000832> .
+@prefix MSA_Niveau: <https://w3id.org/lehrplan/ontology/LP_0000576> .
+@prefix Niveaustufe_BE_BB: <https://w3id.org/lehrplan/ontology/LP_0000443> .
+@prefix Jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000009> .
+@prefix Standard_BE: <https://w3id.org/lehrplan/ontology/LP_0001447> .
+
+# Individuen
+@prefix niveaustufe_e: <https://w3id.org/lehrplan/ontology/LP_0000468> .
+@prefix msa_e: <https://w3id.org/lehrplan/ontology/LP_0000605> .
+@prefix jahrgangsstufe_6: <https://w3id.org/lehrplan/ontology/LP_2000006> .
+@prefix jahrgangsstufe_7: <https://w3id.org/lehrplan/ontology/LP_2000007> .
+@prefix jahrgangsstufe_8: <https://w3id.org/lehrplan/ontology/LP_2000008> .
+
+# properties
+@prefix hat_niveaustufe: <https://w3id.org/lehrplan/ontology/LP_0000578> .
+@prefix hat_niveau: <https://w3id.org/lehrplan/ontology/LP_0000840> .
+@prefix hat_jahrgangsstufe: <https://w3id.org/lehrplan/ontology/LP_0000026> .
+
+ex:standard_be_1 a Standard_BE: ;
+               hat_niveaustufe: niveaustufe_e: .
+niveaustufe_e: a Niveaustufe_BE_BB: ;
+               hat_niveau: msa_e: .
+msa_e: a MSA_Niveau: ;
+       hat_jahrgangsstufe: jahrgangsstufe_6: ,
+                           jahrgangsstufe_7: ,
+                           jahrgangsstufe_8: .
+MSA_Niveau: rdfs:subClassOf Realschulniveau: .
+Realschulniveau: rdfs:subClassOf Bildungsgangniveau: .
+jahrgangsstufe_6: a Jahrgangsstufe: .
+jahrgangsstufe_7: a Jahrgangsstufe: .
+jahrgangsstufe_8: a Jahrgangsstufe: .

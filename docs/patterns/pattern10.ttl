@@ -1,0 +1,43 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Niveau: <https://w3id.org/lehrplan/ontology/LP_0000037> .
+@prefix Bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000028> .
+@prefix Realschulniveau: <https://w3id.org/lehrplan/ontology/LP_0000832> .
+@prefix Bildungsgangniveau_RP: <https://w3id.org/lehrplan/ontology/LP_0001019> .
+@prefix Realschulbildungsgang: <https://w3id.org/lehrplan/ontology/LP_0000814> .
+@prefix Bildungsgangspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000816> .
+@prefix Schulabschlussspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000019> .
+@prefix Mittlerer_Schulabschluss: <https://w3id.org/lehrplan/ontology/LP_0000078> .
+@prefix Mittlerer_Abschluss_RP: <https://w3id.org/lehrplan/ontology/LP_0000204> .
+
+# Individuen
+@prefix mittleres_kompetenzniveau_rp: <https://w3id.org/lehrplan/ontology/LP_0000151> .
+@prefix rheinland_pfalz: <https://w3id.org/lehrplan/ontology/LP_3000046> .
+@prefix qualifizierter_sekundarabschluss_i_rp: <https://w3id.org/lehrplan/ontology/LP_0000281> .
+
+# properties
+@prefix von_bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_bildungsgangniveau: <https://w3id.org/lehrplan/ontology/LP_0000833> .
+@prefix benoetigt_niveau: <https://w3id.org/lehrplan/ontology/LP_0000071> .
+@prefix ermoeglicht_abschluss: <https://w3id.org/lehrplan/ontology/LP_0000021> .
+
+qualifizierter_sekundarabschluss_i_rp: a Mittlerer_Abschluss_RP: ;
+                                       benoetigt_niveau: mittleres_kompetenzniveau_rp: .
+Mittlerer_Abschluss_RP: rdfs:subClassOf Mittlerer_Schulabschluss: .
+Mittlerer_Schulabschluss: rdfs:subClassOf Schulabschlussspezifikation: .
+Realschulbildungsgang: rdfs:subClassOf Bildungsgangspezifikation: .            
+mittleres_kompetenzniveau_rp: a Realschulniveau: ,
+                                Bildungsgangniveau_RP: ;
+                             von_bundesland: rheinland_pfalz: .
+Bildungsgangniveau_RP: rdfs:subClassOf Bildungsgangniveau: .                     
+Realschulniveau: rdfs:subClassOf Bildungsgangniveau: .
+Bildungsgangniveau: rdfs:subClassOf Niveau: .
+ex:realschulbildungsgang_1 a Realschulbildungsgang: ;
+                        hat_bildungsgangniveau: mittleres_kompetenzniveau_rp: ;
+                        ermoeglicht_abschluss: qualifizierter_sekundarabschluss_i_rp: .

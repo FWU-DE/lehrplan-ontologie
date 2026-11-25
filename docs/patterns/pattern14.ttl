@@ -1,0 +1,50 @@
+@prefix ex: <https://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Klassen
+@prefix Person: <https://w3id.org/lehrplan/ontology/LP_0000010> .
+@prefix Schueler_Rolle: <https://w3id.org/lehrplan/ontology/LP_0000012> .
+@prefix Lehrer_Rolle: <https://w3id.org/lehrplan/ontology/LP_0000011> .
+@prefix Lehrprozess: <https://w3id.org/lehrplan/ontology/LP_0000006> .
+@prefix Lernprozess: <https://w3id.org/lehrplan/ontology/LP_0000007> .
+@prefix Bildungsgang: <https://w3id.org/lehrplan/ontology/LP_0000567> .
+@prefix Realschulbildungsgang: <https://w3id.org/lehrplan/ontology/LP_0000814> .
+@prefix Kompetenz: <https://w3id.org/lehrplan/ontology/LP_0000013> .
+@prefix CE_Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+
+# properties
+@prefix hat_rolle: <http://purl.obolibrary.org/obo/RO_0000087> .
+@prefix hat_eigenschaft: <http://purl.obolibrary.org/obo/RO_0000053> .
+@prefix hat_teilnehmer: <http://purl.obolibrary.org/obo/RO_0000057> .
+@prefix hat_output: <http://purl.obolibrary.org/obo/RO_0002234> .
+@prefix occurs_in: <http://purl.obolibrary.org/obo/BFO_0000066> .
+@prefix ist_teil_von: <http://purl.obolibrary.org/obo/BFO_0000050> .
+@prefix wird_beschrieben_von: <https://w3id.org/lehrplan/ontology/LP_0000024> .
+
+ex:schuelerin_1 a Person: ;
+               hat_rolle: ex:schuelerrolle_1 ;
+               hat_eigenschaft: ex:kompetenz_1 .
+ex:schuelerrolle_1 a Schueler_Rolle: .
+
+ex:lehrkraft_1 a Person: ;
+             hat_rolle: ex:lehrerrolle_1 .
+ex:lehrerrolle_1 a Lehrer_Rolle: .
+
+ex:unterricht_1 a Lehrprozess: ;
+              hat_teilnehmer: ex:lehrkraft_1 , ex:schuelerin_1 ;
+              ist_teil_von: ex:bildungsgang_1 .
+
+ex:lernprozess_1 a Lernprozess: ;
+               hat_teilnehmer: ex:schuelerin_1 ;
+               occurs_in: ex:schuelerin_1 ;
+               hat_output: ex:kompetenz_1 .
+
+ex:kompetenz_1 a Kompetenz: ;
+             wird_beschrieben_von: ex:kompetenzerwartung_1 .
+ex:kompetenzerwartung_1 a CE_Kompetenzspezifikation: .
+
+ex:bildungsgang_1 a Bildungsgang: ;
+                hat_teilnehmer: ex:schuelerin_1 ;
+                wird_beschrieben_von: ex:realschulbildungsgang_1 .
+ex:realschulbildungsgang_1 a Realschulbildungsgang: .

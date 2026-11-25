@@ -1,0 +1,34 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Lehrplan: <https://w3id.org/lehrplan/ontology/LP_0000438> .
+@prefix Titel: <https://w3id.org/lehrplan/ontology/LP_0000346> .
+
+# Instanzen
+@prefix sachsen: <https://w3id.org/lehrplan/ontology/LP_3000047> .
+@prefix mathematik_sn: <https://w3id.org/schulfach/SN_0000012> .
+@prefix oberschule_sn: <https://w3id.org/schulart/SN_0000003> .
+@prefix sekundarbereich_ii: <https://w3id.org/lehrplan/ontology/LP_0000046> .
+
+# properties
+@prefix hat_titel: <https://w3id.org/lehrplan/ontology/LP_0030056> .
+@prefix von_bundesland: <https://w3id.org/lehrplan/ontology/LP_0000029> .
+@prefix hat_schulfach: <https://w3id.org/lehrplan/ontology/LP_0000537> .
+@prefix fuer_schulart: <https://w3id.org/lehrplan/ontology/LP_0000812>.
+@prefix hat_schulstufe: <https://w3id.org/lehrplan/ontology/LP_0000047>.
+@prefix hat_wert: <https://w3id.org/lehrplan/ontology/LP_0000344> .
+
+ex:lehrplan_1 a Lehrplan: ;
+            hat_titel: ex:titel_1 ;
+            von_bundesland: sachsen: ;
+            hat_schulfach: mathematik_sn: ;
+            fuer_schulart: oberschule_sn: ;
+            hat_schulstufe: sekundarbereich_ii: . 
+
+ex:titel_1 a Titel: ;
+        hat_wert:  "Lehrplan Oberschule Mathematik" .

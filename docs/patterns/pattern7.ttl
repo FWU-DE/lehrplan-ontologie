@@ -1,0 +1,27 @@
+@prefix ex: <https://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix lp: <https://w3id.org/lehrplan/ontology/> .
+
+# Klassen
+@prefix Curriculares_Element: <https://w3id.org/lehrplan/ontology/LP_0000261> .
+@prefix CE_Bereich: <https://w3id.org/lehrplan/ontology/LP_0000349> .
+@prefix CE_Kompetenzspezifikation: <https://w3id.org/lehrplan/ontology/LP_0000263> .
+@prefix CE_Verweis: <https://w3id.org/lehrplan/ontology/LP_0030065> .
+@prefix Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: <https://w3id.org/lehrplan/ontology/LP_0030189> .
+
+# properties
+@prefix hat_verweis: <https://w3id.org/lehrplan/ontology/LP_0030071> .
+@prefix verweist_auf: <https://w3id.org/lehrplan/ontology/LP_0030072> .
+@prefix hat_beschreibung: <https://w3id.org/lehrplan/ontology/LP_0030051> .
+
+ex:kompetenz_1 a CE_Kompetenzspezifikation: ;
+                hat_verweis: ex:verweis_1 .
+ex:verweis_1 a Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: ;
+              verweist_auf: ex:lernbereich_1 ;
+              hat_beschreibung: ex:beschreibung_1 .
+ex:lernbereich_1 a CE_Bereich: .
+CE_Kompetenzspezifikation: rdfs:subClassOf Curriculares_Element: .
+Verweis_auf_Lernbereich_des_gleichen_Faches_einer_anderen_Klassenstufe_SN: rdfs:subClassOf CE_Verweis: .
